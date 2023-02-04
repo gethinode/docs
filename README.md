@@ -11,17 +11,17 @@
     <a href="https://gohugo.io" alt="Hugo website">
         <img src="https://img.shields.io/badge/generator-hugo-brightgreen" />
     </a>
-    <a href="https://github.com/gethinode/child/commits/main" alt="Last commit">
-        <img src="https://img.shields.io/github/last-commit/gethinode/child.svg" />
+    <a href="https://github.com/gethinode/docs/commits/main" alt="Last commit">
+        <img src="https://img.shields.io/github/last-commit/gethinode/docs.svg" />
     </a>
-    <a href="https://github.com/gethinode/child/issues" alt="Issues">
-        <img src="https://img.shields.io/github/issues/gethinode/child.svg" />
+    <a href="https://github.com/gethinode/docs/issues" alt="Issues">
+        <img src="https://img.shields.io/github/issues/gethinode/docs.svg" />
     </a>
-    <a href="https://github.com/gethinode/child/pulls" alt="Pulls">
-        <img src="https://img.shields.io/github/issues-pr-raw/gethinode/child.svg" />
+    <a href="https://github.com/gethinode/docs/pulls" alt="Pulls">
+        <img src="https://img.shields.io/github/issues-pr-raw/gethinode/docs.svg" />
     </a>
-    <a href="https://github.com/gethinode/child/blob/main/LICENSE" alt="License">
-        <img src="https://img.shields.io/github/license/gethinode/child" />
+    <a href="https://github.com/gethinode/docs/blob/main/LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/gethinode/docs" />
     </a>
 </p>
 
@@ -40,4 +40,4 @@ Hinode is a clean blog theme for [Hugo][hugo], an open-source static site genera
 -->
 
 [repository]: https://github.com/gethinode/hinode.git
-[repository_child]: https://github.com/gethinode/child.git
+[repository_child]: https://github.com/gethinode/docs.git
