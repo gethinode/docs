@@ -28,10 +28,12 @@ The shortcode supports the following arguments:
 
 ## Example
 
-As an example, the following shortcode displays a colored, borderless horizontal card that links to the [Rich Content]({{< ref "rich-content" >}} "Rich Content") page. It includes a custom header and footer.
+<!-- TODO: change card example -->
+
+As an example, the following shortcode displays a colored, borderless horizontal card that links to the [typography]({{< ref "typography" >}} "Typography") page. It includes a custom header and footer.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="rich-content" class="w-100 border-0" orientation="horizontal" color="info" header="publication" footer="tags" */>}}
+{{</* card path="typography" class="w-100 border-0" orientation="horizontal" color="info" header="publication" footer="tags" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
