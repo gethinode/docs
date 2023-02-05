@@ -64,7 +64,7 @@
     sizes = [16, 32, 48]
 
 [style]
-    primary = "#2596be"
+    primary = "#D43900"
     secondary = "#6c757d"
     success = "#198754"
     info = "#0dcaf0"
