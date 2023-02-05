@@ -4,37 +4,19 @@
   weight = 10
 
 [[main]]
-  name = "Blog"
-  url = "/blog/"
+  name = "Docs"
+  url = "/docs/"
   weight = 20
 
 [[main]]
-  name = "Projects"
-  url = "/projects/"
+  name = "Releases"
+  url = "/releases/"
   weight = 30
 
 [[main]]
-  name = "Sample project"
-  url = "/en/projects/sample-project/"
-  parent = "Projects"
-  weight = 1
-
-[[main]]
-  name = "Another project"
-  url = "/en/projects/another-project/"
-  parent = "Projects"
-  weight = 2
-
-[[main]]
-  name = "Tags"
-  url = "/tags/"
+  name = "GitHub"
+  url = "https://github.com/gethinode/hinode"
   weight = 40
-
-[[social]]
-  name = "LinkedIn"
-  pre = "<i class=\"fab fa-linkedin fa-2x\"></i>"
-  url = "https://linkedin.com/"
-  weight = 10
 
 [[social]]
   name = "GitHub"
@@ -42,8 +24,26 @@
   url = "https://github.com/"
   weight = 20
 
-[[social]]
-  name = "Medium"
-  pre = "<i class=\"fab fa-medium fa-2x\"></i>"
-  url = "https://medium.com/"
-  weight = 30
+# toml-docs-start sample-navigation
+[[sample]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 10
+
+[[sample]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 20
+
+[[sample]]
+  name = "Sample project"
+  url = "/en/projects/sample-project/"
+  parent = "Projects"
+  weight = 1
+
+[[sample]]
+  name = "Another project"
+  url = "/en/projects/another-project/"
+  parent = "Projects"
+  weight = 2
+# toml-docs-end sample-navigation

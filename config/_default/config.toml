@@ -18,7 +18,7 @@ timeout = "60s"
 
 languageCode = "en-us"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [taxonomies]
   tag = 'tags'
