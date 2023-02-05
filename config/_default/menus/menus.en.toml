@@ -8,10 +8,10 @@
   url = "/docs/"
   weight = 20
 
-[[main]]
-  name = "Releases"
-  url = "/releases/"
-  weight = 30
+# [[main]]
+#   name = "Releases"
+#   url = "/releases/"
+#   weight = 30
 
 [[main]]
   name = "GitHub"
