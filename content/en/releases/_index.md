@@ -1,4 +1,4 @@
 ---
 author: Mark Dumay
-title: Blog
+title: Releases
 ---
