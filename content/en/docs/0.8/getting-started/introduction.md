@@ -59,7 +59,7 @@ The main site configuration is available in `./config/_default`. Review the foll
     Hinode uses eight configurable theme colors. You can adjust them in the `style` section of  `/config/_default/params.toml`. Review the [colors documentation]({{< relref "colors" >}}) for more details.
   {{< /accordion-item >}}
   {{< accordion-item header="Set the main font" >}}
-    Set the `themeFont` and `themeFontPath` in the `style` section of `/config/_default/params.toml` to adjust the main font. Hinode includes supports for [Emoji]({{< relref "emoji" >}}) by default. Review the [fonts documentation]({{< relref "fonts" >}}) for more details.
+    Set the `themeFont` and `themeFontPath` in the `style` section of `/config/_default/params.toml` to adjust the main font. Hinode includes supports for [Emoji]({{< relref "typography#emoji" >}}) by default. Review the [fonts documentation]({{< relref "fonts" >}}) for more details.
   {{< /accordion-item >}}
   {{< accordion-item header="Configure the supported languages">}}
     Configure each supported language in `config/_default/languages.toml`. Set the default behavior in `config/_default/config.toml`. Review the [languages documentation]({{< relref "languages" >}}) for more details.
