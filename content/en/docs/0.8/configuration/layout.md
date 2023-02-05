@@ -312,6 +312,7 @@ The configuration of the documentation pages is set in the `docs` section of the
 | Setting      | Default | Description |
 |--------------|---------|-------------|
 | docs_version | -       | Default version to use in documentation links. |
+| basePath     | -       | Base path to use for file references. |
 {.table}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
