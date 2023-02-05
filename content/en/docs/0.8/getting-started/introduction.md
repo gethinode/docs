@@ -4,10 +4,10 @@ description: Get started with Hinode, a clean documentation and blog theme for y
 date: 2023-01-29
 group: getting-started
 aliases:
-  - "/en/docs/0.8/getting-started/"
-  - "/en/docs/getting-started/"
-  - "/en/getting-started/"
-  - "/en/docs/"
+  - "/docs/0.8/getting-started/"
+  - "/docs/getting-started/"
+  - "/getting-started/"
+  - "/docs/"
 layout: docs
 ---
 
