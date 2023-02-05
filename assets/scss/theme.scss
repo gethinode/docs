@@ -1,0 +1,7 @@
+// Placeholder to quickly add your own styles
+// The file is included last in the build pipeline
+
+.gradient-featured {
+    background: $white;
+    background: linear-gradient(135deg, $white 0%, tint-color($primary, 80%) 100%);
+}
