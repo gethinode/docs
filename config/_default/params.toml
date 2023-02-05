@@ -46,18 +46,6 @@
         orientation = "stacked"
         style = "border-0"
         homepage = 3
-    [projects]
-        title = "Projects"
-        sort = "title"
-        reverse = false
-        cols = 1
-        color = ""
-        padding = "3"
-        header = "none"
-        footer = "tags"
-        orientation = "none"
-        style = "border-1 card-emphasize"
-        homepage = 3
 
 [favicon]
     logo = "img/favicon.png"
