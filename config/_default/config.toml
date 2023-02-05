@@ -61,7 +61,10 @@ defaultContentLanguageInSubdir = false
     extended = true
     min = "0.81.0"
     max = ""
- [[module.mounts]]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
     source = "node_modules/@gethinode/hinode/archetypes"
     target = "archetypes"
   [[module.mounts]]
@@ -84,12 +87,9 @@ defaultContentLanguageInSubdir = false
     source = "node_modules/flexsearch/dist"
     target = "assets/js/vendor/flexsearch"
     includeFiles = "*.bundle.js"
-  [[module.mounts]]
+ [[module.mounts]]
     source = "archetypes"
     target = "archetypes"
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
   [[module.mounts]]
     source = "i18n"
     target = "i18n"
