@@ -7,7 +7,8 @@
     basePath = "node_modules/@gethinode/hinode"
 
 [home]
-    sections = ["features", "releases"]
+    sections = ["features"]
+    # sections = ["features", "releases"]
     featurePhoto = "/img/sunrise.jpg" # source: https://unsplash.com/photos/ZX6BPboJrYk
     fullCover = true
 
@@ -36,18 +37,18 @@
         style = "border-0 card-emphasize"
         homepage = 6
         background = "light"
-    [releases]
-        title = "Releases"
-        sort = "date"
-        reverse = false
-        cols = 3
-        color = ""
-        padding = "0"
-        header = "full"
-        footer = "none"
-        orientation = "stacked"
-        style = "border-0"
-        homepage = 3
+    # [releases]
+    #     title = "Releases"
+    #     sort = "date"
+    #     reverse = false
+    #     cols = 3
+    #     color = ""
+    #     padding = "0"
+    #     header = "full"
+    #     footer = "none"
+    #     orientation = "stacked"
+    #     style = "border-0"
+    #     homepage = 3
 
 [favicon]
     logo = "img/favicon.png"
