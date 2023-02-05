@@ -24,17 +24,18 @@
 
 [list]
     [features]
-        title = "Features"
+        title = ""
         sort = "weight"
         reverse = false
-        cols = 5
-        color = ""
-        padding = "0"
+        cols = 3
+        color = "light"
+        padding = "3"
         header = "none"
         footer = "none"
         orientation = "stacked"
-        style = "border-0"
-        homepage = 5
+        style = "border-0 card-emphasize"
+        homepage = 6
+        background = "light"
     [releases]
         title = "Releases"
         sort = "date"
