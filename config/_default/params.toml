@@ -6,9 +6,9 @@
     version = "0.8"
 
 [home]
-    sections = ["blog", "projects"]
+    sections = ["features", "releases"]
     featurePhoto = "/img/sunrise.jpg" # source: https://unsplash.com/photos/ZX6BPboJrYk
-    fullCover = false
+    fullCover = true
 
 [navigation]
     logo = "/img/logo_embedded.svg"
@@ -22,8 +22,20 @@
     sidebar = true
 
 [list]
-    [blog]
-        title = "Blog"
+    [features]
+        title = "Features"
+        sort = "weight"
+        reverse = false
+        cols = 5
+        color = ""
+        padding = "0"
+        header = "none"
+        footer = "none"
+        orientation = "stacked"
+        style = "border-0"
+        homepage = 5
+    [releases]
+        title = "Releases"
         sort = "date"
         reverse = false
         cols = 3
