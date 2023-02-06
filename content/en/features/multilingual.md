@@ -2,10 +2,14 @@
 author: Mark Dumay
 title: Multilingual
 date: 2023-02-05
-description: Leverage version control and modern build tools to automate your builds and deployments.
+description: Serve your content in multiple languages with support for localization.
 weight: 6
 icon: fas globe
 layout: minimal
 ---
 
+Hinode supports the creation of websites with multiple languages side by side. By linking several translations of a page to each other, switching between languages is seemless with minimal effort. Hinode uses localization to render dates, numbers, and other elements in a region-specific format.
 
+{{< button relref="layout" >}}
+    Configure multiple languages
+{{< /button >}}
