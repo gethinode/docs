@@ -4,7 +4,7 @@ paginate = 9
 enableGitInfo = true
 
 # additional settings
-baseURL = "https://child.gethinode.com/"
+baseURL = "https://gethinode.com/"
 canonifyURLs = false
 enableEmoji = true
 enableRobotsTXT = true
@@ -18,7 +18,7 @@ timeout = "60s"
 
 languageCode = "en-us"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [taxonomies]
   tag = 'tags'
@@ -61,7 +61,10 @@ defaultContentLanguageInSubdir = true
     extended = true
     min = "0.81.0"
     max = ""
- [[module.mounts]]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
     source = "node_modules/@gethinode/hinode/archetypes"
     target = "archetypes"
   [[module.mounts]]
@@ -84,12 +87,9 @@ defaultContentLanguageInSubdir = true
     source = "node_modules/flexsearch/dist"
     target = "assets/js/vendor/flexsearch"
     includeFiles = "*.bundle.js"
-  [[module.mounts]]
+ [[module.mounts]]
     source = "archetypes"
     target = "archetypes"
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
   [[module.mounts]]
     source = "i18n"
     target = "i18n"

@@ -1,0 +1,4 @@
+.gradient-featured {
+    background: $white;
+    background: linear-gradient(135deg, $white 0%, tint-color($primary, 80%) 100%);
+}

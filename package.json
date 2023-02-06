@@ -1,13 +1,13 @@
 {
-  "name": "@gethinode/child",
+  "name": "@gethinode/docs",
   "version": "0.5.0",
-  "description": "Hinode is a clean blog theme for Hugo, an open-source static site generator",
+  "description": "The source for https://gethinode.com",
   "main": "index.js",
   "scripts": {
     "init": "shx rm -rf .git && git init -b main",
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
     "prestart": "npm run clean",
-    "start": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender",
+    "start": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings",
     "prebuild": "npm run clean",
     "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
     "build:preview": "npm run build -D -F",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gethinode/child.git"
+    "url": "git+https://github.com/gethinode/docs.git"
   },
   "author": "",
   "license": "MIT",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@gethinode/hinode": "^0.8.1",
+    "@gethinode/hinode": "^0.8.3",
     "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.3",
     "eslint": "^8.33.0",
