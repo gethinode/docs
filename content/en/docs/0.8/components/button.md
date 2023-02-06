@@ -18,6 +18,7 @@ The shortcode supports the following arguments:
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | href        | No   | Optional address for the button or hyperlink. Automatically assigned when using collapse. |
+| relref      | No   | Optional name of the page to link to. Replaces `href` with a relative link if set. |
 | state       | No   | Optional state of the button, either "enabled" (default), "disabled", "active", or "inactive". |
 | size        | No   | Optional size of the button, either "sm", "md" (default), or "lg". |
 | color       | No   | Optional theme color of the element, either "primary" (default), "secondary", "success", "danger",  "warning", "info", "light", "dark", "white" or "black". |

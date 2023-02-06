@@ -1,7 +1,7 @@
 ---
 title: Introduction
 description: Get started with Hinode, a clean documentation and blog theme for your Hugo site based on Bootstrap 5.
-date: 2023-01-29
+date: 2023-02-06
 group: getting-started
 aliases:
   - "/docs/0.8/getting-started/"
@@ -52,6 +52,9 @@ Start a new Hinode project in three steps:
 The main site configuration is available in `./config/_default`. Review the following items to get you started.
 
 {{< accordion >}}
+  {{< accordion-item header="Organize the content" >}}
+    Hinode uses a structured approach to organize and present content. See the [content management]({{< relref "content-management" >}}) page for more details.
+  {{< /accordion-item >}}
   {{< accordion-item header="Review the layout options" >}}
     Hinode uses a base layout for the home page, list pages, and individual pages. Individual pages can also be configured as documentation page instead of a regular page. Review the [layout documentation]({{< relref "colors" >}}) for more details.
   {{< /accordion-item >}}

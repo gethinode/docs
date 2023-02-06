@@ -28,12 +28,10 @@ The shortcode supports the following arguments:
 
 ## Example
 
-<!-- TODO: change card example -->
-
-As an example, the following shortcode displays a colored, borderless horizontal card that links to the [typography]({{< ref "typography" >}} "Typography") page. It includes a custom header and footer.
+As an example, the following shortcode displays a stacked card with icon that links to the [responsive]({{< ref "responsive" >}}) page. It includes a custom header and footer.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="typography" class="w-100 border-0" orientation="horizontal" color="info" header="publication" footer="tags" */>}}
+{{</* card path="responsive" padding="3" class="w-50" color="light" header="publication" footer="none" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

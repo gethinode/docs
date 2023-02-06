@@ -267,6 +267,22 @@ layout: docs
 ---
 ```
 
+### Minimal layout
+
+Pages with a minimal layout are similar to documentation pages, but include navigation links instead of metadata at the bottom of the page:
+
+- **Title** - the title of the page as set in the page's frontmatter.
+- **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
+- **Navigation links** - links on the bottom of the page that link to the previoud and next page within the current section.
+
+Be sure to select the `minimal` layout in the page's frontmatter to enable the documentation layout:
+
+```yml
+---
+layout: minimal
+---
+```
+
 ### Example
 
 <div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
