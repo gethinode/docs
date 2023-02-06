@@ -150,6 +150,7 @@
     hugo_mounts = "https://gohugo.io/hugo-modules/configuration/#module-config-mounts"
     hugo_imaging = "https://gohugo.io/content-management/image-processing/#imaging-configuration"
     hugo_ordering = "https://gohugo.io/templates/lists/#order-content"
+    hugo_structure = "https://gohugo.io/content-management/organization"
     hugo_templates = "https://gohugo.io/templates/introduction/"
     hugo_toc = "https://gohugo.io/content-management/toc"
     issue_tracker = "https://github.com/gethinode/hinode/issues"
