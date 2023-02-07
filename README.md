@@ -1,4 +1,4 @@
-# Hugo Child Theme Hinode
+# Hinode Docs
 
 <!-- Tagline -->
 <p align="center">
@@ -35,7 +35,7 @@
 
 ![Logo](https://raw.githubusercontent.com/gethinode/hinode/main/static/img/logo.png)
 
-Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [child theme][repository_child], and a [main theme][repository]. This repository contains the code base of the child theme. Visit the [main theme][repository] for installation instructions.
+Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [child theme][repository_child], and a [main theme][repository]. This repository maintains the documentation site published to https://gethinode.com. Visit the [main theme][repository] for installation instructions.
 
 <!-- MARKDOWN PUBLIC LINKS -->
 [hugo]: https://gohugo.io
