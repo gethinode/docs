@@ -11,6 +11,12 @@
     <a href="https://gohugo.io" alt="Hugo website">
         <img src="https://img.shields.io/badge/generator-hugo-brightgreen" />
     </a>
+    <a href="https://app.netlify.com/sites/gethinode-docs/deploys" alt="Netlify Status">
+        <img src="https://img.shields.io/netlify/c38df4b6-7b7d-4300-a70b-8338b168a8c7" />
+    </a>
+    <a href="https://stats.uptimerobot.com/xyGVYhLJmV" alt="UptimeRobot Status">
+        <img src="https://img.shields.io/uptimerobot/status/m793471943-776bdc7331e383e3e8ad8d8f" />
+    </a>
     <a href="https://github.com/gethinode/docs/commits/main" alt="Last commit">
         <img src="https://img.shields.io/github/last-commit/gethinode/docs.svg" />
     </a>
