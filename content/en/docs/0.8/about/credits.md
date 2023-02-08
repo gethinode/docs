@@ -1,7 +1,7 @@
 ---
 title: Credits
 description: Hinode is fully open source and uses several open-source frameworks and libraries.
-date: "2023-01-14"
+date: 2023-01-14
 group: about
 aliases:
   - "/docs/0.8/about/credits/"
