@@ -15,7 +15,7 @@ Hugo provides the shortcode `ref` to link to another page within the site. The s
 {{< example lang="hugo" >}}
 [Tables]({{</*ref "tables" */>}})
 
-[About]({{</*ref "/about" */>}})
+[About]({{</*ref "credits" */>}})
 {{< /example >}}
 
 Similar to the `ref` shortcode, Hugo provides the shortcode `relref` to return a path relative to the current page.
@@ -23,7 +23,7 @@ Similar to the `ref` shortcode, Hugo provides the shortcode `relref` to return a
 {{< example lang="hugo" >}}
 [Tables]({{</*relref "tables" */>}})
 
-[About]({{</*relref "/about" */>}})
+[About]({{</*relref "credits" */>}})
 {{< /example >}}
 
 ## Cross-references
