@@ -7,7 +7,8 @@
     [en.params.feature]
         link = "docs/0.8/getting-started/introduction/"
         caption = "Get Started"
+    [en.params.demo]
+        link = "https://demo.gethinode.com"
+        caption = "Live Demo"
     [en.params.footer]
-        license = "Licensed under Creative Commons (<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' class='link-bg-secondary' target='_blank'>CC BY-NC-SA 4.0</a>)."
-        socialTitle = "Follow me"
-        socialCaption = "I work on everything coding and tweet developer memes"
+        license = "<a href='https://github.com/gethinode/hinode/blob/main/LICENSE' class='link-bg-secondary' target='_blank'>MIT license</a>"

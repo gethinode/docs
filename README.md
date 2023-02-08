@@ -1,4 +1,4 @@
-# Hugo Child Theme Hinode
+# Hinode Docs
 
 <!-- Tagline -->
 <p align="center">
@@ -10,6 +10,12 @@
 <p align="center">
     <a href="https://gohugo.io" alt="Hugo website">
         <img src="https://img.shields.io/badge/generator-hugo-brightgreen" />
+    </a>
+    <a href="https://app.netlify.com/sites/gethinode-docs/deploys" alt="Netlify Status">
+        <img src="https://img.shields.io/netlify/c38df4b6-7b7d-4300-a70b-8338b168a8c7" />
+    </a>
+    <a href="https://stats.uptimerobot.com/xyGVYhLJmV" alt="UptimeRobot Status">
+        <img src="https://img.shields.io/uptimerobot/status/m793471943-776bdc7331e383e3e8ad8d8f" />
     </a>
     <a href="https://github.com/gethinode/docs/commits/main" alt="Last commit">
         <img src="https://img.shields.io/github/last-commit/gethinode/docs.svg" />
@@ -29,7 +35,7 @@
 
 ![Logo](https://raw.githubusercontent.com/gethinode/hinode/main/static/img/logo.png)
 
-Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [child theme][repository_child], and a [main theme][repository]. This repository contains the code base of the child theme. Visit the [main theme][repository] for installation instructions.
+Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [child theme][repository_child], and a [main theme][repository]. This repository maintains the documentation site published to https://gethinode.com. Visit the [main theme][repository] for installation instructions.
 
 <!-- MARKDOWN PUBLIC LINKS -->
 [hugo]: https://gohugo.io
