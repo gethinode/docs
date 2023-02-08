@@ -8,7 +8,7 @@ layout: docs
 
 Review the table below for some common issues and their potential cause. Please file a [bug report]({{< relref "contribute#bug-reports" >}}) if you believe you have encountered an unknown issue.
 
-<!-- markdownlint-disable MD037 -->
+<!-- markdownlint-disable MD036 MD037 -->
 {{< accordion >}}
   {{< accordion-item header="The published website is not rendering at all" >}}
     Hinode uses [npm]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. As such, the default Hugo commands to build and deploy a website do not work. Check the [hosting and deployment]({{< relref "hosting-and-deployment" >}}) section on how to build and deploy Hinode properly.
@@ -17,7 +17,7 @@ Review the table below for some common issues and their potential cause. Please 
     Incorrect styling of your published website may have several causes:
 
   **The stylesheet refers to the incorrect location**
-   
+
   Be sure to update the `baseURL` in `config/_default/config.toml`.
 
   **The certificate of your website has expired or is not set up correctly**
@@ -45,4 +45,4 @@ Review the table below for some common issues and their potential cause. Please 
     Hinode uses mounts to create a virtual file system. Be sure to include mounts for the base repository and the current repository. See the documentation about [mounted folders]({{< relref "../advanced-settings/overview#mounted-folders" >}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}
-<!-- markdownlint-enable MD037 -->
+<!-- markdownlint-enable MD036 MD037 -->
