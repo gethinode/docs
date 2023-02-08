@@ -1,7 +1,12 @@
+{{- $version := partial "version.html" . -}}
+{{- $license := .Site.Params.footer.license | safeHTML -}}
+{{- $copyright := .Site.Copyright -}}
+{{- if not $copyright -}}
+    {{- $copyright = printf "%s © %s %s All rights reserved." (i18n "copyright") (dateFormat "2006" now) .Site.Title -}}
+{{- end -}}
+
 <footer class="container-fluid text-center p-3 bg-secondary">
     <small class="text-bg-secondary">
-        {{- $copyright := printf "%s © %s %s All rights reserved." (i18n "copyright") (dateFormat "2006" now) .Site.Title }}
-        {{ cond (gt (len .Site.Copyright) 0) .Site.Copyright $copyright }}
-        {{ .Site.Params.footer.license | safeHTML }}
+        {{- delimit (slice $version $license $copyright) " | " -}}
     </small>
 </footer>
