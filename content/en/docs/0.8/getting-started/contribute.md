@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-01-06
+date: 2023-02-08
 group: getting-started
 aliases:
   - "/docs/0.8/contribute/"
