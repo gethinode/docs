@@ -1,7 +1,7 @@
 ---
 title: Commands
 description: Use npm commands to automate the build process and to keep track of dependencies.
-date: "2023-01-11"
+date: 2023-01-11
 group: getting-started
 layout: docs
 ---
