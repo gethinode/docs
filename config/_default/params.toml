@@ -9,7 +9,6 @@
 [home]
     sections = ["features"]
     # sections = ["features", "releases"]
-    featurePhoto = "/img/sunrise.jpg" # source: https://unsplash.com/photos/ZX6BPboJrYk
     fullCover = true
 
 [navigation]
