@@ -2,3 +2,12 @@
     background: $white;
     background: linear-gradient(135deg, $white 0%, tint-color($primary, 80%) 100%);
 }
+
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .gradient-featured {
+            background: $gray-900;
+            background: linear-gradient(135deg, $gray-900 0%, shade-color($primary, 60%) 100%);
+        }
+    }
+}
