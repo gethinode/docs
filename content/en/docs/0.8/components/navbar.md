@@ -23,7 +23,7 @@ The shortcode supports the following arguments:
 | menus     | No  | Optional name of the menu configuration, defaults to "main". |
 | size      | No  | Optional breakpoint of the navbar toggler, either "xs", "sm", "md" (default), "lg", or "xl". |
 | style     | No  | Optional style of the navbar, either "light" (default) or "dark". |
-| color     | No  | Optional background color of the navbar, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white" or "black". The default color is none. |
+| color     | No  | Optional background color of the navbar, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black" or "body". Set the color to "body" for the navbar to respond to [color mode]({{< param "links.bs_color" >}}) changes (e.g. switching between dark and light). The default color is none. |
 | search    | No  | Optional flag to include a search input, defaults to the parameter "logo" set in the "navigation" section of the site's parameter configuration. |
 | logo      | No  | Optional address of the logo image, defaults to the parameter "logo" set in the "navigation" section of the site's parameter configuration. |
 | title     | No  | Optional brand title, displayed when the logo is not set. Defaults to the site's title. |
