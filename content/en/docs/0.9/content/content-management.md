@@ -40,7 +40,7 @@ You can adjust the path or provide an alias of a page in its [frontmatter]({{< r
 ---
 title: Introduction
 aliases:
-  - "/docs/0.8/getting-started/"
+  - "/docs/0.9/getting-started/"
   - "/docs/getting-started/"
   - "/getting-started/"
   - "/docs/"
