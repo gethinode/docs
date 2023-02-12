@@ -4,8 +4,8 @@ description: Hinode is fully open source and uses several open-source frameworks
 date: 2023-01-14
 group: about
 aliases:
-  - "/docs/0.8/about/credits/"
-  - "/docs/0.8/about/"
+  - "/docs/0.9/about/credits/"
+  - "/docs/0.9/about/"
   - "/docs/about/"
   - "/about/"
 layout: docs

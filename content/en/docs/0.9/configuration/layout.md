@@ -60,10 +60,11 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
-| Setting      | Default | Description |
-|--------------|---------|-------------|
-| separator    | "-"     | Seperator to join the website title and page title. |
-| description  | -       | Short description of the website that is added to the page metadata. |
+| Setting        | Default | Description |
+|----------------|---------|-------------|
+| separator      | "-"     | Seperator to join the website title and page title. |
+| description    | -       | Short description of the website that is added to the page metadata. |
+| enableDarkMode | true    | Enables switcher for light mode and dark mode. |
 {.table}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
