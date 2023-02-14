@@ -159,7 +159,7 @@ The starter plan requires your repository to be public. You will require a paid 
 The repository root should include a file `netlify.toml`. If not, copy it from the [Hinode main repository]({{< param "links.repository" >}}). The configuration file contains the build settings that Netlify will pick up when connecting to your repository. The panel below shows the default build settings. The key command to observe is `npm run build`, which ensures the site is built properly.
 
 {{< alert >}}
-The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server" >}}) for more details about the Content Security Policy.
+The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the [Netlify blog]({{< param "links.netlify_cache" >}}).
 {{< /alert >}}
 
 {{< docs name="netlify" file="netlify.toml" show="false" >}}

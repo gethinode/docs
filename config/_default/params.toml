@@ -169,6 +169,7 @@
     markdownlint = "https://github.com/DavidAnson/markdownlint-cli2"
     mozilla_image = "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
     netlify = "https://www.netlify.com"
+    netlify_cache= "https://www.netlify.com/blog/2017/02/23/better-living-through-caching/"
     nodejs = "https://nodejs.org"
     npm = "https://www.npmjs.com"
     observatory = "https://observatory.mozilla.org/analyze/demo.gethinode.com"
