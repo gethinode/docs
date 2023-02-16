@@ -11,6 +11,7 @@
     sections = ["features"]
     # sections = ["features", "releases"]
     fullCover = true
+    style = "gradient-featured"
 
 [navigation]
     logo = "/img/logo_icon.svg"
