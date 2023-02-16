@@ -15,8 +15,7 @@
 
 [navigation]
     logo = "/img/logo_icon.svg"
-    color = "body"
-    style = "light"
+    color = ""
     fixed = true
     offset = "4em"
     search = true
