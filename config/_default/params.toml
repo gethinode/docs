@@ -11,11 +11,11 @@
     sections = ["features"]
     # sections = ["features", "releases"]
     fullCover = true
+    style = "gradient-featured"
 
 [navigation]
     logo = "/img/logo_icon.svg"
-    color = "body"
-    style = "light"
+    color = ""
     fixed = true
     offset = "4em"
     search = true
