@@ -15,7 +15,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | Setting    | Default | Description |
 |------------|---------|-------------|
 | logo       | -       | Address of the brand logo image, e.g. "/img/logo_embedded.svg". |
-| color      | "white" | [Theme color]({{< ref "colors" >}}) of the navigation bar. Set the style to set the correct contrast of the menu items. |
+| color      | -       | [Theme color]({{< ref "colors" >}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
 | style      | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly. |
 | fixed      | false   | Flag indicating to keep the navigation bar fixed at the top of the screen. |
 | offset     | "3em"   | Applies an [offset to main elements]({{< param "links.bs_navbar_placement" >}}) when `fixed` is set to true. |
