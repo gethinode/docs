@@ -11,5 +11,5 @@ layout: minimal
 As a static site, Hinode is secure by design. Unlike dynamic sites, Hinode does not use databases or application servers to serve its content. This greatly reduces the risk associated with hosting public sites. In addition, Hinode uses rather strict security policies by default. This results in an A+ score from [Mozilla Observatory]({{< param "links.observatory" >}}).
 
 {{< button relref="layout" >}}
-    Review the content security policy
+    Check the content security policy
 {{< /button >}}

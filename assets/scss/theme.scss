@@ -3,11 +3,45 @@
     background: linear-gradient(135deg, $white 0%, tint-color($primary, 80%) 100%);
 }
 
+.card-feature {
+    background-color: var(--bs-light) if($enable-important-utilities, !important, null);
+}
+
+.footer {
+    background-color: var(--bs-secondary) if($enable-important-utilities, !important, null);
+    color: var(--bs-light) if($enable-important-utilities, !important, null);
+}
+
+.link-bg-footer {
+    color: var(--bs-light) if($enable-important-utilities, !important, null);
+    &:hover,
+    &:focus {
+        color: $gray-400 if($enable-important-utilities, !important, null);
+    }
+}
+
 @if $enable-dark-mode {
     @include color-mode(dark) {
         .gradient-featured {
             background: $gray-900;
             background: linear-gradient(135deg, $gray-900 0%, shade-color($primary, 60%) 100%);
+        }
+
+        .card-feature {
+            background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
+        }
+
+        .footer {
+            background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
+            color: var(--bs-tertiary) if($enable-important-utilities, !important, null);
+        }
+
+        .link-bg-footer {
+            color: var(--bs-tertiary) if($enable-important-utilities, !important, null);
+            &:hover,
+            &:focus {
+                color: $gray-400 if($enable-important-utilities, !important, null);
+            }
         }
     }
 }

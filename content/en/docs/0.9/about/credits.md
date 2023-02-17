@@ -23,6 +23,7 @@ Hinode is based on the following core components:
 - [Bootstrap]({{< param "links.bootstrap" >}}) is a popular, open-source web development framework. Using a mobile-first approach, it provides several functions and components to simplify the creation of responsive websites.
 - [npm]({{< param "links.npm" >}}) is a software registry that enables the sharing and reuse of both open-source and private software packages. By taking advantage of its version management, software dependencies are easily tracked and updated.
 - [FlexSearch]({{< param "links.flexsearch" >}}) is a flexible search library to enable full text search across your site.
+- [Font Awesome]({{< param "links.fontawesome" >}}) is an icon library and toolkit that is used on over 200 million sites. It contains both free and paid plans.
 
 ## Themes
 
