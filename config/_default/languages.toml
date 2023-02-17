@@ -11,4 +11,4 @@
         link = "https://demo.gethinode.com"
         caption = "Live Demo"
     [en.params.footer]
-        license = "<a href='https://github.com/gethinode/hinode/blob/main/LICENSE' class='link-bg-secondary' target='_blank'>MIT license</a>"
+        license = "<a href='https://github.com/gethinode/hinode/blob/main/LICENSE' class='link-bg-footer' target='_blank'>MIT license</a>"

@@ -7,6 +7,19 @@
     background-color: var(--bs-light) if($enable-important-utilities, !important, null);
 }
 
+.footer {
+    background-color: var(--bs-secondary) if($enable-important-utilities, !important, null);
+    color: var(--bs-light) if($enable-important-utilities, !important, null);
+}
+
+.link-bg-footer {
+    color: var(--bs-light) if($enable-important-utilities, !important, null);
+    &:hover,
+    &:focus {
+        color: $gray-400 if($enable-important-utilities, !important, null);
+    }
+}
+
 @if $enable-dark-mode {
     @include color-mode(dark) {
         .gradient-featured {
@@ -18,5 +31,17 @@
             background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
         }
 
+        .footer {
+            background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
+            color: var(--bs-tertiary) if($enable-important-utilities, !important, null);
+        }
+
+        .link-bg-footer {
+            color: var(--bs-tertiary) if($enable-important-utilities, !important, null);
+            &:hover,
+            &:focus {
+                color: $gray-400 if($enable-important-utilities, !important, null);
+            }
+        }
     }
 }

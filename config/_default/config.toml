@@ -1,5 +1,5 @@
 title = "Hinode"
-copyright = "© 2023 <a href='https://github.com/markdumay' class='link-bg-secondary' target='_blank'>Mark Dumay</a>"
+copyright = "© 2023 <a href='https://github.com/markdumay' class='link-bg-footer' target='_blank'>Mark Dumay</a>"
 paginate = 9
 enableGitInfo = true
 
