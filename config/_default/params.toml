@@ -29,14 +29,14 @@
         sort = "weight"
         reverse = false
         cols = 3
-        color = "light"
+        color = ""
         padding = "3"
         header = "none"
         footer = "none"
         orientation = "stacked"
-        style = "border-0 card-emphasize"
+        style = "border-0 card-emphasize card-feature"
         homepage = 6
-        background = "light"
+        background = "body"
     # [releases]
     #     title = "Releases"
     #     sort = "date"
