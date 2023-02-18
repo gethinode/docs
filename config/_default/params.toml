@@ -112,6 +112,7 @@
     bs_badge_heading = "https://getbootstrap.com/docs/5.2/components/badge/#headings"
     bs_breakpoints = "https://getbootstrap.com/docs/5.3/layout/breakpoints"
     bs_color = "https://getbootstrap.com/docs/5.3/customize/color-modes"
+    bs_color_sass = "https://getbootstrap.com/docs/5.3/customize/color-modes/#building-with-sass"
     bs_grid = "https://getbootstrap.com/docs/5.3/layout/grid"
     bs_offcanvas = "https://getbootstrap.com/docs/5.3/components/offcanvas"
     bs_navbar_placement = "https://getbootstrap.com/docs/5.3/components/navbar/#placement"
