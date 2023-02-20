@@ -49,7 +49,7 @@ The base layout uses the [main configuration]({{< param "links.hugo_config" >}})
 | title         | -       | Title of the website, joined with the separator and title of the current page. |
 | copyright     | -       | Copyright notice added to the page footer. |
 | paginate      | 9       | Maximum number of elements to display on a [list page](#list-pages) before pagination. |
-| enableGitInfo | -       | Enables git information, which is used by [documentation pages](#documentation-layout). |
+| enableGitInfo | -       | Enables git information, which is used by [documentation pages]({{< relref "content-management#documentation-layout" >}}). |
 {.table}
 
 The below configuration shows the default configuration set in `config/_default/config.toml`.

@@ -108,7 +108,7 @@ Documentation pages use a more straightforward, simplified layout compared to th
 
 - **Title** - the title of the page as set in the page's frontmatter.
 - **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
-- **Metadata** - a revision date and link to the latest git commit on the bottom of the page. Enable `enableGitInfo` in the [main configuration](#main-configuration) for the git commit message to work.
+- **Metadata** - a revision date and link to the latest git commit on the bottom of the page. Enable `enableGitInfo` in the [main configuration]({{< relref "layout#main-configuration" >}}) for the git commit message to work.
 
 Be sure to select the `docs` layout in the page's frontmatter to enable the documentation layout:
 
