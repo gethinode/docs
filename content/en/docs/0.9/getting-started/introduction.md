@@ -47,36 +47,17 @@ Start a new Hinode project in three steps:
     npm run start
     {{< /command >}}
 
-## Quick configuration settings
-
-The main site configuration is available in `./config/_default`. Review the following items to get you started.
-
-{{< accordion >}}
-  {{< accordion-item header="Organize the content" >}}
-    Hinode uses a structured approach to organize and present content. See the [content management]({{< relref "content-management" >}}) page for more details.
-  {{< /accordion-item >}}
-  {{< accordion-item header="Review the layout options" >}}
-    Hinode uses a base layout for the home page, list pages, and individual pages. Individual pages can also be configured as documentation page instead of a regular page. Review the [layout documentation]({{< relref "colors" >}}) for more details.
-  {{< /accordion-item >}}
-  {{< accordion-item header="Adjust the theme colors" >}}
-    Hinode uses eight configurable theme colors. You can adjust them in the `style` section of  `/config/_default/params.toml`. Review the [colors documentation]({{< relref "colors" >}}) for more details.
-  {{< /accordion-item >}}
-  {{< accordion-item header="Set the main font" >}}
-    Set the `themeFont` and `themeFontPath` in the `style` section of `/config/_default/params.toml` to adjust the main font. Hinode includes supports for [Emoji]({{< relref "typography#emoji" >}}) by default. Review the [fonts documentation]({{< relref "fonts" >}}) for more details.
-  {{< /accordion-item >}}
-  {{< accordion-item header="Configure the supported languages">}}
-    Configure each supported language in `config/_default/languages.toml`. Set the default behavior in `config/_default/config.toml`. Review the [languages documentation]({{< relref "languages" >}}) for more details.
-  {{< /accordion-item >}}
-  {{< accordion-item header="Define the main menu" >}}
-    Define the main menu entries for each language in `config/_default/menus`. For example, the English menu entries are defined in `menus.en.toml`. See the [navigation documentation]({{< relref "navigation" >}}) for more details.
-  {{< /accordion-item >}}
-{{< /accordion >}}
-
 ## Adding content
 
 Hinode contains sample content for a blog and a project portfolio. The examples are available in English and Dutch and can be found in the `content` folder. Review the following items on to how organize and enrich your content.
 
 {{< accordion >}}
+  {{< accordion-item header="Adding content" >}}
+    Hinode uses Markdown and templates to define the content for your website. See the [content management]({{< relref "content-management" >}}) page for more details.
+  {{< /accordion-item >}}
+  {{< accordion-item header="Organize the content" >}}
+    Hinode uses a structured approach to organize and present content. See the [content organization]({{< relref "content-organization" >}}) page for more details.
+  {{< /accordion-item >}}
   {{< accordion-item header="Enrich Markdown content with Bootstrap styling" >}}
     Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for the typography. Review the [typography documentation]({{< relref "typography" >}}) for more details.
   {{< /accordion-item >}}
@@ -91,6 +72,28 @@ Hinode contains sample content for a blog and a project portfolio. The examples 
   {{< /accordion-item >}}
   {{< accordion-item header="Include Font Awesome icons on the fly" >}}
     Hinode provides out-of-the box access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}). The icon library provides various styling options. Review the [icons documentation]({{< relref "../content/icons" >}}) for more details.
+  {{< /accordion-item >}}
+{{< /accordion >}}
+
+## Quick configuration settings
+
+The main site configuration is available in `./config/_default`. Review the following items to get you started.
+
+{{< accordion >}}
+  {{< accordion-item header="Review the layout options" >}}
+    Hinode uses a base layout for the home page, list pages, and individual pages. Individual pages can also be configured as documentation page instead of a regular page. Review the [layout documentation]({{< relref "colors" >}}) for more details.
+  {{< /accordion-item >}}
+  {{< accordion-item header="Adjust the theme colors" >}}
+    Hinode uses eight configurable theme colors. You can adjust them in the `style` section of  `/config/_default/params.toml`. Review the [colors documentation]({{< relref "colors" >}}) for more details.
+  {{< /accordion-item >}}
+  {{< accordion-item header="Set the main font" >}}
+    Set the `themeFont` and `themeFontPath` in the `style` section of `/config/_default/params.toml` to adjust the main font. Hinode includes supports for [Emoji]({{< relref "typography#emoji" >}}) by default. Review the [fonts documentation]({{< relref "fonts" >}}) for more details.
+  {{< /accordion-item >}}
+  {{< accordion-item header="Configure the supported languages">}}
+    Configure each supported language in `config/_default/languages.toml`. Set the default behavior in `config/_default/config.toml`. Review the [languages documentation]({{< relref "languages" >}}) for more details.
+  {{< /accordion-item >}}
+  {{< accordion-item header="Define the main menu" >}}
+    Define the main menu entries for each language in `config/_default/menus`. For example, the English menu entries are defined in `menus.en.toml`. See the [navigation documentation]({{< relref "navigation" >}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}
 
