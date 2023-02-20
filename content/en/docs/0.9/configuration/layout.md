@@ -227,64 +227,6 @@ The below configuration shows the default configuration set in `config/_default/
 
 Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents.
 
-### Default layout
-
-By default, single pages, such as a blog page, include the following elements in the body:
-
-- **Title** - the title of the page as set in the page's frontmatter.
-- **Metadata** - the date of the page, the modification date (if applicable), the read time, and the amount of words on the page.
-- **Tags** - links to any tags defined in the page's frontmatter.
-- **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
-- **Thumbnail** - a thumbnail image with figure caption that links to the photo credits (if defined in the frontmatter).
-- **Navigation links** - links on the bottom of the page that link to the previoud and next page within the current section.
-
-The below example illustrates the parameters used in the page's frontmatter:
-
-```yaml
----
-author: Mark Dumay
-title: Another project
-date: 2021-07-15
-description: Another project.
-tags: ["javascript", "golang"]
-thumbnail: img/coffee.jpg
-photoCredits: <a href="https://unsplash.com/@kfred">Karl Fredrickson</a>
-photoSource: <a href="https://unsplash.com/photos/TYIzeCiZ_60">Unsplash</a>
----
-```
-
-### Documentation layout
-
-Documentation pages use a more straightforward, simplified layout compared to the default layout. They include the following elements in their body:
-
-- **Title** - the title of the page as set in the page's frontmatter.
-- **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
-- **Metadata** - a revision date and link to the latest git commit on the bottom of the page. Enable `enableGitInfo` in the [main configuration](#main-configuration) for the git commit message to work.
-
-Be sure to select the `docs` layout in the page's frontmatter to enable the documentation layout:
-
-```yml
----
-layout: docs
----
-```
-
-### Minimal layout
-
-Pages with a minimal layout are similar to documentation pages, but include navigation links instead of metadata at the bottom of the page:
-
-- **Title** - the title of the page as set in the page's frontmatter.
-- **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
-- **Navigation links** - links on the bottom of the page that link to the previoud and next page within the current section.
-
-Be sure to select the `minimal` layout in the page's frontmatter to enable the documentation layout:
-
-```yml
----
-layout: minimal
----
-```
-
 ### Example
 
 <div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
