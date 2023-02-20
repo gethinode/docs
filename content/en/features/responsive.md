@@ -15,5 +15,5 @@ layout: minimal
 Hinode takes a mobile-first approach to ensure the site adapts to different devices and screen sizes. It is powered by [Bootstrap 5]({{< param "links.bootstrap" >}}), a powerful and popular frontend toolkit for web development.
 
 {{< button relref="layout" >}}
-    See the layout options
+    Check the layout options
 {{< /button >}}
