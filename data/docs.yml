@@ -8,6 +8,16 @@
     - title: Contribute
     - title: Troubleshooting
 
+- title: Content
+  pages:
+    - title: Content management
+    - title: Content organization
+    - title: Typography
+    - title: Links and cross-references
+    - title: Images and figures
+    - title: Tables
+    - title: Icons
+
 - title: Configuration
   pages:
     - title: Layout
@@ -17,24 +27,6 @@
     - title: Languages
     - title: Navigation
     # - title: Comments
-
-- title: Advanced settings
-  pages:
-    - title: Overview
-    - title: Styles
-    - title: Scripts
-    - title: Icons
-    # - title: Metadata
-    - title: Server
-
-- title: Content
-  pages:
-    - title: Content management
-    - title: Typography
-    - title: Links and cross-references
-    - title: Images and figures
-    - title: Tables
-    - title: Icons
 
 # - title: Forms
 #   pages:
@@ -78,6 +70,15 @@
     - title: Spinner
     - title: Toast
     - title: Tooltip
+
+- title: Advanced settings
+  pages:
+    - title: Overview
+    - title: Styles
+    - title: Scripts
+    - title: Icons
+    # - title: Metadata
+    - title: Server
 
 - title: About
   pages:
