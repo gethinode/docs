@@ -19,7 +19,7 @@ npm run start
 Use the following command to mimick the site in **production mode**. In this setting, generated assets are minified and compliant with the Content Security Policy. Although Hugo's web server is not meant to be run in a real production environment, it does allow validation of the site in an environment close to production.
 
 {{% command %}}
-npm run prod
+npm run start:prod
 {{% /command %}}
 
 ## Generating a web site
