@@ -8,9 +8,9 @@ icon: fas lock
 layout: minimal
 ---
 
-{{< image src="img/observatory-light.png" class="mb-4 col-sm-12 col-lg-8 mx-auto border d-none-dark" >}}
+{{< image src="img/observatory-light.png" class="mb-4 col-sm-12 col-lg-8 mx-auto border d-none-dark" title="Mozilla Observatory score in light mode" >}}
 
-{{< image src="img/observatory-dark.png" class="mb-4 col-sm-12 col-lg-8 mx-auto border d-none-light" >}}
+{{< image src="img/observatory-dark.png" class="mb-4 col-sm-12 col-lg-8 mx-auto border d-none-light" title="Mozilla Observatory score in dark mode" >}}
 
 As a static site, Hinode is secure by design. Unlike dynamic sites, Hinode does not use databases or application servers to serve its content. This greatly reduces the risk associated with hosting public sites. In addition, Hinode uses rather strict security policies by default. This results in an A+ score from [Mozilla Observatory]({{< param "links.observatory" >}}).
 
