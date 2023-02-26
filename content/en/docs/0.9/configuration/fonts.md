@@ -1,7 +1,7 @@
 ---
 title: Fonts
 description: Configure a specific font to style your website.
-date: 2023-01-28
+date: 2023-02-23
 group: configuration
 layout: docs
 ---
@@ -10,7 +10,7 @@ Hinode uses a configurable font stack that includes support for Emoji across bro
 
 ## Font configuration
 
-Hinode uses Bootstrap's font configuration. The font stack includes support for Emoji across browsers and devices. You can adjust the main font in the `/config/_default/params.toml` file in the `style` section. You can either use fonts from an external provider or serve them locally. To improve performance, Hinode serves the Inter font locally by default.
+Hinode uses a font stack that includes support for Emoji across browsers and devices. You can adjust the main font in the `/config/_default/params.toml` file in the `style` section. You can either use fonts from an external provider or serve them locally. To improve performance, Hinode serves the Inter font locally by default.
 
 {{< docs name="font" file="config/_default/params.toml" >}}
 
@@ -22,7 +22,7 @@ Set the `themeFontPath` to the address of your font provider, such as [Google Fo
 themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap"
 ```
 
-Hinode enables support for Google Fonts by default. If you use a different font provider, be sure to adjust the Content Security Policy in the [server configuration]({{< ref "server" >}}). The the font face defitions in the file `assets/scss/fonts.scss` are ignored when using an external font.
+Hinode enables support for Google Fonts by default. If you use a different font provider, be sure to adjust the Content Security Policy in the [server configuration]({{< ref "server" >}}). The font-face definitions in the file `assets/scss/fonts.scss` are ignored when using an external font.
 
 ### Local fonts
 
@@ -32,7 +32,7 @@ To improve performance, Hinode serves the Inter font locally by default. Set the
 themeFontPath = "/fonts"
 ```
 
-The font files are retrieved from the folder `static/fonts`. The [google-webfonts-helper]({{< param "links.webfonts_helper" >}}) from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font face definitions. Copy the definitions to the `assets/scss/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
+The font files are retrieved from the folder `static/fonts`. The [google-webfonts-helper]({{< param "links.webfonts_helper" >}}) from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font-face definitions. Copy the definitions to the `assets/scss/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
 
 ## Customization
 

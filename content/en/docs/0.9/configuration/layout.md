@@ -217,6 +217,7 @@ The configuration of the list pages is set in the `list` section of the `site pa
 | orientation  | "stacked"    | Placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
 | style        | -            | Optional styling attributes added to card class, e.g. "border-0" to remove the borders. |
 | homepage     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
+| separator    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
 {.table}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
