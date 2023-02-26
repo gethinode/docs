@@ -7,6 +7,13 @@
     background-color: var(--bs-light) if($enable-important-utilities, !important, null);
 }
 
+.card-feature div i {
+    background: linear-gradient(135deg, tint-color($primary, 80%) 0%, $primary 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .footer {
     background-color: var(--bs-secondary) if($enable-important-utilities, !important, null);
     color: var(--bs-light) if($enable-important-utilities, !important, null);
@@ -31,6 +38,13 @@
             background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
         }
 
+        .card-feature div i {
+            background: linear-gradient(135deg, $primary 0%, shade-color($primary, 60%) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
         .footer {
             background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
             color: var(--bs-tertiary) if($enable-important-utilities, !important, null);
