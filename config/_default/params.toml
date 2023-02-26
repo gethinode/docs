@@ -37,6 +37,7 @@
         style = "border-0 card-emphasize card-feature"
         homepage = 6
         background = "body"
+        separator = false
     # [releases]
     #     title = "Releases"
     #     sort = "date"
