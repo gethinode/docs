@@ -20,6 +20,9 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[build]
+  writeStats = true
+
 [taxonomies]
   tag = 'tags'
 
