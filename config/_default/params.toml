@@ -38,18 +38,18 @@
         homepage = 6
         background = "body"
         separator = false
-    # [releases]
-    #     title = "Releases"
-    #     sort = "date"
-    #     reverse = false
-    #     cols = 3
-    #     color = ""
-    #     padding = "0"
-    #     header = "full"
-    #     footer = "none"
-    #     orientation = "stacked"
-    #     style = "border-0"
-    #     homepage = 3
+    [guides]
+        title = "Guides"
+        sort = "date"
+        reverse = false
+        cols = 3
+        color = ""
+        padding = "0"
+        header = "full"
+        footer = "none"
+        orientation = "stacked"
+        style = "border-0 card-zoom"
+        homepage = 3
 
 [favicon]
     logo = "img/favicon.png"
@@ -161,6 +161,7 @@
     hugo_lookup_order = "https://gohugo.io/templates/lookup-order"
     hugo_toc = "https://gohugo.io/content-management/toc"
     issue_tracker = "https://github.com/gethinode/hinode/issues"
+    leaflet = "https://leafletjs.com"
     license = "https://github.com/gethinode/hinode/blob/main/LICENSE"
     markdown_guide = "https://www.markdownguide.org"
     markdown_emoji = "https://gist.github.com/rxaviers/7360908"
@@ -179,6 +180,7 @@
     nodejs = "https://nodejs.org"
     npm = "https://www.npmjs.com"
     observatory = "https://observatory.mozilla.org/analyze/demo.gethinode.com"
+    openstreetmap = "https://www.openstreetmap.org"
     package_npm = "https://www.npmjs.com/package/@gethinode/hinode"
     pagespeed = "https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethinode.com%2F"
     repository = "https://github.com/gethinode/hinode"
