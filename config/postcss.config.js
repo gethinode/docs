@@ -1,3 +1,4 @@
+// js-docs-start purge
 const autoprefixer = require('autoprefixer')({})
 const cssnano = require('cssnano')({
   preset: 'advanced'
@@ -39,3 +40,4 @@ module.exports = {
     purgecss
   ]
 }
+// js-docs-end purge
