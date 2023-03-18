@@ -4,6 +4,7 @@ title: Adding npm packages
 date: 2023-03-15
 description: Guide on how to add additional npm packages to your site.
 # tags: ["npm", "leaflet"]
+weight: 20
 thumbnail: img/packages.jpg
 photoCredits: <a href="https://unsplash.com/@mildlee">Mildleee</a>
 photoSource: <a href="https://unsplash.com/photos/7KKy7-TeeVs">Unsplash</a>
