@@ -40,7 +40,7 @@
         separator = false
     [guides]
         title = "Guides"
-        sort = "date"
+        sort = "weight"
         reverse = false
         cols = 3
         color = ""
