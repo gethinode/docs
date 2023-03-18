@@ -70,7 +70,6 @@
     themeOpacity = "10"
     themeFont = "Inter"
     themeFontPath = "/fonts" # local path
-    purge = true
 
 [schema]
     type = "Organization"
