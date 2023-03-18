@@ -25,6 +25,7 @@ Hinodes uses npm and mounted folders to create a flexibile virtual file system t
 2. Define the Sass entrypoint
 
    The main entrypoint for the Sass files is defined in `assets/scss/app.scss`. It supports Hugo templating. For example, the snippet below conditionally imports font face definitions when using a local font path.
+
    ```go-html-template
    {{ if (not (hasPrefix (lower site.Params.style.themeFontPath) "http")) }}
       @import "theme/fonts.scss";
