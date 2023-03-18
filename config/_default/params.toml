@@ -55,7 +55,10 @@
     logo = "img/favicon.png"
     sizes = [16, 32, 48]
 
+# toml-docs-start purge
 [style]
+    purge = true
+# toml-docs-end purge
     primary = "#D43900"
     secondary = "#6c757d"
     success = "#198754"
