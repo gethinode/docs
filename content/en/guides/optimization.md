@@ -166,8 +166,8 @@ As you might recall, the Lighthouse assessment also recommends to enable text co
 Please ensure the file `hugo_stats.json` is checked in to your repository (e.g. not listed in `.gitignore`). Netlify will not process the artifact during its build process otherwise.
 {{< /alert >}}
 
-Visit the site `https://gethinode.com` in Chrome and open up the Development tools. Click on the `Network` tool and click on the `main.css` file. The response header will show `br` for the value `content-encoding`. This shows the file is served with Brotli encoding, which is one of the compression methods available, next to Gzip and Deflate. Siteground has an insightful blog article [explaining the different compression methods]({{< param "links.siteground_compression" >}}). Run a Lighthouse test on the live site to assess the mobile performance score. It will probably be around **XX**.
+Visit the site `https://gethinode.com` in Chrome and open up the Development tools. Click on the `Network` tool and click on the `main.css` file. The response header will show `br` for the value `content-encoding`. This shows the file is served with Brotli encoding, which is one of the compression methods available, next to Gzip and Deflate. Siteground has an insightful blog article [explaining the different compression methods]({{< param "links.siteground_compression" >}}). Run a Lighthouse test on the live site to assess the mobile performance score. It will probably be around 90.
 
 <!-- TODO: add screenshot -->
 
-Your site is now significantly more lean and responsive. In this guide we have improved the mobile performance score from **XX** to **YY**. The blog article from LogRocket provides more [tips and tricks on how to further optimize your site]({{< param "links.logrocket_optimization" >}}).
+Your site is now significantly more lean and responsive. In this guide we have improved the mobile performance score from average to good. The blog article from LogRocket provides more [tips and tricks on how to further optimize your site]({{< param "links.logrocket_optimization" >}}).
