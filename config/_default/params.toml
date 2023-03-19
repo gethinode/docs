@@ -34,7 +34,7 @@
         header = "none"
         footer = "none"
         orientation = "stacked"
-        style = "border-0 card-emphasize card-feature"
+        style = "border-0 card-shrink card-feature"
         homepage = 6
         background = "body"
         separator = false
