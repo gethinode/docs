@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Creating your first site with Hinode
-date: 2023-03-28
+date: 2023-04-01
 description: Guide on how to set up your site with version control and automated testing using GitHub and VSCode.
 # tags: ["vscode"]
 weight: 10
@@ -180,7 +180,7 @@ npm run lint
   {{< img src="img/vscode-commit-step02.png" caption="Step 2. Publish the branch" >}}
 {{< /carousel >}}
 
-Head over to VSCode's Source Control to view the pending changes. Click on the file `about.md` to open the code inspector. VSCode will then show the differences between the previous version and current version of the file. Content that has been replaced or removed is marked red, and content that has been added or modified is marked green. Verify the changes and click on the `+` button to stage the changes. Enter a descriptive commit message such as `Update about page`. When done, click on the blue `Commit` button to commit the changes on the `develop` branch. Lastly, click on the blue button `Publish Branch` to submit tbe branch and its content to GitHub. For an existing branch you would select the menu item `push` to submit the changes to the remote repository.
+Head over to VSCode's Source Control to view the pending changes. Click on the file `about.md` to open the code inspector. VSCode will then show the differences between the previous version and current version of the file. Content that has been replaced or removed is marked red, and content that has been added or modified is marked green. Verify the changes and click on the `+` button to stage the changes. Enter a descriptive commit message such as `Update about page`. When done, click on the blue `Commit` button to commit the changes on the `develop` branch. Lastly, click on the blue button `Publish Branch` to submit tbe branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
 
 {{< alert color="secondary" >}}
 By convention, a commit message should use the imperative mood and should be less than 150 characters in total. Review the blog from Initial Commit to see more [best practices and guidelines to write good commit messages]({{< param "links.initialcommit" >}}).
