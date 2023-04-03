@@ -1,7 +1,7 @@
 ---
 title: Icons
 description: Configure secure access to icons from Bootstrap and Font Awesome.
-date: 2023-01-28
+date: 2023-04-03
 group: advanced-settings
 layout: docs
 ---
@@ -16,7 +16,7 @@ Bootstrap uses various embedded vector images (in <abbr title="Scalable Vector G
 
 Hinodes uses npm and mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the Bootstrap icons consists of four steps. It is intertwined with the [build process for the stylesheets]({{< ref "styles" >}}).
 
-1. Override the inline Bootstrap icon definitions
+1. **Override the inline Bootstrap icon definitions**
 
    Replace the default inline icon definitions within the Bootstrap Sass files with references to local vector images. Use the file `assets/scss/common/_icons.scss` to ensure the definitions take precedence over the default Bootstrap values. For example, the following statement updates the value of the `$form-switch-focus-bg-image`:
 
@@ -24,7 +24,7 @@ Hinodes uses npm and mounted folders to create a flexibile virtual file system t
    $form-switch-focus-bg-image: url("icons/form-switch-focus-bg-image.svg") !default;
    ```
 
-2. Export the Sass variables
+2. **Export the Sass variables**
 
    Export the required Sass variables by defining them in the `assets/scss/common/_export.scss` file. Hinode converts the variable names from kebab case to snake case to make them compatible with Hugo's variable naming convention. For example, the css variable `--form-switch-focus-color` is exposed as `.form_switch_focus_color` to the Hugo templates.
 
@@ -34,7 +34,7 @@ Hinodes uses npm and mounted folders to create a flexibile virtual file system t
    }
    ```
 
-3. Reference the Sass variables within each icon file
+3. **Reference the Sass variables within each icon file**
 
    Use [Hugo templating]({{< param "links.hugo_templates">}}) to reference the Sass variables for fill colors and stroke colors. For example, the file `assets/icons/form-switch-focus-bg-image.svg` defines the fill color as `{{ .form_switch_focus_color }}`. The entire vector definition is as such:
 
@@ -44,7 +44,7 @@ Hinodes uses npm and mounted folders to create a flexibile virtual file system t
    </svg>
    ```
 
-4. Process the icon files
+4. **Process the icon files**
 
    Add the local icon files to the `assets/icons` folder with a filename as defined in step 1. The partial `partials/head/stylesheet.html` calls the partial `partials/head/icons.html` to process all icon files with the `.svg` extension recursively. The output is stored in the `icons` folder within the output directory (usually `public` when building the site). The icon files are referenced in the main stylesheet automatically.
 
