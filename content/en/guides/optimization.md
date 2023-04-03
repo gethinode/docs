@@ -1,7 +1,7 @@
 ---
 title: Optimizing the user experience
 description: Guide on how to optimize the user experience of your site.
-date: 2023-04-01
+date: 2023-04-03
 # tags: ["optimization"]
 weight: 30
 thumbnail: img/watch.jpg
@@ -41,7 +41,7 @@ We will now use the Hinode documentation site as a real-life case example. We wi
 git clone https://github.com/gethinode/docs.git && cd docs
 {{< /command >}}
 
-For now, set the `purge` setting to `false` in the `config/_default/params.toml`:
+For now, set the `purge` setting to `false` in `config/_default/params.toml`:
 
 ```toml
 [style]
@@ -84,7 +84,7 @@ Scroll below in the Lighthouse evaluation report to study several opportunities 
 
 2. **Eliminate render-blocking resources**
 
-   Hinode includes the `main.bundle.js` file in the page body by default, thus keeping this file from the critical rendering path. However, the `main.css` file is render-blocking by default - even if included in the page body. Reducing the size of this file will improve the page loading performance.
+   Hinode includes the `main.bundle.js` file in the page body instead of the header by default, thus keeping this file from the critical rendering path. However, the `main.css` file is render-blocking by default - no matter where included. Reducing the size of this file will improve the page loading performance.
 
 3. **Reduce unused CSS and JavaScript**
 
@@ -127,7 +127,7 @@ Although we have increased the site's performance, we still have several remaini
 
 <!-- TODO: add build pipeline illustration -->
 
-Hinode uses <abbr title="Sassy Cascading Style Sheets">SCSS files</abbr> as part of its pipeline to generate the stylesheets for your site. Under the hood, Hinode utilizes [Hugo's pipe functionality]({{< param "links.hugo_pipes" >}}) to process its SCSS files. We will now set the `purge` setting to `true` in the `config/_default/params.toml`:
+Hinode uses <abbr title="Sassy Cascading Style Sheets">SCSS files</abbr> as part of its pipeline to generate the stylesheets for your site. Under the hood, Hinode utilizes [Hugo's pipe functionality]({{< param "links.hugo_pipes" >}}) to process its SCSS files. We will now set the `purge` setting to `true` in `config/_default/params.toml`:
 
 ```toml
 [style]
