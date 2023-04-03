@@ -160,7 +160,7 @@ If you rerun the Lighthouse test, the size of the `main.css` file will appear to
 
 ## Step 5 - Assessing the site in production
 
-As you might recall, the Lighthouse assessment also recommends to enable text compression to reduce the download size of text-based resources. Hugo's web server is meant for local development and is not capable of compressing these assets. We will need to publish our site to a server capable of text compression to evaluate the impact of this setting. 
+As you might recall, the Lighthouse assessment also recommends to enable text compression to reduce the download size of text-based resources. Hugo's web server is meant for local development and is not capable of compressing these assets. We will need to publish our site to a server capable of text compression to evaluate the impact of this setting.
 
 {{< alert >}}
 Please ensure the file `hugo_stats.json` is checked in to your repository (e.g. not listed in `.gitignore`). Netlify will not process the artifact during its build process otherwise.
