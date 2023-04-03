@@ -14,11 +14,14 @@ enableInlineShortcodes = true
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
-timeout = "60s"
+timeout = "120s"
 
 languageCode = "en-us"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+
+[build]
+  writeStats = true
 
 [taxonomies]
   tag = 'tags'
