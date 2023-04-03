@@ -160,15 +160,21 @@ If you rerun the Lighthouse test, the size of the `main.css` file will appear to
 
 ## Step 5 - Assessing the site in production
 
-As you might recall, the Lighthouse assessment also recommends to enable text compression to reduce the download size of text-based resources. Hugo's web server is meant for local development and is not capable of compressing these assets. We will need to publish our site to a server capable of text compression to evaluate the impact of this setting. The actual deployment of our site is beyond the scope of this guide. Instead, we will review the live Hinode documentation site. You can review the documentation on how to [host your site on Netlify]({{< relref "hosting-and-deployment#host-on-netlify" >}}), which is the web server behind the Hinode documentation site.
+As you might recall, the Lighthouse assessment also recommends to enable text compression to reduce the download size of text-based resources. Hugo's web server is meant for local development and is not capable of compressing these assets. We will need to publish our site to a server capable of text compression to evaluate the impact of this setting.
 
 {{< alert >}}
 Please ensure the file `hugo_stats.json` is checked in to your repository (e.g. not listed in `.gitignore`). Netlify will not process the artifact during its build process otherwise.
 {{< /alert >}}
 
-Visit the site `https://gethinode.com` in Chrome and open up the Development tools. Click on the `Network` tool and click on the `main.css` file. The response header will show `br` for the value `content-encoding`. This shows the file is served with Brotli encoding, which is one of the compression methods available, next to Gzip and Deflate. Siteground has an insightful blog article [explaining the different compression methods]({{< param "links.siteground_compression" >}}). Run a Lighthouse test on the live site to assess the mobile performance score. It will probably be around 90.
+The actual deployment of our site is beyond the scope of this guide. Instead, we will review the live Hinode documentation site. You can review the documentation on how to [host your site on Netlify]({{< relref "hosting-and-deployment#host-on-netlify" >}}), which is the web server behind the Hinode documentation site.
 
-<!-- TODO: add screenshot -->
+{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
+  {{< img src="img/lighthouse-prod-step01.png" caption="Step 1. Inspect the downloaded assets" >}}
+  {{< img src="img/lighthouse-prod-step02.png" caption="Step 2. Validate the encoding" >}}
+  {{< img src="img/lighthouse-prod-step03.png" caption="Step 3. Evaluate the performance score" >}}
+{{< /carousel >}}
+
+Visit the site `https://gethinode.com` in Chrome and open up the Development tools. Click on the `Network` tool and click on the `main.css` file. The response header will show `br` for the value `content-encoding`. This shows the file is served with Brotli encoding, which is one of the compression methods available, next to Gzip and Deflate. Siteground has an insightful blog article [explaining the different compression methods]({{< param "links.siteground_compression" >}}). Run a Lighthouse test on the live site to assess the mobile performance score. It will probably be in the range 90 - 100.
 
 ## Conclusion
 
