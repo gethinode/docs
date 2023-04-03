@@ -39,9 +39,9 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@gethinode/hinode": "^0.10.0-alpha4",
+    "@gethinode/hinode": "^0.10.0-alpha5",
     "autoprefixer": "^10.4.14",
-    "bootstrap": "^5.3.0-alpha1",
+    "bootstrap": "^5.3.0-alpha2",
     "cssnano": "^5.1.15",
     "cssnano-preset-advanced": "^5.3.10",
     "eslint": "^8.37.0",
