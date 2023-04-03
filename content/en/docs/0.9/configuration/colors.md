@@ -1,7 +1,7 @@
 ---
 title: Colors
 description: Use Bootstrap's color system to easily adjust your website's colors.
-date: 2023-01-14
+date: 2023-03-04
 group: configuration
 layout: docs
 ---
@@ -53,7 +53,7 @@ Hinode defines additional classes to render links that contrast with their backg
 
 {{< example >}}
 <div class="col-md-2">
-    <div class="p-3 mb-3 bg-success rounded-3 text-center"><a class="link-bg-success" href="#">Success</a></div>
+    <div class="p-3 mb-3 bg-success rounded-3 text-center"><a class="link-bg-success" href="#!">Success</a></div>
 </div>
 {{< /example>}}
 
@@ -61,28 +61,28 @@ Below grid illustrates the contrasting colors for each background.
 
 <div class="row">
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-primary rounded-3"><a class="link-bg-primary" href="#">Primary</a></div>
+        <div class="p-3 mb-3 bg-primary rounded-3"><a class="link-bg-primary" href="#!">Primary</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-secondary rounded-3"><a class="link-bg-secondary" href="#">Secondary</a></div>
+        <div class="p-3 mb-3 bg-secondary rounded-3"><a class="link-bg-secondary" href="#!">Secondary</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-success rounded-3"><a class="link-bg-success" href="#">Success</a></div>
+        <div class="p-3 mb-3 bg-success rounded-3"><a class="link-bg-success" href="#!">Success</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-danger rounded-3"><a class="link-bg-danger" href="#">Danger</a></div>
+        <div class="p-3 mb-3 bg-danger rounded-3"><a class="link-bg-danger" href="#!">Danger</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-warning rounded-3"><a class="link-bg-warning" href="#">Warning</a></div>
+        <div class="p-3 mb-3 bg-warning rounded-3"><a class="link-bg-warning" href="#!">Warning</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-info rounded-3"><a class="link-bg-info" href="#">Info</a></div>
+        <div class="p-3 mb-3 bg-info rounded-3"><a class="link-bg-info" href="#!">Info</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-light rounded-3"><a class="link-bg-light" href="#">Light</a></div>
+        <div class="p-3 mb-3 bg-light rounded-3"><a class="link-bg-light" href="#!">Light</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-dark rounded-3"><a class="link-bg-dark" href="#">Dark</a></div>
+        <div class="p-3 mb-3 bg-dark rounded-3"><a class="link-bg-dark" href="#!">Dark</a></div>
     </div>
 </div>
 
