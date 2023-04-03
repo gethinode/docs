@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Creating your first site with Hinode
-date: 2023-04-01
+date: 2023-04-03
 description: Guide on how to set up your site with version control and automated testing using GitHub and VSCode.
 # tags: ["vscode"]
 weight: 10
@@ -20,10 +20,10 @@ Hinode uses [Hugo]({{< param "links.hugo" >}}), a popular open-source generator,
 
 This guide requires a GitHub account to host the demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
 
- - [Set up an account with GitHub]({{< param "links.github_signup" >}})
- - [Download and install the Git binary]({{< param "links.git_download" >}})
- - [Download and install Node.js]({{< param "links.nodejs" >}}) (it includes npm)
- - [Download and install VSCode]({{< param "links.vscode_download" >}})
+- [Set up an account with GitHub]({{< param "links.github_signup" >}})
+- [Download and install the Git binary]({{< param "links.git_download" >}})
+- [Download and install Node.js]({{< param "links.nodejs" >}}) (it includes npm)
+- [Download and install VSCode]({{< param "links.vscode_download" >}})
 
 ## Step 1 - Initializing the project
 
@@ -97,7 +97,7 @@ npm run start
 (out)> @gethinode/child@0.7.1 start
 (out)> exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender
 (out)
-(out)Start building sites … 
+(out)Start building sites …
 (out)hugo v0.110.0-e32a493b7826d02763c3b79623952e625402b168+extended darwin/arm64 BuildDate=2023-01-17T12:16:09Z VendorInfo=gohugoio
 (out)
 (out)                   | EN  | NL  
@@ -161,7 +161,7 @@ This is my first site created with Hinode.
 
 ## Step 3 - Validating the changes
 
-Hinode defines severals tests to validate the code adheres to [coding standards]({{< relref "contribute#coding-guidelines" >}}). Run the following command to run the tests locally. The test should confirm our code is safe to check in. 
+Hinode defines severals tests to validate the code adheres to [coding standards]({{< relref "contribute#coding-guidelines" >}}). Run the following command to run the tests locally. The test should confirm our code is safe to check in.
 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run lint
@@ -204,6 +204,7 @@ With your changes committed to the remote develop branch, you can now merge the 
 
 You have now successfully created your initial Hinode site with version control and automated testing. Review the [hosting and deployment options]({{< relref "hosting-and-deployment" >}}) to see various options on how to publish your site to a hosting provider. While you continue to make updates to the content and layout of your site, you should consider to regularly update the dependencies of your repository too. Use the `upgrade` command to check for any package updates. If applicable, run `npm install` again to install the updated packages.
 
+<!-- markdownlint-disable MD011 -->
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run upgrade
 (out)
@@ -215,5 +216,6 @@ npm run upgrade
 (out)
 (out)All dependencies match the latest package versions :)
 {{< /command >}}
+<!-- markdownlint-enable MD011 -->
 
 You can also enable Dependabot on your GitHub repository to [automatically keep the dependencies and packages used in your repository updated to the latest version]({{< param "links.dependabot" >}}).

@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Adding npm packages
-date: 2023-04-01
+date: 2023-04-03
 description: Guide on how to add existing npm packages to your site.
 # tags: ["npm", "leaflet"]
 weight: 20
