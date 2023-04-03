@@ -1,7 +1,7 @@
 ---
 title: Fonts
 description: Configure a specific font to style your website.
-date: 2023-02-23
+date: 2023-03-12
 group: configuration
 layout: docs
 ---
@@ -32,7 +32,7 @@ To improve performance, Hinode serves the Inter font locally by default. Set the
 themeFontPath = "/fonts"
 ```
 
-The font files are retrieved from the folder `static/fonts`. The [google-webfonts-helper]({{< param "links.webfonts_helper" >}}) from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font-face definitions. Copy the definitions to the `assets/scss/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
+The font files are retrieved from the folder `static/fonts`. The [google-webfonts-helper]({{< param "links.webfonts_helper" >}}) from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font-face definitions. Copy the definitions to the `assets/scss/theme/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
 
 ## Customization
 

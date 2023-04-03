@@ -1,7 +1,7 @@
 ---
 title: Introduction
 description: Get started with Hinode, a clean documentation and blog theme for your Hugo site based on Bootstrap 5.
-date: 2023-02-06
+date: 2023-03-18
 group: getting-started
 aliases:
   - "/docs/0.9/getting-started/"
@@ -65,7 +65,7 @@ Hinode contains sample content for a blog and a project portfolio. The examples 
     Generate internal links and external links using a combination of Markdown and Hugo shortcodes. You can optionally manage your external links in a central configuration file. Review the [links documentation]({{< relref "links-and-cross-references" >}}) for more details.
   {{< /accordion-item >}}
   {{< accordion-item header="Add responsive images optimized for multiple screen sizes and devices">}}
-    Hinode supports responsive images out-of-the-box. Hinode uses Hugo’s powerful image processing to preprocess images on the server. By taking advantage of so-called image sets, the client’s browser can decide which image to download whilst reducing the download size. Review the [image documentation]({{< relref "images-and-figures" >}}) for more details.
+    Hinode supports responsive images out-of-the-box. Hinode uses Hugo to preprocess images on the server. By taking advantage of so-called image sets, the client’s browser can decide which image to download whilst reducing the download size. Review the [image documentation]({{< relref "images-and-figures" >}}) for more details.
   {{< /accordion-item >}}
   {{< accordion-item header="Apply Bootstrap styling to your tables" >}}
     Hinode enhances the basic tables available in Markdown with optional styling features provided by Bootstrap. You can customize the accentuation, adjust the borders, and make tables more compact. Review the [tables documentation]({{< relref "tables" >}}) for more details.

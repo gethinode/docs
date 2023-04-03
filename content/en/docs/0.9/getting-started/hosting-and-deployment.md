@@ -20,7 +20,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
    You might encounter timeout errors when you generate a large site that contains many resources (such as images). Adjust the `timout` in `config/_default/config.toml` as needed.
 
-   {{< docs name="build" file="config/_default/config.toml" >}}
+   {{< docs name="timeout" file="config/_default/config.toml" >}}
 
 3. Consider using build automation
 

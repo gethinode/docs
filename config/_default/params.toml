@@ -34,28 +34,31 @@
         header = "none"
         footer = "none"
         orientation = "stacked"
-        style = "border-0 card-emphasize card-feature"
+        style = "border-0 card-shrink card-feature"
         homepage = 6
         background = "body"
         separator = false
-    # [releases]
-    #     title = "Releases"
-    #     sort = "date"
-    #     reverse = false
-    #     cols = 3
-    #     color = ""
-    #     padding = "0"
-    #     header = "full"
-    #     footer = "none"
-    #     orientation = "stacked"
-    #     style = "border-0"
-    #     homepage = 3
+    [guides]
+        title = "Guides"
+        sort = "weight"
+        reverse = false
+        cols = 3
+        color = ""
+        padding = "0"
+        header = "full"
+        footer = "none"
+        orientation = "stacked"
+        style = "border-0 card-zoom"
+        homepage = 3
 
 [favicon]
     logo = "img/favicon.png"
     sizes = [16, 32, 48]
 
+# toml-docs-start purge
 [style]
+    purge = true
+# toml-docs-end purge
     primary = "#D43900"
     secondary = "#6c757d"
     success = "#198754"
@@ -115,6 +118,7 @@
     bs_color = "https://getbootstrap.com/docs/5.3/customize/color-modes"
     bs_color_sass = "https://getbootstrap.com/docs/5.3/customize/color-modes/#building-with-sass"
     bs_grid = "https://getbootstrap.com/docs/5.3/layout/grid"
+    bs_lean = "https://getbootstrap.com/docs/5.3/customize/optimize"
     bs_offcanvas = "https://getbootstrap.com/docs/5.3/components/offcanvas"
     bs_navbar_placement = "https://getbootstrap.com/docs/5.3/components/navbar/#placement"
     bs_tables = "https://getbootstrap.com/docs/5.3/content/tables"
@@ -122,7 +126,9 @@
     cloudflare = "https://cloudflare.com"
     commit_message = "https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html"
     contrast_checker = "https://accessibleweb.com/color-contrast-checker/"
+    core_web_vitals = "https://web.dev/vitals/#core-web-vitals"
     css_codeguide = "https://codeguide.co/#css"
+    dependabot = "https://docs.github.com/en/code-security/dependabot/dependabot-version-updates"
     doks = "https://github.com/h-enk/doks"
     eslint = "https://eslint.org"
     flexsearch = "https://github.com/nextapps-de/flexsearch"
@@ -131,8 +137,10 @@
     fa_styling = "https://fontawesome.com/docs/web/style/styling"
     fa_animation = "https://fontawesome.com/docs/web/style/animate"
     git_download = "https://git-scm.com"
+    github_signup = "https://github.com/signup"
     github_pr = "https://help.github.com/articles/about-pull-requests/"
     github_rebase = "https://help.github.com/articles/about-git-rebase/"
+    google_chrome = "https://www.google.com/chrome"
     google_fonts = "https://fonts.google.com"
     html_codeguide = "https://codeguide.co/#html"
     hugo = "https://gohugo.io"
@@ -154,13 +162,21 @@
     hugo_mounts = "https://gohugo.io/hugo-modules/configuration/#module-config-mounts"
     hugo_imaging = "https://gohugo.io/content-management/image-processing/#imaging-configuration"
     hugo_ordering = "https://gohugo.io/templates/lists/#order-content"
+    hugo_pipes = "https://gohugo.io/hugo-pipes/introduction"
+    hugo_postprocess = "https://gohugo.io/hugo-pipes/postprocess"
+    hugo_release_v0_109_0 = "https://github.com/gohugoio/hugo/releases/tag/v0.109.0"
     hugo_shortcodes = "https://gohugo.io/content-management/shortcodes"
     hugo_structure = "https://gohugo.io/content-management/organization"
     hugo_templates = "https://gohugo.io/templates/introduction"
     hugo_lookup_order = "https://gohugo.io/templates/lookup-order"
+    hugo_sass = "https://discourse.gohugo.io/t/using-the-dart-sass-transpiler"
     hugo_toc = "https://gohugo.io/content-management/toc"
+    hugo_vars = "https://discourse.gohugo.io/t/initialize-sass-variables-from-hugo-templates"
+    initialcommit = "https://initialcommit.com/blog/git-commit-messages-best-practices"
     issue_tracker = "https://github.com/gethinode/hinode/issues"
+    leaflet = "https://leafletjs.com"
     license = "https://github.com/gethinode/hinode/blob/main/LICENSE"
+    logrocket_optimization = "https://blog.logrocket.com/9-tricks-eliminate-render-blocking-resources"
     markdown_guide = "https://www.markdownguide.org"
     markdown_emoji = "https://gist.github.com/rxaviers/7360908"
     markdown_md013 = "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md013---line-length"
@@ -177,14 +193,20 @@
     netlify_cache= "https://www.netlify.com/blog/2017/02/23/better-living-through-caching/"
     nodejs = "https://nodejs.org"
     npm = "https://www.npmjs.com"
+    npm_purgecss = "https://www.npmjs.com/package/@fullhuman/postcss-purgecss"
+    npm_whitelister = "https://www.npmjs.com/package/purgecss-whitelister"
     observatory = "https://observatory.mozilla.org/analyze/demo.gethinode.com"
+    openstreetmap = "https://www.openstreetmap.org"
     package_npm = "https://www.npmjs.com/package/@gethinode/hinode"
     pagespeed = "https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethinode.com%2F"
     repository = "https://github.com/gethinode/hinode"
     repository_child = "https://github.com/gethinode/child.git"
+    repository_docs = "https://github.com/gethinode/docs.git"
     repository_owner = "https://github.com/gethinode/"
     semver = "https://semver.org"
+    siteground_compression = "https://www.siteground.com/blog/brotli-vs-gzip-compression"
     stylelint = "https://stylelint.io"
     utterances = "https://utteranc.es"
+    vscode_download = "https://code.visualstudio.com/download"
     wcag_contrast = "https://www.w3.org/TR/WCAG20/#visual-audio-contrast"
     webfonts_helper = "https://gwfh.mranftl.com"
