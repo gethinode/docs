@@ -64,20 +64,15 @@ We will now install the various packages and dependencies used by Hinode. The fi
 cd hinode-demo
 {{< /command >}}
 
-Next, use the command `npm install` to download and install the various packages. npm will store these files in the `hinode-demo/node_modules` folder. The script includes an instruction to download and install the Hugo binary that is compatible with your platform too. In this approach, the Hugo binary is linked exclusively to your repository, minimizing potential version conflicts on your local machine.
+Next, use the command `npm install` to download and install the various packages. npm will store these files in the `hinode-demo/node_modules` folder. The script downloads and installs the latest Hugo binary automatically. In this approach, the Hugo binary is linked exclusively to your repository, minimizing potential version conflicts on your local machine.
 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm install
 (out)
-(out)> @gethinode/child@0.7.1 postinstall
-(out)> hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo
+(out)added 528 packages, and audited 529 packages in 8s
 (out)
-(out)Hugo Installer
-(out)Hugo is now available in "node_modules/.bin/hugo".
-(out)
-(out)Success!
-(out)
-(out)added 486 packages, and audited 487 packages in 23s
+(out)153 packages are looking for funding
+(out)  run `npm fund` for details
 (out)
 (out)found 0 vulnerabilities
 {{< /command >}}
@@ -88,28 +83,28 @@ Your site is now ready for testing. Enter the following command to start a local
 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run start
-(out)> @gethinode/child@0.7.1 prestart
+(out)> @gethinode/child@0.7.3 prestart
 (out)> npm run clean
 (out)
-(out)> @gethinode/child@0.7.1 clean
+(out)> @gethinode/child@0.7.3 clean
 (out)> shx rm -rf public resources
 (out)
-(out)> @gethinode/child@0.7.1 start
-(out)> exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender
+(out)> @gethinode/child@0.7.3 start
+(out)> hugo server --bind=0.0.0.0 --disableFastRender
 (out)
 (out)Start building sites …
-(out)hugo v0.110.0-e32a493b7826d02763c3b79623952e625402b168+extended darwin/arm64 BuildDate=2023-01-17T12:16:09Z VendorInfo=gohugoio
+(out)hugo v0.111.3-5d4eb5154e1fed125ca8e9b5a0315c4180dab192+extended darwin/arm64 BuildDate=2023-03-12T11:40:50Z VendorInfo=gohugoio
 (out)
-(out)                   | EN  | NL  
+(out)                   | EN  | NL
 (out)-------------------+-----+-----
-(out)  Pages            |  36 | 35  
-(out)  Paginator pages  |   0 |  0  
-(out)  Non-page files   |   0 |  0  
-(out)  Static files     |  38 | 38  
-(out)  Processed images | 171 |  0  
-(out)  Aliases          |   3 |  2  
+(out)  Pages            |  36 | 35
+(out)  Paginator pages  |   0 |  0
+(out)  Non-page files   |   0 |  0
+(out)  Static files     |  38 | 38
+(out)  Processed images | 135 | 12
+(out)  Aliases          |   3 |  2
 (out)  Sitemaps         |   2 |  1  
-(out)  Cleaned          |   0 |  0  
+(out)  Cleaned          |   0 |  0
 (out)
 (out)Built in 32352 ms
 (out)Watching for changes in Documents/hinode-demo/{archetypes,assets,content,data,i18n,layouts,node_modules,package.json,static}
@@ -166,7 +161,7 @@ Hinode defines severals tests to validate the code adheres to [coding standards]
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run lint
 (out)
-(out)> @gethinode/child@0.7.1 lint
+(out)> @gethinode/child@0.7.3 lint
 (out)> npm run -s lint:markdown
 (out)
 (out)markdownlint-cli2 v0.6.0 (markdownlint v0.27.0)
@@ -208,11 +203,11 @@ You have now successfully created your initial Hinode site with version control 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run upgrade
 (out)
-(out)> @gethinode/child@0.7.1 upgrade
+(out)> @gethinode/child@0.7.3 upgrade
 (out)> npx npm-check-updates -u
 (out)
 (out)Upgrading Documents/hinode-demo/package.json
-(out)[====================] 19/19 100%
+(out)[====================] 18/18 100%
 (out)
 (out)All dependencies match the latest package versions :)
 {{< /command >}}

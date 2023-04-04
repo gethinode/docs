@@ -1,7 +1,7 @@
 ---
 title: Introduction
 description: Get started with Hinode, a clean documentation and blog theme for your Hugo site based on Bootstrap 5.
-date: 2023-03-18
+date: 2023-04-03
 group: getting-started
 aliases:
   - "/docs/0.9/getting-started/"
@@ -21,7 +21,7 @@ Hinode requires Git, Node.js and npm for local development and testing. Download
 
 Start a new Hinode project in three steps:
 
-1. Create a new site
+1. **Create a new site**
 
     Hinode is available as a [child theme]({{< param "links.repository_child" >}}), and a [main theme]({{< param "links.repository" >}}). The child theme uses [npm]({{< param "links.npm" >}}) to link to the latest available version of Hinode. Unless you plan to customize a lot, it is recommended to use the child theme:
 
@@ -35,13 +35,13 @@ Start a new Hinode project in three steps:
     git clone https://github.com/gethinode/hinode.git my-hinode-site && cd my-hinode-site
     {{< /command >}}
 
-2. Install dependencies
+2. **Install dependencies**
 
     {{< command >}}
     npm install
     {{< /command >}}
 
-3. Start the development server
+3. **Start the development server**
 
     {{< command >}}
     npm run start

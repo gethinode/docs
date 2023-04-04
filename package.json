@@ -1,16 +1,16 @@
 {
   "name": "@gethinode/docs",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "The source for https://gethinode.com",
   "main": "index.js",
   "scripts": {
     "init": "shx rm -rf .git && git init -b main",
-    "create": "exec-bin node_modules/.bin/hugo/hugo new",
+    "create": "hugo new",
     "prestart": "npm run clean",
-    "start": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings",
-    "start:prod": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings -e production",
+    "start": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings",
+    "start:prod": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings -e production",
     "prebuild": "npm run clean",
-    "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
+    "build": "hugo --gc --minify",
     "build:preview": "npm run build -D -F",
     "clean": "shx rm -rf public resources",
     "clean:install": "shx rm -rf package-lock.json node_modules ",
@@ -20,9 +20,8 @@
     "test": "npm run -s lint",
     "env": "env",
     "precheck": "npm version",
-    "check": "exec-bin node_modules/.bin/hugo/hugo version",
+    "check": "hugo version",
     "copy:fonts": "shx cp ./node_modules/@fortawesome/fontawesome-free/webfonts/* ./static/fonts/",
-    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo",
     "upgrade": "npx npm-check-updates -u",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
@@ -39,27 +38,26 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@gethinode/hinode": "^0.10.0-alpha5",
+    "@gethinode/hinode": "^0.10.0",
     "autoprefixer": "^10.4.14",
-    "bootstrap": "^5.3.0-alpha2",
-    "cssnano": "^5.1.15",
-    "cssnano-preset-advanced": "^5.3.10",
+    "bootstrap": "^5.3.0-alpha3",
+    "cssnano": "^6.0.0",
+    "cssnano-preset-advanced": "^6.0.0",
     "eslint": "^8.37.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
-    "exec-bin": "^1.0.0",
     "flexsearch": "^0.7.31",
-    "hugo-installer": "^4.0.1",
+    "hugo-bin": "^0.102.0",
     "markdownlint-cli2": "^0.6.0",
     "postcss-cli": "^10.1.0",
     "purgecss-whitelister": "^2.4.0",
     "shx": "^0.3.4",
-    "stylelint": "^15.3.0",
+    "stylelint": "^15.4.0",
     "stylelint-config-standard-scss": "^7.0.1"
   },
-  "otherDependencies": {
-    "hugo": "0.111.3"
+  "hugo-bin": {
+    "buildTags": "extended"
   }
 }
