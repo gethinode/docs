@@ -3,7 +3,6 @@ author: Mark Dumay
 title: Button
 date: 2023-03-04
 description: Use the button shortcode to display a button with a hyperlink.
-group: components
 layout: docs
 ---
 

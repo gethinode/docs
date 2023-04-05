@@ -2,7 +2,6 @@
 title: Scripts
 description: Automatically bundle local and external JavaScript files into a single file.
 date: 2023-04-03
-group: advanced-settings
 layout: docs
 ---
 

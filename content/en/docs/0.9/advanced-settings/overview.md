@@ -2,7 +2,6 @@
 title: Overview
 description: Configure and customize Hinode to your liking using Hugo Templating and npm dependencies.
 date: 2023-03-15
-group: advanced-settings
 aliases:
   - "/docs/0.9/advanced-settings/"
   - "/docs/advanced-settings/"

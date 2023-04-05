@@ -2,7 +2,6 @@
 title: Links and cross-references
 description: Generate internal links and external links using a combination of Markdown and Hugo shortcodes.
 date: 2023-01-28
-group: content
 layout: docs
 ---
 

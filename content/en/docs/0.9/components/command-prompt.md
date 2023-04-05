@@ -3,7 +3,6 @@ author: Mark Dumay
 title: Command Prompt
 date: 2023-01-28
 description: The command shortcode generates terminal output for either Bash, PowerShell, or SQL shell languages.
-group: components
 layout: docs
 ---
 

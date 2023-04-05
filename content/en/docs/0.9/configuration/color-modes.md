@@ -2,7 +2,6 @@
 title: Color modes
 description: Add light mode and dark mode support to your website.
 date: 2023-02-18
-group: configuration
 layout: docs
 ---
 

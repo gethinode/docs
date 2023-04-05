@@ -3,7 +3,6 @@ author: Mark Dumay
 title: Tooltip
 date: 2023-03-04
 description: Use the toast shortcode to display a dismissable message in the bottom-right corner of the screen.
-group: components
 layout: docs
 ---
 

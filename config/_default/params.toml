@@ -3,8 +3,10 @@
     description = "Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5."
     enableDarkMode = true
 
+# toml-docs-start version
 [docs]
     version = "0.9"
+# toml-docs-end version
     basePath = "node_modules/@gethinode/hinode"
 
 [home]

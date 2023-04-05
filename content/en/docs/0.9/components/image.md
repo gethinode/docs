@@ -3,7 +3,6 @@ author: Mark Dumay
 title: Image
 date: 2023-01-28
 description: Use the image shortcode to display a responsive image with a specific aspect ratio.
-group: components
 layout: docs
 ---
 

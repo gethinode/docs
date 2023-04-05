@@ -2,7 +2,6 @@
 title: Languages
 description: Configure multiple languages to enable multilingual sites.
 date: 2023-01-21
-group: configuration
 layout: docs
 ---
 

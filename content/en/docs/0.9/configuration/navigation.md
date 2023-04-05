@@ -1,8 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2023-01-15
-group: configuration
+date: 2023-04-05
 layout: docs
 ---
 
@@ -55,7 +54,7 @@ Hinode supports optional sidebar navigation. It is intended to be used as compan
 
 ### Menus
 
-Inspired by Bootstrap's documentation site, Hinode uses a separate configuration file for the sidebar menus. A sidebar can be configured for each main section of the site. For example, the sidebar menus of the `Docs` section are defined in `data/docs.yml`. The menus support group items and single page items. Below example defines a group section called `Getting started` with three siblings. A single page `About` is added next.
+Inspired by Bootstrap's documentation site, Hinode uses a separate configuration file for the sidebar menus. A sidebar can be configured for each main section of the site. For example, the sidebar menu of the `docs` section is defined in `data/docs.yml`. The sidebar menu supports group items and single page items. The below example defines a group section called `Getting started` with three siblings. A single page `About` is added next.
 
 ```yml
 - title: Getting started
@@ -66,13 +65,38 @@ Inspired by Bootstrap's documentation site, Hinode uses a separate configuration
 - title: About
 ```
 
-An entry in the page's [frontmatter]({{< param "links.hugo_frontmatter" >}}) is needed to link the page to the correct entry in the sidebar. Below example highlights the relevant frontmatter elements from the `Introduction` page, which is part of the `Getting started` group. Please notice the group name needs to be defined in kebab-case, e.g. `getting-started`. You can omit the group name for single page entries, such as the `About` page in the example configuration above.
+Menu items can be nested within each other. The below example defines three content pages at the relative path `A/B/C`. The navigation path should be similar to the slug of the individual pages.
 
 ```yml
----
-title: Introduction
-group: getting-started
----
+- title: A
+  pages:
+    - title: B
+      pages:
+        - title: C
+          pages:
+            - title: First
+            - title: Second
+            - title: Third
+```
+
+### Versioning
+
+The sidebar menu has support for versioning. If configured, a version segment is added to the URL of each single page menu entry. Add a parameter `version` to the specific section in `params.toml`. The below example illustrates the current configuration of the `docs` section that you are currently reading.
+
+{{< docs name="version" file="./config/_default/params.toml" >}}
+
+The <abbr title="A slug is the part of a URL that identifies a particular page on a website in an easy-to-read form.">slug</abbr> of each entry matches that of a relative path in the `content` folder. The path respects the [multilingual mode]({{< relref "languages" >}}) of the site. The below example illustrates the path for each menu entry for the language `en` and version `0.9`.
+
+```yml
+- title: A
+  pages:
+    - title: B
+      pages:
+        - title: C
+          pages:
+            - title: First   # retrieved from content/en/docs/0.9/a/b/c/first.md
+            - title: Second  # retrieved from content/en/docs/0.9/a/b/c/second.md
+            - title: Third   # retrieved from content/en/docs/0.9/a/b/c/third.md
 ```
 
 ### Customization

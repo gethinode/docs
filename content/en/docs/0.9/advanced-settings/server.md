@@ -2,7 +2,6 @@
 title: Server
 description: Configure the server headers to refine the content security policy.
 date: 2023-01-28
-group: advanced-settings
 layout: docs
 ---
 

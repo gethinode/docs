@@ -2,7 +2,6 @@
 title: Troubleshooting
 description: Review common issues and resolutions.
 date: 2023-02-08
-group: getting-started
 layout: docs
 ---
 

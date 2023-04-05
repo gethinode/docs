@@ -2,7 +2,6 @@
 title: Icons
 description: Configure secure access to icons from Bootstrap and Font Awesome.
 date: 2023-04-03
-group: advanced-settings
 layout: docs
 ---
 
