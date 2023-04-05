@@ -65,8 +65,7 @@ Inspired by Bootstrap's documentation site, Hinode uses a separate configuration
 - title: About
 ```
 
-
-Menu items can be nested within each other. The below example defines three content pages at the relative path `A/B/C`. The navigation path should be similar to the slug of the individual pages. 
+Menu items can be nested within each other. The below example defines three content pages at the relative path `A/B/C`. The navigation path should be similar to the slug of the individual pages.
 
 ```yml
 - title: A
