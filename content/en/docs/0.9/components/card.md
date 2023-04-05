@@ -3,7 +3,6 @@ author: Mark Dumay
 title: Card
 date: 2023-01-28
 description: Use the card shortcode to display a card that links to a content page.
-group: components
 layout: docs
 ---
 

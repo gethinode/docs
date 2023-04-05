@@ -2,7 +2,6 @@
 title: Fonts
 description: Configure a specific font to style your website.
 date: 2023-03-12
-group: configuration
 layout: docs
 ---
 

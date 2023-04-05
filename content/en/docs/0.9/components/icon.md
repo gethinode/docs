@@ -3,7 +3,6 @@ author: Mark Dumay
 title: Icon
 date: 2023-02-02
 description: Use the fa shortcode to add a Font Awesome icon with ease.
-group: components
 layout: docs
 ---
 

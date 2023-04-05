@@ -3,7 +3,6 @@ author: Mark Dumay
 title: Navbar
 date: 2023-02-05
 description: Use the navbar shortcode to display a navigation header with a toggler.
-group: components
 layout: docs
 ---
 

@@ -2,7 +2,6 @@
 title: Tables
 description: Enhance out-of-the-box Markdown tables with Bootstrap styling.
 date: 2023-01-22
-group: content
 layout: docs
 ---
 

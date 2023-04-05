@@ -2,7 +2,6 @@
 title: Content organization
 description: A structured approach to organize and present content.
 date: 2023-02-20
-group: content
 layout: docs
 status: draft
 ---

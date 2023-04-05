@@ -2,7 +2,6 @@
 title: Hosting and deployment
 description: Deploy your Hinode site to popular hosting providers.
 date: 2023-04-03
-group: getting-started
 layout: docs
 ---
 

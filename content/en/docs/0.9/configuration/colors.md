@@ -2,7 +2,6 @@
 title: Colors
 description: Use Bootstrap's color system to easily adjust your website's colors.
 date: 2023-03-04
-group: configuration
 layout: docs
 ---
 

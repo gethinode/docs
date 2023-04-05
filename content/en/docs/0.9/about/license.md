@@ -2,7 +2,6 @@
 title: License
 description: Hinode's open-source license for the codebase and documentation.
 date: "2023-01-14"
-group: about
 layout: docs
 ---
 
