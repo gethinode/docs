@@ -1,7 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2023-04-05
+date: 2023-04-06
 layout: docs
 ---
 
@@ -13,6 +13,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 
 | Setting    | Default | Description |
 |------------|---------|-------------|
+| anchor     | -       | Flag indicating to display anchor links on hovering a heading. |
 | logo       | -       | Address of the brand logo image, e.g. "/img/logo_embedded.svg". |
 | color      | -       | [Theme color]({{< ref "colors" >}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
 | style      | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly. |
