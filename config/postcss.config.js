@@ -14,6 +14,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   safelist: [
     ...whitelister([
       './assets/scss/theme/theme.scss',
+      './node_modules/@gethinode/hinode/assets/scss/common/_styles.scss',
       './node_modules/@gethinode/hinode/assets/scss/components/_clipboard.scss',
       './node_modules/@gethinode/hinode/assets/scss/components/_command.scss',
       './node_modules/@gethinode/hinode/assets/scss/components/_navbar.scss',

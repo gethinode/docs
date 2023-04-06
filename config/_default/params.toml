@@ -16,10 +16,11 @@
     style = "gradient-featured"
 
 [navigation]
+    anchor = true
     logo = "/img/logo_icon.svg"
     color = ""
     fixed = true
-    offset = "5em"
+    offset = "3.8em"
     search = true
     breadcrumb = false
     toc = true
