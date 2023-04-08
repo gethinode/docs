@@ -2,6 +2,7 @@
 title: Optimizing the user experience
 description: Guide on how to optimize the user experience of your site.
 date: 2023-04-03
+lastmod: 2023-04-08
 # tags: ["optimization"]
 weight: 30
 thumbnail: img/watch.jpg
@@ -84,7 +85,7 @@ Scroll below in the Lighthouse evaluation report to study several opportunities 
 
 2. **Eliminate render-blocking resources**
 
-   Hinode includes the `main.bundle.js` file in the page body instead of the header by default, thus keeping this file from the critical rendering path. However, the `main.css` file is render-blocking by default - no matter where included. Reducing the size of this file will improve the page loading performance.
+   Hinode includes the `main.bundle.js` file in the page body instead of the header by default, thus keeping this file from the critical rendering path. However, the `main.css` file is render-blocking by default - no matter where included. Reducing the size of this file will improve the page loading performance. One notable exception is the [script to control the site's color mode]({{< relref "scripts#critical-files" >}}), which is considered to be a critical resource.
 
 3. **Reduce unused CSS and JavaScript**
 

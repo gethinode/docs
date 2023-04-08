@@ -1,7 +1,7 @@
 ---
 title: Scripts
 description: Automatically bundle local and external JavaScript files into a single file.
-date: 2023-04-03
+date: 2023-04-08
 layout: docs
 ---
 
@@ -26,6 +26,33 @@ Hinodes uses npm and mounted folders to create a flexibile virtual file system t
 4. **Link to the JavaScript in the base layout**
 
    Hinode's base layout `layouts/_default/baseof.html` imports the bundled JavaScript file in the footer. The file is cached to improve performance.
+
+## Critical files
+
+Hinode considers all files placed in the `assets/js/critical` folder as critical during page load. These files are bundled into the file `js/critical.bundle.js` and are included at the top of the page (right below the `<body>` tag). This ensures the browser processes these critical resources before rendering the initial site. By default, Hinode defines the JavaScript to toggle the site's [color mode]({{< relref "color-modes" >}}) as a critical resource to reduce screen flickering. The snippet below illustrates the page skeleton to include critical scripts as defined in `layouts/_default/baseof.html`.
+
+```go-html-template
+[...]
+
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+    <head>
+        {{ block "head" . }}{{ end -}}
+    </head>
+
+    <body>
+        {{- if site.Params.main.enableDarkMode -}}
+            {{- partial "footer/scripts.html" (dict 
+               "filename" "js/critical.bundle.js" 
+               "match" "js/critical/**.js" 
+               "page" .) 
+            -}}
+        {{- end -}}
+
+        [...]
+    </body>
+</html>
+```
 
 ## Example
 
