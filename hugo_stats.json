@@ -151,6 +151,8 @@
       "d-none",
       "d-none-dark",
       "d-none-light",
+      "d-sm-block",
+      "d-sm-none",
       "display-1",
       "display-2",
       "display-3",

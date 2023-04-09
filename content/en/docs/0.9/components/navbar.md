@@ -22,6 +22,7 @@ The shortcode supports the following arguments:
 | menus     | No  | Optional name of the menu configuration, defaults to "main". |
 | size      | No  | Optional breakpoint of the navbar toggler, either "xs", "sm", "md" (default), "lg", or "xl". |
 | color     | No  | Optional background color of the navbar, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black" or "body". Set the color to "body" for the navbar to respond to [color mode]({{< param "links.bs_color" >}}) changes (e.g. switching between dark and light). The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
+| mode      | No  | Optional flag to include a color mode switcher, default is "true" (if [dark mode]({{< relref "layout#extended-configuration">}}) is enabled). |
 | search    | No  | Optional flag to include a search input, defaults to the parameter "logo" set in the "navigation" section of the site's parameter configuration. |
 | logo      | No  | Optional address of the logo image, defaults to the parameter "logo" set in the "navigation" section of the site's parameter configuration. |
 | title     | No  | Optional brand title, displayed when the logo is not set. Defaults to the site's title. |
@@ -33,6 +34,6 @@ As an example, the following shortcode displays a navigation header with a body 
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar path="credits" color="body" size="sm" search="false" menus="sample" title="Brand" */>}}
+{{</* navbar path="credits" color="body" size="md" search="false" menus="sample" title="Brand" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
