@@ -34,6 +34,6 @@ As an example, the following shortcode displays a navigation header with a body 
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar path="credits" color="body" size="md" search="false" menus="sample" title="Brand" */>}}
+{{</* navbar path="credits" color="body" size="md" search="false" menus="sample" title="Brand" mode="false" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
