@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-01-21
+date: 2023-04-17
 layout: docs
 ---
 
@@ -59,11 +59,12 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
-| Setting        | Default | Description |
-|----------------|---------|-------------|
-| separator      | "-"     | Seperator to join the website title and page title. |
-| description    | -       | Short description of the website that is added to the page metadata. |
-| enableDarkMode | true    | Enables switcher for light mode and dark mode. |
+| Setting        | Default           | Description |
+|----------------|-------------------|-------------|
+| separator      | "-"               | Seperator to join the website title and page title. |
+| description    | -                 | Short description of the website that is added to the page metadata. |
+| enableDarkMode | true              | Enables switcher for light mode and dark mode. |
+| modes          | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
 {.table}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
