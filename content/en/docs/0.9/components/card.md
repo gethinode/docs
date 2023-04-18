@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Card
-date: 2023-01-28
+date: 2023-04-18
 description: Use the card shortcode to display a card that links to a content page.
 layout: docs
 ---
@@ -27,10 +27,10 @@ The shortcode supports the following arguments:
 
 ## Example
 
-As an example, the following shortcode displays a stacked card with icon that links to the [responsive]({{< ref "responsive" >}}) page. It includes a custom header and footer.
+As an example, the following shortcode displays a stacked card that links to the [credits]({{< ref "credits" >}}) page. It includes a custom header and footer.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="responsive" padding="3" class="w-50" color="light" header="publication" footer="none" */>}}
+{{</* card path="credits" padding="3" class="w-50" color="light" header="publication" footer="none" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
