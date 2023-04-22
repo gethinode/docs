@@ -14,7 +14,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | Setting    | Default | Description |
 |------------|---------|-------------|
 | anchor     | -       | Flag indicating to display anchor links on hovering a heading. |
-| logo       | -       | Address of the brand logo image, e.g. "/img/logo_embedded.svg". |
+| logo       | -       | Address of the brand logo image, e.g. "/img/logo_embedded.svg". The vector image file is expected to be present in your local `static/img` folder. |
 | color      | -       | [Theme color]({{< ref "colors" >}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
 | style      | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly. |
 | fixed      | false   | Flag indicating to keep the navigation bar fixed at the top of the screen. |
