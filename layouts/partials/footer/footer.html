@@ -5,6 +5,8 @@
     {{- $copyright = printf "%s © %s %s All rights reserved." (i18n "copyright") (dateFormat "2006" now) .Site.Title -}}
 {{- end -}}
 
-<footer class="container-fluid text-center p-3 footer">
-    <small>{{ delimit (slice $version $license $copyright) " | " }}</small>
+<footer class="container-fluid footer p-3">
+    <div class="container-xxl text-center">
+        <small>{{ delimit (slice $version $license $copyright) " | " }}</small>
+    </div>
 </footer>
