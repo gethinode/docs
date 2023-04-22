@@ -1,4 +1,4 @@
 ---
 headless: true
-title: Discover Hinode
+title: Discover how Hinode can help you
 ---
