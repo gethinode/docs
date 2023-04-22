@@ -5,7 +5,7 @@
             <div class="mx-auto pb-5">
                 <svg class="img-fluid w-75"><use href="/img/logo_var.svg#logo"></use></svg>
             </div>
-            <p class="fs-2 fw-bold">{{ .Title }}</p>
+            <p class="display-4">{{ .Title }}</p>
             <span class="fs-5 text-muted">{{ .Content }}</span>
             {{- if .Site.Params.feature.link }}
                 <a class="btn btn-primary" href="{{ .Site.Params.feature.link | safeURL }}" role="button">{{ .Site.Params.feature.caption | default (T "about") }}</a>
