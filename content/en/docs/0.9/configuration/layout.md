@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-04-17
+date: 2023-04-23
 layout: docs
 ---
 
@@ -210,7 +210,7 @@ The configuration of the list pages is set in the `list` section of the `site pa
 | sort         | "date"       | Type of sorting to be used, either "date" (default), "weight", "publication", "expiration", "lastmod", "length", "title", "linktitle", or "&lt;param&gt;". See Hugo's [content ordering]({{< param "links.hugo_ordering" >}}) for more details. |
 | reverse      | true         | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
 | cols         | 3            | Number of columns to display in the card group, should be a value betweeen 1 and 5. The default value is 3. |
-| color        | -            | Theme color of the card, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white" or "black". By default, no color is specified. |
+| color        | -            | Theme color of the card, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | padding      | "auto"       | Padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
 | header       | "full"       | Header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
 | footer       | "none"       | Footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
