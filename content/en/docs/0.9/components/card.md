@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Card
-date: 2023-04-18
+date: 2023-04-23
 description: Use the card shortcode to display a card that links to a content page.
 layout: docs
 ---
@@ -18,7 +18,7 @@ The shortcode supports the following arguments:
 |-------------|----------|-------------|
 | path        | Yes | Required path of the page. |
 | class       | No  | Optional class attribute of the card element, e.g. “w-50”. |
-| color       | No  | Optional theme color of the card, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", or "body". By default, no color is specified. |
+| color       | No  | Optional theme color of the card, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | padding     | No  | Optional padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
 | header      | No  | Optional header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
 | footer      | No  | Optional footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
@@ -31,6 +31,6 @@ As an example, the following shortcode displays a stacked card that links to the
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="credits" padding="3" class="w-50" color="light" header="publication" footer="none" */>}}
+{{</* card path="credits" padding="3" class="w-50" color="body-tertiary" header="publication" footer="none" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
