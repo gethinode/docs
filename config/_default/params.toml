@@ -2,6 +2,7 @@
     separator = "-"
     description = "Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5."
     enableDarkMode = true
+    modes = ["light", "dark"]
 
 # toml-docs-start version
 [docs]
@@ -10,9 +11,10 @@
     basePath = "node_modules/@gethinode/hinode"
 
 [home]
-    sections = ["features"]
-    # sections = ["features", "releases"]
+    snippets = ["users", "features"]
+    sections = ["guides"]
     fullCover = true
+    centerHeadline = true
     style = "gradient-featured"
 
 [navigation]
@@ -26,33 +28,36 @@
     toc = true
     sidebar = true
 
-[list]
+[snippets]
+    [users]
+        sort = "weight"
+        reverse = false
+        background = "body-tertiary"
+        color = "primary"
+        layout = "tabs"
+        style = "justify-content-center"
     [features]
-        title = ""
         sort = "weight"
         reverse = false
-        cols = 3
-        color = ""
-        padding = "3"
-        header = "none"
-        footer = "none"
-        orientation = "stacked"
-        style = "border-0 card-shrink card-feature"
-        homepage = 6
         background = "body"
-        separator = false
+        color = "primary"
+        layout = "list"
+        style = "justify-content-center"
+
+[list]
     [guides]
-        title = "Guides"
+        title = "Check our guides to get you going"
         sort = "weight"
         reverse = false
         cols = 3
-        color = ""
-        padding = "0"
+        color = "body-tertiary"
+        padding = "3"
         header = "full"
         footer = "none"
         orientation = "stacked"
-        style = "border-0 card-zoom"
+        style = "border-0 shadow card-zoom"
         homepage = 3
+        background = ""
 
 [favicon]
     logo = "img/favicon.png"
