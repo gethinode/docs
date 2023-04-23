@@ -39,7 +39,7 @@ In addition, the background colors `black` and `white` are available too. Below 
         <div class="p-3 mb-3 text-bg-dark rounded-3 border">dark</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-white rounded-3 border">white</div>
+        <div class="p-3 mb-3 bg-white text-bg-light rounded-3 border">white</div>
     </div>
     <div class="col-md-4">
         <div class="p-3 mb-3 bg-black text-white rounded-3 border">black</div>
