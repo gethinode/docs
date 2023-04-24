@@ -159,6 +159,7 @@
     hugo_config_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy/#configure-the-deployment"
     hugo_fingerprint = "https://gohugo.io/hugo-pipes/fingerprint"
     hugo_frontmatter = "https://gohugo.io/content-management/front-matter"
+    hugo_headless = "https://gohugo.io/content-management/page-bundles/#headless-bundle"
     hugo_i18n = "https://gohugo.io/functions/i18n"
     hugo_image = "https://gohugo.io/content-management/image-processing"
     hugo_lang = "https://gohugo.io/content-management/multilingual"
