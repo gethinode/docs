@@ -11,8 +11,7 @@
     basePath = "node_modules/@gethinode/hinode"
 
 [home]
-    snippets = ["users", "features"]
-    sections = ["guides"]
+    sections = ["guides", "users", "features"]
     fullCover = true
     centerHeadline = true
     style = "gradient-featured"
@@ -28,36 +27,35 @@
     toc = true
     sidebar = true
 
-[snippets]
-    [users]
+[sections]
+    [sections.guides]
+        title = "Check our guides to get you started"
+        layout = "card"
         sort = "weight"
         reverse = false
-        background = "body-tertiary"
-        color = "primary"
-        layout = "tabs"
-        style = "justify-content-center"
-    [features]
-        sort = "weight"
-        reverse = false
-        background = "body"
-        color = "primary"
-        layout = "list"
-        style = "justify-content-center"
-
-[list]
-    [guides]
-        title = "Check our guides to get you going"
-        sort = "weight"
-        reverse = false
-        cols = 3
+        background = ""
         color = "body-tertiary"
+        style = "border-0 shadow card-zoom"
+        cols = 3
         padding = "3"
         header = "full"
         footer = "none"
         orientation = "stacked"
-        style = "border-0 shadow card-zoom"
         homepage = 3
-        background = ""
+    [sections.users]
+        title = "Discover how Hinode can help you"
+        layout = "nav"
+        sort = "weight"
+        reverse = false
+        background = "body-tertiary"
+        color = "primary"
+        style = "justify-content-center"
+    [sections.features]
+        title = "Bring your static site to a new level"
+        layout = "list"
+        sort = "weight"
+        reverse = false
+        style = "justify-content-center"
 
 [favicon]
     logo = "img/favicon.png"
