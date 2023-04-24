@@ -1,11 +1,10 @@
 ---
 author: Mark Dumay
 title: Automated
-date: 2023-04-17
-description: Leverage version control and modern build tools to automate your builds and deployments.
+date: 2023-04-24
 weight: 4
-# icon: fas code
 thumbnail: /img/devops-light.svg
+colormode: true
 layout: minimal
 ---
 

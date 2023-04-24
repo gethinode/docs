@@ -1,11 +1,10 @@
 ---
 author: Mark Dumay
 title: Multilingual
-date: 2023-04-17
-description: Serve your content in multiple languages with support for localization.
+date: 2023-04-24
 weight: 6
-# icon: fas globe
 thumbnail: /img/multilingual-light.png
+colormode: true
 tilted: true
 layout: minimal
 ---

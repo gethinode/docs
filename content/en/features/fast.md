@@ -1,11 +1,10 @@
 ---
 author: Mark Dumay
 title: Fast
-date: 2023-04-17
-description: Use configurable templates to generate content that can be deployed virtually everywhere.
+date: 2023-04-24
 weight: 2
-# icon: fas gauge-simple-high
 thumbnail: /img/template-light.png
+colormode: true
 tilted: true
 layout: minimal
 ---

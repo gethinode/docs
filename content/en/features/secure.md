@@ -2,10 +2,9 @@
 author: Mark Dumay
 title: Secure
 date: 2023-04-24
-description: Use predefined server settings to ensure your site is secure by default.
 weight: 5
-# icon: fas lock
 thumbnail: /img/observatory-light.png
+colormode: true
 tilted: true
 layout: minimal
 ---

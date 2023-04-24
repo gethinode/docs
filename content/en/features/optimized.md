@@ -1,11 +1,10 @@
 ---
 author: Mark Dumay
 title: Optimized
-date: 2023-04-17
-description: Generate clean content with descriptive metadata to optimize search results.
+date: 2023-04-24
 weight: 3
-# icon: fas magnifying-glass
 thumbnail: /img/pagespeed-light.png
+colormode: true
 tilted: true
 layout: minimal
 ---

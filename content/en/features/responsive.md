@@ -1,11 +1,10 @@
 ---
 author: Mark Dumay
 title: Responsive
-date: 2023-04-17
-description: Support different devices and screen sizes using an adaptive approach.
+date: 2023-04-24
 weight: 1
-# icon: fas expand
 thumbnail: /img/responsive-light.png
+colormode: true
 layout: minimal
 ---
 
