@@ -144,7 +144,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## List pages
 
-List pages define one [configurable section]({{< relref "#page-sections" >}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed. 
+List pages define one [configurable section]({{< relref "#page-sections" >}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
 
 ### Example
 
@@ -279,7 +279,6 @@ The following diagram illustrates the documentation layout of a single page.
     </div>
 </div>
 
-
 ### Minimal layout
 
 Pages with a minimal layout are similar to documentation pages, but do not include a footer at all. Configure the following setting to the page's frontmatter to apply the minimal layout:
@@ -291,7 +290,6 @@ layout: docs
 ```
 
 The following diagram illustrates the minimal layout of a single page.
-
 
 ```yml
 ---
@@ -336,7 +334,6 @@ Both the home page and the list page use one or more page sections to display a 
 ### Card layout
 
 The card layout displays a group of cards in a grid. The default setting is to show nine items at a time. You can adjust these settings in the [page section configuration]({{< relref "#configurtion-4" >}}), including the style of the cards themselves. Refer to the [card shortcode documentation]({{< relref "card" >}}) to review the available card styles. The next diagram illustrates a typical card layout.
-
 
 <div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
     <div class="row g-3">
@@ -404,7 +401,6 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
         </div>
     </div>
 </div>
-
 
 ### Nav layout
 

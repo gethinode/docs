@@ -64,4 +64,3 @@ Add a file `index.md` to the root of your section that contains your code snippe
 headless: true
 ---
 ```
-

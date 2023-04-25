@@ -52,7 +52,7 @@ Add an inner `nav-item` element for each item of the tab group. The `nav-item` e
 
 Change the style of your nav with class attributes and arguments.
 
-### Horizontal alignment 
+### Horizontal alignment
 
 By default, navs are left-aligned, but you can easily change them to center or right aligned.
 
