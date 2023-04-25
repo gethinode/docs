@@ -73,7 +73,7 @@ Hugo provides more details about the [usage of shortcodes]({{< param "links.hugo
 
 ## Single pages
 
-Single pages define the content for a specific page, such as the [introduction page]({{< relref "introduction" >}}). Hinodes supports three types of single pages, which can be configured in the front matter. The next paragraphs describe each layout type in more details. Refer to the [layout section]({{< relref "layout" >}}) to see additional configuration options.
+Single pages define the content for a specific page, such as the [introduction page]({{< relref "introduction" >}}). Hinodes supports three types of single pages, which can be configured in the front matter. The next paragraphs describe each layout type in more detail. Refer to the [layout section]({{< relref "layout" >}}) to see additional configuration options.
 
 ### Default layout
 
@@ -119,11 +119,10 @@ layout: docs
 
 ### Minimal layout
 
-Pages with a minimal layout are similar to documentation pages, but include navigation links instead of metadata at the bottom of the page:
+Pages with a minimal layout are similar to documentation pages, but do not include a footer at all:
 
 - **Title** - the title of the page as set in the page's frontmatter.
 - **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
-- **Navigation links** - links on the bottom of the page that link to the previoud and next page within the current section.
 
 Be sure to select the `minimal` layout in the page's frontmatter to enable the documentation layout:
 
