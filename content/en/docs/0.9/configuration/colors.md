@@ -1,7 +1,7 @@
 ---
 title: Colors
 description: Use Bootstrap's color system to easily adjust your website's colors.
-date: 2023-03-04
+date: 2023-04-23
 layout: docs
 ---
 
@@ -15,36 +15,51 @@ In addition, the background colors `black` and `white` are available too. Below 
 
 <div class="row">
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-primary rounded-3">Primary</div>
+        <div class="p-3 mb-3 text-bg-primary rounded-3 border">primary</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-secondary rounded-3">Secondary</div>
+        <div class="p-3 mb-3 text-bg-secondary rounded-3 border">secondary</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-success rounded-3">Success</div>
+        <div class="p-3 mb-3 text-bg-success rounded-3 border">success</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-danger rounded-3">Danger</div>
+        <div class="p-3 mb-3 text-bg-danger rounded-3 border">danger</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-warning rounded-3">Warning</div>
+        <div class="p-3 mb-3 text-bg-warning rounded-3 border">warning</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-info rounded-3">Info</div>
+        <div class="p-3 mb-3 text-bg-info rounded-3 border">info</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-light rounded-3">Light</div>
+        <div class="p-3 mb-3 text-bg-light rounded-3 border">light</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-dark rounded-3">Dark</div>
+        <div class="p-3 mb-3 text-bg-dark rounded-3 border">dark</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-white rounded-3">White</div>
+        <div class="p-3 mb-3 bg-white text-bg-light rounded-3 border">white</div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-black text-white rounded-3">Black</div>
+        <div class="p-3 mb-3 bg-black text-white rounded-3 border">black</div>
     </div>
 </div>
+
+## Adaptive colors
+
+Several components support background colors that are [color-mode aware]({{< relref "color-modes" >}}). These colors respond to changes when the active theme is adjusted, such as by changing from a light theme to a dark theme. You can apply this color by adding `bg-body` or `bg-body-tertiary` to the class of an HTML element.
+
+{{< example >}}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="p-3 mb-3 bg-body text-bg-white rounded-3 border">body</div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 mb-3 bg-body-tertiary text-bg-white rounded-3 border">body-tertiary</div>
+        </div>
+    </div>
+{{< /example>}}
 
 ## Colored contrasting links
 
@@ -60,28 +75,40 @@ Below grid illustrates the contrasting colors for each background.
 
 <div class="row">
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-primary rounded-3"><a class="link-bg-primary" href="#!">Primary</a></div>
+        <div class="p-3 mb-3 text-bg-primary rounded-3 border"><a class="link-bg-primary" href="#!">primary</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-secondary rounded-3"><a class="link-bg-secondary" href="#!">Secondary</a></div>
+        <div class="p-3 mb-3 text-bg-secondary rounded-3 border"><a class="link-bg-secondary" href="#!">secondary</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-success rounded-3"><a class="link-bg-success" href="#!">Success</a></div>
+        <div class="p-3 mb-3 text-bg-success rounded-3 border"><a class="link-bg-success" href="#!">success</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-danger rounded-3"><a class="link-bg-danger" href="#!">Danger</a></div>
+        <div class="p-3 mb-3 text-bg-danger rounded-3 border"><a class="link-bg-danger" href="#!">danger</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-warning rounded-3"><a class="link-bg-warning" href="#!">Warning</a></div>
+        <div class="p-3 mb-3 text-bg-warning rounded-3 border"><a class="link-bg-warning" href="#!">warning</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-info rounded-3"><a class="link-bg-info" href="#!">Info</a></div>
+        <div class="p-3 mb-3 text-bg-info rounded-3 border"><a class="link-bg-info" href="#!">info</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-light rounded-3"><a class="link-bg-light" href="#!">Light</a></div>
+        <div class="p-3 mb-3 text-bg-light rounded-3 border"><a class="link-bg-light" href="#!">light</a></div>
     </div>
     <div class="col-md-4">
-        <div class="p-3 mb-3 bg-dark rounded-3"><a class="link-bg-dark" href="#!">Dark</a></div>
+        <div class="p-3 mb-3 text-bg-dark rounded-3 border"><a class="link-bg-dark" href="#!">dark</a></div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-white rounded-3 border"><a class="link-bg-white" href="#!">white</a></div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-black text-white rounded-3 border"><a class="link-bg-black" href="#!">black</a></div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-body text-bg-white rounded-3 border"><a class="link-bg-body" href="#!">body</a></div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-body-tertiary text-bg-white rounded-3 border"><a class="link-bg-body-tertiary" href="#!">body-tertiary</a></div>
     </div>
 </div>
 

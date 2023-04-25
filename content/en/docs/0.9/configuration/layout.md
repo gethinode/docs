@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-01-21
+date: 2023-04-25
 layout: docs
 ---
 
@@ -9,7 +9,7 @@ Hinode uses Bootstrap's [grid system]({{< param "links.bs_grid" >}}) and [breakp
 
 ## Base layout
 
-The base layout defines a page skeleton of which all other pages are derived. It consists of four major sections, being a header, body, social footer, and bottom footer. It also loads sytlesheets, scripts, and generates the metadata. The header includes the [main navigation]({{< ref "navigation#main-navigation" >}}) and can be optionally fixed to the top. By default, the base layout is expanded to fill the entire available viewport. This means that all elements stretch horizontally across the entire viewport. The body also expands vertically, where the footers align to the bottom of the viewport.
+The base layout defines a page skeleton of which all other pages are derived. It consists of four major sections, being a header, body, social footer, and bottom footer. It also loads sytlesheets, scripts, and generates the metadata. The header includes the [main navigation]({{< ref "navigation#main-navigation" >}}) and can be optionally fixed to the top. The width of the base layout is maximized to 1320 pixels (see the `container-xxl` setting of the [Bootstrap containers]({{< param "links.bs_container" >}})). The height is set to a least 100% of the viewport, to ensure the footer is always aligned to the bottom on the page.
 
 ### Example
 
@@ -23,7 +23,7 @@ The following diagram illustrates the conceptual base design:
         <div class="col-12">
             <div class="p-3 bg-primary bg-opacity-10 rounded-3">
                 <p class="mb-5">Body .col-12 .flex-fill</p>
-                <i>expands to fill viewport</i>
+                <i>vertically expands to fill viewport</i>
             </div>
         </div>
         <div class="col-12">
@@ -59,11 +59,12 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
-| Setting        | Default | Description |
-|----------------|---------|-------------|
-| separator      | "-"     | Seperator to join the website title and page title. |
-| description    | -       | Short description of the website that is added to the page metadata. |
-| enableDarkMode | true    | Enables switcher for light mode and dark mode. |
+| Setting        | Default           | Description |
+|----------------|-------------------|-------------|
+| separator      | "-"               | Seperator to join the website title and page title. |
+| description    | -                 | Short description of the website that is added to the page metadata. |
+| enableDarkMode | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
+| modes          | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
 {.table}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
@@ -90,7 +91,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## Home page
 
-The home page introduces a feature element and provides a selection of the three most recent items in a section, such as blog posts and project descriptions. The items are displayed as card groups and alternate between a vertical grid and a horizontal grid. A button that links to the related section is added below each group. The feature element can optionally cover the entire viewscreen.
+The home page introduces a feature section and several [configurable sections]({{< relref "#page-sections" >}}). The default home page of Hinode displays the three most recent blog posts and projects, each rendered as cards in a seperate section. A button that links to the related list page is added below each group. The feature section can optionally cover the entire viewscreen.
 
 ### Example
 
@@ -107,23 +108,14 @@ The following diagram illustrates the conceptual layout of the home page:
                 <i>optionally spans viewport</i>
             </div>
         </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card .col-4</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card .col-4</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card .col-4</div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Section 1 .col-12</div>
         </div>
         <div class="col-12">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card .col-12</div>
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Section 2 .col-12</div>
         </div>
         <div class="col-12">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card .col-12</div>
-        </div>
-        <div class="col-12">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card .col-12</div>
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Section ... .col-12</div>
         </div>
         <div class="col-12">
             <div class="p-3 bg-secondary bg-opacity-10 rounded-3">Social .col-12</div>
@@ -152,7 +144,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## List pages
 
-List pages provide an overview of available content within a section as a card group. By default, the most recent nine items are displayed. Adjust the setting `paginate` in the [main configuration](#configuration) as needed. If the section contains more items, a paginator is added below the card group.
+List pages define one [configurable section]({{< relref "#page-sections" >}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
 
 ### Example
 
@@ -163,32 +155,11 @@ The following diagram illustrates the conceptual layout of a list page:
         <div class="col-12">
             <div class="p-3 bg-secondary bg-opacity-10 rounded-3">Header .col-12</div>
         </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
-        </div>
-        <div class="col-4">
-            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Card</div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p>Section .col-12</p>
+                <i>optional paginator</i>
+            </div>
         </div>
         <div class="col-12">
             <div class="p-3 bg-secondary bg-opacity-10 rounded-3">Social .col-12</div>
@@ -201,35 +172,13 @@ The following diagram illustrates the conceptual layout of a list page:
 
 ### Configuration
 
-The configuration of the list pages is set in the `list` section of the `site parameters`. You can specify the settings for each section of your content. The entire configuration is fully optional and uses default settings if omitted. The folllowing settings are supported per section:
-
-| Setting      | Default      | Description |
-|--------------|--------------|-------------|
-| title        | Section name | Title of the list page, displayed above the card group. By default, the title defined in the page's frontmatter is used. |
-| sort         | "date"       | Type of sorting to be used, either "date" (default), "weight", "publication", "expiration", "lastmod", "length", "title", "linktitle", or "&lt;param&gt;". See Hugo's [content ordering]({{< param "links.hugo_ordering" >}}) for more details. |
-| reverse      | true         | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
-| cols         | 3            | Number of columns to display in the card group, should be a value betweeen 1 and 5. The default value is 3. |
-| color        | -            | Theme color of the card, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white" or "black". By default, no color is specified. |
-| padding      | "auto"       | Padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
-| header       | "full"       | Header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
-| footer       | "none"       | Footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
-| orientation  | "stacked"    | Placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
-| style        | -            | Optional styling attributes added to card class, e.g. "border-0" to remove the borders. |
-| homepage     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
-| separator    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
-{.table}
-
-The below configuration shows the default configuration set in `config/_default/params.toml`.
-
-{{< docs name="list" file="config/_default/params.toml" >}}
+The list page uses the [configuration of a single section]({{< relref "#configuration-4" >}}).
 
 ## Single pages
 
-Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents.
+Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
 
-### Example
-
-<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
+<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3 mb-3">
     <div class="row g-3">
         <div class="col-12">
             <div class="p-3 bg-secondary bg-opacity-10 rounded-3">Header .col-12</div>
@@ -265,9 +214,108 @@ Single pages follow the base layout but introduce two columns next to the body c
     </div>
 </div>
 
+Single pages support three optional layout types, which can be configured in the page's frontmatter. The next paragraphs describe each layout type in more detail. These layout types apply to the body section of the base layout.
+
+### Default layout
+
+By default, single pages, such as a blog page, include multiple elements, such as a rich header, thumbnail, body, and footer. The following diagram illustrates the default layout of a single page.
+
+<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
+    <div class="row g-3">
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p><b>Page header</b></p>
+                <p>Metadata</p>
+                <p>Tags</p>
+                <p>Description</p>
+                <i class="fa-solid fa-image"></i> Thumbnail
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                Page content
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p>Page footer</p>
+                Navigation links
+            </div>
+        </div>
+    </div>
+</div>
+
+### Documentation layout
+
+Documentation pages use a more straightforward, simplified layout compared to the default layout. Configure the following setting to the page's frontmatter to apply the documentation layout:
+
+```yml
+---
+layout: docs
+---
+```
+
+The following diagram illustrates the documentation layout of a single page.
+
+<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
+    <div class="row g-3">
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p><b>Page header</b></p>
+                Description
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                Page content
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p>Page footer</p>
+                Git metadata
+            </div>
+        </div>
+    </div>
+</div>
+
+### Minimal layout
+
+Pages with a minimal layout are similar to documentation pages, but do not include a footer at all. Configure the following setting to the page's frontmatter to apply the minimal layout:
+
+```yml
+---
+layout: docs
+---
+```
+
+The following diagram illustrates the minimal layout of a single page.
+
+```yml
+---
+layout: minimal
+---
+```
+
+<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
+    <div class="row g-3">
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p><b>Page header</b></p>
+                Description
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                Page content
+            </div>
+        </div>
+    </div>
+</div>
+
 ### Configuration
 
-The configuration of the documentation pages is set in the `docs` section of the site parameters. The folllowing settings are supported:
+Please refer to the [content management section]({{< relref "content-management#single-pages" >}}) to review the elements available in the page's frontmatter. The configuration of the documentation pages is set in the `docs` section of the site parameters. The folllowing settings are supported:
 
 | Setting      | Default | Description |
 |--------------|---------|-------------|
@@ -278,3 +326,140 @@ The configuration of the documentation pages is set in the `docs` section of the
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
 {{< docs name="docs" file="config/_default/params.toml" >}}
+
+## Page sections
+
+Both the home page and the list page use one or more page sections to display a sorted list of items. The lists can contain either [regular pages  or page snippets]({{< relref "content-organization" >}}). The next paragraphs describe the three available layout types.
+
+### Card layout
+
+The card layout displays a group of cards in a grid. The default setting is to show nine items at a time. You can adjust these settings in the [page section configuration]({{< relref "#configurtion-4" >}}), including the style of the cards themselves. Refer to the [card shortcode documentation]({{< relref "card" >}}) to review the available card styles. The next diagram illustrates a typical card layout.
+
+<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
+    <div class="row g-3">
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 1</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 2</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 3</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 4</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 5</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 6</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 7</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 8</div>
+        </div>
+        <div class="col-4">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">Item 9</div>
+        </div>
+    </div>
+</div>
+
+### List layout
+
+The list layout shows the page bundle's items as a vertical list. The thumbnail alternates between being left-aligned and right-aligned for each row. Remove the `description` from the page's frontmatter to display the full content instead of the description. The content of the item is displayed next to the thumbnail.
+
+<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
+    <div class="row g-3">
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p>Item 1</p>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="p-3 border rounded-3 text-secondary"><i class="fa-solid fa-image"></i></div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 border rounded-3">Content .col-6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p>Item 2</p>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="p-3 border rounded-3">Content .col-6</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 border rounded-3 text-secondary"><i class="fa-solid fa-image"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+### Nav layout
+
+The nav layout shows a nav element where each tab pane represents a single item of the page bundle. Remove the `description` from the page's frontmatter to display the full content instead of the description. The tab pane shows the content of the selected item.
+
+<div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
+    <div class="row g-3">
+        <div class="col-12">
+            <div class="p-3 bg-primary bg-opacity-10 rounded-3">
+                <p>Item 1 | Item 2 | Item 3</p>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-3 border rounded-3">Content .col-12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+### Configuration
+
+The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The folllowing settings are supported per section:
+
+| Setting      | Default      | Description |
+|--------------|--------------|-------------|
+| title        | ""           | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. |
+| layout       | "card"       | Layout of the section, either "card" (default), "list", or "nav". |
+| sort         | "date"       | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
+| reverse      | true         | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
+| background   | -            | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
+| color        | -            | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
+| style        | -            | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
+{.table}
+
+The `card` layout supports the following additional arguments:
+
+| Setting      | Default      | Description |
+|--------------|--------------|-------------|
+| cols         | 3            | Number of columns to display in the card group, should be a value betweeen 1 and 5. The default value is 3. |
+| padding      | "auto"       | Padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
+| header       | "full"       | Header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
+| footer       | "none"       | Footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
+| orientation  | "stacked"    | Placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
+| homepage     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
+| separator    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
+{.table}
+
+The `nav` layout supports the following additional arguments:
+
+| Setting      | Default      | Description |
+|--------------|--------------|-------------|
+| type         | "pills"      | Optional type of the tab group, either "tabs", "pills" (default), or "underline". |
+| vertical     | "false"      | Optional flag to show vertical tabs instead of horizontal tabs (default). |
+| class        | ""           | Optional class attribute of the tab group, e.g. “nav-fill”. |
+| pane         | "none"       | Optional style of the panes, either "none" (default) or "persona". |
+| width        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
+{.table}
+
+The below configuration shows the default configuration set in `config/_default/params.toml`.
+
+{{< docs name="sections" file="config/_default/params.toml" >}}
