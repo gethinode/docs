@@ -123,6 +123,7 @@
     bs_breakpoints = "https://getbootstrap.com/docs/5.3/layout/breakpoints"
     bs_color = "https://getbootstrap.com/docs/5.3/customize/color-modes"
     bs_color_sass = "https://getbootstrap.com/docs/5.3/customize/color-modes/#building-with-sass"
+    bs_container = "https://getbootstrap.com/docs/5.3/layout/containers/#how-they-work"
     bs_grid = "https://getbootstrap.com/docs/5.3/layout/grid"
     bs_lean = "https://getbootstrap.com/docs/5.3/customize/optimize"
     bs_offcanvas = "https://getbootstrap.com/docs/5.3/components/offcanvas"
