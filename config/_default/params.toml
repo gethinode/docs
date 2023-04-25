@@ -50,6 +50,9 @@
         background = "body-tertiary"
         color = "primary"
         style = "justify-content-center"
+        pane = "persona"
+        type = "pills"
+        width = 50
     [sections.features]
         title = "Bring your static site to a new level"
         layout = "list"
