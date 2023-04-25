@@ -372,7 +372,7 @@ The card layout displays a group of cards in a grid. The default setting is to s
 
 ### List layout
 
-The list layout shows the page bundle's items as a vertical list. The thumbnail alternates between being left-aligned and right-aligned for each row. The **full content** (instead of the description) of the item is displayed next to the thumbnail.
+The list layout shows the page bundle's items as a vertical list. The thumbnail alternates between being left-aligned and right-aligned for each row. Remove the `description` from the page's frontmatter to display the full content instead of the description. The content of the item is displayed next to the thumbnail.
 
 <div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
     <div class="row g-3">
@@ -408,7 +408,7 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
 
 ### Nav layout
 
-The nav layout shows a nav element where each tab pane represents a single item of the page bundle. The tab pane shows the **full content** (instead of the description) of the item.
+The nav layout shows a nav element where each tab pane represents a single item of the page bundle. Remove the `description` from the page's frontmatter to display the full content instead of the description. The tab pane shows the content of the selected item.
 
 <div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
     <div class="row g-3">
@@ -451,6 +451,17 @@ The `card` layout supports the following additional arguments:
 | orientation  | "stacked"    | Placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
 | homepage     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
 | separator    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
+{.table}
+
+The `nav` layout supports the following additional arguments:
+
+| Setting      | Default      | Description |
+|--------------|--------------|-------------|
+| type         | "pills"      | Optional type of the tab group, either "tabs", "pills" (default), or "underline". |
+| vertical     | "false"      | Optional flag to show vertical tabs instead of horizontal tabs (default). |
+| class        | ""           | Optional class attribute of the tab group, e.g. “nav-fill”. |
+| pane         | "none"       | Optional style of the panes, either "none" (default) or "persona". |
+| width        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
 {.table}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
