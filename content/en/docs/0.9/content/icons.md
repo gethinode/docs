@@ -111,11 +111,11 @@ Add `fa-fw` to the class of the HTML element referencing your icon to apply a fi
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 <div class="fa-3x">
-    <div>{{</* fas skating fa-fw bg-info */>}} Skating</div>
-    <div>{{</* fas skiing fa-fw bg-info */>}} Skiing</div>
-    <div>{{</* fas skiing-nordic fa-fw bg-info */>}} Nordic Skiing</div>
-    <div>{{</* fas snowboarding fa-fw bg-info */>}} Snowboarding</div>
-    <div>{{</* fas snowplow fa-fw bg-info */>}} Snowplow</div>
+    <div>{{</* fas skating fa-fw bg-body-tertiary */>}} Skating</div>
+    <div>{{</* fas skiing fa-fw bg-body-tertiary */>}} Skiing</div>
+    <div>{{</* fas skiing-nordic fa-fw bg-body-tertiary */>}} Nordic Skiing</div>
+    <div>{{</* fas snowboarding fa-fw bg-body-tertiary */>}} Snowboarding</div>
+    <div>{{</* fas snowplow fa-fw bg-body-tertiary */>}} Snowplow</div>
 </div>
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
