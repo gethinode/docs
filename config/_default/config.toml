@@ -2,6 +2,7 @@ title = "Hinode"
 copyright = "© 2023 <a href='https://github.com/markdumay' class='link-bg-footer' target='_blank'>Mark Dumay</a>"
 paginate = 9
 enableGitInfo = true
+googleAnalytics = "G-T85PPZ36GN"
 
 # additional settings
 baseURL = "https://gethinode.com/"
