@@ -150,6 +150,7 @@
     github_signup = "https://github.com/signup"
     github_pr = "https://help.github.com/articles/about-pull-requests/"
     github_rebase = "https://help.github.com/articles/about-git-rebase/"
+    google_analytics_csp = "https://developers.google.com/tag-platform/tag-manager/web/csp#google_analytics_4_google_analytics"
     google_chrome = "https://www.google.com/chrome"
     google_fonts = "https://fonts.google.com"
     html_codeguide = "https://codeguide.co/#html"
