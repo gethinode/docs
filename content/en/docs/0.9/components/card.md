@@ -14,6 +14,7 @@ Use the `card` shortcode to display a card that links to a content page. When us
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | path        | Yes | Required path of the page. |
@@ -23,7 +24,7 @@ The shortcode supports the following arguments:
 | header      | No  | Optional header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
 | footer      | No  | Optional footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
 | orientation | No  | Optional placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
-{.table}
+{{< /table >}}
 
 ## Example
 

@@ -111,6 +111,7 @@ Bundle related client-side javascript in a logically named file. Add the file to
 
 See [markdown rules]({{< param "links.markdown_rules" >}}) for more details. The following rules are globally disabled:
 
+{{< table >}}
 | #     | Rule | Remarks |
 |-------|-----------------------------------------------------------------------------------------------|---------------------------------|
 | MD013 | [Line length]({{< param "links.markdown_md013" >}})                                           | |
@@ -120,7 +121,7 @@ See [markdown rules]({{< param "links.markdown_rules" >}}) for more details. The
 | MD034 | [Bare URL used]({{< param "links.markdown_md034" >}})                                         | |
 | MD051 | [Link fragments should be valid]({{< param "links.markdown_md051" >}})                        | |
 | MD053 | [Link and image reference definitions should be needed]({{< param "links.markdown_md053" >}}) | Disabled due to false positives |
-{.table}
+{{< /table >}}
 
 ## License
 

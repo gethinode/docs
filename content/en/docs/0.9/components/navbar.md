@@ -16,6 +16,7 @@ Use the `navbar` shortcode to display a navigation header with a toggler. The me
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | path      | Yes | Required path of the active page. |
@@ -26,7 +27,7 @@ The shortcode supports the following arguments:
 | search    | No  | Optional flag to include a search input, defaults to the parameter "logo" set in the "navigation" section of the site's parameter configuration. |
 | logo      | No  | Optional address of the logo image, defaults to the parameter "logo" set in the "navigation" section of the site's parameter configuration. |
 | title     | No  | Optional brand title, displayed when the logo is not set. Defaults to the site's title. |
-{.table}
+{{< /table >}}
 
 ## Example
 

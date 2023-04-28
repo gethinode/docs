@@ -14,11 +14,12 @@ Use the `carousel` shortcode to display a carousel of several images, with simil
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | ratio     | No  | Aspect ratio of the image, either "1x1", "4x3", "16x9", or "21x9". If unspecified, the original aspect ratio is preserved. |
 | class     | No  | Optional class attribute of the `carousel` element, e.g. "w-75". |
-{.table}
+{{< /table >}}
 
 {{< alert >}}
 The carousel uses the original aspect ratio of the provided images when no aspect ratio is provided. Ensure the included images have a similar height and width to avoid inconsistent behavior.
@@ -26,11 +27,12 @@ The carousel uses the original aspect ratio of the provided images when no aspec
 
 Add an inner `img` element for each slide of the carousel. The `img` element supports the following arguments:
 
+{{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | src       | Yes | Required url of the image, e.g. "img/boots.jpg". |
 | caption   | No  | Optional image caption. If set, the image is darkened to improve the contrast. The caption is hidden on smaller screens. |
-{.table}
+{{< /table >}}
 
 ## Example
 

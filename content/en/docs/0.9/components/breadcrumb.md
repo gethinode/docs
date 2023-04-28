@@ -14,10 +14,11 @@ Use the `breadcrumb` shortcode to display the current page’s location within t
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | path        | No       | Optional path of the page, defaults to current page.
-{.table}
+{{< /table >}}
 
 ## Example
 

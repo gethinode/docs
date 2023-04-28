@@ -43,13 +43,14 @@ Hinode uses several settings from Hugo's [main configuration]({{< param "links.h
 
 The base layout uses the [main configuration]({{< param "links.hugo_config" >}}) of Hugo. The settings below are actively used by Hinode:
 
+{{< table >}}
 | Setting       | Default | Description |
 |---------------|---------|-------------|
 | title         | -       | Title of the website, joined with the separator and title of the current page. |
 | copyright     | -       | Copyright notice added to the page footer. |
 | paginate      | 9       | Maximum number of elements to display on a [list page](#list-pages) before pagination. |
 | enableGitInfo | -       | Enables git information, which is used by [documentation pages]({{< relref "content-management#documentation-layout" >}}). |
-{.table}
+{{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/config.toml`.
 
@@ -59,13 +60,14 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
+{{< table >}}
 | Setting        | Default           | Description |
 |----------------|-------------------|-------------|
 | separator      | "-"               | Seperator to join the website title and page title. |
 | description    | -                 | Short description of the website that is added to the page metadata. |
 | enableDarkMode | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
 | modes          | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
-{.table}
+{{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -75,6 +77,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode supports [multilingual content]({{< param "links.hugo_lang_config" >}}). The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{< ref "languages" >}}) section to review the various configuration options to enable multilingual content.
 
+{{< table >}}
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
@@ -83,7 +86,7 @@ Hinode supports [multilingual content]({{< param "links.hugo_lang_config" >}}). 
 | footer  | license       | -       | License displayed on the site's footer. |
 | footer  | socialTitle   | -       | Title displayed in the site's social footer. |
 | footer  | socialCaption | -       | Caption displayed in the site's social footer. |
-{.table}
+{{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
 
@@ -130,13 +133,14 @@ The following diagram illustrates the conceptual layout of the home page:
 
 The configuration of the home page is set in the `home` section of the `site parameters`. The folllowing settings are supported:
 
+{{< table >}}
 | Setting      | Default | Description |
 |--------------|---------|-------------|
 | sections     | -       | Sections to include on the home page, e.g. ["blog", "projects"]. |
 | featurePhoto | -       | Url of the photo to include in the feature element. |
 | fullCover    | false   | Flag to indicate if the feature element should cover the entire front page. |
 | style        | -       | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
-{.table}
+{{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -317,11 +321,12 @@ layout: minimal
 
 Please refer to the [content management section]({{< relref "content-management#single-pages" >}}) to review the elements available in the page's frontmatter. The configuration of the documentation pages is set in the `docs` section of the site parameters. The folllowing settings are supported:
 
+{{< table >}}
 | Setting      | Default | Description |
 |--------------|---------|-------------|
 | docs_version | -       | Default version to use in documentation links. |
 | basePath     | -       | Base path to use for file references. |
-{.table}
+{{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -425,6 +430,7 @@ The nav layout shows a nav element where each tab pane represents a single item 
 
 The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The folllowing settings are supported per section:
 
+{{< table >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
 | title        | ""           | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. |
@@ -434,10 +440,11 @@ The configuration of each section is set in the `sections` setting of the `site 
 | background   | -            | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | color        | -            | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | -            | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
-{.table}
+{{< /table >}}
 
 The `card` layout supports the following additional arguments:
 
+{{< table >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
 | cols         | 3            | Number of columns to display in the card group, should be a value betweeen 1 and 5. The default value is 3. |
@@ -447,10 +454,11 @@ The `card` layout supports the following additional arguments:
 | orientation  | "stacked"    | Placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
 | homepage     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
 | separator    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
-{.table}
+{{< /table >}}
 
 The `nav` layout supports the following additional arguments:
 
+{{< table >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
 | type         | "pills"      | Optional type of the tab group, either "tabs", "pills" (default), or "underline". |
@@ -458,7 +466,7 @@ The `nav` layout supports the following additional arguments:
 | class        | ""           | Optional class attribute of the tab group, e.g. “nav-fill”. |
 | pane         | "none"       | Optional style of the panes, either "none" (default) or "persona". |
 | width        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
-{.table}
+{{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 

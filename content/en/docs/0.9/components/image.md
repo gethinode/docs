@@ -18,6 +18,7 @@ The shortcode supports vector images too (identified by their extension `.svg`).
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | src       | Yes | Required url of the image, e.g. "img/responsive.png". Images with multiple color modes are expected to have a basename that ends with either `-dark` or `-light`. |
@@ -26,7 +27,7 @@ The shortcode supports the following arguments:
 | title     | No  | Optional alternate text of the image. |
 | caption   | No  | Optional figure caption. |
 | mode      | No  | Optional flag indicating if the image should support color modes. If set, the shortcode searches for images that having a matching color-mode suffix such as `light` or `dark`.|
-{.table}
+{{< /table >}}
 
 ## Example
 

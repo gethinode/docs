@@ -11,6 +11,7 @@ Hinode supports several types of navigation that utilize Bootstrap elements. The
 
 The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The folllowing settings are supported:
 
+{{< table >}}
 | Setting    | Default | Description |
 |------------|---------|-------------|
 | anchor     | -       | Flag indicating to display anchor links on hovering a heading. |
@@ -23,7 +24,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | breadcrumb | false   | Flag indicating to add breadcrumb navigation to the top of any single page. List pages are excluded. |
 | toc        | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | sidebar    | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
-{.table}
+{{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 

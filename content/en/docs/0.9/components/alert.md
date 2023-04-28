@@ -14,11 +14,12 @@ Use the `alert` shortcode to display a contextual feedback message. The inner co
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | color       | No  | Optional theme color of the alert, either "primary" (default), "secondary", "success", "danger",  "warning", "info", "light", "dark", "white" or "black". |
 | dismissible | No  | Optional flag to indicate the alert is dismissible, defaults to false. |
-{.table}
+{{< /table >}}
 
 ## Example
 
