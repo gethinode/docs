@@ -1,7 +1,7 @@
 ---
 title: Tables
 description: Enhance out-of-the-box Markdown tables with Bootstrap styling.
-date: 2023-01-22
+date: 2023-04-28
 layout: docs
 ---
 
@@ -135,4 +135,80 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 | 2. | Second item |
 | 3. | Third item  |
 {.table .table-sm}
+{{< /example >}}
+
+## Responsive tables
+
+Embed the markdown table within the `table` shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens. 
+
+### Always responsive
+
+By default, the `table` shortcode is responsive for all viewports.
+
+{{< example lang="markdown" >}}
+{{</* table */>}}
+| #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
+|----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
+{{< /example >}}
+
+Use `.table-responsive-none` to disable this behavior.
+
+{{< example lang="markdown" >}}
+{{</* table table-responsive-none */>}}
+| #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
+|----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
+{{< /example >}}
+
+### Breakpoint specific
+
+Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+{{< example lang="markdown" >}}
+{{</* table table-responsive-sm */>}}
+| #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
+|----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
+
+{{</* table table-responsive-md */>}}
+| #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
+|----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
+
+{{</* table table-responsive-lg */>}}
+| #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
+|----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
+
+{{</* table table-responsive-xl */>}}
+| #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
+|----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
+
+{{</* table table-responsive-xxl */>}}
+| #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
+|----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
 {{< /example >}}
