@@ -14,10 +14,11 @@ Use the `button-group` shortcode to display a group of buttons. Add inner `<butt
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | aria-label  | No   | Optional assistive label for the button group. |
-{.table}
+{{< /table >}}
 
 ## Example
 

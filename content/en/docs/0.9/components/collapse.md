@@ -14,11 +14,12 @@ Use the `collapse` shortcode to reveil or hide a panel. The panel can contain bo
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | id          | Yes      | Required unique id of the collapse element, e.g. "collapse-1". |
 | class       | No       | Optional class attribute of the inner panel element, e.g. “p-3”. |
-{.table}
+{{< /table >}}
 
 ## Example
 

@@ -14,6 +14,7 @@ Use the `button` shortcode to display a button with a hyperlink. The inner conte
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | href        | No   | Optional address for the button or hyperlink. Automatically assigned when using collapse. |
@@ -27,7 +28,7 @@ The shortcode supports the following arguments:
 | tooltip     | No   |  Optional text to display in a tooltip. Cannot be used together with collapse. Ignored for active/inactive buttons. |
 | collapse    | No   | Optional panel to collapse. Cannot be used together with tooltip. Ignored for active/inactive buttons. |
 | placement   | No   | How to position the tooltip: "top" (default), "bottom", "left", or "right". |
-{.table}
+{{< /table >}}
 
 ## Example
 

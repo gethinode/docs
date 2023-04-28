@@ -14,19 +14,21 @@ Use the `accordion` shortcode to show a group of vertically collapsing and expan
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | class       | No  | Optional class attribute of the accordion element, e.g. “w-50”. |
-{.table}
+{{< /table >}}
 
 Add an inner `accordion-item` element for each item of the accordion. The `accordion-item` element supports the following arguments:
 
+{{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | header      | Yes | Required header of the accordion element. |
 | class       | No  | Optional class attribute of the inner accordion element. |
 | show        | No  | Optional flag to indicate an item should be shown as collapsed. |
-{.table}
+{{< /table >}}
 
 ## Example
 

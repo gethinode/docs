@@ -14,10 +14,11 @@ Use the `toast` shortcode to display a dismissable message in the bottom-right c
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | header      | No  | Optional header of the toast message. Uses the site title by default. |
-{.table}
+{{< /table >}}
 
 ## Example
 

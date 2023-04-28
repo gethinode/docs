@@ -14,13 +14,14 @@ The `command` shortcode generates terminal output for either `bash`, `powershell
 
 The shortcode supports the following arguments:
 
+{{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | user      | No | Optional user to add to the prompt, e.g. "user". |
 | host      | No | Optional host to add to the prompt, e.g. "localhost". |
 | prompt    | No | Optional prompt override, e.g. "PS C:\Users\User>". |
 | shell     | No | Type of shell, either "bash" (default), "powershell", or "sql". |
-{.table}
+{{< /table >}}
 
 ## Examples
 
