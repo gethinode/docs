@@ -139,12 +139,13 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 
 ## Responsive tables
 
-Embed the markdown table within the `table` shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens. 
+Embed the markdown table within the `table` shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens.
 
 ### Always responsive
 
 By default, the `table` shortcode is responsive for all viewports.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="markdown" >}}
 {{</* table */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
@@ -154,9 +155,11 @@ By default, the `table` shortcode is responsive for all viewports.
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 Use `.table-responsive-none` to disable this behavior.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="markdown" >}}
 {{</* table table-responsive-none */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
@@ -166,11 +169,13 @@ Use `.table-responsive-none` to disable this behavior.
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Breakpoint specific
 
 Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="markdown" >}}
 {{</* table table-responsive-sm */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
@@ -212,3 +217,4 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to 
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
