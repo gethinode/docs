@@ -324,13 +324,14 @@ Please refer to the [content management section]({{< relref "content-management#
 {{< table >}}
 | Setting      | Default | Description |
 |--------------|---------|-------------|
-| docs_version | -       | Default version to use in documentation links. |
+| version      | -       | Default version to use in documentation links. |
 | basePath     | -       | Base path to use for file references. |
+| github       | -       | Repository URL for the docs site, overrides `schema/github` in  `config/_default/params.toml`. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
-{{< docs name="docs" file="config/_default/params.toml" >}}
+{{< docs name="version" file="./config/_default/params.toml" >}}
 
 ## Page sections
 
