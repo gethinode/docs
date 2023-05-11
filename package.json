@@ -41,9 +41,9 @@
     "@gethinode/hinode": "^0.12.10",
     "autoprefixer": "^10.4.14",
     "bootstrap": "^5.3.0-alpha3",
-    "cssnano": "^6.0.0",
-    "cssnano-preset-advanced": "^6.0.0",
-    "eslint": "^8.39.0",
+    "cssnano": "^6.0.1",
+    "cssnano-preset-advanced": "^6.0.1",
+    "eslint": "^8.40.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
@@ -54,7 +54,7 @@
     "postcss-cli": "^10.1.0",
     "purgecss-whitelister": "^2.4.0",
     "shx": "^0.3.4",
-    "stylelint": "^15.6.0",
+    "stylelint": "^15.6.1",
     "stylelint-config-standard-scss": "^9.0.0"
   },
   "hugo-bin": {
