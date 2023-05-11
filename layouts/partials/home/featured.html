@@ -12,7 +12,7 @@
             {{- end }}
             &nbsp;
             {{ if .Site.Params.demo.link -}}
-                <a class="btn btn-outline-primary" href="{{ .Site.Params.demo.link | safeURL }}" target="_blank" role="button">{{ .Site.Params.demo.caption | default (T "demo") }}</a>
+                <a class="btn btn-outline-primary" href="{{ .Site.Params.demo.link | safeURL }}" target="_blank" rel="noopener noreferrer" role="button">{{ .Site.Params.demo.caption | default (T "demo") }}</a>
             {{- end -}}
         </div>
         <div class="col col-md-3 d-none d-md-block"></div>
