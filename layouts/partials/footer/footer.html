@@ -1,12 +1,7 @@
 {{- $version := partial "assets/version.html" . -}}
 {{- $license := .Site.Params.footer.license | safeHTML -}}
 {{- $description := .Site.Params.main.description | safeHTML -}}
-{{- $copyright := .Site.Copyright -}}
-{{- if not $copyright -}}
-    {{- $copyright = printf "%s © %s %s All rights reserved." (i18n "copyright") (dateFormat "2006" now) .Site.Title -}}
-{{- end -}}
 {{- $title := site.Title -}}
-{{- $logo := site.Params.navigation.logo -}}
 {{- $baseurl := urls.Parse $.Site.Params.Baseurl -}}
 
 {{- $page := . -}}
