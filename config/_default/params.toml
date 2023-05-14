@@ -232,6 +232,7 @@
     repository_child = "https://github.com/gethinode/child.git"
     repository_docs = "https://github.com/gethinode/docs.git"
     repository_owner = "https://github.com/markdumay/"
+    repository_tag = "https://github.com/gethinode/hinode/releases/tag/"
     semver = "https://semver.org"
     siteground_compression = "https://www.siteground.com/blog/brotli-vs-gzip-compression"
     stylelint = "https://stylelint.io"
