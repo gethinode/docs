@@ -29,6 +29,21 @@
     sidebar = true
 
 [sections]
+    [sections.docs]
+        title = "Components"
+        layout = "card"
+        sort = "title"
+        reverse = false
+        nested = false
+        background = ""
+        color = "body-tertiary"
+        style = "border-0 shadow card-feature"
+        cols = 3
+        padding = "3"
+        header = "none"
+        footer = "none"
+        orientation = "stacked"
+        homepage = 3
     [sections.guides]
         title = "Check our guides to get you started"
         layout = "card"
@@ -178,6 +193,7 @@
     hugo_pipes = "https://gohugo.io/hugo-pipes/introduction"
     hugo_postprocess = "https://gohugo.io/hugo-pipes/postprocess"
     hugo_release_v0_109_0 = "https://github.com/gohugoio/hugo/releases/tag/v0.109.0"
+    hugo_sections = "https://gohugo.io/content-management/sections"
     hugo_shortcodes = "https://gohugo.io/content-management/shortcodes"
     hugo_structure = "https://gohugo.io/content-management/organization"
     hugo_templates = "https://gohugo.io/templates/introduction"

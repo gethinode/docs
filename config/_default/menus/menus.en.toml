@@ -9,13 +9,13 @@
   weight = 20
 
 [[main]]
-  name = "Guides"
-  url = "/guides/"
+  name = "Components"
+  url = "/components/"
   weight = 30
 
 [[main]]
-  name = "GitHub"
-  url = "https://github.com/gethinode/hinode"
+  name = "Guides"
+  url = "/guides/"
   weight = 40
 
 [[social]]
