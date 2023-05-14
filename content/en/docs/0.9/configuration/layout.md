@@ -438,6 +438,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | layout       | "card"       | Layout of the section, either "card" (default), "list", or "nav". |
 | sort         | "date"       | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
 | reverse      | true         | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
+| nested       | true         | Flag to indicate the content should be listed recursively for the entire [section]({{< param "links.hugo_sections" >}}). You can override this setting for individual branch bundles by adding `nested` to the page's frontmatter. |
 | background   | -            | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | color        | -            | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | -            | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
