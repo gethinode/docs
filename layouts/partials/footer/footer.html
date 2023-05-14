@@ -29,7 +29,7 @@
                 </a>
                 <div class="pt-3">{{ $description }}</div>
                 <div class="pt-2">{{ $license }}</div>
-                <div class="pt-2">Currently <a href='https://github.com/gethinode/hinode/releases/tag/{{ $version }}' class='link-bg-footer' target='_blank' rel='noopener noreferrer'>{{ $version }}</a></div>
+                <div class="pt-2">Currently <a href='{{ $.Site.Params.links.repository_tag }}{{ $version }}' class='link-bg-footer' target='_blank' rel='noopener noreferrer'>{{ $version }}</a></div>
             </div>
             <div class="col-md-2 small">&nbsp</div>
 
