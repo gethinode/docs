@@ -4,6 +4,7 @@ title: Carousel
 date: 2023-01-29
 description: Use the carousel shortcode to display a carousel of several images.
 layout: docs
+icon: fas images
 ---
 
 ## Overview

@@ -4,6 +4,7 @@ title: Icon
 date: 2023-02-02
 description: Use the fa shortcode to add a Font Awesome icon with ease.
 layout: docs
+icon: fa font-awesome
 ---
 
 ## Overview

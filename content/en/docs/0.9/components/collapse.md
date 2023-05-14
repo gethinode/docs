@@ -4,6 +4,7 @@ title: Collapse
 date: 2023-01-28
 description: Use the collapse shortcode to reveil or hide a panel.
 layout: docs
+icon: fa eye-slash
 ---
 
 ## Overview
