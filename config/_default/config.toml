@@ -7,7 +7,7 @@ googleAnalytics = "G-T85PPZ36GN"
 # additional settings
 baseURL = "https://gethinode.com/"
 canonifyURLs = false
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["taxonomy", "term", "section"]
 enableEmoji = true
 enableRobotsTXT = true
 enableInlineShortcodes = true
