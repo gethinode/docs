@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-02-08
+date: 2023-05-15
 aliases:
   - "/docs/0.9/contribute/"
   - "/docs/contribute/"
@@ -9,7 +9,7 @@ aliases:
 layout: docs
 ---
 
-Hinode is fully open source and welcomes any contributions, either big or small. To streamline the contribution process, please take a moment to review the guidelines outlined in this article.
+Hinode is fully open source and welcomes any contribution, either big or small. To streamline the contribution process, please take a moment to review the guidelines outlined in this article.
 
 ## Using the issue tracker
 
