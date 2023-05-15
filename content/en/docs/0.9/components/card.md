@@ -4,6 +4,7 @@ title: Card
 date: 2023-04-23
 description: Use the card shortcode to display a card that links to a content page.
 layout: docs
+icon: fa address-card
 ---
 
 ## Overview

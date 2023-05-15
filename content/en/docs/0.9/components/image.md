@@ -4,6 +4,7 @@ title: Image
 date: 2023-04-17
 description: Use the image shortcode to display a responsive image with a specific aspect ratio.
 layout: docs
+icon: fas image
 ---
 
 ## Overview

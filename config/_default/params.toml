@@ -3,6 +3,7 @@
     description = "Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5."
     enableDarkMode = true
     modes = ["light", "dark"]
+    footerBelowFold = true
 
 # toml-docs-start version
 [docs]
@@ -12,7 +13,7 @@
 # toml-docs-end version
 
 [home]
-    sections = ["guides", "users", "features"]
+    sections = ["guides", "users", "features", "opensource"]
     fullCover = true
     centerHeadline = true
     style = "gradient-featured"
@@ -29,6 +30,21 @@
     sidebar = true
 
 [sections]
+    [sections.docs]
+        title = "Components"
+        layout = "card"
+        sort = "title"
+        reverse = false
+        nested = false
+        background = ""
+        color = "body-tertiary"
+        style = "border-0 shadow card-feature card-shrink"
+        cols = 3
+        padding = "3"
+        header = "none"
+        footer = "none"
+        orientation = "stacked"
+        homepage = 3
     [sections.guides]
         title = "Check our guides to get you started"
         layout = "card"
@@ -60,6 +76,21 @@
         sort = "weight"
         reverse = false
         style = "justify-content-center"
+    [sections.opensource]
+        title = "Embrace the power of open source"
+        sectionHeader = "justify-content-end"
+        layout = "card"
+        sort = "weight"
+        reverse = false
+        background = "body-tertiary"
+        color = "body"
+        style = "border card-feature"
+        cols = 3
+        padding = "3"
+        header = "none"
+        footer = "none"
+        orientation = "stacked"
+        homepage = 3
 
 [favicon]
     logo = "img/favicon.png"
@@ -151,6 +182,7 @@
     github_signup = "https://github.com/signup"
     github_pr = "https://help.github.com/articles/about-pull-requests/"
     github_rebase = "https://help.github.com/articles/about-git-rebase/"
+    golang = "https://go.dev/"
     google_analytics_csp = "https://developers.google.com/tag-platform/tag-manager/web/csp#google_analytics_4_google_analytics"
     google_chrome = "https://www.google.com/chrome"
     google_fonts = "https://fonts.google.com"
@@ -178,6 +210,7 @@
     hugo_pipes = "https://gohugo.io/hugo-pipes/introduction"
     hugo_postprocess = "https://gohugo.io/hugo-pipes/postprocess"
     hugo_release_v0_109_0 = "https://github.com/gohugoio/hugo/releases/tag/v0.109.0"
+    hugo_sections = "https://gohugo.io/content-management/sections"
     hugo_shortcodes = "https://gohugo.io/content-management/shortcodes"
     hugo_structure = "https://gohugo.io/content-management/organization"
     hugo_templates = "https://gohugo.io/templates/introduction"
@@ -215,7 +248,8 @@
     repository = "https://github.com/gethinode/hinode"
     repository_child = "https://github.com/gethinode/child.git"
     repository_docs = "https://github.com/gethinode/docs.git"
-    repository_owner = "https://github.com/gethinode/"
+    repository_owner = "https://github.com/markdumay/"
+    repository_tag = "https://github.com/gethinode/hinode/releases/tag/"
     semver = "https://semver.org"
     siteground_compression = "https://www.siteground.com/blog/brotli-vs-gzip-compression"
     stylelint = "https://stylelint.io"
