@@ -30,7 +30,7 @@
 
             {{- range $menu := $menus -}}
                 <div class="col-md-2 col-4 pt-5 pt-md-0">
-                    <div class="fs-5 fw-bold footer-muted">{{ .Name }}</div>
+                    <div class="fs-md-5 fs-6 fw-bold footer-muted">{{ .Name }}</div>
                     {{- range .Children -}}
                         {{- $url := urls.Parse .URL -}}
                         {{- $external := ne $url.Host $baseurl.Host -}}
