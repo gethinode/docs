@@ -38,7 +38,7 @@
         nested = false
         background = ""
         color = "body-tertiary"
-        style = "border-0 shadow card-feature"
+        style = "border-0 shadow card-feature card-shrink"
         cols = 3
         padding = "3"
         header = "none"
