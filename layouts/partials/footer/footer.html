@@ -15,8 +15,8 @@
     {{- errorf "partial [footer/footer.html] - Invalid value for param 'menus': %s" $menuName -}}
 {{- end -}}
 
-<footer class="container-fluid footer p-0">
-    <div class="container-xxl pt-5 pb-5">
+<footer class="container-fluid footer p-0 border-top">
+    <div class="container-xxl px-3 px-xxl-0 py-5">
         <div class="row">
             <div class="col-md-4 small">
                 <a href="{{ site.Home.RelPermalink }}">
@@ -30,11 +30,11 @@
 
             {{- range $menu := $menus -}}
                 <div class="col-md-2 col-4 pt-5 pt-md-0">
-                    <div class="fs-5 fw-bold">{{ .Name }}</div>
+                    <div class="fs-5 fw-bold footer-muted">{{ .Name }}</div>
                     {{- range .Children -}}
                         {{- $url := urls.Parse .URL -}}
                         {{- $external := ne $url.Host $baseurl.Host -}}
-                        <div><a class="link-bg-footer"
+                        <div class="py-1"><a class="link-bg-footer"
                             href="{{ .URL | relLangURL  }}" {{ if $external }}target="_blank" rel="noopener noreferrer" {{ end }}>
                             {{ .Name }}
                             {{- if $external }} {{ partial "assets/icon.html" (dict "icon" "fas up-right-from-square fa-2xs") }}{{ end -}}
