@@ -36,15 +36,15 @@ The main navigation uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) 
 
 ### Menus
 
-The navigation bar uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) to generate the menu items. The navigation supports nesting at one level depth. The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
+The navigation bar uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) to generate the menu items. The navigation supports nesting at one level deep. Hinode supports an additional parameter called `alias`. If set, the active menu item is linked to the specific menu entry instead of being derived from the target URL. The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
 
-{{< docs name="sample-navigation" file="config/_default/menus/menus.en.toml" >}}
+{{< docs name="sample-navigation" file="./config/_default/menus/menus.en.toml" >}}
 
 ### Example
 
-Using the sample configuration defined in the previous paragraph, the navigation bar looks like this:
+The example below illustrates the navigation bar based on the sample configuration defined in the previous paragraph. The `About` and `About (no alias)` menu entries illustrate the behavior of the `alias` parameter. The `GitHub` menu entry shows an icon to indicate it is an external link and opens in a new window.
 
-{{< navbar color="light" size="sm" search="false" menus="sample" title="Sample" >}}
+{{< navbar color="body-tertiary" size="sm" search="false" menus="sample" title="Sample" >}}
 
 ### Customization
 
