@@ -36,7 +36,7 @@ The main navigation uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) 
 
 ### Menus
 
-The navigation bar uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) to generate the menu items. The navigation supports nesting at one level depth. The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
+The navigation bar uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) to generate the menu items. The navigation supports nesting at one level deep. The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
 
 {{< docs name="sample-navigation" file="config/_default/menus/menus.en.toml" >}}
 
