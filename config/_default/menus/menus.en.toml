@@ -1,21 +1,25 @@
 [[main]]
   name = "About"
-  url = "/about/"
+  pageRef = "/about/"
   weight = 10
+  [main.params]
+    alias = true
 
 [[main]]
   name = "Docs"
-  url = "/docs/"
+  pageRef = "/docs/"
   weight = 20
 
 [[main]]
   name = "Components"
-  url = "/components/"
+  pageRef = "/components/"
   weight = 30
+  [main.params]
+    alias = true
 
 [[main]]
   name = "Guides"
-  url = "/guides/"
+  pageRef = "/guides/"
   weight = 40
 
 [[social]]
@@ -27,23 +31,23 @@
 # toml-docs-start sample-navigation
 [[sample]]
   name = "Blog"
-  url = "/blog/"
+  pageRef = "/blog/"
   weight = 10
 
 [[sample]]
   name = "Projects"
-  url = "/projects/"
+  pageRef = "/projects/"
   weight = 20
 
 [[sample]]
   name = "Sample project"
-  url = "/en/projects/sample-project/"
+  pageRef = "/en/projects/sample-project/"
   parent = "Projects"
   weight = 1
 
 [[sample]]
   name = "Another project"
-  url = "/en/projects/another-project/"
+  pageRef = "/en/projects/another-project/"
   parent = "Projects"
   weight = 2
 # toml-docs-end sample-navigation
@@ -55,26 +59,30 @@
 [[footer]]
   parent = "Links"
   name = "Home"
-  url = "/"
+  pageRef = "/"
   weight = 1
 
 [[footer]]
   parent = "Links"
   name = "About"
-  url = "/about/"
+  pageRef = "/about/"
   weight = 10
+  [footer.params]
+    alias = true
 
 [[footer]]
   parent = "Links"
   name = "Docs"
-  url = "/docs/"
+  pageRef = "/docs/"
   weight = 20
 
 [[footer]]
   parent = "Links"
   name = "Components"
-  url = "/components/"
+  pageRef = "/components/"
   weight = 30
+  [footer.params]
+    alias = true
 
 [[footer]]
   name = "Guides"
@@ -83,19 +91,19 @@
 [[footer]]
   parent = "Guides"
   name = "Getting started"
-  url = "/guides/editing"
+  pageRef = "/guides/editing"
   weight = 10
 
 [[footer]]
   parent = "Guides"
   name = "Adding packages"
-  url = "/guides/packages"
+  pageRef = "/guides/packages"
   weight = 20
 
 [[footer]]
   parent = "Guides"
   name = "Optimization"
-  url = "/guides/optimization"
+  pageRef = "/guides/optimization"
   weight = 30
 
 [[footer]]
@@ -117,5 +125,5 @@
 [[footer]]
   parent = "Community"
   name = "Contribute"
-  url = "/contribute"
+  pageRef = "/contribute"
   weight = 30
