@@ -35,6 +35,7 @@
       "mark",
       "meta",
       "nav",
+      "noscript",
       "ol",
       "p",
       "pre",
@@ -57,6 +58,7 @@
       "zero-width"
     ],
     "classes": [
+      "%!s(\u003cnil\u003e)",
       "accordion",
       "accordion-body",
       "accordion-button",
