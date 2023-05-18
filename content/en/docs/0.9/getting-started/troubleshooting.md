@@ -8,7 +8,7 @@ layout: docs
 Review the table below for some common issues and their potential cause. Please file a [bug report]({{< relref "contribute#bug-reports" >}}) if you believe you have encountered an unknown issue.
 
 <!-- markdownlint-disable MD036 MD037 -->
-{{< accordion >}}
+{{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="The published website is not rendering at all" >}}
     Hinode uses [npm]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. As such, the default Hugo commands to build and deploy a website do not work. Check the [hosting and deployment]({{< relref "hosting-and-deployment" >}}) section on how to build and deploy Hinode properly.
   {{< /accordion-item >}}
