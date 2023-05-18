@@ -85,7 +85,7 @@ Deploy your site to Azure blob storage in six steps.
 {{< /carousel >}}
 
 <!-- markdownlint-disable MD037 -->
-{{< accordion >}}
+{{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Step 1. Create a storage account" >}}
     If not done so already, sign up for an account on the [Azure website]({{< param "links.azure" >}}). Log in to the Azure portal and create a storage account. The storage account needs to have a unique name across Azure. Select a region that best fits your needs. Leave all other options to their default value.
   {{< /accordion-item >}}
@@ -177,7 +177,7 @@ Sign up for Netlify and configure your site in seven steps.
   {{< img src="img/netlify-step7.png" caption="Step 7. Configure the build settings" >}}
 {{< /carousel >}}
 
-{{< accordion >}}
+{{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Step 1. Sign up for Netlify" >}}
     Go to [netlify.com]({{< param "links.netlify" >}}) and click on the button `Sign up`. Select your preferred signup method next. This will likely be a hosted Git provider, although you also have the option to sign up with an email address. The next steps use GitHub, but other Git providers will follow a similar process.
   {{< /accordion-item >}}

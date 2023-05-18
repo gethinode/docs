@@ -50,7 +50,7 @@ Start a new Hinode project in three steps:
 
 Hinode contains sample content for a blog and a project portfolio. The examples are available in English and Dutch and can be found in the `content` folder. Review the following items on to how organize and enrich your content.
 
-{{< accordion >}}
+{{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Adding content" >}}
     Hinode uses Markdown and templates to define the content for your website. See the [content management]({{< relref "content-management" >}}) page for more details.
   {{< /accordion-item >}}
@@ -78,7 +78,7 @@ Hinode contains sample content for a blog and a project portfolio. The examples 
 
 The main site configuration is available in `./config/_default`. Review the following items to get you started.
 
-{{< accordion >}}
+{{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Review the layout options" >}}
     Hinode uses a base layout for the home page, list pages, and individual pages. Individual pages can also be configured as documentation page instead of a regular page. Review the [layout documentation]({{< relref "colors" >}}) for more details.
   {{< /accordion-item >}}
@@ -100,7 +100,7 @@ The main site configuration is available in `./config/_default`. Review the foll
 
 The next topics give an overview of the advanced configuration settings.
 
-{{< accordion >}}
+{{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Review the approach to dependency management and virtualization" >}}
     Hinode uses [npm]({{< param "links.npm" >}}) packages to manage its dependencies. In addition, it uses Hugo's [mounted folders]({{< param "links.hugo_mounts" >}}) to create a virtual file system. Review the [advanced settings overview]({{< relref "../advanced-settings/overview" >}}) for more details.
   {{< /accordion-item >}}
