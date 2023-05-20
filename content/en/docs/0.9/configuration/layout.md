@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-04-25
+date: 2023-05-20
 layout: docs
 ---
 
@@ -328,6 +328,7 @@ Please refer to the [content management section]({{< relref "content-management#
 | version      | -       | Default version to use in documentation links. |
 | basePath     | -       | Base path to use for file references. |
 | github       | -       | Repository URL for the docs site, overrides `schema/github` in  `config/_default/params.toml`. |
+| release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{< relref "release" >}}).
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
