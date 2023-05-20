@@ -68,6 +68,7 @@
     # - title: Popover
     # - title: Progress
     # - title: Scrollspy
+    - title: Release
     - title: Spinner
     - title: Toast
     - title: Tooltip
