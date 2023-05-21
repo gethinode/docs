@@ -3,7 +3,7 @@ title: Optimizing the user experience
 description: Guide on how to optimize the user experience of your site.
 date: 2023-04-03
 lastmod: 2023-04-08
-# tags: ["optimization"]
+tags: ["guide", "optimization"]
 weight: 30
 thumbnail: img/watch.jpg
 photoCredits: <a href="https://unsplash.com/@saffu">Saffu</a>

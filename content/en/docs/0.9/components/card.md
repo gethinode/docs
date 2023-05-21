@@ -1,15 +1,22 @@
 ---
 author: Mark Dumay
 title: Card
-date: 2023-04-23
+date: 2023-05-21
 description: Use the card shortcode to display a card that links to a content page.
 layout: docs
 icon: fa address-card
+tags: component
 ---
 
 ## Overview
 
-Use the `card` shortcode to display a card that links to a content page. When using a rich layout, the card includes a thumbnail and a header.
+Use the `card` shortcode to display a card that links to a content page. When using a rich layout, the card includes a thumbnail (or icon) and a header. As an example, the following shortcode displays a horizontal card that links to the [editing]({{< ref "credits" >}}) guide. It includes a custom header and footer.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* card path="editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -27,12 +34,92 @@ The shortcode supports the following arguments:
 | orientation | No  | Optional placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
 {{< /table >}}
 
-## Example
+## Examples
 
-As an example, the following shortcode displays a stacked card that links to the [credits]({{< ref "credits" >}}) page. It includes a custom header and footer.
+Change the style of your card with class attributes and shortcode arguments.
+
+### Colored cards
+
+Use the `color` argument to set the background color of the card. As an example, the following shortcodes display a plain card for each available color. The cards are embedded in a grid. The final two cards with the color `body` and `body-tertiary` are [color-mode aware]({{< relref "color-modes" >}}).
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="credits" padding="3" class="w-50" color="body-tertiary" header="publication" footer="none" */>}}
+<div class="container-fluid p-4 px-xxl-0">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-2 g-lg-3">
+        <div class="col">{{</* card color="primary" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="secondary" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="success" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="danger" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="warning" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="info" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="light" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="dark" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="white" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="black" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="body" path="button" header="none" orientation="none" */>}}</div>
+        <div class="col">{{</* card color="body-tertiary" path="button" header="none" orientation="none" */>}}</div>
+    </div>
+</div>
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
+
+### Custom header
+
+Use the `header` argument to customize the contents of the card.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+<div class="container-fluid p-4 px-xxl-0">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-2 g-lg-3">
+        <div class="col">{{</* card path="editing" header="full" orientation="none" */>}}</div>
+        <div class="col">{{</* card path="editing" header="publication" orientation="none" */>}}</div>
+        <div class="col">{{</* card path="editing" header="tags" orientation="none" */>}}</div>
+        <div class="col">{{</* card path="editing" header="none" orientation="none" */>}}</div>
+    </div>
+</div>
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+### Custom footer
+
+Use the `footer` argument to customize the contents of the card.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+<div class="container-fluid p-4 px-xxl-0">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-2 g-lg-3">
+        <div class="col">{{</* card path="editing" header="none" footer="full" orientation="none" */>}}</div>
+        <div class="col">{{</* card path="editing" header="none" footer="publication" orientation="none" */>}}</div>
+        <div class="col">{{</* card path="editing" header="none" footer="tags" orientation="none" */>}}</div>
+        <div class="col">{{</* card path="editing" header="none" footer="none" orientation="none" */>}}</div>
+    </div>
+</div>
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+### Image placement
+
+Use the `orientation` argument to customize the placement of the card's thumbnail or icon.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* card path="editing" header="none" footer="none" orientation="stacked" class="col-sm-12 col-lg-6 mx-auto mb-3" */>}}
+{{</* card path="button" header="none" footer="none" orientation="stacked" padding="3" class="col-sm-12 col-lg-6 mx-auto mb-3" */>}}
+{{</* card path="editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" */>}}
+{{</* card path="button" header="publication" footer="tags" orientation="horizontal" padding="3" class="col-sm-12 col-lg-8 mx-auto" */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+### Custom styling
+
+Use the `class` argument to customize the styling of the card. The folllowing example applies the style `card-feature` to apply a color gradient to the card's icon. The style also applies an adaptive background color.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* card path="button" header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto card-feature" */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+The style is defined in the `theme.scss` file, which is transpiled into the [site's stylesheet]({{< relref "styles" >}}).
+
+{{< docs name="styling" file="./assets/scss/theme/theme.scss" >}}

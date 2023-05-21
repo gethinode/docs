@@ -1,7 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2023-04-06
+date: 2023-05-21
 layout: docs
 ---
 
@@ -44,7 +44,7 @@ The navigation bar uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) t
 
 The example below illustrates the navigation bar based on the sample configuration defined in the previous paragraph. The `About` and `About (no alias)` menu entries illustrate the behavior of the `alias` parameter. The `GitHub` menu entry shows an icon to indicate it is an external link and opens in a new window.
 
-{{< navbar color="body-tertiary" size="sm" search="false" menus="sample" title="Sample" >}}
+{{< navbar color="body-tertiary" size="sm" search="false" menus="alias" title="Sample" >}}
 
 ### Customization
 
@@ -123,7 +123,7 @@ The breadcrumb is also available as [shortcode]({{< ref "breadcrumb" >}}).
 
 ## Table of contents
 
-Single pages can optionally show an [table of contents]({{< param "links.hugo_toc" >}}) on the right of the screen. The table of contents is automatically popuplated based on the headings within the page content (two levels deep). The table of contents is hidden on smaller screens or if it has less than two items. Enable the table of contents in the [basic navigation configuration](#basic-configuration). If enabled, all single pages will show the element, unless disabled in the page's frontmatter.
+Single pages can optionally show an [table of contents]({{< param "links.hugo_toc" >}}) on the right of the screen. The table of contents is automatically popuplated based on the headings within the page content (two levels deep). The table of contents is hidden if it has less than two items. On smaller screens, a drop-down menu is added to the top of the page. Enable the table of contents in the [basic navigation configuration](#basic-configuration). If enabled, all single pages will show the element, unless disabled in the page's frontmatter.
 
 ### Customization
 
