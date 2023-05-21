@@ -37,11 +37,6 @@
     alias = true
 
 [[sample]]
-  name = "About (no alias)"
-  pageRef = "/about/"
-  weight = 20
-
-[[sample]]
   name = "Guides"
   pageRef = "/guides/"
   weight = 30
@@ -69,6 +64,46 @@
   url = "https://github.com/gethinode/hinode"
   weight = 40
 # toml-docs-end sample-navigation
+
+[[alias]]
+  name = "About"
+  pageRef = "/about/"
+  weight = 10
+  [alias.params]
+    alias = true
+
+[[alias]]
+  name = "About (no alias)"
+  pageRef = "/about/"
+  weight = 20
+
+[[alias]]
+  name = "Guides"
+  pageRef = "/guides/"
+  weight = 30
+
+[[alias]]
+  parent = "Guides"
+  name = "Getting started"
+  pageRef = "/guides/editing/"
+  weight = 10
+
+[[alias]]
+  parent = "Guides"
+  name = "Adding packages"
+  pageRef = "/guides/packages/"
+  weight = 20
+
+[[alias]]
+  parent = "Guides"
+  name = "Optimization"
+  pageRef = "/guides/optimization/"
+  weight = 30
+
+[[alias]]
+  name = "GitHub"
+  url = "https://github.com/gethinode/hinode"
+  weight = 40
 
 [[footer]]
   name = "Links"

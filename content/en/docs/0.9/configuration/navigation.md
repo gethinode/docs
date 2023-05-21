@@ -44,7 +44,7 @@ The navigation bar uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) t
 
 The example below illustrates the navigation bar based on the sample configuration defined in the previous paragraph. The `About` and `About (no alias)` menu entries illustrate the behavior of the `alias` parameter. The `GitHub` menu entry shows an icon to indicate it is an external link and opens in a new window.
 
-{{< navbar color="body-tertiary" size="sm" search="false" menus="sample" title="Sample" >}}
+{{< navbar color="body-tertiary" size="sm" search="false" menus="alias" title="Sample" >}}
 
 ### Customization
 
