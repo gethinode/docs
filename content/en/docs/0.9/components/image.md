@@ -113,7 +113,6 @@ The shortcode supports vector images of type `.svg` too. The shortcode supports 
 Unlike bitmap images, vector images are not processed but used as is. They should be maintained in the site's `static` folder instead of the `assets` folder. Add a leading `/` to specify the absolute image location.
 {{< /alert >}}
 
-
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* image src="/img/logo-mono.svg" mode="true" ratio="21x9" class="bg-primary p-3" */>}}
