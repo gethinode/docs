@@ -1,29 +1,16 @@
 ---
 author: Mark Dumay
 title: Toast
-date: 2023-01-28
+date: 2023-05-21
 description: Use the toast shortcode to display a dismissable message in the bottom-right corner of the screen.
 layout: docs
 icon: fas circle-info
+tags: component
 ---
 
 ## Overview
 
-Use the `toast` shortcode to display a dismissable message in the bottom-right corner of the screen. Hinode defines a click event for a button with id `toastButton`. Modify the file `assets/js/toast.js` if needed.
-
-## Arguments
-
-The shortcode supports the following arguments:
-
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| header      | No  | Optional header of the toast message. Uses the site title by default. |
-{{< /table >}}
-
-## Example
-
-As an example, the following shortcode displays a button that, when clicked, triggers the toast message.
+Use the `toast` shortcode to display a dismissable message in the bottom-right corner of the screen. Hinode defines a click event for a button with id `toastButton`. Modify the file `assets/js/toast.js` if needed. As an example, the following shortcode displays a button that, when clicked, triggers the toast message.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -36,3 +23,13 @@ As an example, the following shortcode displays a button that, when clicked, tri
 {{</* /toast */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
+
+## Arguments
+
+The shortcode supports the following arguments:
+
+{{< table >}}
+| Argument    | Required | Description |
+|-------------|----------|-------------|
+| header      | No  | Optional header of the toast message. Uses the site title by default. |
+{{< /table >}}
