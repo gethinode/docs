@@ -1,10 +1,11 @@
 ---
 author: Mark Dumay
 title: Accordion
-date: 2023-05-20
+date: 2023-05-21
 description: Use the accordion shortcode to show a group of vertically collapsing and expanding items.
 layout: docs
 icon: fas chevron-down
+tags: component
 ---
 
 ## Overview

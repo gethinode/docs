@@ -1,10 +1,11 @@
 ---
 author: Mark Dumay
 title: Alert
-date: 2023-05-20
+date: 2023-05-21
 description: Use the alert shortcode to display a contextual feedback message.
 layout: docs
 icon: fas triangle-exclamation
+tags: component
 ---
 
 ## Overview
