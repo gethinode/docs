@@ -38,6 +38,8 @@ The shortcode supports the following arguments:
 
 ## Examples
 
+Change the style of your spinner with shortcode arguments.
+
 ### Colored spinner
 
 Set the `color` argument to apply a theme color to the spinner. The following shortcodes display a centered spinner for each available color.
