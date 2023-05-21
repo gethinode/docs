@@ -14,7 +14,7 @@ Use the `card` shortcode to display a card that links to a content page. When us
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="editing" header="publication" footer="tags" orientation="horizontal" class="w-75 mx-auto" */>}}
+{{</* card path="editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -103,10 +103,10 @@ Use the `orientation` argument to customize the placement of the card's thumbnai
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="editing" header="none" footer="none" orientation="stacked" class="w-50 mx-auto mb-3" */>}}
-{{</* card path="button" header="none" footer="none" orientation="stacked" padding="3" class="w-50 mx-auto mb-3" */>}}
-{{</* card path="editing" header="publication" footer="tags" orientation="horizontal" class="w-75 mx-auto" */>}}
-{{</* card path="button" header="publication" footer="tags" orientation="horizontal" padding="3" class="w-75 mx-auto" */>}}
+{{</* card path="editing" header="none" footer="none" orientation="stacked" class="col-sm-12 col-lg-6 mx-auto mb-3" */>}}
+{{</* card path="button" header="none" footer="none" orientation="stacked" padding="3" class="col-sm-12 col-lg-6 mx-auto mb-3" */>}}
+{{</* card path="editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" */>}}
+{{</* card path="button" header="publication" footer="tags" orientation="horizontal" padding="3" class="col-sm-12 col-lg-8 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -116,7 +116,7 @@ Use the `class` argument to customize the styling of the card. The folllowing ex
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="button" header="none" footer="none" padding="3" class="w-50 mx-auto card-feature" */>}}
+{{</* card path="button" header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto card-feature" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
