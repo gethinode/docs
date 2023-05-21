@@ -1,15 +1,22 @@
 ---
 author: Mark Dumay
 title: Breadcrumb
-date: 2023-05-20
+date: 2023-05-21
 description: Use the breadcrumb shortcode to display the current page’s location within the site's navigational hierarchy.
 layout: docs
 icon: fas bread-slice
+tags: component
 ---
 
 ## Overview
 
-Use the `breadcrumb` shortcode to display the current page’s location within the site's navigational hierarchy.
+Use the `breadcrumb` shortcode to display the current page’s location within the site's navigational hierarchy. As an example, the following shortcode displays a breadcrumb for the current page.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* breadcrumb path="breadcrumb" */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -38,13 +45,3 @@ _build:
   render: false
 ---
 ```
-
-## Example
-
-As an example, the following shortcode displays a breadcrumb for the current page.
-
-<!-- markdownlint-disable MD037 -->
-{{< example lang="hugo" >}}
-{{</* breadcrumb path="breadcrumb" */>}}
-{{< /example >}}
-<!-- markdownlint-enable MD037 -->
