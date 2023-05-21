@@ -5,6 +5,7 @@ date: 2023-04-18
 description: Use the nav shortcode to show a group of multiple tab panes.
 layout: docs
 icon: fa folder
+tags: component
 ---
 
 ## Overview
