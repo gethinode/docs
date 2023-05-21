@@ -5,19 +5,12 @@ date: 2023-02-02
 description: Use the fa shortcode to add a Font Awesome icon with ease.
 layout: docs
 icon: fa font-awesome
+tags: component
 ---
 
 ## Overview
 
-Use the `fa` shortcode to quickly add a Font Awesome icon to your content. Use `fa` for regular icons, `fab` for brand icons, and `fas` for solid icons.
-
-## Arguments
-
-The shortcode supports unnamed arguments only and requires at least one argument. The first argument is used as the icon name without the `fa-` prefix. Additional (unnamed) arguments are passed as `class` attributes to the inner HTML element.
-
-## Example
-
-As an example, the following shortcodes show a square check, a brand logo, and a circle check.
+Use the `fa` shortcode to quickly add a Font Awesome icon to your content. Use `fa` for regular icons, `fab` for brand icons, and `fas` for solid icons. As an example, the following shortcodes show a square check, a brand logo, and a circle check.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -26,3 +19,11 @@ As an example, the following shortcodes show a square check, a brand logo, and a
 {{</* fas circle-check */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
+
+## Arguments
+
+The shortcode supports unnamed arguments only and requires at least one argument. The first argument is used as the icon name without the `fa-` prefix. Additional (unnamed) arguments are passed as `class` attributes to the inner HTML element.
+
+## Remarks
+
+See the [icons documentation]({{< relref "../content/icons" >}}) in the content section for additional styling options.
