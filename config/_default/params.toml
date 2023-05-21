@@ -10,6 +10,7 @@
     version = "0.9"
     basePath = "node_modules/@gethinode/hinode"
     github = "https://github.com/gethinode/docs"
+    release = "https://github.com/gethinode/hinode/releases/tag/"
 # toml-docs-end version
 
 [home]
