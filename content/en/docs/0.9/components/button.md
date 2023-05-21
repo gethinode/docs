@@ -71,6 +71,7 @@ Set the `size` argument to resize the button.
 
 Set the `color` argument to define the background color with a matching title color.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* button color="primary" href="#!" size="sm" */>}}primary{{</* /button */>}}
 {{</* button color="secondary" href="#!" size="sm" */>}}secondary{{</* /button */>}}
@@ -81,6 +82,7 @@ Set the `color` argument to define the background color with a matching title co
 {{</* button color="light" href="#!" size="sm" */>}}light{{</* /button */>}}
 {{</* button color="dark" href="#!" size="sm" */>}}dark{{</* /button */>}}
 {{< /example>}}
+<!-- markdownlint-enable MD037 -->
 
 ### Buttons with a badge
 
@@ -98,6 +100,7 @@ Set the `badge` argument to add a badge to the top right of the button.
 
 Set the `outline` argument to `true` to adjust the style of the button.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* button color="primary" href="#!" size="sm" outline="true" */>}}primary{{</* /button */>}}
 {{</* button color="secondary" href="#!" size="sm" outline="true" */>}}secondary{{</* /button */>}}
@@ -108,6 +111,7 @@ Set the `outline` argument to `true` to adjust the style of the button.
 {{</* button color="light" href="#!" size="sm" outline="true" */>}}light{{</* /button */>}}
 {{</* button color="dark" href="#!" size="sm" outline="true" */>}}dark{{</* /button */>}}
 {{< /example>}}
+<!-- markdownlint-enable MD037 -->
 
 ### Buttons with a tooltip
 
@@ -131,6 +135,7 @@ Set the `tooltip` argument in conjunction with `placement` to show a tooltip whe
     Inbox
 {{</* /button */>}}
 {{< /example>}}
+<!-- markdownlint-enable MD037 -->
 
 ### Buttons with a collapsible panel
 
@@ -144,7 +149,9 @@ Reveal or hide a collapsible panel by linking the panel's `id` to the button wit
     </div>
 </div>
 
+<!-- markdownlint-disable MD037 -->
 {{</* button color="dark" collapse="collapseExample" */>}}
     Collapse
 {{</* /button */>}}
 {{< /example>}}
+<!-- markdownlint-enable MD037 -->

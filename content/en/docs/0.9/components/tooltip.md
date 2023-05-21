@@ -20,7 +20,6 @@ Use the `tooltip` shortcode to display a tooltip for a hyperlink. Refer to the [
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-
 ## Arguments
 
 The shortcode supports the following arguments:

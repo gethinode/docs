@@ -76,7 +76,6 @@ Add `.accordion-flush` to remove some borders and rounded corners to render acco
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-
 ### Always open
 
 Set `always-open` to `true` to make accordion items stay open when another item is opened.

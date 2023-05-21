@@ -49,9 +49,11 @@ As an example, the following shortcodes display a centered image with various as
 
 Set the `ratio` to `1x1` for a square aspect ratio.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 <div class="col-6 mx-auto">{{</* image src="img/flowers.jpg" ratio="1x1"  */>}}</div>
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 Set the `ratio` to `4x3` for a landscape aspect ratio.
 
