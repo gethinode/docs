@@ -1,15 +1,24 @@
 ---
 author: Mark Dumay
 title: Command Prompt
-date: 2023-01-28
+date: 2023-05-21
 description: The command shortcode generates terminal output for either Bash, PowerShell, or SQL shell languages.
 layout: docs
 icon: fas terminal
+tags: component
 ---
 
 ## Overview
 
-The `command` shortcode generates terminal output for either `bash`, `powershell`, or `sql` shell languages.
+The `command` shortcode generates terminal output for either `bash`, `powershell`, or `sql` shell languages. The following example generates a block with a default bash command prompt.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* command */>}}
+export MY_VAR=123
+{{</* /command */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -26,17 +35,9 @@ The shortcode supports the following arguments:
 
 ## Examples
 
-### Bash (default shell)
+Change the style and language of your command prompt with shortcode arguments.
 
-Use the `command` shortcode to generate a block with a default bash command prompt.
-
-<!-- markdownlint-disable MD037 -->
-{{< example lang="hugo" >}}
-{{</* command */>}}
-export MY_VAR=123
-{{</* /command */>}}
-{{< /example >}}
-<!-- markdownlint-enable MD037 -->
+### Bash
 
 Specify `user` and `host` to add the user context to the prompt. In addition, use `(out)` to specify an output line and use `\` to denote a line continuation.
 
