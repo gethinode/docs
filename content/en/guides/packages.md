@@ -14,6 +14,10 @@ photoSource: <a href="https://unsplash.com/photos/7KKy7-TeeVs">Unsplash</a>
 
 Hinode uses [npm packages]({{< ref "/docs/0.9/advanced-settings/overview#npm-packages" >}}) and [mounted folders]({{< param "links.hugo_mounts" >}}) to create a flexible, automated build system. This guide shows how to add an npm package to your site. It installs Leaflet as an example. [Leaflet]({{< param "links.leaflet" >}}) is an open-source JavaScript library to add mobile-friendly interactive maps to your site. This guide assumes you have a working site already. Check the [introduction]({{< relref "introduction" >}}) on how to set up a site with Hinode.
 
+{{< alert color="info" >}}
+A full working example of this guide is available on [GitHub]({{< param "links.repository_leaflet" >}}).
+{{< /alert >}}
+
 ## Step 1 - Setting up leaflet
 
 As first step we will install the Leaflet package with npm. Next, we will mount the JavaScript library. Lastly, we will import Leaflet's stylesheet.
@@ -37,11 +41,22 @@ Using Hugo's module mounts, Hinode bundles all JavaScript files found in the `as
     includeFiles = "leaflet.js"
 ```
 
+The default marker from Leaflet requires several images. Mount these images to `static/css/images` for them to become available.
+
+```toml
+  [[module.mounts]]
+    source = "node_modules/leaflet/dist/images"
+    target = "static/css/images"
+    includeFiles = "*.png"
+```
+
 ### Importing the css file
 
-Leaflet requires the presence of several style elements. Similarly to the JavaScript bundle, add the following statement to `assets/scss/app.scss` to include Leaflet's <abbr title="Cascading Stylesheet">CSS</abbr> file in your main style. Please note that the file extension `.css` should be omitted.
+Leaflet requires the presence of several style elements. Similarly to the JavaScript bundle, add an import statement to `assets/scss/app.scss` to include Leaflet's <abbr title="Cascading Stylesheet">CSS</abbr> file in your main style. You can copy the basic file from the Hinode repository and add the statement to the bottom of the file. Please note that the file extension `.css` should be omitted.
 
 ```scss
+[...]
+
 // Import Leaflet
 @import "leaflet/dist/leaflet";
 ```
@@ -62,7 +77,7 @@ Add a `map` placeholder to your (Markdown) content file. The following placehold
 <div id="map" class="ratio ratio-16x9 w-100"></div>
 ```
 
-Next, initialize the map placeholder with the OpenStreetMap content. The following code uses the city of London as an example. The `mapID` refers to the ID of the placeholder. The code tests if an element with the `map` ID is present and initializes the placeholder accordingly. You can place the code in `assets/js/leaflet.js`, where Hinode will pick it up automatically.
+Next, initialize the map placeholder with the OpenStreetMap content. The following code uses the city of London as an example. The `mapID` refers to the ID of the placeholder. The code tests if an element with the `map` ID is present and initializes the placeholder accordingly. It adds a marker with a default icon next. You can place the code in `assets/js/leaflet.js`, where Hinode will pick it up automatically.
 
 ```js
 const mapID = 'map'
@@ -70,10 +85,13 @@ const mapID = 'map'
 if (document.getElementById(mapID) !== null) {
   const map = L.map(mapID).setView([51.505, -0.09], 13)
 
-  const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map)
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  
+  L.marker([51.5, -0.09]).addTo(map)
+      .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+      .openPopup();
 }
 ```
 

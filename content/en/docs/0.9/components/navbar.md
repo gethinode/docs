@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Navbar
-date: 2023-05-21
+date: 2023-05-23
 description: Use the navbar shortcode to display a navigation header with a toggler.
 layout: docs
 icon: fas bars
@@ -14,7 +14,7 @@ Use the `navbar` shortcode to display a navigation header with a toggler. The me
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar path="credits" color="body" size="md" search="false" menus="sample" title="Brand" mode="false" */>}}
+{{</* navbar id="navbar-overview" path="credits" color="body" size="md" search="false" menus="sample" title="Brand" mode="false" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -45,7 +45,7 @@ Set the argument `logo` to an image to add a brand logo to the left of the navba
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar logo="/img/logo_icon.svg" path="credits" color="body" size="md" search="false" menus="sample" mode="false" */>}}
+{{</* navbar id="navbar-logo" logo="/img/logo_icon.svg" path="credits" color="body" size="md" search="false" menus="sample" mode="false" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -53,7 +53,7 @@ Set the argument `title` to add a brand text to the left of the navbar. The text
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar title="Brand" path="credits" color="body" size="md" search="false" menus="sample" mode="false" */>}}
+{{</* navbar id="navbar-title" title="Brand" path="credits" color="body" size="md" search="false" menus="sample" mode="false" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -71,16 +71,16 @@ Set the `color` argument to define the background color with a matching title co
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="mb-3">{{</* navbar path="credits" color="primary" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="secondary" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="success" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="danger" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="warning" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="info" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="white" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="black" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="body" size="sm" search="false" menus="sample" mode="false" */>}}</div>
-<div class="mb-3">{{</* navbar path="credits" color="body-tertiary" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-1" path="credits" color="primary" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-2" path="credits" color="secondary" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-3" path="credits" color="success" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-4" path="credits" color="danger" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-5" path="credits" color="warning" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-6" path="credits" color="info" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-7" path="credits" color="white" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-8" path="credits" color="black" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-9" path="credits" color="body" size="sm" search="false" menus="sample" mode="false" */>}}</div>
+<div class="mb-3">{{</* navbar id="navbar-color-10" path="credits" color="body-tertiary" size="sm" search="false" menus="sample" mode="false" */>}}</div>
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -90,7 +90,7 @@ Set the argument `search` to `true` to enable search input.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar search="true" path="credits" color="body" size="md" menus="sample" mode="false" */>}}
+{{</* navbar id="navbar-search-1" search="true" path="credits" color="body" size="md" menus="sample" mode="false" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -98,7 +98,7 @@ Set the argument `search` to `false` to disable search input.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar search="false" path="credits" color="body" size="md" menus="sample" mode="false" */>}}
+{{</* navbar id="navbar-search-2" search="false" path="credits" color="body" size="md" menus="sample" mode="false" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -112,7 +112,7 @@ Set the argument `mode` to `true` to enable the mode switcher.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar mode="true" search="false" path="credits" color="body" size="md" menus="sample" */>}}
+{{</* navbar id="navbar-mode-1" mode="true" search="false" path="credits" color="body" size="md" menus="sample" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -120,7 +120,7 @@ Set the argument `mode` to `false` to disable the mode switcher.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* navbar mode="false" search="false" path="credits" color="body" size="md" menus="sample" */>}}
+{{</* navbar id="navbar-mode-2" mode="false" search="false" path="credits" color="body" size="md" menus="sample" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
