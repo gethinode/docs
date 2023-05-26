@@ -36,6 +36,7 @@ The shortcode supports the following arguments:
 | outline     | No       | Optional flag indicating the button should be outlined, either "false" (default) or "true". |
 | aria-label  | No       | Optional label for the badge. |
 | tooltip     | No       |  Optional text to display in a tooltip. Cannot be used together with collapse. Ignored for active/inactive buttons. |
+| toast       | No       | Optional id of the toast message to display when the button is clicked. |
 | collapse    | No       | Optional panel to collapse. Cannot be used together with tooltip. Ignored for active/inactive buttons. |
 | placement   | No       | How to position the tooltip: "top" (default), "bottom", "left", or "right". |
 {{< /table >}}
