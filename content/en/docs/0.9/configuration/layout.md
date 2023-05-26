@@ -85,17 +85,17 @@ Hinode can optionally add buttons to share a post via available social media. Us
 |-----------------|---------------|-------------|
 | enabled         | false         | Define if social sharing should be enabled for all single pages. You can override this setting by adding `enabled` to the individual page's frontmatter.
 | sort            | "weight"      | Sorting key to be used, either "name" or "weight". You can also reference a custom key defined in the provider configuration. |
-| reverse         | false         | Flag to indicate the sorting of the social sharing buttons should be reversed, defaults to false. |
+| reverse         | false         | Flag to indicate if the sorting of the social sharing buttons should be reversed, defaults to false. |
 {{< /table >}}
 
-You can configure the available social media providers in the same configuration section. Add each provider as entry to `[[sharing.providers]]`. The providers support the following arguments:
+Add each available provider to `[[sharing.providers]]`. The providers support the following arguments:
 
 {{< table >}}
 | Setting   | Default | Description |
 |-----------|---------|-------------|
 | name      | -       | Name of the provider, added as assistive title to improve accessibility. |
 | url       | -       | Parameterized URL of the social media provider. The `url` supports the parameters `{url}` and `{title}`. The `{url}` is replaced with the page's permalink, and `{title}` with the page's title. |
-| icon      | -       | Shorthand notation of the Font Awesome icon to be used as button, e.g. `fab linkedin`. |
+| icon      | -       | Shorthand notation of the [Font Awesome icon]({{< relref "../content/icons" >}}) to be used as button, e.g. `fab linkedin`. |
 | weight    | -       | Weight of the social sharing button, to be used as sorting key. |
 | clipboard | false   | If set, the defined url is copied to the clipboard instead of being opened. A [toast message]({{< relref "toast" >}}) is shown to inform the user. |
 {{< /table >}}
