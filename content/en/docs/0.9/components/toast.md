@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Toast
-date: 2023-05-21
+date: 2023-05-26
 description: Use the toast shortcode to display a dismissable message in the bottom-right corner of the screen.
 layout: docs
 icon: fas circle-info
@@ -10,16 +10,28 @@ tags: component
 
 ## Overview
 
-Use the `toast` shortcode to display a dismissable message in the bottom-right corner of the screen. Hinode defines a click event for a button with id `toastButton`. Modify the file `assets/js/toast.js` if needed. As an example, the following shortcode displays a button that, when clicked, triggers the toast message.
+{{< alert >}}
+<strong>New in v0.14.3 -</strong> To support multiple toast messages on the same page, each toast message is now explicitly linked to a button using the parameter `id`. Hinode wraps the individual toast messages in a container to stack them automatically.
+{{< /alert >}}
+
+Use the `toast` shortcode to display a dismissable message in the bottom-right corner of the screen. Give the toast a unique `id` and assign this value to the `toast` argument of a button. As an example, the following shortcode displays two buttons that, when clicked, trigger a toast message. The messages are stacked when both buttons are clicked in a short timeframe.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button id="toastButton" */>}}
-    Show toast
+{{</* button toast="toast-example-1" */>}}
+    Show toast 1
 {{</* /button */>}}
 
-{{</* toast header="Custom title" */>}}
-    This is a toast message.
+{{</* button toast="toast-example-2" */>}}
+    Show toast 2
+{{</* /button */>}}
+
+{{</* toast id="toast-example-1" header="First title" */>}}
+    This is the first toast message.
+{{</* /toast */>}}
+
+{{</* toast id="toast-example-2" header="Second title" */>}}
+    This is the second toast message.
 {{</* /toast */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -31,5 +43,6 @@ The shortcode supports the following arguments:
 {{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
+| id          | No  | Optional id of the toast message, defaults to `toast-message-n` with sequence n. |
 | header      | No  | Optional header of the toast message. Uses the site title by default. |
 {{< /table >}}
