@@ -31,15 +31,15 @@ As first step we will create a new repository on GitHub using a template. We wil
 
 ### Creating a new Git repository
 
-Hinode comes in two flavors: a [child theme]({{< param "links.repository_child" >}}) and a [main theme]({{< param "links.repository" >}}). The child theme uses [npm]({{< param "links.npm" >}}) to link to the latest available version of Hinode. We will use the child theme as starting point for our new site, as it hides away most of the source code of the main theme. Unless you plan to customize a lot, it is recommended to use the child theme for your future projects.
+Hinode comes in two flavors: a [template]({{< param "links.repository_template" >}}) and a [main theme]({{< param "links.repository" >}}). The template uses [npm]({{< param "links.npm" >}}) to link to the latest available version of Hinode. We will use the template as starting point for our new site, as it hides away most of the source code of the main theme. Unless you plan to customize a lot, it is recommended to use the template for your future projects.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
-  {{< img src="img/github-init-step01.png" caption="Step 1. Create a new repository from the child template" >}}
+  {{< img src="img/github-init-step01.png" caption="Step 1. Create a new repository from the template" >}}
   {{< img src="img/github-init-step02.png" caption="Step 2. Enter a repository name" >}}
   {{< img src="img/github-init-step03.png" caption="Step 3. Review the initialized repository" >}}
 {{< /carousel >}}
 
-Navigate to https://github.com/gethinode/child in your browser and click on the green button `Use this template` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone, such as open-source projects. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
+Navigate to https://github.com/gethinode/template in your browser and click on the green button `Use this template` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone, such as open-source projects. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
 
 ### Connecting your local machine
 
@@ -83,13 +83,13 @@ Your site is now ready for testing. Enter the following command to start a local
 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run start
-(out)> @gethinode/child@0.7.3 prestart
+(out)> @gethinode/template@0.7.3 prestart
 (out)> npm run clean
 (out)
-(out)> @gethinode/child@0.7.3 clean
+(out)> @gethinode/template@0.7.3 clean
 (out)> shx rm -rf public resources
 (out)
-(out)> @gethinode/child@0.7.3 start
+(out)> @gethinode/template@0.7.3 start
 (out)> hugo server --bind=0.0.0.0 --disableFastRender
 (out)
 (out)Start building sites …
@@ -162,7 +162,7 @@ Hinode defines severals tests to validate the code adheres to [coding standards]
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run lint
 (out)
-(out)> @gethinode/child@0.7.3 lint
+(out)> @gethinode/template@0.7.3 lint
 (out)> npm run -s lint:markdown
 (out)
 (out)markdownlint-cli2 v0.6.0 (markdownlint v0.27.0)
@@ -204,7 +204,7 @@ You have now successfully created your initial Hinode site with version control 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run upgrade
 (out)
-(out)> @gethinode/child@0.7.3 upgrade
+(out)> @gethinode/template@0.7.3 upgrade
 (out)> npx npm-check-updates -u
 (out)
 (out)Upgrading Documents/hinode-demo/package.json
