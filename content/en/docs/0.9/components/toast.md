@@ -46,3 +46,7 @@ The shortcode supports the following arguments:
 | id          | No  | Optional id of the toast message, defaults to `toast-message-n` with sequence n. |
 | header      | No  | Optional header of the toast message. Uses the site title by default. |
 {{< /table >}}
+
+## Configuration
+
+See the message section of the layout configuration to [modify the placement of the toast messages]({{< relref "layout#message-configuration" >}}).
