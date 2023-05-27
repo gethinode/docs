@@ -74,6 +74,22 @@ The below configuration shows the default configuration set in `config/_default/
 
 {{< docs name="main" file="config/_default/params.toml" >}}
 
+#### Message configuration
+
+{{< release version="v0.14.4" >}}
+
+You can show informative messages using the [toast shortcode]({{< relref "toast" >}}). By default, toast messages are displayed in the bottom right of the viewport. Hinode vertically stacks multiple toast messages automatically. Adjust the configuration by adjusting `messages` in the `site parameters`. The following arguments are supported:
+
+{{< table >}}
+| Setting         | Default        | Description |
+|-----------------|----------------|-------------|
+| placement       | "bottom-right" | Optional position of the toast messages relative to the viewport: "top-left", "top-center","top-right", "middle-left", "middle-center", "middle-right", "bottom-left", "bottom-center", or "bottom-right" (default). |
+{{< /table >}}
+
+The below configuration shows the default configuration set in `config/_default/params.toml`.
+
+{{< docs name="messages" file="config/_default/params.toml" >}}
+
 #### Social sharing configuration
 
 {{< release version="v0.14.3" >}}
