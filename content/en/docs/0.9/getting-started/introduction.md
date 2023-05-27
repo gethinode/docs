@@ -22,7 +22,7 @@ Start a new Hinode project in three steps:
 
 1. **Create a new site**
 
-    Hinode is available as a [template]({{< param "links.repository_template" >}}), and a [main theme]({{< param "links.repository" >}}). The ctemplate uses [npm]({{< param "links.npm" >}}) to link to the latest available version of Hinode. Unless you plan to customize a lot, it is recommended to use the template:
+    Hinode is available as a [template]({{< param "links.repository_template" >}}), and a [main theme]({{< param "links.repository" >}}). The template uses [npm]({{< param "links.npm" >}}) to link to the latest available version of Hinode. Unless you plan to customize a lot, it is recommended to use the template:
 
     {{< command >}}
     git clone https://github.com/gethinode/template.git my-hinode-site && cd my-hinode-site
