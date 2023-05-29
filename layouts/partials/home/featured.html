@@ -7,13 +7,11 @@
             </div>
             <p class="display-4">{{ .Title }}</p>
             <span class="fs-5 text-muted">{{ .Content }}</span>
-            {{- if .Site.Params.feature.link }}
-                <a class="btn btn-primary" href="{{ .Site.Params.feature.link | safeURL }}" role="button">{{ .Site.Params.feature.caption | default (T "about") }}</a>
-            {{- end }}
-            &nbsp;
-            {{ if .Site.Params.demo.link -}}
-                <a class="btn btn-outline-primary" href="{{ .Site.Params.demo.link | safeURL }}" target="_blank" rel="noopener noreferrer" role="button">{{ .Site.Params.demo.caption | default (T "demo") }}</a>
-            {{- end -}}
+            <div class="hstack gap-3 justify-content-center">
+                {{ range .Site.Params.featured.actions }}
+                    {{ partial "assets/button.html" (dict "href" .url "icon" .icon "title" .title "outline" .outline "order" "first" "justify" "start") }}
+                {{ end }}
+            </div>
         </div>
         <div class="col col-md-3 d-none d-md-block"></div>
     </div>
