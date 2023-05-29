@@ -4,11 +4,16 @@
     weight = 1
     [en.params.head]
         tagline = "A Hugo Theme"
-    [en.params.feature]
-        link = "docs/0.9/getting-started/introduction/"
-        caption = "Get Started"
-    [en.params.demo]
-        link = "https://demo.gethinode.com"
-        caption = "Live Demo"
     [en.params.footer]
         license = "Code licensed <a href='https://github.com/gethinode/hinode/blob/main/LICENSE' class='link-bg-footer fw-medium' target='_blank' rel='noopener noreferrer'>MIT</a>, docs <a href='https://creativecommons.org/licenses/by-nc/4.0/' class='link-bg-footer fw-medium' target='_blank' rel='noopener noreferrer'>CC BY-NC 4.0</a>"
+
+[[en.params.featured.actions]]
+    url = "docs/0.9/getting-started/introduction/"
+    title = "Get Started"
+    icon = "fas book-open"
+
+[[en.params.featured.actions]]
+    url = "https://demo.gethinode.com"
+    title = "Live Demo"
+    icon = "fas display"
+    outline = true
