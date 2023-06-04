@@ -92,7 +92,10 @@ defaultContentLanguageInSubdir = false
     source = "node_modules/flexsearch/dist"
     target = "assets/js/vendor/flexsearch"
     includeFiles = "*.bundle.js"
- [[module.mounts]]
+  [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+    target = "static/fonts"
+  [[module.mounts]]
     source = "archetypes"
     target = "archetypes"
   [[module.mounts]]
@@ -104,3 +107,6 @@ defaultContentLanguageInSubdir = false
   [[module.mounts]]
     source = "static"
     target = "static"
+  [[module.mounts]]
+    source = "static/fonts"
+    target = "static/fonts"
