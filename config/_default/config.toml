@@ -85,6 +85,9 @@ defaultContentLanguageInSubdir = false
     source = "node_modules/@gethinode/hinode/static"
     target = "static"
   [[module.mounts]]
+    source = "node_modules/@gethinode/hinode/static/fonts"
+    target = "static/fonts"
+  [[module.mounts]]
     source = "node_modules/bootstrap/dist/js"
     target = "assets/js/vendor/bootstrap"
     includeFiles = "*.bundle.js"
