@@ -1,7 +1,7 @@
 ---
 title: Commands
 description: Use npm commands to automate the build process and to keep track of dependencies.
-date: 2023-01-11
+date: 2023-05-30
 layout: docs
 ---
 
@@ -58,14 +58,6 @@ Use the following command to test for any available upgrades of used packages. T
 {{% command %}}
 npm run upgrade
 {{% /command %}}
-
-The `npx` command does not validate the version of the Hugo binary. The version needs to be manually updated in the `package.json` file.
-
-```json
-  "otherDependencies": {
-    "hugo": "0.109.0"
-  }
-```
 
 Be sure to install the upgraded dependencies if needed:
 
