@@ -17,7 +17,7 @@ The [issue tracker]({{< param "links.issue_tracker" >}}) on GitHub is the prefer
 
 ## Asking for support
 
-Use the [GitHub Discussions]({{< param "links.discussions" >}}) to ask for [support from the Hinode community]({{< param "links.discussions_help" >}}). The discussion forum also includes other topics, such as [ideas]({{< param "links.discussions_ideas" >}}) and [showcases]({{< param "links.discussions_showcases" >}}). To keep a safe, welcoming, and productive community, we kindly request you to be welcoming and open-minded, be respectful, and be empathetic. The [community guidelines]({{< param "links.community_guidelines" >}}) provide more context about the expectations, moderation policy, and terms of service.
+Use the [GitHub Discussions]({{< param "links.discussions" >}}) to ask for [support from the Hinode community]({{< param "links.discussions_help" >}}). The discussion forum also includes other topics, such as [ideas]({{< param "links.discussions_ideas" >}}) and [showcases]({{< param "links.discussions_showcases" >}}). We strive for a safe, welcoming, and productive community. The [community guidelines]({{< param "links.community_guidelines" >}}) provide more context about the expectations, moderation policy, and terms of service.
 
 ## Bug reports
 
