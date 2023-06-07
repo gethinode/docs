@@ -171,8 +171,8 @@
 
 [[footer]]
   parent = "Community"
-  name = "Issues"
-  url = "https://github.com/gethinode/hinode/issues"
+  name = "Discussions"
+  url = "https://github.com/gethinode/hinode/discussions"
   weight = 20
 
 [[footer]]
