@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-05-15
+date: 2023-06-07
 aliases:
   - "/docs/0.9/contribute/"
   - "/docs/contribute/"
@@ -14,6 +14,10 @@ Hinode is fully open source and welcomes any contribution, either big or small. 
 ## Using the issue tracker
 
 The [issue tracker]({{< param "links.issue_tracker" >}}) on GitHub is the preferred channel for bug reports, feature requests and submitting pull requests.
+
+## Asking for support
+
+Use the [GitHub Discussions]({{< param "links.discussions" >}}) to ask for [support from the Hinode community]({{< param "links.discussions_help" >}}). The discussion forum also includes other topics, such as [ideas]({{< param "links.discussions_ideas" >}}) and [showcases]({{< param "links.discussions_showcases" >}}). We strive for a safe, welcoming, and productive community. The [community guidelines]({{< param "links.community_guidelines" >}}) provide more context about the expectations, moderation policy, and terms of service.
 
 ## Bug reports
 
