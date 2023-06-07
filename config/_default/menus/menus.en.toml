@@ -22,12 +22,14 @@
   pageRef = "/guides/"
   weight = 40
 
-[[social]]
+[[main]]
   name = "GitHub"
-  pre = "<i class=\"fab fa-github fa-2x\"></i>"
-  url = "https://github.com/"
-  weight = 20
-
+  pre = "<i class=\"fab fa-github\"></i>"
+  url = "https://github.com/gethinode/hinode"
+  weight = 50
+  [main.params]
+    icon = true
+      
 # toml-docs-start sample-navigation
 [[sample]]
   name = "About"
@@ -165,8 +167,8 @@
 
 [[footer]]
   parent = "Community"
-  name = "GitHub"
-  url = "https://github.com/gethinode/hinode"
+  name = "Issues"
+  url = "https://github.com/gethinode/hinode/issues"
   weight = 10
 
 [[footer]]
