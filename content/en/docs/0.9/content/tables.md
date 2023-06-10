@@ -139,6 +139,8 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 
 ## Responsive tables
 
+{{< release version="v0.8.0" >}}
+
 Embed the markdown table within the `table` shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens.
 
 ### Always responsive

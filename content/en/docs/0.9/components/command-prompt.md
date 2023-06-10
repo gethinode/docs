@@ -10,6 +10,8 @@ tags: component
 
 ## Overview
 
+{{< release version="v0.5.0" >}}
+
 The `command` shortcode generates terminal output for either `bash`, `powershell`, or `sql` shell languages. The following example generates a block with a default bash command prompt.
 
 <!-- markdownlint-disable MD037 -->
