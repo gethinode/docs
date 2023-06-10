@@ -10,6 +10,8 @@ tags: component
 
 ## Overview
 
+{{< release version="v0.8.0" >}}
+
 Use the `fa` shortcode to quickly add a Font Awesome icon to your content. Use `fa` for regular icons, `fab` for brand icons, and `fas` for solid icons. As an example, the following shortcodes show a square check, a brand logo, and a circle check.
 
 <!-- markdownlint-disable MD037 -->
