@@ -7,7 +7,6 @@ layout: docs
 
 Hinodes supports the configuration of documentation pages. You can either maintain a single content directory, or add versioned documentation.
 
-
 ## Basic configuration
 
 The configuration of the documentation pages is set in the `docs` section of the site parameters. The folllowing settings are supported:
@@ -49,4 +48,3 @@ Add each available version to `[[docs.releases]]`. The releases support the foll
 | latest    | false   | If set, adds the suffix `latest` to the label in the version switcher. |
 | redirect  | -       | If set, generates a server-side rewrite rule. You will need to [configure server-side redirection]({{< relref "server-side-redirection" >}}) too. |
 {{< /table >}}
-

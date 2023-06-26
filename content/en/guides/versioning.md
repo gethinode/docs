@@ -11,7 +11,7 @@ photoSource: <a href="https://unsplash.com/photos/9T346Ij4kGk">Unsplash</a>
 
 ## Introduction
 
-Providing up-to-date and accurate documentation is an important aspect of many software products. Hinode supports [sidebar navigation]({{< relref "navigation#sidebar-navigation" >}}) to help your users find the relevant content. However, as your software evolves, you might need to support different versions too. This guides illustrates how you can use Hinode to maintain versioned documentation. 
+Providing up-to-date and accurate documentation is an important aspect of many software products. Hinode supports [sidebar navigation]({{< relref "navigation#sidebar-navigation" >}}) to help your users find the relevant content. However, as your software evolves, you might need to support different versions too. This guides illustrates how you can use Hinode to maintain versioned documentation.
 
 The next paragraphs explain two main strategies. The first strategy is to maintain seperate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
 
@@ -109,7 +109,6 @@ Update the `weight` of the tags to `50`:
   weight = 50
 ```
 
-
 Now create a file `docs.yml` in the `data` folder with the following content to enable sidebar navigation:
 
 ```yml
@@ -129,7 +128,7 @@ Finally, we will tell Hinode where to find the versioned docs pages. Hinode uses
 
 ### Configuring the version switcher
 
-We will now configure a drop-down menu in the main navigation to enable switching of the active version. We will add an entry for each release, identified by the labels `v0.1`, `v0.2`, and `latest`. The argument `url` matches the release with the correct content folder. 
+We will now configure a drop-down menu in the main navigation to enable switching of the active version. We will add an entry for each release, identified by the labels `v0.1`, `v0.2`, and `latest`. The argument `url` matches the release with the correct content folder.
 
 To improve the layout of the menu, we can tag a specific release as `latest`. We can also group releases by adding a label without an url. The menu is rendered in the order as configured. Add the following content to `config/_default/params.toml`:
 
@@ -347,6 +346,7 @@ aliases:
   - "/docs/1.0/"
   - "/docs/"
 ```
+
 And finally, we will replace the label and url for the latest release in `config/_default/params.toml`:
 
 ```toml
