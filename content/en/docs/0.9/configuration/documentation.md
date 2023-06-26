@@ -5,7 +5,7 @@ date: 2023-06-26
 layout: docs
 ---
 
-Hinodes supports the configuration of versioned documentation.
+Hinodes supports the configuration of documentation pages. You can either maintain a single content directory, or add versioned documentation.
 
 
 ## Basic configuration
@@ -15,7 +15,7 @@ The configuration of the documentation pages is set in the `docs` section of the
 {{< table >}}
 | Setting      | Default | Description |
 |--------------|---------|-------------|
-| version      | -       | Default version to use in documentation links (deprecated). |
+| version      | -       | Default version to use in documentation links, only applicable when no other versions have been defined (see [next paragraph]({{< relref "documentation#versioned-documentation">}})). |
 | basePath     | -       | Base path to use for file references. |
 | github       | -       | Repository URL for the docs site, overrides `schema/github` in `config/_default/params.toml`. |
 | release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{< relref "release" >}}).
@@ -47,6 +47,6 @@ Add each available version to `[[docs.releases]]`. The releases support the foll
 | label     | -       | Name of the release version, e.g. `v1.0`. When `url` is empty, the label is used for grouping instead. |
 | url       | -       | Local URL of the release, e.g. `/docs/1.0/`. |
 | latest    | false   | If set, adds the suffix `latest` to the label in the version switcher. |
-| redirect  | -       | If set, generates a server-side rewrite rule. |
+| redirect  | -       | If set, generates a server-side rewrite rule. You will need to [configure server-side redirection]({{< relref "server-side-redirection" >}}) too. |
 {{< /table >}}
 
