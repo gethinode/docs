@@ -35,7 +35,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 6. **Consider using custom HTTP headers**
 
-   Hinode uses custom HTTP headers to enable the [Content Security Policy]({{< relref "server" >}}). The support for custom HTTP headers varies per provider, and might need additional services and configuration.
+   Hinode uses custom HTTP headers to enable the [Content Security Policy]({{< relref "server-headers" >}}). The support for custom HTTP headers varies per provider, and might need additional services and configuration.
 
 The table below gives a brief overview of the features supported by a few selected hosting providers. The next paragraphs describe the build and deployment process for each provider in more detail.
 
@@ -117,7 +117,7 @@ Deploy your site to Azure blob storage in six steps.
 {{< /accordion >}}
 <!-- markdownlint-enable MD037 -->
 
-You can make your static website available via a custom domain. Visit the [Azure documentation]({{< param "links.az_blob_domain" >}}) on how to map a custom domain to your blob storage endpoint. The static website does not support configuration of HTTP headers. Use Azure CDN to [configure HTTP headers]({{< param "links.az_cdn_rules" >}}) for your static website instead. Review the [server configuration]({{< relref "server" >}}) to identify the recommended configuration of the Content Security Policy.
+You can make your static website available via a custom domain. Visit the [Azure documentation]({{< param "links.az_blob_domain" >}}) on how to map a custom domain to your blob storage endpoint. The static website does not support configuration of HTTP headers. Use Azure CDN to [configure HTTP headers]({{< param "links.az_cdn_rules" >}}) for your static website instead. Review the [server configuration]({{< relref "server-headers" >}}) to identify the recommended configuration of the Content Security Policy.
 
 <!-- ## Host as Azure Static Web App -->
 
@@ -158,7 +158,7 @@ The starter plan requires your repository to be public. You will require a paid 
 The repository root should include a file `netlify.toml`. If not, copy it from the [Hinode main repository]({{< param "links.repository" >}}). The configuration file contains the build settings that Netlify will pick up when connecting to your repository. The panel below shows the default build settings. The key command to observe is `npm run build`, which ensures the site is built properly.
 
 {{< alert >}}
-The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the [Netlify blog]({{< param "links.netlify_cache" >}}).
+The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server-headers" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the [Netlify blog]({{< param "links.netlify_cache" >}}).
 {{< /alert >}}
 
 {{< docs name="netlify" file="netlify.toml" show="false" >}}
@@ -201,4 +201,4 @@ Sign up for Netlify and configure your site in seven steps.
   {{< /accordion-item >}}
 {{< /accordion >}}
 
-Your site is now ready to be used. Click on the domain settings of your site within the `Site overview` page to provide a domain alias and to edit the site name as needed. The same section also allows the configuration of a custom domain. Be sure to review your [server configuration]({{< relref "server" >}}) if you encounter any rendering issues, such as broken links or garbled stylesheets.
+Your site is now ready to be used. Click on the domain settings of your site within the `Site overview` page to provide a domain alias and to edit the site name as needed. The same section also allows the configuration of a custom domain. Be sure to review your [server configuration]({{< relref "server-headers" >}}) if you encounter any rendering issues, such as broken links or garbled stylesheets.

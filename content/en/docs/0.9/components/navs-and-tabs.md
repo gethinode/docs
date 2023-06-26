@@ -10,6 +10,8 @@ tags: component
 
 ## Overview
 
+{{< release version="v0.11.8" >}}
+
 Use the `nav` shortcode to show a group of multiple tab panes. Add `nav-item` inner elements for each tab pane.
 
 <!-- markdownlint-disable MD037 -->

@@ -5,11 +5,11 @@ date: 2023-04-03
 layout: docs
 ---
 
-Hinode processes the Bootstrap icons to ensure they adhere to the strict [content security policy]({{< ref "server" >}}). In addition, it provides access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}).
+Hinode processes the Bootstrap icons to ensure they adhere to the strict [content security policy]({{< relref "server-headers" >}}). In addition, it provides access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}).
 
 ## Bootstrap icons
 
-Bootstrap uses various embedded vector images (in <abbr title="Scalable Vector Graphics">SVG</abbr> format) throughout its Sass source files. Hinode replaces these embedded images with file-based vector images, as the [content security policy]({{< ref "server" >}}) prohibits loading of embedded images. To ensure the images are consistent with the [theme colors]({{< ref "colors" >}}), the images are postprocessed using [Hugo templating]({{< param "links.hugo_templates">}}).
+Bootstrap uses various embedded vector images (in <abbr title="Scalable Vector Graphics">SVG</abbr> format) throughout its Sass source files. Hinode replaces these embedded images with file-based vector images, as the [content security policy]({{< relref "server-headers" >}}) prohibits loading of embedded images. To ensure the images are consistent with the [theme colors]({{< ref "colors" >}}), the images are postprocessed using [Hugo templating]({{< param "links.hugo_templates">}}).
 
 ### Build pipeline
 
@@ -61,6 +61,6 @@ The exported variables are defined in the file `assets/scss/common/_export.scss`
 
 ## Font Awesome icons
 
-[Font Awesome]({{< param "links.fontawesome" >}}) provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the <abbr title="Cascading Style Sheets">CSS</abbr> files and web fonts of Font Awesome, as the [content security policy]({{< ref "server" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. The CSS files are bundled with the main stylesheet. The web fonts are copied to the `/static/fonts` folder with the repository. Use the npm command `npm run copy:fonts` to copy the latest version of the files. The CSS files are referenced in the `assets/scss/app.scss` file. This is the current configuration:
+[Font Awesome]({{< param "links.fontawesome" >}}) provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the <abbr title="Cascading Style Sheets">CSS</abbr> files and web fonts of Font Awesome, as the [content security policy]({{< relref "server-headers" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. The CSS files are bundled with the main stylesheet. The web fonts are copied to the `/static/fonts` folder with the repository. Use the npm command `npm run copy:fonts` to copy the latest version of the files. The CSS files are referenced in the `assets/scss/app.scss` file. This is the current configuration:
 
 {{< docs name="awesome" file="assets/scss/app.scss" >}}

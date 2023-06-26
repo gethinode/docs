@@ -114,6 +114,6 @@ The next topics give an overview of the advanced configuration settings.
     Hinode replaces Boostrap's embedded icons with file-based icons to comply with its security settings. The icon files are parameterized to use the theme colors. See the [icons documentation]({{< relref "../advanced-settings/icons" >}}) for more details.
   {{< /accordion-item >}}
   {{< accordion-item header="Refine header settings to adjust the Content Security Policy" >}}
-    Hinode uses rather strict security policies to ensure the site is secure by default. Be sure to include references to external sources in the header configuration to avoid broken links. The settings of the local development server are defined in `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository's root when deploying to [Netlify]({{< param "links.netlify" >}}). See the [server documentation]({{< relref "server" >}}) for more details.
+    Hinode uses rather strict security policies to ensure the site is secure by default. Be sure to include references to external sources in the header configuration to avoid broken links. The settings of the local development server are defined in `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository's root when deploying to [Netlify]({{< param "links.netlify" >}}). See the [server documentation]({{< relref "server-headers" >}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}

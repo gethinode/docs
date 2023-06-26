@@ -52,7 +52,7 @@ The partial `layouts/partials/footer/scripts.html` loads the Google Tag Manager 
 
 ## Content Security Policy
 
-[Google Analytics requires several Content Security Policies]({{< param "links.google_analytics_csp" >}}) to be set in the [server headers]({{< relref "server" >}}).
+[Google Analytics requires several Content Security Policies]({{< param "links.google_analytics_csp" >}}) to be set in the [server headers]({{< relref "server-headers" >}}).
 
 ### Google Analytics 4
 

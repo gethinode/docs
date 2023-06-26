@@ -10,6 +10,8 @@ tags: component
 
 ## Overview
 
+{{< release version="v0.7.1" >}}
+
 Use the `carousel` shortcode to display a carousel of several images, with similar behavior as the [image]({{< ref "image" >}} "image"). As an example, the following shortcode displays a centered carousel with three slides, 16x9 aspect ratio, and a relative width of 67% on large screens.
 
 <!-- markdownlint-disable MD037 -->

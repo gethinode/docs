@@ -5,7 +5,7 @@ date: 2023-05-29
 layout: docs
 ---
 
-Hinode provides out-of-the box access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}). The [shortcodes]({{< relref "icon" >}}) `fa`, `fab`, and `fas` are available to add these icons with as limited code as possible. The Font Awesome icon library provides various [styling options]({{< param "links.fa_styling" >}}). The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< ref "server" >}}).
+Hinode provides out-of-the box access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}). The [shortcodes]({{< relref "icon" >}}) `fa`, `fab`, and `fas` are available to add these icons with as limited code as possible. The Font Awesome icon library provides various [styling options]({{< param "links.fa_styling" >}}). The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
 
 ## Styling basics
 
@@ -23,7 +23,7 @@ Specify the correct icon library and omit the `fa-` prefix from the icon name to
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-The icons inherit the current styling options and as such blend in with text inline. For example, apply the [theme color]({{< ref "colors" >}}) `text-primary` of the outer HTML element `span` to change the color of the icon. You can also pass the class attribute directly to the shortcode, such as `text-info`.
+The icons inherit the current styling options and as such blend in with text inline. For example, apply the [theme color]({{< relref "colors" >}}) `text-primary` of the outer HTML element `span` to change the color of the icon. You can also pass the class attribute directly to the shortcode, such as `text-info`.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

@@ -5,6 +5,8 @@ date: 2023-01-21
 layout: docs
 ---
 
+{{< release version="v0.6.0" >}}
+
 Hinode supports Hugo's [multilingual mode]({{< param "links.hugo_lang" >}}) to create websites with multiple languages side by side. The next paragraphs explain how to configure multiple languages, how to provide content translations, and how to define multilingual messages and keywords.
 
 ## Language configuration

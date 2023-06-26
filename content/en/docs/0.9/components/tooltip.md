@@ -1,8 +1,8 @@
 ---
 author: Mark Dumay
 title: Tooltip
-date: 2023-05-21
-description: Use the toast shortcode to display a dismissable message in the bottom-right corner of the screen.
+date: 2023-06-10
+description: Use the tooltip shortcode to display a tooltip for a hyperlink.
 layout: docs
 icon: fa message
 tags: component

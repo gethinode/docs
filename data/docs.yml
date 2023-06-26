@@ -26,6 +26,7 @@
     - title: Fonts
     - title: Languages
     - title: Navigation
+    - title: Documentation
     - title: Analytics
     # - title: Comments
 
@@ -80,7 +81,8 @@
     - title: Scripts
     - title: Icons
     # - title: Metadata
-    - title: Server
+    - title: Server headers
+    - title: Server-side redirection
 
 - title: About
   pages:

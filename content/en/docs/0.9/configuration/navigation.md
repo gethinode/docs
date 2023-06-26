@@ -46,6 +46,10 @@ The example below illustrates the navigation bar based on the sample configurati
 
 {{< navbar color="body-tertiary" size="sm" search="false" menus="alias" title="Sample" >}}
 
+### Versioning
+
+The main navigation supports versioning too. When configured, a drop-down menu containing the available versions is automatically added. See the [documentation configuration]({{< relref "documentation" >}}) for more details.
+
 ### Customization
 
 Hinode includes a navigation bar at the top of the screen by default. You can modify the configuration in the `layouts/_default/baseof.html` file. The navigation bar is also available as [shortcode]({{< ref "navbar" >}}).
@@ -83,23 +87,13 @@ Menu items can be nested within each other. The below example defines three cont
 
 ### Versioning
 
-The sidebar menu has support for versioning. If configured, a version segment is added to the URL of each single page menu entry. Add a parameter `version` to the specific section in `params.toml`. The below example illustrates the current configuration of the `docs` section that you are currently reading.
+{{< release version="v0.15.0" >}}
 
-{{< docs name="version" file="./config/_default/params.toml" >}}
+{{< alert color="info" >}}
+Release v0.15.0 of Hinode automatically detects the version of the current context. The configuration of the `version` attribute is no longer needed.
+{{< /alert >}}
 
-The <abbr title="A slug is the part of a URL that identifies a particular page on a website in an easy-to-read form.">slug</abbr> of each entry matches that of a relative path in the `content` folder. The path respects the [multilingual mode]({{< relref "languages" >}}) of the site. The below example illustrates the path for each menu entry for the language `en` and version `0.9`.
-
-```yml
-- title: A
-  pages:
-    - title: B
-      pages:
-        - title: C
-          pages:
-            - title: First   # retrieved from content/en/docs/0.9/a/b/c/first.md
-            - title: Second  # retrieved from content/en/docs/0.9/a/b/c/second.md
-            - title: Third   # retrieved from content/en/docs/0.9/a/b/c/third.md
-```
+You can create versioned files for your menu data by adding a version suffix to the data file. For example, `data/docs-1.0.yml` contains the menu data for the `docs` menu of version `1.0`. Hinode uses `data/docs.yml` as default sidebar navigation data when no versioned file is available. See the [documentation configuration]({{< relref "documentation" >}}) for additional options.
 
 ### Customization
 
