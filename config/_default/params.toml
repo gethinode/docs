@@ -63,7 +63,7 @@
     weight = 40
 
 [[sharing.providers]]
-    name = "email"
+    name = "link"
     url = "{url}"
     icon = "fas link"
     weight = 50
