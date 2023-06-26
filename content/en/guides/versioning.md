@@ -1,7 +1,7 @@
 ---
 title: Creating versioned documentation
 description: Guide on how to create versioned documentation using folders and branch deployments.
-date: 2023-06-25
+date: 2023-06-26
 tags: ["guide", "versioning"]
 weight: 40
 thumbnail: img/books.jpg
@@ -11,7 +11,7 @@ photoSource: <a href="https://unsplash.com/photos/9T346Ij4kGk">Unsplash</a>
 
 ## Introduction
 
-Providing up-to-date and accurate documentation is an important element of most software products. Hinode supports [sidebar navigation]({{< relref "navigation#sidebar-navigation" >}}) to help your users find the relevant content. However, as your software evolves, you might need to support different versions too. This guides illustrates how you can use Hinode to maintain versioned documentation. 
+Providing up-to-date and accurate documentation is an important aspect of many software products. Hinode supports [sidebar navigation]({{< relref "navigation#sidebar-navigation" >}}) to help your users find the relevant content. However, as your software evolves, you might need to support different versions too. This guides illustrates how you can use Hinode to maintain versioned documentation. 
 
 The next paragraphs explain two main strategies. The first strategy is to maintain seperate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
 
@@ -21,7 +21,7 @@ A full working example of this guide is available on [GitHub]({{< param "links.r
 
 ## Step 1 - Preparing the basic content
 
-In the first step, we will create a basic documentation site using the Hinode template. The site will be in English only, and introduce a main section called `Docs`.
+In the first step, we will create a basic documentation site using the Hinode template. The site will be in English only, with a main section called `Docs`.
 
 ### Creating a new site
 
@@ -73,7 +73,7 @@ The aliases instruct Hinode to redirect each `docs/{version}` entry to the corre
 
 ### Supporting redirection
 
-Hugo recognizes the `/docs/` page as a list page by default. To properly map this entry to the latest about page (defined as alias in the previous paragraph), we will need to explicitly instruct Hugo not to generate a list page. Create a new file `_index.md` within `content/en/docs` with the following content to do so:
+Hugo recognizes the `/docs/` page as a list page by default. To properly map this entry to the latest about page (defined as an alias previously), we will need to explicitly instruct Hugo not to generate a list page. Create a new file `_index.md` within `content/en/docs` with the following content to do so:
 
 ```yaml
 ---
@@ -100,7 +100,17 @@ First we will add a main menu entry for the (latest) docs content. Add the follo
   weight = 40
 ```
 
-Now create a file `docs.yml` in the `data` folder to enable sidebar navigation:
+Update the `weight` of the tags to `50`:
+
+```toml
+[[main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 50
+```
+
+
+Now create a file `docs.yml` in the `data` folder with the following content to enable sidebar navigation:
 
 ```yml
 - title: About
@@ -119,7 +129,7 @@ Finally, we will tell Hinode where to find the versioned docs pages. Hinode uses
 
 ### Configuring the version switcher
 
-We will now configure a drop-down menu in the main navigation to enable switching of the current version. We will add an entry for each release, identified by the labels `v0.1`, `v0.2`, and `latest`. The argument `url` matches the release with the correct content folder. 
+We will now configure a drop-down menu in the main navigation to enable switching of the active version. We will add an entry for each release, identified by the labels `v0.1`, `v0.2`, and `latest`. The argument `url` matches the release with the correct content folder. 
 
 To improve the layout of the menu, we can tag a specific release as `latest`. We can also group releases by adding a label without an url. The menu is rendered in the order as configured. Add the following content to `config/_default/params.toml`:
 
@@ -148,26 +158,28 @@ Check if your site is working correctly. You may need to restart your local serv
 
 ### Deploying the current branch
 
-We will now deploy and publish the main branch with Netlify. For the deployment to be successful, you will need to specify the `baseURL` in `config/_default/config.toml`. The template config defines a default value that you will need to replace. You can use a domain that you own, or use a domain provided by Netlify (such as `{sitename}.netlify.app/`). If you do not know the sitename or domain name yet, you can go ahead with the deployment and come back to this step later.
+We will now deploy and publish the main branch with Netlify. For the deployment to be successful, you will need to specify the `baseURL` in `config/_default/config.toml`. The Hinode template defines a default value that you will need to replace. You can use a domain that you own, or use a domain provided by Netlify (such as `{sitename}.netlify.app/`). If you do not know the sitename or domain name yet, you can go ahead with the deployment and come back to this step later - you will need to redeploy the site though.
 
 ```toml
 baseURL = "https://template.gethinode.com/" # replace this
 ```
 
-Head over to your repository on Github and submit a Pull Request (PR) to update your main branch. When successful, login to your Netlify account and create a new site. You can follow the [deployment guidelines]({{< relref "hosting-and-deployment#host-on-netlify" >}}) for a more detailed explanation. Once done, validate that you have a working site in production.
+Head over to your repository on Github and submit a Pull Request (PR) to update your main branch. When successful, login to your Netlify account and create a new site. You can follow the [Netlify deployment guidelines]({{< relref "hosting-and-deployment#host-on-netlify" >}}) for a more detailed explanation. Once done, validate that you have a working site in production.
 
-<!-- TODO: add screenshot -->
+<div class="col-sm-12 col-lg-8 mx-auto">
+  {{< image src="img/versioning-basic.png" mode="true" caption="Initial site with basic versioning" class="border" >}}
+</div>
 
 ## Step 3 - Using multi-branch deployments
 
-The approach with various version folders in the same repository might be adequate for smaller documentation sites. This guide uses a single content page for each version to illustrate the concept. In reality, complex documentation sites might have thousands of pages and many folders. Ideally, we would use Git to track versioned changes with tags and releases. Fortunately, we can use multi-branch deployments to achieve this goal. The support and configuration of multi-branch deployments various across hosting providers. The remainder of this guide uses Netlify as provider.
+The approach with various version folders in the same repository might be adequate for smaller documentation sites. However, complex documentation sites might have thousands of pages. Ideally, we would use Git to track all of the versioned changes. We can use multi-branch deployments to achieve this goal. The support and configuration of multi-branch deployments varies across hosting providers. The remainder of this guide uses Netlify as provider.
 
 ### Creating a new branch
 
-Create a new branch called `v0.9` that is derived from your current branch (be sure to commit the current branch first). For demonstration purposes, we will now label the latest branch as `0.9`. In this step, we will expose the `latest` folder as the specific version `0.9`. Ofcourse, we could simply rename the physical folder and be done with it. However, we would loose the ability to easily track changes to our documentation in the Git repository. Renaming a folder implies that the old folder and content are removed, and a new folder is created. Instead, we will use Hugo's mounting feature to rename and expose the folder on the fly.
+**Create a new branch** called `v0.9` that is derived from your current branch (be sure to commit the current branch first). For demonstration purposes, we will expose the `latest` folder as the specific version `0.9`. Ofcourse, we could simply rename the physical folder and be done with it. However, we would loose the ability to easily track changes to our documentation in the Git repository. Renaming a folder implies that the old folder and content are removed, and a new folder is created. Instead, we will use Hugo's mounting feature to rename and expose the folder on the fly[^1].
 
 {{< alert >}}
-Mounting a `content` folder overrides the language-specific settings. In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually add this to our mounts to achieve the same behavior.
+[Mounting a content folder overrides the language-specific settings]({{< param "links.hugo_mounts" >}}). In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually refine our mounts to achieve the same behavior.
 {{< /alert >}}
 
 Add the following mount to `config/_default/config.toml` to map the `latest` folder to `0.9`. We will keep the remaining content within the `docs` folder as is.
@@ -193,13 +205,15 @@ aliases:
   - "/docs/"
 ```
 
-And finally, we will update the `label` and `url` for the release in `params.toml`:
+And finally, we will replace the `label` and `url` for the latest release in `config/_default/params.toml`:
 
 ```toml
 [[docs.releases]]
-    label = "0.9"
-    url = "/docs/1.0/"
-    latest = true
+  # label = "latest"      # old value
+  label = "0.9"           # new value
+  # url = "/docs/latest/" # old value
+  url = "/docs/0.9/"      # new value
+  latest = true
 ```
 
 ### Configure the multi-branch deployment
@@ -212,26 +226,33 @@ Update the baseURL of `config.toml` in your `v0.9` branch, replacing `{branch}` 
 baseURL = "https://{branch}--{sitename}.netlify.app/"
 ```
 
-Head over to your Netlify configuration and navigate to the section `Site settings / Build & deploy / Continous deployment`. Next, scroll to the section `Branches and deploy contexts` and click the button `Edit settings`. Select the option `Let me add individual branches` for `Branch deploys:`. In the text field, enter `v0.9` as branch name. When done, click `Save`.
+<div class="col-sm-12 col-lg-8 mx-auto">
+  {{< image src="img/versioning-branch.png" caption="Configure Netlify branch deployment" class="border" >}}
+</div>
+
+Head over to your Netlify configuration and navigate to the section `Site settings / Build & deploy / Continuous deployment`. Next, scroll to the section `Branches and deploy contexts` and click the button `Edit settings`. Select the option `Let me add individual branches` for `Branch deploys`. In the text field, enter `v0.9` as branch name. When done, click `Save`.
 
 {{< alert >}}
 By default, any changes submitted to the `v0.9` branch are processed and released to production immediately. Set up branch protection rules and automated testing (similar to the `main` branch) as needed.
 {{< /alert >}}
 
+<div class="col-sm-12 col-lg-8 mx-auto">
+  {{< image src="img/versioning-0-9.png" mode="true" caption="Branch-deployed site for release v0.9" class="border" >}}
+</div>
+
 Test if the branch is deployed sucessfully by navigating to `https://{branch}--{sitename}.netlify.app/`. The default `netlify.toml` file in the repository root has enabled `netlify.app` in the Content Security Policy by default. [Review and adjust the server headers]({{< relref "server" >}}) as needed.
 
-<!-- TODO Add screenshots -->
-<!-- Submit a PR -->
+## Step 4 - Updating the main site
+
+Now that we have configured a branch-specific site for `v0.9` of our documentation, it is time to go back to our main documentation site. In the final step of this guide we will set up server-side redirection to link to the newly deployed site. We will finish our configuration by adding a version overview and by configuring a version check.
 
 ### Using server-side redirection
 
 Hugo supports [client-side redirection using aliases]({{< param "links.hugo_alias" >}}). We have defined these aliases in our about pages. In this approach, the browser receives an instruction to redirect to a new URL when visiting the initial page. We can instruct the server to redirect the URL instead, thus safing an additional roundtrip.
 
-Hinode has defined a template in `layouts/index.redir` to automatically generate server-side redirection rules for Netlify. When you add the status code `200` to such a rule, the [redirection becomes a rewrite]({{< param "links.netlify_rewrite" >}}). In a **rewrite**, the URL in the visitor's address bar remains the same, while the content is fetched from a different location behind the scenes. We will use this mechanism to fetch the content from the branch site.
+Hinode has defined a template in [layouts/index.redir]({{< param "links.repository_redir" >}}) to automatically generate server-side redirection rules for Netlify. When you add the status code `200` to such a rule, the [redirection becomes a rewrite]({{< param "links.netlify_rewrite" >}}). In a **rewrite**, the URL in the visitor's address bar remains the same, while the content is fetched from a different location behind the scenes. We will use this mechanism to fetch the content from the branch site.
 
-Go back to your `develop` branch
-
-Add the below code to your **production** configuration in `config/production/config.toml`. The setting `disableAliases` disables all client-side redirection rules. Instead, the `REDIR` output generates all redirection rules for the server, including rewrites.
+Go back to your **develop branch** and add the below code to your **production configuration** in `config/production/config.toml`. The setting `disableAliases` disables all client-side redirection rules. Instead, the `REDIR` output generates all redirection rules for the server, including rewrites.
 
 ```toml
 disableAliases = true
@@ -249,8 +270,96 @@ delimiter = ""
 home = ["HTML", "RSS", "REDIR"]
 ```
 
-## Step 4 - Updating the main site
+### Redirecting the versioned docs
 
+Still within the **develop branch**, add the below release configuration to `config/_default/params.toml`, replacing `{sitename}` with the correct value:
+
+```toml
+[[docs.releases]]
+  label = "v0.9"
+  url = "/docs/0.9/"
+  redirect = "https://v0-9--{sitename}.netlify.app/docs/0.9/"
+```
+
+{{< alert >}}
+In local development mode the link is disabled, as server-side redirection is not supported by Hugo's web server.
+{{< /alert >}}
+
+The `redirect` value maps the release `0.9` to our branch deployment in production. The `url` points to the mount that we have defined previously.
+
+You can test the redirection rules by building the site locally:
+
+{{< command user="user" host="localhost" prompt="version-demo $" >}}
+npm run build
+{{< /command >}}
+
+Open the file `public/_redirects` to review the rules. The first rule uses the code `200` to instruct Netlify to set up a rewrite. The other rules are common redirects as defined by the various aliases.
+
+```text
+/docs/0.9/* https://v0-9--{sitename}.netlify.app/docs/0.9/docs/0.9/:splat 200
+/docs/1.0/ /docs/1.0/about/
+/docs/ /docs/1.0/about/
+/docs/0.1/ /docs/0.1/about/
+/docs/0.2/ /docs/0.2/about/
+```
+
+### Adding a version overview
+
+You can add a link to a custom overview page. An example of such a [version overview page is available in the demo repository]({{< param "links.repository_versioning_overview" >}}). Add the link to the page in the `overview` setting within the `docs` section of the `config/_default/params.toml`. Do not forget to add the configuration to the `v0.9` branch too, if desired.
+
+```toml
+[docs]
+  overview = "/docs/versions/"
+```
+
+### Defining a version check
+
+You can add an alert to inform your users that they are not looking at the latest version of the available documentation. Specify the latest available version in `latest`. When you set `checkVersion` to `true`, Hinode checks if the current version is equal or newer than the latest version. Hinode shows an alert at the top of the page when the current version is behind. The alert links to the `latestURL`. Do not forget to add the configuration to the `v0.9` branch too, if desired.
+
+```toml
+[docs]
+  latest = "1.0"
+  checkVersion = true
+  latestURL = "https://version-demo.gethinode.com/docs/"
+```
+
+### Exposing the latest release as 1.0
+
+Similar to the `v0.9` release, you can can expose the latest release as a specific version too. In the **develop branch**, add the following mounts to `config/_default/config.toml`:
+
+```toml
+  [[module.mounts]]
+    source = "content/en/docs/latest"
+    target = "content/docs/1.0"
+    lang = 'en'
+  [[module.mounts]]
+    source = "content/en"
+    target = "content"
+    lang = 'en'
+    excludeFiles = 'docs/latest/*'
+```
+
+Next, update the `Title` and `aliases` in the frontmatter of `content/en/docs/latest/about.md`:
+
+```yml
+title: About (1.0)
+aliases:
+  - "/docs/1.0/"
+  - "/docs/"
+```
+And finally, we will replace the label and url for the latest release in `config/_default/params.toml`:
+
+```toml
+[[docs.releases]]
+  # label = "latest"      # old value
+  label = "1.0"           # new value
+  # url = "/docs/latest/" # old value
+  url = "/docs/1.0/"      # new value
+  latest = true
+```
 
 ## Conclusion
 
+In this guide we have configured a version-aware documentation site using two different strategies. The approach using different folders is the most straightforward and might be sufficient for smaller sites. You could consider a multibranch approach when maintaining a complex documentation site. The configuration and deployment of such a site is provider-specific though. In this guide we have used Netlify as an example, which you could adapt to your own needs.
+
+[^1]: We could skip the mounting entirely and use a server-side rewrite instead. However, we would lose the ability to test the site locally.
