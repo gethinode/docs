@@ -162,6 +162,12 @@
   weight = 30
 
 [[footer]]
+  parent = "Guides"
+  name = "Versioning"
+  pageRef = "/guides/versioning"
+  weight = 40
+
+[[footer]]
   name = "Community"
   weight = 30
 
