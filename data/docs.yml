@@ -80,7 +80,7 @@
     - title: Scripts
     - title: Icons
     # - title: Metadata
-    - title: Server
+    - title: Server headers
 
 - title: About
   pages:

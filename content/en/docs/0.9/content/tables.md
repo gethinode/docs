@@ -24,7 +24,7 @@ Hugo supports tables out-of-the-box by using the `|` and `-` characters. Add `{.
 
 ### Aligned cells and headers
 
-Hugo's Markdown processor applies inline styles to align cells in a table, which is blocked by Hinode's [Content Security Policy]({{< ref "server" >}}). Use the `table` shortcode to wrap your Markdown input instead. You can then align header and cell data to the left, center, or right of a column using the `:` character. Pass additional class attributes between double quotes, e.g. `"table-striped"`. See the [next section](#accented-tables) for more options.
+Hugo's Markdown processor applies inline styles to align cells in a table, which is blocked by Hinode's [Content Security Policy]({{< relref "server-headers" >}}). Use the `table` shortcode to wrap your Markdown input instead. You can then align header and cell data to the left, center, or right of a column using the `:` character. Pass additional class attributes between double quotes, e.g. `"table-striped"`. See the [next section](#accented-tables) for more options.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

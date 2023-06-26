@@ -240,7 +240,7 @@ By default, any changes submitted to the `v0.9` branch are processed and release
   {{< image src="img/versioning-0-9.png" mode="true" caption="Branch-deployed site for release v0.9" class="border" >}}
 </div>
 
-Test if the branch is deployed sucessfully by navigating to `https://{branch}--{sitename}.netlify.app/`. The default `netlify.toml` file in the repository root has enabled `netlify.app` in the Content Security Policy by default. [Review and adjust the server headers]({{< relref "server" >}}) as needed.
+Test if the branch is deployed sucessfully by navigating to `https://{branch}--{sitename}.netlify.app/`. The default `netlify.toml` file in the repository root has enabled `netlify.app` in the Content Security Policy by default. [Review and adjust the server headers]({{< relref "server-headers" >}}) as needed.
 
 ## Step 4 - Updating the main site
 
