@@ -1,6 +1,6 @@
 {
   "name": "@gethinode/docs",
-  "version": "0.10.6",
+  "version": "0.11.0",
   "description": "The source for https://gethinode.com",
   "main": "index.js",
   "scripts": {
