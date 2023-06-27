@@ -16,7 +16,7 @@ Providing up-to-date and accurate documentation is an important aspect of many s
 The next paragraphs explain two main strategies. The first strategy is to maintain seperate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
 
 {{< alert color="info" >}}
-A full working example of this guide is available on [GitHub]({{< param "links.repository_versioning" >}}).
+A full working example of this guide is available on [GitHub]({{< param "links.repository_versioning" >}}). Visit {{< param "links.hinode_version_demo" >}} for a live demo.
 {{< /alert >}}
 
 ## Step 1 - Preparing the basic content

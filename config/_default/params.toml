@@ -234,6 +234,7 @@
     google_analytics_csp = "https://developers.google.com/tag-platform/tag-manager/web/csp#google_analytics_4_google_analytics"
     google_chrome = "https://www.google.com/chrome"
     google_fonts = "https://fonts.google.com"
+    hinode_version_demo = "https://version-demo.gethinode.com/"
     html_codeguide = "https://codeguide.co/#html"
     hugo = "https://gohugo.io"
     hugo_alias = "https://gohugo.io/content-management/urls/#aliases"
