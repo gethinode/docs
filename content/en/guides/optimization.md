@@ -137,7 +137,7 @@ Hinode uses <abbr title="Sassy Cascading Style Sheets">SCSS files</abbr> as part
 
 Next, we will need to ensure the `writeStats` setting is set to true also:
 
-{{< docs name="build" file="config/_default/config.toml" >}}
+{{< docs name="build" file="config/_default/hugo.toml" >}}
 
 This Hugo setting generates a file `hugo_stats.json` in the repository root. The file is generated once all content files and static files have been processed by Hugo. It provides a list of HTML elements such as tags, classes, and IDs used by your site.
 

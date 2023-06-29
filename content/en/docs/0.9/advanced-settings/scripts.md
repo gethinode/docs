@@ -17,7 +17,7 @@ Hinodes uses npm and mounted folders to create a flexibile virtual file system t
 
 2. **Mount the JavaScript files maintained within a node package**
 
-   Make JavaScripts defined in node packages available by mounting them into the `assets/js/vendor` folder. Define the mount points in `config/_default/config.toml`.
+   Make JavaScripts defined in node packages available by mounting them into the `assets/js/vendor` folder. Define the mount points in `config/_default/hugo.toml`.
 
 3. **Bundle the JavaScript files**
 
@@ -56,6 +56,6 @@ Hinode considers all files placed in the `assets/js/critical` folder as critical
 
 ## Example
 
-Mount the external JavaScript files to Hugo's virtual file system within the file `config/_default/config.toml`. The current configuration imports the relevant files of [Bootstrap]({{< param "links.bootstrap" >}}) and [FlexSearch]({{< param "links.flexsearch" >}}).
+Mount the external JavaScript files to Hugo's virtual file system within the file `config/_default/hugo.toml`. The current configuration imports the relevant files of [Bootstrap]({{< param "links.bootstrap" >}}) and [FlexSearch]({{< param "links.flexsearch" >}}).
 
-{{< docs name="javascript" file="config/_default/config.toml" >}}
+{{< docs name="javascript" file="config/_default/hugo.toml" >}}

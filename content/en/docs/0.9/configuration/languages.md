@@ -15,9 +15,9 @@ Define the languages available to your site in the main site configuration. The 
 
 {{< docs name="lang-main" file="config/_default/languages.toml" >}}
 
-The default behavior is set in `config/_default/config.toml`. For example, you can set the `defaultContentLanguageInSubdir` to `false` to remove the language slug `/en` from your site entirely.
+The default behavior is set in `config/_default/hugo.toml`. For example, you can set the `defaultContentLanguageInSubdir` to `false` to remove the language slug `/en` from your site entirely.
 
-{{< docs name="language" file="config/_default/config.toml" >}}
+{{< docs name="language" file="config/_default/hugo.toml" >}}
 
 ## Content translation
 
