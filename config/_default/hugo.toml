@@ -64,7 +64,7 @@ defaultContentLanguageInSubdir = false
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.81.0"
+    min = "0.110.0"
     max = ""
   [[module.mounts]]
     source = "assets"
@@ -113,3 +113,12 @@ defaultContentLanguageInSubdir = false
   [[module.mounts]]
     source = "static/fonts"
     target = "static/fonts"
+ [[module.mounts]]
+    source = "content/en/docs/latest"
+    target = "content/docs"
+    lang = 'en'
+  [[module.mounts]]
+    source = "content/en"
+    target = "content"
+    lang = 'en'
+    excludeFiles = 'docs/latest/*'
