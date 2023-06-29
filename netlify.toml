@@ -14,6 +14,11 @@
     HUGO_ENV = "production"
     HUGO_ENABLEGITINFO = "true"
 
+[[redirects]]
+  from = "/docs/0.9/"
+  to = "/docs/"
+  status = 301
+
 [[headers]]
     for = "/*"
     [headers.values]
