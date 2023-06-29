@@ -14,6 +14,10 @@
     HUGO_ENV = "production"
     HUGO_ENABLEGITINFO = "true"
 
+[[redirects]]
+  from = "/docs/0.9/*"
+  to = "/docs/:splat"
+
 [[headers]]
     for = "/*"
     [headers.values]
