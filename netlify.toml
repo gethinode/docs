@@ -15,9 +15,8 @@
     HUGO_ENABLEGITINFO = "true"
 
 [[redirects]]
-  from = "/docs/0.9/"
-  to = "/docs/"
-  status = 301
+  from = "/docs/0.9/*"
+  to = "/docs/:splat"
 
 [[headers]]
     for = "/*"
