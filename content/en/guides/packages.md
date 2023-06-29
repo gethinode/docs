@@ -12,7 +12,7 @@ photoSource: <a href="https://unsplash.com/photos/7KKy7-TeeVs">Unsplash</a>
 
 ## Introduction
 
-Hinode uses [npm packages]({{< ref "/docs/0.9/advanced-settings/overview#npm-packages" >}}) and [mounted folders]({{< param "links.hugo_mounts" >}}) to create a flexible, automated build system. This guide shows how to add an npm package to your site. It installs Leaflet as an example. [Leaflet]({{< param "links.leaflet" >}}) is an open-source JavaScript library to add mobile-friendly interactive maps to your site. This guide assumes you have a working site already. Check the [introduction]({{< relref "introduction" >}}) on how to set up a site with Hinode.
+Hinode uses [npm packages]({{< ref "/docs/advanced-settings/overview#npm-packages" >}}) and [mounted folders]({{< param "links.hugo_mounts" >}}) to create a flexible, automated build system. This guide shows how to add an npm package to your site. It installs Leaflet as an example. [Leaflet]({{< param "links.leaflet" >}}) is an open-source JavaScript library to add mobile-friendly interactive maps to your site. This guide assumes you have a working site already. Check the [introduction]({{< relref "introduction" >}}) on how to set up a site with Hinode.
 
 {{< alert color="info" >}}
 A full working example of this guide is available on [GitHub]({{< param "links.repository_leaflet" >}}).
@@ -107,4 +107,4 @@ You can now modify the placeholder and map initialization as needed.
 
 ## Conclusion
 
-We have now added an existing npm package and integrated it with Hinode. The [advanced setttings]({{< relref "/docs/0.9/advanced-settings/overview" >}}) in the documentation provides more background about Hinode's build system.
+We have now added an existing npm package and integrated it with Hinode. The [advanced setttings]({{< relref "/docs/advanced-settings/overview" >}}) in the documentation provides more background about Hinode's build system.
