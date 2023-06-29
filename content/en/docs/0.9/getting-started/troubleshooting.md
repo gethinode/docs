@@ -17,7 +17,7 @@ Review the table below for some common issues and their potential cause. Please 
 
   **The stylesheet refers to the incorrect location**
 
-  Be sure to update the `baseURL` in `config/_default/config.toml`.
+  Be sure to update the `baseURL` in `config/_default/hugo.toml`.
 
   **The certificate of your website has expired or is not set up correctly**
 

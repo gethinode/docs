@@ -17,9 +17,9 @@ Before deciding on your hosting and deployment approach, review the following co
 
 2. **Configure the build timeout**
 
-   You might encounter timeout errors when you generate a large site that contains many resources (such as images). Adjust the `timout` in `config/_default/config.toml` as needed.
+   You might encounter timeout errors when you generate a large site that contains many resources (such as images). Adjust the `timout` in `config/_default/hugo.toml` as needed.
 
-   {{< docs name="timeout" file="config/_default/config.toml" >}}
+   {{< docs name="timeout" file="config/_default/hugo.toml" >}}
 
 3. **Consider using build automation**
 

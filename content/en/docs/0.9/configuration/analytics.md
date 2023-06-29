@@ -7,7 +7,7 @@ layout: docs
 
 ## Configuration
 
-Hinode supports Google Universal Analytics and Google Analytics 4 out-of-the-box. Simply add your Google property (starting with `G-` or `UA-`) to the main configuration in `config/_default/config.toml`.
+Hinode supports Google Universal Analytics and Google Analytics 4 out-of-the-box. Simply add your Google property (starting with `G-` or `UA-`) to the main configuration in `config/_default/hugo.toml`.
 
 {{< alert >}}
     Google has deprecrated Universal Analytics in favor of Google Analytics 4. On July 1, 2023, standard Universal Analytics properties will no longer process data. 360 Universal Analytics properties will receive a one-time processing extension ending on July 1, 2024.

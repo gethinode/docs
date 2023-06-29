@@ -52,9 +52,9 @@ The base layout uses the [main configuration]({{< param "links.hugo_config" >}})
 | enableGitInfo | -       | Enables git information, which is used by [documentation pages]({{< relref "content-management#documentation-layout" >}}). |
 {{< /table >}}
 
-The below configuration shows the default configuration set in `config/_default/config.toml`.
+The below configuration shows the default configuration set in `config/_default/hugo.toml`.
 
-{{< docs name="main" file="config/_default/config.toml" >}}
+{{< docs name="main" file="config/_default/hugo.toml" >}}
 
 #### Extended configuration
 

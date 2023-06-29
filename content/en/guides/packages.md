@@ -32,7 +32,7 @@ npm i -D leaflet
 
 ### Mounting the library to the assets folder
 
-Using Hugo's module mounts, Hinode bundles all JavaScript files found in the `assets/js` folder into a single file. Add a link to Leaflet's core JavaScript file to include it in your project's JavaScript bundle. Add the below configuration to `config/_default/config.toml` to mount the file `leaflet.js`.
+Using Hugo's module mounts, Hinode bundles all JavaScript files found in the `assets/js` folder into a single file. Add a link to Leaflet's core JavaScript file to include it in your project's JavaScript bundle. Add the below configuration to `config/_default/hugo.toml` to mount the file `leaflet.js`.
 
 ```toml
   [[module.mounts]]

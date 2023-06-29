@@ -34,7 +34,7 @@ For the purpose of this guide we will support the English language only. Be sure
 - Remove the folder `content/nl` and its nested content
 - Remove the entire `[nl]` section in `config/_default/languages.toml`
 - Remove the file `menus.nl.toml` section in `config/_default/menus`
-- Set the value `defaultContentLanguageInSubdir` to `false` in `config/_default/config.toml`
+- Set the value `defaultContentLanguageInSubdir` to `false` in `config/_default/hugo.toml`
 
 Start a local server to test the site is working as expected. Navigate in your browser to the local address (`http://localhost:1313/` by default) to visually inspect the site.
 
@@ -157,7 +157,7 @@ Check if your site is working correctly. You may need to restart your local serv
 
 ### Deploying the current branch
 
-We will now deploy and publish the main branch with Netlify. For the deployment to be successful, you will need to specify the `baseURL` in `config/_default/config.toml`. The Hinode template defines a default value that you will need to replace. You can use a domain that you own, or use a domain provided by Netlify (such as `{sitename}.netlify.app/`). If you do not know the sitename or domain name yet, you can go ahead with the deployment and come back to this step later - you will need to redeploy the site though.
+We will now deploy and publish the main branch with Netlify. For the deployment to be successful, you will need to specify the `baseURL` in `config/_default/hugo.toml`. The Hinode template defines a default value that you will need to replace. You can use a domain that you own, or use a domain provided by Netlify (such as `{sitename}.netlify.app/`). If you do not know the sitename or domain name yet, you can go ahead with the deployment and come back to this step later - you will need to redeploy the site though.
 
 ```toml
 baseURL = "https://template.gethinode.com/" # replace this
@@ -181,7 +181,7 @@ The approach with various version folders in the same repository might be adequa
 [Mounting a content folder overrides the language-specific settings]({{< param "links.hugo_mounts" >}}). In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually refine our mounts to achieve the same behavior.
 {{< /alert >}}
 
-Add the following mount to `config/_default/config.toml` to map the `latest` folder to `0.9`. We will keep the remaining content within the `docs` folder as is.
+Add the following mount to `config/_default/hugo.toml` to map the `latest` folder to `0.9`. We will keep the remaining content within the `docs` folder as is.
 
 ```toml
   [[module.mounts]]
@@ -217,9 +217,9 @@ And finally, we will replace the `label` and `url` for the latest release in `co
 
 ### Configure the multi-branch deployment
 
-We will deploy the `v0.9` branch on a separate subdomain with a so-called multi-branch deployment. By default, Netlify publishes the `main` branch only, along with any previews. We can instruct Netlify to deploy an additional branch, such as `v0.9`. Netlify uses the branch name followed by two hyphens and your internal Netlify subdomain. We will use this pattern as our baseURL in `config/_default/config.toml`.
+We will deploy the `v0.9` branch on a separate subdomain with a so-called multi-branch deployment. By default, Netlify publishes the `main` branch only, along with any previews. We can instruct Netlify to deploy an additional branch, such as `v0.9`. Netlify uses the branch name followed by two hyphens and your internal Netlify subdomain. We will use this pattern as our baseURL in `config/_default/hugo.toml`.
 
-Update the baseURL of `config.toml` in your `v0.9` branch, replacing `{branch}` and `{sitename}` with the correct values. Commit the changes to your branch when done.
+Update the baseURL of `hugo.toml` in your `v0.9` branch, replacing `{branch}` and `{sitename}` with the correct values. Commit the changes to your branch when done.
 
 ```toml
 baseURL = "https://{branch}--{sitename}.netlify.app/"
@@ -251,7 +251,7 @@ Hugo supports [client-side redirection using aliases]({{< param "links.hugo_alia
 
 Hinode has defined a template in [layouts/index.redir]({{< param "links.repository_redir" >}}) to automatically generate server-side redirection rules for Netlify. When you add the status code `200` to such a rule, the [redirection becomes a rewrite]({{< param "links.netlify_rewrite" >}}). In a **rewrite**, the URL in the visitor's address bar remains the same, while the content is fetched from a different location behind the scenes. We will use this mechanism to fetch the content from the branch site.
 
-Go back to your **develop branch** and add the below code to your **production configuration** in `config/production/config.toml`. The setting `disableAliases` disables all client-side redirection rules. Instead, the `REDIR` output generates all redirection rules for the server, including rewrites.
+Go back to your **develop branch** and add the below code to your **production configuration** in `config/production/hugo.toml`. The setting `disableAliases` disables all client-side redirection rules. Instead, the `REDIR` output generates all redirection rules for the server, including rewrites.
 
 ```toml
 disableAliases = true
@@ -324,7 +324,7 @@ You can add an alert to inform your users that they are not looking at the lates
 
 ### Exposing the latest release as 1.0
 
-Similar to the `v0.9` release, you can can expose the latest release as a specific version too. In the **develop branch**, add the following mounts to `config/_default/config.toml`:
+Similar to the `v0.9` release, you can can expose the latest release as a specific version too. In the **develop branch**, add the following mounts to `config/_default/hugo.toml`:
 
 ```toml
   [[module.mounts]]
