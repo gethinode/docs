@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Breadcrumb
-date: 2023-05-21
+date: 2023-07-01
 description: Use the breadcrumb shortcode to display the current page’s location within the site's navigational hierarchy.
 layout: docs
 icon: fas bread-slice
@@ -45,3 +45,9 @@ _build:
   render: false
 ---
 ```
+
+## Customization
+
+The file `assets/scss/components/_breadcrumb.scss` defines the styling of the _breadcrumb. It adds spacing to avoid the breadcrumb is hidden by the (fixed) [main navigation]({{< relref "navigation#main-navigation" >}}):
+
+{{< docs name="breadcrumb" file="assets/scss/components/_breadcrumb.scss" >}}
