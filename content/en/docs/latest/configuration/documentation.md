@@ -1,7 +1,7 @@
 ---
 title: Documentation
 description: Configure versioned documentation
-date: 2023-06-26
+date: 2023-07-03
 layout: docs
 ---
 
@@ -17,7 +17,7 @@ The configuration of the documentation pages is set in the `docs` section of the
 | version      | -       | Default version to use in documentation links, only applicable when no other versions have been defined (see [next paragraph]({{< relref "documentation#versioned-documentation">}})). |
 | basePath     | -       | Base path to use for file references. |
 | github       | -       | Repository URL for the docs site, overrides `schema/github` in `config/_default/params.toml`. |
-| release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{< relref "release" >}}).
+| release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{< relref "release" >}}) and [timeline shortcode]({{< relref "timeline" >}}).
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
