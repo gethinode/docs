@@ -301,6 +301,7 @@
     repository_docs = "https://github.com/gethinode/docs.git"
     repository_owner = "https://github.com/markdumay/"
     repository_leaflet = "https://github.com/gethinode/leaflet-demo"
+    repository_releases = "https://github.com/gethinode/hinode/releases/"
     repository_tag = "https://github.com/gethinode/hinode/releases/tag/"
     repository_template = "https://github.com/gethinode/template.git"
     repository_versioning = "https://github.com/gethinode/version-demo"
