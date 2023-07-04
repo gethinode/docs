@@ -16,7 +16,7 @@ Use the timeline shortcode to show tems ordered on a vertical timelime.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* timeline data="timeline-example" */>}}
+{{</* timeline data="timeline-example" background="dark" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
