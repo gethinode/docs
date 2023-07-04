@@ -28,6 +28,7 @@ The shortcode supports the following arguments:
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | data        | Yes      | Required filename of the timeline input. See [data format]({{< relref "#data-format" >}}) for the file requirements. You can omit the file extension. The file should reside in the `data` folder. |
+| background  | No       | Optional border color of the connector dots, defaults to body background color. If set, uses a [subtle background color]({{< ref "colors#background-colors" >}}) that is adaptive to the current color mode. |
 {{< /table >}}
 
 ## Data format
