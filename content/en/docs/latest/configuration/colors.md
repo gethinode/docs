@@ -1,7 +1,7 @@
 ---
 title: Colors
 description: Use Bootstrap's color system to easily adjust your website's colors.
-date: 2023-04-23
+date: 2023-07-04
 layout: docs
 ---
 
@@ -60,6 +60,37 @@ Several components support background colors that are [color-mode aware]({{< rel
         </div>
     </div>
 {{< /example>}}
+
+## Background colors
+
+Components such as the [timeline]({{< relref "timeline" >}}) support *subtle* background colors. These colors are also [adaptive]({{< relref "#adaptive-colors" >}}). The following background colors are available.
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-primary-subtle rounded-3 border">primary</div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-secondary-subtle rounded-3 border">secondary</div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-success-subtle rounded-3 border">success</div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-danger-subtle rounded-3 border">danger</div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-warning-subtle rounded-3 border">warning</div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-info-subtle rounded-3 border">info</div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-light-subtle rounded-3 border">light</div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 mb-3 bg-dark-subtle rounded-3 border">dark</div>
+    </div>
+</div>
 
 ## Colored contrasting links
 
