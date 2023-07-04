@@ -1,7 +1,7 @@
 ---
 title: Creating versioned documentation
 description: Guide on how to create versioned documentation using folders and branch deployments.
-date: 2023-06-26
+date: 2023-07-04
 tags: ["guide", "versioning"]
 weight: 40
 thumbnail: img/books.jpg
@@ -229,7 +229,7 @@ baseURL = "https://{branch}--{sitename}.netlify.app/"
   {{< image src="img/versioning-branch.png" caption="Configure Netlify branch deployment" class="border" >}}
 </div>
 
-Head over to your Netlify configuration and navigate to the section `Site settings / Build & deploy / Continuous deployment`. Next, scroll to the section `Branches and deploy contexts` and click the button `Edit settings`. Select the option `Let me add individual branches` for `Branch deploys`. In the text field, enter `v0.9` as branch name. When done, click `Save`.
+Head over to your Netlify configuration and navigate to the section `Site configuration / Build & deploy / Continuous deployment`. Next, scroll to the section `Branches and deploy contexts` and click the button `Configure`. Select the option `Let me add individual branches` for `Branch deploys`. In the text field, enter `v0.9` as branch name. When done, click `Save`.
 
 {{< alert >}}
 By default, any changes submitted to the `v0.9` branch are processed and released to production immediately. Set up branch protection rules and automated testing (similar to the `main` branch) as needed.
