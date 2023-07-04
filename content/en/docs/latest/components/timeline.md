@@ -39,7 +39,7 @@ Define a file in the `data` folder that contains the timeline data. The format s
 |-----------|----------|-------------|
 | title     | Yes | Required title of the timeline element. |
 | icon      | Yes | Required class and name of a Font Awesome icon to include. The icons use the [icon shorthand notation]({{< relref "../content/icons" >}}). |
-| color     | No  | Optional theme color of the alert, either "primary" (default), "secondary", "success", "danger",  "warning", "info", "light", "dark", "white" or "black". |
+| color     | No  | Optional [theme color]({{< relref "colors" >}}) of the timeline element, defaults to `primary`. |
 | date      | No  | Optional date of the timeline element, placed below the title. |
 | badge     | No  | Optional label of a [pill badge]({{< relref "badge#pill-badges" >}}) placed next to the title. |
 | url       | No  | Optional url of the timeline element, added as link to the title when set. The url is joined with the `release` attribute of the [documentation configuration]({{< relref "documentation#basic-configuration" >}}), unless the url is abolute (e.g. starts with `http`). |
