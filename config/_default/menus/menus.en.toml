@@ -23,10 +23,15 @@
   weight = 40
 
 [[main]]
+  name = "Releases"
+  pageRef = "/releases/"
+  weight = 50
+
+[[main]]
   name = "GitHub"
   pre = "<i class=\"fab fa-github\"></i>"
   url = "https://github.com/gethinode/hinode"
-  weight = 50
+  weight = 60
   [main.params]
     icon = true
       
@@ -138,6 +143,12 @@
   weight = 30
   [footer.params]
     alias = true
+
+[[footer]]
+  parent = "Links"
+  name = "Releases"
+  pageRef = "/releases/"
+  weight = 40
 
 [[footer]]
   name = "Guides"
