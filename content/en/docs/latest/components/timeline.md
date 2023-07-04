@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Timeline
-date: 2023-07-03
+date: 2023-07-04
 description: Use the timeline shortcode to show tems ordered on a vertical timelime.
 layout: docs
 icon: fas timeline fa-rotate-90
@@ -35,14 +35,15 @@ The shortcode supports the following arguments:
 Define a file in the `data` folder that contains the timeline data. The format supports the following attributes:
 
 {{< table >}}
-| Argument  | Required | Description |
+| Attribute | Required | Description |
 |-----------|----------|-------------|
 | title     | Yes | Required title of the timeline element. |
 | icon      | Yes | Required class and name of a Font Awesome icon to include. The icons use the [icon shorthand notation]({{< relref "../content/icons" >}}). |
 | color     | No  | Optional theme color of the alert, either "primary" (default), "secondary", "success", "danger",  "warning", "info", "light", "dark", "white" or "black". |
 | date      | No  | Optional date of the timeline element, placed below the title. |
+| badge     | No  | Optional label of a [pill badge]({{< relref "badge#pill-badges" >}}) placed next to the title. |
 | url       | No  | Optional url of the timeline element, added as link to the title when set. The url is joined with the `release` attribute of the [documentation configuration]({{< relref "documentation#basic-configuration" >}}), unless the url is abolute (e.g. starts with `http`). |
-| content   | No  | Optional content of the timeline element. |
+| content   | No  | Optional content of the timeline element, supports markdown. |
 {{< /table >}}
 
 The following snippet defines a single timeline element in `yml` format.
@@ -52,6 +53,7 @@ The following snippet defines a single timeline element in `yml` format.
   icon: fas rocket
   color: primary
   date: 2023-07-03
+  badge: v0.15.3
   url: https://github.com/gethinode/hinode/releases/tag/v0.15.3
   content:
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
