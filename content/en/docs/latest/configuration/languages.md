@@ -1,7 +1,7 @@
 ---
 title: Languages
 description: Configure multiple languages to enable multilingual sites.
-date: 2023-01-21
+date: 2023-07-06
 layout: docs
 ---
 
@@ -42,3 +42,12 @@ Hinode uses Hugo's [internationalization function]({{< param "links.hugo_i18n" >
 - id: about
   translation: "Over mij"
 ```
+
+## Discarding localization
+
+The [Hinode template]({{< param "links.repository_template" >}}) defines two languages by default. Follow the next steps to discard the Dutch language (`nl` code) entirely:
+
+- Remove the folder `content/nl` and its nested content
+- Remove the entire `[nl]` section in `config/_default/languages.toml`
+- Remove the file `menus.nl.toml` section in `config/_default/menus`
+- Set the value `defaultContentLanguageInSubdir` to `false` in `config/_default/hugo.toml`
