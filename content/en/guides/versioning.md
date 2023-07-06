@@ -1,7 +1,7 @@
 ---
 title: Creating versioned documentation
 description: Guide on how to create versioned documentation using folders and branch deployments.
-date: 2023-07-04
+date: 2023-07-06
 tags: ["guide", "versioning"]
 weight: 40
 thumbnail: img/books.jpg
@@ -31,12 +31,7 @@ We will now create a new site using the Hinode template. Follow the **first step
 
 For the purpose of this guide we will support the English language only. Be sure to create a new branch first, so you can test any changes before publishing them. The remainder of this guide uses the `develop` branch for development and the `main` branch for production.
 
-- Remove the folder `content/nl` and its nested content
-- Remove the entire `[nl]` section in `config/_default/languages.toml`
-- Remove the file `menus.nl.toml` section in `config/_default/menus`
-- Set the value `defaultContentLanguageInSubdir` to `false` in `config/_default/hugo.toml`
-
-Start a local server to test the site is working as expected. Navigate in your browser to the local address (`http://localhost:1313/` by default) to visually inspect the site.
+Follow the steps decribed in the language configuration to [discard the localized content for the Dutch language]({{< relref "languages#discarding-localization" >}}). Start a local server to test the site is working as expected. Navigate in your browser to the local address (`http://localhost:1313/` by default) to visually inspect the site.
 
 {{< command user="user" host="localhost" prompt="version-demo $" >}}
 npm run start
