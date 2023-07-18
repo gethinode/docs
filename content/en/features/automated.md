@@ -7,7 +7,7 @@ thumbnail: /img/devops-light.svg
 colormode: true
 ---
 
-Hinode uses [npm]({{< param "links.npm" >}}) and mounted folders to create a modern, flexible build system. By releasing new versions as packages on [npm]({{< param "links.npm" >}}), child repositories that reference Hinode can automatically use the latest version available. This ensures your deployed site is always up-to-date.
+Hinode supports [Hugo modules]({{< param "links.hugo_modules" >}}) and mounted folders to create a modern, flexible build system. By taking advantage of [npm]({{< param "links.npm" >}}) and [GitHub actions]({{< param "links.github_actions" >}}), you can ensure your deployed site is always up-to-date.
 
 {{< button relref="hosting-and-deployment" >}}
     Check the deployment options
