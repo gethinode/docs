@@ -1,7 +1,7 @@
 ---
 title: Icons
 description: Configure secure access to icons from Bootstrap and Font Awesome.
-date: 2023-04-03
+date: 2023-07-18
 layout: docs
 ---
 
@@ -61,6 +61,4 @@ The exported variables are defined in the file `assets/scss/common/_export.scss`
 
 ## Font Awesome icons
 
-[Font Awesome]({{< param "links.fontawesome" >}}) provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the <abbr title="Cascading Style Sheets">CSS</abbr> files and web fonts of Font Awesome, as the [content security policy]({{< relref "server-headers" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. The CSS files are bundled with the main stylesheet. The web fonts are copied to the `/static/fonts` folder with the repository. Use the npm command `npm run copy:fonts` to copy the latest version of the files. The CSS files are referenced in the `assets/scss/app.scss` file. This is the current configuration:
-
-{{< docs name="awesome" file="assets/scss/app.scss" >}}
+[Font Awesome]({{< param "links.fontawesome" >}}) provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the <abbr title="Cascading Style Sheets">CSS</abbr> files and web fonts of Font Awesome, as the [content security policy]({{< relref "server-headers" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. By default, the CSS files are bundled with the main stylesheet. The web fonts are mounted in the `/static/fonts` folder. The various files are provided by the [Font Awesome module on GitHub]({{< param "links.repository_mod_fontawesome" >}}).
