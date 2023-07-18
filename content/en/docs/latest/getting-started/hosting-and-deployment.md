@@ -1,7 +1,7 @@
 ---
 title: Hosting and deployment
 description: Deploy your Hinode site to popular hosting providers.
-date: 2023-04-03
+date: 2023-07-18
 layout: docs
 ---
 
@@ -13,7 +13,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 1. **Include npm in your build process**
 
-   Hinode uses npm to manage its dependencies. Visit the [Hinode introduction]({{< relref "introduction" >}}) and [commands overview]({{< relref "commands" >}}) for more details.
+   Hinode supports npm to automate the build process. Visit the [Hinode introduction]({{< relref "introduction" >}}) and [commands overview]({{< relref "commands" >}}) for more details.
 
 2. **Configure the build timeout**
 
@@ -101,9 +101,18 @@ Deploy your site to Azure blob storage in six steps.
   {{< /accordion-item >}}
   {{< accordion-item header="Step 4. Build the website locally" >}}
     Run the following command to build your website locally:
-    {{</* command user="user" host="localhost" */>}}
-    npm run build
-    {{</* /command */>}}
+    {{</* nav type="tabs" id="pills-1" */>}}
+      {{</* nav-item header="Hugo" show="true" */>}}
+        {{</* command user="user" host="localhost" */>}}
+        hugo mod get -u ./... && hugo mod tidy && hugo --gc --minify
+        {{</* /command */>}}
+      {{</* /nav-item */>}}
+      {{</* nav-item header="npm" */>}}
+        {{</* command user="user" host="localhost" */>}}
+        npm install && npm run mod:update && npm run build
+        {{</* /command */>}}
+      {{</* /nav-item */>}}
+    {{</* /nav */>}}
   {{< /accordion-item >}}
   {{< accordion-item header="Step 5. Deploy the files" >}}
     Deploy the files to your Azure blob storage using the folling command. Add `--dryRun` to review the upload before actually publishing the files.
