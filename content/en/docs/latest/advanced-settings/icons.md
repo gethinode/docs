@@ -13,7 +13,7 @@ Bootstrap uses various embedded vector images (in <abbr title="Scalable Vector G
 
 ### Build pipeline
 
-Hinodes uses npm and mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the Bootstrap icons consists of four steps. It is intertwined with the [build process for the stylesheets]({{< ref "styles" >}}).
+Hinodes uses mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the Bootstrap icons consists of four steps. It is intertwined with the [build process for the stylesheets]({{< ref "styles" >}}).
 
 1. **Override the inline Bootstrap icon definitions**
 
