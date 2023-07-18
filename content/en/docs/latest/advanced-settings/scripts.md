@@ -1,15 +1,15 @@
 ---
 title: Scripts
 description: Automatically bundle local and external JavaScript files into a single file.
-date: 2023-04-08
+date: 2023-07-18
 layout: docs
 ---
 
-Hinode bundles local and external JavaScript into a single file. By utilizing [npm]({{< ref "overview" >}}), external JavaScript files are automatically ingested and kept up to date.
+Hinode bundles local and external JavaScript into a single file. By utilizing [Hugo modules]({{< ref "overview" >}}), external JavaScript files are automatically ingested and kept up to date.
 
 ## Build pipeline
 
-Hinodes uses npm and mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the JavaScript files consists of four steps.
+Hinodes uses Hugo modules and mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the JavaScript files consists of four steps.
 
 1. **Add the local JavaScript files**
 
