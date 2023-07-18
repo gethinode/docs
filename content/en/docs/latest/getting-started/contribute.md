@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-06-07
+date: 2023-07-18
 aliases:
   - "/docs/0.9/contribute/"
   - "/docs/contribute/"
@@ -83,6 +83,10 @@ Adhering to the following process is the best way to get your work included in t
 {{< alert >}}
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the terms of the [MIT license]({{< param "links.license" >}}) (if it includes code changes) and under the terms of the Creative Commons ([CC BY-NC 4.0)]({{< param "links.cc_by_nc_4_0" >}}) license (if it includes documentation changes).
 {{< /alert >}}
+
+## Module contributions
+
+Hinode supports Hugo modules to to provide a flexible and extensible modular framework. Please consider the [module development conventions]({{< relref "module-development" >}}) to take full advantage of Hinode's processing pipelines.
 
 ## Coding guidelines
 
