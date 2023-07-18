@@ -3,7 +3,6 @@ title: Introduction
 description: Get started with Hinode, a clean documentation and blog theme for your Hugo site based on Bootstrap 5.
 date: 2023-07-18
 aliases:
-  - "/docs/0.9/getting-started/"
   - "/docs/getting-started/"
   - "/getting-started/"
   - "/docs/"
