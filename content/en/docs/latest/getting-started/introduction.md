@@ -27,35 +27,38 @@ You can choose to use either Hugo or npm for local development and testing. The 
 
 Hinode is available as a [template]({{< param "links.repository_template" >}}) and as a [main theme]({{< param "links.repository" >}}). The template uses [Hugo modules]({{< param "links.hugo_modules" >}}) to link to the latest available version of the main Hinode theme. Unless you plan to customize a lot, it is recommended to use the template. You can use either **Hugo** or **npm** to create a new site.
 
+<!-- markdownlint-disable MD005 MD029 -->
 {{< nav type="tabs" id="pills-1" >}}
   {{< nav-item header="Hugo" show="true" >}}
-1. **Create a new site**
 
-    Use the Hinode template (recommended):
+  1. **Create a new site**
 
-    {{< command >}}
-    git clone https://github.com/gethinode/template.git my-hinode-site && cd my-hinode-site
-    {{< /command >}}
+      Use the Hinode template (recommended):
 
-    Use the main theme if you intend to customize the base code:
+      {{< command >}}
+      git clone https://github.com/gethinode/template.git my-hinode-site && cd my-hinode-site
+      {{< /command >}}
 
-    {{< command >}}
-    git clone https://github.com/gethinode/hinode.git my-hinode-site && cd my-hinode-site
-    {{< /command >}}
+      Use the main theme if you intend to customize the base code:
 
-2. **Install dependencies**
+      {{< command >}}
+      git clone https://github.com/gethinode/hinode.git my-hinode-site && cd my-hinode-site
+      {{< /command >}}
 
-    {{< command >}}
-    hugo mod get -u ./... && hugo mod tidy
-    {{< /command >}}
+  2. **Install dependencies**
 
-3. **Start the development server**
+      {{< command >}}
+      hugo mod get -u ./... && hugo mod tidy
+      {{< /command >}}
 
-    {{< command >}}
-    hugo server
-    {{< /command >}}
+  3. **Start the development server**
+
+      {{< command >}}
+      hugo server
+      {{< /command >}}
   {{< /nav-item >}}
   {{< nav-item header="npm" >}}
+
 1. **Create a new site**
 
     Use the Hinode template (recommended):
@@ -73,7 +76,7 @@ Hinode is available as a [template]({{< param "links.repository_template" >}}) a
 2. **Install dependencies**
 
     {{< command >}}
-    npm install
+    npm install && npm run mod:update
     {{< /command >}}
 
 3. **Start the development server**
@@ -83,6 +86,7 @@ Hinode is available as a [template]({{< param "links.repository_template" >}}) a
     {{< /command >}}
   {{< /nav-item >}}
 {{< /nav >}}
+<!-- markdownlint-enable MD005 MD029 -->
 
 ## Adding content
 
