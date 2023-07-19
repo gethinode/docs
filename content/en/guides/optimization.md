@@ -2,7 +2,7 @@
 title: Optimizing the user experience
 description: Guide on how to optimize the user experience of your site.
 date: 2023-04-03
-lastmod: 2023-04-08
+lastmod: 2023-07-18
 tags: ["guide", "optimization"]
 weight: 30
 thumbnail: img/watch.jpg
@@ -36,7 +36,7 @@ Images, media files, and `<script>` tags placed at the bottom of the `<body>` se
 
 ## Step 1 - Setting up the test case
 
-We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunites for improvement. If not done so already, [download and install Chrome]({{< param "links.google_chrome" >}}) from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first.
+We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunites for improvement. If not done so already, [download and install Chrome]({{< param "links.google_chrome" >}}) from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm.
 
 {{< command >}}
 git clone https://github.com/gethinode/docs.git && cd docs
