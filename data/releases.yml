@@ -1,5 +1,16 @@
 # This file holds all entries for the release timeline
 
+# - title: Hugo modules
+#   icon: fas puzzle-piece
+#   color: warning
+#   date: 2023-07-19
+#   badge: v0.16.0
+#   url: v0.16.0
+#   content:
+#     This release of Hinode introduces support for Hugo modules to create a flexible build system. By configuring a
+#     module as either core or optional, you have full control of how these modules are processed and integrated with
+#     your Hinode site. npm is still supported, but is no longer a prerequisite.
+
 - title: Versioned documentation
   icon: fas book-open
   color: primary
