@@ -305,6 +305,7 @@
     repository_redir = "https://raw.githubusercontent.com/gethinode/hinode/main/layouts/index.redir"
     repository_docs = "https://github.com/gethinode/docs.git"
     repository_owner = "https://github.com/markdumay/"
+    repository_mod_bootstrap = "https://github.com/gethinode/mod-bootstrap"
     repository_mod_fontawesome = "https://github.com/gethinode/mod-fontawesome"
     repository_leaflet = "https://github.com/gethinode/leaflet-demo"
     repository_releases = "https://github.com/gethinode/hinode/releases/"
