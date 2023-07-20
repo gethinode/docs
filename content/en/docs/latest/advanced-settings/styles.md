@@ -33,7 +33,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexibile virtual file
 
 3. **Import the Sass files of core modules**
 
-   Hinode automatically adds the content of each core module's Sass entrypoint to a virtual copy of the `assets/scss/app.scss` file, unless they are referenced in the [excludeSCSS setting]({{< relref "modules#configuring-modules" >}}). Hinode expects a file `assets/scss/{MODULE NAME}.scss` for each core module. The referenced files are usually placed in `assets/scss/modules/{MODULE NAME}/`.
+   Hinode automatically adds the content of each core module's Sass entrypoint to a virtual copy of the `assets/scss/app.scss` file, unless they are referenced in the [excludeSCSS setting]({{< relref "../configuration/modules#configuring-modules" >}}). Hinode expects a file `assets/scss/{MODULE NAME}.scss` for each core module. The referenced files are usually placed in `assets/scss/modules/{MODULE NAME}/`.
 
 4. **Override and expand the Sass configuration**
 
