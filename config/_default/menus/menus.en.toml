@@ -168,6 +168,12 @@
 
 [[footer]]
   parent = "Guides"
+  name = "Developing modules"
+  pageRef = "/guides/modules"
+  weight = 25
+
+[[footer]]
+  parent = "Guides"
   name = "Optimization"
   pageRef = "/guides/optimization"
   weight = 30
