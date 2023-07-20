@@ -15,10 +15,10 @@ As a theme for Hugo, Hinode is highly configurable and customizable. Hinode util
 Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. These modules provide one or more of the seven component types defined in Hugo: `static`, `content`, `layouts`, `data`, `assets`, `i18n`, and `archetypes`. Powered by Go modules, Hugo verifies if a module is up-to-date and downloads the latest release if needed. This approach is compatible with any repository hosted on GitHub and is not exclusive to Hugo modules only.
 
 {{< alert color="info" >}}
-Hugo does have some requirements for the modules to work correctly in all scenarios. Review the section about [module development]({{< relref "module-development" >}}) to familiarize yourself with them.
+Hugo does have some requirements for the modules to work correctly in all scenarios. Review the [module development troubleshooting section]({{< relref "module-development#troubleshooting" >}}) to familiarize yourself with them.
 {{< /alert >}}
 
-Hinode uses Hugo modules to provide a flexible and extensible modular framework. Modules can be fully integrated into the main site or be included on a page-by-page basis. Core modules are fully integrated with the site's stylesheet and bundled JavaScript files. The stylesheet and scripts of optional modules are loaded on a specific page only to minimize overhead. Refer to the [modules]({{< relref "modules" >}}) section for more details.
+Hinode uses Hugo modules to provide a flexible and extensible modular framework. Modules can be fully integrated into the main site or be included on a page-by-page basis. Core modules are fully integrated with the site's stylesheet and bundled JavaScript files. The stylesheet and scripts of optional modules are loaded on a specific page only to minimize overhead. Refer to the [modules]({{< relref "../configuration/modules" >}}) section for more details.
 
 ## Mounted folders
 
