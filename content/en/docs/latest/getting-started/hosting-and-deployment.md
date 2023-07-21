@@ -1,7 +1,7 @@
 ---
 title: Hosting and deployment
 description: Deploy your Hinode site to popular hosting providers.
-date: 2023-07-18
+date: 2023-07-21
 layout: docs
 ---
 
@@ -170,7 +170,7 @@ The repository root should include a file `netlify.toml`. If not, copy it from t
 The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server-headers" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the [Netlify blog]({{< param "links.netlify_cache" >}}).
 {{< /alert >}}
 
-{{< docs name="netlify" file="netlify.toml" show="false" >}}
+{{< docs name="netlify" file="./_vendor/github.com/gethinode/hinode/netlify.toml" show="false" >}}
 
 ### Configure your site
 
