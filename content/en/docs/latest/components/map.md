@@ -1,11 +1,12 @@
 ---
 author: Mark Dumay
 title: Collapse
-date: 2023-07-10
+date: 2023-07-21
 description: Use the map shortcode to show an interactive map.
 layout: docs
 icon: fa map
 tags: component
+modules: ["leaflet"]
 ---
 
 ## Overview
@@ -34,7 +35,6 @@ The shortcode supports the following arguments:
 | popup-lat   | No       | Latitude of the popup marker. |
 | popup-long  | No       | Longitude of the popup marker. |
 {{< /table >}}
-
 
 ## Examples
 
