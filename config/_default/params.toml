@@ -272,6 +272,7 @@
     hugo_shortcodes = "https://gohugo.io/content-management/shortcodes"
     hugo_structure = "https://gohugo.io/content-management/organization"
     hugo_templates = "https://gohugo.io/templates/introduction"
+    hugo_resource_from_template = "https://gohugo.io/hugo-pipes/resource-from-template/"
     hugo_lookup_order = "https://gohugo.io/templates/lookup-order"
     hugo_sass = "https://discourse.gohugo.io/t/using-the-dart-sass-transpiler"
     hugo_toc = "https://gohugo.io/content-management/toc"
