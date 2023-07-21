@@ -5,7 +5,7 @@ date: 2023-07-21
 layout: docs
 ---
 
-{{< release version="v0.16.0-beta" >}}
+{{< release version="v0.16.0" >}}
 
 Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for [Bootstrap]({{< param "links.bootstrap" >}}), [FlexSearch]({{< param "links.flexsearch" >}}), and [Font Awesome]({{< param "links.fontawesome" >}}). The following paragraphs explain how to customize the module configuration.
 
