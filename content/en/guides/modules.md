@@ -1,23 +1,32 @@
 ---
 author: Mark Dumay
 title: Developing Hugo modules
-date: 2023-07-20
+date: 2023-07-21
 description: Guide on how to develop Hugo modules compatible with Hinode.
 tags: ["guide", "module", "katex"]
 weight: 25
 thumbnail: img/puzzle.jpg
 photoCredits: <a href="https://unsplash.com/@ryoji__iwata">Ryoji Iwata</a>
 photoSource: <a href="https://unsplash.com/photos/5siQcvSxCP8">Unsplash</a>
+modules: ["katex"]
+
 ---
 
 ## Introduction
 
 [Hugo modules]({{< param "links.hugo_modules" >}}) provide a flexible and extensible modular framework. Hinode builds upon this framework by introducing core modules and optional modules to further streamline the build process and to minimize the final site assets. This guide helps to get you started with developing your own Hugo modules. It also explains how to take advantage of Hinode's build pipelines to optimize the generated stylesheet and script assets. As a case example, we will set up a module that wraps the functionality of [KaTeX]({{< param "links.katex" >}}) - a popular math typesetting library. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm. We will also use Visual Studio Code (VSCode) for convenience - [download your copy from the official website]({{< param "links.vscode_download" >}}).
 
-<!-- TODO: add KaTeX example -->
+{{< example lang="markdown" >}}
+This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula
+
+This is not an inline formula:
+
+$$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$  
+$$\forall x \in X, \quad \exists y \leq \epsilon$$
+{{< /example >}}
 
 {{< alert color="info" >}}
-A full working example of this guide is available on [GitHub]({{< param "links.repository_mod_katex" >}}).
+The KaTeX library is available as managed module on [GitHub]({{< param "links.repository_mod_katex" >}}).
 {{< /alert >}}
 
 ## Step 1 - Deciding upon the sourcing strategy
