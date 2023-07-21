@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 description: Review common issues and resolutions.
-date: 2023-02-08
+date: 2023-07-18
 layout: docs
 ---
 
@@ -9,9 +9,6 @@ Review the table below for some common issues and their potential cause. Please 
 
 <!-- markdownlint-disable MD036 MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="The published website is not rendering at all" >}}
-    Hinode uses [npm]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. As such, the default Hugo commands to build and deploy a website do not work. Check the [hosting and deployment]({{< relref "hosting-and-deployment" >}}) section on how to build and deploy Hinode properly.
-  {{< /accordion-item >}}
   {{< accordion-item header="The published website is not applying the styles correctly" >}}
     Incorrect styling of your published website may have several causes:
 

@@ -5,9 +5,19 @@
     modes = ["light", "dark"]
     footerBelowFold = true
 
+[modules]
+    core = ["bootstrap", "flexsearch", "fontawesome"]
+    optional = ["leaflet", "katex"]
+    excludeSCSS = ["bootstrap"]
+    disableTemplate = ["katex"]
+
+[debugging]
+    showJS = false
+    showSCSS = false
+
 # toml-docs-start version
 [docs]
-    basePath = "node_modules/@gethinode/hinode"
+    basePath = "_vendor/github.com/gethinode/hinode"
     github = "https://github.com/gethinode/docs"
     release = "https://github.com/gethinode/hinode/releases/tag/"
 # toml-docs-end version
@@ -187,6 +197,7 @@
     #theme = "" 
 
 [links]
+    angular_commit = "https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines"
     azure = "https://azure.microsoft.com"
     az_blob_domain = "https://learn.microsoft.com/en-us/azure/storage/blobs/storage-custom-domain-name"
     az_blob_pricing = "https://azure.microsoft.com/en-us/free"
@@ -212,8 +223,10 @@
     community_guidelines = "https://docs.github.com/articles/github-community-guidelines"
     contrast_checker = "https://accessibleweb.com/color-contrast-checker/"
     core_web_vitals = "https://web.dev/vitals/#core-web-vitals"
+    create_pr = "https://github.com/peter-evans/create-pull-request"
     css_codeguide = "https://codeguide.co/#css"
     dependabot = "https://docs.github.com/en/code-security/dependabot/dependabot-version-updates"
+    dependabot_issue_6860 = "https://github.com/dependabot/dependabot-core/issues/6860"
     discussions = "https://github.com/gethinode/hinode/discussions"
     discussions_help = "https://github.com/gethinode/hinode/discussions/categories/help"
     discussions_ideas = "https://github.com/gethinode/hinode/discussions/categories/ideas"
@@ -226,10 +239,12 @@
     fa_styling = "https://fontawesome.com/docs/web/style/styling"
     fa_animation = "https://fontawesome.com/docs/web/style/animate"
     git_download = "https://git-scm.com"
+    github_actions = "https://github.com/features/actions"
     github_signup = "https://github.com/signup"
     github_pr = "https://help.github.com/articles/about-pull-requests/"
     github_rebase = "https://help.github.com/articles/about-git-rebase/"
     golang = "https://go.dev/"
+    golang_download = "https://go.dev/dl/"
     google_analytics_csp = "https://developers.google.com/tag-platform/tag-manager/web/csp#google_analytics_4_google_analytics"
     google_chrome = "https://www.google.com/chrome"
     google_fonts = "https://fonts.google.com"
@@ -245,6 +260,7 @@
     hugo_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy"
     hugo_deployment = "https://gohugo.io/hosting-and-deployment"
     hugo_config_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy/#configure-the-deployment"
+    hugo_download = "https://gohugo.io/installation"
     hugo_fingerprint = "https://gohugo.io/hugo-pipes/fingerprint"
     hugo_frontmatter = "https://gohugo.io/content-management/front-matter"
     hugo_headless = "https://gohugo.io/content-management/page-bundles/#headless-bundle"
@@ -254,6 +270,8 @@
     hugo_lang_config = "https://gohugo.io/content-management/multilingual/#configure-languages"
     hugo_links = "https://gohugo.io/content-management/cross-references"
     hugo_menus = "https://gohugo.io/content-management/menus/"
+    hugo_modules = "https://gohugo.io/hugo-modules/"
+    hugo_module_config = "https://gohugo.io/hugo-modules/configuration/"
     hugo_mounts = "https://gohugo.io/hugo-modules/configuration/#module-config-mounts"
     hugo_imaging = "https://gohugo.io/content-management/image-processing/#imaging-configuration"
     hugo_ordering = "https://gohugo.io/templates/lists/#order-content"
@@ -264,12 +282,18 @@
     hugo_shortcodes = "https://gohugo.io/content-management/shortcodes"
     hugo_structure = "https://gohugo.io/content-management/organization"
     hugo_templates = "https://gohugo.io/templates/introduction"
+    hugo_resource_from_template = "https://gohugo.io/hugo-pipes/resource-from-template/"
     hugo_lookup_order = "https://gohugo.io/templates/lookup-order"
     hugo_sass = "https://discourse.gohugo.io/t/using-the-dart-sass-transpiler"
     hugo_toc = "https://gohugo.io/content-management/toc"
     hugo_vars = "https://discourse.gohugo.io/t/initialize-sass-variables-from-hugo-templates"
     initialcommit = "https://initialcommit.com/blog/git-commit-messages-best-practices"
     issue_tracker = "https://github.com/gethinode/hinode/issues"
+    katex = "https://katex.org"
+    katex_autorender = "https://katex.org/docs/autorender.html"
+    katex_load = "https://katex.org/docs/autorender.html#usage"
+    katex_github = "https://github.com/KaTeX/KaTeX"
+    katex_self_hosted = "https://katex.org/docs/browser.html#download--host-things-yourself"
     leaflet = "https://leafletjs.com"
     license = "https://github.com/gethinode/hinode/blob/main/LICENSE"
     logrocket_optimization = "https://blog.logrocket.com/9-tricks-eliminate-render-blocking-resources"
@@ -290,7 +314,9 @@
     netlify_rewrite = "https://docs.netlify.com/routing/redirects/rewrites-proxies/"
     nodejs = "https://nodejs.org"
     npm = "https://www.npmjs.com"
+    npm_cpy = "https://www.npmjs.com/package/cpy"
     npm_purgecss = "https://www.npmjs.com/package/@fullhuman/postcss-purgecss"
+    npm_run_all = "https://www.npmjs.com/package/npm-run-all"
     npm_whitelister = "https://www.npmjs.com/package/purgecss-whitelister"
     observatory = "https://observatory.mozilla.org/analyze/demo.gethinode.com"
     openstreetmap = "https://www.openstreetmap.org"
@@ -300,12 +326,19 @@
     repository_redir = "https://raw.githubusercontent.com/gethinode/hinode/main/layouts/index.redir"
     repository_docs = "https://github.com/gethinode/docs.git"
     repository_owner = "https://github.com/markdumay/"
+    repository_mod_bootstrap = "https://github.com/gethinode/mod-bootstrap"
+    repository_mod_flexsearch = "https://github.com/gethinode/mod-flexsearch"
+    repository_mod_fontawesome = "https://github.com/gethinode/mod-fontawesome"
+    repository_mod_katex = "https://github.com/gethinode/mod-katex"
+    repository_mod_leaflet = "https://github.com/gethinode/mod-leaflet"
+    repository_mod_template = "https://github.com/gethinode/mod-template"
     repository_leaflet = "https://github.com/gethinode/leaflet-demo"
     repository_releases = "https://github.com/gethinode/hinode/releases/"
     repository_tag = "https://github.com/gethinode/hinode/releases/tag/"
     repository_template = "https://github.com/gethinode/template.git"
     repository_versioning = "https://github.com/gethinode/version-demo"
     repository_versioning_overview = "https://raw.githubusercontent.com/gethinode/version-demo/main/content/en/docs/versions.md"
+    semantic-release = "https://semantic-release.gitbook.io/semantic-release/"
     semver = "https://semver.org"
     siteground_compression = "https://www.siteground.com/blog/brotli-vs-gzip-compression"
     stylelint = "https://stylelint.io"

@@ -1,11 +1,11 @@
 ---
 title: Commands
 description: Use npm commands to automate the build process and to keep track of dependencies.
-date: 2023-05-30
+date: 2023-07-18
 layout: docs
 ---
 
-Hinode uses [Node Package Manager]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. The `package.json` file in the repository root defines several commands to simplify local development and testing. The following paragraphs describe the main commands.
+Hinode supports [Node Package Manager]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. The `package.json` file in the repository root defines several commands to simplify local development and testing. The following paragraphs describe the main commands.
 
 ## Starting a local server
 

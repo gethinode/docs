@@ -1,28 +1,67 @@
 ---
 title: Introduction
 description: Get started with Hinode, a clean documentation and blog theme for your Hugo site based on Bootstrap 5.
-date: 2023-04-03
+date: 2023-07-18
 aliases:
-  - "/docs/0.9/getting-started/"
   - "/docs/getting-started/"
   - "/getting-started/"
   - "/docs/"
 layout: docs
 ---
 
-Hinode is a clean documentation and blog theme for [Hugo]({{< param "links.hugo" >}}), an open-source static site generator. Based on the [Bootstrap 5]({{< param "links.bootstrap" >}}) framework, the rendered site is fast, secure, and responsive. Hinode uses [FlexSearch]({{< param "links.flexsearch" >}}) to enable full text search across your site. Finally, the theme uses [Node Package Manager]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. More information is available on the [about]({{< relref "credits" >}} "about") page.
+Hinode is a clean documentation and blog theme for [Hugo]({{< param "links.hugo" >}}) - an open-source static site generator. Based on the [Bootstrap 5]({{< param "links.bootstrap" >}}) framework, the rendered site is fast, secure, and responsive. Hinode uses [FlexSearch]({{< param "links.flexsearch" >}}) to enable full text search across your site. Finally, the theme provides optional support for [Node Package Manager]({{< param "links.npm" >}}) (npm) to automate the build process and to keep track of dependencies. More information is available on the [about]({{< relref "credits" >}} "about") page.
 
 ## Prerequisites
 
-Hinode requires Git, Node.js and npm for local development and testing. Download the Git binary from the [official website]({{< param "links.git_download" >}}). Next, download and install [Node.js]({{< param "links.nodejs" >}}) (it includes npm) for your platform.
+Hinode requires the following software to be installed on your local machine:
+
+- [Git]({{< param "links.git_download" >}}) for version control
+- [Go]({{< param "links.golang_download" >}}) for Hugo modules
+
+You can choose to use either Hugo or npm for local development and testing. The npm configuration includes an embedded Hugo binary.
+
+- [Hugo]({{< param "links.hugo_download" >}}) to generate the site **- OR -**
+- [Node.js]({{< param "links.nodejs" >}}) (it includes npm) to generate the site and to automate dependency upgrades
 
 ## Installation
 
-Start a new Hinode project in three steps:
+Hinode is available as a [template]({{< param "links.repository_template" >}}) and as a [main theme]({{< param "links.repository" >}}). The template uses [Hugo modules]({{< param "links.hugo_modules" >}}) to link to the latest available version of the main Hinode theme. Unless you plan to customize a lot, it is recommended to use the template. You can use either **Hugo** or **npm** to create a new site.
+
+<!-- markdownlint-disable MD005 MD029 -->
+{{< nav type="tabs" id="pills-1" >}}
+  {{< nav-item header="Hugo" show="true" >}}
+
+  1. **Create a new site**
+
+      Use the Hinode template (recommended):
+
+      {{< command >}}
+      git clone https://github.com/gethinode/template.git my-hinode-site && cd my-hinode-site
+      {{< /command >}}
+
+      Use the main theme if you intend to customize the base code:
+
+      {{< command >}}
+      git clone https://github.com/gethinode/hinode.git my-hinode-site && cd my-hinode-site
+      {{< /command >}}
+
+  2. **Install dependencies**
+
+      {{< command >}}
+      hugo mod get -u ./... && hugo mod tidy
+      {{< /command >}}
+
+  3. **Start the development server**
+
+      {{< command >}}
+      hugo server
+      {{< /command >}}
+  {{< /nav-item >}}
+  {{< nav-item header="npm" >}}
 
 1. **Create a new site**
 
-    Hinode is available as a [template]({{< param "links.repository_template" >}}), and a [main theme]({{< param "links.repository" >}}). The template uses [npm]({{< param "links.npm" >}}) to link to the latest available version of Hinode. Unless you plan to customize a lot, it is recommended to use the template:
+    Use the Hinode template (recommended):
 
     {{< command >}}
     git clone https://github.com/gethinode/template.git my-hinode-site && cd my-hinode-site
@@ -37,7 +76,7 @@ Start a new Hinode project in three steps:
 2. **Install dependencies**
 
     {{< command >}}
-    npm install
+    npm install && npm run mod:update
     {{< /command >}}
 
 3. **Start the development server**
@@ -45,6 +84,9 @@ Start a new Hinode project in three steps:
     {{< command >}}
     npm run start
     {{< /command >}}
+  {{< /nav-item >}}
+{{< /nav >}}
+<!-- markdownlint-enable MD005 MD029 -->
 
 ## Adding content
 
@@ -102,7 +144,7 @@ The next topics give an overview of the advanced configuration settings.
 
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Review the approach to dependency management and virtualization" >}}
-    Hinode uses [npm]({{< param "links.npm" >}}) packages to manage its dependencies. In addition, it uses Hugo's [mounted folders]({{< param "links.hugo_mounts" >}}) to create a virtual file system. Review the [advanced settings overview]({{< relref "../advanced-settings/overview" >}}) for more details.
+    Hinode supports [npm]({{< param "links.npm" >}}) packages to automate various tasks. In addition, it uses Hugo's [mounted folders]({{< param "links.hugo_mounts" >}}) to create a virtual file system. Review the [advanced settings overview]({{< relref "../advanced-settings/overview" >}}) for more details.
   {{< /accordion-item >}}
   {{< accordion-item header="Adjust the build pipeline for Sass files" >}}
     Hinode uses Bootstrap's Sass files to generate the cascading style sheets of the website. The main entrypoint is defined in `assets/scss/app.scss`. See the [styles documentation]({{< relref "styles" >}}) for more details.
