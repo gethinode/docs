@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2023-07-18
+date: 2023-07-21
 layout: docs
 ---
 
@@ -47,11 +47,12 @@ Adjust the `modules` section in your site's parameter configuration file `config
 The following table provides an overview of the available settings. Omit the `mod-` prefix of the module's name.
 
 {{< table >}}
-| Setting     | Default       | Description |
-|-------------|---------------|-------------|
-| core        | ["bootstrap", "flexsearch", "fontawesome"] | Core modules to be fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. |
-| optional    | ["leaflet"]   | Optional modules to be included by Hinode. Enable each module in the frontmatter of a page. |
-| excludeSCSS | ["bootstrap"] | Core modules to exclude from the stylesheet processing pipeline. Include the required source files in the main `app.scss` instead to have more finegrained control. |
+| Setting         | Default       | Description |
+|-----------------|---------------|-------------|
+| core            | ["bootstrap", "flexsearch", "fontawesome"] | Core modules to be fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. |
+| optional        | ["leaflet"]   | Optional modules to be included by Hinode. Enable each module in the frontmatter of a page. |
+| excludeSCSS     | ["bootstrap"] | Disables [processing as Hugo templates]({{< param "links.hugo_resource_from_template">}}) of JavaScript files. |
+| disableTemplate | ["katex"]     | Scripts file within optional modules to exclude from processing as Hugo template. The scripts are bundled as-is instead. |
 {{< /table >}}
 
 <!-- TODO: link to config file -->
@@ -61,8 +62,9 @@ Hinode uses the following module configuration by default:
 ```toml
 [modules]
     core = ["bootstrap", "flexsearch", "fontawesome"]
-    optional = ["leaflet"]
+    optional = ["leaflet", "katex"]
     excludeSCSS = ["bootstrap"]
+    disableTemplate = ["katex"]
 ```
 
 ## Enabling optional modules
