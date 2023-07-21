@@ -5,7 +5,7 @@ date: 2023-07-21
 layout: docs
 ---
 
-{{< release version="v0.16.0-beta" >}}
+{{< release version="v0.16.0" >}}
 
 Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for [Bootstrap]({{< param "links.bootstrap" >}}), [FlexSearch]({{< param "links.flexsearch" >}}), and [Font Awesome]({{< param "links.fontawesome" >}}). The following paragraphs describe the coding conventions of Hinode modules, illustrate how to automate your build and release process, and give an overview of common issues and resolutions.
 
@@ -107,7 +107,7 @@ Head over to `Branches` section within `Code and automation` of your repository 
     </ul>
 </ul>
 
-Specify the test you defined previously as required status check. When using Hinode's default test, you would see six different checks (three platforms with two Node versions each). 
+Specify the test you defined previously as required status check. When using Hinode's default test, you would see six different checks (three platforms with two Node versions each).
 
 {{< alert >}}
 GitHub only displays selectable status checks when they have had an initial run, so be sure to run the test first. Also, the status checks are not automatically updated when the test script changes. You will need to manually update the status checks as required.
@@ -115,7 +115,23 @@ GitHub only displays selectable status checks when they have had an initial run,
 
 #### Automated merging
 
-Set `Allow auto-merge` to enabled in the `general` section of your repository configuration. Next, click the button `Enable auto-merge` on any PR to actually enable the feature.
+Set `Allow auto-merge` to enabled in the `general` section of your repository configuration. Next, click the button `Enable auto-merge` on any PR to actually enable the feature. Alternatively, you can enable the `.github/workflows/auto-merge.yml` workflow by adjusting the comments:
+
+```yml
+name: Dependabot auto-merge
+on: pull_request_target
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  review-dependabot-pr:
+    runs-on: ubuntu-latest
+    # TODO: to enable auto-merge remove first if-statement and uncomment second if-statement
+    if: false
+    # if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+```
 
 ### Release automation
 
@@ -135,27 +151,27 @@ The workflow uses the [semantic-release bot]({{< param "links.semantic-release" 
 
 Hinode uses the [Angular Commit Message conventions]({{< param "links.angular_commit" >}}). In brief, add the following prefixes to your commit messages to determine the type of release:
 
- - `feat!:` A breaking change (creates a new major release)
- - `feat:` A new feature (creates a new minor release)
- - `fix:` A bug fix (creates a new patch release, also triggered by [dependabot upgrades]({{< relref "#npm-package-upgrades" >}}))
- - `chore:` Changes to the build process or auxiliary tools and libraries such as documentation generation (does not trigger a new release)
+- `feat!:` A breaking change (creates a new major release)
+- `feat:` A new feature (creates a new minor release)
+- `fix:` A bug fix (creates a new patch release, also triggered by [dependabot upgrades]({{< relref "#npm-package-upgrades" >}}))
+- `chore:` Changes to the build process or auxiliary tools and libraries such as documentation generation (does not trigger a new release)
 
 The workflow requires two secrets within your repository. Add them as `action secret` in the `security` section of the repository configuration.
 
- - `SEMANTIC_RELEASE_GIT`
+- `SEMANTIC_RELEASE_GIT`
+
+  The bot requires elevated privileges to your module repository. Create a fine-grained Personal Access Token (PAT) first. Set up the token in the `Developer settings` of your **Account** settings on GitHub. The token requires access to your module repository with the following permissions:
+
+  - Read access to actions, commit statuses, metadata, and pull requests
+  - Read and Write access to content (code) and issues
+
+  When done, create a new `Repository token` with the name `SEMANTIC_RELEASE_GIT` in your **repository** configuration and paste the PAT as content.
+
+- `NPM_TOKEN`
+
+  The bot uses npm to automatically update the version defined in `package.json` and `package-lock.json`. You will need to publish your module to npm first. You can use `npm publish` from the command line to authenticate yourself with the npm server and to create a new package if needed. On npm, go to the `Access tokens` menu below the avatar of your personal account.
   
-    The bot requires elevated privileges to your module repository. Create a fine-grained Personal Access Token (PAT) first. Set up the token in the `Developer settings` of your **Account** settings on GitHub. The token requires access to your module repository with the following permissions:
-
-    - Read access to actions, commit statuses, metadata, and pull requests
-    - Read and Write access to content (code) and issues
-
-    When done, create a new `Repository token` with the name `SEMANTIC_RELEASE_GIT` in your **repository** configuration and paste the PAT as content.
-
- - `NPM_TOKEN`
-
-    The bot uses npm to automatically update the version defined in `package.json` and `package-lock.json`. You will need to publish your module to npm first. You can use `npm publish` from the command line to authenticate yourself with the npm server and to create a new package if needed. On npm, go to the `Access tokens` menu below the avatar of your personal account.
-    
-    Click on the button `Generate New Token` and select `Granular Access Token`. Assign read and write permissions to the module package and click on `Generate token`. Next, create create a new `Repository token` with the name `NPM_TOKEN` in your **repository** configuration on GitHub and paste the npm token as content.
+  Click on the button `Generate New Token` and select `Granular Access Token`. Assign read and write permissions to the module package and click on `Generate token`. Next, create create a new `Repository token` with the name `NPM_TOKEN` in your **repository** configuration on GitHub and paste the npm token as content.
 
 ## Troubleshooting
 
@@ -173,11 +189,12 @@ Hugo modules have several constraints to work properly. The below overview provi
   {{< /accordion-item >}}
   {{< accordion-item header="The local installation of Hugo modules fails" >}}
     Hugo provides a configuration option to replace a remote module with a local folder to simplify development and testing. For example, the [FlexSearch module]({{< param "links.repository_mod_flexsearch" >}}) uses a module replacement in the file `exampleSite/hugo.toml`. The replacement tells Hugo to use the module code of the parent folder, instead of downloading the remote release assets. However, if the module `mod-flexsearch` uses other Hugo modules itself (so-called transitive dependencies), Hugo will throw an error `Error: failed to load modules`. Vendor your modules with `hugo mod vendor` to fix this issue.
-    
+
 ```toml
 [module]
     replacements = 'github.com/gethinode/mod-flexsearch -> ../..'
 ```
+
   {{< /accordion-item >}}
   {{< accordion-item header="The Hugo modules appear incomplete when installed or updated" >}}
     You might have an issue with your Hugo module cache. Certain operating systems such as macOS have a volatile cache system, that is modified when your machine has restarted or was recently suspended. Try running `hugo mod clean` to clear the Hugo module cache and then rerun `hugo mod get -u`.

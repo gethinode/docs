@@ -272,6 +272,7 @@
     hugo_menus = "https://gohugo.io/content-management/menus/"
     hugo_modules = "https://gohugo.io/hugo-modules/"
     hugo_module_config = "https://gohugo.io/hugo-modules/configuration/"
+    hugo_module_config_import = "https://gohugo.io/hugo-modules/configuration/#module-configuration-imports"
     hugo_mounts = "https://gohugo.io/hugo-modules/configuration/#module-config-mounts"
     hugo_imaging = "https://gohugo.io/content-management/image-processing/#imaging-configuration"
     hugo_ordering = "https://gohugo.io/templates/lists/#order-content"

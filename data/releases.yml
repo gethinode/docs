@@ -4,8 +4,8 @@
   icon: fas puzzle-piece
   color: warning
   date: 2023-07-21
-  badge: v0.16.0-beta
-  url: v0.16.0-beta
+  badge: v0.16.0
+  url: v0.16.0
   content:
     This release of Hinode introduces support for Hugo modules to create a flexible build system. By configuring a
     module as either core or optional, you have full control of how these modules are processed and integrated with
