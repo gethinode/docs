@@ -19,9 +19,9 @@ Adjust the `module` section in your site's configuration file `config/_default/h
 
 ## Configuring modules
 
-You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could chose to include the `leaflet` module on a opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
+You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on a opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
 
-For code modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode parepares seperate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: the first module is processed before the next modules.
+For core modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode parepares seperate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: the first module is processed before the next modules.
 
 {{< alert color="info" >}}
 Hugo uses two different algorithms to merge the filesystems, depending on the file type:
