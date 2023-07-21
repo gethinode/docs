@@ -9,19 +9,24 @@ layout: docs
 
 Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for [Bootstrap]({{< param "links.bootstrap" >}}), [FlexSearch]({{< param "links.flexsearch" >}}), and [Font Awesome]({{< param "links.fontawesome" >}}). The following paragraphs explain how to customize the module configuration.
 
-<!-- TODO: work in progress -->
-
 ## Importing modules
 
-Adjust the `module` section in your site's configuration file `config/_default/hugo.toml` to import the required modules. Visit the Hugo documentation to [review all available configuration settings]({{< param "links.hugo_module_config" >}}).
+By default, the Hinode template imports Hinode as module itself. In this approach, the modules that Hinode includes are imported as transitive modules. Adjust the `module` section in your site's configuration file `config/_default/hugo.toml` to import or adjust the required modules. Visit the Hugo documentation to [review all available configuration settings]({{< param "links.hugo_module_config" >}}). You can [disable individual modules]({{< param "links.hugo_module_config_import" >}}) by setting `disable` to `true`.
+
+```toml
+  [[module.imports]]
+    path = "github.com/gethinode/hinode"
+```
+
+The main repository of Hinode imports the following modules by default.
 
 {{< docs name="modules" file="config/_default/hugo.toml" >}}
 
 ## Configuring modules
 
-You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on a opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
+You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on an opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
 
-For core modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode parepares seperate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: the first module is processed before the next modules.
+For core modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode parepares seperate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
 
 {{< alert color="info" >}}
 Hugo uses two different algorithms to merge the filesystems, depending on the file type:
