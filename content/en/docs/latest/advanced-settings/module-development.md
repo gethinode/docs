@@ -115,7 +115,23 @@ GitHub only displays selectable status checks when they have had an initial run,
 
 #### Automated merging
 
-Set `Allow auto-merge` to enabled in the `general` section of your repository configuration. Next, click the button `Enable auto-merge` on any PR to actually enable the feature.
+Set `Allow auto-merge` to enabled in the `general` section of your repository configuration. Next, click the button `Enable auto-merge` on any PR to actually enable the feature. Alternatively, you can enable the `.github/workflows/auto-merge.yml` workflow by adjusting the comments:
+
+```yml
+name: Dependabot auto-merge
+on: pull_request_target
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  review-dependabot-pr:
+    runs-on: ubuntu-latest
+    # TODO: to enable auto-merge remove first if-statement and uncomment second if-statement
+    if: false
+    # if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+```
 
 ### Release automation
 
