@@ -217,7 +217,9 @@ We will now run the `mod:update` script to install the Hugo module(s) and to che
 
 - **`rimraf _vendor && hugo mod vendor`**
 
-  Stores the module assets in a local vendor directory instead of the system cache. This is required if a module uses other modules itself (so-called transitive dependencies) and ensures our example site has access to them. The `_vendor` directory is deleted to prevent an error when the module does **not** have transitive dependencies. You could remove the vendor approach in this case, however, the current scripts defined by the module template cover both scenarios.
+  Stores the module assets in a local vendor directory instead of the system cache. This is required if a module uses other modules itself (so-called transitive dependencies) and ensures our example site has access to them. Another reason to vendor your modules is to aid additional tools, such as the [Purgecss Whitelister]({{< param "links.npm_whitelister" >}}). External tools do not have access to Hugo mounts, however, might require access to module files. Vendoring your modules ensures all module data is available on a local, known path.
+  
+  The `_vendor` directory is deleted to prevent an error when the module does **not** have transitive dependencies. You could remove the vendor approach in this case, however, the current scripts defined by the module template cover both scenarios.
 
 - **`hugo mod tidy && hugo mod tidy -s exampleSite`**
 
