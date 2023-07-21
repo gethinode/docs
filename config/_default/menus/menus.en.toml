@@ -162,15 +162,9 @@
 
 [[footer]]
   parent = "Guides"
-  name = "Adding packages"
-  pageRef = "/guides/packages"
-  weight = 20
-
-[[footer]]
-  parent = "Guides"
   name = "Developing modules"
   pageRef = "/guides/modules"
-  weight = 25
+  weight = 20
 
 [[footer]]
   parent = "Guides"
