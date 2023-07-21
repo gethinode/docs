@@ -70,7 +70,7 @@ Open the local repository in VSCode and create a `develop` branch first. Now sea
 
 ## Step 3 - Exposing the KaTeX distribution files
 
-We will now add KaTeX as npm package to our local repository. Run the following command from your terminal to add KaTeX as development dependency. 
+We will now add KaTeX as npm package to our local repository. Run the following command from your terminal to add KaTeX as development dependency.
 
 {{< alert color="info" >}}
 You can install npm packages as either regular packages or development dependency. We do not need the KaTeX library at run-time, as Hugo compiles a static site. Additionally, we will redistribute the required KaTeX files as part of our site deployment. We can therefore install the KaTeX package as development dependency, listed under `devDependencies` in `package.json`.
@@ -281,7 +281,7 @@ npm run start
 (out)> @markdumay/mod-katex@0.0.0 start
 (out)> hugo server -s exampleSite --bind=0.0.0.0 --disableFastRender --printI18nWarnings
 (out)
-(out)Start building sites … 
+(out)Start building sites ...
 (out)Environment: "development"
 (out)Serving pages from memory
 (out)Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
