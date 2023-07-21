@@ -1,7 +1,7 @@
 ---
 title: Module development
 description: Develop your own Hugo modules compatible with Hinode.
-date: 2023-07-20
+date: 2023-07-21
 layout: docs
 ---
 
@@ -68,7 +68,7 @@ on:
 
 The workflow requires elevated privileges to your module repository. Create a fine-grained Personal Access Token (PAT) first. Set up the token in the `Developer settings` of your **Account** settings on GitHub. The token requires access to your module repository with the following permissions:
 
-- Read and Write access to code and pull requests
+- Read and Write access to content (code) and pull requests
 
 When done, head over `action secret` in the `security` section of the repository configuration. Create a new `Repository token` with the name `HUGO_MOD_PR` in your **repository** configuration and paste the PAT as content.
 
@@ -147,7 +147,7 @@ The workflow requires two secrets within your repository. Add them as `action se
     The bot requires elevated privileges to your module repository. Create a fine-grained Personal Access Token (PAT) first. Set up the token in the `Developer settings` of your **Account** settings on GitHub. The token requires access to your module repository with the following permissions:
 
     - Read access to actions, commit statuses, metadata, and pull requests
-    - Read and Write access to code and issues
+    - Read and Write access to content (code) and issues
 
     When done, create a new `Repository token` with the name `SEMANTIC_RELEASE_GIT` in your **repository** configuration and paste the PAT as content.
 
