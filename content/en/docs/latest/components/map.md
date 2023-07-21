@@ -8,6 +8,7 @@ icon: fa map
 tags: component
 modules: ["leaflet"]
 ---
+{{< release version="v0.16.0" >}}
 
 ## Overview
 
