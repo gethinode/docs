@@ -63,10 +63,10 @@ Leaflet requires the presence of several style elements. Similarly to the JavaSc
 
 ## Step 2 - Adjusting the Content Security Policy
 
-Leaflet requires access to [OpenStreetMap]({{< param "links.openstreetmap" >}}). Adjust the Content Security Policy in `config/_default/server.toml` to enable access to the remote images. You might need to adjust the settings of your hosting provider too (see `netlify.toml` in the repository root).
+Leaflet requires access to [OpenStreetMap]({{< param "links.openstreetmap" >}}) and requires the `data:` attribute for image sources. Adjust the Content Security Policy in `config/_default/server.toml` to enable access to the remote images. You might need to adjust the settings of your hosting provider too (see `netlify.toml` in the repository root).
 
 ```toml
-img-src 'self' https://i.vimeocdn.com https://i.ytimg.com https://tile.openstreetmap.org; \
+img-src 'self' data: https://i.vimeocdn.com https://i.ytimg.com https://tile.openstreetmap.org; \
 ```
 
 ## Step 3 - Adding the image map
