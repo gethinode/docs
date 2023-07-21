@@ -43,17 +43,9 @@ The following table provides an overview of the available settings. Omit the `mo
 | disableTemplate | ["katex"]     | Scripts file within optional modules to exclude from processing as Hugo template. The scripts are bundled as-is instead. |
 {{< /table >}}
 
-<!-- TODO: link to config file -->
-
 Hinode uses the following module configuration by default:
 
-```toml
-[modules]
-    core = ["bootstrap", "flexsearch", "fontawesome"]
-    optional = ["leaflet", "katex"]
-    excludeSCSS = ["bootstrap"]
-    disableTemplate = ["katex"]
-```
+{{< docs name="modules" file="config/_default/params.toml" >}}
 
 ## Enabling optional modules
 
