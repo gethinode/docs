@@ -1,10 +1,9 @@
 ---
 title: Credits
 description: Hinode is fully open source and uses several open-source frameworks and libraries.
-date: 2023-05-15
+date: 2023-07-18
 aliases:
-  - "/docs/0.9/about/credits/"
-  - "/docs/0.9/about/"
+  - "/docs/about/credits/"
   - "/docs/about/"
   - "/about/"
 layout: docs
@@ -23,6 +22,12 @@ Hinode is based on the following core components:
 - [npm]({{< param "links.npm" >}}) is a software registry that enables the sharing and reuse of both open-source and private software packages. By taking advantage of its version management, software dependencies are easily tracked and updated.
 - [FlexSearch]({{< param "links.flexsearch" >}}) is a flexible search library to enable full text search across your site.
 - [Font Awesome]({{< param "links.fontawesome" >}}) is a popular icon library and toolkit, used on over 200 million sites. The free version provides access to more than 2,000 icons. The toolkit also provides various styling and animation options out of the box.
+
+## Optional components
+
+Hinode supports several opt-in components. In the default configuration, these components are added on a page-by-page basis:
+
+- [Leaflet]({{< param "links.leaflet" >}}) is an open-source JavaScript library for mobile-friendly interactive maps.
 
 ## Themes
 

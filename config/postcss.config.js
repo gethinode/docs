@@ -14,22 +14,25 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   safelist: [
     ...whitelister([
       './assets/scss/theme/theme.scss',
-      './node_modules/@gethinode/hinode/assets/scss/common/_styles.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_clipboard.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_command.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_navbar.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_search.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_sidebar.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_syntax.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_syntax-dark.scss',
-      './node_modules/@gethinode/hinode/assets/scss/components/_syntax-light.scss',
-      './node_modules/@gethinode/hinode/assets/scss/theme/fonts.scss',
-      './node_modules/bootstrap/scss/_carousel.scss',
-      './node_modules/bootstrap/scss/_dropdown.scss',
-      './node_modules/bootstrap/scss/_reboot.scss',
-      './node_modules/bootstrap/scss/_tooltip.scss',
-      './node_modules/bootstrap/scss/_transitions.scss',
-      './node_modules/bootstrap/scss/_utilities.scss'
+      './_vendor/github.com/gethinode/hinode/assets/scss/common/_styles.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_clipboard.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_command.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_navbar.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_search.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_sidebar.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_syntax.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_syntax-dark.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_syntax-light.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/theme/fonts.scss',
+      './_vendor/github.com/gethinode/mod-flexsearch/assets/scss/modules/flexsearch/flexsearch.scss',
+      './_vendor/github.com/gethinode/mod-katex/dist/katex.scss',
+      './_vendor/github.com/gethinode/mod-leaflet/dist/leaflet.scss',
+      './_vendor/github.com/twbs/bootstrap/scss/_carousel.scss',
+      './_vendor/github.com/twbs/bootstrap/scss/_dropdown.scss',
+      './_vendor/github.com/twbs/bootstrap/scss/_reboot.scss',
+      './_vendor/github.com/twbs/bootstrap/scss/_tooltip.scss',
+      './_vendor/github.com/twbs/bootstrap/scss/_transitions.scss',
+      './_vendor/github.com/twbs/bootstrap/scss/_utilities.scss'
     ])
   ]
 })

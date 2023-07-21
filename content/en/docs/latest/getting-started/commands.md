@@ -1,11 +1,19 @@
 ---
 title: Commands
 description: Use npm commands to automate the build process and to keep track of dependencies.
-date: 2023-05-30
+date: 2023-07-21
 layout: docs
 ---
 
-Hinode uses [Node Package Manager]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. The `package.json` file in the repository root defines several commands to simplify local development and testing. The following paragraphs describe the main commands.
+Hinode supports [Node Package Manager]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. The `package.json` file in the repository root defines several commands to simplify local development and testing. The following paragraphs describe the main commands.
+
+## Installing the required modules
+
+You will need to install the required Hugo modules before starting a local server. The following command downloads the latest available version of the configured modules recursively, vendors the modules, and does some housekeeping of the module files.
+
+{{% command %}}
+npm run mod:update
+{{% /command %}}
 
 ## Starting a local server
 
@@ -23,7 +31,7 @@ npm run start:prod
 
 ## Generating a web site
 
-Use the following command to generate the static site. The build artifacts are stored in the local `public` folder. You can deploy these files to your **production** server.
+Use the following command to generate the static site. The build artifacts are stored in the local `public` folder. You can deploy these files to your **production** server. The build command invokes `mod:update` prior to the build.
 
 {{% command %}}
 npm run build

@@ -3,7 +3,6 @@ title: Content organization
 description: A structured approach to organize and present content.
 date: 2023-04-24
 layout: docs
-status: draft
 ---
 
 Hinode uses a structured approach to [organize and present content]({{< param "links.hugo_structure" >}}). This results in user-friendly URLs, which are also easy to crawl by search engines. The following paragraphs describe how to organize the content and how to define alternative paths.

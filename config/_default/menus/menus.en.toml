@@ -162,8 +162,8 @@
 
 [[footer]]
   parent = "Guides"
-  name = "Adding packages"
-  pageRef = "/guides/packages"
+  name = "Developing modules"
+  pageRef = "/guides/modules"
   weight = 20
 
 [[footer]]

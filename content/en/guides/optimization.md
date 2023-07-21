@@ -2,7 +2,7 @@
 title: Optimizing the user experience
 description: Guide on how to optimize the user experience of your site.
 date: 2023-04-03
-lastmod: 2023-04-08
+lastmod: 2023-07-21
 tags: ["guide", "optimization"]
 weight: 30
 thumbnail: img/watch.jpg
@@ -36,7 +36,7 @@ Images, media files, and `<script>` tags placed at the bottom of the `<body>` se
 
 ## Step 1 - Setting up the test case
 
-We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunites for improvement. If not done so already, [download and install Chrome]({{< param "links.google_chrome" >}}) from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first.
+We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunites for improvement. If not done so already, [download and install Chrome]({{< param "links.google_chrome" >}}) from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm.
 
 {{< command >}}
 git clone https://github.com/gethinode/docs.git && cd docs
@@ -156,6 +156,10 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 ```
 
 If you rerun the Lighthouse test, the size of the `main.css` file will appear to be significantly smaller. Unfortunately, your site will also not look right. The purgecss approach is quite aggressive and has removed too many elements from your stylesheet. We will need to visually inspect the site's pages and put additional elements to the safelist. Additionally, the dark theme also no longer works. We can fix that by passing `data-bs-theme` to the argument `dynamicAttributes`. Visually inspecting the page rendering and putting elements to the safelist is a manual exercise. Hinode therefore disables the purge setting by default. Nevertheless, the result can be quite rewarding. Click on the panel below to reveil the full script.
+
+{{< alert >}}
+External tools do no have access to Hugo mounts. You will need to specify the original paths of the files you want to safelist. When using modules, be sure to vendor your modules.
+{{< /alert >}}
 
 {{< docs name="purge" file="./config/postcss.config.js" show="false" >}}
 
