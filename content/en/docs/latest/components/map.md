@@ -1,6 +1,6 @@
 ---
 author: Mark Dumay
-title: Collapse
+title: Map
 date: 2023-07-21
 description: Use the map shortcode to show an interactive map.
 layout: docs
