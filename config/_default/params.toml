@@ -5,13 +5,19 @@
     modes = ["light", "dark"]
     footerBelowFold = true
 
+[modules]
+    core = ["bootstrap", "flexsearch", "fontawesome"]
+    optional = ["leaflet", "katex"]
+    excludeSCSS = ["bootstrap"]
+    disableTemplate = ["katex"]
+
 [debugging]
     showJS = false
     showSCSS = false
 
 # toml-docs-start version
 [docs]
-    basePath = "node_modules/@gethinode/hinode"
+    basePath = "_vendor/github.com/gethinode/hinode"
     github = "https://github.com/gethinode/docs"
     release = "https://github.com/gethinode/hinode/releases/tag/"
 # toml-docs-end version
