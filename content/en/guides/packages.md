@@ -10,6 +10,10 @@ photoCredits: <a href="https://unsplash.com/@mildlee">Mildleee</a>
 photoSource: <a href="https://unsplash.com/photos/7KKy7-TeeVs">Unsplash</a>
 ---
 
+{{< alert >}}
+The preferred approach since `v0.16` is to develop a module that wraps the required npm packages, instead of including them directly into your main site. Visit the [modules guide]({{< relref "modules" >}}) for more details.
+{{< /alert >}}
+
 ## Introduction
 
 Hinode uses [npm packages]({{< ref "/docs/advanced-settings/overview#npm-packages" >}}) and [mounted folders]({{< param "links.hugo_mounts" >}}) to create a flexible, automated build system. This guide shows how to add an npm package to your site. It installs Leaflet as an example. [Leaflet]({{< param "links.leaflet" >}}) is an open-source JavaScript library to add mobile-friendly interactive maps to your site. This guide assumes you have a working site already. Check the [introduction]({{< relref "introduction" >}}) on how to set up a site with Hinode.
