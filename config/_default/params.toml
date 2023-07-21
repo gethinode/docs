@@ -5,6 +5,10 @@
     modes = ["light", "dark"]
     footerBelowFold = true
 
+[debugging]
+    showJS = false
+    showSCSS = false
+
 # toml-docs-start version
 [docs]
     basePath = "node_modules/@gethinode/hinode"
