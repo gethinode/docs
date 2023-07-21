@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Releases
-date: 2023-07-04
+date: 2023-07-21
 description: A chronological overview of key releases of Hinode since initial launch.
 ---
 
