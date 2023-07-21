@@ -15,19 +15,7 @@ Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to prov
 
 Adjust the `module` section in your site's configuration file `config/_default/hugo.toml` to import the required modules. Visit the Hugo documentation to [review all available configuration settings]({{< param "links.hugo_module_config" >}}).
 
-<!-- TODO: link to config file -->
-
-```toml
-[module]
-  [[module.imports]]
-    path = "github.com/gethinode/mod-bootstrap"
-  [[module.imports]]
-    path = "github.com/gethinode/mod-flexsearch"
-  [[module.imports]]
-    path = "github.com/gethinode/mod-fontawesome"
-  [[module.imports]]
-    path = "github.com/gethinode/mod-leaflet"
-```
+{{< docs name="modules" file="config/_default/hugo.toml" >}}
 
 ## Configuring modules
 
