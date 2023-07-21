@@ -5,7 +5,7 @@ date: 2023-07-21
 layout: docs
 ---
 
-{{< release version="v0.16.0" >}}
+{{< release version="v0.16.0-beta" >}}
 
 Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for [Bootstrap]({{< param "links.bootstrap" >}}), [FlexSearch]({{< param "links.flexsearch" >}}), and [Font Awesome]({{< param "links.fontawesome" >}}). The following paragraphs describe the coding conventions of Hinode modules, illustrate how to automate your build and release process, and give an overview of common issues and resolutions.
 
@@ -178,5 +178,8 @@ Hugo modules have several constraints to work properly. The below overview provi
 [module]
     replacements = 'github.com/gethinode/mod-flexsearch -> ../..'
 ```
+  {{< /accordion-item >}}
+  {{< accordion-item header="The Hugo modules appear incomplete when installed or updated" >}}
+    You might have an issue with your Hugo module cache. Certain operating systems such as macOS have a volatile cache system, that is modified when your machine has restarted or was recently suspended. Try running `hugo mod clean` to clear the Hugo module cache and then rerun `hugo mod get -u`.
   {{< /accordion-item >}}
 {{< /accordion >}}
