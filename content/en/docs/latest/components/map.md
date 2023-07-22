@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Map
-date: 2023-07-21
+date: 2023-07-22
 description: Use the map shortcode to show an interactive map.
 layout: docs
 icon: fa map
@@ -13,9 +13,7 @@ modules: ["leaflet"]
 
 ## Overview
 
-<!-- markdownlint-disable MD052 -->
-Use the map shortcode to show an interactive map, powered by [Leaflet][leaflet]. The shortcode is a simplified wrapper of the Leaflet library that provides basic functionality. As an example, the following shortcode displays an interactive map of the city of Amsterdam.
-<!-- markdownlint-enable MD052 -->
+Use the map shortcode to show an interactive map, powered by [Leaflet]({{< param "links.leaflet" >}}). The shortcode is a simplified wrapper of the Leaflet library that provides basic functionality. As an example, the following shortcode displays an interactive map of the city of Amsterdam.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
