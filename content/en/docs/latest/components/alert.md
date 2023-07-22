@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Alert
-date: 2023-05-21
+date: 2023-07-22
 description: Use the alert shortcode to display a contextual feedback message.
 layout: docs
 icon: fas triangle-exclamation
@@ -59,7 +59,7 @@ As an example, the following shortcodes displays a simple alert for each theme c
 {{</* /alert */>}}
 
 {{</* alert color="warning" */>}}
-    A simple danger warning it out!
+    A simple warning alert-warning it out!
 {{</* /alert */>}}
 
 {{</* alert color="info" */>}}
