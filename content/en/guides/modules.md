@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Developing Hugo modules
-date: 2023-07-21
+date: 2023-07-22
 description: Guide on how to develop Hugo modules compatible with Hinode.
 tags: ["guide", "module", "katex"]
 weight: 25
@@ -231,7 +231,7 @@ npm run mod:update
 (out)Update module in [...]/mod-katex
 {{< /command >}}
 
-We will now adjust the file `baseof.html` in `exampleSite/layouts/_default` to include our static stylesheet and script on each page by default. Modify lines 7 and 13 as follows:
+We will now adjust the file `baseof.html` in `exampleSite/layouts/_default` to include our static stylesheet and script on each page by default. Modify lines 7 and 13-15 as follows:
 
 ```html {linenos=table,hl_lines=[7,"13-15"]}
 <!DOCTYPE html>
