@@ -59,7 +59,7 @@ As an example, the following shortcodes displays a simple alert for each theme c
 {{</* /alert */>}}
 
 {{</* alert color="warning" */>}}
-    A simple warning alert-warning it out!
+    A simple warning alert-check it out!
 {{</* /alert */>}}
 
 {{</* alert color="info" */>}}
