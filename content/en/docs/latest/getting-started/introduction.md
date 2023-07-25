@@ -27,25 +27,6 @@ You can choose to use either Hugo or npm for local development and testing. The 
 
 Hinode is available as a [template]({{< param "links.repository_template" >}}) and as a [main theme]({{< param "links.repository" >}}). The template uses [Hugo modules]({{< param "links.hugo_modules" >}}) to link to the latest available version of the main Hinode theme. Unless you plan to customize a lot, it is recommended to use the template. You can use either **Hugo** or **npm** to create a new site.
 
-<!-- hugo new site my-hinode-site && cd my-hinode-site
-
-edit hugo.toml
-
-```toml
-[module]
-[[module.imports]]
-  path = 'github.com/gethinode/hinode'
-
-[params.modules]
-  core = ["bootstrap", "flexsearch", "fontawesome"]
-  optional = ["leaflet", "katex"]
-  excludeSCSS = ["bootstrap"]
-  disableTemplate = ["katex"]
-```
-
-hugo mod init example.com/my-hinode-site && hugo mod get -u -->
-
-
 <!-- markdownlint-disable MD005 MD029 -->
 {{< nav type="tabs" id="pills-1" >}}
   {{< nav-item header="Hugo" show="true" >}}
