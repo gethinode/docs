@@ -1,8 +1,9 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2023-01-22
+date: 2023-07-25
 layout: docs
+modules: ["katex"]
 ---
 
 Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for the typography. The following paragraphs illustrate the most common applications. Refer to the Hugo documentation to review the extended description of supported [content formats]({{< param "links.hugo_content" >}}). It also contains links to external resource about Markdown.
@@ -215,4 +216,19 @@ Use the `-` character followed by either `[x]` or `[ ]` to indicate a (completed
 - [ ] Update the website
 - [ ] Contact the media
 
+{{< /example >}}
+
+## Mathemetical formulas
+
+{{< release version="v0.16.0" >}}
+
+Use [KaTeX]({{< param "links.katex" >}}) to add mathemetical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
+
+{{< example lang="markdown" >}}
+This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula
+
+This is not an inline formula:
+
+$$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$  
+$$\forall x \in X, \quad \exists y \leq \epsilon$$
 {{< /example >}}
