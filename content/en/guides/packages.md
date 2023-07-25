@@ -81,11 +81,11 @@ Add a `map` placeholder to your (Markdown) content file. The following placehold
 <div id="map" class="ratio ratio-16x9 w-100"></div>
 ```
 
-Next, initialize the map placeholder with the OpenStreetMap content. The following code uses the city of London as an example. The `mapID` refers to the ID of the placeholder. The code tests if an element with the `map` ID is present and initializes the placeholder accordingly. It adds a marker with a default icon next. You can place the code in `assets/js/leafletmap.js`, where Hinode will pick it up automatically. 
+Next, initialize the map placeholder with the OpenStreetMap content. The following code uses the city of London as an example. The `mapID` refers to the ID of the placeholder. The code tests if an element with the `map` ID is present and initializes the placeholder accordingly. It adds a marker with a default icon next. You can place the code in `assets/js/leafletmap.js`, where Hinode will pick it up automatically.
 
 {{< alert >}}
 Hinode processes the script files in alphabetical order. Our custom script requires the script from the Leaflet library to be initialized first. You can set `showJS` in the `debugging` section of the site parameters to review the order of the processed files.
-{{< alert >}}
+{{< /alert >}}
 
 ```js
 const mapID = 'map'
