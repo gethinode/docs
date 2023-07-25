@@ -85,7 +85,7 @@ Next, initialize the map placeholder with the OpenStreetMap content. The followi
 
 {{< alert >}}
 Hinode processes the script files in alphabetical order. Our custom script requires the script from the Leaflet library to be initialized first. You can set `showJS` in the `debugging` section of the site parameters to review the order of the processed files.
-{{< alert >}}
+{{< /alert >}}
 
 ```js
 const mapID = 'map'
