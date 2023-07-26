@@ -210,7 +210,7 @@ And finally, we will replace the `label` and `url` for the latest release in `co
   latest = true
 ```
 
-### Configure the multi-branch deployment
+### Configuring the multi-branch deployment
 
 We will deploy the `v0.9` branch on a separate subdomain with a so-called multi-branch deployment. By default, Netlify publishes the `main` branch only, along with any previews. We can instruct Netlify to deploy an additional branch, such as `v0.9`. Netlify uses the branch name followed by two hyphens and your internal Netlify subdomain. We will use this pattern as our baseURL in `config/_default/hugo.toml`.
 
@@ -219,6 +219,17 @@ Update the baseURL of `hugo.toml` in your `v0.9` branch, replacing `{branch}` an
 ```toml
 baseURL = "https://{branch}--{sitename}.netlify.app/"
 ```
+
+We will also need to use absolute URLs for our page assets to ensure our references link to the correct server. For this purpose, set the custom parameter `canonifyAssetsURLs` in the `main` section of `config/_default/params.toml` to `true`.
+
+```toml
+[main]
+    canonifyAssetsURLs = true
+```
+
+{{< alert color="info" >}}
+In the default state, Hinode uses relative links to include images, scripts, stylesheets, and other files. In this setup, the browser would retrieve these assets from the wrong backend server when using redirection. We therefore explicitly instruct Hugo to use absolute URLs for selected assets with the `canonifyAssetsURLs` setting.
+{{< /alert >}}
 
 <div class="col-sm-12 col-lg-8 mx-auto">
   {{< image src="img/versioning-branch.png" caption="Configure Netlify branch deployment" class="border" >}}

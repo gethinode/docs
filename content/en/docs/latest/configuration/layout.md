@@ -61,13 +61,14 @@ The below configuration shows the default configuration set in `config/_default/
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
 {{< table >}}
-| Setting         | Default           | Description |
-|-----------------|-------------------|-------------|
-| separator       | "-"               | Seperator to join the website title and page title. |
-| description     | -                 | Short description of the website that is added to the page metadata. |
-| enableDarkMode  | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
-| modes           | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
-| footerBelowFold | false             | If set, pushes the footer including social links to below the page fold. |
+| Setting            | Default           | Description |
+|--------------------|-------------------|-------------|
+| separator          | "-"               | Seperator to join the website title and page title. |
+| description        | -                 | Short description of the website that is added to the page metadata. |
+| enableDarkMode     | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
+| modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
+| footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
+| canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
