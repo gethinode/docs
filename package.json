@@ -27,7 +27,7 @@
     "env": "hugo env",
     "precheck": "npm version",
     "check": "hugo version",
-    "upgrade": "npx npm-check-updates -u && mod:update"
+    "upgrade": "npx npm-check-updates -u && npm run -s mod:update"
   },
   "repository": {
     "type": "git",
