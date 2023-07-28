@@ -17,7 +17,7 @@ Hinode is maintained by [Mark Dumay]({{< param "links.repository_owner" >}}) and
 
 Hinode is based on the following core components:
 
-- [Hugo]({{< param "links.hugo" >}}) is a static HTML and CSS website generator written in [Go]({{< param "links.golang" >}}). It is optimized for speed, ease of use, and configurability. Hugo takes a directory with [Markdown content]({{< param "links.markdown_guide" >}}) and templates and renders them into a full HTML website.
+- [Hugo]({{< param "links.hugo" >}}) is a static HTML and CSS website generator written in the [Go language]({{< param "links.golang" >}}). It is optimized for speed, ease of use, and configurability. Hugo takes a directory with [Markdown content]({{< param "links.markdown_guide" >}}) and templates and renders them into a full HTML website.
 - [Bootstrap]({{< param "links.bootstrap" >}}) is a popular, open-source web development framework. Using a mobile-first approach, it provides several functions and components to simplify the creation of responsive websites.
 - [npm]({{< param "links.npm" >}}) is a software registry that enables the sharing and reuse of both open-source and private software packages. By taking advantage of its version management, software dependencies are easily tracked and updated.
 - [FlexSearch]({{< param "links.flexsearch" >}}) is a flexible search library to enable full text search across your site.
