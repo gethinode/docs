@@ -1,7 +1,7 @@
 ---
 title: Color modes
 description: Add light mode and dark mode support to your website.
-date: 2023-02-18
+date: 2023-07-28
 layout: docs
 ---
 
@@ -10,10 +10,6 @@ layout: docs
 {{< release version="v0.9.0" >}}
 
 Hinode supports color modes, or themes, as introduced by Bootstrap `v5.3.0`. By default, the site is rendered in light mode. If dark mode is enabled, a toggler is added to the main navigation. The toggler enables switching between modes, or can be set to `auto`. In the latter mode, the site uses the mode as preferred by the device. Hinode uses data attributes to toggle the site's color mode. Visit the [Bootstrap documentation]({{< param "links.bs_color_sass" >}}) for more information. You can enable of disable the support for dark mode in the [extended layout configuration]({{< relref "layout#extended-configuration" >}}).
-
-{{< alert >}}
-    The color mode support by Bootstrap is still in an alpha release. You might encounter rendering issues or unexpected behavior.
-{{< /alert >}}
 
 ## Display property
 
