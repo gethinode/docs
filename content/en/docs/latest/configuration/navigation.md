@@ -89,7 +89,7 @@ Menu items can be nested within each other. The below example defines three cont
 
 {{< release version="v0.15.0" >}}
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 Release v0.15.0 of Hinode automatically detects the version of the current context. The configuration of the `version` attribute is no longer needed.
 {{< /alert >}}
 

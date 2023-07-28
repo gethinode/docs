@@ -108,7 +108,7 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 
 {{< release version="v0.14.5" >}}
 
-{{< alert >}}
+{{< alert type="info" >}}
 Container support is a relatively new CSS feature that is not supported by all browsers yet. See this overview to [check the current browser support]({{< param "links.caniuse_container" >}}). Hinode uses a fixed-size icon with a `font-size` of `5rem` as fallback.
 {{< /alert >}}
 

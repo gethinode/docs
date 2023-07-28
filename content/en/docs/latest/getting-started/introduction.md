@@ -16,7 +16,7 @@ Hinode is a clean documentation and blog theme for [Hugo]({{< param "links.hugo"
 Hinode requires the following software to be installed on your local machine:
 
 - [Git]({{< param "links.git_download" >}}) for version control
-- [Go]({{< param "links.golang_download" >}}) for Hugo modules
+- [Go binary]({{< param "links.golang_download" >}}) for Hugo modules
 
 You can choose to use either Hugo or npm for local development and testing. The npm configuration includes an embedded Hugo binary.
 

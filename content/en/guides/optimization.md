@@ -157,7 +157,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
 If you rerun the Lighthouse test, the size of the `main.css` file will appear to be significantly smaller. Unfortunately, your site will also not look right. The purgecss approach is quite aggressive and has removed too many elements from your stylesheet. We will need to visually inspect the site's pages and put additional elements to the safelist. Additionally, the dark theme also no longer works. We can fix that by passing `data-bs-theme` to the argument `dynamicAttributes`. Visually inspecting the page rendering and putting elements to the safelist is a manual exercise. Hinode therefore disables the purge setting by default. Nevertheless, the result can be quite rewarding. Click on the panel below to reveil the full script.
 
-{{< alert >}}
+{{< alert type="danger" >}}
 External tools do no have access to Hugo mounts. You will need to specify the original paths of the files you want to safelist. When using modules, be sure to vendor your modules.
 {{< /alert >}}
 
@@ -167,7 +167,7 @@ External tools do no have access to Hugo mounts. You will need to specify the or
 
 As you might recall, the Lighthouse assessment also recommends to enable text compression to reduce the download size of text-based resources. Hugo's web server is meant for local development and is not capable of compressing these assets. We will need to publish our site to a server capable of text compression to evaluate the impact of this setting.
 
-{{< alert >}}
+{{< alert type="danger" >}}
 Please ensure the file `hugo_stats.json` is checked in to your repository (e.g. not listed in `.gitignore`). Netlify will not process the artifact during its build process otherwise.
 {{< /alert >}}
 

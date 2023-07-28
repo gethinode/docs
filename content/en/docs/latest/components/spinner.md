@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-{{< alert >}}
+{{< alert type="info" >}}
 The animation effect of this component is dependent on the `prefers-reduced-motion` media query. See the reduced motion section of [Bootstrap's accessibility documentation]({{< param "links.bs_reduced_motion" >}}).
 {{< /alert >}}
 

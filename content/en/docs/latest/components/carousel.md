@@ -36,7 +36,7 @@ The carousel shortcode supports the following arguments:
 | class     | No  | Optional class attribute of the `carousel` element, e.g. "w-75". |
 {{< /table >}}
 
-{{< alert >}}
+{{< alert type="danger" >}}
 The carousel uses the original aspect ratio of the provided images when no aspect ratio is provided. Ensure the included images have a similar height and width to avoid inconsistent behavior.
 {{< /alert >}}
 
@@ -103,7 +103,7 @@ Set the `ratio` to `21x9` for a landscape aspect ratio.
 
 Omit the `ratio` to keep the original aspect ratio.
 
-{{< alert color="primary" >}}
+{{< alert color="danger" >}}
     The carousel does not crop the images when omitting the aspect ratio. Instead, the images keep their original aspect ratio. Ensure the images have an equal aspect ratio to avoid layout shifting.
 {{< /alert >}}
 

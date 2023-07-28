@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Alert
-date: 2023-07-22
+date: 2023-07-28
 description: Use the alert shortcode to display a contextual feedback message.
 layout: docs
 icon: fas triangle-exclamation
@@ -30,6 +30,7 @@ The shortcode supports the following arguments:
 | color       | No  | Optional theme color of the alert, either "primary" (default), "secondary", "success", "danger",  "warning", "info", "light", "dark", "white" or "black". |
 | dismissible | No  | Optional flag to indicate the alert is dismissible, defaults to false. |
 | icon        | No  | Optional class and name of a Font Awesome icon to include. The icons use the [icon shorthand notation]({{< relref "../content/icons" >}}). |
+| type        | No  | Optional type of the alert, either "danger" or "info". Generates an alert with related color and icon. |
 {{< /table >}}
 
 ## Examples
@@ -96,6 +97,38 @@ As an example, the following shortcode displays an alert with an icon. The icon 
 {{< example lang="hugo" >}}
 {{</* alert color="danger" icon="fas triangle-exclamation" */>}}
     An illustrated alert—check it out!
+{{</* /alert */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+### Alert of specific type
+
+As an example, the following shortcode displays an informative alert with an icon.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* alert type="info" */>}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+est laborum.
+{{</* /alert */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+As an example, the following shortcode displays a warning with an icon.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* alert type="danger" */>}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+est laborum.
 {{</* /alert */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

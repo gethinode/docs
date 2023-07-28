@@ -10,7 +10,7 @@ photoCredits: <a href="https://unsplash.com/@mildlee">Mildleee</a>
 photoSource: <a href="https://unsplash.com/photos/7KKy7-TeeVs">Unsplash</a>
 ---
 
-{{< alert >}}
+{{< alert type="danger" >}}
 The preferred approach since `v0.16` is to develop a module that wraps the required npm packages, instead of including them directly into your main site. Visit the [modules guide]({{< relref "modules" >}}) for more details.
 {{< /alert >}}
 
@@ -18,7 +18,7 @@ The preferred approach since `v0.16` is to develop a module that wraps the requi
 
 Hinode uses [npm packages]({{< ref "/docs/advanced-settings/overview#npm-packages" >}}) and [mounted folders]({{< param "links.hugo_mounts" >}}) to create a flexible, automated build system. This guide shows how to add an npm package to your site. It installs Leaflet as an example. [Leaflet]({{< param "links.leaflet" >}}) is an open-source JavaScript library to add mobile-friendly interactive maps to your site. This guide assumes you have a working site already. Check the [introduction]({{< relref "introduction" >}}) on how to set up a site with Hinode with npm.
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 A full working example of this guide is available on [GitHub]({{< param "links.repository_leaflet" >}}).
 {{< /alert >}}
 
@@ -83,7 +83,7 @@ Add a `map` placeholder to your (Markdown) content file. The following placehold
 
 Next, initialize the map placeholder with the OpenStreetMap content. The following code uses the city of London as an example. The `mapID` refers to the ID of the placeholder. The code tests if an element with the `map` ID is present and initializes the placeholder accordingly. It adds a marker with a default icon next. You can place the code in `assets/js/leafletmap.js`, where Hinode will pick it up automatically.
 
-{{< alert >}}
+{{< alert type="info" >}}
 Hinode processes the script files in alphabetical order. Our custom script requires the script from the Leaflet library to be initialized first. You can set `showJS` in the `debugging` section of the site parameters to review the order of the processed files.
 {{< /alert >}}
 

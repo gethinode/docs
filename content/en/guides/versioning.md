@@ -15,7 +15,7 @@ Providing up-to-date and accurate documentation is an important aspect of many s
 
 The next paragraphs explain two main strategies. The first strategy is to maintain seperate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 A full working example of this guide is available on [GitHub]({{< param "links.repository_versioning" >}}). Visit {{< param "links.hinode_version_demo" >}} for a live demo.
 {{< /alert >}}
 
@@ -110,7 +110,7 @@ Now create a file `docs.yml` in the `data` folder with the following content to 
 - title: About
 ```
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 You can copy the `docs.yml` file to `docs-0.1.yml` and `docs-0.2.yml` to create versioned sidebar navigation. Hinode uses `data/docs.yml` as default sidebar navigation data when no versioned file is available.
 {{< /alert >}}
 
@@ -172,7 +172,7 @@ The approach with various version folders in the same repository might be adequa
 
 **Create a new branch** called `v0.9` that is derived from your current branch (be sure to commit the current branch first). For demonstration purposes, we will expose the `latest` folder as the specific version `0.9`. Ofcourse, we could simply rename the physical folder and be done with it. However, we would loose the ability to easily track changes to our documentation in the Git repository. Renaming a folder implies that the old folder and content are removed, and a new folder is created. Instead, we will use Hugo's mounting feature to rename and expose the folder on the fly[^1].
 
-{{< alert >}}
+{{< alert type="danger" >}}
 [Mounting a content folder overrides the language-specific settings]({{< param "links.hugo_mounts" >}}). In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually refine our mounts to achieve the same behavior.
 {{< /alert >}}
 
@@ -227,7 +227,7 @@ We will also need to use absolute URLs for our page assets to ensure our referen
     canonifyAssetsURLs = true
 ```
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 In the default state, Hinode uses relative links to include images, scripts, stylesheets, and other files. In this setup, the browser would retrieve these assets from the wrong backend server when using redirection. We therefore explicitly instruct Hugo to use absolute URLs for selected assets with the `canonifyAssetsURLs` setting.
 {{< /alert >}}
 
@@ -237,7 +237,7 @@ In the default state, Hinode uses relative links to include images, scripts, sty
 
 Head over to your Netlify configuration and navigate to the section `Site configuration / Build & deploy / Continuous deployment`. Next, scroll to the section `Branches and deploy contexts` and click the button `Configure`. Select the option `Let me add individual branches` for `Branch deploys`. In the text field, enter `v0.9` as branch name. When done, click `Save`.
 
-{{< alert >}}
+{{< alert type="danger" >}}
 By default, any changes submitted to the `v0.9` branch are processed and released to production immediately. Set up branch protection rules and automated testing (similar to the `main` branch) as needed.
 {{< /alert >}}
 
@@ -286,7 +286,7 @@ Still within the **develop branch**, add the below release configuration to `con
   redirect = "https://v0-9--{sitename}.netlify.app/docs/0.9/"
 ```
 
-{{< alert >}}
+{{< alert type="info" >}}
 In local development mode the link is disabled, as server-side redirection is not supported by Hugo's web server.
 {{< /alert >}}
 

@@ -152,7 +152,7 @@ You can make your static website available via a custom domain. Visit the [Azure
 
 Netlify can host your website with continous deployment from your Git provider. The starter price plan is free for any public repository and provides 100 GB bandwidth and 300 build minutes each month. Review the next sections how to automatically deploy your site to Netlify on each update to the main branch of your repository.
 
-{{< alert >}}
+{{< alert type="info" >}}
 The starter plan requires your repository to be public. You will require a paid plan if your repository is set to private.
 {{< /alert >}}
 
@@ -166,7 +166,7 @@ The starter plan requires your repository to be public. You will require a paid 
 
 The repository root should include a file `netlify.toml`. If not, copy it from the [Hinode main repository]({{< param "links.repository" >}}). The configuration file contains the build settings that Netlify will pick up when connecting to your repository. The panel below shows the default build settings. The key command to observe is `npm run build`, which ensures the site is built properly.
 
-{{< alert >}}
+{{< alert type="info" >}}
 The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server-headers" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the [Netlify blog]({{< param "links.netlify_cache" >}}).
 {{< /alert >}}
 

@@ -9,7 +9,7 @@ layout: docs
 
 Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for [Bootstrap]({{< param "links.bootstrap" >}}), [FlexSearch]({{< param "links.flexsearch" >}}), and [Font Awesome]({{< param "links.fontawesome" >}}). The following paragraphs describe the coding conventions of Hinode modules, illustrate how to automate your build and release process, and give an overview of common issues and resolutions.
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 A [template repository for Hugo modules that are compatible with Hinode]({{< param "links.repository_mod_template" >}}) is maintained on GitHub. The repository provides a starting point for developing your own modules.
 {{< /alert >}}
 
@@ -109,7 +109,7 @@ Head over to `Branches` section within `Code and automation` of your repository 
 
 Specify the test you defined previously as required status check. When using Hinode's default test, you would see six different checks (three platforms with two Node versions each).
 
-{{< alert >}}
+{{< alert type="info" >}}
 GitHub only displays selectable status checks when they have had an initial run, so be sure to run the test first. Also, the status checks are not automatically updated when the test script changes. You will need to manually update the status checks as required.
 {{< /alert >}}
 
