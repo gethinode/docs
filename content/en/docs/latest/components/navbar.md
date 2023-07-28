@@ -104,7 +104,7 @@ Set the argument `search` to `false` to disable search input.
 
 ### Mode switcher
 
-{{< alert >}}
+{{< alert type="info" >}}
 This setting requires [dark mode]({{< relref "layout#extended-configuration">}}) to be enabled.
 {{< /alert >}}
 

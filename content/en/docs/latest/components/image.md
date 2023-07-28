@@ -12,7 +12,7 @@ tags: component
 
 Use the `image` shortcode to display a responsive image with a specific aspect ratio. The source link can refer to either an image available in the `/assets/img` folder of your site or a public web location. The shortcode renders the image as a so-called [image set]({{< param "links.mozilla_image" >}}) to optimize the image for different screen sizes and resolutions. Behind the scenes, Hugo renders the images in `WebP` format and stores them in a local folder (`resources` or `public`). The images are processed using the quality setting specified in the `[imaging]` section of the main [config file]({{< param "links.hugo_imaging" >}}) (defaults to 75). Supported image types are `.png`, `.jpeg`, `.gif`, `.tiff`, `.bmp`, and `.webp`. A fallback image of type `.jpeg` is provided for older browsers.
 
-{{< alert >}}
+{{< alert type="info" >}}
 The shortcode supports vector images too (identified by their extension `.svg`). However, these images are not processed but rather used as is.
 {{< /alert >}}
 
@@ -111,7 +111,7 @@ Add a `caption` to transform the image into a figure with caption.
 
 The shortcode supports vector images of type `.svg` too. The shortcode supports the regular arguments, however, vector images are contained instead of cropped when the `ratio` is set. The next example shows a color-mode aware vector image. The background is set to a contrasting color to illustrate the ratio behavior.
 
-{{< alert >}}
+{{< alert type="info" >}}
 Unlike bitmap images, vector images are not processed but used as is. They should be maintained in the site's `static` folder instead of the `assets` folder. Add a leading `/` to specify the absolute image location.
 {{< /alert >}}
 

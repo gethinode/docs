@@ -14,7 +14,7 @@ As a theme for Hugo, Hinode is highly configurable and customizable. Hinode util
 
 Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. These modules provide one or more of the seven component types defined in Hugo: `static`, `content`, `layouts`, `data`, `assets`, `i18n`, and `archetypes`. Powered by Go modules, Hugo verifies if a module is up-to-date and downloads the latest release if needed. This approach is compatible with any repository hosted on GitHub and is not exclusive to Hugo modules only.
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 Hugo does have some requirements for the modules to work correctly in all scenarios. Review the [module development troubleshooting section]({{< relref "module-development#troubleshooting" >}}) to familiarize yourself with them.
 {{< /alert >}}
 
@@ -24,7 +24,7 @@ Hinode uses Hugo modules to provide a flexible and extensible modular framework.
 
 Hugo supports the [mounting of folders]({{< param "links.hugo_mounts" >}}) since version 0.56.0. Hinode takes advantage of this feature to create a virtual file system, combining assets from multiple sources. Many of the predefined Hinode modules use mounted folders to expose relevant content and to standardize the folder structure. Take a look at the configuration of [Hinode's Bootstrap module]({{< param "links.repository_mod_bootstrap" >}}). The configuration uses the repository `github.com/twbs/bootstrap` as module source and exposes the SCSS files and bundled JavaScript file. These files are combined with the module's own files defined in the `assets` folder.
 
-{{< alert color="primary" >}}
+{{< alert type="danger" >}}
     When you add a mount, the default mount for the concerned target root is ignored: be sure to explicitly add it.
 {{< /alert >}}
 

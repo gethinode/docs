@@ -25,7 +25,7 @@ $$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$
 $$\forall x \in X, \quad \exists y \leq \epsilon$$
 {{< /example >}}
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 The KaTeX library is available as managed module on [GitHub]({{< param "links.repository_mod_katex" >}}).
 {{< /alert >}}
 
@@ -38,7 +38,7 @@ Hugo modules can include files for each of the following folders: `archetypes`, 
 - For `i18n` and `data` files, Hugo merges deeply using the translation ID and data key inside the files.
 - For `assets`, `content`, `static`, `layouts` (templates), and `archetypes` files, these are merged on file level. So the left-most file will be chosen.
 
-{{< alert color="info">}}
+{{< alert type="info">}}
 You can choose to either fully integrate Hugo modules or to include them on a page-by-page basis. In this guide, we will configure KaTeX as an optional module, assuming we will only need KaTeX on a few pages. See [configuring modules]({{< relref "/docs/configuration/modules#configuring-modules" >}}) for more details.
 {{< /alert >}}
 
@@ -72,7 +72,7 @@ Open the local repository in VSCode and create a `develop` branch first. Now sea
 
 We will now add KaTeX as npm package to our local repository. Run the following command from your terminal to add KaTeX as development dependency.
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 You can install npm packages as either regular packages or development dependency. We do not need the KaTeX library at run-time, as Hugo compiles a static site. Additionally, we will redistribute the required KaTeX files as part of our site deployment. We can therefore install the KaTeX package as development dependency, listed under `devDependencies` in `package.json`.
 {{< /alert >}}
 
@@ -112,7 +112,7 @@ Modify the `postinstall` script to copy the required files to a local `dist` dir
 
 The line postinstall is split into separate lines for each copy command to improve readability (you could also use [npm-run-all]({{< param "links.npm_run_all" >}}) to simplify the command even further). Each copy statement uses [cpy]({{< param "links.npm_cpy" >}}), a cross-platform copy command. The `--flat` argument instructs `cpy` to flatten the files in the destination directory `dist`. The negation pattern starting with `!` tells `cpy-cli` to skip files that end with `.min.js`.
 
-{{< alert >}}
+{{< alert type="danger" >}}
 We deliberately rename the `katex.css` file to a `katex.scss` file. The default `libsass` library, part of the [styles processing pipeline]({{< relref "styles" >}}), has difficulty processing the file otherwise.
 {{< /alert >}}
 

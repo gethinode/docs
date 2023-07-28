@@ -11,7 +11,7 @@ Hinode uses Sass files to take advantage of variables, maps, and functions to ge
 
 ## Build pipeline
 
-{{< alert >}}
+{{< alert type="info" >}}
 Currently Hinode relies on the libsass transpiler, which is [deprecated in favor of Dart Sass]({{< param "links.hugo_sass" >}}). Hinode will switch to the new transpilier once a cross-platform solution is available.
 {{< /alert >}}
 
