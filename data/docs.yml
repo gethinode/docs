@@ -62,6 +62,7 @@
     # - title: List group
     - title: Icon
     - title: Image
+    - title: Link
     - title: Map
     # - title: Modal
     - title: Navbar
