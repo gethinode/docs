@@ -4,6 +4,10 @@
     enableDarkMode = true
     modes = ["light", "dark"]
     footerBelowFold = true
+    canonifyAssetsURLs = false
+    [main.externalLinks]
+        cue = true
+        tab = true
 
 [modules]
     core = ["bootstrap", "flexsearch", "fontawesome"]
