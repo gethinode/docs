@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-05-20
+date: 2023-07-30
 layout: docs
 ---
 
@@ -69,6 +69,8 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
+| externalLinks.cue  | false             | If set, adds a visual cue `{{< fas up-right-from-square fa-2xs >}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
+| externalLinks.tab  | false             | If set, opens [managed external links]({{< relref "links-and-cross-references#managed-links" >}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
