@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Button
-date: 2023-05-21
+date: 2023-07-30
 description: Use the button shortcode to display a button with a hyperlink.
 layout: docs
 icon: fa hand-pointer
@@ -39,9 +39,15 @@ The shortcode supports the following arguments:
 | toast       | No       | Optional id of the toast message to display when the button is clicked. |
 | collapse    | No       | Optional panel to collapse. Cannot be used together with tooltip. Ignored for active/inactive buttons. |
 | placement   | No       | How to position the tooltip: "top" (default), "bottom", "left", or "right". |
+| class       | No       | Optional class attribute of the button element, e.g. “p-5”. |
+| icon        | No       | Font Awesome icon class attribute, required unless button title is set. An example value is "fas sort". |
+| order       | No       | Optional order of the icon, either "first" or "last" (default). |
+| justify     | No       | Optional justification of the button title and icon, either "start", "end", "center" (default), "between", "around", or "evenly". |
+| cue         | No       | Optional flag to indicate if an external link should show a visual cue, defaults to setting "main.externalLinks.cue" in the site's parameters. |
+| tab         | No       | Optional flag to indicate if an external link should open in a new tab, defaults to setting "main.externalLinks.tab" in the site's parameters. |
 {{< /table >}}
 
-## Example
+## Examples
 
 ### Statefull buttons
 
@@ -94,6 +100,35 @@ Set the `badge` argument to add a badge to the top right of the button.
 {{</* button color="secondary" href="#!" badge="99+" */>}}
     Inbox
 {{</* /button */>}}
+{{< /example>}}
+<!-- markdownlint-enable MD037 -->
+
+### Buttons with an icon
+
+Set the `icon` argument to add an icon to the button. Use `order` to determine the position of the icon relative to the title. Omit the title to show an icon only.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+<div class="hstack gap-3 justify-content-center">
+    {{</* button icon="fab linkedin" cue=false order="first" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+    {{</* button icon="fab linkedin" cue=false order="last" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+    {{</* button icon="fab linkedin" href="https://linkedin.com" /*/>}}
+</div>
+{{< /example>}}
+<!-- markdownlint-enable MD037 -->
+
+Use `justify` to adjust the layout of the icon and button title.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+<div class="vstack mx-auto w-25">
+    {{</* button icon="fab linkedin" cue=false justify="start" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+    {{</* button icon="fab linkedin" cue=false justify="end" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+    {{</* button icon="fab linkedin" cue=false justify="center" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+    {{</* button icon="fab linkedin" cue=false justify="between" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+    {{</* button icon="fab linkedin" cue=false justify="around" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+    {{</* button icon="fab linkedin" cue=false justify="evenly" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
+</div>
 {{< /example>}}
 <!-- markdownlint-enable MD037 -->
 
