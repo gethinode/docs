@@ -3,7 +3,7 @@ module github.com/gethinode/docs
 go 1.20
 
 require (
-	github.com/gethinode/hinode v0.16.8 // indirect
+	github.com/gethinode/hinode v0.16.9 // indirect
 	github.com/gethinode/mod-bootstrap v1.1.1 // indirect
 	github.com/gethinode/mod-flexsearch v1.1.4 // indirect
 	github.com/gethinode/mod-fontawesome v1.2.1 // indirect
