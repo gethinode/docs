@@ -50,6 +50,7 @@
     enabled = true
     sort = "weight"
     reverse = false
+    webshare = true
 
 [[sharing.providers]]
     name = "LinkedIn"
@@ -221,6 +222,7 @@
     bs_navbar_placement = "https://getbootstrap.com/docs/5.3/components/navbar/#placement"
     bs_tables = "https://getbootstrap.com/docs/5.3/content/tables"
     caniuse_container = "https://caniuse.com/?search=%40container"
+    caniuse_webshare = "https://caniuse.com/?search=navigator.share"
     cc_by_nc_4_0 = "https://creativecommons.org/licenses/by-nc/4.0/"
     cloudflare = "https://cloudflare.com"
     commit_message = "https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html"
