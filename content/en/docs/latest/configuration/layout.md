@@ -283,7 +283,7 @@ By default, single pages, such as a blog page, include multiple elements, such a
                 <p>Metadata</p>
                 <p>Tags</p>
                 <p>Description</p>
-                <i class="fa-solid fa-image"></i> Thumbnail
+                {{< fas image >}} Thumbnail
             </div>
         </div>
         <div class="col-12">
@@ -436,7 +436,7 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
                 <p>Item 1</p>
                 <div class="row">
                     <div class="col-6">
-                        <div class="p-3 border rounded-3 text-secondary"><i class="fa-solid fa-image"></i></div>
+                        <div class="p-3 border rounded-3 text-secondary">{{< fas image >}}</div>
                     </div>
                     <div class="col-6">
                         <div class="p-3 border rounded-3">Content .col-6</div>
@@ -452,7 +452,7 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
                         <div class="p-3 border rounded-3">Content .col-6</div>
                     </div>
                     <div class="col-6">
-                        <div class="p-3 border rounded-3 text-secondary"><i class="fa-solid fa-image"></i></div>
+                        <div class="p-3 border rounded-3 text-secondary">{{< fas image >}}</div>
                     </div>
                 </div>
             </div>
