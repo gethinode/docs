@@ -1,11 +1,11 @@
 ---
 title: Icons
 description: Use out-of-the-box Font Awesome icons to style your website.
-date: 2023-05-29
+date: 2023-08-02
 layout: docs
 ---
 
-Hinode provides out-of-the box access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}). The [shortcodes]({{< relref "icon" >}}) `fa`, `fab`, and `fas` are available to add these icons with as limited code as possible. The Font Awesome icon library provides various [styling options]({{< param "links.fa_styling" >}}). The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
+Hinode provides out-of-the box access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}). The [shortcodes]({{< relref "icon" >}}) `icon`, `fa`, `fab`, and `fas` are available to add these icons with as limited code as possible. The Font Awesome icon library provides various [styling options]({{< param "links.fa_styling" >}}). The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
 
 ## Styling basics
 
@@ -44,13 +44,13 @@ Font Awesome includes a range of t-shirt based sizes that are relative to the br
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<p>{{</* fas coffee fa-2xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas coffee fa-xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas coffee fa-sm */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas coffee fa */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas coffee fa-lg */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas coffee fa-xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas coffee fa-2xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+<p>{{</* fas mug-saucer fa-2xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+<p>{{</* fas mug-saucer fa-xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+<p>{{</* fas mug-saucer fa-sm */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+<p>{{</* fas mug-saucer fa */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+<p>{{</* fas mug-saucer fa-lg */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+<p>{{</* fas mug-saucer fa-xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+<p>{{</* fas mug-saucer fa-2xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -108,11 +108,13 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 
 {{< release version="v0.14.5" >}}
 
+Hinode supports responsive sizing of icons using so-called containers. Wrap the icon in an element with class `fa-wrapper` and add the class attribute `fa-fluid` to the icon itself. The icon is now dynamically resized.
+
 {{< alert type="info" >}}
 Container support is a relatively new CSS feature that is not supported by all browsers yet. See this overview to [check the current browser support]({{< param "links.caniuse_container" >}}). Hinode uses a fixed-size icon with a `font-size` of `5rem` as fallback.
 {{< /alert >}}
 
-Hinode supports responsive sizing of icons using so-called containers. Wrap the icon in an element with class `fa-wrapper` and add the class attribute `fa-fluid` to the icon itself. The icon is now dynamically resized. The following example demonstrates a centered, responsive icon. As Hinode includes Font Awesome as a web font, the wrapper element may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
+The following example demonstrates a centered, responsive icon. When [including Font Awesome as a web font]({{< relref "../configuration/modules#configuring-modules" >}}), the wrapper element may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -129,10 +131,10 @@ Add `fa-fw` to the class of the HTML element referencing your icon to apply a fi
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 <div class="fa-3x">
-    <div>{{</* fas skating fa-fw bg-body-tertiary */>}} Skating</div>
-    <div>{{</* fas skiing fa-fw bg-body-tertiary */>}} Skiing</div>
-    <div>{{</* fas skiing-nordic fa-fw bg-body-tertiary */>}} Nordic Skiing</div>
-    <div>{{</* fas snowboarding fa-fw bg-body-tertiary */>}} Snowboarding</div>
+    <div>{{</* fas person-skating fa-fw bg-body-tertiary */>}} Skating</div>
+    <div>{{</* fas person-skiing fa-fw bg-body-tertiary */>}} Skiing</div>
+    <div>{{</* fas person-skiing-nordic fa-fw bg-body-tertiary */>}} Nordic Skiing</div>
+    <div>{{</* fas person-snowboarding fa-fw bg-body-tertiary */>}} Snowboarding</div>
     <div>{{</* fas snowplow fa-fw bg-body-tertiary */>}} Snowplow</div>
 </div>
 {{< /example >}}
@@ -146,7 +148,7 @@ Use the classes `fa-ul` and `fa-li` to replace default bullets in unordered list
 {{< example lang="hugo" >}}
 <ul class="fa-ul">
     <li><span class="fa-li">{{</* fas circle-check */>}}</span>List icons can</li>
-    <li><span class="fa-li">{{</* fas check-square */>}}</span>be used to</li>
+    <li><span class="fa-li">{{</* fas square-check */>}}</span>be used to</li>
     <li><span class="fa-li">{{</* fas spinner fa-pulse */>}}</span>replace bullets</li>
     <li><span class="fa-li">{{</* fa square */>}}</span>in lists</li>
 </ul>
@@ -160,13 +162,13 @@ Use specific classes to rotate the icon with a specific degree. The following ex
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 <div class="fa-3x">
-    {{</* fas snowboarding */>}}
-    {{</* fas snowboarding fa-rotate-90 */>}}
-    {{</* fas snowboarding fa-rotate-180 */>}}
-    {{</* fas snowboarding fa-rotate-270 */>}}
-    {{</* fas snowboarding fa-flip-horizontal */>}}
-    {{</* fas snowboarding fa-flip-vertical */>}}
-    {{</* fas snowboarding fa-flip-both */>}}
+    {{</* fas person-snowboarding */>}}
+    {{</* fas person-snowboarding fa-rotate-90 */>}}
+    {{</* fas person-snowboarding fa-rotate-180 */>}}
+    {{</* fas person-snowboarding fa-rotate-270 */>}}
+    {{</* fas person-snowboarding fa-flip-horizontal */>}}
+    {{</* fas person-snowboarding fa-flip-vertical */>}}
+    {{</* fas person-snowboarding fa-flip-both */>}}
 </div>
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -197,7 +199,7 @@ Font Awesome supports various animations by simply adding a animation class to t
     {{</* fas basketball fa-bounce */>}}
     {{</* fas camera-rotate fa-flip */>}}
     {{</* fas bell fa-shake */>}}
-    {{</* fas sync fa-spin */>}}
+    {{</* fas arrows-rotate fa-spin */>}}
 </div>
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
