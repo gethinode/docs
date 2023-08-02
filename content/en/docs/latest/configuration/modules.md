@@ -48,6 +48,18 @@ The following table provides an overview of the available settings. Omit the `mo
 | disableTemplate | ["katex"]     | Scripts file within optional modules to exclude from processing as Hugo template. The scripts are bundled as-is instead. |
 {{< /table >}}
 
+{{< release version="v0.17.0" >}}
+
+The `fontawesome` module supports the following additional settings:
+
+{{< table >}}
+| Setting                 | Default | Description |
+|-------------------------|---------|-------------|
+| fontawesome.inline      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon. |
+| fontawesome.debug       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
+| fontawesome.skipMissing | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
+{{< /table >}}
+
 Hinode uses the following module configuration by default:
 
 {{< docs name="modules" file="config/_default/params.toml" >}}
