@@ -6,7 +6,7 @@ weight: 20
 icon: fab bootstrap
 ---
 
-[Bootstrap]({{< param "links.bootstrap" >}}) is a popular, open-source web development framework. Using a mobile-first approach, it provides several functions and components to simplify the creation of responsive websites.
+{{< link bootstrap >}}Bootstrap{{< /link >}} is a popular, open-source web development framework. Using a mobile-first approach, it provides several functions and components to simplify the creation of responsive websites.
 
 {{< button relref="layout" outline="true" >}}
     Check the grid system
