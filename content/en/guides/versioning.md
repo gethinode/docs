@@ -1,7 +1,7 @@
 ---
 title: Creating versioned documentation
 description: Guide on how to create versioned documentation using folders and branch deployments.
-date: 2023-07-06
+date: 2023-08-02
 tags: ["guide", "versioning"]
 weight: 40
 thumbnail: img/books.jpg
@@ -16,7 +16,7 @@ Providing up-to-date and accurate documentation is an important aspect of many s
 The next paragraphs explain two main strategies. The first strategy is to maintain seperate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
 
 {{< alert type="info" >}}
-A full working example of this guide is available on [GitHub]({{< param "links.repository_versioning" >}}). Visit {{< param "links.hinode_version_demo" >}} for a live demo.
+A full working example of this guide is available on {{</* link repository_versioning >}}GitHub{{< /link >}}. Visit {{< link hinode_version_demo /*/>}} for a live demo.
 {{< /alert >}}
 
 ## Step 1 - Preparing the basic content
@@ -173,7 +173,7 @@ The approach with various version folders in the same repository might be adequa
 **Create a new branch** called `v0.9` that is derived from your current branch (be sure to commit the current branch first). For demonstration purposes, we will expose the `latest` folder as the specific version `0.9`. Ofcourse, we could simply rename the physical folder and be done with it. However, we would loose the ability to easily track changes to our documentation in the Git repository. Renaming a folder implies that the old folder and content are removed, and a new folder is created. Instead, we will use Hugo's mounting feature to rename and expose the folder on the fly[^1].
 
 {{< alert type="danger" >}}
-[Mounting a content folder overrides the language-specific settings]({{< param "links.hugo_mounts" >}}). In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually refine our mounts to achieve the same behavior.
+{{</* link hugo_mounts >}}Mounting a content folder overrides the language-specific settings{{< /link */>}}. In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually refine our mounts to achieve the same behavior.
 {{< /alert >}}
 
 Add the following mount to `config/_default/hugo.toml` to map the `latest` folder to `0.9`. We will keep the remaining content within the `docs` folder as is.
@@ -253,9 +253,9 @@ Now that we have configured a branch-specific site for `v0.9` of our documentati
 
 ### Using server-side redirection
 
-Hugo supports [client-side redirection using aliases]({{< param "links.hugo_alias" >}}). We have defined these aliases in our about pages. In this approach, the browser receives an instruction to redirect to a new URL when visiting the initial page. We can instruct the server to redirect the URL instead, thus safing an additional roundtrip.
+Hugo supports {{< link hugo_alias >}}client-side redirection using aliases{{< /link >}}. We have defined these aliases in our about pages. In this approach, the browser receives an instruction to redirect to a new URL when visiting the initial page. We can instruct the server to redirect the URL instead, thus safing an additional roundtrip.
 
-Hinode has defined a template in [layouts/index.redir]({{< param "links.repository_redir" >}}) to automatically generate server-side redirection rules for Netlify. When you add the status code `200` to such a rule, the [redirection becomes a rewrite]({{< param "links.netlify_rewrite" >}}). In a **rewrite**, the URL in the visitor's address bar remains the same, while the content is fetched from a different location behind the scenes. We will use this mechanism to fetch the content from the branch site.
+Hinode has defined a template in {{< link repository_redir >}}layouts/index.redir{{< /link >}} to automatically generate server-side redirection rules for Netlify. When you add the status code `200` to such a rule, the {{< link netlify_rewrite >}}redirection becomes a rewrite{{< /link >}}. In a **rewrite**, the URL in the visitor's address bar remains the same, while the content is fetched from a different location behind the scenes. We will use this mechanism to fetch the content from the branch site.
 
 Go back to your **develop branch** and add the below code to your **production configuration** in `config/production/hugo.toml`. The setting `disableAliases` disables all client-side redirection rules. Instead, the `REDIR` output generates all redirection rules for the server, including rewrites.
 
@@ -310,7 +310,7 @@ Open the file `public/_redirects` to review the rules. The first rule uses the c
 
 ### Adding a version overview
 
-You can add a link to a custom overview page. An example of such a [version overview page is available in the demo repository]({{< param "links.repository_versioning_overview" >}}). Add the link to the page in the `overview` setting within the `docs` section of the `config/_default/params.toml`. Do not forget to add the configuration to the `v0.9` branch too, if desired.
+You can add a link to a custom overview page. An example of such a {{< link repository_versioning_overview >}}version overview page is available in the demo repository{{< /link >}}. Add the link to the page in the `overview` setting within the `docs` section of the `config/_default/params.toml`. Do not forget to add the configuration to the `v0.9` branch too, if desired.
 
 ```toml
 [docs]
