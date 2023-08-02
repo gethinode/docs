@@ -1,5 +1,17 @@
 # This file holds all entries for the release timeline
 
+
+- title: Inline icons
+  icon: fas bezier-curve
+  color: warning
+  date: 2023-08-02
+  badge: v0.17.0
+  url: v0.17.0
+  content:
+    Up until now, Hinode used web fonts and stylesheets to display Font Awesome icons. This release adds support for
+    inline icons using vector images. These vector icons still support the common styling and animation directives. When
+    enabled, the size of the generated site's assets should be ~200k less on average.
+
 - title: Hugo modules
   icon: fas puzzle-piece
   color: warning
