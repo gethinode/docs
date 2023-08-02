@@ -29,7 +29,7 @@
 
 [[main]]
   name = "GitHub"
-  pre = "<i class=\"fab fa-github\"></i>"
+  pre = "fab fa-github"
   url = "https://github.com/gethinode/hinode"
   weight = 60
   [main.params]
