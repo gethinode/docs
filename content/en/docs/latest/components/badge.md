@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Badge
-date: 2023-05-21
+date: 2023-08-03
 description: Use the badge class attribute to enrich headings.
 layout: docs
 icon: fas envelope-circle-check
@@ -22,7 +22,7 @@ The badge requires no arguments.
 
 ## Examples
 
-Use HTML code to display a badge for a heading. See the Bootstrap [documentation]({{< param "links.bs_badge_heading" >}}) for more information.
+Use HTML code to display a badge for a heading. See the Bootstrap {{< link bs_badge_heading >}}documentation{{< /link >}} for more information.
 
 ### Heading badges
 
@@ -39,7 +39,7 @@ Badges scale to match the size of the immediate parent element by using relative
 
 ### Colored badges
 
-Set a background-color with contrasting foreground color with [Bootstrap's `.text-bg-{color}` helpers]({{< param "links.bs_color_helpers" >}}).
+Set a background-color with contrasting foreground color with {{< link bs_color_helpers >}}Bootstrap's `.text-bg-{color}` helpers{{< /link >}}.
 
 {{< example >}}
 <span class="badge text-bg-primary">Primary</span>
