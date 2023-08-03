@@ -12,14 +12,14 @@ Hinode uses Sass files to take advantage of variables, maps, and functions to ge
 ## Build pipeline
 
 {{< alert type="info" >}}
-Currently Hinode relies on the libsass transpiler, which is [deprecated in favor of Dart Sass]({{< param "links.hugo_sass" >}}). Hinode will switch to the new transpilier once a cross-platform solution is available.
+Currently Hinode relies on the libsass transpiler, which is {{</* link hugo_sass >}}deprecated in favor of Dart Sass{{< /link */>}}. Hinode will switch to the new transpilier once a cross-platform solution is available.
 {{< /alert >}}
 
 Hinodes uses Hugo modules and mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
 
 1. **Initialize the Sass variables**
 
-   Hugo [v0.109.0]({{< param "links.hugo_release_v0_109_0" >}}) introduced a convenient way to [initialize Sass variables from your templates]({{< param "links.hugo_vars" >}}). Hinode initializes several variables in the file `layouts/partials/head/stylesheet.html`. For example, the primary theme color is available as `$primary`.
+   Hugo {{< link hugo_release_v0_109_0 >}}v0.109.0{{< /link >}} introduced a convenient way to {{< link hugo_vars >}}initialize Sass variables from your templates{{< /link >}}. Hinode initializes several variables in the file `layouts/partials/head/stylesheet.html`. For example, the primary theme color is available as `$primary`.
 
 2. **Define the Sass entrypoint**
 
@@ -41,7 +41,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexibile virtual file
 
 5. **Transpile the Sass files**
 
-   The partial `partials/head/stylesheet.html` reads the application entrypoint, configures the `node_modules` folder as import path, and transpiles the stylesheet into a single file `main.css`. In production mode, the output is minified and linked to with a [fingerprint]({{< param "links.hugo_fingerprint" >}}).
+   The partial `partials/head/stylesheet.html` reads the application entrypoint, configures the `node_modules` folder as import path, and transpiles the stylesheet into a single file `main.css`. In production mode, the output is minified and linked to with a {{< link hugo_fingerprint >}}fingerprint{{< /link >}}.
 
 6. **Link to the stylesheet in the base layout**
 
