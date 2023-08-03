@@ -1,11 +1,11 @@
 ---
 title: Commands
 description: Use npm commands to automate the build process and to keep track of dependencies.
-date: 2023-07-21
+date: 2023-08-03
 layout: docs
 ---
 
-Hinode supports [Node Package Manager]({{< param "links.npm" >}}) to automate the build process and to keep track of dependencies. The `package.json` file in the repository root defines several commands to simplify local development and testing. The following paragraphs describe the main commands.
+Hinode supports {{< link npm >}}Node Package Manager{{< /link >}} to automate the build process and to keep track of dependencies. The `package.json` file in the repository root defines several commands to simplify local development and testing. The following paragraphs describe the main commands.
 
 ## Installing the required modules
 
@@ -47,9 +47,9 @@ npm run build:debug
 
 Use the the following command to analyze the source code and to test for any stylistic errors. The lint command validates three types of files in the `assets` folder and `content` folder:
 
-* Javascript (`assets/*.js`) using [eslint]({{< param "links.eslint" >}}).
-* CSS and SASS (`assets/scss/**/*.{css,sass,scss,sss,less}`) using [stylelint]({{< param "links.stylelint" >}}).
-* Markdown (`*.md` and `content/**/*.md`) using [markdownlint-cli2]({{< param "links.markdownlint" >}}).
+* Javascript (`assets/*.js`) using {{< link eslint >}}eslint{{< /link >}}.
+* CSS and SASS (`assets/scss/**/*.{css,sass,scss,sss,less}`) using {{< link stylelint >}}stylelint{{< /link >}}.
+* Markdown (`*.md` and `content/**/*.md`) using {{< link markdownlint >}}markdownlint-cli2{{< /link >}}.
 
 The basic configuration of these linting tools is defined in the repository root.
 
