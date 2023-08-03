@@ -1,15 +1,15 @@
 ---
 title: Icons
 description: Use out-of-the-box Font Awesome icons to style your website.
-date: 2023-08-02
+date: 2023-08-03
 layout: docs
 ---
 
-Hinode provides out-of-the box access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}). The [shortcodes]({{< relref "icon" >}}) `icon`, `fa`, `fab`, and `fas` are available to add these icons with as limited code as possible. The Font Awesome icon library provides various [styling options]({{< param "links.fa_styling" >}}). The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
+Hinode provides out-of-the box access to the free icons of {{< link fontawesome >}}Font Awesome{{< /link >}}. The [shortcodes]({{< relref "icon" >}}) `icon`, `fa`, `fab`, and `fas` are available to add these icons with as limited code as possible. The Font Awesome icon library provides various {{< link fa_styling >}}styling options{{< /link >}}. The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
 
 ## Styling basics
 
-The [Font Awesome icon library]({{< param "links.fa_icons" >}}) provides access to more than 2.000 free and open-source icons. Simply search for a keyword and review the presented options. For example, searching for the keyword `music` and filtering for `free` returns a list of nearly 30 icons. Use one of the following three [shortcodes]({{< relref "icon" >}}) to add an icon to your Markdown content:
+The {{< link fa_icons >}}Font Awesome icon library{{< /link >}} provides access to more than 2.000 free and open-source icons. Simply search for a keyword and review the presented options. For example, searching for the keyword `music` and filtering for `free` returns a list of nearly 30 icons. Use one of the following three [shortcodes]({{< relref "icon" >}}) to add an icon to your Markdown content:
 
 - `fa` - regular Font Awesome icon library
 - `fab` - brands Font Awesome icon library
@@ -111,7 +111,7 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 Hinode supports responsive sizing of icons using so-called containers. Wrap the icon in an element with class `fa-wrapper` and add the class attribute `fa-fluid` to the icon itself. The icon is now dynamically resized.
 
 {{< alert type="info" >}}
-Container support is a relatively new CSS feature that is not supported by all browsers yet. See this overview to [check the current browser support]({{< param "links.caniuse_container" >}}). Hinode uses a fixed-size icon with a `font-size` of `5rem` as fallback.
+Container support is a relatively new CSS feature that is not supported by all browsers yet. See this overview to {{</* link caniuse_container >}}check the current browser support{{< /link */>}}. Hinode uses a fixed-size icon with a `font-size` of `5rem` as fallback.
 {{< /alert >}}
 
 The following example demonstrates a centered, responsive icon. When [including Font Awesome as a web font]({{< relref "../configuration/modules#configuring-modules" >}}), the wrapper element may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
@@ -188,7 +188,7 @@ The following classes are available:
 
 ## Animating icons
 
-Font Awesome supports various animations by simply adding a animation class to the HTML element. The following example illustrates the available basic animations. Add custom styles to your [Sass files]({{< ref "styles" >}}) to apply additional [animation utilities]({{< param "links.fa_animation" >}}).
+Font Awesome supports various animations by simply adding a animation class to the HTML element. The following example illustrates the available basic animations. Add custom styles to your [Sass files]({{< ref "styles" >}}) to apply additional {{< link fa_animation >}}animation utilities{{< /link >}}.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
