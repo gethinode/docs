@@ -52,11 +52,11 @@ The partial `layouts/partials/footer/scripts.html` loads the Google Tag Manager 
 
 ## Content Security Policy
 
-[Google Analytics requires several Content Security Policies]({{< param "links.google_analytics_csp" >}}) to be set in the [server headers]({{< relref "server-headers" >}}).
+{{< link google_analytics_csp >}}Google Analytics requires several Content Security Policies{{< /link >}} to be set in the [server headers]({{< relref "server-headers" >}}).
 
 ### Google Analytics 4
 
-Hinode has enabled access for Google Analytics 4 by default. The following settings are added to `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository’s root when deploying to [Netlify]({{< param "links.netlify" >}}).
+Hinode has enabled access for Google Analytics 4 by default. The following settings are added to `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository’s root when deploying to {{< link netlify >}}Netlify{{< /link >}}.
 
 ```yaml
 script-src:  https://*.googletagmanager.com
