@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Spinner
-date: 2023-05-21
+date: 2023-08-03
 description: Use the spinner shortcode to indicate the loading state of a component or page.
 layout: docs
 icon: fas spinner
@@ -11,7 +11,7 @@ tags: component
 ## Overview
 
 {{< alert type="info" >}}
-The animation effect of this component is dependent on the `prefers-reduced-motion` media query. See the reduced motion section of [Bootstrap's accessibility documentation]({{< param "links.bs_reduced_motion" >}}).
+The animation effect of this component is dependent on the `prefers-reduced-motion` media query. See the reduced motion section of {{</* link bs_reduced_motion >}}Bootstrap's accessibility documentation{{< /link */>}}.
 {{< /alert >}}
 
 Use the `spinner` shortcode to indicate the loading state of a component or page. The inner content is used as alternative description. As an example, the following shortcode displays a centered spinner.
