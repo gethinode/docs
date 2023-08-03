@@ -1,7 +1,7 @@
 ---
 title: Analytics
 description: Enable analytics for your website to view usage statistics and more.
-date: 2023-04-27
+date: 2023-08-03
 layout: docs
 ---
 
