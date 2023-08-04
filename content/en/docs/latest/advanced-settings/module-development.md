@@ -1,7 +1,7 @@
 ---
 title: Module development
 description: Develop your own Hugo modules compatible with Hinode.
-date: 2023-08-02
+date: 2023-08-04
 layout: docs
 ---
 
@@ -9,9 +9,11 @@ layout: docs
 
 Hinode fully supports {{< link hugo_modules >}}Hugo modules{{< /link >}} to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for {{< link bootstrap >}}Bootstrap{{< /link >}}, {{< link flexsearch >}}FlexSearch{{< /link >}}, and {{< link fontawesome >}}Font Awesome{{< /link >}}. The following paragraphs describe the coding conventions of Hinode modules, illustrate how to automate your build and release process, and give an overview of common issues and resolutions.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
 A {{</* link repository_mod_template >}}template repository for Hugo modules that are compatible with Hinode{{< /link */>}} is maintained on GitHub. The repository provides a starting point for developing your own modules.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Conventions
 
@@ -177,6 +179,7 @@ The workflow requires two secrets within your repository. Add them as `action se
 
 Hugo modules have several constraints to work properly. The below overview provides some common challenges and how to overcome them.
 
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="The required distibution files are unavailable" >}}
     Hugo modules use the latest available release on GitHub, or the most recent HEAD of the default branch otherwise. However, not all repositories maintain their distribution files as part of version control or their GitHub release assets. One such example is the {{</* link leaflet >}}Leaflet library{{< /link */>}}. The repository does not include the compiled JavaScript, but only its source files. As a workaround, the {{</* link repository_mod_leaflet >}}Leaflet module{{< /link */>}} downloads the npm package instead and copies the required files in a `postinstall` script.
@@ -200,3 +203,4 @@ Hugo modules have several constraints to work properly. The below overview provi
     You might have an issue with your Hugo module cache. Certain operating systems such as macOS have a volatile cache system, that is modified when your machine has restarted or was recently suspended. Try running `hugo mod clean` to clear the Hugo module cache and then rerun `hugo mod get -u`.
   {{< /accordion-item >}}
 {{< /accordion >}}
+<!-- markdownlint-enable MD037 -->

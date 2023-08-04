@@ -1,7 +1,7 @@
 ---
 title: Icons
 description: Use out-of-the-box Font Awesome icons to style your website.
-date: 2023-08-03
+date: 2023-08-04
 layout: docs
 ---
 
@@ -110,9 +110,11 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 
 Hinode supports responsive sizing of icons using so-called containers. Wrap the icon in an element with class `fa-wrapper` and add the class attribute `fa-fluid` to the icon itself. The icon is now dynamically resized.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
 Container support is a relatively new CSS feature that is not supported by all browsers yet. See this overview to {{</* link caniuse_container >}}check the current browser support{{< /link */>}}. Hinode uses a fixed-size icon with a `font-size` of `5rem` as fallback.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 The following example demonstrates a centered, responsive icon. When [including Font Awesome as a web font]({{< relref "../configuration/modules#configuring-modules" >}}), the wrapper element may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
 

@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-08-03
+date: 2023-08-04
 aliases:
   - "/docs/contribute/"
   - "/contribute/"
@@ -79,9 +79,11 @@ Adhering to the following process is the best way to get your work included in t
 
 1. Open a {{< link github_pr >}}Pull Request{{< /link >}} with a clear title and description against the main branch.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="danger" >}}
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the terms of the {{</* link license >}}MIT license{{< /link */>}} (if it includes code changes) and under the terms of the Creative Commons ({{</* link cc_by_nc_4_0 >}}CC BY-NC 4.0){{< /link */>}} license (if it includes documentation changes).
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Module contributions
 
@@ -118,6 +120,7 @@ Bundle related client-side javascript in a logically named file. Add the file to
 
 See {{< link markdown_rules >}}markdown rules{{< /link >}} for more details. The following rules are globally disabled:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | #     | Rule | Remarks |
 |-------|-----------------------------------------------------------------------------------------------|---------------------------------|
@@ -129,6 +132,7 @@ See {{< link markdown_rules >}}markdown rules{{< /link >}} for more details. The
 | MD051 | {{</* link markdown_md051 >}}Link fragments should be valid{{< /link */>}}                        | |
 | MD053 | {{</* link markdown_md053 >}}Link and image reference definitions should be needed{{< /link */>}} | Disabled due to false positives |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## License
 

@@ -15,9 +15,11 @@ Providing up-to-date and accurate documentation is an important aspect of many s
 
 The next paragraphs explain two main strategies. The first strategy is to maintain seperate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
 A full working example of this guide is available on {{</* link repository_versioning >}}GitHub{{< /link >}}. Visit {{< link hinode_version_demo /*/>}} for a live demo.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Step 1 - Preparing the basic content
 
@@ -172,9 +174,11 @@ The approach with various version folders in the same repository might be adequa
 
 **Create a new branch** called `v0.9` that is derived from your current branch (be sure to commit the current branch first). For demonstration purposes, we will expose the `latest` folder as the specific version `0.9`. Ofcourse, we could simply rename the physical folder and be done with it. However, we would loose the ability to easily track changes to our documentation in the Git repository. Renaming a folder implies that the old folder and content are removed, and a new folder is created. Instead, we will use Hugo's mounting feature to rename and expose the folder on the fly[^1].
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="danger" >}}
 {{</* link hugo_mounts >}}Mounting a content folder overrides the language-specific settings{{< /link */>}}. In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually refine our mounts to achieve the same behavior.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 Add the following mount to `config/_default/hugo.toml` to map the `latest` folder to `0.9`. We will keep the remaining content within the `docs` folder as is.
 

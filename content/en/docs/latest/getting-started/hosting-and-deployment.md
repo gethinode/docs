@@ -39,6 +39,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 The table below gives a brief overview of the features supported by a few selected hosting providers. The next paragraphs describe the build and deployment process for each provider in more detail.
 
+<!-- markdownlint-disable MD037 -->
 {{< table "table-striped-columns w-auto" >}}
 | Feature            | Azure blob storage | Netlify           |
 |--------------------|--------------------|-------------------|
@@ -47,6 +48,7 @@ The table below gives a brief overview of the features supported by a few select
 | CDN / Edge network | Requires Azure CDN | {{</* fas check */>}} |
 | HTTP headers       | Requires Azure CDN | {{</* fas check */>}} |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 <!-- | Feature            | Azure blob storage | Azure Static Web App | GitHub pages      | Netlify           |
 |--------------------|--------------------|----------------------|-------------------|-------------------|
@@ -166,9 +168,11 @@ The starter plan requires your repository to be public. You will require a paid 
 
 The repository root should include a file `netlify.toml`. If not, copy it from the {{< link repository >}}Hinode main repository{{< /link >}}. The configuration file contains the build settings that Netlify will pick up when connecting to your repository. The panel below shows the default build settings. The key command to observe is `npm run build`, which ensures the site is built properly.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
 The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server-headers" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the {{</* link netlify_cache >}}Netlify blog{{< /link */>}}.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 {{< docs name="netlify" file="netlify.toml" show="false" >}}
 
@@ -186,6 +190,7 @@ Sign up for Netlify and configure your site in seven steps.
   {{< img src="img/netlify-step7.png" caption="Step 7. Configure the build settings" >}}
 {{< /carousel >}}
 
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Step 1. Sign up for Netlify" >}}
     Go to {{</* link netlify >}}netlify.com{{< /link */>}} and click on the button `Sign up`. Select your preferred signup method next. This will likely be a hosted Git provider, although you also have the option to sign up with an email address. The next steps use GitHub, but other Git providers will follow a similar process.
@@ -209,5 +214,6 @@ Sign up for Netlify and configure your site in seven steps.
     Review the basic build settings. Netlify will use the settings provided in the [preparations]({{< relref "#preparations" >}}). Click on the button `Deploy site` to start the build and deployment process.
   {{< /accordion-item >}}
 {{< /accordion >}}
+<!-- markdownlint-enable MD037 -->
 
 Your site is now ready to be used. Click on the domain settings of your site within the `Site overview` page to provide a domain alias and to edit the site name as needed. The same section also allows the configuration of a custom domain. Be sure to review your [server configuration]({{< relref "server-headers" >}}) if you encounter any rendering issues, such as broken links or garbled stylesheets.

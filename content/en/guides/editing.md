@@ -178,9 +178,11 @@ npm run lint
 
 Head over to VSCode's Source Control to view the pending changes. Click on the file `about.md` to open the code inspector. VSCode will then show the differences between the previous version and current version of the file. Content that has been replaced or removed is marked red, and content that has been added or modified is marked green. Verify the changes and click on the `+` button to stage the changes. Enter a descriptive commit message such as `Update about page`. When done, click on the blue `Commit` button to commit the changes on the `develop` branch. Lastly, click on the blue button `Publish Branch` to submit tbe branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
 By convention, a commit message should use the imperative mood and should be less than 150 characters in total. Review the blog from Initial Commit to see more {{</* link initialcommit >}}best practices and guidelines to write good commit messages{{< /link */>}}.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Step 4 - Submitting a Pull Request
 

@@ -99,6 +99,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode can optionally add buttons to share a post via available social media. Use the following extended settings in the `sharing` section of the `site parameters` to configure these buttons:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
@@ -107,6 +108,7 @@ Hinode can optionally add buttons to share a post via available social media. Us
 | reverse         | false         | Flag to indicate if the sorting of the social sharing buttons should be reversed, defaults to false. |
 | webshare        | false         | Flag to indicate if native sharing provided by the Operating System should be enabled (via the web share API). If set and {{</* link caniuse_webshare >}}supported by the browser{{< /link */>}}, an additional button is added. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 Add each available provider to `[[sharing.providers]]`. The providers support the following arguments:
 
@@ -483,6 +485,7 @@ The nav layout shows a nav element where each tab pane represents a single item 
 
 The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The folllowing settings are supported per section:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
@@ -495,6 +498,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | color        | -            | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | -            | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The `card` layout supports the following additional arguments:
 

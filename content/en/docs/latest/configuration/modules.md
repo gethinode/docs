@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2023-08-03
+date: 2023-08-04
 layout: docs
 ---
 
@@ -39,6 +39,7 @@ Adjust the `modules` section in your site's parameter configuration file `config
 
 The following table provides an overview of the available settings. Omit the `mod-` prefix of the module's name.
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
@@ -47,6 +48,7 @@ The following table provides an overview of the available settings. Omit the `mo
 | excludeSCSS     | ["bootstrap"] | Disables {{</* link hugo_resource_from_template >}}processing as Hugo templates{{< /link */>}} of JavaScript files. |
 | disableTemplate | ["katex"]     | Scripts file within optional modules to exclude from processing as Hugo template. The scripts are bundled as-is instead. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 {{< release version="v0.17.0" >}}
 

@@ -25,9 +25,11 @@ $$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$
 $$\forall x \in X, \quad \exists y \leq \epsilon$$
 {{< /example >}}
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
 The KaTeX library is available as managed module on {{</* link repository_mod_katex >}}GitHub{{< /link */>}}.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Step 1 - Deciding upon the sourcing strategy
 

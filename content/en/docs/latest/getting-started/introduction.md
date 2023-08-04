@@ -142,6 +142,7 @@ The main site configuration is available in `./config/_default`. Review the foll
 
 The next topics give an overview of the advanced configuration settings.
 
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Review the approach to dependency management and virtualization" >}}
     Hinode supports {{< link npm >}}npm{{< /link >}} packages to automate various tasks. In addition, it uses Hugo's {{</* link hugo_mounts >}}mounted folders{{< /link */>}} to create a virtual file system. Review the [advanced settings overview]({{< relref "../advanced-settings/overview" >}}) for more details.
@@ -159,3 +160,4 @@ The next topics give an overview of the advanced configuration settings.
     Hinode uses rather strict security policies to ensure the site is secure by default. Be sure to include references to external sources in the header configuration to avoid broken links. The settings of the local development server are defined in `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository's root when deploying to {{< link netlify >}}Netlify{{< /link >}}. See the [server documentation]({{< relref "server-headers" >}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}
+<!-- markdownlint-enable MD037 -->

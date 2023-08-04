@@ -11,6 +11,7 @@ Hinode supports several types of navigation that utilize Bootstrap elements. The
 
 The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The folllowing settings are supported:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting    | Default | Description |
 |------------|---------|-------------|
@@ -25,6 +26,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | toc        | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | sidebar    | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
