@@ -1,7 +1,7 @@
 ---
 title: Credits
 description: Hinode is fully open source and uses several open-source frameworks and libraries.
-date: 2023-08-02
+date: 2023-08-04
 aliases:
   - "/docs/about/credits/"
   - "/docs/about/"
@@ -27,6 +27,7 @@ Hinode is based on the following core components:
 
 Hinode supports several opt-in components. In the default configuration, these components are added on a page-by-page basis:
 
+- {{< link katex >}}KaTeX{{< /link >}} is a fast math typesetting library for the web.
 - {{< link leaflet >}}Leaflet{{< /link >}} is an open-source JavaScript library for mobile-friendly interactive maps.
 
 ## Themes
