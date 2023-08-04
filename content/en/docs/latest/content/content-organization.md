@@ -1,11 +1,11 @@
 ---
 title: Content organization
 description: A structured approach to organize and present content.
-date: 2023-04-24
+date: 2023-08-04
 layout: docs
 ---
 
-Hinode uses a structured approach to [organize and present content]({{< param "links.hugo_structure" >}}). This results in user-friendly URLs, which are also easy to crawl by search engines. The following paragraphs describe how to organize the content and how to define alternative paths.
+Hinode uses a structured approach to {{< link hugo_structure >}}organize and present content{{< /link >}}. This results in user-friendly URLs, which are also easy to crawl by search engines. The following paragraphs describe how to organize the content and how to define alternative paths.
 
 ## Organization of content
 
@@ -58,7 +58,7 @@ Similarly, you can link multiple translations of a page and still provide a lang
 
 Hinode supports content snippets that are not published anywhere, unlike list pages and single pages. These snippets can be referenced by regular pages instead. A typical example would be an overview of product features. The features themselves can be listed on the homepage, but do not have a permalink of their own. Content snippets can be [listed like a regular section]({{< relref "layout#page-sections" >}}).
 
-Add a file `index.md` to the root of your section that contains your code snippets (please observe the absence of the '_' prefix). Set the parameter `headless` to `true` in file's frontmatter to [make the section headless]({{< param "links.hugo_headless" >}}):
+Add a file `index.md` to the root of your section that contains your code snippets (please observe the absence of the '_' prefix). Set the parameter `headless` to `true` in file's frontmatter to {{< link hugo_headless >}}make the section headless{{< /link >}}:
 
 ```yml
 ---
