@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 description: Review common issues and resolutions.
-date: 2023-07-18
+date: 2023-08-04
 layout: docs
 ---
 
@@ -22,7 +22,7 @@ Review the table below for some common issues and their potential cause. Please 
 
   **The DNS is not updated yet**
 
-  You typically need to update address the records of your DNS provider when using a custom domain. For example, the website https://gethinode.com uses [CloudFlare]({{< param "links.cloudflare" >}}) as DNS provider and [Netlify]({{< param "links.netlify" >}}) as hosting provider. The CloudFlare DNS records includes a `CNAME` record that links `gethinode.com` to the endpoint `gethinode-docs.netlify.app`. It may take some time for all DNS records to have been propagated properly.
+  You typically need to update address the records of your DNS provider when using a custom domain. For example, the website {{</* link "https://gethinode.com" /*/>}} uses {{</* link cloudflare >}}CloudFlare{{< /link */>}} as DNS provider and {{</* link netlify >}}Netlify{{< /link */>}} as hosting provider. The CloudFlare DNS records includes a `CNAME` record that links `gethinode.com` to the endpoint `gethinode-docs.netlify.app`. It may take some time for all DNS records to have been propagated properly.
 
   **The browser has cached a previous version of the website**
 
