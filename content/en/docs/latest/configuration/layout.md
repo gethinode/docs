@@ -1,15 +1,15 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-07-31
+date: 2023-08-04
 layout: docs
 ---
 
-Hinode uses Bootstrap's [grid system]({{< param "links.bs_grid" >}}) and [breakpoints]({{< param "links.bs_breakpoints" >}}) to create a responsive layout across devices or viewport sizes. All pages follow the same base layout, which includes headers and footers. The next paragraphs explain the layout styles in more detail.
+Hinode uses Bootstrap's {{< link bs_grid >}}grid system{{< /link >}} and {{< link bs_breakpoints >}}breakpoints{{< /link >}} to create a responsive layout across devices or viewport sizes. All pages follow the same base layout, which includes headers and footers. The next paragraphs explain the layout styles in more detail.
 
 ## Base layout
 
-The base layout defines a page skeleton of which all other pages are derived. It consists of four major sections, being a header, body, social footer, and bottom footer. It also loads sytlesheets, scripts, and generates the metadata. The header includes the [main navigation]({{< ref "navigation#main-navigation" >}}) and can be optionally fixed to the top. The width of the base layout is maximized to 1320 pixels (see the `container-xxl` setting of the [Bootstrap containers]({{< param "links.bs_container" >}})). The height is set to a least 100% of the viewport, to ensure the footer is always aligned to the bottom on the page.
+The base layout defines a page skeleton of which all other pages are derived. It consists of four major sections, being a header, body, social footer, and bottom footer. It also loads sytlesheets, scripts, and generates the metadata. The header includes the [main navigation]({{< ref "navigation#main-navigation" >}}) and can be optionally fixed to the top. The width of the base layout is maximized to 1320 pixels (see the `container-xxl` setting of the {{< link bs_container >}}Bootstrap containers{{< /link >}}). The height is set to a least 100% of the viewport, to ensure the footer is always aligned to the bottom on the page.
 
 ### Example
 
@@ -37,11 +37,11 @@ The following diagram illustrates the conceptual base design:
 
 ### Configuration
 
-Hinode uses several settings from Hugo's [main configuration]({{< param "links.hugo_config" >}}). Several extensions are defined in the [custom site parameters]({{< param "links.hugo_config_dir" >}}) and [language-specific configuration]({{< param "links.hugo_lang_config" >}}).
+Hinode uses several settings from Hugo's {{< link hugo_config >}}main configuration{{< /link >}}. Several extensions are defined in the {{< link hugo_config_dir >}}custom site parameters{{< /link >}} and {{< link hugo_lang_config >}}language-specific configuration{{< /link >}}.
 
 #### Main configuration
 
-The base layout uses the [main configuration]({{< param "links.hugo_config" >}}) of Hugo. The settings below are actively used by Hinode:
+The base layout uses the {{< link hugo_config >}}main configuration{{< /link >}} of Hugo. The settings below are actively used by Hinode:
 
 {{< table >}}
 | Setting       | Default | Description |
@@ -69,7 +69,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
-| externalLinks.cue  | false             | If set, adds a visual cue `{{< fas up-right-from-square fa-2xs >}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
+| externalLinks.cue  | false             | If set, adds a visual cue `{{</* fas up-right-from-square fa-2xs */>}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
 | externalLinks.tab  | false             | If set, opens [managed external links]({{< relref "links-and-cross-references#managed-links" >}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 {{< /table >}}
 
@@ -99,14 +99,16 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode can optionally add buttons to share a post via available social media. Use the following extended settings in the `sharing` section of the `site parameters` to configure these buttons:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
 | enabled         | false         | Define if social sharing should be enabled for all single pages. You can override this setting by adding `enabled` to the individual page's frontmatter.
 | sort            | "weight"      | Sorting key to be used, either "name" or "weight". You can also reference a custom key defined in the provider configuration. |
 | reverse         | false         | Flag to indicate if the sorting of the social sharing buttons should be reversed, defaults to false. |
-| webshare        | false         | Flag to indicate if native sharing provided by the Operating System should be enabled (via the web share API). If set and [supported by the browser]({{< param "links.caniuse_webshare" >}}), an additional button is added. |
+| webshare        | false         | Flag to indicate if native sharing provided by the Operating System should be enabled (via the web share API). If set and {{</* link caniuse_webshare >}}supported by the browser{{< /link */>}}, an additional button is added. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 Add each available provider to `[[sharing.providers]]`. The providers support the following arguments:
 
@@ -126,7 +128,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 #### Language-specific configuration
 
-Hinode supports [multilingual content]({{< param "links.hugo_lang_config" >}}). The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{< ref "languages" >}}) section to review the various configuration options to enable multilingual content.
+Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{< ref "languages" >}}) section to review the various configuration options to enable multilingual content.
 
 {{< table >}}
 | Section | Setting       | Default | Description |
@@ -483,6 +485,7 @@ The nav layout shows a nav element where each tab pane represents a single item 
 
 The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The folllowing settings are supported per section:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
@@ -490,11 +493,12 @@ The configuration of each section is set in the `sections` setting of the `site 
 | layout       | "card"       | Layout of the section, either "card" (default), "list", or "nav". |
 | sort         | "date"       | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
 | reverse      | true         | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
-| nested       | true         | Flag to indicate the content should be listed recursively for the entire [section]({{< param "links.hugo_sections" >}}). You can override this setting for individual branch bundles by adding `nested` to the page's frontmatter. |
+| nested       | true         | Flag to indicate the content should be listed recursively for the entire {{</* link hugo_sections >}}section{{< /link */>}}. You can override this setting for individual branch bundles by adding `nested` to the page's frontmatter. |
 | background   | -            | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | color        | -            | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | -            | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The `card` layout supports the following additional arguments:
 

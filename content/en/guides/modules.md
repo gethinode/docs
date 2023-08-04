@@ -14,7 +14,7 @@ modules: ["katex"]
 
 ## Introduction
 
-[Hugo modules]({{< param "links.hugo_modules" >}}) provide a flexible and extensible modular framework. Hinode builds upon this framework by introducing core modules and optional modules to further streamline the build process and to minimize the final site assets. This guide helps to get you started with developing your own Hugo modules. It also explains how to take advantage of Hinode's build pipelines to optimize the generated stylesheet and script assets. As a case example, we will set up a module that wraps the functionality of [KaTeX]({{< param "links.katex" >}}) - a popular math typesetting library. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm. We will also use Visual Studio Code (VSCode) for convenience - [download your copy from the official website]({{< param "links.vscode_download" >}}).
+{{< link hugo_modules >}}Hugo modules{{< /link >}} provide a flexible and extensible modular framework. Hinode builds upon this framework by introducing core modules and optional modules to further streamline the build process and to minimize the final site assets. This guide helps to get you started with developing your own Hugo modules. It also explains how to take advantage of Hinode's build pipelines to optimize the generated stylesheet and script assets. As a case example, we will set up a module that wraps the functionality of {{< link katex >}}KaTeX{{< /link >}} - a popular math typesetting library. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm. We will also use Visual Studio Code (VSCode) for convenience - {{< link vscode_download >}}download your copy from the official website{{< /link >}}.
 
 {{< example lang="markdown" >}}
 This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula
@@ -25,13 +25,15 @@ $$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$
 $$\forall x \in X, \quad \exists y \leq \epsilon$$
 {{< /example >}}
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
-The KaTeX library is available as managed module on [GitHub]({{< param "links.repository_mod_katex" >}}).
+The KaTeX library is available as managed module on {{</* link repository_mod_katex >}}GitHub{{< /link */>}}.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Step 1 - Deciding upon the sourcing strategy
 
-In this guide, we will develop a module to wrap the functionality of the [KaTeX]({{< param "links.katex" >}}) library. By wrapping this existing library, our Hugo module abstracts away from the technical details and provides intuitive access from within the Hugo ecosystem. Hugo modules uses Go modules under the hood to download the latest available release on GitHub, or the most recent HEAD of the default branch otherwise.
+In this guide, we will develop a module to wrap the functionality of the {{< link katex >}}KaTeX{{< /link >}} library. By wrapping this existing library, our Hugo module abstracts away from the technical details and provides intuitive access from within the Hugo ecosystem. Hugo modules uses Go modules under the hood to download the latest available release on GitHub, or the most recent HEAD of the default branch otherwise.
 
 Hugo modules can include files for each of the following folders: `archetypes`, `assets`, `content`, `data`, `i18n`, `layouts`, and `static`. Hugo uses two different algorithms to merge the filesystems, depending on the file type:
 
@@ -42,11 +44,11 @@ Hugo modules can include files for each of the following folders: `archetypes`, 
 You can choose to either fully integrate Hugo modules or to include them on a page-by-page basis. In this guide, we will configure KaTeX as an optional module, assuming we will only need KaTeX on a few pages. See [configuring modules]({{< relref "/docs/configuration/modules#configuring-modules" >}}) for more details.
 {{< /alert >}}
 
-Our module will wrap the functionality of KaTeX as a module for Hinode. The installation instructions of KaTeX tell us what files are needed to [host KaTeX ourselves]({{< param "links.katex_self_hosted" >}}). We will need the file `katex.js`, `katex.css`, and the `fonts` directory. We could also use minified versions, however, Hinode will take care of transpiling, bundling, and minifying the assets later on. For our purposes, we are better suited with the properly formatted files to simplify debugging. We also want to include the [auto-render extension]({{< param "links.katex_autorender" >}}). We will create a separate script with the instructions to invoke the function `renderMathInElement` later on.
+Our module will wrap the functionality of KaTeX as a module for Hinode. The installation instructions of KaTeX tell us what files are needed to {{< link katex_self_hosted >}}host KaTeX ourselves{{< /link >}}. We will need the file `katex.js`, `katex.css`, and the `fonts` directory. We could also use minified versions, however, Hinode will take care of transpiling, bundling, and minifying the assets later on. For our purposes, we are better suited with the properly formatted files to simplify debugging. We also want to include the {{< link katex_autorender >}}auto-render extension{{< /link >}}. We will create a separate script with the instructions to invoke the function `renderMathInElement` later on.
 
-When we take a look at the [source code repository of KaTeX on GitHub]({{< param "links.katex_github" >}}), we can observe that not all required files are maintained wihtin the repository. This is quite common, as many libraries choose to publish their release assets through a package manager (such as [npm]({{< param "links.npm" >}})) or <abbr title="Content Delivery Network">CDN</abbr> instead. The GitHub releases do adhere to a consistent semantic versioning pattern of `vMAJOR.MINOR.PATCH`. Both requirements are needed for Hugo modules to work out-of-the-box - that is, downloading the GitHub release directly.
+When we take a look at the {{< link katex_github >}}source code repository of KaTeX on GitHub{{< /link >}}, we can observe that not all required files are maintained wihtin the repository. This is quite common, as many libraries choose to publish their release assets through a package manager (such as {{< link npm >}}npm{{< /link >}}) or <abbr title="Content Delivery Network">CDN</abbr> instead. The GitHub releases do adhere to a consistent semantic versioning pattern of `vMAJOR.MINOR.PATCH`. Both requirements are needed for Hugo modules to work out-of-the-box - that is, downloading the GitHub release directly.
 
-Even if the first requirement has not been met, we can still use the Hugo module system. We will use [npm]({{< param "links.npm" >}}) to do some of the heavy-lifting for us. Our module will use npm and several scripts to expose the required files and to ensure these file are kept up-to-date. Now that we have decided on our sourcing strategy, we can head over to the next step to start working on our module.
+Even if the first requirement has not been met, we can still use the Hugo module system. We will use {{< link npm >}}npm{{< /link >}} to do some of the heavy-lifting for us. Our module will use npm and several scripts to expose the required files and to ensure these file are kept up-to-date. Now that we have decided on our sourcing strategy, we can head over to the next step to start working on our module.
 
 ## Step 2 - Initializing the module template
 
@@ -110,7 +112,7 @@ Modify the `postinstall` script to copy the required files to a local `dist` dir
   [...]
 ```
 
-The line postinstall is split into separate lines for each copy command to improve readability (you could also use [npm-run-all]({{< param "links.npm_run_all" >}}) to simplify the command even further). Each copy statement uses [cpy]({{< param "links.npm_cpy" >}}), a cross-platform copy command. The `--flat` argument instructs `cpy` to flatten the files in the destination directory `dist`. The negation pattern starting with `!` tells `cpy-cli` to skip files that end with `.min.js`.
+The line postinstall is split into separate lines for each copy command to improve readability (you could also use {{< link npm_run_all >}}npm-run-all{{< /link >}} to simplify the command even further). Each copy statement uses {{< link npm_cpy >}}cpy{{< /link >}}, a cross-platform copy command. The `--flat` argument instructs `cpy` to flatten the files in the destination directory `dist`. The negation pattern starting with `!` tells `cpy-cli` to skip files that end with `.min.js`.
 
 {{< alert type="danger" >}}
 We deliberately rename the `katex.css` file to a `katex.scss` file. The default `libsass` library, part of the [styles processing pipeline]({{< relref "styles" >}}), has difficulty processing the file otherwise.
@@ -156,7 +158,7 @@ We will now expose the various files copied to our local `dist` folder using [Hu
     target = 'static'
 ```
 
-As a final step we will include a basic script to initialize KaTeX when the page loads. An example script is available on the [KaTeX site]({{< param "links.katex_load" >}}). Create a file `assets/js/modules/katex/katex-autoload.js` and copy-paste the following script (copied from the KaTeX site for convenience). When done, push the latest changes to your remote git repository.
+As a final step we will include a basic script to initialize KaTeX when the page loads. An example script is available on the {{< link katex_load >}}KaTeX site{{< /link >}}. Create a file `assets/js/modules/katex/katex-autoload.js` and copy-paste the following script (copied from the KaTeX site for convenience). When done, push the latest changes to your remote git repository.
 
 {{< file path="./_vendor/github.com/gethinode/mod-katex/assets/js/modules/katex/katex-autoload.js" full="false" >}}
 
@@ -211,7 +213,7 @@ We will now run the `mod:update` script to install the Hugo module(s) and to che
 
 - **`rimraf _vendor && hugo mod vendor`**
 
-  Stores the module assets in a local vendor directory instead of the system cache. This is required if a module uses other modules itself (so-called transitive dependencies) and ensures our example site has access to them. Another reason to vendor your modules is to aid additional tools, such as the [Purgecss Whitelister]({{< param "links.npm_whitelister" >}}). External tools do not have access to Hugo mounts, however, might require access to module files. Vendoring your modules ensures all module data is available on a local, known path.
+  Stores the module assets in a local vendor directory instead of the system cache. This is required if a module uses other modules itself (so-called transitive dependencies) and ensures our example site has access to them. Another reason to vendor your modules is to aid additional tools, such as the {{< link npm_whitelister >}}Purgecss Whitelister{{< /link >}}. External tools do not have access to Hugo mounts, however, might require access to module files. Vendoring your modules ensures all module data is available on a local, known path.
   
   The `_vendor` directory is deleted to prevent an error when the module does **not** have transitive dependencies. You could remove the vendor approach in this case, however, the current scripts defined by the module template cover both scenarios.
 

@@ -16,11 +16,13 @@ The preferred approach since `v0.16` is to develop a module that wraps the requi
 
 ## Introduction
 
-Hinode uses [npm packages]({{< ref "/docs/advanced-settings/overview#npm-packages" >}}) and [mounted folders]({{< param "links.hugo_mounts" >}}) to create a flexible, automated build system. This guide shows how to add an npm package to your site. It installs Leaflet as an example. [Leaflet]({{< param "links.leaflet" >}}) is an open-source JavaScript library to add mobile-friendly interactive maps to your site. This guide assumes you have a working site already. Check the [introduction]({{< relref "introduction" >}}) on how to set up a site with Hinode with npm.
+Hinode uses [npm packages]({{< ref "/docs/advanced-settings/overview#npm-packages" >}}) and {{< link hugo_mounts >}}mounted folders{{< /link >}} to create a flexible, automated build system. This guide shows how to add an npm package to your site. It installs Leaflet as an example. {{< link leaflet >}}Leaflet{{< /link >}} is an open-source JavaScript library to add mobile-friendly interactive maps to your site. This guide assumes you have a working site already. Check the [introduction]({{< relref "introduction" >}}) on how to set up a site with Hinode with npm.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
-A full working example of this guide is available on [GitHub]({{< param "links.repository_leaflet" >}}).
+A full working example of this guide is available on {{</* link repository_leaflet >}}GitHub{{< /link */>}}.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Step 1 - Setting up leaflet
 
@@ -67,7 +69,7 @@ Leaflet requires the presence of several style elements. Similarly to the JavaSc
 
 ## Step 2 - Adjusting the Content Security Policy
 
-Leaflet requires access to [OpenStreetMap]({{< param "links.openstreetmap" >}}) and requires the `data:` attribute for image sources. Adjust the Content Security Policy in `config/_default/server.toml` to enable access to the remote images. You might need to adjust the settings of your hosting provider too (see `netlify.toml` in the repository root).
+Leaflet requires access to {{< link openstreetmap >}}OpenStreetMap{{< /link >}} and requires the `data:` attribute for image sources. Adjust the Content Security Policy in `config/_default/server.toml` to enable access to the remote images. You might need to adjust the settings of your hosting provider too (see `netlify.toml` in the repository root).
 
 ```toml
 img-src 'self' data: https://i.vimeocdn.com https://i.ytimg.com https://tile.openstreetmap.org; \

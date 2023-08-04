@@ -1,7 +1,7 @@
 ---
 title: Scripts
 description: Automatically bundle local and external JavaScript files into a single file.
-date: 2023-07-18
+date: 2023-08-03
 layout: docs
 ---
 
@@ -21,7 +21,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexibile virtual file
 
 3. **Bundle the JavaScript files**
 
-   The partial `partials/footer/scripts.html` bundles all files that end with `.js` recursively into a single file called `js/main.bundle.js`. The files are processed in the order of the configured core modules and are sorted alphabetically within each module. JavaScript files defined in the current repository are added last, sorted alphabetically too. In production mode, the bundled output is minified and linked to with a [fingerprint]({{< param "links.hugo_fingerprint" >}}).
+   The partial `partials/footer/scripts.html` bundles all files that end with `.js` recursively into a single file called `js/main.bundle.js`. The files are processed in the order of the configured core modules and are sorted alphabetically within each module. JavaScript files defined in the current repository are added last, sorted alphabetically too. In production mode, the bundled output is minified and linked to with a {{< link hugo_fingerprint >}}fingerprint{{< /link >}}.
 
 4. **Link to the JavaScript in the base layout**
 

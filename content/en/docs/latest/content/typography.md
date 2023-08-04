@@ -1,12 +1,12 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2023-07-25
+date: 2023-08-03
 layout: docs
 modules: ["katex"]
 ---
 
-Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for the typography. The following paragraphs illustrate the most common applications. Refer to the Hugo documentation to review the extended description of supported [content formats]({{< param "links.hugo_content" >}}). It also contains links to external resource about Markdown.
+Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for the typography. The following paragraphs illustrate the most common applications. Refer to the Hugo documentation to review the extended description of supported {{< link hugo_content >}}content formats{{< /link >}}. It also contains links to external resource about Markdown.
 
 ## Headings
 
@@ -97,7 +97,7 @@ Use HTML tags for additional styling options. The following example illustrates 
 
 ## Emoji
 
-Use shortcodes to insert Emoji into your content. You can use this [list of emoji]({{< param "links.markdown_emoji" >}}) shortcodes as a reference, although the results may vary across browsers and devices. The following example inserts an inline smiley.
+Use shortcodes to insert Emoji into your content. You can use this {{< link markdown_emoji >}}list of emoji{{< /link >}} shortcodes as a reference, although the results may vary across browsers and devices. The following example inserts an inline smiley.
 
 <div class="bg-light p-3 mb-3">
     That is so funny! <code>:<zero-width space>smiley:<zero-width space></code>
@@ -143,7 +143,7 @@ The following Markdown generates a blockquote with attribution. The citation its
 
 ## Code Blocks
 
-Use a single backtick `` ` `` character to denote an inline code element. Use triple backticks `` ``` `` to denote the start and end of a code block. Add the language to the opening backticks to specify the syntax. Hugo uses Chroma highlighting to style the syntax of [supported languages]({{< param "links.hugo_chroma" >}}). The following example defines an `HTML` code block.
+Use a single backtick `` ` `` character to denote an inline code element. Use triple backticks `` ``` `` to denote the start and end of a code block. Add the language to the opening backticks to specify the syntax. Hugo uses Chroma highlighting to style the syntax of {{< link hugo_chroma >}}supported languages{{< /link >}}. The following example defines an `HTML` code block.
 
 {{< example lang="markdown" >}}
 
@@ -222,7 +222,7 @@ Use the `-` character followed by either `[x]` or `[ ]` to indicate a (completed
 
 {{< release version="v0.16.0" >}}
 
-Use [KaTeX]({{< param "links.katex" >}}) to add mathemetical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
+Use {{< link katex >}}KaTeX{{< /link >}} to add mathemetical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
 
 {{< example lang="markdown" >}}
 This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula

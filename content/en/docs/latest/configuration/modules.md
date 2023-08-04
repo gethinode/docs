@@ -1,17 +1,17 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2023-07-21
+date: 2023-08-04
 layout: docs
 ---
 
 {{< release version="v0.16.0" >}}
 
-Hinode fully supports [Hugo modules]({{< param "links.hugo_modules" >}}) to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for [Bootstrap]({{< param "links.bootstrap" >}}), [FlexSearch]({{< param "links.flexsearch" >}}), and [Font Awesome]({{< param "links.fontawesome" >}}). The following paragraphs explain how to customize the module configuration.
+Hinode supports {{< link hugo_modules >}}Hugo modules{{< /link >}} to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for {{< link bootstrap >}}Bootstrap{{< /link >}}, {{< link flexsearch >}}FlexSearch{{< /link >}}, and {{< link fontawesome >}}Font Awesome{{< /link >}}. The following paragraphs explain how to customize the module configuration.
 
 ## Importing modules
 
-By default, the Hinode template imports Hinode as module itself. In this approach, the modules that Hinode includes are imported as transitive modules. Adjust the `module` section in your site's configuration file `config/_default/hugo.toml` to import or adjust the required modules. Visit the Hugo documentation to [review all available configuration settings]({{< param "links.hugo_module_config" >}}). You can [disable individual modules]({{< param "links.hugo_module_config_import" >}}) by setting `disable` to `true`.
+By default, the Hinode template imports Hinode as module itself. In this approach, the modules that Hinode includes are imported as transitive modules. Adjust the `module` section in your site's configuration file `config/_default/hugo.toml` to import or adjust the required modules. Visit the Hugo documentation to {{< link hugo_module_config >}}review all available configuration settings{{< /link >}}. You can {{< link hugo_module_config_import >}}disable individual modules{{< /link >}} by setting `disable` to `true`.
 
 ```toml
   [[module.imports]]
@@ -28,7 +28,7 @@ You can choose to either fully integrate compatible modules or to include them o
 
 For core modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode parepares seperate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
 
-{{< alert color="info" >}}
+{{< alert type="info" >}}
 Hugo uses two different algorithms to merge the filesystems, depending on the file type:
 
 - For i18n and data files, Hugo merges deeply using the translation ID and data key inside the files.
@@ -39,14 +39,16 @@ Adjust the `modules` section in your site's parameter configuration file `config
 
 The following table provides an overview of the available settings. Omit the `mod-` prefix of the module's name.
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
 | core            | ["bootstrap", "flexsearch", "fontawesome"] | Core modules to be fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. |
 | optional        | ["leaflet"]   | Optional modules to be included by Hinode. Enable each module in the frontmatter of a page. |
-| excludeSCSS     | ["bootstrap"] | Disables [processing as Hugo templates]({{< param "links.hugo_resource_from_template">}}) of JavaScript files. |
+| excludeSCSS     | ["bootstrap"] | Disables {{</* link hugo_resource_from_template >}}processing as Hugo templates{{< /link */>}} of JavaScript files. |
 | disableTemplate | ["katex"]     | Scripts file within optional modules to exclude from processing as Hugo template. The scripts are bundled as-is instead. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 {{< release version="v0.17.0" >}}
 

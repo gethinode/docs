@@ -1,7 +1,7 @@
 ---
 title: Fonts
 description: Configure a specific font to style your website.
-date: 2023-03-12
+date: 2023-08-04
 layout: docs
 ---
 
@@ -15,7 +15,7 @@ Hinode uses a font stack that includes support for Emoji across browsers and dev
 
 ### External fonts
 
-Set the `themeFontPath` to the address of your font provider, such as [Google Fonts]({{< param "links.google_fonts" >}}):
+Set the `themeFontPath` to the address of your font provider, such as {{< link google_fonts >}}Google Fonts{{< /link >}}:
 
 ```toml
 themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap"
@@ -31,7 +31,7 @@ To improve performance, Hinode serves the Inter font locally by default. Set the
 themeFontPath = "/fonts"
 ```
 
-The font files are retrieved from the folder `static/fonts`. The [google-webfonts-helper]({{< param "links.webfonts_helper" >}}) from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font-face definitions. Copy the definitions to the `assets/scss/theme/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
+The font files are retrieved from the folder `static/fonts`. The {{< link webfonts_helper >}}google-webfonts-helper{{< /link >}} from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font-face definitions. Copy the definitions to the `assets/scss/theme/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
 
 ## Customization
 
