@@ -1,11 +1,11 @@
 ---
 title: Images and figures
 description: Use the image shortcode to display a responsive image with optional caption.
-date: 2023-01-28
+date: 2023-08-04
 layout: docs
 ---
 
-Hinode supports responsive images out-of-the-box. Although you can include images in your content natively with Markdown, these images are not optimized for your viewport or screen. Hinode uses Hugo's powerful [image processing]({{< param "links.hugo_image" >}}) to preprocess images on the server side. By taking advantage of so-called [image sets]({{< param "links.mozilla_image" >}}), the client's browser can decide which image to download whilst reducing the download size.
+Hinode supports responsive images out-of-the-box. Although you can include images in your content natively with Markdown, these images are not optimized for your viewport or screen. Hinode uses Hugo's powerful {{< link hugo_image >}}image processing{{< /link >}} to preprocess images on the server side. By taking advantage of so-called {{< link mozilla_image >}}image sets{{< /link >}}, the client's browser can decide which image to download whilst reducing the download size.
 
 ## Images
 
