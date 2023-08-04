@@ -251,7 +251,7 @@ Use the `fa-stack` class on the parent HTML element of the two icons you want to
 {{< example lang="hugo" >}}
 <span class="fa-stack fa-2x">
     {{</* fas square fa-stack-2x */>}}
-    {{</* fab twitter fa-stack-1x fa-inverse */>}}
+    {{</* fab x-twitter fa-stack-1x fa-inverse */>}}
 </span>
 <span class="fa-stack fa-2x">
     {{</* fas circle fa-stack-2x */>}}
