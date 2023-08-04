@@ -1,7 +1,7 @@
 ---
 title: Links and cross-references
 description: Generate internal links and external links using a combination of Markdown and Hugo shortcodes.
-date: 2023-07-30
+date: 2023-08-04
 layout: docs
 ---
 
@@ -9,7 +9,7 @@ layout: docs
 
 ## Internal links
 
-Hugo provides the shortcode `ref` to link to another page within the site. The shortcode returns an absolute path. You can provide the document path as input. If you omit the leading `/`, the page is first resolved relative to the current page, then to the remainder of the site. Review [Hugo's documentation]({{< param "links.hugo_links" >}}) for more examples and advanced options.
+Hugo provides the shortcode `ref` to link to another page within the site. The shortcode returns an absolute path. You can provide the document path as input. If you omit the leading `/`, the page is first resolved relative to the current page, then to the remainder of the site. Review {{< link hugo_links >}}Hugo's documentation{{< /link >}} for more examples and advanced options.
 
 {{< example lang="hugo" >}}
 [Tables]({{</*ref "tables" */>}})
