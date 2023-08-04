@@ -1,7 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2023-05-21
+date: 2023-08-04
 layout: docs
 ---
 
@@ -11,6 +11,7 @@ Hinode supports several types of navigation that utilize Bootstrap elements. The
 
 The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The folllowing settings are supported:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting    | Default | Description |
 |------------|---------|-------------|
@@ -19,12 +20,13 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | color      | -       | [Theme color]({{< ref "colors" >}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
 | style      | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly. |
 | fixed      | false   | Flag indicating to keep the navigation bar fixed at the top of the screen. |
-| offset     | "3em"   | Applies an [offset to main elements]({{< param "links.bs_navbar_placement" >}}) when `fixed` is set to true. |
+| offset     | "3em"   | Applies an {{</* link bs_navbar_placement >}}offset to main elements{{< /link */>}} when `fixed` is set to true. |
 | search     | true    | Flag indicating to include a search input. |
 | breadcrumb | false   | Flag indicating to add breadcrumb navigation to the top of any single page. List pages are excluded. |
 | toc        | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | sidebar    | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -32,11 +34,11 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## Main navigation
 
-The main navigation uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) to generate a responsive navigation bar at the top of the page. The navigation bar uses a breakpoint to add a toggler for smaller screens. A language switcher is added automatically if your site supports multiple languages. The language switcher links to the currently translated page if available.
+The main navigation uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} to generate a responsive navigation bar at the top of the page. The navigation bar uses a breakpoint to add a toggler for smaller screens. A language switcher is added automatically if your site supports multiple languages. The language switcher links to the currently translated page if available.
 
 ### Menus
 
-The navigation bar uses [Hugo's menu system]({{< param "links.hugo_menus" >}}) to generate the menu items. The navigation supports nesting at one level deep. Hinode supports an additional parameter called `alias`. If set, the active menu item is linked to the specific menu entry instead of being derived from the target URL. The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
+The navigation bar uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} to generate the menu items. The navigation supports nesting at one level deep. Hinode supports an additional parameter called `alias`. If set, the active menu item is linked to the specific menu entry instead of being derived from the target URL. The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
 
 {{< docs name="sample-navigation" file="./config/_default/menus/menus.en.toml" >}}
 
@@ -56,7 +58,7 @@ Hinode includes a navigation bar at the top of the screen by default. You can mo
 
 ## Sidebar navigation
 
-Hinode supports optional sidebar navigation. It is intended to be used as companion to the main navigation and is typically used in content-heavy sections, such as documentation pages. On smaller screens, the sidebar is replaced with an [offcanvas element]({{< param "links.bs_offcanvas" >}}). In this case, the main navigation receives an additional toggler on the left of the screen.
+Hinode supports optional sidebar navigation. It is intended to be used as companion to the main navigation and is typically used in content-heavy sections, such as documentation pages. On smaller screens, the sidebar is replaced with an {{< link bs_offcanvas >}}offcanvas element{{< /link >}}. In this case, the main navigation receives an additional toggler on the left of the screen.
 
 ### Menus
 
@@ -109,7 +111,11 @@ Hinode supports optional breadcrumb navigation. The breadcrumb indicates the cur
 
 When enabled, the breadcrumb looks like this:
 
-{{< breadcrumb >}}
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* breadcrumb path="breadcrumb" */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Customization
 
@@ -117,7 +123,7 @@ The breadcrumb is also available as [shortcode]({{< ref "breadcrumb" >}}).
 
 ## Table of contents
 
-Single pages can optionally show an [table of contents]({{< param "links.hugo_toc" >}}) on the right of the screen. The table of contents is automatically popuplated based on the headings within the page content (two levels deep). The table of contents is hidden if it has less than two items. On smaller screens, a drop-down menu is added to the top of the page. Enable the table of contents in the [basic navigation configuration](#basic-configuration). If enabled, all single pages will show the element, unless disabled in the page's frontmatter.
+Single pages can optionally show an {{< link hugo_toc >}}table of contents{{< /link >}} on the right of the screen. The table of contents is automatically popuplated based on the headings within the page content (two levels deep). The table of contents is hidden if it has less than two items. On smaller screens, a drop-down menu is added to the top of the page. Enable the table of contents in the [basic navigation configuration](#basic-configuration). If enabled, all single pages will show the element, unless disabled in the page's frontmatter.
 
 ### Customization
 

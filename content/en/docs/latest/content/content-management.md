@@ -1,7 +1,7 @@
 ---
 title: Content management
 description: Use Markdown and templates to define the content for your website.
-date: 2023-02-20
+date: 2023-08-04
 layout: docs
 ---
 
@@ -9,13 +9,13 @@ Hinode uses Markdown and templates to define the content for your website. Hugo 
 
 ## Overview
 
-Markdown is a simple and easy-to-use markup language. It uses formatting elements in plaintext documents to format documents. Using Markdown is different than using a <abbr title="What you see is what you get">WYSIWYG</abbr> editor. Such editors apply the formatting styles as you go. Instead, Markdown shows the formatting codes next to the content. Although this may require getting used to, the advantage is that you have full control over your document. The [Markdown guide]({{< param "links.markdown_guide" >}}) provides a comprehensive overview of the Markdown format. Hugo supports additional content formats next to Markdown. See Hugo's documentation for a full overview of [supported content formats]({{< param "links.hugo_content" >}}).
+Markdown is a simple and easy-to-use markup language. It uses formatting elements in plaintext documents to format documents. Using Markdown is different than using a <abbr title="What you see is what you get">WYSIWYG</abbr> editor. Such editors apply the formatting styles as you go. Instead, Markdown shows the formatting codes next to the content. Although this may require getting used to, the advantage is that you have full control over your document. The {{< link markdown_guide >}}Markdown guide{{< /link >}} provides a comprehensive overview of the Markdown format. Hugo supports additional content formats next to Markdown. See Hugo's documentation for a full overview of {{< link hugo_content >}}supported content formats{{< /link >}}.
 
 <!-- TODO: insert VS Code screenshot -->
 
 ### Front matter
 
-Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports [four types of front matter formats]({{< param "links.hugo_frontmatter" >}}). Hinode uses the <abbr title="Yet Another Markup Language">YAML</abbr> format by default, denoted by `---` as the opening and closing tags. The folllowing example shows the front matter of the page you are currently reading.
+Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the <abbr title="Yet Another Markup Language">YAML</abbr> format by default, denoted by `---` as the opening and closing tags. The folllowing example shows the front matter of the page you are currently reading.
 
 ```yml
 ---
@@ -43,7 +43,7 @@ The following sections describe the available formatting in more detail:
 
 ### Templates
 
-Hinode uses several templates to prescribe the final output in HTML. Each template can be overridden with a specific [lookup order]({{< param "links.hugo_lookup_order" >}}). In the core, Hinode uses the following templates defined in `layouts/_default`:
+Hinode uses several templates to prescribe the final output in HTML. Each template can be overridden with a specific {{< link hugo_lookup_order >}}lookup order{{< /link >}}. In the core, Hinode uses the following templates defined in `layouts/_default`:
 
 ```html
 └── layouts
@@ -63,7 +63,7 @@ Shortcodes are an addition provided by Hugo to simplify the inclusion of common 
 - `{{</* shortcodename parameters */>}}`: a shortcode without inner text.
 - `{{</* shortcodename parameters */>}}Inner content{{</* /shortcodename */>}}`: a shortcode with inner text.
 
-Hugo provides more details about the [usage of shortcodes]({{< param "links.hugo_shortcodes" >}}). Hinode provides several shortcodes that wrap common Bootstrap elements. Explore the `components` section in the docs navigation for an overview of the available shortcodes. As an example, the following shortcode displays an image with rounded corners and a 21x9 aspect ratio:
+Hugo provides more details about the {{< link hugo_shortcodes >}}usage of shortcodes{{< /link >}}. Hinode provides several shortcodes that wrap common Bootstrap elements. Explore the `components` section in the docs navigation for an overview of the available shortcodes. As an example, the following shortcode displays an image with rounded corners and a 21x9 aspect ratio:
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

@@ -1,15 +1,15 @@
 ---
 title: Icons
 description: Configure secure access to icons from Bootstrap and Font Awesome.
-date: 2023-07-18
+date: 2023-08-02
 layout: docs
 ---
 
-Hinode processes the Bootstrap icons to ensure they adhere to the strict [content security policy]({{< relref "server-headers" >}}). In addition, it provides access to the free icons of [Font Awesome]({{< param "links.fontawesome" >}}).
+Hinode processes the Bootstrap icons to ensure they adhere to the strict [content security policy]({{< relref "server-headers" >}}). In addition, it provides access to the free icons of {{< link fontawesome >}}Font Awesome{{< /link >}}.
 
 ## Bootstrap icons
 
-Bootstrap uses various embedded vector images (in <abbr title="Scalable Vector Graphics">SVG</abbr> format) throughout its Sass source files. Hinode replaces these embedded images with file-based vector images, as the [content security policy]({{< relref "server-headers" >}}) prohibits loading of embedded images. To ensure the images are consistent with the [theme colors]({{< ref "colors" >}}), the images are postprocessed using [Hugo templating]({{< param "links.hugo_templates">}}).
+Bootstrap uses various embedded vector images (in <abbr title="Scalable Vector Graphics">SVG</abbr> format) throughout its Sass source files. Hinode replaces these embedded images with file-based vector images, as the [content security policy]({{< relref "server-headers" >}}) prohibits loading of embedded images. To ensure the images are consistent with the [theme colors]({{< ref "colors" >}}), the images are postprocessed using {{< link hugo_templates >}}Hugo templating{{< /link >}}.
 
 ### Build pipeline
 
@@ -35,7 +35,7 @@ Hinodes uses mounted folders to create a flexibile virtual file system that is a
 
 3. **Reference the Sass variables within each icon file**
 
-   Use [Hugo templating]({{< param "links.hugo_templates">}}) to reference the Sass variables for fill colors and stroke colors. For example, the file `assets/icons/form-switch-focus-bg-image.svg` defines the fill color as `{{ .form_switch_focus_color }}`. The entire vector definition is as such:
+   Use {{< link hugo_templates >}}Hugo templating{{< /link >}} to reference the Sass variables for fill colors and stroke colors. For example, the file `assets/icons/form-switch-focus-bg-image.svg` defines the fill color as `{{ .form_switch_focus_color }}`. The entire vector definition is as such:
 
    ```html
    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'>
@@ -61,4 +61,4 @@ The exported variables are defined in the file `assets/scss/common/_export.scss`
 
 ## Font Awesome icons
 
-[Font Awesome]({{< param "links.fontawesome" >}}) provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the <abbr title="Cascading Style Sheets">CSS</abbr> files and web fonts of Font Awesome, as the [content security policy]({{< relref "server-headers" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. By default, the CSS files are bundled with the main stylesheet. The web fonts are mounted in the `/static/fonts` folder. The various files are provided by the [Font Awesome module on GitHub]({{< param "links.repository_mod_fontawesome" >}}).
+{{< link fontawesome >}}Font Awesome{{< /link >}} provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the <abbr title="Cascading Style Sheets">CSS</abbr> files and web fonts of Font Awesome, as the [content security policy]({{< relref "server-headers" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. By default, the CSS files are bundled with the main stylesheet. The web fonts are mounted in the `/static/fonts` folder. The various files are provided by the {{< link repository_mod_fontawesome >}}Font Awesome module on GitHub{{< /link >}}.

@@ -1,12 +1,12 @@
 ---
 author: Mark Dumay
 title: Hugo
-date: 2023-05-15
+date: 2023-08-02
 weight: 10
 icon: fab markdown
 ---
 
-[Hugo]({{< param "links.hugo" >}}) is a static HTML and CSS website generator written in the [Go language]({{< param "links.golang" >}}). It is optimized for speed, ease of use, and configurability. Hugo takes a directory with [Markdown content]({{< param "links.markdown_guide" >}}) and templates and renders them into a full HTML website.
+{{< link hugo >}}Hugo{{< /link >}} is a static HTML and CSS website generator written in the {{< link golang >}}Go language{{< /link >}}. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with {{< link markdown_guide >}}Markdown content{{< /link >}} and templates and renders them into a full HTML website.
 
 {{< button relref="introduction" outline="true" >}}
     Get started

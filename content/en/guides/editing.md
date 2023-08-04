@@ -16,14 +16,14 @@ photoSource: <a href="https://unsplash.com/photos/TV2gg2kZD1o">Unsplash</a>
 The commands and code examples within this guide are written with macOS in mind. The commands should be transferrable to Windows and Linux too.
 {{< /alert >}}
 
-Hinode uses [Hugo]({{< param "links.hugo" >}}), a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch using automated testing.
+Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch using automated testing.
 
 This guide requires a GitHub account to host the demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
 
-- [Set up an account with GitHub]({{< param "links.github_signup" >}})
-- [Download and install the Git binary]({{< param "links.git_download" >}})
-- [Download and install Node.js]({{< param "links.nodejs" >}}) (it includes npm)
-- [Download and install VSCode]({{< param "links.vscode_download" >}})
+- {{< link github_signup >}}Set up an account with GitHub{{< /link >}}
+- {{< link git_download >}}Download and install the Git binary{{< /link >}}
+- {{< link nodejs >}}Download and install Node.js{{< /link >}} (it includes npm)
+- {{< link vscode_download >}}Download and install VSCode{{< /link >}}
 
 ## Step 1 - Initializing the project
 
@@ -31,7 +31,7 @@ As first step we will create a new repository on GitHub using a template. We wil
 
 ### Creating a new Git repository
 
-Hinode comes in two flavors: a [template]({{< param "links.repository_template" >}}) and a [main theme]({{< param "links.repository" >}}). The template uses [npm]({{< param "links.npm" >}}) to link to the latest available version of Hinode. We will use the template as starting point for our new site, as it hides away most of the source code of the main theme. Unless you plan to customize a lot, it is recommended to use the template for your future projects.
+Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link >}} and a {{< link repository >}}main theme{{< /link >}}. The template uses {{< link npm >}}npm{{< /link >}} to link to the latest available version of Hinode. We will use the template as starting point for our new site, as it hides away most of the source code of the main theme. Unless you plan to customize a lot, it is recommended to use the template for your future projects.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-init-step01.png" caption="Step 1. Create a new repository from the template" >}}
@@ -39,7 +39,7 @@ Hinode comes in two flavors: a [template]({{< param "links.repository_template" 
   {{< img src="img/github-init-step03.png" caption="Step 3. Review the initialized repository" >}}
 {{< /carousel >}}
 
-Navigate to https://github.com/gethinode/template in your browser and click on the green button `Use this template` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone, such as open-source projects. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
+Navigate to the {{< link repository_template >}}template repository{{< /link >}} in your browser and click on the green button `Use this template` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone, such as open-source projects. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
 
 ### Connecting your local machine
 
@@ -178,9 +178,11 @@ npm run lint
 
 Head over to VSCode's Source Control to view the pending changes. Click on the file `about.md` to open the code inspector. VSCode will then show the differences between the previous version and current version of the file. Content that has been replaced or removed is marked red, and content that has been added or modified is marked green. Verify the changes and click on the `+` button to stage the changes. Enter a descriptive commit message such as `Update about page`. When done, click on the blue `Commit` button to commit the changes on the `develop` branch. Lastly, click on the blue button `Publish Branch` to submit tbe branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
-By convention, a commit message should use the imperative mood and should be less than 150 characters in total. Review the blog from Initial Commit to see more [best practices and guidelines to write good commit messages]({{< param "links.initialcommit" >}}).
+By convention, a commit message should use the imperative mood and should be less than 150 characters in total. Review the blog from Initial Commit to see more {{</* link initialcommit >}}best practices and guidelines to write good commit messages{{< /link */>}}.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Step 4 - Submitting a Pull Request
 
@@ -214,4 +216,4 @@ npm run upgrade
 {{< /command >}}
 <!-- markdownlint-enable MD011 -->
 
-You can also enable Dependabot on your GitHub repository to [automatically keep the dependencies and packages used in your repository updated to the latest version]({{< param "links.dependabot" >}}).
+You can also enable Dependabot on your GitHub repository to {{< link dependabot >}}automatically keep the dependencies and packages used in your repository updated to the latest version{{< /link >}}.
