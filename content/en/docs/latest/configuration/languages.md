@@ -1,13 +1,13 @@
 ---
 title: Languages
 description: Configure multiple languages to enable multilingual sites.
-date: 2023-07-06
+date: 2023-08-04
 layout: docs
 ---
 
 {{< release version="v0.6.0" >}}
 
-Hinode supports Hugo's [multilingual mode]({{< param "links.hugo_lang" >}}) to create websites with multiple languages side by side. The next paragraphs explain how to configure multiple languages, how to provide content translations, and how to define multilingual messages and keywords.
+Hinode supports Hugo's {{< link hugo_lang >}}multilingual mode{{< /link >}} to create websites with multiple languages side by side. The next paragraphs explain how to configure multiple languages, how to provide content translations, and how to define multilingual messages and keywords.
 
 ## Language configuration
 
@@ -35,7 +35,7 @@ The English page is available by navigating to `/en/about` and the Dutch transla
 
 ## Internationalization
 
-Hinode uses Hugo's [internationalization function]({{< param "links.hugo_i18n" >}}) to translate keywords and messages. Translations are available in English, Dutch, and German. For example, the translation for the word `about` in the Dutch language is defined in `i18n/nl.yaml` (strictly speaking, it translates to `about me`).
+Hinode uses Hugo's {{< link hugo_i18n >}}internationalization function{{< /link >}} to translate keywords and messages. Translations are available in English, Dutch, and German. For example, the translation for the word `about` in the Dutch language is defined in `i18n/nl.yaml` (strictly speaking, it translates to `about me`).
 
 ```yml
 # Content
@@ -45,7 +45,7 @@ Hinode uses Hugo's [internationalization function]({{< param "links.hugo_i18n" >
 
 ## Discarding localization
 
-The [Hinode template]({{< param "links.repository_template" >}}) defines two languages by default. Follow the next steps to discard the Dutch language (`nl` code) entirely:
+The {{< link repository_template >}}Hinode template{{< /link >}} defines two languages by default. Follow the next steps to discard the Dutch language (`nl` code) entirely:
 
 - Remove the folder `content/nl` and its nested content
 - Remove the entire `[nl]` section in `config/_default/languages.toml`
