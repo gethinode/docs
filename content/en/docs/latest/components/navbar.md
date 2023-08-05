@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Navbar
-date: 2023-08-04
+date: 2023-08-05
 description: Use the navbar shortcode to display a navigation header with a toggler.
 layout: docs
 icon: fas bars
@@ -34,6 +34,7 @@ The shortcode supports the following arguments:
 | search    | No  | Optional flag to include a search input, defaults to the parameter "search" set in the "navigation" section of the [site's parameter configuration]({{< relref "navigation" >}}). |
 | logo      | No  | Optional address of the logo image, defaults to the parameter "logo" set in the "navigation" section of the [site's parameter configuration]({{< relref "navigation" >}}). |
 | title     | No  | Optional brand title, displayed when the logo is not set. Defaults to the site's title. |
+| class     | No  | Optional class attribute of the navbar container. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 

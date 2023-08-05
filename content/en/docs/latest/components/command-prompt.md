@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Command Prompt
-date: 2023-05-21
+date: 2023-08-05
 description: The command shortcode generates terminal output for either Bash, PowerShell, or SQL shell languages.
 layout: docs
 icon: fas terminal
@@ -33,6 +33,7 @@ The shortcode supports the following arguments:
 | host      | No | Optional host to add to the prompt, e.g. "localhost". |
 | prompt    | No | Optional prompt override, e.g. "PS C:\Users\User>". |
 | shell     | No | Type of shell, either "bash" (default), "powershell", or "sql". |
+| class     | No |  Optional class attribute of the command element. |
 {{< /table >}}
 
 ## Examples
