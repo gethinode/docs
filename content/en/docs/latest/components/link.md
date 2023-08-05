@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2023-07-30
+date: 2023-08-05
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -32,6 +32,7 @@ The shortcode supports a single unnamed parameter, or various named parameters. 
 | cue         | No       | Optional flag to indicate if an external link should show a visual cue, defaults to setting "main.externalLinks.cue" in the site's parameters. |
 | tab         | No       | Optional flag to indicate if an external link should open in a new tab, defaults to setting "main.externalLinks.tab" in the site's parameters. |
 | case        | No       | Optional flag to indicate if the retrieved title (e.g. no inner text is provided) of an internal link should use its original case, defaults to true. If false, the title is set to lower case. |
+| class       | No       | Optional class attribute of the anchor element. |
 {{< /table >}}
 
 ## Site configuration

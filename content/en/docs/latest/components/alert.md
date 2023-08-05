@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Alert
-date: 2023-07-28
+date: 2023-08-05
 description: Use the alert shortcode to display a contextual feedback message.
 layout: docs
 icon: fas triangle-exclamation
@@ -31,6 +31,7 @@ The shortcode supports the following arguments:
 | dismissible | No  | Optional flag to indicate the alert is dismissible, defaults to false. |
 | icon        | No  | Optional class and name of a Font Awesome icon to include. The icons use the [icon shorthand notation]({{< relref "../content/icons" >}}). |
 | type        | No  | Optional type of the alert, either "danger" or "info". Generates an alert with related color and icon. |
+| class       | No  | Optional class attribute of the alert element. |
 {{< /table >}}
 
 ## Examples
