@@ -48,6 +48,7 @@ The `docs` shortcode supports `.toml` and `.scss` file formats. Use a marker to 
 
 Click on one the tabs to see a full example of an input file.
 
+<!-- markdownlint-disable MD031 -->
 {{< nav type="tabs" id="tabs-1" >}}
   {{< nav-item header="toml" show="true" >}}
 ```toml
@@ -69,6 +70,7 @@ enableGitInfo = true
 ```
   {{< /nav-item >}}
 {{< /nav >}}
+<!-- markdownlint-enable MD031 -->
 
 ## Examples
 
@@ -76,7 +78,7 @@ Change the style and language of your code snippet with shortcode arguments.
 
 ### Default code snipppet
 
-Use the `name` and `file` arguments to refer to a code snippet of a file. By default, the shortcode uses the site's `basePath` (see [page layout]({{< relref "layout#configuration-3" >}}) for more information). 
+Use the `name` and `file` arguments to refer to a code snippet of a file. By default, the shortcode uses the site's `basePath` (see [page layout]({{< relref "layout#configuration-3" >}}) for more information).
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
