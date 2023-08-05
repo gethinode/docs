@@ -16,7 +16,7 @@ The `docs` shortcode captures a code snippet from a `toml` or `scss` input file.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* docs name="main" file="config/_default/hugo.toml" */>}}
+{{</* docs name="main" file="config/_default/hugo.toml" id="docs-collapse-1" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -35,6 +35,7 @@ The shortcode supports the following arguments:
 | file      | Yes      | Path of the input file. The path is relative to the `basePath` defined in the `docs` section of the site's parameters (see [page layout]({{< relref "layout#configuration-3" >}})). If the file starts with `./`, the path of the repository is used as base path instead. |
 | show      | No       | If unset, shows the panel with the code snippet in collapsed state. By default, the panel is expanded. |
 | full      | No       | If unset, shows the filename only. By default, the full relative path is shown. |
+| id        | No       | Optional id of the collapse panel, defaults to "docs-collapse-n" with a sequential number n starting at 1. |
 | class     | No       | Optional class argument of the tab control. |
 {{< /table >}}
 
@@ -75,11 +76,11 @@ Change the style and language of your code snippet with shortcode arguments.
 
 ### Default code snipppet
 
-Use the `name` and `file` arguments to refer to a code snippet of a file. By default, the shortcode uses the site's `basePath` (see[page layout]({{< relref "layout#configuration-3" >}}) for more information). 
+Use the `name` and `file` arguments to refer to a code snippet of a file. By default, the shortcode uses the site's `basePath` (see [page layout]({{< relref "layout#configuration-3" >}}) for more information). 
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* docs name="main" file="config/_default/hugo.toml" */>}}
+{{</* docs name="main" file="config/_default/hugo.toml" id="docs-collapse-2" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -87,17 +88,17 @@ Provide a path that starts with `./` to use the path of the repository as base p
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* docs name="styling" file="./assets/scss/theme/theme.scss" */>}}
+{{</* docs name="styling" file="./assets/scss/theme/theme.scss" id="docs-collapse-3" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Collapsed code snipppet
 
-Set `show` to `false` to show hide the code snippet on page load. The code is reveiled when clicking the tab control.
+Set `show` to `false` to hide the code snippet on page load. The code is reveiled when clicking the tab control.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* docs name="styling" show="false" file="./assets/scss/theme/theme.scss" */>}}
+{{</* docs name="styling" show="false" file="./assets/scss/theme/theme.scss" id="docs-collapse-4" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -107,6 +108,6 @@ Set `full` to `false` to show the filename only.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* docs name="styling" full="false" file="./assets/scss/theme/theme.scss" */>}}
+{{</* docs name="styling" full="false" file="./assets/scss/theme/theme.scss" id="docs-collapse-5" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
