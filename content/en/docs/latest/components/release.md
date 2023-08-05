@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Release
-date: 2023-08-04
+date: 2023-08-05
 description: Use the release shortcode to indicate the availability of a specific feature in a tagged release.
 layout: docs
 icon: fas code-pull-request
@@ -31,6 +31,7 @@ The shortcode supports the following arguments:
 | version     | Yes      | Required version string, expects {{</* link semver >}}semver notation{{< /link */>}} with a "v" prefix. |
 | state       | No       | Optional state, either "new" (default) or "deprecated". |
 | short       | No       | Optional flag to indicate the release button should use short notation. |
+| class       | No       | Optional class attribute of the button element. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 

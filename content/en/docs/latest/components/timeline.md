@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Timeline
-date: 2023-07-04
+date: 2023-08-05
 description: Use the timeline shortcode to show tems ordered on a vertical timelime.
 layout: docs
 icon: fas timeline fa-rotate-90
@@ -12,7 +12,7 @@ tags: component
 
 {{< release version="v0.15.3" >}}
 
-Use the timeline shortcode to show tems ordered on a vertical timelime.
+Use the timeline shortcode to show items ordered on a vertical timelime.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -29,6 +29,7 @@ The shortcode supports the following arguments:
 |-------------|----------|-------------|
 | data        | Yes      | Required filename of the timeline input. See [data format]({{< relref "#data-format" >}}) for the file requirements. You can omit the file extension. The file should reside in the `data` folder. |
 | background  | No       | Optional border color of the connector dots, defaults to the body background color. If set, uses a [subtle background color]({{< ref "colors#background-colors" >}}) that is adaptive to the current color mode. |
+| class       | No       | Optional class attribute of the timeline's container. |
 {{< /table >}}
 
 ## Data format
