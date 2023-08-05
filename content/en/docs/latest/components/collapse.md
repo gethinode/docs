@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Collapse
-date: 2023-05-21
+date: 2023-08-05
 description: Use the collapse shortcode to reveil or hide a panel.
 layout: docs
 icon: fa eye-slash
@@ -26,6 +26,10 @@ Use the `collapse` shortcode to reveil or hide a panel. The panel can contain bo
 <!-- markdownlint-enable MD037 -->
 
 ## Arguments
+
+{{< alert type="danger" >}}
+The definition of the default `id` field fails when embedding (multiple) `collapse` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
+{{< /alert >}}
 
 The shortcode supports the following arguments:
 

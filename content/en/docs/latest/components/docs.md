@@ -22,6 +22,10 @@ The `docs` shortcode captures a code snippet from a `toml` or `scss` input file.
 
 ## Arguments
 
+{{< alert type="danger" >}}
+The definition of the default `id` field fails when embedding (multiple) `docs` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
+{{< /alert >}}
+
 The shortcode supports the following arguments:
 
 {{< table >}}
