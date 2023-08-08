@@ -25,6 +25,22 @@ date: 2023-02-19
 ---
 ```
 
+Hinode supports the following additional front matter parameters.
+
+{{< table >}}
+| Argument            | Description |
+|---------------------|-------------|
+| icon                | Shorthand notation for an [icon]({{< relref "icon" >}}) to be used on a [card]({{< relref "card" >}}). |
+| photoCredits        | {{</* release version="v0.18" state="deprecated" */>}} Use `thumbnail.author` instead. |
+| photoSource         | {{</* release version="v0.18" state="deprecated" */>}} Use `thumbnail.origin` instead. |
+| thumbnail           | URL or local path of the thumbnail image, shorthand notation for `thumbnail.url`. When using shorthand notation, the additional thumbnail metadata is unavailable (and will throw an error when specified). |
+| thumbnail.url       | URL or local path of the thumbnail image. When set, be sure to clear the shorthand `thumbnail` value. |
+| thumbnail.author    | Name of the thumbnail author, added as caption to the thumbnail on single pages. |
+| thumbnail.authorURL | URL of the thumbnail author, added as caption link to the thumbnail on single pages. |
+| thumbnail.origin    | Name of the thumbnail origin, e.g. Unsplash or Pexels. |
+| thumbnail.originURL | URL of the thumbnail origin, added as caption link to the thumbnail on single pages. |
+{{< /table >}}
+
 ### Mixed content
 
 As explained in the [overview]({{< relref "#overview" >}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with <abbr title="HyperText Markup Language">HTML</abbr> as needed. The final output is rendered to HTML. The following example mixes Markdown formatting with HTML to show the explanation of an abbreviation on hover.
