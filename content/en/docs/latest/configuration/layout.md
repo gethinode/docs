@@ -197,7 +197,7 @@ The configuration of the home page is set in the `home` section of the `site par
 | Setting      | Default | Description |
 |--------------|---------|-------------|
 | sections     | -       | Sections to include on the home page, e.g. ["blog", "projects"]. |
-| featurePhoto | -       | Url of the photo to include in the feature element. |
+| featurePhoto | -       | {{</* release version="v0.18" state="deprecated" */>}} Url of the photo to include in the feature element. Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | fullCover    | false   | Flag to indicate if the feature element should cover the entire front page. |
 | style        | -       | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
 {{< /table >}}
