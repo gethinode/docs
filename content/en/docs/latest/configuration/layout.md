@@ -194,12 +194,12 @@ The following diagram illustrates the conceptual layout of the home page:
 The configuration of the home page is set in the `home` section of the `site parameters`. The folllowing settings are supported:
 
 {{< table >}}
-| Setting      | Default | Description |
-|--------------|---------|-------------|
-| sections     | -       | Sections to include on the home page, e.g. ["blog", "projects"]. |
-| featurePhoto | -       | {{</* release version="v0.18" state="deprecated" */>}} Url of the photo to include in the feature element. Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
-| fullCover    | false   | Flag to indicate if the feature element should cover the entire front page. |
-| style        | -       | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
+| Setting      | Default           | Description |
+|--------------|-------------------|-------------|
+| sections     | All root sections | Sections to include on the home page, e.g. ["blog", "projects"] - defaults to {{</* link hugo_sections }}>all root sections.{{< /link */>}} |
+| featurePhoto | -                 | {{</* release version="v0.18" state="deprecated" */>}} Url of the photo to include in the feature element. Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
+| fullCover    | false             | Flag to indicate if the feature element should cover the entire front page. |
+| style        | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
@@ -494,16 +494,16 @@ The configuration of each section is set in the `sections` setting of the `site 
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
-| Setting      | Default      | Description |
-|--------------|--------------|-------------|
-| title        | ""           | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. |
-| layout       | "card"       | Layout of the section, either "card" (default), "list", or "nav". |
-| sort         | "date"       | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
-| reverse      | true         | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
-| nested       | true         | Flag to indicate the content should be listed recursively for the entire {{</* link hugo_sections >}}section{{< /link */>}}. You can override this setting for individual branch bundles by adding `nested` to the page's frontmatter. |
-| background   | -            | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
-| color        | -            | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
-| style        | -            | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
+| Setting      | Default              | Description |
+|--------------|----------------------|-------------|
+| title        | ""                   | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. |
+| layout       | "card"               | Layout of the section, either "card" (default), "list", or "nav". |
+| sort         | "date"               | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
+| reverse      | true                 | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
+| nested       | true                 | Flag to indicate the content should be listed recursively for the entire {{</* link hugo_sections >}}section{{< /link */>}}. You can override this setting for individual branch bundles by adding `nested` to the page's frontmatter. |
+| background   | -                    | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
+| color        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
+| style        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
