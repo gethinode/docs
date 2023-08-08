@@ -5,9 +5,12 @@ date: 2023-04-03
 lastmod: 2023-08-03
 tags: ["guide", "optimization"]
 weight: 30
-thumbnail: img/watch.jpg
-photoCredits: <a href="https://unsplash.com/@saffu">Saffu</a>
-photoSource: <a href="https://unsplash.com/photos/E4kKGI4oGaU">Unsplash</a>
+thumbnail: 
+    url: img/watch.jpg
+    author: Saffu
+    authorURL: https://unsplash.com/@saffu
+    origin: Unsplash
+    originURL: https://unsplash.com/photos/E4kKGI4oGaU
 ---
 
 ## Introduction
