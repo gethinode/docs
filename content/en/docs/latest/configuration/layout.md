@@ -141,9 +141,11 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
 | feature | link          | -       | Call to action link in the featured section on the home page. |
 | feature | caption       | "About" | Call to action title in the featured section on the home page. |
+| social  | title         | -       | Title displayed in the site's social footer. |
+| social  | caption       | -       | Caption displayed in the site's social footer. |
 | footer  | license       | -       | License displayed on the site's footer. |
-| footer  | socialTitle   | -       | Title displayed in the site's social footer. |
-| footer  | socialCaption | -       | Caption displayed in the site's social footer. |
+| footer  | socialTitle   | -       | {{</* release version="v0.18" state="deprecated" */>}} Use `social.title` instead. |
+| footer  | socialCaption | -       | {{</* release version="v0.18" state="deprecated" */>}} Use `social.caption` instead. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
