@@ -139,8 +139,8 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
-| feature | link          | -       | Call to action link in the featured section on the home page. |
-| feature | caption       | "About" | Call to action title in the featured section on the home page. |
+| feature | link          | -       | {{</* release version="v0.18" state="deprecated" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{< relref "languages" >}})). |
+| feature | caption       | "About" | {{</* release version="v0.18" state="deprecated" */>}} See `feature.link`. |
 | social  | title         | -       | Title displayed in the site's social footer. |
 | social  | caption       | -       | Caption displayed in the site's social footer. |
 | footer  | license       | -       | License displayed on the site's footer. |
