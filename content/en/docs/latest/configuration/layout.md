@@ -139,7 +139,7 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
-| feature | link          | -       | {{</* release version="v0.18" state="deprecated" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{< relref "languages" >}})). |
+| feature | link          | -       | {{</* release version="v0.18" state="deprecated" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{</* relref "languages" */>}})). |
 | feature | caption       | "About" | {{</* release version="v0.18" state="deprecated" */>}} See `feature.link`. |
 | social  | title         | -       | Title displayed in the site's social footer. |
 | social  | caption       | -       | Caption displayed in the site's social footer. |
@@ -196,7 +196,7 @@ The configuration of the home page is set in the `home` section of the `site par
 {{< table >}}
 | Setting      | Default           | Description |
 |--------------|-------------------|-------------|
-| sections     | All root sections | Sections to include on the home page, e.g. ["blog", "projects"] - defaults to {{</* link hugo_sections }}>all root sections.{{< /link */>}} |
+| sections     | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{</* link hugo_sections >}}all root sections.{{< /link */>}} |
 | featurePhoto | -                 | {{</* release version="v0.18" state="deprecated" */>}} Url of the photo to include in the feature element. Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | fullCover    | false             | Flag to indicate if the feature element should cover the entire front page. |
 | style        | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
