@@ -491,7 +491,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
 | title        | ""                   | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. When using a multi-lingual site, make sure to properly translate this setting. |
-| reference    | "More {{section}}"    | Caption of the button that links to the section's associated list page (if applicable). By default, the title is set to "More {{section}}", where `{{section}}` is the section title in plural. When using a multi-lingual site, make sure to properly translate this setting. |
+| reference    | "More {{section}}"   | {{</* release version="v0.18.0-alpha" short="true" size="sm" inline="true" */>}} Caption of the button that links to the section's associated list page (if applicable). By default, the title is set to "More {{section}}", where `{{section}}` is the section title in plural. When using a multi-lingual site, make sure to properly translate this setting. |
 | layout       | "card"               | Layout of the section, either "card" (default), "list", or "nav". |
 | sort         | "date"               | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
 | reverse      | true                 | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
