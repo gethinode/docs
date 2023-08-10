@@ -349,17 +349,11 @@ Pages with a minimal layout are similar to documentation pages, but do not inclu
 
 ```yml
 ---
-layout: docs
+layout: minimal
 ---
 ```
 
 The following diagram illustrates the minimal layout of a single page.
-
-```yml
----
-layout: minimal
----
-```
 
 <div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
     <div class="row g-3">
