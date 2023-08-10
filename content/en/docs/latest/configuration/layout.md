@@ -139,13 +139,13 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
-| feature | link          | -       | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{</* relref "languages" */>}})). |
-| feature | caption       | "About" | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} See `feature.link`. |
+| feature | link          | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{</* relref "languages" */>}})). |
+| feature | caption       | "About" | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} See `feature.link`. |
 | social  | title         | -       | Title displayed in the site's social footer. |
 | social  | caption       | -       | Caption displayed in the site's social footer. |
 | footer  | license       | -       | License displayed on the site's footer. |
-| footer  | socialTitle   | -       | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.title` instead. |
-| footer  | socialCaption | -       | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.caption` instead. |
+| footer  | socialTitle   | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.title` instead. |
+| footer  | socialCaption | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.caption` instead. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
@@ -197,7 +197,7 @@ The configuration of the home page is set in the `home` section of the `site par
 | Setting      | Default           | Description |
 |--------------|-------------------|-------------|
 | sections     | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{</* link hugo_sections >}}all root sections.{{< /link */>}} |
-| featurePhoto | -                 | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
+| featurePhoto | -                 | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | fullCover    | false             | Flag to indicate if the feature element should cover the entire front page. |
 | style        | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
 {{< /table >}}
@@ -491,7 +491,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
 | title        | ""                   | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. When using a multi-lingual site, make sure to properly translate this setting. |
-| reference    | "More {{section}}"   | {{</* release version="v0.18.0-alpha" short="true" size="sm" inline="true" */>}} Caption of the button that links to the section's associated list page (if applicable). By default, the title is set to "More {{section}}", where `{{section}}` is the section title in plural. When using a multi-lingual site, make sure to properly translate this setting. |
+| reference    | "More {{section}}"   | {{</* release version="v0.18.0-beta" short="true" size="sm" inline="true" */>}} Caption of the button that links to the section's associated list page (if applicable). By default, the title is set to "More {{section}}", where `{{section}}` is the section title in plural. When using a multi-lingual site, make sure to properly translate this setting. |
 | layout       | "card"               | Layout of the section, either "card" (default), "list", or "nav". |
 | sort         | "date"               | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
 | reverse      | true                 | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
