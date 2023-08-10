@@ -5,9 +5,12 @@ date: 2023-04-03
 description: Guide on how to set up your site with version control and automated testing using GitHub and VSCode.
 tags: ["guide", "vscode"]
 weight: 10
-thumbnail: img/launch.jpg
-photoCredits: <a href="https://unsplash.com/@spacex">SpaceX</a>
-photoSource: <a href="https://unsplash.com/photos/TV2gg2kZD1o">Unsplash</a>
+thumbnail: 
+    url: img/launch.jpg
+    author: SpaceX
+    authorURL: https://unsplash.com/@spacex
+    origin: Unsplash
+    originURL: https://unsplash.com/photos/TV2gg2kZD1o
 ---
 
 ## Introduction

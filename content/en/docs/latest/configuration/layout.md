@@ -58,6 +58,10 @@ The below configuration shows the default configuration set in `config/_default/
 
 #### Extended configuration
 
+{{ alert tye="info" }}
+Hinode is fully open source. By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled.
+{{ /alert }}
+
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
 {{< table >}}
@@ -67,6 +71,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | description        | -                 | Short description of the website that is added to the page metadata. |
 | enableDarkMode     | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
+| endorse            | true              | If set, adds a link to `gethinode.com` in the page's footer. |
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
 | externalLinks.cue  | false             | If set, adds a visual cue `{{</* fas up-right-from-square fa-2xs */>}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
@@ -130,16 +135,20 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{< ref "languages" >}}) section to review the various configuration options to enable multilingual content.
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
-| feature | link          | -       | Call to action link in the featured section on the home page. |
-| feature | caption       | "About" | Call to action title in the featured section on the home page. |
+| feature | link          | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{</* relref "languages" */>}})). |
+| feature | caption       | "About" | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} See `feature.link`. |
+| social  | title         | -       | Title displayed in the site's social footer. |
+| social  | caption       | -       | Caption displayed in the site's social footer. |
 | footer  | license       | -       | License displayed on the site's footer. |
-| footer  | socialTitle   | -       | Title displayed in the site's social footer. |
-| footer  | socialCaption | -       | Caption displayed in the site's social footer. |
+| footer  | socialTitle   | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.title` instead. |
+| footer  | socialCaption | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.caption` instead. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
 
@@ -186,16 +195,18 @@ The following diagram illustrates the conceptual layout of the home page:
 
 The configuration of the home page is set in the `home` section of the `site parameters`. The folllowing settings are supported:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
-| Setting      | Default | Description |
-|--------------|---------|-------------|
-| sections     | -       | Sections to include on the home page, e.g. ["blog", "projects"]. |
-| featurePhoto | -       | Url of the photo to include in the feature element. |
-| fullCover    | false   | Flag to indicate if the feature element should cover the entire front page. |
-| style        | -       | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
+| Setting      | Default           | Description |
+|--------------|-------------------|-------------|
+| sections     | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{</* link hugo_sections >}}all root sections.{{< /link */>}} |
+| featurePhoto | -                 | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
+| fullCover    | false             | Flag to indicate if the feature element should cover the entire front page. |
+| style        | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
-The below configuration shows the default configuration set in `config/_default/params.toml`.
+The below configuration shows the default configuration set in `config/_default/params.toml`. The `sections` are commented out, meaning all root sections are enabled by default.
 
 {{< docs name="home" file="config/_default/params.toml" >}}
 
@@ -342,17 +353,11 @@ Pages with a minimal layout are similar to documentation pages, but do not inclu
 
 ```yml
 ---
-layout: docs
+layout: minimal
 ---
 ```
 
 The following diagram illustrates the minimal layout of a single page.
-
-```yml
----
-layout: minimal
----
-```
 
 <div class="container-fluid text-center bg-light border rounded-3 bg-opacity-10 p-3">
     <div class="row g-3">
@@ -487,16 +492,17 @@ The configuration of each section is set in the `sections` setting of the `site 
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
-| Setting      | Default      | Description |
-|--------------|--------------|-------------|
-| title        | ""           | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. |
-| layout       | "card"       | Layout of the section, either "card" (default), "list", or "nav". |
-| sort         | "date"       | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
-| reverse      | true         | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
-| nested       | true         | Flag to indicate the content should be listed recursively for the entire {{</* link hugo_sections >}}section{{< /link */>}}. You can override this setting for individual branch bundles by adding `nested` to the page's frontmatter. |
-| background   | -            | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
-| color        | -            | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
-| style        | -            | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
+| Setting      | Default              | Description |
+|--------------|----------------------|-------------|
+| title        | ""                   | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. When using a multi-lingual site, make sure to properly translate this setting. |
+| reference    | "More {{section}}"   | {{</* release version="v0.18.0-beta" short="true" size="sm" inline="true" */>}} Caption of the button that links to the section's associated list page (if applicable). By default, the title is set to "More {{section}}", where `{{section}}` is the section title in plural. When using a multi-lingual site, make sure to properly translate this setting. |
+| layout       | "card"               | Layout of the section, either "card" (default), "list", or "nav". |
+| sort         | "date"               | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
+| reverse      | true                 | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
+| nested       | true                 | Flag to indicate the content should be listed recursively for the entire {{</* link hugo_sections >}}section{{< /link */>}}. You can override this setting for individual branch bundles by adding `nested` to the page's frontmatter. |
+| background   | -                    | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
+| color        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
+| style        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -526,6 +532,6 @@ The `nav` layout supports the following additional arguments:
 | width        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
 {{< /table >}}
 
-The below configuration shows the default configuration set in `config/_default/params.toml`.
+The below configuration shows an example configuration of the [guides available on this site]({{< relref "guides" >}}). The configuration is set in `config/_default/params.toml`.
 
-{{< docs name="sections" file="config/_default/params.toml" >}}
+{{< docs name="sections" file="./config/_default/params.toml" >}}

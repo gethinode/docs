@@ -4,9 +4,12 @@ description: Guide on how to create versioned documentation using folders and br
 date: 2023-08-02
 tags: ["guide", "versioning"]
 weight: 40
-thumbnail: img/books.jpg
-photoCredits: <a href="https://unsplash.com/@chrislawton">Chris Lawton</a>
-photoSource: <a href="https://unsplash.com/photos/9T346Ij4kGk">Unsplash</a>
+thumbnail: 
+    url: img/books.jpg
+    author: Chris Lawton
+    authorURL: https://unsplash.com/@chrislawton
+    origin: Unsplash
+    originURL: https://unsplash.com/photos/9T346Ij4kGk
 ---
 
 ## Introduction

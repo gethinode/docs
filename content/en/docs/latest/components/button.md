@@ -177,17 +177,17 @@ Set the `tooltip` argument in conjunction with `placement` to show a tooltip whe
 
 Reveal or hide a collapsible panel by linking the panel's `id` to the button with the argument `collapse`.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="collapse pb-3" id="collapseExample">
+{{</* button color="dark" collapse="collapseExample" */>}}
+    Collapse
+{{</* /button */>}}
+
+<div class="collapse pt-3" id="collapseExample">
     <div class="card card-body">
         Some placeholder content for the collapse component. This panel is hidden by default
         but revealed when the user activates the relevant trigger.
     </div>
 </div>
-
-<!-- markdownlint-disable MD037 -->
-{{</* button color="dark" collapse="collapseExample" */>}}
-    Collapse
-{{</* /button */>}}
 {{< /example>}}
 <!-- markdownlint-enable MD037 -->

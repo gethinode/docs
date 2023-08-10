@@ -30,6 +30,12 @@ github.com/gethinode/hinode v0.17.3 h1:wFvsKsuHD/P7zPU0Fn1sywVyQPy+7YMJ60KgIKjt8
 github.com/gethinode/hinode v0.17.3/go.mod h1:HEDsZUpHWCCBcnlDGQWT9ETYlp8QoapcCCp8Hsczucw=
 github.com/gethinode/hinode v0.17.4 h1:95V5yCVPuIYWtEpmgtwPaJdWboyOPYWVmLoU9JN59YI=
 github.com/gethinode/hinode v0.17.4/go.mod h1:f0z7aKz8YoFYOuv7C3DKEhC67B3lb2jvYRV2noiEaYk=
+github.com/gethinode/hinode v0.18.0-alpha h1:lD/vK2ls0C3Ab/uad9OuZgRmumTDIDOlL6KBGTRaGME=
+github.com/gethinode/hinode v0.18.0-alpha/go.mod h1:f0z7aKz8YoFYOuv7C3DKEhC67B3lb2jvYRV2noiEaYk=
+github.com/gethinode/hinode v0.18.0-alpha2 h1:1RhfQLUfwe0fJEsthjZ/JhG1tT8atpLDSITXrPBqr9w=
+github.com/gethinode/hinode v0.18.0-alpha2/go.mod h1:f0z7aKz8YoFYOuv7C3DKEhC67B3lb2jvYRV2noiEaYk=
+github.com/gethinode/hinode v0.18.0-beta h1:Ed035VLku64JTCWANdiaKoNzPs+qas5EHE+t1Ka2mks=
+github.com/gethinode/hinode v0.18.0-beta/go.mod h1:kA0ovH+4NTzgSGl608qXvDwnmuAl0dTHl8IlwR2n7lE=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
@@ -54,6 +60,8 @@ github.com/gethinode/mod-fontawesome v1.2.3 h1:RHWd+E72+m29xaC45m/3CF35C201jehw0
 github.com/gethinode/mod-fontawesome v1.2.3/go.mod h1:Ki1qkWEOiF0hQpCgWeZRw+HkpL6nd1DxKFptU0O2feI=
 github.com/gethinode/mod-fontawesome v1.2.4 h1:SqE3CQ+boaBIhrVh3MPu4nz0uoHPfEH5t60nNY1CfsI=
 github.com/gethinode/mod-fontawesome v1.2.4/go.mod h1:Ki1qkWEOiF0hQpCgWeZRw+HkpL6nd1DxKFptU0O2feI=
+github.com/gethinode/mod-fontawesome v1.2.5 h1:RqkLRj6+s+gM4nKd0IwNMMDA8cRmxfp0fxkVH4FdAGU=
+github.com/gethinode/mod-fontawesome v1.2.5/go.mod h1:Ki1qkWEOiF0hQpCgWeZRw+HkpL6nd1DxKFptU0O2feI=
 github.com/gethinode/mod-katex v1.0.2 h1:pIG4n3qLl/IVe7BEiwn+GL8r5lOCtF6FDxlcrPKdAXk=
 github.com/gethinode/mod-katex v1.0.2/go.mod h1:byAfpI3wuqNJIooTGVEGc1cjBhhCy4+CcK1H6495MYg=
 github.com/gethinode/mod-leaflet v0.3.1 h1:H5MaOa+BB1KuVw7abTqfIn/SNzzRsAyx/WQoSe+2Ykc=

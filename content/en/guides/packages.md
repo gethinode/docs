@@ -5,9 +5,12 @@ date: 2023-04-03
 description: Guide on how to add existing npm packages to your site.
 tags: ["guide", "npm", "leaflet"]
 weight: 20
-thumbnail: img/packages.jpg
-photoCredits: <a href="https://unsplash.com/@mildlee">Mildleee</a>
-photoSource: <a href="https://unsplash.com/photos/7KKy7-TeeVs">Unsplash</a>
+thumbnail: 
+    url: img/packages.jpg
+    author: Mildlee
+    authorURL: https://unsplash.com/@mildlee
+    origin: Unsplash
+    originURL: https://unsplash.com/photos/7KKy7-TeeVs
 ---
 
 {{< alert type="danger" >}}
