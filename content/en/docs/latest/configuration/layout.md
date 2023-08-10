@@ -135,6 +135,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{< ref "languages" >}}) section to review the various configuration options to enable multilingual content.
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
@@ -147,6 +148,7 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | footer  | socialTitle   | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.title` instead. |
 | footer  | socialCaption | -       | {{</* release version="v0.18.0-beta" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.caption` instead. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
 
@@ -193,6 +195,7 @@ The following diagram illustrates the conceptual layout of the home page:
 
 The configuration of the home page is set in the `home` section of the `site parameters`. The folllowing settings are supported:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting      | Default           | Description |
 |--------------|-------------------|-------------|
@@ -201,6 +204,7 @@ The configuration of the home page is set in the `home` section of the `site par
 | fullCover    | false             | Flag to indicate if the feature element should cover the entire front page. |
 | style        | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`. The `sections` are commented out, meaning all root sections are enabled by default.
 

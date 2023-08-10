@@ -27,6 +27,7 @@ date: 2023-02-19
 
 Hinode supports the following additional front matter parameters.
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument            | Description |
 |---------------------|-------------|
@@ -40,6 +41,7 @@ Hinode supports the following additional front matter parameters.
 | thumbnail.origin    | Name of the thumbnail origin, e.g. Unsplash or Pexels. |
 | thumbnail.originURL | URL of the thumbnail origin, added as caption link to the thumbnail on single pages. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Mixed content
 
