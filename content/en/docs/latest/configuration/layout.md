@@ -139,13 +139,13 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
-| feature | link          | -       | {{</* release version="v0.18.0-alpha" state="deprecated" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{</* relref "languages" */>}})). |
-| feature | caption       | "About" | {{</* release version="v0.18.0-alpha" state="deprecated" */>}} See `feature.link`. |
+| feature | link          | -       | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{</* relref "languages" */>}})). |
+| feature | caption       | "About" | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} See `feature.link`. |
 | social  | title         | -       | Title displayed in the site's social footer. |
 | social  | caption       | -       | Caption displayed in the site's social footer. |
 | footer  | license       | -       | License displayed on the site's footer. |
-| footer  | socialTitle   | -       | {{</* release version="v0.18.0-alpha" state="deprecated" */>}} Use `social.title` instead. |
-| footer  | socialCaption | -       | {{</* release version="v0.18.0-alpha" state="deprecated" */>}} Use `social.caption` instead. |
+| footer  | socialTitle   | -       | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.title` instead. |
+| footer  | socialCaption | -       | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.caption` instead. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
@@ -197,12 +197,12 @@ The configuration of the home page is set in the `home` section of the `site par
 | Setting      | Default           | Description |
 |--------------|-------------------|-------------|
 | sections     | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{</* link hugo_sections >}}all root sections.{{< /link */>}} |
-| featurePhoto | -                 | {{</* release version="v0.18.0-alpha" state="deprecated" */>}} Url of the photo to include in the feature element. Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
+| featurePhoto | -                 | {{</* release version="v0.18.0-alpha" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | fullCover    | false             | Flag to indicate if the feature element should cover the entire front page. |
 | style        | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
 {{< /table >}}
 
-The below configuration shows the default configuration set in `config/_default/params.toml`.
+The below configuration shows the default configuration set in `config/_default/params.toml`. The `sections` are commented out, meaning all root sections are enabled by default.
 
 {{< docs name="home" file="config/_default/params.toml" >}}
 
