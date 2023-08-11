@@ -17,7 +17,7 @@ Currently Hinode relies on the libsass transpiler, which is {{</* link hugo_sass
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
-Hinodes uses Hugo modules and mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
+Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
 
 1. **Initialize the Sass variables**
 
