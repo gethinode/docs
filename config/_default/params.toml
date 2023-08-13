@@ -169,6 +169,8 @@
     light = "#f8f9fa"
     dark = "#212529"
     themeOpacity = "10"
+    darkModeShade = "20%"
+    darkModeTint = "40%"
     themeFont = "Inter"
     themeFontPath = "/fonts" # local path
 
