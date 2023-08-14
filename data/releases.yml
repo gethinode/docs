@@ -1,9 +1,22 @@
 # This file holds all entries for the release timeline
 
 
+- title: Accessibility
+  icon: fas circle-half-stroke
+  color: primary
+  date: 2023-08-14
+  badge: v0.18.0
+  url: v0.18.0
+  content:
+    This release introduces several styling changes to improve accessibility. Two new helpers are available to improve
+    the [contrast of the primary color in dark mode]({{< relref "color-modes#accessibility" >}}). In addition, several
+    accessibility improvements have been made under the hood. Finally, with the help of
+    {{< link github_aefly >}}@aefly{{< /link>}}, {{< link hinode_fr >}}Hinode is now available in the French language
+    {{< /link >}} as well.
+
 - title: Inline icons
   icon: fas bezier-curve
-  color: warning
+  color: info
   date: 2023-08-02
   badge: v0.17.0
   url: v0.17.0

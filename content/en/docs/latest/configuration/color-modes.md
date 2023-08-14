@@ -1,7 +1,7 @@
 ---
 title: Color modes
 description: Add light mode and dark mode support to your website.
-date: 2023-08-13
+date: 2023-08-14
 layout: docs
 ---
 
@@ -22,7 +22,7 @@ Hinode defines two classes to simplify the development of color-mode aware websi
 
 ## Accessibility
 
-{{< release version="v0.18.0-beta" >}}
+{{< release version="v0.18.0" >}}
 
 Contrast is an important aspect of your site accessibility. The {{< link wcag_contrast >}}WCAG color contrast guidelines{{< /link >}} recommends a minimum contrast ratio of 4.5:1 for most content elements. Defining a color scheme that has sufficient contrast in all color modes can be challenging. Hinode supports two attributes to enhance the contrast ratio of the primary color in dark mode.
 

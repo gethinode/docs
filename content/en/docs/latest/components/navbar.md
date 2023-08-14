@@ -64,6 +64,10 @@ Set the argument `title` to add a brand text to the left of the navbar. The text
 ### Colored navbar
 
 {{< alert >}}
+<strong>New in v0.18.0 -</strong> To improve accessibility, navbars with a color `primary`, `secondary`, `success`, or `danger` are set to a style with higher contrast.
+
+---
+
 <strong>New in v0.14.1 -</strong> To improve color-mode compatibility, the colors `dark` and `light` are no longer supported. Use the adaptive colors `body` and `body-tertiary` instead, or apply a static `white` or `black` color.
 
 ---
