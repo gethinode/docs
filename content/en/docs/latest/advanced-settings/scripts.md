@@ -9,7 +9,7 @@ Hinode bundles local JavaScript files and JavaScript files defined in a core mod
 
 ## Build pipeline
 
-Hinodes uses Hugo modules and mounted folders to create a flexibile virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the JavaScript files consists of four steps.
+Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the JavaScript files consists of four steps.
 
 1. **Mount the JavaScript files maintained within the core modules**
 

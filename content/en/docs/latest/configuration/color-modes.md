@@ -1,7 +1,7 @@
 ---
 title: Color modes
 description: Add light mode and dark mode support to your website.
-date: 2023-08-04
+date: 2023-08-14
 layout: docs
 ---
 
@@ -19,6 +19,21 @@ Hinode defines two classes to simplify the development of color-mode aware websi
 <div class="d-none-dark">I'm visible in <mark>light mode</mark> only</div>
 <div class="d-none-light">I'm visible in <mark>dark mode</mark> only</div>
 {{< /example >}}
+
+## Accessibility
+
+{{< release version="v0.18.0" >}}
+
+Contrast is an important aspect of your site accessibility. The {{< link wcag_contrast >}}WCAG color contrast guidelines{{< /link >}} recommends a minimum contrast ratio of 4.5:1 for most content elements. Defining a color scheme that has sufficient contrast in all color modes can be challenging. Hinode supports two attributes to enhance the contrast ratio of the primary color in dark mode.
+
+The argument `darkModeTint` lightens the primary color with a given percentage, while `darkModeShade` darkens the primary background color. You can adjust these settings in the `style` section of the `site parameters`.
+
+{{< table >}}
+| Setting       | Default | Description |
+|---------------|---------|-------------|
+| darkModeShade | "20%"   | Darkens the primary background color in dark mode with a given percentage, defaults to 20%. |
+| darkModeTint  | "40%"   | Lightens the primary color in dark mode with a given percentage, defaults to 40%. |
+{{< /table >}}
 
 ## Sass
 
