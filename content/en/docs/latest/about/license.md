@@ -1,7 +1,7 @@
 ---
 title: License
 description: Hinode's open-source license for the codebase and documentation.
-date: 2023-08-02
+date: 2023-08-15
 layout: docs
 ---
 
@@ -11,4 +11,4 @@ The codebase of Hinode is open source under the conditions of the {{< link licen
 
 ## Documentation
 
-The documentation of Hinode is licensed under the Creative Commons ({{< link cc_by_nc_4_0 >}}CC BY-NC 4.0{{< /link >}}) license. This includes all files within the repository's `/content` folder and its children, as well as the "README" in the repository root. The license allows you to share and adapt the materials, as long as you give appropriate credit and do not use the materials for commercial purposes. No warranties are given.
+The documentation of Hinode is licensed under the Creative Commons ({{< link cc_by_nc_4_0 >}}CC BY-NC 4.0{{< /link >}}) license. This includes all files within the repository's `/content` and `/exampleSite/content` folders and their children, as well as the "README" in the repository root. The license allows you to share and adapt the materials, as long as you give appropriate credit and do not use the materials for commercial purposes. No warranties are given.
