@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-08-14
+date: 2023-08-15
 layout: docs
 ---
 
@@ -58,9 +58,9 @@ The below configuration shows the default configuration set in `config/_default/
 
 #### Extended configuration
 
-{{ alert tye="info" }}
+{{< alert type="info" >}}
 Hinode is fully open source. By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled.
-{{ /alert }}
+{{< /alert >}}
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
