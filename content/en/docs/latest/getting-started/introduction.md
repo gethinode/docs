@@ -15,22 +15,25 @@ Hinode is a clean documentation and blog theme for {{< link hugo >}}Hugo{{< /lin
 
 Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} to install and maintain various components. It can be installed using either Hugo or npm. If you would like to take advantage of automation, the npm approach is recommended. Hinode requires the following software to be installed on your local machine:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
-| Software                                               | Hugo                  | npm                   | Remarks |
-|--------------------------------------------------------|-----------------------|-----------------------|---------|
-| {{</* link golang_download >}}Go binary{{< /link */>}} | {{</* fas check */>}} | {{</* fas check */>}} | Required for Hugo modules, including Hinode itself |
-| {{</* link hugo_download >}}Hugo (extended){{< /link */>}}        | {{</* fas check */>}} |                       | Embedded as npm binary |
-| {{</* link nodejs >}}Node.js{{< /link */>}}            |                       | {{</* fas check */>}} | The installation package includes npm |
-| {{</* link git_download >}}Git{{< /link */>}}          | recommended           | {{</* fas check */>}} | Recommended for version control |
+| Software                                                   | Hugo                  | npm                   | Remarks |
+|------------------------------------------------------------|-----------------------|-----------------------|---------|
+| {{</* link golang_download >}}Go binary{{< /link */>}}     | {{</* fas check */>}} | {{</* fas check */>}} | Required for Hugo modules, including Hinode itself |
+| {{</* link hugo_download >}}Hugo (extended){{< /link */>}} | {{</* fas check */>}} |                       | Embedded as npm binary |
+| {{</* link nodejs >}}Node.js{{< /link */>}}                |                       | {{</* fas check */>}} | The installation package includes npm |
+| {{</* link git_download >}}Git{{< /link */>}}              | recommended           | {{</* fas check */>}} | Recommended for version control |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Installation
 
 The next steps describe the approach how to initialize a new Hinode site using either Hugo or npm.
 
-<!-- markdownlint-disable MD005 MD029 -->
+<!-- markdownlint-disable MD005 MD029 MD037 -->
 {{< nav type="tabs" id="pills-1" >}}
   {{< nav-item header="Hugo" show="true" >}}
+
 1. **Create a new site**
 
     {{</* command */>}}
@@ -51,9 +54,10 @@ The next steps describe the approach how to initialize a new Hinode site using e
     {{</* /command */>}}
   {{< /nav-item >}}
   {{< nav-item header="npm" >}}
+
 1. **Create a new repository**
 
-    Go to {{</* link repository_template /*/>}} and login to GitHub as needed. Next, click the button `Use this template {{</* fas caret-down */>}} ` to initialize a new repository based on the Hinode template.
+    Go to {{</* link repository_template /*/>}} and login to GitHub as needed. Next, click the button `Use this template {{</* fas caret-down */>}}` to initialize a new repository based on the Hinode template.
 
     **Alternatively**, you can use the {{</* link github_cli >}}GitHub cli{{< /link */>}} to initialize the repository from the command line. Replace `--private` with `--public` if you wish to create a public repository instead.
 
