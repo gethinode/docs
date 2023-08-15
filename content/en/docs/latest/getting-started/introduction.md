@@ -13,13 +13,13 @@ Hinode is a clean documentation and blog theme for {{< link hugo >}}Hugo{{< /lin
 
 ## Prerequisites
 
-Hinode is a theme that uses {{< link hugo_modules >}}Hugo modules{{< /link >}} to install and maintain various components. It can be installed using either Hugo or npm. If you would like to take advantage of automation, the npm approach is recommended. Hinode requires the following software to be installed on your local machine:
+Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} to install and maintain various components. It can be installed using either Hugo or npm. If you would like to take advantage of automation, the npm approach is recommended. Hinode requires the following software to be installed on your local machine:
 
 {{< table >}}
 | Software                                               | Hugo                  | npm                   | Remarks |
 |--------------------------------------------------------|-----------------------|-----------------------|---------|
 | {{</* link golang_download >}}Go binary{{< /link */>}} | {{</* fas check */>}} | {{</* fas check */>}} | Required for Hugo modules, including Hinode itself |
-| {{</* link hugo_download >}}Hugo{{< /link */>}}        | {{</* fas check */>}} |                       | Embedded as npm binary |
+| {{</* link hugo_download >}}Hugo (extended){{< /link */>}}        | {{</* fas check */>}} |                       | Embedded as npm binary |
 | {{</* link nodejs >}}Node.js{{< /link */>}}            |                       | {{</* fas check */>}} | The installation package includes npm |
 | {{</* link git_download >}}Git{{< /link */>}}          | recommended           | {{</* fas check */>}} | Recommended for version control |
 {{< /table >}}
@@ -44,7 +44,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
     echo "[[module.imports]]\npath = 'github.com/gethinode/hinode'" >> hugo.toml
     {{</* /command */>}}
 
-3. **Start the development server**
+3. **Start a development server**
 
     {{</* command */>}}
     hugo server
@@ -55,7 +55,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
 
     Go to {{</* link repository_template /*/>}} and login to GitHub as needed. Next, click the button `Use this template {{</* fas caret-down */>}} ` to initialize a new repository based on the Hinode template.
 
-    **Alternatively**, you can use the {{</* link github_cli >}}gh cli command{{< /link */>}} to initialize the repository from the command line. Replace `--private` with `--public` if you wish to create a public repository instead.
+    **Alternatively**, you can use the {{</* link github_cli >}}GitHub cli{{< /link */>}} to initialize the repository from the command line. Replace `--private` with `--public` if you wish to create a public repository instead.
 
     {{</* command */>}}
     gh repo create my-hinode-site --private --template="{{</* param "links.repository_template" */>}}"
@@ -86,7 +86,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
 
 ## Adding content
 
-Hinode contains sample content for a blog and a project portfolio. The examples are available in English and Dutch and can be found in the `content` folder. Review the following items on to how organize and enrich your content.
+The {{< link repository >}}main Hinode repository{{< /link >}} contains a folder `exampleSite` with sample content for a blog and a project portfolio. The examples are available in English, French, and Dutch. Review the following items on to how organize and enrich your content.
 
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Adding content" >}}
