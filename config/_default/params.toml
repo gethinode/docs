@@ -254,6 +254,7 @@
     fa_animation = "https://fontawesome.com/docs/web/style/animate"
     git_download = "https://git-scm.com"
     github_actions = "https://github.com/features/actions"
+    github_cli = "https://cli.github.com"
     github_signup = "https://github.com/signup"
     github_pr = "https://help.github.com/articles/about-pull-requests/"
     github_rebase = "https://help.github.com/articles/about-git-rebase/"
