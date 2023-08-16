@@ -26,7 +26,7 @@ Since Hinode `v0.16.8` you can add a managed link to your page content using a c
 
 ## Arguments
 
-The shortcode supports a single unnamed parameter, or various named parameters. The unnamed parameter is recognized as a url if it starts with `http`, else it is treated as either a named link or internal reference (in that order). Any inner text is rendered as the link title, otherwise it uses the host name (for external links), link title (for internal links), or anchor name (for any local references containing a `#`). The shortcode supports the following named arguments:
+The shortcode supports a single unnamed parameter, or various named parameters. The unnamed parameter is recognized as a url if it starts with `http`, else it is treated as either a named link or **relative** internal reference (in that order). Any inner text is rendered as the link title, otherwise it uses the host name (for external links), link title (for internal links), or anchor name (for any local references containing a `#`). The shortcode supports the following named arguments:
 
 {{< table >}}
 | Argument    | Required | Description |
@@ -62,6 +62,9 @@ Use the `cue` and `tab` arguments to override the default behavior of displaying
 - {{</* link name=mozilla_image cue=true tab=true >}}Named link opening in new tab with icon{{< /link */>}}
 - {{</* link mozilla_image /*/>}}
 - {{</* link "https://developer.mozilla.org" >}}External link{{< /link */>}}
+- {{</* link "../getting-started/introduction" >}}Internal link with title{{< /link */>}}
+- {{</* link "../about/license" /*/>}}
+- {{</* link url="../about/license" case=false /*/>}}
 - {{</* link "#arguments" /*/>}}
 - {{</* link "image#examples" /*/>}}
 
