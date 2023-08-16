@@ -32,6 +32,7 @@ Use the `carousel` shortcode to display a carousel of several images, with simil
 
 The carousel shortcode supports the following arguments:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
@@ -40,6 +41,7 @@ The carousel shortcode supports the following arguments:
 | portrait  | No  | {{</* release version="v0.18.3" short="true" size="sm" inline="true" */>}} Optional flag to adjust the ratio from landscape to portrait. The images themselves are not rotated, only the crop area is adjusted. This value is ignored when no ratio is set. |
 | class     | No  | Optional class attribute of the `carousel` element, e.g. "w-75". |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 {{< alert type="danger" >}}
 The carousel uses the original aspect ratio of the provided images when no aspect ratio is provided. Ensure the included images have a similar height and width to avoid inconsistent behavior.

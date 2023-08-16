@@ -104,11 +104,11 @@ npm run start
 (out)
 (out)Watching for changes in /../hinode-demo/{..}
 (out)Watching for config changes in [..]
-(out)Start building sites … 
+(out)Start building sites ...
 (out)hugo v0.117.0+extended darwin/arm64
 (out)
 (out)
-(out)                   | EN   
+(out)                   | EN  
 (out)-------------------+------
 (out)  Pages            |   6  
 (out)  Paginator pages  |   0  

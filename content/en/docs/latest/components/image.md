@@ -32,6 +32,7 @@ As an example, the following shortcode displays an image with its original aspec
 
 The shortcode supports the following arguments:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
@@ -44,6 +45,7 @@ The shortcode supports the following arguments:
 | caption   | No  | Optional figure caption. |
 | mode      | No  | Optional flag indicating if the image should support color modes. If set, the shortcode searches for images that having a matching color-mode suffix such as `light` or `dark`.|
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Examples
 
