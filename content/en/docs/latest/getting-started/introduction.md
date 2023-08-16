@@ -57,7 +57,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
 
 1. **Create a new repository**
 
-    Go to {{</* link repository_template /*/>}} and login to GitHub as needed. Next, click the button `Use this template {{</* fas caret-down */>}}` to initialize a new repository based on the Hinode template.
+    Go to {{</* link repository_template /*/>}} and login to GitHub as needed. Next, click the green button `Use this template {{</* fas caret-down */>}}` to initialize a new repository based on the Hinode template.
 
     **Alternatively**, you can use the {{</* link github_cli >}}GitHub cli{{< /link */>}} to initialize the repository from the command line. Replace `--private` with `--public` if you wish to create a public repository instead.
 
