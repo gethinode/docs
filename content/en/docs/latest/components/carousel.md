@@ -70,14 +70,6 @@ Set the `ratio` to `1x1` for a square aspect ratio.
   {{</* img src="img/dunes.jpg" caption="slide 3" */>}}
 {{</* /carousel */>}}
 {{< /example >}}
-
-{{< example lang="hugo" >}}
-{{</* carousel id="carousel-1x1" ratio="1x1" portrait="true" class="col-sm-12 col-lg-6 mx-auto" */>}}
-  {{</* img src="img/coffee.jpg" caption="slide 1" */>}}
-  {{</* img src="img/phone.jpg" caption="slide 2" */>}}
-  {{</* img src="img/dunes.jpg" caption="slide 3" */>}}
-{{</* /carousel */>}}
-{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 Set the `ratio` to `3x2` for a landscape aspect ratio.
