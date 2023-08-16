@@ -25,16 +25,17 @@ This guide requires a GitHub account to host the demo repository. Next, Git, Nod
 
 - {{< link github_signup >}}Set up an account with GitHub{{< /link >}}
 - {{< link git_download >}}Download and install the Git binary{{< /link >}}
+- {{< link golang_download >}}Download and install Go{{< /link >}}
 - {{< link nodejs >}}Download and install Node.js{{< /link >}} (it includes npm)
 - {{< link vscode_download >}}Download and install VSCode{{< /link >}}
 
 ## Step 1 - Initializing the project
 
-As first step we will create a new repository on GitHub using a template. We will then connect our local machine to the remote repository and install the required dependencies. Lastly, we will run a local development server to test the newly created site.
+As first step we will create a new repository on GitHub using a template. The template uses npm to automate several tasks[^1]. We will then connect our local machine to the remote repository and install the required dependencies. Lastly, we will run a local development server to test the newly created site.
 
 ### Creating a new Git repository
 
-Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link >}} and a {{< link repository >}}main theme{{< /link >}}. The template uses {{< link npm >}}npm{{< /link >}} to link to the latest available version of Hinode. We will use the template as starting point for our new site, as it hides away most of the source code of the main theme. Unless you plan to customize a lot, it is recommended to use the template for your future projects.
+Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link >}} and a {{< link repository >}}main theme{{< /link >}}. We will use the template as starting point for our new site, as it has several predefined settings that support automation.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-init-step01.png" caption="Step 1. Create a new repository from the template" >}}
@@ -42,7 +43,7 @@ Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link
   {{< img src="img/github-init-step03.png" caption="Step 3. Review the initialized repository" >}}
 {{< /carousel >}}
 
-Navigate to the {{< link repository_template >}}template repository{{< /link >}} in your browser and click on the green button `Use this template` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone, such as open-source projects. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
+Navigate to the {{< link repository_template >}}template repository{{< /link >}} in your browser and click on the green button `Use this template {{< fas caret-down >}}` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone, such as open-source projects. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
 
 ### Connecting your local machine
 
@@ -51,12 +52,12 @@ We will now connect our local machine to the newly created GitHub repository. Na
 {{< command user="user" host="localhost" prompt="Documents $" >}}
 git clone https://github.com/<USER>/hinode-demo.git
 (out)Cloning into 'hinode-demo'...
-(out)remote: Enumerating objects: 62, done.
-(out)remote: Counting objects: 100% (62/62), done.
-(out)remote: Compressing objects: 100% (43/43), done.
-(out)remote: Total 62 (delta 9), reused 49 (delta 8), pack-reused 0
-(out)Receiving objects: 100% (62/62), 3.27 MiB | 974.00 KiB/s, done.
-(out)Resolving deltas: 100% (9/9), done.
+(out)remote: Enumerating objects: 39, done.
+(out)remote: Counting objects: 100% (39/39), done.
+(out)remote: Compressing objects: 100% (33/33), done.
+(out)remote: Total 39 (delta 1), reused 26 (delta 1), pack-reused 0
+(out)Receiving objects: 100% (39/39), 119.98 KiB | 777.00 KiB/s, done.
+(out)Resolving deltas: 100% (1/1), done.
 {{< /command >}}
 
 ### Installing the packages and dependencies
@@ -72,12 +73,23 @@ Next, use the command `npm install` to download and install the various packages
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm install
 (out)
-(out)added 528 packages, and audited 529 packages in 8s
+(out)added 510 packages, and audited 511 packages in 5s
 (out)
-(out)153 packages are looking for funding
+(out)186 packages are looking for funding
 (out)  run `npm fund` for details
 (out)
 (out)found 0 vulnerabilities
+{{< /command >}}
+
+Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include Leaflet module on those pages only. This helps to reduce the size of your page assets. Run the script `mod:update` to download and install the latest version of the modules.
+
+{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+npm run mod:update
+(out)
+(out)> @gethinode/template@0.10.0 mod:update
+(out)> hugo mod get -u ./... && npm run -s mod:vendor && npm run -s mod:tidy
+(out)
+(out)Update module in /../hinode-demo
 {{< /command >}}
 
 ### Running a local development server
@@ -86,39 +98,35 @@ Your site is now ready for testing. Enter the following command to start a local
 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run start
-(out)> @gethinode/template@0.7.3 prestart
-(out)> npm run clean
 (out)
-(out)> @gethinode/template@0.7.3 clean
-(out)> shx rm -rf public resources
+(out)> @gethinode/template@0.10.0 start
+(out)> hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings
 (out)
-(out)> @gethinode/template@0.7.3 start
-(out)> hugo server --bind=0.0.0.0 --disableFastRender
+(out)Watching for changes in /../hinode-demo/{..}
+(out)Watching for config changes in [..]
+(out)Start building sites … 
+(out)hugo v0.117.0+extended darwin/arm64
 (out)
-(out)Start building sites …
-(out)hugo v0.111.3-5d4eb5154e1fed125ca8e9b5a0315c4180dab192+extended darwin/arm64 BuildDate=2023-03-12T11:40:50Z VendorInfo=gohugoio
 (out)
-(out)                   | EN  | NL
-(out)-------------------+-----+-----
-(out)  Pages            |  36 | 35
-(out)  Paginator pages  |   0 |  0
-(out)  Non-page files   |   0 |  0
-(out)  Static files     |  38 | 38
-(out)  Processed images | 135 | 12
-(out)  Aliases          |   3 |  2
-(out)  Sitemaps         |   2 |  1  
-(out)  Cleaned          |   0 |  0
+(out)                   | EN   
+(out)-------------------+------
+(out)  Pages            |   6  
+(out)  Paginator pages  |   0  
+(out)  Non-page files   |   0  
+(out)  Static files     | 104  
+(out)  Processed images |  11  
+(out)  Aliases          |   0  
+(out)  Sitemaps         |   1  
+(out)  Cleaned          |   0  
 (out)
-(out)Built in 32352 ms
-(out)Watching for changes in Documents/hinode-demo/{archetypes,assets,content,data,i18n,layouts,node_modules,package.json,static}
-(out)Watching for config changes in Documents/hinode-demo/config/_default, Documents/hinode-demo/config/_default/menus
+(out)Built in 1302 ms
 (out)Environment: "development"
 (out)Serving pages from memory
 (out)Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
 (out)Press Ctrl+C to stop
 {{< /command >}}
 
-It usually takes less than a minute to build the site and to start the web server in development mode. Before building the site, Hinode cleans several folders. The build itself shows the result of the pages and other assets generated by Hugo. By default, the starter web site is bilingual and supports both the English and Dutch language. Lastly, Hugo mentions the local address on which it is available (usually `http://localhost:1313/`) and indicates the folders it is watching. The latter means that if you make any changes whilst the web server is running, Hugo should pick up those changes and regenerate the applicable assets. Using a feature called live reloading, your web browser will be instructed to refresh the web page accordingly.
+It usually takes less than a minute to build the site and to start the web server in development mode. Before building the site, Hinode cleans several folders. The build itself shows the result of the pages and other assets generated by Hugo. By default, the starter web site supports the English (EN) language. Lastly, Hugo mentions the local address on which it is available (usually `http://localhost:1313/`) and indicates the folders it is watching. The latter means that if you make any changes whilst the web server is running, Hugo should pick up those changes and regenerate the applicable assets. Using a feature called live reloading, your web browser will be instructed to refresh the web page accordingly.
 
 ## Step 2 - Managing the content
 
@@ -144,19 +152,37 @@ We will now set up a new branch before we make any changes. It is a good softwar
 
 Head over to the `Source Control` section of VSCode and click on the button `...` to open the source control menu. Within the menu, navigate to `Branch / Create Branch...`. Provide `develop` as branch name and confirm with <kbd>enter</kbd>. The blue status bar on the bottom of VSCode will now display `develop` as selected branch. A repository usually contains a `main` branch that maintains the production code, and one or more development branches. Complex projects with multiple contributors may have multiple active (feature) branches and even nested branches.
 
-Still within the `develop` branch, replace the content of the `content/en/about.md` with the following. When done, head over to the address `http://localhost:1313/en/about/` in your web browser to validate the result of the changes.
+Our initial page is still rather empty. We will now create a new post and modify the existing about section. Still within the `develop` branch, create a new folder `content/posts`. This is a so-called root section and corresponds with the path `/posts` of your published site. Next, create a new file in `content/posts/first-post.md`. Add the following content:
 
-```md
+```yml
 ---
-title: About
-description: The Hinode demo site illustrates how to set up a new web site.
-date: 2023-03-29
-showComments: false
+title: This is my first post
+date: 2023-08-15
+thumbnail:
+    url: /img/sunrise.jpg
+    author: Harris Vo
+    authorURL: https://unsplash.com/@hoanvokim
+    origin: https://unsplash.com/photos/ZX6BPboJrYk
+    originName: Unsplash
 ---
 
-This is my first site created with Hinode.
+This is my first site created with Hinode. It includes a single blog post.
 
 ```
+
+The content contains frontmatter, denoted by `---` markers, and main content. The frontmatter captures the metadata of the page, and usually includes at least a title and a date. The `thumbnail` is a special variable introduced by Hinode that captures the metadata of our page thumbnail. The image itself is mounted from the main Hinode repository into the `assets` folder upon build.
+
+Now let us replace the introduction of the featured section of our homepage. Replace the main content in `content/_index.md` (below the last `---` marker) with the following.
+
+
+```md
+This is my first site created with Hinode.
+```
+
+When done, head over to the address `http://localhost:1313/` in your web browser to validate the result of the changes.
+<div class="col-sm-12 col-lg-8 mx-auto">
+{{< image src="img/hinode-demo.png" caption="Demo site with an initial blog post" class="border" >}}
+</div>
 
 ## Step 3 - Validating the changes
 
@@ -165,12 +191,12 @@ Hinode defines severals tests to validate the code adheres to [coding standards]
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run lint
 (out)
-(out)> @gethinode/template@0.7.3 lint
-(out)> npm run -s lint:markdown
+(out)> @gethinode/template@0.10.0 lint
+(out)> npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown
 (out)
-(out)markdownlint-cli2 v0.6.0 (markdownlint v0.27.0)
+(out)markdownlint-cli2 v0.8.1 (markdownlint v0.29.0)
 (out)Finding: *.md content/**/*.md !node_modules !CHANGELOG.md
-(out)Linting: 27 file(s)
+(out)Linting: 3 file(s)
 (out)Summary: 0 error(s)
 {{< /command >}}
 
@@ -179,7 +205,7 @@ npm run lint
   {{< img src="img/vscode-commit-step02.png" caption="Step 2. Publish the branch" >}}
 {{< /carousel >}}
 
-Head over to VSCode's Source Control to view the pending changes. Click on the file `about.md` to open the code inspector. VSCode will then show the differences between the previous version and current version of the file. Content that has been replaced or removed is marked red, and content that has been added or modified is marked green. Verify the changes and click on the `+` button to stage the changes. Enter a descriptive commit message such as `Update about page`. When done, click on the blue `Commit` button to commit the changes on the `develop` branch. Lastly, click on the blue button `Publish Branch` to submit tbe branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
+Head over to VSCode's Source Control to view the pending changes. Click on the file `_index.md` to open the code inspector. VSCode will then show the differences between the previous version and current version of the file. Content that has been replaced or removed is marked red, and content that has been added or modified is marked green. Verify the change and click on the `+` button to stage the modification of the `_index.md` file. Enter a descriptive commit message such as `Modify about section`. When done, click on the blue `Commit` button to commit the changes to the `develop` branch.
 
 <!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
@@ -187,18 +213,21 @@ By convention, a commit message should use the imperative mood and should be les
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
+VSCode highlights two additional changes, one being our new post and the other a file called `hugo_stats.json`. This latter file is used by the purger to avoid required styles are removed unintentionally. Check the guide about [optimizing the user experience]({{< relref "optimization" >}}) for an elaborate deep-dive. Stage and commit these two changes too. Lastly, click on the blue button `Publish Branch` to submit tbe branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
+
 ## Step 4 - Submitting a Pull Request
 
-With your changes committed to the remote develop branch, you can now merge the changes with the main branch. Head over to your repository on GitHub to submit a Pull Request (PR). Click on the green button `New pull request` within the menu `Pull Requests` to do so. Enter a descriptive title for the PR, or confirm the default title suggested by GitHub. Click on the green button to submit the PR, which triggers GitHub to run several checks. By default, Hinode runs a linting test and builds the web site with the latest three versions of Node.js. The linting test is the same test ran in the [previous step]({{< relref "#step-3---validating-the-changes" >}}). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
+With your changes committed to the remote develop branch, you can now merge the changes with the main branch. Head over to your repository on GitHub to submit a Pull Request (PR). Click on the green button `New pull request` within the menu `Pull Requests` to do so. Enter a descriptive title for the PR, or confirm the default title suggested by GitHub. Click on the green button to submit the PR, which triggers GitHub to run several checks.
+
+By default, Hinode runs a linting test and builds the web site with the latest versions of Node.js. The linting test is the same test ran in the [previous step]({{< relref "#step-3---validating-the-changes" >}}). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-pr-step01.png" caption="Step 1. Open a pull request" >}}
   {{< img src="img/github-pr-step02.png" caption="Step 2. Enter a descriptive title" >}}
-  {{< img src="img/github-pr-step03.png" caption="Step 3. Run the checks" >}}
-  {{< img src="img/github-pr-step04.png" caption="Step 4. Validate all checks have passed" >}}
-  {{< img src="img/github-pr-step05.png" caption="Step 5. Confirm the merge" >}}
-  {{< img src="img/github-pr-step06.png" caption="Step 6. Review the merge completion" >}}
-  {{< img src="img/github-pr-step07.png" caption="Step 7. Observe the committed changes" >}}
+  {{< img src="img/github-pr-step03.png" caption="Step 3. Validate all checks have passed" >}}
+  {{< img src="img/github-pr-step04.png" caption="Step 4. Confirm the merge" >}}
+  {{< img src="img/github-pr-step05.png" caption="Step 5. Review the merge completion" >}}
+  {{< img src="img/github-pr-step06.png" caption="Step 6. Observe the committed changes" >}}
 {{< /carousel >}}
 
 ## Conclusion
@@ -209,14 +238,17 @@ You have now successfully created your initial Hinode site with version control 
 {{< command user="user" host="localhost" prompt="hinode-demo $" >}}
 npm run upgrade
 (out)
-(out)> @gethinode/template@0.7.3 upgrade
-(out)> npx npm-check-updates -u
+(out)> @gethinode/template@0.10.0 upgrade
+(out)> npx npm-check-updates -u && npm run -s mod:update
 (out)
-(out)Upgrading Documents/hinode-demo/package.json
-(out)[====================] 18/18 100%
+(out)Upgrading /Users/mark/Development/GitHub/experiments/hinode-demo/package.json
+(out)[====================] 14/14 100%
 (out)
 (out)All dependencies match the latest package versions :)
+(out)Update module in /Users/mark/Development/GitHub/experiments/hinode-demo
 {{< /command >}}
 <!-- markdownlint-enable MD011 -->
 
 You can also enable Dependabot on your GitHub repository to {{< link dependabot >}}automatically keep the dependencies and packages used in your repository updated to the latest version{{< /link >}}.
+
+[^1]: Refer to the [installation instructions]({{< relref "introduction" >}}) if you prefer to install Hinode as a regular Hugo theme.
