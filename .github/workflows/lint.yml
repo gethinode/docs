@@ -34,5 +34,6 @@ jobs:
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
         restore-keys: |
           ${{ runner.os }}-hugomod-
-    
+          
+    - run: hugo config | grep cachedir
     - run: npm run build
