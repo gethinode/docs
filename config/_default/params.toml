@@ -265,6 +265,7 @@
     google_chrome = "https://www.google.com/chrome"
     google_fonts = "https://fonts.google.com"
     hinode = "https://gethinode.com"
+    hinode_demo = "https://demo.gethinode.com/"
     hinode_fr = "https://demo.gethinode.com/fr/"
     hinode_version_demo = "https://version-demo.gethinode.com/"
     html_codeguide = "https://codeguide.co/#html"

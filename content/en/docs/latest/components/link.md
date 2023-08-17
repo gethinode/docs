@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2023-08-05
+date: 2023-08-17
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -9,6 +9,14 @@ tags: component
 ---
 
 ## Overview
+
+{{< alert >}}
+<strong>New in v0.18.4 -</strong> The link shortcode now recognizes language-specific pages, identified by a language prefix. For example, use `/fr/about` to link to the French translation of the `about` page. Do **not** use the alias `/fr/a-propos` in this case.
+
+---
+
+<strong>New in v0.18.3 -</strong> The link shortcode now uses the current page context to identify references to a local page. It now also supports page anchors identified by `#`.
+{{< /alert >}}
 
 {{< release version="v0.16.8" >}}
 
@@ -22,18 +30,21 @@ Since Hinode `v0.16.8` you can add a managed link to your page content using a c
 
 ## Arguments
 
-The shortcode supports a single unnamed parameter, or various named parameters. The unnamed parameter is recognized as a named link if it does not contain any "/", otherwise it is treated as a url. Any inner text is rendered as the link title, otherwise it uses the host name (for external links) or page name (for internal links). The shortcode supports the following named arguments:
+The shortcode supports a single unnamed parameter, or various named parameters. The unnamed parameter is recognized as a url if it starts with `http`, else it is treated as either a named link or **relative** internal reference (in that order). Any inner text is rendered as the link title, otherwise it uses the host name (for external links), link title (for internal links), or anchor name (for any local references containing a `#`). The shortcode supports the following named arguments:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
-| name        | No       | Optional name of the link maintained in the "links" section of the site's parameters. If omitted, the "url" argument should be provided instead. |
-| url         | No       | Optional url of the link, including the scheme ("http" or "https"). If omitted, the "name" argument should be provided instead. |
+| href        | Yes      | {{</* release version="v0.18.4" short="true" size="sm" inline="true" */>}} Required reference to either an external link (if it starts with http), a named link (if it can be found in "links" in the site's parameters), or internal reference. External and internal references may include an anchor "#".
+| name        | No       | Alias of `href`. |
+| url         | No       | Alias of `href`. |
 | cue         | No       | Optional flag to indicate if an external link should show a visual cue, defaults to setting "main.externalLinks.cue" in the site's parameters. |
 | tab         | No       | Optional flag to indicate if an external link should open in a new tab, defaults to setting "main.externalLinks.tab" in the site's parameters. |
 | case        | No       | Optional flag to indicate if the retrieved title (e.g. no inner text is provided) of an internal link should use its original case, defaults to true. If false, the title is set to lower case. |
 | class       | No       | Optional class attribute of the anchor element. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Site configuration
 
@@ -46,7 +57,9 @@ You can [configure the behavior of managed links]({{< relref "layout#extended-co
 
 ## Examples
 
-Use either named links or common url's to generate a managed link. Any unnamed link is recognized as internal reference to page when it contains at least one `/` character. Use the `cue` and `tab` arguments to override the default behavior of displaying and opening external links. Omit the link's content to generate a reference to the host (for external links) or the target page's title (for internal links). Lastly, set `case` to false to set the obtained page title to lower case.
+Use either named links or common url's to generate a managed link. If a link name cannot be found, Hinode tries to find the reference relative to the current page instead. The reference may include a cross-reference `#`, although the reference itself is not validated.
+
+Use the `cue` and `tab` arguments to override the default behavior of displaying and opening external links. Omit the link's content to generate a reference to the host (for external links) or the target page's title (for internal links). Lastly, set `case` to false to set the obtained page title to lower case.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -56,9 +69,13 @@ Use either named links or common url's to generate a managed link. Any unnamed l
 - {{</* link name=mozilla_image cue=true tab=true >}}Named link opening in new tab with icon{{< /link */>}}
 - {{</* link mozilla_image /*/>}}
 - {{</* link "https://developer.mozilla.org" >}}External link{{< /link */>}}
-- {{</* link "/getting-started" >}}Internal link with title{{< /link */>}}
-- {{</* link "/license" /*/>}}
-- {{</* link url="/license" case=false /*/>}}
+- {{</* link "../getting-started/introduction" >}}Internal link with title{{< /link */>}}
+- {{</* link "../about/license" >}}Internal link with relative path{{< /link */>}}
+- {{</* link "/docs/about/license" >}}Internal link with absolute path{{< /link */>}}
+- {{</* link "docs/about/license" >}}Internal link with full path{{< /link */>}}
+- {{</* link url="../about/license" case=false /*/>}}
+- {{</* link "#arguments" /*/>}}
+- {{</* link "image#examples" /*/>}}
 
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
