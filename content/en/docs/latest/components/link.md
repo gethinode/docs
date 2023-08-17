@@ -32,6 +32,7 @@ Since Hinode `v0.16.8` you can add a managed link to your page content using a c
 
 The shortcode supports a single unnamed parameter, or various named parameters. The unnamed parameter is recognized as a url if it starts with `http`, else it is treated as either a named link or **relative** internal reference (in that order). Any inner text is rendered as the link title, otherwise it uses the host name (for external links), link title (for internal links), or anchor name (for any local references containing a `#`). The shortcode supports the following named arguments:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
@@ -43,6 +44,7 @@ The shortcode supports a single unnamed parameter, or various named parameters. 
 | case        | No       | Optional flag to indicate if the retrieved title (e.g. no inner text is provided) of an internal link should use its original case, defaults to true. If false, the title is set to lower case. |
 | class       | No       | Optional class attribute of the anchor element. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Site configuration
 
