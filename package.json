@@ -7,7 +7,7 @@
     "start": "hugo server --bind=0.0.0.0 --disableFastRender",
     "start:prod": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings -e production",
     "prebuild": "npm run clean:public && npm run -s mod:install",
-    "build": "hugo --gc --minify",
+    "build": "hugo config | grep cachedir && hugo --gc --minify",
     "build:debug": "npm run -s mod:update && hugo -e debug --debug",
     "build:preview": "npm run build -D -F",
     "clean:public": "rimraf public",
