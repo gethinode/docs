@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2023-08-16
+date: 2023-08-17
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -11,6 +11,10 @@ tags: component
 ## Overview
 
 {{< alert >}}
+<strong>New in v0.18.4 -</strong> The link shortcode now recognizes language-specific pages, identified by a language prefix. For example, use `/fr/about` to link to the French translation of the `about` page. Do **not** use the alias `/fr/a-propos` in this case.
+
+---
+
 <strong>New in v0.18.3 -</strong> The link shortcode now uses the current page context to identify references to a local page. It now also supports page anchors identified by `#`.
 {{< /alert >}}
 
@@ -31,8 +35,9 @@ The shortcode supports a single unnamed parameter, or various named parameters. 
 {{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
-| name        | No       | Optional name of the link maintained in the "links" section of the site's parameters. If omitted, the "url" argument should be provided instead. |
-| url         | No       | Optional url of the link, including the scheme ("http" or "https"). If omitted, the "name" argument should be provided instead. |
+| href        | Yes      | {{</* release version="v0.18.4" short="true" size="sm" inline="true" */>}} Required reference to either an external link (if it starts with http), a named link (if it can be found in "links" in the site's parameters), or internal reference. External and internal references may include an anchor "#".
+| name        | No       | Alias of `href`. |
+| url         | No       | Alias of `href`. |
 | cue         | No       | Optional flag to indicate if an external link should show a visual cue, defaults to setting "main.externalLinks.cue" in the site's parameters. |
 | tab         | No       | Optional flag to indicate if an external link should open in a new tab, defaults to setting "main.externalLinks.tab" in the site's parameters. |
 | case        | No       | Optional flag to indicate if the retrieved title (e.g. no inner text is provided) of an internal link should use its original case, defaults to true. If false, the title is set to lower case. |
@@ -63,7 +68,9 @@ Use the `cue` and `tab` arguments to override the default behavior of displaying
 - {{</* link mozilla_image /*/>}}
 - {{</* link "https://developer.mozilla.org" >}}External link{{< /link */>}}
 - {{</* link "../getting-started/introduction" >}}Internal link with title{{< /link */>}}
-- {{</* link "../about/license" /*/>}}
+- {{</* link "../about/license" >}}Internal link with relative path{{< /link */>}}
+- {{</* link "/docs/about/license" >}}Internal link with absolute path{{< /link */>}}
+- {{</* link "docs/about/license" >}}Internal link with full path{{< /link */>}}
 - {{</* link url="../about/license" case=false /*/>}}
 - {{</* link "#arguments" /*/>}}
 - {{</* link "image#examples" /*/>}}
