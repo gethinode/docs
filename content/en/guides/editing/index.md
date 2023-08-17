@@ -2,7 +2,7 @@
 author: Mark Dumay
 title: Creating your first site with Hinode
 date: 2023-04-03
-description: Guide on how to set up your site with version control and automated testing using GitHub and VSCode.
+description: Guide on how to set up your site with version control and automated updates using GitHub and VSCode.
 tags: ["guide", "vscode"]
 weight: 10
 thumbnail: 
@@ -19,7 +19,7 @@ thumbnail:
 The commands and code examples within this guide are written with macOS in mind. The commands should be transferrable to Windows and Linux too.
 {{< /alert >}}
 
-Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch using automated testing.
+Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch and enable automated updates.
 
 This guide requires a GitHub account to host the demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
 
@@ -232,25 +232,92 @@ By default, Hinode runs a linting test and builds the web site with the latest v
   {{< img src="img/github-pr-step06.png" caption="Step 6. Observe the committed changes" >}}
 {{< /carousel >}}
 
+## Step 5 - Enabling automated updates
+
+The Hinode template uses both Hugo modules and npm packages. We will now take advantage of automation to upgrade both types of dependencies automatically, ensuring our repository is always up to date. However, before we enable these automation steps, we will set up branch protection first.
+
+### Testing the branch for the first time
+
+The template includes a GitHub action, or workflow, to automatically test and build our main branch upon each change. You can find the full configuration in `.github/workflows/lint.yml`. The workflow links to two npm commands, being `test` and `build`. By default, Hinode tests content files (extension `.md`), scripts (extension `.js`), and styles (extension `.scss`). The Hinode docs provide more background about the {{< link "docs/getting-started/contribute#coding-guidelines" >}}coding guidelines{{< /link >}}. The same `package.json` file also defines a `build` command, which is just a call to the `hugo` binary. The GitHub action `lint.yml` calls both the `lint` and `build` commands and is invoked on each push to the `main` repository, or a PR against the same branch. It also includes a `workflow_dispatch` trigger that enables us to run the workflow manually.
+
+{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
+  {{< img src="img/gh-lint-step01.png" caption="Step 1. Trigger the 'lint & build' action" >}}
+  {{< img src="img/gh-lint-step02.png" caption="Step 2. Review the jobs" >}}
+  {{< img src="img/gh-lint-step03.png" caption="Step 3. Validate the results" >}}
+{{< /carousel >}}
+
+Head over the `Actions` panel of your GitHub repository. It lists two actions, of which we will select `lint & build`. Click on `Run workflow {{< fas caret-down >}}` and `Run workflow` to manually invoke the workflow. GitHub will then show the various jobs running in parallel. The action runs the `npm lint` and `npm build` commands sequentially against a so-called test matrix. The test matrix includes different versions of Node.js to test, but could also include a host Operating System (OS) for example. The main panel shows the terminal output of a runner, which is simply a container running on GitHub's server with the specified host OS and packages. You can click on each of the jobs' steps to view the output - which should look familiar. When all jobs have finished successfully, GitHub will report the entire workflow run as completed.
+
+### Configuring branch protection
+
+Branch protection sets up rules that must be satisfied before a Pull Request can be merged with a specific branch. This should include your production branch (usually `main`), but could also include other branches that you would like to control. Branch protection acts as a safeguard to prevent any changes to break your build. Ofcourse, it is not 100% fool proof, so it would still make sense to do regular testing of any changes before you submit them. However, minor dependency updates and security updates should (in theory) not introduce any breaking changes. If you have a stable repository and (main) branch, it is quite safe to assume that, as long as all your tests are successful, these minor updates can be automatically merged without unexpected impact.
+
+{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
+  {{< img src="img/gh-branch-protect-step01.png" caption="Step 1. Click on Protect this branch" >}}
+  {{< img src="img/gh-branch-protect-step02.png" caption="Step 2. Apply settings" >}}
+  {{< img src="img/gh-branch-protect-step03.png" caption="Step 3. Authenticate the changes" >}}
+  {{< img src="img/gh-branch-protect-step04.png" caption="Step 4. Confirm branch protection" >}}
+{{< /carousel >}}
+
+Navigate to the homescreen of your repository on GitHub. You should see a warning that says your main branch is not protected. Click on the button `Protect this branch` to initiate branch protection. You can set up multiple rules to your liking. The recommende rules to enforce at a minimum are the following:
+
+- Require a pull request before merging
+- Require status checks to pass before merging
+  - Require branches to be up to date before merging
+{.tickmark}
+
+{{< alert type="danger" >}}
+GitHub does not automatically update your status checks. For example, if you decide to modify your test matrix, you need to manually remove the obsolete labels and add the new labels.
+{{< /alert >}}
+
+These settings ensure all proposed changes are submitted as part of a PR and prevents any commits directly on the main branch. We can then use each PR request as a trigger to test our codebase and build. We will now select the tests we ran previously in our `lint & build` action. Add all test labels to the second check (`Require status checks to pass before merging`) individually. For example, you can add the `build (18.x)` label as prerequisite, meaning that your site should be compatible with Node.js v18. We are now ready to automate our dependency upgrades.
+
+### Enabling auto-merge
+
+With the branch protection in place we can now enable `auto-merge`. This setting, which is disabled by default, allows merges to be automated if all preconditions (~branch protection rules) have been met. Head over to the `general` section in the repository settings. Within the section, scroll down until you find a setting called `Allow auto-merge`. Select it to apply this setting.
+
+{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
+  {{< img src="img/gh-auto-merge-step01.png" caption="Step 1. Navigate to 'general' in the repository settings" >}}
+  {{< img src="img/gh-auto-merge-step02.png" caption="Step 2. Toggle 'auto-merge'" >}}
+{{< /carousel >}}
+
+We can now configure our dependency upgrades and allow them to be automatically merged.
+
+### Automating dependency upgrades
+
+GitHub provides an action called {{< link dependabot >}}Dependabot{{< /link >}} that helps us to automate the upgrades of our npm dependencies. The Hinode template has enabled Dependabot by default. The configuration can be found in `.github/dependabot.yml`. Dependabot is not compatible with Hugo modules yet. Instead, Hinode uses {{< link create_pr >}}create-pull-request{{< /link>}} from Peter Evans to update the Hugo modules. It calls the npm `mod:update` command on a scheduled interval. It will create a new branch and a Pull Request if it finds any updates. The corresponding action with the title `Update Hugo Dependencies` can be found in `.github/workflows/update.yml`.
+
+{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
+  {{< img src="img/gh-token-step01.png" caption="Step 1. Navigate to your account settings" >}}
+  {{< img src="img/gh-token-step02.png" caption="Step 2. Define a new fine-grained tokens" >}}
+  {{< img src="img/gh-token-step03.png" caption="Step 3. Apply R/W access for contents and Pull Requests" >}}
+  {{< img src="img/gh-token-step04.png" caption="Step 4. Generate the token" >}}
+  {{< img src="img/gh-token-step05.png" caption="Step 5. Navigate to the repository settings" >}}
+  {{< img src="img/gh-token-step06.png" caption="Step 6. Create a new action secret" >}}
+  {{< img src="img/gh-token-step07.png" caption="Step 7. Define the action secret HUGO_MOD_PR" >}}
+{{< /carousel >}}
+
+The `Update Hugo Dependencies` action requires elevated privileges. We will now create a new fine-grained Personal Access Token (PAT) called `HUGO_MOD_PR` to authorize this action to run on our behalf. Set up the token in the `Developer settings` of your **Account settings** on GitHub. The token requires access to your repository with the following permissions:
+
+- Read and Write access to content (code) and pull requests
+{.tickmark}
+
+When done, head over to `action secret` in the security section of the **repository configuration**. Create a new Repository token with the name `HUGO_MOD_PR` in your repository configuration and paste the PAT as content. Click on `Add secret` to add it to your repository.
+
+{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
+  {{< img src="img/gh-mod-step01.png" caption="Step 1. Run the action workflow" >}}
+  {{< img src="img/gh-mod-step02.png" caption="Step 2. Review the job output" >}}
+  {{< img src="img/gh-mod-step03.png" caption="Step 3. Open the associated PR" >}}
+  {{< img src="img/gh-mod-step04.png" caption="Step 4. Enable auto-merge" >}}
+  {{< img src="img/gh-mod-step05.png" caption="Step 5. Confirm auto-merge" >}}
+  {{< img src="img/gh-mod-step06.png" caption="Step 6. Validate the auto-merge" >}}
+  {{< img src="img/gh-mod-step07.png" caption="Step 7. Observe the merged PR" >}}
+{{< /carousel >}}
+
+We can now run the `Update Hugo Dependencies` action. Head over to the actions overview and trigger the action manually. You can review the job output. When any modules updates have been found, the action will automatically create a PR on our behalf. Go to the Pull Requests overview and select the corresponding PR. You can now enable auto-merge for this type of PR. When all checks have been met, GitHub will automatically merge the PR with the main branch.
+
 ## Conclusion
 
-You have now successfully created your initial Hinode site with version control and automated testing. Review the [hosting and deployment options]({{< relref "hosting-and-deployment" >}}) to see various options on how to publish your site to a hosting provider. While you continue to make updates to the content and layout of your site, you should consider to regularly update the dependencies of your repository too. Use the `upgrade` command to check for any package updates. If applicable, run `npm install` again to install the updated packages.
-
-<!-- markdownlint-disable MD011 -->
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
-npm run upgrade
-(out)
-(out)> @gethinode/template@0.10.0 upgrade
-(out)> npx npm-check-updates -u && npm run -s mod:update
-(out)
-(out)Upgrading /Users/mark/Development/GitHub/experiments/hinode-demo/package.json
-(out)[====================] 14/14 100%
-(out)
-(out)All dependencies match the latest package versions :)
-(out)Update module in /Users/mark/Development/GitHub/experiments/hinode-demo
-{{< /command >}}
-<!-- markdownlint-enable MD011 -->
-
-You can also enable Dependabot on your GitHub repository to {{< link dependabot >}}automatically keep the dependencies and packages used in your repository updated to the latest version{{< /link >}}.
+You have now successfully created your initial Hinode site with version control and automated updates. Review the [hosting and deployment options]({{< relref "hosting-and-deployment" >}}) to see various options on how to (automatically) publish your site to a hosting provider.
 
 [^1]: Refer to the [installation instructions]({{< relref "introduction" >}}) if you prefer to install Hinode as a regular Hugo theme.
