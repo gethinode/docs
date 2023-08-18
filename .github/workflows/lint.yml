@@ -30,9 +30,9 @@ jobs:
 
     - uses: actions/cache@v3
       with:
-        path: /tmp/hugo_cache
-        key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+        path: /tmp/hugo_cache_runner
+        key: ${{ runner.os }}-hugo-hinodedocs
         restore-keys: |
-          ${{ runner.os }}-hugomod-
+          ${{ runner.os }}-hugo-hinodedocs
 
-    - run: npm run build
+    - run: npm run build:cache
