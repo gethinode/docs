@@ -28,11 +28,11 @@ jobs:
     - run: npm ci
     - run: npm run lint
 
-    - uses: actions/cache@v2
+    - uses: actions/cache@v3
       with:
         path: /tmp/hugo_cache
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
         restore-keys: |
           ${{ runner.os }}-hugomod-
-    
+
     - run: npm run build
