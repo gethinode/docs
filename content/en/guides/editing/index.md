@@ -297,6 +297,10 @@ GitHub provides an action called {{< link dependabot >}}Dependabot{{< /link >}} 
   {{< img src="img/gh-token-step07.png" caption="Step 7. Define the action secret HUGO_MOD_PR" >}}
 {{< /carousel >}}
 
+{{< alert type="danger" >}}
+Be careful with using actions from the marketplace, as this introduces a security risk. Rob Bos has written an excellent {{</* link devops_journal >}}blog about the risks involved and how you can mitigate this{{< /link */>}}.
+{{< /alert>}}
+
 The `Update Hugo Dependencies` action requires elevated privileges. We will now create a new fine-grained Personal Access Token (PAT) called `HUGO_MOD_PR` to authorize this action to run on our behalf. Set up the token in the `Developer settings` of your **Account settings** on GitHub. The token requires access to your repository with the following permissions:
 
 - Read and Write access to content (code) and pull requests

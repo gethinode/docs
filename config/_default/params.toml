@@ -241,6 +241,7 @@
     css_codeguide = "https://codeguide.co/#css"
     dependabot = "https://docs.github.com/en/code-security/dependabot/dependabot-version-updates"
     dependabot_issue_6860 = "https://github.com/dependabot/dependabot-core/issues/6860"
+    devops_journal = "https://devopsjournal.io/blog/2021/02/06/GitHub-Actions-Forking-Repositories"
     discussions = "https://github.com/gethinode/hinode/discussions"
     discussions_help = "https://github.com/gethinode/hinode/discussions/categories/help"
     discussions_ideas = "https://github.com/gethinode/hinode/discussions/categories/ideas"
