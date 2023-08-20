@@ -21,7 +21,7 @@ The commands and code examples within this guide are written with macOS in mind.
 
 Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch and enable automated updates.
 
-This guide requires a GitHub account to host the demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
+This guide requires a GitHub account to host the remote demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
 
 - {{< link github_signup >}}Set up an account with GitHub{{< /link >}}
 - {{< link git_download >}}Download and install the Git binary{{< /link >}}
@@ -31,11 +31,11 @@ This guide requires a GitHub account to host the demo repository. Next, Git, Nod
 
 ## Step 1 - Initializing the project
 
-As first step we will create a new repository on GitHub using a template. The template uses npm to automate several tasks[^1]. We will then connect our local machine to the remote repository and install the required dependencies. Lastly, we will run a local development server to test the newly created site.
+As first step we will create a new repository on GitHub using a template. The template uses npm to automate several tasks. We will then connect our local machine to the remote repository and install the required dependencies. Lastly, we will run a local development server to test the newly created site.
 
 ### Creating a new Git repository
 
-Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link >}} and a {{< link repository >}}main theme{{< /link >}}. We will use the template as starting point for our new site, as it has several predefined settings that support automation.
+Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link >}} and a {{< link repository >}}main theme{{< /link >}}. We will use the template as starting point for our new site, as it has several predefined settings that support automation. The main repository provides a regular theme that is compatible with Hugo's module system. It is better suited if you prefer to manually maintain and publish your Hinode site[^1].
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-init-step01.png" caption="Step 1. Create a new repository from the template" >}}
@@ -47,9 +47,9 @@ Navigate to the {{< link repository_template >}}template repository{{< /link >}}
 
 ### Connecting your local machine
 
-We will now connect our local machine to the newly created GitHub repository. Navigate to a folder on your local machine, such as `~/Documents`. Use the `git clone` command to download and extract your GitHub repository within the current folder. By default, git creates a new subfolder with the name of your repository, e.g. `hinode-demo`. The next command is an example, be sure to replace the <mark>&lt;USER&gt;</mark> name with your own.
+We will now connect our local machine to the newly created GitHub repository. Navigate to a folder in the terminal of your local machine, such as `~/development`[^2]. Use the `git clone` command to download and extract your GitHub repository within the current folder. By default, git creates a new subfolder with the name of your repository, e.g. `hinode-demo`. The next command is an example, be sure to replace the <mark>&lt;USER&gt;</mark> name with your own.
 
-{{< command user="user" host="localhost" prompt="Documents $" >}}
+{{< command prompt="development $" >}}
 git clone https://github.com/<USER>/hinode-demo.git
 (out)Cloning into 'hinode-demo'...
 (out)remote: Enumerating objects: 39, done.
@@ -64,13 +64,13 @@ git clone https://github.com/<USER>/hinode-demo.git
 
 We will now install the various packages and dependencies used by Hinode. The file `packages.json` in the repository root defines the npm packages and their versions as used by Hinode. First, navigate to the `hinode-demo` folder:
 
-{{< command user="user" host="localhost" prompt="Documents $" >}}
+{{< command prompt="development $" >}}
 cd hinode-demo
 {{< /command >}}
 
 Next, use the command `npm install` to download and install the various packages. npm will store these files in the `hinode-demo/node_modules` folder. The script downloads and installs the latest Hugo binary automatically. In this approach, the Hugo binary is linked exclusively to your repository, minimizing potential version conflicts on your local machine.
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+{{< command prompt="hinode-demo $" >}}
 npm install
 (out)
 (out)added 510 packages, and audited 511 packages in 5s
@@ -81,9 +81,11 @@ npm install
 (out)found 0 vulnerabilities
 {{< /command >}}
 
-Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include Leaflet module on those pages only. This helps to reduce the size of your page assets. Run the script `mod:update` to download and install the latest version of the modules.
+Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include the Leaflet module on those pages only. This helps to reduce the size of your page assets. Run the script `mod:update` to download and install the latest version of the modules.
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+<!-- TODO: update repo / actions -->
+
+{{< command prompt="hinode-demo $" >}}
 npm run mod:update
 (out)
 (out)> @gethinode/template@0.10.0 mod:update
@@ -92,11 +94,41 @@ npm run mod:update
 (out)Update module in /../hinode-demo
 {{< /command >}}
 
+The `mod:update` script requires some explanation. The command is defined in `package.json` and references `mod:tidy` and `mod:vendor`:
+
+```json
+"mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
+"mod:tidy": "hugo mod tidy",
+"mod:vendor": "rimraf _vendor && hugo mod vendor",
+```
+
+The update command chains several commands that each need to run successfully (hence the `&&` instructions). Click on each seperate command to reveil the context.
+
+<!-- markdownlint-disable MD037 -->
+{{< accordion class="accordion-theme accordion-flush" >}}
+  {{< accordion-item header="rimraf _vendor" >}}
+  Hinode requires the modules to be vendored (see `npm run -s mod:vendor`). To avoid synchronization issues, the `_vendor` folder is purged prior to each module update.
+  {{< /accordion-item >}}
+  {{< accordion-item header="hugo mod get -u ./..." >}}
+  Hugo calls `go mod get` behind the scenes to download and install the required modules, taking version requirements into account. The `-u` flag requests Hugo to update the modules to their latest version too. The `./...` argument instructs Hugo to update all modules recursively. This includes the `exampleSite` subfolder, if any.
+  {{< /accordion-item >}}
+  {{< accordion-item header="hugo mod get -u" >}}
+  The previous command seemingly has a bug (see {{</* link hugo_issue_10719>}}#10719{{< /link */>}}), in which it does not update the main `go.mod` file in the repository root when updating any module files in subfolders (such as `exampleSite`). Running `hugo mod get -u` without the recursive argument is a workaround to fix this.
+  {{< /accordion-item >}}
+  {{< accordion-item header="npm run -s mod:vendor" >}}
+  Hugo stores the installed modules in a local cache folder. This cache folder is volatile and can differ per OS, such as macOS, Windows, and Linux distribution. Hinode uses purging to reduce the overhead of stylesheets. The purger requires access to specific files of the main Hinode repository. Vendoring the modules, including the main Hinode module, ensures the various files are available on a known path (usually `./_vendor`). Vendoring is also required when you have a subsite, such as `exampleSite`, or if you would like to reference a specific file from a module (using for example the {{</* link "/docs/components/docs/" >}}docs shortcode{{< /link */>}} ).
+  {{< /accordion-item >}}
+  {{< accordion-item header="npm run -s mod:tidy" >}}
+  The command `hugo mod tidy` removes unused entries in `go.mod` and `go.sum`.
+  {{< /accordion-item >}}
+{{< /accordion >}}
+<!-- markdownlint-enable MD037 -->
+
 ### Running a local development server
 
 Your site is now ready for testing. Enter the following command to start a local development server:
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+{{< command prompt="hinode-demo $" >}}
 npm run start
 (out)
 (out)> @gethinode/template@0.10.0 start
@@ -190,7 +222,7 @@ Check back to see the changes in your web browser. If you do not see the new pos
 
 Hinode defines severals tests to validate the code adheres to [coding standards]({{< relref "contribute#coding-guidelines" >}}). Run the following command to run the tests locally. The test should confirm our code is safe to check in.
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+{{< command prompt="hinode-demo $" >}}
 npm run lint
 (out)
 (out)> @gethinode/template@0.10.0 lint
@@ -221,7 +253,7 @@ VSCode highlights two additional changes, one being our new post and the other a
 
 With your changes committed to the remote develop branch, you can now merge the changes with the main branch. Head over to your repository on GitHub to submit a Pull Request (PR). Click on the green button `New pull request` within the menu `Pull Requests` to do so. Enter a descriptive title for the PR, or confirm the default title suggested by GitHub. Click on the green button to submit the PR, which triggers GitHub to run several checks.
 
-By default, Hinode runs a linting test and builds the web site with the latest versions of Node.js. The linting test is the same test ran in the [previous step]({{< relref "#step-3---validating-the-changes" >}}). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
+By default, Hinode runs a linting test and builds the web site with the latest versions of Node.js. The linting test is the same test that ran in the [previous step]({{< relref "#step-3---validating-the-changes" >}}). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-pr-step01.png" caption="Step 1. Open a pull request" >}}
@@ -327,3 +359,4 @@ We can now run the `Update Hugo Dependencies` action. Head over to the actions o
 You have now successfully created your initial Hinode site with version control and automated updates. Review the [hosting and deployment options]({{< relref "hosting-and-deployment" >}}) to see various options on how to (automatically) publish your site to a hosting provider.
 
 [^1]: Refer to the [installation instructions]({{< relref "introduction" >}}) if you prefer to install Hinode as a regular Hugo theme.
+[^2]: By default macOS synchronizes your `~/Documents` folder with iCloud. Unfortunately this interferes with npm and could lead to all kinds of syncrhonization issues. You can better select a folder that is **not** synchronized with iCloud and let git handle your version control.
