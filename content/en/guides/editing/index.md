@@ -2,7 +2,7 @@
 author: Mark Dumay
 title: Creating your first site with Hinode
 date: 2023-04-03
-description: Guide on how to set up your site with version control and automated updates using GitHub and VSCode.
+description: Guide on how to set up your site with version control using npm, GitHub and VSCode.
 tags: ["guide", "vscode"]
 weight: 10
 thumbnail: 
@@ -19,9 +19,9 @@ thumbnail:
 The commands and code examples within this guide are written with macOS in mind. The commands should be transferrable to Windows and Linux too.
 {{< /alert >}}
 
-Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch and enable automated updates.
+Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch.
 
-This guide requires a GitHub account to host the demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
+This guide requires a GitHub account to host the remote demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
 
 - {{< link github_signup >}}Set up an account with GitHub{{< /link >}}
 - {{< link git_download >}}Download and install the Git binary{{< /link >}}
@@ -31,11 +31,11 @@ This guide requires a GitHub account to host the demo repository. Next, Git, Nod
 
 ## Step 1 - Initializing the project
 
-As first step we will create a new repository on GitHub using a template. The template uses npm to automate several tasks[^1]. We will then connect our local machine to the remote repository and install the required dependencies. Lastly, we will run a local development server to test the newly created site.
+As first step we will create a new repository on GitHub using a template. The template uses npm to automate several tasks. We will then connect our local machine to the remote repository and install the required dependencies. Lastly, we will run a local development server to test the newly created site.
 
 ### Creating a new Git repository
 
-Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link >}} and a {{< link repository >}}main theme{{< /link >}}. We will use the template as starting point for our new site, as it has several predefined settings that support automation.
+Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link >}} and a {{< link repository >}}main theme{{< /link >}}. We will use the template as starting point for our new site, as it has several predefined settings that support automation. The main repository provides a regular theme that is compatible with Hugo's module system. It is better suited if you prefer to manually maintain and publish your Hinode site[^1].
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-init-step01.png" caption="Step 1. Create a new repository from the template" >}}
@@ -47,16 +47,16 @@ Navigate to the {{< link repository_template >}}template repository{{< /link >}}
 
 ### Connecting your local machine
 
-We will now connect our local machine to the newly created GitHub repository. Navigate to a folder on your local machine, such as `~/Documents`. Use the `git clone` command to download and extract your GitHub repository within the current folder. By default, git creates a new subfolder with the name of your repository, e.g. `hinode-demo`. The next command is an example, be sure to replace the <mark>&lt;USER&gt;</mark> name with your own.
+We will now connect our local machine to the newly created GitHub repository. Navigate to a folder in the terminal of your local machine, such as `~/development`[^2]. Use the `git clone` command to download and extract your GitHub repository within the current folder. By default, git creates a new subfolder with the name of your repository, e.g. `hinode-demo`. The next command is an example, be sure to replace the <mark>&lt;USER&gt;</mark> name with your own.
 
-{{< command user="user" host="localhost" prompt="Documents $" >}}
+{{< command prompt="development $" >}}
 git clone https://github.com/<USER>/hinode-demo.git
 (out)Cloning into 'hinode-demo'...
-(out)remote: Enumerating objects: 39, done.
-(out)remote: Counting objects: 100% (39/39), done.
-(out)remote: Compressing objects: 100% (33/33), done.
-(out)remote: Total 39 (delta 1), reused 26 (delta 1), pack-reused 0
-(out)Receiving objects: 100% (39/39), 119.98 KiB | 777.00 KiB/s, done.
+(out)remote: Enumerating objects: 41, done.
+(out)remote: Counting objects: 100% (41/41), done.
+(out)remote: Compressing objects: 100% (34/34), done.
+(out)remote: Total 41 (delta 1), reused 28 (delta 1), pack-reused 0
+(out)Receiving objects: 100% (41/41), 126.89 KiB | 21.15 MiB/s, done.
 (out)Resolving deltas: 100% (1/1), done.
 {{< /command >}}
 
@@ -64,42 +64,77 @@ git clone https://github.com/<USER>/hinode-demo.git
 
 We will now install the various packages and dependencies used by Hinode. The file `packages.json` in the repository root defines the npm packages and their versions as used by Hinode. First, navigate to the `hinode-demo` folder:
 
-{{< command user="user" host="localhost" prompt="Documents $" >}}
+{{< command prompt="development $" >}}
 cd hinode-demo
 {{< /command >}}
 
 Next, use the command `npm install` to download and install the various packages. npm will store these files in the `hinode-demo/node_modules` folder. The script downloads and installs the latest Hugo binary automatically. In this approach, the Hugo binary is linked exclusively to your repository, minimizing potential version conflicts on your local machine.
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+{{< command prompt="hinode-demo $" >}}
 npm install
 (out)
-(out)added 510 packages, and audited 511 packages in 5s
+(out)added 537 packages, and audited 538 packages in 6s
 (out)
-(out)186 packages are looking for funding
+(out)188 packages are looking for funding
 (out)  run `npm fund` for details
 (out)
 (out)found 0 vulnerabilities
 {{< /command >}}
 
-Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include Leaflet module on those pages only. This helps to reduce the size of your page assets. Run the script `mod:update` to download and install the latest version of the modules.
+Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include the Leaflet module on those pages only. This helps to reduce the size of your page assets\
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+Hinode itself is also a module that is used by the Hinode template. This allows us to use the shortcodes and other components provided by Hinode, without having to worry about their implementation. We can use {{< link hugo_modules >}}Hugo's module system{{< /link >}} to update the used modules to their latest version. Run the script `mod:update` to download and install the latest version of the modules.
+
+{{< command prompt="hinode-demo $" >}}
 npm run mod:update
 (out)
-(out)> @gethinode/template@0.10.0 mod:update
-(out)> hugo mod get -u ./... && npm run -s mod:vendor && npm run -s mod:tidy
+(out)> @gethinode/template@0.11.0 mod:update
+(out)> rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy
 (out)
-(out)Update module in /../hinode-demo
+(out)Update module in /../hinode-guide
 {{< /command >}}
+
+The `mod:update` script requires some explanation. The command is defined in `package.json` and references `mod:tidy` and `mod:vendor`:
+
+```json
+"mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
+"mod:tidy": "hugo mod tidy",
+"mod:vendor": "rimraf _vendor && hugo mod vendor",
+```
+
+The update command chains several commands that each need to run successfully (hence the `&&` instructions). Click on each seperate command to reveil the context.
+
+<!-- markdownlint-disable MD037 -->
+{{< accordion class="accordion-theme accordion-flush" >}}
+  {{< accordion-item header="rimraf _vendor" >}}
+  Hinode requires the modules to be vendored (see `npm run -s mod:vendor`). To avoid synchronization issues, the `_vendor` folder is purged prior to each module update.
+  {{< /accordion-item >}}
+  {{< accordion-item header="hugo mod get -u ./..." >}}
+  Hugo calls `go mod get` behind the scenes to download and install the required modules, taking version requirements into account. The `-u` flag requests Hugo to update the modules to their latest version too. The `./...` argument instructs Hugo to update all modules recursively. This includes the `exampleSite` subfolder, if any.
+  {{< /accordion-item >}}
+  {{< accordion-item header="hugo mod get -u" >}}
+  The previous command seemingly has a bug (see {{</* link hugo_issue_10719>}}#10719{{< /link */>}}), in which it does not update the main `go.mod` file in the repository root when updating any module files in subfolders (such as `exampleSite`). Running `hugo mod get -u` without the recursive argument is a workaround to fix this.
+  {{< /accordion-item >}}
+  {{< accordion-item header="npm run -s mod:vendor" >}}
+  Hugo stores the installed modules in a local cache folder. This cache folder is volatile and can differ per OS, such as macOS, Windows, and Linux distribution. Hinode uses purging to reduce the overhead of stylesheets. The purger requires access to specific files of the main Hinode repository. Vendoring the modules, including the main Hinode module, ensures the various files are available on a known path (usually `./_vendor`). Vendoring is also required when you have a subsite, such as `exampleSite`, or if you would like to reference a specific file from a module (using for example the {{</* link "/docs/components/docs/" >}}docs shortcode{{< /link */>}} ).
+  {{< /accordion-item >}}
+  {{< accordion-item header="npm run -s mod:tidy" >}}
+  The command `hugo mod tidy` removes unused entries in `go.mod` and `go.sum`.
+  {{< /accordion-item >}}
+{{< /accordion >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Running a local development server
 
 Your site is now ready for testing. Enter the following command to start a local development server:
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+{{< command prompt="hinode-demo $" >}}
 npm run start
 (out)
-(out)> @gethinode/template@0.10.0 start
+(out)> @gethinode/template@0.11.0 prestart
+(out)> npm run -s mod:vendor
+(out)
+(out)> @gethinode/template@0.11.0 start
 (out)> hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings
 (out)
 (out)Watching for changes in /../hinode-demo/{..}
@@ -119,14 +154,14 @@ npm run start
 (out)  Sitemaps         |   1  
 (out)  Cleaned          |   0  
 (out)
-(out)Built in 1302 ms
+(out)Built in 1311 ms
 (out)Environment: "development"
 (out)Serving pages from memory
 (out)Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
 (out)Press Ctrl+C to stop
 {{< /command >}}
 
-It usually takes less than a minute to build the site and to start the web server in development mode. Before building the site, Hinode cleans several folders. The build itself shows the result of the pages and other assets generated by Hugo. By default, the starter web site supports the English (EN) language. Lastly, Hugo mentions the local address on which it is available (usually `http://localhost:1313/`) and indicates the folders it is watching. The latter means that if you make any changes whilst the web server is running, Hugo should pick up those changes and regenerate the applicable assets. Using a feature called live reloading, your web browser will be instructed to refresh the web page accordingly.
+It usually takes less than a minute to build the site and to start the web server in development mode. Before building the site, Hinode cleans several folders. The build itself shows the result of the pages and other assets generated by Hugo. By default, the starter web site supports the English (`EN`) language. Lastly, Hugo mentions the local address on which it is available (usually `http://localhost:1313/`) and indicates the folders it is watching. The latter means that if you make any changes whilst the web server is running, Hugo should pick up those changes and regenerate the applicable assets. Using a feature called live reloading, your web browser will be instructed to refresh the web page accordingly.
 
 ## Step 2 - Managing the content
 
@@ -190,11 +225,20 @@ Check back to see the changes in your web browser. If you do not see the new pos
 
 Hinode defines severals tests to validate the code adheres to [coding standards]({{< relref "contribute#coding-guidelines" >}}). Run the following command to run the tests locally. The test should confirm our code is safe to check in.
 
-{{< command user="user" host="localhost" prompt="hinode-demo $" >}}
+{{< command prompt="hinode-demo $" >}}
 npm run lint
 (out)
-(out)> @gethinode/template@0.10.0 lint
-(out)> npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown
+(out)> @gethinode/template@0.11.0 lint
+(out)> npm-run-all lint:**
+(out)
+(out)> @gethinode/template@0.11.0 lint:scripts
+(out)> eslint assets/js --no-error-on-unmatched-pattern
+(out)
+(out)> @gethinode/template@0.11.0 lint:styles
+(out)> stylelint "assets/scss/**/*.{css,sass,scss,sss,less}" --allow-empty-input
+(out)
+(out)> @gethinode/template@0.11.0 lint:markdown
+(out)> markdownlint-cli2 "*.md" "content/**/*.md"
 (out)
 (out)markdownlint-cli2 v0.8.1 (markdownlint v0.29.0)
 (out)Finding: *.md content/**/*.md !node_modules !CHANGELOG.md
@@ -221,7 +265,7 @@ VSCode highlights two additional changes, one being our new post and the other a
 
 With your changes committed to the remote develop branch, you can now merge the changes with the main branch. Head over to your repository on GitHub to submit a Pull Request (PR). Click on the green button `New pull request` within the menu `Pull Requests` to do so. Enter a descriptive title for the PR, or confirm the default title suggested by GitHub. Click on the green button to submit the PR, which triggers GitHub to run several checks.
 
-By default, Hinode runs a linting test and builds the web site with the latest versions of Node.js. The linting test is the same test ran in the [previous step]({{< relref "#step-3---validating-the-changes" >}}). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
+By default, Hinode runs a linting test and builds the web site with the latest stable (`LTS`) versions of Node.js. The linting test is the same test that ran in the [previous step]({{< relref "#step-3---validating-the-changes" >}}). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-pr-step01.png" caption="Step 1. Open a pull request" >}}
@@ -232,98 +276,9 @@ By default, Hinode runs a linting test and builds the web site with the latest v
   {{< img src="img/github-pr-step06.png" caption="Step 6. Observe the committed changes" >}}
 {{< /carousel >}}
 
-## Step 5 - Enabling automated updates
-
-The Hinode template uses both Hugo modules and npm packages. We will now take advantage of automation to upgrade both types of dependencies automatically, ensuring our repository is always up to date. However, before we enable these automation steps, we will set up branch protection first.
-
-### Testing the branch for the first time
-
-The template includes a GitHub action, or workflow, to automatically test and build our main branch upon each change. You can find the full configuration in `.github/workflows/lint.yml`. The workflow links to two npm commands, being `test` and `build`. By default, Hinode tests content files (extension `.md`), scripts (extension `.js`), and styles (extension `.scss`). The Hinode docs provide more background about the {{< link "docs/getting-started/contribute#coding-guidelines" >}}coding guidelines{{< /link >}}. The same `package.json` file also defines a `build` command, which is just a call to the `hugo` binary. The GitHub action `lint.yml` calls both the `lint` and `build` commands and is invoked on each push to the `main` repository, or a PR against the same branch. It also includes a `workflow_dispatch` trigger that enables us to run the workflow manually.
-
-{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
-  {{< img src="img/gh-lint-step01.png" caption="Step 1. Trigger the 'lint & build' action" >}}
-  {{< img src="img/gh-lint-step02.png" caption="Step 2. Review the jobs" >}}
-  {{< img src="img/gh-lint-step03.png" caption="Step 3. Validate the results" >}}
-{{< /carousel >}}
-
-Head over the `Actions` panel of your GitHub repository. It lists two actions, of which we will select `lint & build`. Click on `Run workflow {{< fas caret-down >}}` and `Run workflow` to manually invoke the workflow. GitHub will then show the various jobs running in parallel. The action runs the `npm lint` and `npm build` commands sequentially against a so-called test matrix. The test matrix includes different versions of Node.js to test, but could also include a host Operating System (OS) for example. The main panel shows the terminal output of a runner, which is simply a container running on GitHub's server with the specified host OS and packages. You can click on each of the jobs' steps to view the output - which should look familiar. When all jobs have finished successfully, GitHub will report the entire workflow run as completed.
-
-### Configuring branch protection
-
-Branch protection sets up rules that must be satisfied before a Pull Request can be merged with a specific branch. This should include your production branch (usually `main`), but could also include other branches that you would like to control. Branch protection acts as a safeguard to prevent any changes to break your build. Ofcourse, it is not 100% fool proof, so it would still make sense to do regular testing of any changes before you submit them. However, minor dependency updates and security updates should (in theory) not introduce any breaking changes. If you have a stable repository and (main) branch, it is quite safe to assume that, as long as all your tests are successful, these minor updates can be automatically merged without unexpected impact.
-
-{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
-  {{< img src="img/gh-branch-protect-step01.png" caption="Step 1. Click on Protect this branch" >}}
-  {{< img src="img/gh-branch-protect-step02.png" caption="Step 2. Apply settings" >}}
-  {{< img src="img/gh-branch-protect-step03.png" caption="Step 3. Authenticate the changes" >}}
-  {{< img src="img/gh-branch-protect-step04.png" caption="Step 4. Confirm branch protection" >}}
-{{< /carousel >}}
-
-Navigate to the homescreen of your repository on GitHub. You should see a warning that says your main branch is not protected. Click on the button `Protect this branch` to initiate branch protection. You can set up multiple rules to your liking. The recommende rules to enforce at a minimum are the following:
-
-- Require a pull request before merging
-- Require status checks to pass before merging
-  - Require branches to be up to date before merging
-{.tickmark}
-
-{{< alert type="danger" >}}
-GitHub does not automatically update your status checks. For example, if you decide to modify your test matrix, you need to manually remove the obsolete labels and add the new labels.
-{{< /alert >}}
-
-These settings ensure all proposed changes are submitted as part of a PR and prevents any commits directly on the main branch. We can then use each PR request as a trigger to test our codebase and build. We will now select the tests we ran previously in our `lint & build` action. Add all test labels to the second check (`Require status checks to pass before merging`) individually. For example, you can add the `build (18.x)` label as prerequisite, meaning that your site should be compatible with Node.js v18. We are now ready to automate our dependency upgrades.
-
-### Enabling auto-merge
-
-With the branch protection in place we can now enable `auto-merge`. This setting, which is disabled by default, allows merges to be automated if all preconditions (~branch protection rules) have been met. Head over to the `general` section in the repository settings. Within the section, scroll down until you find a setting called `Allow auto-merge`. Select it to apply this setting.
-
-{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
-  {{< img src="img/gh-auto-merge-step01.png" caption="Step 1. Navigate to 'general' in the repository settings" >}}
-  {{< img src="img/gh-auto-merge-step02.png" caption="Step 2. Toggle 'auto-merge'" >}}
-{{< /carousel >}}
-
-We can now configure our dependency upgrades and allow them to be automatically merged.
-
-### Automating dependency upgrades
-
-GitHub provides an action called {{< link dependabot >}}Dependabot{{< /link >}} that helps us to automate the upgrades of our npm dependencies. The Hinode template has enabled Dependabot by default. The configuration can be found in `.github/dependabot.yml`. Dependabot is not compatible with Hugo modules yet. Instead, Hinode uses {{< link create_pr >}}create-pull-request{{< /link>}} from Peter Evans to update the Hugo modules. It calls the npm `mod:update` command on a scheduled interval. It will create a new branch and a Pull Request if it finds any updates. The corresponding action with the title `Update Hugo Dependencies` can be found in `.github/workflows/update.yml`.
-
-{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
-  {{< img src="img/gh-token-step01.png" caption="Step 1. Navigate to your account settings" >}}
-  {{< img src="img/gh-token-step02.png" caption="Step 2. Define a new fine-grained tokens" >}}
-  {{< img src="img/gh-token-step03.png" caption="Step 3. Apply R/W access for contents and Pull Requests" >}}
-  {{< img src="img/gh-token-step04.png" caption="Step 4. Generate the token" >}}
-  {{< img src="img/gh-token-step05.png" caption="Step 5. Navigate to the repository settings" >}}
-  {{< img src="img/gh-token-step06.png" caption="Step 6. Create a new action secret" >}}
-  {{< img src="img/gh-token-step07.png" caption="Step 7. Define the action secret HUGO_MOD_PR" >}}
-{{< /carousel >}}
-
-<!-- markdownlint-disable MD037 -->
-{{< alert type="danger" >}}
-Be careful with using actions from the marketplace, as this introduces a security risk. Rob Bos has written an excellent {{</* link devops_journal >}}blog about the risks involved and how you can mitigate this{{< /link */>}}.
-{{< /alert>}}
-<!-- markdownlint-enable MD037 -->
-
-The `Update Hugo Dependencies` action requires elevated privileges. We will now create a new fine-grained Personal Access Token (PAT) called `HUGO_MOD_PR` to authorize this action to run on our behalf. Set up the token in the `Developer settings` of your **Account settings** on GitHub. The token requires access to your repository with the following permissions:
-
-- Read and Write access to content (code) and pull requests
-{.tickmark}
-
-When done, head over to `action secret` in the security section of the **repository configuration**. Create a new Repository token with the name `HUGO_MOD_PR` in your repository configuration and paste the PAT as content. Click on `Add secret` to add it to your repository.
-
-{{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
-  {{< img src="img/gh-mod-step01.png" caption="Step 1. Run the action workflow" >}}
-  {{< img src="img/gh-mod-step02.png" caption="Step 2. Review the job output" >}}
-  {{< img src="img/gh-mod-step03.png" caption="Step 3. Open the associated PR" >}}
-  {{< img src="img/gh-mod-step04.png" caption="Step 4. Enable auto-merge" >}}
-  {{< img src="img/gh-mod-step05.png" caption="Step 5. Confirm auto-merge" >}}
-  {{< img src="img/gh-mod-step06.png" caption="Step 6. Validate the auto-merge" >}}
-  {{< img src="img/gh-mod-step07.png" caption="Step 7. Observe the merged PR" >}}
-{{< /carousel >}}
-
-We can now run the `Update Hugo Dependencies` action. Head over to the actions overview and trigger the action manually. You can review the job output. When any modules updates have been found, the action will automatically create a PR on our behalf. Go to the Pull Requests overview and select the corresponding PR. You can now enable auto-merge for this type of PR. When all checks have been met, GitHub will automatically merge the PR with the main branch.
-
 ## Conclusion
 
-You have now successfully created your initial Hinode site with version control and automated updates. Review the [hosting and deployment options]({{< relref "hosting-and-deployment" >}}) to see various options on how to (automatically) publish your site to a hosting provider.
+You have now successfully created your initial Hinode site with version control and automated updates. You can look into the guide to {{< link "automation" >}} automate the dependency upgrades using GitHub actions{{< /link >}}. Review the [hosting and deployment options]({{< relref "hosting-and-deployment" >}}) to see various options on how to (automatically) publish your site to a hosting provider.
 
 [^1]: Refer to the [installation instructions]({{< relref "introduction" >}}) if you prefer to install Hinode as a regular Hugo theme.
+[^2]: By default macOS synchronizes your `~/Documents` folder with iCloud. Unfortunately this interferes with npm and could lead to all kinds of synchronization issues. You can better select a folder that is **not** synchronized with iCloud and let git handle your version control.
