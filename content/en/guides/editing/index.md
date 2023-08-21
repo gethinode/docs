@@ -52,11 +52,11 @@ We will now connect our local machine to the newly created GitHub repository. Na
 {{< command prompt="development $" >}}
 git clone https://github.com/<USER>/hinode-demo.git
 (out)Cloning into 'hinode-demo'...
-(out)remote: Enumerating objects: 39, done.
-(out)remote: Counting objects: 100% (39/39), done.
-(out)remote: Compressing objects: 100% (33/33), done.
-(out)remote: Total 39 (delta 1), reused 26 (delta 1), pack-reused 0
-(out)Receiving objects: 100% (39/39), 119.98 KiB | 777.00 KiB/s, done.
+(out)remote: Enumerating objects: 41, done.
+(out)remote: Counting objects: 100% (41/41), done.
+(out)remote: Compressing objects: 100% (34/34), done.
+(out)remote: Total 41 (delta 1), reused 28 (delta 1), pack-reused 0
+(out)Receiving objects: 100% (41/41), 126.89 KiB | 21.15 MiB/s, done.
 (out)Resolving deltas: 100% (1/1), done.
 {{< /command >}}
 
@@ -73,9 +73,9 @@ Next, use the command `npm install` to download and install the various packages
 {{< command prompt="hinode-demo $" >}}
 npm install
 (out)
-(out)added 510 packages, and audited 511 packages in 5s
+(out)added 537 packages, and audited 538 packages in 6s
 (out)
-(out)186 packages are looking for funding
+(out)188 packages are looking for funding
 (out)  run `npm fund` for details
 (out)
 (out)found 0 vulnerabilities
@@ -85,15 +85,13 @@ Lastly, we will install the Hugo modules used by Hinode. Hinode supports two typ
 
 Hinode itself is also a module that is used by the Hinode template. This allows us to use the shortcodes and other components provided by Hinode, without having to worry about their implementation. We can use {{< link hugo_modules >}}Hugo's module system{{< /link >}} to update the used modules to their latest version. Run the script `mod:update` to download and install the latest version of the modules.
 
-<!-- TODO: update repo / actions -->
-
 {{< command prompt="hinode-demo $" >}}
 npm run mod:update
 (out)
-(out)> @gethinode/template@0.10.0 mod:update
-(out)> hugo mod get -u ./... && npm run -s mod:vendor && npm run -s mod:tidy
+(out)> @gethinode/template@0.11.0 mod:update
+(out)> rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy
 (out)
-(out)Update module in /../hinode-demo
+(out)Update module in /../hinode-guide
 {{< /command >}}
 
 The `mod:update` script requires some explanation. The command is defined in `package.json` and references `mod:tidy` and `mod:vendor`:
@@ -133,7 +131,10 @@ Your site is now ready for testing. Enter the following command to start a local
 {{< command prompt="hinode-demo $" >}}
 npm run start
 (out)
-(out)> @gethinode/template@0.10.0 start
+(out)> @gethinode/template@0.11.0 prestart
+(out)> npm run -s mod:vendor
+(out)
+(out)> @gethinode/template@0.11.0 start
 (out)> hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings
 (out)
 (out)Watching for changes in /../hinode-demo/{..}
@@ -153,7 +154,7 @@ npm run start
 (out)  Sitemaps         |   1  
 (out)  Cleaned          |   0  
 (out)
-(out)Built in 1302 ms
+(out)Built in 1311 ms
 (out)Environment: "development"
 (out)Serving pages from memory
 (out)Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
@@ -227,8 +228,17 @@ Hinode defines severals tests to validate the code adheres to [coding standards]
 {{< command prompt="hinode-demo $" >}}
 npm run lint
 (out)
-(out)> @gethinode/template@0.10.0 lint
-(out)> npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown
+(out)> @gethinode/template@0.11.0 lint
+(out)> npm-run-all lint:**
+(out)
+(out)> @gethinode/template@0.11.0 lint:scripts
+(out)> eslint assets/js --no-error-on-unmatched-pattern
+(out)
+(out)> @gethinode/template@0.11.0 lint:styles
+(out)> stylelint "assets/scss/**/*.{css,sass,scss,sss,less}" --allow-empty-input
+(out)
+(out)> @gethinode/template@0.11.0 lint:markdown
+(out)> markdownlint-cli2 "*.md" "content/**/*.md"
 (out)
 (out)markdownlint-cli2 v0.8.1 (markdownlint v0.29.0)
 (out)Finding: *.md content/**/*.md !node_modules !CHANGELOG.md
