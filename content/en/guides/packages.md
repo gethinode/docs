@@ -1,6 +1,6 @@
 ---
 author: Mark Dumay
-title: Adding npm packages
+title: Adding npm packages (deprecated)
 date: 2023-04-03
 description: Guide on how to add existing npm packages to your site.
 tags: ["guide", "npm", "leaflet"]
