@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 description: Review common issues and resolutions.
-date: 2023-08-04
+date: 2023-08-21
 layout: docs
 ---
 
@@ -39,6 +39,9 @@ Review the table below for some common issues and their potential cause. Please 
   {{< /accordion-item >}}
   {{< accordion-item header="My local files are ignored" >}}
     Hinode uses mounts to create a virtual file system. Be sure to include mounts for the base repository and the current repository. See the documentation about [mounted folders]({{< relref "../advanced-settings/overview#mounted-folders" >}}) for more details.
+  {{< /accordion-item >}}
+  {{< accordion-item header="Enabling purging of styles throws an error" >}}
+    Setting `purge = true` in the `style` section of your site parameters instructs Hinode to purge any unused styles from your generated stylesheet. The purger requires several npm packages to be installed, else it will throw an error such as `Cannot find module '@fullhuman/postcss-purgecss'`. You can use the {{</* link repository_template >}}Hinode template{{< /link */>}} as a starting point to set up npm and the required packages. Refer to the {{</* link "guides/optimization" >}}optimization guide{{< /link */>}} for more context.
   {{< /accordion-item >}}
 {{< /accordion >}}
 <!-- markdownlint-enable MD036 MD037 -->
