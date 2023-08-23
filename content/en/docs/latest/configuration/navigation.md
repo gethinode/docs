@@ -21,6 +21,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | style      | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly. |
 | fixed      | false   | Flag indicating to keep the navigation bar fixed at the top of the screen. |
 | offset     | "3em"   | Applies an {{</* link bs_navbar_placement >}}offset to main elements{{< /link */>}} when `fixed` is set to true. |
+| size       | "md"    | Optional breakpoint of the navbar toggler, either "xs", "sm", "md" (default), "lg", or "xl". |
 | search     | true    | Flag indicating to include a search input. |
 | breadcrumb | false   | Flag indicating to add breadcrumb navigation to the top of any single page. List pages are excluded. |
 | toc        | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
