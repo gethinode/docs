@@ -148,6 +148,6 @@ Unlike bitmap images, vector images are not processed but used as is. They shoul
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* image src="/img/logo-mono.svg" mode="true" ratio="21x9" class="bg-primary p-3" */>}}
+{{</* image src="/img/logo_var.svg#logo" class="img-fluid w-50" wrapper="text-center" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
