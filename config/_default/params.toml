@@ -284,6 +284,7 @@
     hugo_download = "https://gohugo.io/installation"
     hugo_fingerprint = "https://gohugo.io/hugo-pipes/fingerprint"
     hugo_frontmatter = "https://gohugo.io/content-management/front-matter"
+    hugo_goldmark = "https://gohugo.io/getting-started/configuration-markup/#goldmark"
     hugo_headless = "https://gohugo.io/content-management/page-bundles/#headless-bundle"
     hugo_i18n = "https://gohugo.io/functions/i18n"
     hugo_image = "https://gohugo.io/content-management/image-processing"
