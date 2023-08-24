@@ -9,9 +9,9 @@ tags: component
 modules: ["leaflet"]
 ---
 
-{{< release version="v0.16.0" >}}
-
 ## Overview
+
+{{< release version="v0.16.0" >}}
 
 Use the map shortcode to show an interactive map, powered by {{< link leaflet >}}Leaflet{{< /link >}}. The shortcode is a simplified wrapper of the Leaflet library that provides basic functionality. As an example, the following shortcode displays an interactive map of the city of Amsterdam.
 
