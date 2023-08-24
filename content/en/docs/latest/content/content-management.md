@@ -45,9 +45,11 @@ Hinode supports the following additional front matter parameters.
 
 ### Mixed content
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="danger" >}}
 Mixing Markdown with HTML is considered unsafe. If you trust the input, you can enable this setting in the {{</* link hugo_goldmark >}}Goldmark configuration{{< /link */>}}, the default Markdown processor of Hugo. If you disable HTML, you can optionally set `purgeHTMLComments` in `params.debugging` to prevent HTML comments from generating a warning by Goldmark.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 As explained in the [overview]({{< relref "#overview" >}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with <abbr title="HyperText Markup Language">HTML</abbr> as needed. The final output is rendered to HTML. The following example mixes Markdown formatting with HTML to show the explanation of an abbreviation on hover.
 
