@@ -19,7 +19,7 @@ Use the `collapse` shortcode to reveil or hide a panel. The panel can contain bo
 {{</* /button */>}}
 
 {{</* collapse id="collapse-1" class="p-3 border rounded" */>}}
-    Some placeholder content for the collapse component. This panel is <i>hidden by default</i> but
+    Some placeholder content for the collapse component. This panel is *hidden by default* but
     revealed when the user activates the relevant trigger.
 {{</* /collapse */>}}
 {{< /example >}}
