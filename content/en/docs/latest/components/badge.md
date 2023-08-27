@@ -14,10 +14,12 @@ tags: component
 
 Badges can be added to headings and buttons. The badge for a button is part of a [custom shortcode]({{< ref "button" >}} "custom shortcode"). The example below illustrates the shortcode for a heading.
 
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
 Example heading of size four {{</* badge title="New" */>}}
 {.h4}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
