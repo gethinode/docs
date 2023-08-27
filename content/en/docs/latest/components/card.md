@@ -135,11 +135,11 @@ Use `title`, `thumbnail`, `icon`, and inner content to define the card's content
 
 ### Custom styling
 
-Use the `class` argument to customize the styling of the card. The folllowing example applies the style `card-feature` to apply a color gradient to the card's icon. The style also applies an adaptive background color.
+Use the `class` argument to customize the styling of the card. The folllowing example applies the style `card-shrink` to apply an animation effect when hovering over the card.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="button" header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto card-feature" /*/>}}
+{{</* card path="button" header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto card-shrink" /*/>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 

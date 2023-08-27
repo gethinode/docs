@@ -1,8 +1,8 @@
 ---
 author: Mark Dumay
 title: Badge
-date: 2023-08-03
-description: Use the badge class attribute to enrich headings.
+date: 2023-08-27
+description: Use the badge shortcode to enrich headings.
 layout: docs
 icon: fas envelope-circle-check
 tags: component
@@ -10,59 +10,91 @@ tags: component
 
 ## Overview
 
-Badges can be added to headings and buttons. The badge for a button is part of a [custom shortcode]({{< ref "button" >}} "custom shortcode"). The example below illustrates the HTML code for a heading.
+{{< release version="v0.19.0-alpha" >}}
 
+Badges can be added to headings and buttons. The badge for a button is part of a [custom shortcode]({{< ref "button" >}} "custom shortcode"). The example below illustrates the shortcode for a heading.
+
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-<h4>Example heading of size four <span class="badge bg-secondary">New</span></h4>
+Example heading of size four {{</* badge title="New" */>}}
+{.h4}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
-The badge requires no arguments.
+The shortcode supports the following arguments:
+
+<!-- markdownlint-disable MD037 -->
+{{< table >}}
+| Argument  | Required | Description |
+|-----------|----------|-------------|
+| title     | Yes | Required title of the badge. |
+| class     | No  | Optional class attributes of the badge element. |
+| color     | No  | Optional theme color of the element, either "primary", "secondary" (default), "success", "danger", "warning", "info", "light", "dark", "white", or "black". |
+{{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Examples
 
-Use HTML code to display a badge for a heading. See the Bootstrap {{< link bs_badge_heading >}}documentation{{< /link >}} for more information.
+Use the badge shortcode to display a badge for a heading. See the Bootstrap {{< link bs_badge_heading >}}documentation{{< /link >}} for more information.
 
 ### Heading badges
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and em units.
+Badges scale to match the size of the immediate parent element by using relative font sizing and em units. Use Hugo's {{< link hugo_goldmark >}}curly brackets syntax{{< /link >}} to apply a heading class.
 
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-<h1>Example heading of size one <span class="badge bg-secondary">New</span></h1>
-<h2>Example heading of size two <span class="badge bg-secondary">New</span></h2>
-<h3>Example heading of size three <span class="badge bg-secondary">New</span></h3>
-<h4>Example heading of size four <span class="badge bg-secondary">New</span></h4>
-<h5>Example heading of size five <span class="badge bg-secondary">New</span></h5>
-<h6>Example heading of size six <span class="badge bg-secondary">New</span></h6>
+Heading 1 {{</* badge title="New" */>}}
+{.h1}
+
+Heading 2 {{</* badge title="New" */>}}
+{.h2}
+
+Heading 3 {{</* badge title="New" */>}}
+{.h3}
+
+Heading 4 {{</* badge title="New" */>}}
+{.h4}
+
+Heading 5 {{</* badge title="New" */>}}
+{.h5}
+
+Heading 6 {{</* badge title="New" */>}}
+{.h6}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Colored badges
 
-Set a background-color with contrasting foreground color with {{< link bs_color_helpers >}}Bootstrap's `.text-bg-{color}` helpers{{< /link >}}.
+Set a background-color with contrasting foreground color with the `color` argument.
 
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-<span class="badge text-bg-primary">Primary</span>
-<span class="badge text-bg-secondary">Secondary</span>
-<span class="badge text-bg-success">Success</span>
-<span class="badge text-bg-danger">Danger</span>
-<span class="badge text-bg-warning">Warning</span>
-<span class="badge text-bg-info">Info</span>
-<span class="badge text-bg-light">Light</span>
-<span class="badge text-bg-dark">Dark</span>
+{{</* badge title="primary" color="primary" */>}}
+{{</* badge title="secondary" color="secondary" */>}}
+{{</* badge title="success" color="success" */>}}
+{{</* badge title="danger" color="danger" */>}}
+{{</* badge title="warning" color="warning" */>}}
+{{</* badge title="info" color="info" */>}}
+{{</* badge title="light" color="light" */>}}
+{{</* badge title="dark" color="dark" */>}}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Pill badges
 
 Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
 
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-<span class="badge rounded-pill text-bg-primary">Primary</span>
-<span class="badge rounded-pill text-bg-secondary">Secondary</span>
-<span class="badge rounded-pill text-bg-success">Success</span>
-<span class="badge rounded-pill text-bg-danger">Danger</span>
-<span class="badge rounded-pill text-bg-warning">Warning</span>
-<span class="badge rounded-pill text-bg-info">Info</span>
-<span class="badge rounded-pill text-bg-light">Light</span>
-<span class="badge rounded-pill text-bg-dark">Dark</span>
+{{</* badge title="primary" color="primary" class="rounded-pill" */>}}
+{{</* badge title="secondary" color="secondary" class="rounded-pill" */>}}
+{{</* badge title="success" color="success" class="rounded-pill" */>}}
+{{</* badge title="danger" color="danger" class="rounded-pill" */>}}
+{{</* badge title="warning" color="warning" class="rounded-pill" */>}}
+{{</* badge title="info" color="info" class="rounded-pill" */>}}
+{{</* badge title="light" color="light" class="rounded-pill" */>}}
+{{</* badge title="dark" color="dark" class="rounded-pill" */>}}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
