@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Button
-date: 2023-07-30
+date: 2023-08-27
 description: Use the button shortcode to display a button with a hyperlink.
 layout: docs
 icon: fa hand-pointer
@@ -185,7 +185,7 @@ Reveal or hide a collapsible panel by linking the panel's `id` to the button wit
 
 <div class="collapse pt-3" id="collapseExample">
     <div class="card card-body">
-        Some placeholder content for the collapse component. This panel is hidden by default
+        Some placeholder content for the collapse component. This panel is *hidden by default*
         but revealed when the user activates the relevant trigger.
     </div>
 </div>
