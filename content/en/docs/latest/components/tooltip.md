@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Tooltip
-date: 2023-08-05
+date: 2023-08-27
 description: Use the tooltip shortcode to display a tooltip for a hyperlink.
 layout: docs
 icon: fa message
@@ -45,13 +45,15 @@ Set `color` to adjust the color of the text element to which the tooltip is appl
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* tooltip color="primary" title="Tooltip" href="#!" */>}}Primary{{</* /tooltip */>}}&bull;
-{{</* tooltip color="secondary" title="Tooltip" href="#!" */>}}Secondary{{</* /tooltip */>}}&bull;
+{{</* tooltip color="secondary" title="Tooltip" class="d-none-dark" href="#!" */>}}Secondary{{</* /tooltip */>}}
+{{</* tooltip color="secondary" title="Tooltip" class="d-none-light bg-light" href="#!" */>}}Secondary{{</* /tooltip */>}}&bull;
 {{</* tooltip color="success" title="Tooltip" href="#!" */>}}Success{{</* /tooltip */>}}&bull;
 {{</* tooltip color="danger" title="Tooltip" href="#!" */>}}Danger{{</* /tooltip */>}}&bull;
 {{</* tooltip color="warning" title="Tooltip" href="#!" */>}}Warning{{</* /tooltip */>}}&bull;
 {{</* tooltip color="info" title="Tooltip" href="#!" */>}}Info{{</* /tooltip */>}}&bull;
-{{</* tooltip color="light" title="Tooltip" href="#!" */>}}Light{{</* /tooltip */>}}&bull;
-{{</* tooltip color="dark" title="Tooltip" href="#!" */>}}Dark{{</* /tooltip */>}}
+{{</* tooltip color="light" title="Tooltip" class="bg-dark" href="#!" */>}}Light{{</* /tooltip */>}}&bull;
+{{</* tooltip color="dark" title="Tooltip" class="d-none-dark" href="#!" */>}}Dark{{</* /tooltip */>}}
+{{</* tooltip color="dark" title="Tooltip" class="d-none-light bg-light" href="#!" */>}}Dark{{</* /tooltip */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
