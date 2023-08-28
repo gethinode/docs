@@ -30,7 +30,7 @@ The shortcode supports the following arguments:
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | path        | No  | Path of the page that the card reference to. If omitted, specify the title, icon, thumbnail, and body (inner content) as needed. |
-| title       | No  | Optional title of the card, replaces the  |
+| title       | No  | Optional title of the card, replaces the title of the referenced page (if any). |
 | class       | No  | Optional class attribute of the card element, e.g. “w-50”. |
 | color       | No  | Optional theme color of the card, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | padding     | No  | Optional padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
