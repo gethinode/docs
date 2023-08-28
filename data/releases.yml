@@ -189,8 +189,9 @@
   url: v0.2
   content:
     Inspired by Doks, this release introduces a child theme of Hinode. The child theme uses npm to refer to the latest
-    available package. npm brings the benefit that dependencies can be automatically upgraded as part of the CI/CD
-    process. It also abstracts from the core code of Hinode, keeping child repositories small and focused.
+    available package. npm brings the benefit that dependencies can be automatically upgraded as part of the
+    {{< abbr "CI/CD" >}} process. It also abstracts from the core code of Hinode, keeping child repositories small and
+    focused.
 
 - title: Initial launch
   icon: fas rocket
