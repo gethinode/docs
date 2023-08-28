@@ -49,7 +49,7 @@ You can choose to either fully integrate Hugo modules or to include them on a pa
 
 Our module will wrap the functionality of KaTeX as a module for Hinode. The installation instructions of KaTeX tell us what files are needed to {{< link katex_self_hosted >}}host KaTeX ourselves{{< /link >}}. We will need the file `katex.js`, `katex.css`, and the `fonts` directory. We could also use minified versions, however, Hinode will take care of transpiling, bundling, and minifying the assets later on. For our purposes, we are better suited with the properly formatted files to simplify debugging. We also want to include the {{< link katex_autorender >}}auto-render extension{{< /link >}}. We will create a separate script with the instructions to invoke the function `renderMathInElement` later on.
 
-When we take a look at the {{< link katex_github >}}source code repository of KaTeX on GitHub{{< /link >}}, we can observe that not all required files are maintained wihtin the repository. This is quite common, as many libraries choose to publish their release assets through a package manager (such as {{< link npm >}}npm{{< /link >}}) or <abbr title="Content Delivery Network">CDN</abbr> instead. The GitHub releases do adhere to a consistent semantic versioning pattern of `vMAJOR.MINOR.PATCH`. Both requirements are needed for Hugo modules to work out-of-the-box - that is, downloading the GitHub release directly.
+When we take a look at the {{< link katex_github >}}source code repository of KaTeX on GitHub{{< /link >}}, we can observe that not all required files are maintained wihtin the repository. This is quite common, as many libraries choose to publish their release assets through a package manager (such as {{< link npm >}}npm{{< /link >}}) or {{< abbr CDN >}} instead. The GitHub releases do adhere to a consistent semantic versioning pattern of `vMAJOR.MINOR.PATCH`. Both requirements are needed for Hugo modules to work out-of-the-box - that is, downloading the GitHub release directly.
 
 Even if the first requirement has not been met, we can still use the Hugo module system. We will use {{< link npm >}}npm{{< /link >}} to do some of the heavy-lifting for us. Our module will use npm and several scripts to expose the required files and to ensure these file are kept up-to-date. Now that we have decided on our sourcing strategy, we can head over to the next step to start working on our module.
 
@@ -121,7 +121,7 @@ The line postinstall is split into separate lines for each copy command to impro
 We deliberately rename the `katex.css` file to a `katex.scss` file. The default `libsass` library, part of the [styles processing pipeline]({{< relref "styles" >}}), has difficulty processing the file otherwise.
 {{< /alert >}}
 
-Run `npm install` from the command line to invoke the `postinstall` script automatically. You should now have a folder `dist` in your repository root with the correct files. This npm script works well in a <abbr title="Continous Integration/Continuous Deployment">CI/CD</abbr> pipeline as well, which prepares us for automation of the dependency upgrades later on in this guide.
+Run `npm install` from the command line to invoke the `postinstall` script automatically. You should now have a folder `dist` in your repository root with the correct files. This npm script works well in a {{< abbr "CI/CD" >}} pipeline too, which prepares us for automation of the dependency upgrades later on in this guide.
 
 {{< command >}}
 npm install

@@ -109,11 +109,13 @@ That is so funny! :smiley:
 
 ## Abbreviations
 
-Use the HTML element `<abbr>` for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
+Use the {{< link "docs/components/abbr" >}}abbr shortcode{{< /link>}} for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
-{{< example lang="html" >}}
-<p><abbr title="HyperText Markup Language">HTML</abbr></p>
+<!-- markdownlint-disable MD037 -->
+{{< example >}}
+{{</* abbr HTML */>}}
 {{< /example >}}
+<!-- markdownlint-disable MD037 -->
 
 ## Blockquotes
 

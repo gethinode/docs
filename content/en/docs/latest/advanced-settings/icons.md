@@ -9,7 +9,7 @@ Hinode processes the Bootstrap icons to ensure they adhere to the strict [conten
 
 ## Bootstrap icons
 
-Bootstrap uses various embedded vector images (in <abbr title="Scalable Vector Graphics">SVG</abbr> format) throughout its Sass source files. Hinode replaces these embedded images with file-based vector images, as the [content security policy]({{< relref "server-headers" >}}) prohibits loading of embedded images. To ensure the images are consistent with the [theme colors]({{< ref "colors" >}}), the images are postprocessed using {{< link hugo_templates >}}Hugo templating{{< /link >}}.
+Bootstrap uses various embedded vector images (in {{< abbr SVG >}} format) throughout its Sass source files. Hinode replaces these embedded images with file-based vector images, as the [content security policy]({{< relref "server-headers" >}}) prohibits loading of embedded images. To ensure the images are consistent with the [theme colors]({{< ref "colors" >}}), the images are postprocessed using {{< link hugo_templates >}}Hugo templating{{< /link >}}.
 
 ### Build pipeline
 
@@ -61,4 +61,4 @@ The exported variables are defined in the file `assets/scss/common/_export.scss`
 
 ## Font Awesome icons
 
-{{< link fontawesome >}}Font Awesome{{< /link >}} provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the <abbr title="Cascading Style Sheets">CSS</abbr> files and web fonts of Font Awesome, as the [content security policy]({{< relref "server-headers" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. By default, the CSS files are bundled with the main stylesheet. The web fonts are mounted in the `/static/fonts` folder. The various files are provided by the {{< link repository_mod_fontawesome >}}Font Awesome module on GitHub{{< /link >}}.
+{{< link fontawesome >}}Font Awesome{{< /link >}} provides a collection of icons to be used freely on websites and other media. See the [icons documentation]({{< relref "../content/icons" >}}) in the content section on how to use them to style your website. Hinode uses the {{< abbr CSS >}} files and web fonts of Font Awesome, as the [content security policy]({{< relref "server-headers" >}}) prohibits the inline execution of stylesheets by the JavaScripts of Font Awesome. By default, the CSS files are bundled with the main stylesheet. The web fonts are mounted in the `/static/fonts` folder. The various files are provided by the {{< link repository_mod_fontawesome >}}Font Awesome module on GitHub{{< /link >}}.

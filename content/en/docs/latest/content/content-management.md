@@ -9,13 +9,13 @@ Hinode uses Markdown and templates to define the content for your website. Hugo 
 
 ## Overview
 
-Markdown is a simple and easy-to-use markup language. It uses formatting elements in plaintext documents to format documents. Using Markdown is different than using a <abbr title="What you see is what you get">WYSIWYG</abbr> editor. Such editors apply the formatting styles as you go. Instead, Markdown shows the formatting codes next to the content. Although this may require getting used to, the advantage is that you have full control over your document. The {{< link markdown_guide >}}Markdown guide{{< /link >}} provides a comprehensive overview of the Markdown format. Hugo supports additional content formats next to Markdown. See Hugo's documentation for a full overview of {{< link hugo_content >}}supported content formats{{< /link >}}.
+Markdown is a simple and easy-to-use markup language. It uses formatting elements in plaintext documents to format documents. Using Markdown is different than using a {{< abbr WYSIWYG >}}editor. Such editors apply the formatting styles as you go. Instead, Markdown shows the formatting codes next to the content. Although this may require getting used to, the advantage is that you have full control over your document. The {{< link markdown_guide >}}Markdown guide{{< /link >}} provides a comprehensive overview of the Markdown format. Hugo supports additional content formats next to Markdown. See Hugo's documentation for a full overview of {{< link hugo_content >}}supported content formats{{< /link >}}.
 
 <!-- TODO: insert VS Code screenshot -->
 
 ### Front matter
 
-Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the <abbr title="Yet Another Markup Language">YAML</abbr> format by default, denoted by `---` as the opening and closing tags. The folllowing example shows the front matter of the page you are currently reading.
+Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the {{< abbr YAML >}} format by default, denoted by `---` as the opening and closing tags. The folllowing example shows the front matter of the page you are currently reading.
 
 ```yml
 ---

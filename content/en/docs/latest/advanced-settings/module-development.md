@@ -25,7 +25,7 @@ The GitHub repositories of modules maintained by Hinode start with the `mod-` pr
 
 ### Styles
 
-Modules should define a single entrypoint for their stylesheets in `assets/scss/{MODULE}`, replacing `{MODULE}` with the name of the module **without** the `mod-` prefix. Even if the module uses plain <abbr title="Cascading Stylesheet">CSS</abbr> files, the entrypoint should have the `.scss` extension to ensure the file is transpiled correctly. The additional source files should be mounted into `assets/scss/modules/{MODULE}/`. You can set the value `showSCSS` to `true` in the `debugging` section of the site's parameters to show which files are processed in which order.
+Modules should define a single entrypoint for their stylesheets in `assets/scss/{MODULE}`, replacing `{MODULE}` with the name of the module **without** the `mod-` prefix. Even if the module uses plain {{< abbr CSS >}} files, the entrypoint should have the `.scss` extension to ensure the file is transpiled correctly. The additional source files should be mounted into `assets/scss/modules/{MODULE}/`. You can set the value `showSCSS` to `true` in the `debugging` section of the site's parameters to show which files are processed in which order.
 
 ### Scripts
 
