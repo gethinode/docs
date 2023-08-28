@@ -114,7 +114,7 @@ The Hinode documentation site uses several optimization strategies to reduce the
 
    Hinode starts a local web server in development mode to simplify debugging by default. In production mode, Hinode minifies the CSS and JavaScript files and does not generate any debugging information (such as source maps).
 
-The first two strategies are already taken care off. We will now switch to production mode to evaluate the impact of minification. Stop the current web server with <kbd>CTRL+C</kbd>. Run the command `npm run start:prod` to start the local web server in production mode.
+The first two strategies are already taken care off. We will now switch to production mode to evaluate the impact of minification. Stop the current web server with {{< kbd "CTRL-C" >}}. Run the command `npm run start:prod` to start the local web server in production mode.
 
 {{< command >}}
 npm run start:prod

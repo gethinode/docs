@@ -185,7 +185,7 @@ We will now use VSCode to modify the content of our demo site. Start the applica
 
 We will now set up a new branch before we make any changes. It is a good software practice to set up at least one branch for development and testing, instead of working directly on the main branch. Hinode provides several predefined tests that verify if submitted changes in a Pull Request adhere to coding conventions and do not break the build.
 
-Head over to the `Source Control` section of VSCode and click on the button `...` to open the source control menu. Within the menu, navigate to `Branch / Create Branch...`. Provide `develop` as branch name and confirm with <kbd>enter</kbd>. The blue status bar on the bottom of VSCode will now display `develop` as selected branch. A repository usually contains a `main` branch that maintains the production code, and one or more development branches. Complex projects with multiple contributors may have multiple active (feature) branches and even nested branches.
+Head over to the `Source Control` section of VSCode and click on the button `...` to open the source control menu. Within the menu, navigate to `Branch / Create Branch...`. Provide `develop` as branch name and confirm with {{< kbd enter >}}. The blue status bar on the bottom of VSCode will now display `develop` as selected branch. A repository usually contains a `main` branch that maintains the production code, and one or more development branches. Complex projects with multiple contributors may have multiple active (feature) branches and even nested branches.
 
 Now let us replace the introduction of the featured section of our homepage. Replace the main content in `content/_index.md` (below the last `---` marker) with the following.
 
@@ -215,7 +215,7 @@ This is my first site created with Hinode. It includes a single blog post.
 
 The content contains frontmatter, denoted by `---` markers, and main content. The frontmatter captures the metadata of the page, and usually includes at least a title and a date. The `thumbnail` is a special variable introduced by Hinode that captures the metadata of our page thumbnail. The image itself is mounted from the main Hinode repository into the `assets` folder upon build.
 
-Check back to see the changes in your web browser. If you do not see the new post, you might have to restart the web server. Hit <kbd>ctrl-c</kbd> and rerun the `npm run start` command. Your page should now look similar to the following screenshot:
+Check back to see the changes in your web browser. If you do not see the new post, you might have to restart the web server. Hit {{< kbd "CTRL-C" >}} and rerun the `npm run start` command. Your page should now look similar to the following screenshot:
 
 <div class="col-sm-12 col-lg-8 mx-auto">
 {{< image src="img/hinode-demo.png" caption="Demo site with an initial blog post" class="border" >}}
