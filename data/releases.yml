@@ -1,5 +1,16 @@
 # This file holds all entries for the release timeline
 
+- title: Markdown by default
+  icon: fab markdown
+  color: warning
+  date: 2023-08-28
+  badge: v0.19.0-alpha2
+  url: v0.19.0-alpha2
+  content:
+    This release ensures Hinode uses Markdown-only by default. Although still supported, HTML is now opt-in instead of
+    opt-out to improve security and to simplify content management. Two new shortcodes, 
+    {{< link "docs/components/abbr" >}}abbr{{< /link >}} and {{< link "docs/components/badge" >}}badge{{< /link >}}, are
+    introduced to replace earlier HTML elements.
 
 - title: Accessibility
   icon: fas circle-half-stroke
