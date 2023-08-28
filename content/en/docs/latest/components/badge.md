@@ -67,7 +67,7 @@ Heading 6 {{</* badge title="New" */>}}
 
 ### Colored badges
 
-Set a background-color with contrasting foreground color with the `color` argument.
+Set a background color with contrasting foreground color with the `color` argument.
 
 <!-- markdownlint-disable MD037 -->
 {{< example >}}
