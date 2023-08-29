@@ -97,8 +97,8 @@ Deploy your site to Azure blob storage in six steps.
   {{< accordion-item header="Step 3. Configure environment variables" >}}
     Go to the menu section `Security + networking` and select `Access keys`. Capture the storage account name, e.g. `gethinode`. Next, copy either of the two keys to your clipboard. Set the credentials on your local computer:
     {{</* command user="user" host="localhost" */>}}
-    export AZURE_STORAGE_ACCOUNT="<account name>"
-    export AZURE_STORAGE_KEY="<storage key>"
+    export AZURE_STORAGE_ACCOUNT="{account name}"
+    export AZURE_STORAGE_KEY="{storage key}"
     {{</* /command */>}}
   {{< /accordion-item >}}
   {{< accordion-item header="Step 4. Build the website locally" >}}

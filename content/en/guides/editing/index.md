@@ -50,7 +50,7 @@ Navigate to the {{< link repository_template >}}template repository{{< /link >}}
 We will now connect our local machine to the newly created GitHub repository. Navigate to a folder in the terminal of your local machine, such as `~/development`[^2]. Use the `git clone` command to download and extract your GitHub repository within the current folder. By default, git creates a new subfolder with the name of your repository, e.g. `hinode-demo`. The next command is an example, be sure to replace the <mark>&lt;USER&gt;</mark> name with your own.
 
 {{< command prompt="development $" >}}
-git clone https://github.com/<USER>/hinode-demo.git
+git clone https://github.com/{USER}/hinode-demo.git
 (out)Cloning into 'hinode-demo'...
 (out)remote: Enumerating objects: 41, done.
 (out)remote: Counting objects: 100% (41/41), done.
