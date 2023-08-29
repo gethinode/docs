@@ -217,9 +217,7 @@ The content contains frontmatter, denoted by `---` markers, and main content. Th
 
 Check back to see the changes in your web browser. If you do not see the new post, you might have to restart the web server. Hit {{< kbd "CTRL-C" >}} and rerun the `npm run start` command. Your page should now look similar to the following screenshot:
 
-<div class="col-sm-12 col-lg-8 mx-auto">
-{{< image src="img/hinode-demo.png" caption="Demo site with an initial blog post" class="border" >}}
-</div>
+{{< image src="img/hinode-demo.png" caption="Demo site with an initial blog post" class="border" wrapper="col-sm-12 col-lg-8 mx-auto" >}}
 
 ## Step 3 - Validating the changes
 
