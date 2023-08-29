@@ -13,11 +13,15 @@ Hinode supports color modes, or themes, as introduced by Bootstrap `v5.3.0`. By 
 
 ## Display property
 
-Hinode defines two classes to simplify the development of color-mode aware websites. Simply add `d-none-dark` as class attribute to block the display of an element in dark mode. Vice versa, use `d-none-light` to block the content from rendering in light mode. The following example illustrates this behavior. Toggle the color mode of the current website to test the behavior.
+Hinode defines two classes to simplify the development of color-mode aware websites. Simply add `.d-none-dark` as class attribute to block the display of an element in dark mode. Vice versa, use `.d-none-light` to block the content from rendering in light mode. The following example illustrates this behavior. Toggle the color mode of the current website to test the behavior.
 
 {{< example >}}
 I'm visible in {{< mark >}}light mode{{< /mark >}} only
+{.d-none-dark}
+
 I'm visible in {{< mark >}}dark mode{{< /mark >}} only
+{.d-none-light}
+
 {{< /example >}}
 
 ## Accessibility
