@@ -27,6 +27,11 @@ date: 2023-02-19
 
 Hinode supports the following additional front matter parameters.
 
+{{< alert type="info" >}}
+When using a local file, the page's thumbnail should be available as a global site asset. You cannot use an image from a {{</* link hugo_page_resources >}}page resource{{< /link */>}}, as the thumbnail is being referenced on other pages too. External images are downloaded automatically and further processed locally.
+{{< /alert >}}
+
+
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument            | Description |
