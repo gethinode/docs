@@ -32,36 +32,57 @@ Use the native Markdown character `#` to generate headings for your content. The
 
 Alternatively, you can use `.h1` through `.h6` classes, for when you want to match the font styling of a heading but cannot use the associated HTML element. For example, using a `.h2` class will exclude the section heading from the generated [table of contents]({{< ref "navigation#table-of-contents" >}}).
 
-{{< example lang="html" >}}
-<p class="h1">H1</p>
-<p class="h2">H2</p>
-<p class="h3">H3</p>
-<p class="h4">H4</p>
-<p class="h5">H5</p>
-<p class="h6">H6</p>
+{{< example >}}
+H1
+{.h1}
+
+H2
+{.h2}
+
+H3
+{.h3}
+
+H4
+{.h4}
+
+H5
+{.h5}
+
+H6
+{.h6}
 {{< /example >}}
 
 ## Display headings
 
-Display a larger, slightly more opinionated heading style by adding the `.display` class in HTML.
+Display a larger, slightly more opinionated heading style by adding the `.display` class.
 
-{{< example lang="html" >}}
-<h1 class="display-1">Display 1</h1>
-<h1 class="display-2">Display 2</h1>
-<h1 class="display-3">Display 3</h1>
-<h1 class="display-4">Display 4</h1>
-<h1 class="display-5">Display 5</h1>
-<h1 class="display-6">Display 6</h1>
+{{< example >}}
+Display 1
+{.display-1}
+
+Display 2
+{.display-2}
+
+Display 3
+{.display-3}
+
+Display 4
+{.display-4}
+
+Display 5
+{.display-5}
+
+Display 6
+{.display-6}
 {{< /example >}}
 
 ## Lead
 
-Make a paragraph stand out by adding `.lead` class in HTML.
+Make a paragraph stand out by adding the `.lead` class.
 
-{{< example lang="html" >}}
-<p class="lead">
-  This is a lead paragraph. It stands out from regular paragraphs.
-</p>
+{{< example >}}
+This is a lead paragraph. It stands out from regular paragraphs.
+{.lead}
 {{< /example >}}
 
 ## Inline text elements
@@ -84,28 +105,37 @@ _This line of text renders as underlined._
 {{< /example >}}
 <!-- markdownlint-enable MD049 -->
 
-### HTML Styling
+### Extended Styling
 
-Use HTML tags for additional styling options. The following example illustrates highlighting, fine print, subscript, and superscript.
+{{< release version="v0.19.0-alpha" >}}
 
-{{< example lang="html" >}}
-<p>You can use the mark tag to <mark>highlight</mark> text.</p>
-<p><small>This line of text is meant to be treated as fine print.</small></p>
-<p>H<sub>2</sub>O is a liquid.</p>
-<p>2<sup>10</sup> is 1024.</p>
+Use shortcodes and classes for additional styling options. The following example illustrates highlighting, fine print, subscript, and superscript.
+
+<!-- markdownlint-disable MD037 -->
+{{< example >}}
+You can use the mark shortcode to {{</* mark >}}highlight{{< /mark */>}} text.
+
+This line of text is meant to be treated as fine print.
+{.small}
+
+H{{</* sub 2 */>}}O is a liquid.
+
+2{{</* sup 10 */>}} is 1024.
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Emoji
 
 Use shortcodes to insert Emoji into your content. You can use this {{< link markdown_emoji >}}list of emoji{{< /link >}} shortcodes as a reference, although the results may vary across browsers and devices. The following example inserts an inline smiley.
 
-<div class="bg-light p-3 mb-3">
-    That is so funny! <code>:<zero-width space>smiley:<zero-width space></code>
-</div>
+  {{< mark color="light" class="d-none-dark" >}}That is so funny! \:smiley\:{{< /mark >}}
+  {{< mark color="dark" class="d-none-light" >}}That is so funny! \:smiley\:{{< /mark >}}
 
 The result looks like this:
 
+{{< example show_markup=false >}}
 That is so funny! :smiley:
+{{< /example >}}
 
 ## Abbreviations
 
@@ -136,8 +166,9 @@ The following Markdown generates a blockquote without attribution.
 The following Markdown generates a blockquote with attribution. The citation itself is added to the bottom of the page.
 
 {{< example lang="markdown" >}}
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+> Don't communicate by sharing memory, share memory by communicating.
+>
+> — *Rob Pike[^1]*
 {.blockquote}
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
