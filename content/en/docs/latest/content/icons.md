@@ -23,13 +23,13 @@ Specify the correct icon library and omit the `fa-` prefix from the icon name to
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-The icons inherit the current styling options and as such blend in with text inline. For example, apply the [theme color]({{< relref "colors" >}}) `text-primary` of the outer HTML element `span` to change the color of the icon. You can also pass the class attribute directly to the shortcode, such as `text-info`.
+The icons inherit the current styling options and as such blend in with text inline. For example, apply the [theme color]({{< relref "colors" >}}) `text-primary` to the paragraph containing the icon to change its color. You can also pass the class attribute directly to the shortcode, such as `text-info`.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<span class="text-primary">
-    {{</* fas music */>}}
-</span>
+{{</* fas music */>}}
+{.text-primary}
+
 {{</* fas music text-info */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -44,13 +44,19 @@ Font Awesome includes a range of t-shirt based sizes that are relative to the br
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<p>{{</* fas mug-saucer fa-2xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas mug-saucer fa-xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas mug-saucer fa-sm */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas mug-saucer fa */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas mug-saucer fa-lg */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas mug-saucer fa-xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
-<p>{{</* fas mug-saucer fa-2xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.</p>
+{{</* fas mug-saucer fa-2xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.
+
+{{</* fas mug-saucer fa-xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.
+
+{{</* fas mug-saucer fa-sm */>}} When my six o’clock alarm buzzes, I require a pot of good java.
+
+{{</* fas mug-saucer fa */>}} When my six o’clock alarm buzzes, I require a pot of good java.
+
+{{</* fas mug-saucer fa-lg */>}} When my six o’clock alarm buzzes, I require a pot of good java.
+
+{{</* fas mug-saucer fa-xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.
+
+{{</* fas mug-saucer fa-2xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -106,9 +112,15 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 
 ### Responsive sizing
 
-{{< release version="v0.14.5" >}}
+{{< alert >}}
+**New in v0.19.0-beta2** - Added support for a wrapper argument that applies `fa-wrapper` and `fa-fluid` automatically.
 
-Hinode supports responsive sizing of icons using so-called containers. Wrap the icon in an element with class `fa-wrapper` and add the class attribute `fa-fluid` to the icon itself. The icon is now dynamically resized.
+---
+
+**New in v0.14.5** - Added support for responsive sizing using containers.
+{{< /alert >}}
+
+Hinode supports responsive sizing of icons using so-called containers. Assigning `wrapper` a value will wrap the icon in a HTML `div` element. Hinode assigns `.fa-wrapper` to the class attribute of the wrapper and `fa-fluid` to the icon itself. The icon is now dynamically resized.
 
 <!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
@@ -116,13 +128,11 @@ Container support is a relatively new CSS feature that is not supported by all b
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
-The following example demonstrates a centered, responsive icon. When [including Font Awesome as a web font]({{< relref "../configuration/modules#configuring-modules" >}}), the wrapper element may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
+The following example demonstrates a centered, responsive icon. The icon keeps its original aspect ratio, so the wrapper may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="fa-wrapper col-6 mx-auto text-center">
-    {{</* fas rocket bg-body-tertiary fa-fluid */>}}
-</div>
+{{</* fas class="rocket bg-body-tertiary" wrapper="col-6 mx-auto text-center" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -132,28 +142,36 @@ Add `fa-fw` to the class of the HTML element referencing your icon to apply a fi
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="fa-3x">
-    <div>{{</* fas person-skating fa-fw bg-body-tertiary */>}} Skating</div>
-    <div>{{</* fas person-skiing fa-fw bg-body-tertiary */>}} Skiing</div>
-    <div>{{</* fas person-skiing-nordic fa-fw bg-body-tertiary */>}} Nordic Skiing</div>
-    <div>{{</* fas person-snowboarding fa-fw bg-body-tertiary */>}} Snowboarding</div>
-    <div>{{</* fas snowplow fa-fw bg-body-tertiary */>}} Snowplow</div>
-</div>
+{{</* fas person-skating fa-fw bg-body-tertiary */>}} Skating
+{.fa-3x}
+
+{{</* fas person-skiing fa-fw bg-body-tertiary */>}} Skiing
+{.fa-3x}
+
+{{</* fas person-skiing-nordic fa-fw bg-body-tertiary */>}} Nordic Skiing
+{.fa-3x}
+
+{{</* fas person-snowboarding fa-fw bg-body-tertiary */>}} Snowboarding
+{.fa-3x}
+
+{{</* fas snowplow fa-fw bg-body-tertiary */>}} Snowplow
+{.fa-3x}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ## Lists
 
-Use the classes `fa-ul` and `fa-li` to replace default bullets in unordered lists. The following example illustrates how this works.
+Use the classes `.fa-ul` and `.fa-li` to replace default bullets in unordered lists. The following example illustrates how this works.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<ul class="fa-ul">
-    <li><span class="fa-li">{{</* fas circle-check */>}}</span>List icons can</li>
-    <li><span class="fa-li">{{</* fas square-check */>}}</span>be used to</li>
-    <li><span class="fa-li">{{</* fas spinner fa-pulse */>}}</span>replace bullets</li>
-    <li><span class="fa-li">{{</* fa square */>}}</span>in lists</li>
-</ul>
+
+- {{</* fas class="circle-check" wrapper="fa-li" */>}}List icons can
+- {{</* fas class="square-check" wrapper="fa-li" */>}}be used to
+- {{</* fas class="spinner fa-pulse" wrapper="fa-li" */>}} replace bullets
+- {{</* fa class="square" wrapper="fa-li" */>}} in lists
+{.fa-ul}
+
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -163,15 +181,13 @@ Use specific classes to rotate the icon with a specific degree. The following ex
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="fa-3x">
-    {{</* fas person-snowboarding */>}}
-    {{</* fas person-snowboarding fa-rotate-90 */>}}
-    {{</* fas person-snowboarding fa-rotate-180 */>}}
-    {{</* fas person-snowboarding fa-rotate-270 */>}}
-    {{</* fas person-snowboarding fa-flip-horizontal */>}}
-    {{</* fas person-snowboarding fa-flip-vertical */>}}
-    {{</* fas person-snowboarding fa-flip-both */>}}
-</div>
+{{</* fas person-snowboarding fa-3x */>}}
+{{</* fas person-snowboarding fa-3x fa-rotate-90 */>}}
+{{</* fas person-snowboarding fa-3x fa-rotate-180 */>}}
+{{</* fas person-snowboarding fa-3x fa-rotate-270 */>}}
+{{</* fas person-snowboarding fa-3x fa-flip-horizontal */>}}
+{{</* fas person-snowboarding fa-3x fa-flip-vertical */>}}
+{{</* fas person-snowboarding fa-3x fa-flip-both */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -194,15 +210,13 @@ Font Awesome supports various animations by simply adding a animation class to t
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="fa-3x">
-    {{</* fas heart fa-beat */>}}
-    {{</* fas triangle-exclamation fa-fade */>}}
-    {{</* fas circle-info fa-beat-fade */>}}
-    {{</* fas basketball fa-bounce */>}}
-    {{</* fas camera-rotate fa-flip */>}}
-    {{</* fas bell fa-shake */>}}
-    {{</* fas arrows-rotate fa-spin */>}}
-</div>
+{{</* fas heart fa-3x fa-beat */>}}
+{{</* fas triangle-exclamation fa-3x fa-fade */>}}
+{{</* fas circle-info fa-3x fa-beat-fade */>}}
+{{</* fas basketball fa-3x fa-bounce */>}}
+{{</* fas camera-rotate fa-3x fa-flip */>}}
+{{</* fas bell fa-3x fa-shake */>}}
+{{</* fas arrows-rotate fa-3x fa-spin */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -249,22 +263,21 @@ Use the `fa-stack` class on the parent HTML element of the two icons you want to
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<span class="fa-stack fa-2x">
-    {{</* fas square fa-stack-2x */>}}
-    {{</* fab x-twitter fa-stack-1x fa-inverse */>}}
-</span>
-<span class="fa-stack fa-2x">
-    {{</* fas circle fa-stack-2x */>}}
-    {{</* fas flag fa-stack-1x fa-inverse */>}}
-</span>
-<span class="fa-stack fa-2x">
-    {{</* fas camera fa-stack-1x */>}}
-    {{</* fas ban fa-stack-2x text-danger */>}}
-</span>
-<span class="fa-stack fa-4x">
-    {{</* fas square fa-stack-2x */>}}
-    {{</* fas terminal fa-stack-1x fa-inverse */>}}
-</span>
+{{</* fas square fa-stack-2x */>}}
+{{</* fab x-twitter fa-stack-1x fa-inverse */>}}
+{.fa-stack .fa-2x}
+
+{{</* fas circle fa-stack-2x */>}}
+{{</* fas flag fa-stack-1x fa-inverse */>}}
+{.fa-stack .fa-2x}
+
+{{</* fas camera fa-stack-1x */>}}
+{{</* fas ban fa-stack-2x text-danger */>}}
+{.fa-stack .fa-2x}
+
+{{</* fas square fa-stack-2x */>}}
+{{</* fas terminal fa-stack-1x fa-inverse */>}}
+{.fa-stack .fa-4x}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
