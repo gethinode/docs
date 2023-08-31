@@ -27,10 +27,11 @@ date: 2023-02-19
 
 Hinode supports the following additional front matter parameters.
 
+<!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
 When using a local file, the page's thumbnail should be available as a global site asset. You cannot use an image from a {{</* link hugo_page_resources >}}page resource{{< /link */>}}, as the thumbnail is being referenced on other pages too. External images are downloaded automatically and further processed locally.
 {{< /alert >}}
-
+<!-- markdownlint-enable MD037 -->
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
@@ -61,7 +62,6 @@ Mixing Markdown with HTML is considered unsafe. If you trust the input, you can 
 <!-- markdownlint-enable MD037 -->
 
 As explained in the [overview]({{< relref "#overview" >}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with {{< abbr HTML >}} as needed. The final output is rendered to HTML.
-
 
 ### Templates
 
