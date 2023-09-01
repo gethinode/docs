@@ -15,7 +15,7 @@ The base layout defines a page skeleton of which all other pages are derived. It
 
 The following diagram illustrates the conceptual base design:
 
-{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}Header .col-12 *(optionally fixed)*{{< /card >}}
     {{< card >}}
 Body .col-12 .flex-fill
@@ -153,7 +153,7 @@ The home page introduces a feature section and several [configurable sections]({
 
 The following diagram illustrates the conceptual layout of the home page:
 
-{{< card-group color="body-tertiary" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="body-tertiary" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}Header .col-12{{< /card >}}
     {{< card color="info" >}}
 Feature .col-12 .flex-fill
@@ -194,7 +194,7 @@ List pages define one [configurable section]({{< relref "#page-sections" >}}) fo
 
 The following diagram illustrates the conceptual layout of a list page:
 
-{{< card-group color="body-tertiary" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="body-tertiary" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}Header .col-12{{< /card >}}
     {{< card color="info" >}}
 Section .col-12
@@ -213,7 +213,7 @@ The list page uses the [configuration of a single section]({{< relref "#configur
 
 Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
 
-{{< card-group color="body-tertiary" cols="auto" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="body-tertiary" cols="auto" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card class="col-12" >}}Header .col-12{{< /card >}}
     {{< card color="info" class="col-3" >}}
 Sidebar
@@ -241,7 +241,7 @@ Single pages support three optional layout types, which can be configured in the
 By default, single pages, such as a blog page, include multiple elements, such as a rich header, thumbnail, body, and footer. The following diagram illustrates the default layout of a single page.
 
 <!-- markdownlint-disable MD037 -->
-{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}
 **Page header**
 
@@ -274,7 +274,7 @@ layout: docs
 
 The following diagram illustrates the documentation layout of a single page.
 
-{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}
 **Page header**
 
@@ -300,7 +300,7 @@ layout: minimal
 
 The following diagram illustrates the minimal layout of a single page.
 
-{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}
 **Page header**
 
@@ -334,7 +334,7 @@ Both the home page and the list page use one or more page sections to display a 
 
 The card layout displays a group of cards in a grid. The default setting is to show nine items at a time. You can adjust these settings in the [page section configuration]({{< relref "#configurtion-4" >}}), including the style of the cards themselves. Refer to the [card shortcode documentation]({{< relref "card" >}}) to review the available card styles. The next diagram illustrates a typical card layout.
 
-{{< card-group color="info" cols="3" padding="3" gutter="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="info" cols="3" padding="3" gutter="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}Item 1{{< /card >}}
     {{< card >}}Item 2{{< /card >}}
     {{< card >}}Item 3{{< /card >}}
@@ -351,7 +351,7 @@ The card layout displays a group of cards in a grid. The default setting is to s
 The list layout shows the page bundle's items as a vertical list. The thumbnail alternates between being left-aligned and right-aligned for each row. Remove the `description` from the page's frontmatter to display the full content instead of the description. The content of the item is displayed next to the thumbnail.
 
 <!-- markdownlint-disable MD037 -->
-{{< card-group color="info" cols="2" padding="3" gutter="3" responsive=false class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="info" cols="2" padding="3" gutter="3" responsive=false class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}{{</* fas image */>}}{{< /card >}}
     {{< card >}}Item 1{{< /card >}}
     {{< card >}}Item 2{{< /card >}}
@@ -365,7 +365,7 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
 
 The nav layout shows a nav element where each tab pane represents a single item of the page bundle. Remove the `description` from the page's frontmatter to display the full content instead of the description. The tab pane shows the content of the selected item.
 
-{{< card-group color="info" cols="auto" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4" >}}
+{{< card-group color="info" cols="auto" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card class="col-7" >}}**Item 1** | Item 2 | Item 3{{< /card >}}
     {{< card class="col-12" >}}Content .col-12{{< /card >}}
 {{< /card-group >}}
