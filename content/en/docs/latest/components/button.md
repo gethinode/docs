@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Button
-date: 2023-08-27
+date: 2023-09-02
 description: Use the button shortcode to display a button with a hyperlink.
 layout: docs
 icon: fa hand-pointer
@@ -109,11 +109,11 @@ Set the `icon` argument to add an icon to the button. Use `order` to determine t
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="hstack gap-3 justify-content-center">
-    {{</* button icon="fab linkedin" cue=false order="first" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-    {{</* button icon="fab linkedin" cue=false order="last" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-    {{</* button icon="fab linkedin" href="https://linkedin.com" /*/>}}
-</div>
+{{</* button icon="fab linkedin" cue=false order="first" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+
+{{</* button icon="fab linkedin" cue=false order="last" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+
+{{</* button icon="fab linkedin" href="https://linkedin.com" /*/>}}
 {{< /example>}}
 <!-- markdownlint-enable MD037 -->
 
@@ -121,14 +121,17 @@ Use `justify` to adjust the layout of the icon and button title.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="vstack mx-auto w-25">
-    {{</* button icon="fab linkedin" cue=false justify="start" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-    {{</* button icon="fab linkedin" cue=false justify="end" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-    {{</* button icon="fab linkedin" cue=false justify="center" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-    {{</* button icon="fab linkedin" cue=false justify="between" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-    {{</* button icon="fab linkedin" cue=false justify="around" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-    {{</* button icon="fab linkedin" cue=false justify="evenly" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}<br>
-</div>
+{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="start" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+
+{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="end" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+
+{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="center" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+
+{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="between" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+
+{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="around" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+
+{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="evenly" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
 {{< /example>}}
 <!-- markdownlint-enable MD037 -->
 
@@ -139,12 +142,19 @@ Set the `outline` argument to `true` to adjust the style of the button.
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* button color="primary" href="#!" size="sm" outline="true" */>}}primary{{</* /button */>}}
+
 {{</* button color="secondary" href="#!" size="sm" outline="true" */>}}secondary{{</* /button */>}}
+
 {{</* button color="success" href="#!" size="sm" outline="true" */>}}success{{</* /button */>}}
+
 {{</* button color="danger" href="#!" size="sm" outline="true" */>}}danger{{</* /button */>}}
+
 {{</* button color="warning" href="#!" size="sm" outline="true" */>}}warning{{</* /button */>}}
+
 {{</* button color="info" href="#!" size="sm" outline="true" */>}}info{{</* /button */>}}
+
 {{</* button color="light" href="#!" size="sm" outline="true" */>}}light{{</* /button */>}}
+
 {{</* button color="dark" href="#!" size="sm" outline="true" */>}}dark{{</* /button */>}}
 {{< /example>}}
 <!-- markdownlint-enable MD037 -->
@@ -179,15 +189,13 @@ Reveal or hide a collapsible panel by linking the panel's `id` to the button wit
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="dark" collapse="collapseExample" */>}}
+{{</* button color="dark" collapse="collapse-1" */>}}
     Collapse
 {{</* /button */>}}
 
-<div class="collapse pt-3" id="collapseExample">
-    <div class="card card-body">
-        Some placeholder content for the collapse component. This panel is *hidden by default*
-        but revealed when the user activates the relevant trigger.
-    </div>
-</div>
-{{< /example>}}
+{{</* collapse id="collapse-1" class="p-3 border rounded" */>}}
+    Some placeholder content for the collapse component. This panel is *hidden by default* but
+    revealed when the user activates the relevant trigger.
+{{</* /collapse */>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
