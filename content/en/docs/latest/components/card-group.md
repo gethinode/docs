@@ -36,6 +36,7 @@ Use the `card-group` shortcode to display a group of cards. Add inner `<card>` e
 
 The shortcode supports the following arguments:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument   | Required | Description |
 |------------|----------|-------------|
@@ -45,6 +46,7 @@ The shortcode supports the following arguments:
 | gutter     | No   | {{</* release version="v0.19.0-alpha" short="true" size="sm" inline="true" */>}} Gutter between columns in a group, either "0", "1", "2", "3" (default), "4", or "5". |
 | responsive | No   | Optional flag if the number of columns should be responsive, defaults to "true". |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 In addition, the following arguments are passed to the individual cards.
 
