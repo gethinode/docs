@@ -1,7 +1,7 @@
 ---
 title: Module development
 description: Develop your own Hugo modules compatible with Hinode.
-date: 2023-08-04
+date: 2023-09-02
 layout: docs
 ---
 
@@ -101,13 +101,10 @@ on:
 
 Head over to `Branches` section within `Code and automation` of your repository configuration on GitHub. Create a new rule for your main branch. Hinode uses the following settings for the modules it maintains:
 
-<ul class="fa-ul">
-    <li><span class="fa-li">{{< fas circle-check >}}</span>Require a pull request before merging</li>
-    <li><span class="fa-li">{{< fas circle-check >}}</span>Require status checks to pass before merging</li>
-    <ul class="fa-ul">
-        <li><span class="fa-li">{{< fas circle-check >}}</span>Require branches to be up to date before merging</li>
-    </ul>
-</ul>
+- Require a pull request before merging
+- Require status checks to pass before merging
+  - Require branches to be up to date before merging
+{.tickmark}
 
 Specify the test you defined previously as required status check. When using Hinode's default test, you would see six different checks (three platforms with two Node versions each).
 
