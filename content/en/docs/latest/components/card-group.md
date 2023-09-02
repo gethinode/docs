@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Card Group
-date: 2023-09-01
+date: 2023-09-02
 description: Use the card-group shortcode to display a group of cards.
 layout: docs
 icon: fas grip
@@ -40,10 +40,10 @@ The shortcode supports the following arguments:
 {{< table >}}
 | Argument   | Required | Description |
 |------------|----------|-------------|
-| cols       | No   | Number of columns for the grid, must be a value between "1" and "5", or set to "auto" (new in {{</* release version="v0.19.0-alpha" short="true" size="sm" inline="true" */>}}). Defaults to "3". When using auto-layout, columns are horizontally stacked using {{</* link bs_grid >}}Bootstrap's grid system{{< /link */>}}. Set the column width on the class of each invidual card as desired. |
+| cols       | No   | Number of columns for the grid, must be a value between "1" and "5", or set to "auto" (new in {{</* release version="v0.19.0" short="true" size="sm" inline="true" */>}}). Defaults to "3". When using auto-layout, columns are horizontally stacked using {{</* link bs_grid >}}Bootstrap's grid system{{< /link */>}}. Set the column width on the class of each invidual card as desired. |
 | title      | No   | Optional title of the card group. |
 | separator  | No   | Optional flag to indicate a horizontal line should be added between items on small screens. |
-| gutter     | No   | {{</* release version="v0.19.0-alpha" short="true" size="sm" inline="true" */>}} Gutter between columns in a group, either "0", "1", "2", "3" (default), "4", or "5". |
+| gutter     | No   | {{</* release version="v0.19.0" short="true" size="sm" inline="true" */>}} Gutter between columns in a group, either "0", "1", "2", "3" (default), "4", or "5". |
 | responsive | No   | Optional flag if the number of columns should be responsive, defaults to "true". |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->

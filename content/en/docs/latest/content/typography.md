@@ -1,7 +1,7 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2023-08-03
+date: 2023-09-02
 layout: docs
 modules: ["katex"]
 ---
@@ -107,7 +107,7 @@ _This line of text renders as underlined._
 
 ### Extended Styling
 
-{{< release version="v0.19.0-alpha" >}}
+{{< release version="v0.19.0" >}}
 
 Use shortcodes and classes for additional styling options. The following example illustrates highlighting, fine print, subscript, and superscript.
 
