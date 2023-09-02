@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-{{< release version="v0.19.0-alpha" >}}
+{{< release version="v0.19.0" >}}
 
 Use the `mark` shortcode to highlight text. The inner content is used as input.
 

@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Abbr
-date: 2023-08-28
+date: 2023-09-02
 description: Use the abbr shortcode to show the long form of an abbrevitation.
 layout: docs
 icon: fas question
@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-{{< release version="v0.19.0-alpha" >}}
+{{< release version="v0.19.0" >}}
 
 Use the abbr shortcode to show the long form of an abbrevitation on hover. The abbreviation data is retrieved from a central data file. By default, the shortcode uses "data/abbr.yaml" with translation support.
 

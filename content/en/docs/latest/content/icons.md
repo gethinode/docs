@@ -1,7 +1,7 @@
 ---
 title: Icons
 description: Use out-of-the-box Font Awesome icons to style your website.
-date: 2023-08-04
+date: 2023-09-02
 layout: docs
 ---
 
@@ -113,7 +113,7 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 ### Responsive sizing
 
 {{< alert >}}
-**New in v0.19.0-beta2** - Added support for a wrapper argument that applies `fa-wrapper` and `fa-fluid` automatically.
+**New in v0.19.0** - Added support for a wrapper argument that applies `fa-wrapper` and `fa-fluid` automatically.
 
 ---
 

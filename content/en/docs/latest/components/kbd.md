@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Kbd
-date: 2023-08-28
+date: 2023-09-02
 description: Use the kbd shortcode to show a keyboard input element.
 layout: docs
 icon: fa keyboard
@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-{{< release version="v0.19.0-alpha" >}}
+{{< release version="v0.19.0" >}}
 
 Use the `kbd` shortcode to show a keyboard input element. As an example, the following shortcodes shows a simple `CTRL-C` command.
 
