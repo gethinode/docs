@@ -40,7 +40,7 @@ The shortcode supports the following arguments:
 | footer      | No  | Optional footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
 | orientation | No  | Optional placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
 | thumbnail   | No  | Optional thumbnail image url, displayed on the top or the left of the card. |
-| alt         | No  | {{</* release version="v0.19.0-alpha" short="true" size="sm" inline="true" */>}} Optional alternate text for the thumbnail, uses "title" by default. |
+| alt         | No  | {{</* release version="v0.19.0" short="true" size="sm" inline="true" */>}} Optional alternate text for the thumbnail, uses "title" by default. |
 | icon        | No  | Optional Font Awesome icon, displayed on the top or the left of the card. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->

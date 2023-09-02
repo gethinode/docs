@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Badge
-date: 2023-08-27
+date: 2023-09-02
 description: Use the badge shortcode to enrich headings.
 layout: docs
 icon: fas envelope-circle-check
@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-{{< release version="v0.19.0-alpha" >}}
+{{< release version="v0.19.0" >}}
 
 Badges can be added to headings and buttons. The badge for a button is part of a [custom shortcode]({{< ref "button" >}} "custom shortcode"). The example below illustrates the shortcode for a heading.
 
