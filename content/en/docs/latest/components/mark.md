@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Mark
-date: 2023-08-29
+date: 2023-09-02
 description: Use the mark shortcode to highlight text.
 layout: docs
 icon: fas highlighter
@@ -38,14 +38,14 @@ Specify a theme color to define the background color of the highlighted text. As
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 
- - Use the mark shortcode to {{</* mark color="primary" >}}highlight{{< /mark */>}} specific text.
- - Use the mark shortcode to {{</* mark color="secondary" >}}highlight{{< /mark */>}} specific text.
- - Use the mark shortcode to {{</* mark color="success" >}}highlight{{< /mark */>}} specific text.
- - Use the mark shortcode to {{</* mark color="danger" >}}highlight{{< /mark */>}} specific text.
- - Use the mark shortcode to {{</* mark color="warning" >}}highlight{{< /mark */>}} specific text.
- - Use the mark shortcode to {{</* mark color="info" >}}highlight{{< /mark */>}} specific text.
- - Use the mark shortcode to {{</* mark color="light" >}}highlight{{< /mark */>}} specific text.
- - Use the mark shortcode to {{</* mark color="dark" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="primary" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="secondary" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="success" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="danger" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="warning" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="info" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="light" >}}highlight{{< /mark */>}} specific text.
+- Use the mark shortcode to {{</* mark color="dark" >}}highlight{{< /mark */>}} specific text.
 
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
