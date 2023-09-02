@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Accordion
-date: 2023-05-21
+date: 2023-09-02
 description: Use the accordion shortcode to show a group of vertically collapsing and expanding items.
 layout: docs
 icon: fas chevron-down
@@ -16,11 +16,11 @@ Use the `accordion` shortcode to show a group of vertically collapsing and expan
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-default" */>}}
   {{</* accordion-item header="Accordion Item #1" show="true" */>}}
-    This is the first item's accordion body. It supports HTML content. The item is shown by adding the value
-    <code>show</code> to the <code>class</code> argument.
+    This is the first item's accordion body. It supports Markdown content. The item is shown by
+    adding the value `show` to the `class` argument.
   {{</* /accordion-item */>}}
   {{</* accordion-item header="Accordion Item #2" */>}}
-    This is the second item's accordion body. It too supports HTML content.
+    This is the second item's accordion body. It too supports Markdown content.
   {{</* /accordion-item */>}}
   {{</* accordion-item header="Accordion Item #3" */>}}
     This is the third item's accordion body.
@@ -63,11 +63,11 @@ Add `.accordion-flush` to remove some borders and rounded corners to render acco
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-flush" class="accordion-flush" */>}}
   {{</* accordion-item header="Accordion Item #1" */>}}
-    This is the first item's accordion body. It supports HTML content. The item is shown by adding the value
-    <code>show</code> to the <code>class</code> argument.
+    This is the first item's accordion body. It supports Markdown content. The item is shown by
+    adding the value `show` to the `class` argument.
   {{</* /accordion-item */>}}
   {{</* accordion-item header="Accordion Item #2" */>}}
-    This is the second item's accordion body. It too supports HTML content.
+    This is the second item's accordion body. It too supports Markdown content.
   {{</* /accordion-item */>}}
   {{</* accordion-item header="Accordion Item #3" */>}}
     This is the third item's accordion body.
@@ -84,11 +84,11 @@ Set `always-open` to `true` to make accordion items stay open when another item 
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-always-open" always-open="true" */>}}
   {{</* accordion-item header="Accordion Item #1" */>}}
-    This is the first item's accordion body. It supports HTML content. The item is shown by adding the value
-    <code>show</code> to the <code>class</code> argument.
+    This is the first item's accordion body. It supports Markdown content. The item is shown by
+    adding the value `show` to the `class` argument.
   {{</* /accordion-item */>}}
   {{</* accordion-item header="Accordion Item #2" */>}}
-    This is the second item's accordion body. It too supports HTML content.
+    This is the second item's accordion body. It too supports Markdown content.
   {{</* /accordion-item */>}}
   {{</* accordion-item header="Accordion Item #3" */>}}
     This is the third item's accordion body.
