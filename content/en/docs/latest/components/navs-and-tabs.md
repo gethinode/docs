@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Navs and tabs
-date: 2023-04-18
+date: 2023-09-02
 description: Use the nav shortcode to show a group of multiple tab panes.
 layout: docs
 icon: fa folder
@@ -18,8 +18,8 @@ Use the `nav` shortcode to show a group of multiple tab panes. Add `nav-item` in
 {{< example lang="hugo" >}}
 {{</* nav id="links-1" fade="true" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
-    This is the first item's nav body. It supports HTML content. The item is shown by adding the value
-    <code>show</code> to the <code>class</code> argument.
+    This is the first item's nav body. It supports Markdown content. The item is shown by adding
+    the value `show` to the `class` argument.
   {{</* /nav-item */>}}
   {{</* nav-item header="Nav Item #2" */>}}
     This is the second item's nav body.
@@ -108,8 +108,8 @@ Takes the basic nav from above and generates a tabbed interface by setting `type
 {{< example lang="hugo" >}}
 {{</* nav type="tabs" id="tabs-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
-    This is the first item's nav body. It supports HTML content. The item is shown by adding the value
-    <code>show</code> to the <code>class</code> argument.
+    This is the first item's nav body. It supports Markdown content. The item is shown by adding
+    the value `show` to the `class` argument.
   {{</* /nav-item */>}}
   {{</* nav-item header="Nav Item #2" */>}}
     This is the second item's nav body. It too supports HTML content.
@@ -127,8 +127,8 @@ Take that same HTML, but using `pills` instead:
 {{< example lang="hugo" >}}
 {{</* nav type="pills" id="pills-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
-    This is the first item's nav body. It supports HTML content. The item is shown by adding the value
-    <code>show</code> to the <code>class</code> argument.
+    This is the first item's nav body. It supports Markdown content. The item is shown by adding
+    the value `show` to the `class` argument.
   {{</* /nav-item */>}}
   {{</* nav-item header="Nav Item #2" */>}}
     This is the second item's nav body. It too supports HTML content.
@@ -146,8 +146,8 @@ Take that same HTML, but using `underline` instead:
 {{< example lang="hugo" >}}
 {{</* nav type="underline" id="underline-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
-    This is the first item's nav body. It supports HTML content. The item is shown by adding the value
-    <code>show</code> to the <code>class</code> argument.
+    This is the first item's nav body. It supports Markdown content. The item is shown by adding
+    the value `show` to the `class` argument.
   {{</* /nav-item */>}}
   {{</* nav-item header="Nav Item #2" */>}}
     This is the second item's nav body. It too supports HTML content.
