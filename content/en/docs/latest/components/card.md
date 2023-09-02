@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Card
-date: 2023-09-01
+date: 2023-09-02
 description: Use the card shortcode to display a card that links to a content page.
 layout: docs
 icon: fa address-card
@@ -11,7 +11,7 @@ tags: component
 ## Overview
 
 {{< alert >}}
-<strong>New in v0.18.6 -</strong> The card now supports inner content too. As a result, references to the card shortcode must be closed of self-closed.
+**New in v0.18.6** - The card now supports inner content too. As a result, references to the card shortcode must be closed of self-closed.
 {{< /alert >}}
 
 Use the `card` shortcode to display a card that links to a content page. When using a rich layout, the card includes a thumbnail (or icon) and a header. As an example, the following shortcode displays a horizontal card that links to the [editing]({{< ref "credits" >}}) guide. It includes a custom header and footer. You can use the {{< link "card-group" >}}card-group shortcode{{< /link >}} to align multiple cards and to position them in a grid.
@@ -26,6 +26,7 @@ Use the `card` shortcode to display a card that links to a content page. When us
 
 The shortcode supports the following arguments:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
@@ -42,6 +43,7 @@ The shortcode supports the following arguments:
 | alt         | No  | {{</* release version="v0.19.0-alpha" short="true" size="sm" inline="true" */>}} Optional alternate text for the thumbnail, uses "title" by default. |
 | icon        | No  | Optional Font Awesome icon, displayed on the top or the left of the card. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Examples
 
@@ -53,22 +55,20 @@ Use the `color` argument to set the background color of the card. As an example,
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="container-fluid p-4 px-xxl-0">
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-2 g-lg-3">
-        <div class="col">{{</* card color="primary" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="secondary" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="success" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="danger" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="warning" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="info" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="light" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="dark" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="white" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="black" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="body" path="button" header="none" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card color="body-tertiary" path="button" header="none" orientation="none" /*/>}}</div>
-    </div>
-</div>
+{{</* card-group cols="4" gutter="3" */>}}
+    {{</* card color="primary" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="secondary" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="success" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="danger" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="warning" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="info" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="light" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="dark" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="white" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="black" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="body" path="button" header="none" orientation="none" /*/>}}
+    {{</* card color="body-tertiary" path="button" header="none" orientation="none" /*/>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -78,14 +78,12 @@ Use the `header` argument to customize the contents of the card.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="container-fluid p-4 px-xxl-0">
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-2 g-lg-3">
-        <div class="col">{{</* card path="editing" header="full" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card path="editing" header="publication" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card path="editing" header="tags" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card path="editing" header="none" orientation="none" /*/>}}</div>
-    </div>
-</div>
+{{</* card-group cols="4" gutter="3" */>}}
+    {{</* card path="editing" header="full" orientation="none" /*/>}}
+    {{</* card path="editing" header="publication" orientation="none" /*/>}}
+    {{</* card path="editing" header="tags" orientation="none" /*/>}}
+    {{</* card path="editing" header="none" orientation="none" /*/>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -95,14 +93,12 @@ Use the `footer` argument to customize the contents of the card.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="container-fluid p-4 px-xxl-0">
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-2 g-lg-3">
-        <div class="col">{{</* card path="editing" header="none" footer="full" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card path="editing" header="none" footer="publication" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card path="editing" header="none" footer="tags" orientation="none" /*/>}}</div>
-        <div class="col">{{</* card path="editing" header="none" footer="none" orientation="none" /*/>}}</div>
-    </div>
-</div>
+{{</* card-group cols="4" gutter="3" */>}}
+        {{</* card path="editing" header="none" footer="full" orientation="none" /*/>}}
+        {{</* card path="editing" header="none" footer="publication" orientation="none" /*/>}}
+        {{</* card path="editing" header="none" footer="tags" orientation="none" /*/>}}
+        {{</* card path="editing" header="none" footer="none" orientation="none" /*/>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
