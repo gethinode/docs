@@ -1,5 +1,6 @@
 # Hinode Docs
 
+<!-- markdownlint-disable MD033 -->
 <!-- Tagline -->
 <p align="center">
     <b>A clean documentation and blog theme for your Hugo site based on Bootstrap 5</b>
@@ -30,6 +31,7 @@
         <img src="https://img.shields.io/github/license/gethinode/docs" />
     </a>
 </p>
+<!-- markdownlint-enable MD033 -->
 
 ## About
 

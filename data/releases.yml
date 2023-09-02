@@ -1,5 +1,16 @@
 # This file holds all entries for the release timeline
 
+- title: Markdown by default
+  icon: fab markdown
+  color: warning
+  date: 2023-08-28
+  badge: v0.19.0-alpha2
+  url: v0.19.0-alpha2
+  content:
+    This release ensures Hinode uses Markdown-only by default. Although still supported, HTML is now opt-in instead of
+    opt-out to improve security and to simplify content management. Two new shortcodes, 
+    {{< link "docs/components/abbr" >}}abbr{{< /link >}} and {{< link "docs/components/badge" >}}badge{{< /link >}}, are
+    introduced to replace earlier HTML elements.
 
 - title: Accessibility
   icon: fas circle-half-stroke
@@ -189,8 +200,9 @@
   url: v0.2
   content:
     Inspired by Doks, this release introduces a child theme of Hinode. The child theme uses npm to refer to the latest
-    available package. npm brings the benefit that dependencies can be automatically upgraded as part of the CI/CD
-    process. It also abstracts from the core code of Hinode, keeping child repositories small and focused.
+    available package. npm brings the benefit that dependencies can be automatically upgraded as part of the
+    {{< abbr "CI/CD" >}} process. It also abstracts from the core code of Hinode, keeping child repositories small and
+    focused.
 
 - title: Initial launch
   icon: fas rocket

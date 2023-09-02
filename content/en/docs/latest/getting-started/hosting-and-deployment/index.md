@@ -23,7 +23,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 3. **Consider using build automation**
 
-   Many popular Git providers provide the option to automate the build and deployment process (<abbr title="Continous Integration/Continuous Deployment">CI/CD</abbr>). You can trigger this process on each release to your main repository branch, or set up a preview during a Pull Request. The examples on this page assume you have a Git repository with GitHub.
+   Many popular Git providers provide the option to automate the build and deployment process ({{< abbr "CI/CD" >}}). You can trigger this process on each release to your main repository branch, or set up a preview during a Pull Request. The examples on this page assume you have a Git repository with GitHub.
 
 4. **Understand the support for custom domain names**
 
@@ -31,7 +31,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 5. **Decide on multiregion and CDN support**
 
-   Websites that serve a global audience might benefit from a multiregion or edge deployment to increase availability and reduce latency. You can also consider adding a dedicated <abbr title="Content Delivery Network">CDN</abbr>, which has the ability to reduce the impact of <abbr title="Distributed Denial of Service">DDoS</abbr> attacks for example.
+   Websites that serve a global audience might benefit from a multiregion or edge deployment to increase availability and reduce latency. You can also consider adding a dedicated {{< abbr CDN >}}, which has the ability to reduce the impact of {{< abbr DDoS >}} attacks for example.
 
 6. **Consider using custom HTTP headers**
 
@@ -97,8 +97,8 @@ Deploy your site to Azure blob storage in six steps.
   {{< accordion-item header="Step 3. Configure environment variables" >}}
     Go to the menu section `Security + networking` and select `Access keys`. Capture the storage account name, e.g. `gethinode`. Next, copy either of the two keys to your clipboard. Set the credentials on your local computer:
     {{</* command user="user" host="localhost" */>}}
-    export AZURE_STORAGE_ACCOUNT="<account name>"
-    export AZURE_STORAGE_KEY="<storage key>"
+    export AZURE_STORAGE_ACCOUNT="{account name}"
+    export AZURE_STORAGE_KEY="{storage key}"
     {{</* /command */>}}
   {{< /accordion-item >}}
   {{< accordion-item header="Step 4. Build the website locally" >}}

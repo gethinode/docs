@@ -9,13 +9,13 @@ Hinode uses Markdown and templates to define the content for your website. Hugo 
 
 ## Overview
 
-Markdown is a simple and easy-to-use markup language. It uses formatting elements in plaintext documents to format documents. Using Markdown is different than using a <abbr title="What you see is what you get">WYSIWYG</abbr> editor. Such editors apply the formatting styles as you go. Instead, Markdown shows the formatting codes next to the content. Although this may require getting used to, the advantage is that you have full control over your document. The {{< link markdown_guide >}}Markdown guide{{< /link >}} provides a comprehensive overview of the Markdown format. Hugo supports additional content formats next to Markdown. See Hugo's documentation for a full overview of {{< link hugo_content >}}supported content formats{{< /link >}}.
+Markdown is a simple and easy-to-use markup language. It uses formatting elements in plaintext documents to format documents. Using Markdown is different than using a {{< abbr WYSIWYG >}}editor. Such editors apply the formatting styles as you go. Instead, Markdown shows the formatting codes next to the content. Although this may require getting used to, the advantage is that you have full control over your document. The {{< link markdown_guide >}}Markdown guide{{< /link >}} provides a comprehensive overview of the Markdown format. Hugo supports additional content formats next to Markdown. See Hugo's documentation for a full overview of {{< link hugo_content >}}supported content formats{{< /link >}}.
 
 <!-- TODO: insert VS Code screenshot -->
 
 ### Front matter
 
-Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the <abbr title="Yet Another Markup Language">YAML</abbr> format by default, denoted by `---` as the opening and closing tags. The folllowing example shows the front matter of the page you are currently reading.
+Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the {{< abbr YAML >}} format by default, denoted by `---` as the opening and closing tags. The folllowing example shows the front matter of the page you are currently reading.
 
 ```yml
 ---
@@ -26,6 +26,12 @@ date: 2023-02-19
 ```
 
 Hinode supports the following additional front matter parameters.
+
+<!-- markdownlint-disable MD037 -->
+{{< alert type="info" >}}
+When using a local file, the page's thumbnail should be available as a global site asset. You cannot use an image from a {{</* link hugo_page_resources >}}page resource{{< /link */>}}, as the thumbnail is being referenced on other pages too. External images are downloaded automatically and further processed locally.
+{{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
@@ -47,23 +53,15 @@ Hinode supports the following additional front matter parameters.
 
 <!-- markdownlint-disable MD037 -->
 {{< alert type="danger" >}}
+**v0.19.0** - Hinode disables HTML support by default since release v0.19.0.
+
+---
+
 Mixing Markdown with HTML is considered unsafe. If you trust the input, you can enable this setting in the {{</* link hugo_goldmark >}}Goldmark configuration{{< /link */>}}, the default Markdown processor of Hugo. If you disable HTML, you can optionally set `purgeHTMLComments` in `params.debugging` to prevent HTML comments from generating a warning by Goldmark.
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
-As explained in the [overview]({{< relref "#overview" >}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with <abbr title="HyperText Markup Language">HTML</abbr> as needed. The final output is rendered to HTML. The following example mixes Markdown formatting with HTML to show the explanation of an abbreviation on hover.
-
-{{< example lang="markdown" >}}
-You can mix **Markdown content** with <abbr title="HyperText Markup Language">HTML</abbr> as needed.
-{{< /example >}}
-
-The following sections describe the available formatting in more detail:
-
-- [Typography]({{< relref "typography" >}})
-- [Links and cross-references]({{< relref "links-and-cross-references" >}})
-- [Images and figures]({{< relref "images-and-figures" >}})
-- [Tables]({{< relref "tables" >}})
-- [Icons]({{< relref "icons" >}})
+As explained in the [overview]({{< relref "#overview" >}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with {{< abbr HTML >}} as needed. The final output is rendered to HTML.
 
 ### Templates
 

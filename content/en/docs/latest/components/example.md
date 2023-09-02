@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Example
-date: 2023-08-05
+date: 2023-09-02
 description: The example shortcode displays a code example and renders a preview of the same input.
 layout: docs
 icon: fa lightbulb
@@ -70,21 +70,17 @@ Set `show_markup` to `false` to hide the code input and to display the preview o
 
 #### Preview
 
-<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" show_markup=false >}}
-<p class="lead">
-  This is a lead paragraph. It stands out from regular paragraphs.
-</p>
+This is a lead paragraph. It stands out from regular paragraphs.
+{.lead}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
 
 #### Input
 
 ```go-html-template
 {{</* example show_markup=false */>}}
-<p class="lead">
-  This is a lead paragraph. It stands out from regular paragraphs.
-</p>
+This is a lead paragraph. It stands out from regular paragraphs.
+{.lead}
 {{</* /example */>}}
 ```
 
@@ -94,20 +90,16 @@ Set `show_preview` to `false` to hide the output and to display the code input o
 
 #### Preview
 
-<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" show_preview=false >}}
-<p class="lead">
-  This is a lead paragraph. It stands out from regular paragraphs.
-</p>
+This is a lead paragraph. It stands out from regular paragraphs.
+{.lead}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
 
 #### Input
 
 ```go-html-template
 {{</* example show_preview=false */>}}
-<p class="lead">
-  This is a lead paragraph. It stands out from regular paragraphs.
-</p>
+This is a lead paragraph. It stands out from regular paragraphs.
+{.lead}
 {{</* /example */>}}
 ```

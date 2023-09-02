@@ -165,9 +165,7 @@ baseURL = "https://template.gethinode.com/" # replace this
 
 Head over to your repository on Github and submit a Pull Request (PR) to update your main branch. When successful, login to your Netlify account and create a new site. You can follow the [Netlify deployment guidelines]({{< relref "hosting-and-deployment#host-on-netlify" >}}) for a more detailed explanation. Once done, validate that you have a working site in production.
 
-<div class="col-sm-12 col-lg-8 mx-auto">
-  {{< image src="img/versioning-basic.png" mode="true" caption="Initial site with basic versioning" class="border" >}}
-</div>
+{{< image src="img/versioning-basic.png" mode="true" caption="Initial site with basic versioning" class="border" wrapper="col-sm-12 col-lg-8 mx-auto" >}}
 
 ## Step 3 - Using multi-branch deployments
 
@@ -238,9 +236,7 @@ We will also need to use absolute URLs for our page assets to ensure our referen
 In the default state, Hinode uses relative links to include images, scripts, stylesheets, and other files. In this setup, the browser would retrieve these assets from the wrong backend server when using redirection. We therefore explicitly instruct Hugo to use absolute URLs for selected assets with the `canonifyAssetsURLs` setting.
 {{< /alert >}}
 
-<div class="col-sm-12 col-lg-8 mx-auto">
-  {{< image src="img/versioning-branch.png" caption="Configure Netlify branch deployment" class="border" >}}
-</div>
+{{< image src="img/versioning-branch.png" caption="Configure Netlify branch deployment" class="border" wrapper="col-sm-12 col-lg-8 mx-auto" >}}
 
 Head over to your Netlify configuration and navigate to the section `Site configuration / Build & deploy / Continuous deployment`. Next, scroll to the section `Branches and deploy contexts` and click the button `Configure`. Select the option `Let me add individual branches` for `Branch deploys`. In the text field, enter `v0.9` as branch name. When done, click `Save`.
 
@@ -248,9 +244,7 @@ Head over to your Netlify configuration and navigate to the section `Site config
 By default, any changes submitted to the `v0.9` branch are processed and released to production immediately. Set up branch protection rules and automated testing (similar to the `main` branch) as needed.
 {{< /alert >}}
 
-<div class="col-sm-12 col-lg-8 mx-auto">
-  {{< image src="img/versioning-0-9.png" mode="true" caption="Branch-deployed site for release v0.9" class="border" >}}
-</div>
+{{< image src="img/versioning-0-9.png" mode="true" caption="Branch-deployed site for release v0.9" class="border" wrapper="col-sm-12 col-lg-8 mx-auto" >}}
 
 Test if the branch is deployed sucessfully by navigating to `https://{branch}--{sitename}.netlify.app/`. The default `netlify.toml` file in the repository root has enabled `netlify.app` in the Content Security Policy by default. [Review and adjust the server headers]({{< relref "server-headers" >}}) as needed.
 

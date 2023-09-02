@@ -11,7 +11,7 @@ tags: component
 ## Overview
 
 {{< alert >}}
-<strong>New in v0.18.3 -</strong> The image shortcode now supports an additional ratio "3x2". It also recognizes page resources correctly.
+**New in v0.18.3** - The image shortcode now supports an additional ratio "3x2". It also recognizes page resources correctly.
 {{< /alert >}}
 
 Use the `image` shortcode to display a responsive image with a specific aspect ratio. The source link can refer to either an image available in the `/assets/img` folder of your site or a public web location. The shortcode renders the image as a so-called {{< link mozilla_image >}}image set{{< /link >}} to optimize the image for different screen sizes and resolutions. Behind the scenes, Hugo renders the images in `WebP` format and stores them in a local folder (`resources` or `public`). The images are processed using the quality setting specified in the `[imaging]` section of the main {{< link hugo_imaging >}}config file{{< /link >}} (defaults to 75). Supported image types are `.png`, `.jpeg`, `.gif`, `.tiff`, `.bmp`, and `.webp`. A fallback image of type `.jpeg` is provided for older browsers.
@@ -59,10 +59,14 @@ Set the `ratio` to `1x1` for a square aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="row">
-{{</* image src="img/flowers.jpg" ratio="1x1" wrapper="col-6" */>}}
-{{</* image src="img/flowers.jpg" ratio="1x1" wrapper="col-6" portrait="true"  */>}}
-</div>
+{{</* card-group cols="2" class="border-0" padding="0" responsive=false */>}}
+    {{</* card >}}
+        {{< image src="img/flowers.jpg" ratio="1x1" >}}
+    {{< /card */>}}
+    {{</* card >}}
+        {{< image src="img/flowers.jpg" ratio="1x1" portrait="true" >}}
+    {{< /card */>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -70,10 +74,14 @@ Set the `ratio` to `3x2` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="row">
-{{</* image src="img/flowers.jpg" ratio="3x2" wrapper="col-6 my-auto" */>}}
-{{</* image src="img/flowers.jpg" ratio="3x2" wrapper="col-6" portrait="true" */>}}
-</div>
+{{</* card-group cols="2" class="border-0" padding="0" responsive=false */>}}
+    {{</* card class="my-auto" >}}
+        {{< image src="img/flowers.jpg" ratio="3x2" >}}
+    {{< /card */>}}
+    {{</* card >}}
+        {{< image src="img/flowers.jpg" ratio="3x2" portrait="true" >}}
+    {{< /card */>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -81,10 +89,14 @@ Set the `ratio` to `4x3` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="row">
-{{</* image src="img/flowers.jpg" ratio="4x3" wrapper="col-6 my-auto" */>}}
-{{</* image src="img/flowers.jpg" ratio="4x3" wrapper="col-6" portrait="true" */>}}
-</div>
+{{</* card-group cols="2" class="border-0" padding="0" responsive=false  */>}}
+    {{</* card class="my-auto" >}}
+        {{< image src="img/flowers.jpg" ratio="4x3" >}}
+    {{< /card */>}}
+    {{</* card >}}
+        {{< image src="img/flowers.jpg" ratio="4x3" portrait="true" >}}
+    {{< /card */>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -92,10 +104,14 @@ Set the `ratio` to `16x9` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="row">
-{{</* image src="img/flowers.jpg" ratio="16x9" wrapper="col-6 my-auto" */>}}
-{{</* image src="img/flowers.jpg" ratio="16x9" wrapper="col-6" portrait="true" */>}}
-</div>
+{{</* card-group cols="2" class="border-0" padding="0" responsive=false  */>}}
+    {{</* card class="my-auto" >}}
+        {{< image src="img/flowers.jpg" ratio="16x9" >}}
+    {{< /card */>}}
+    {{</* card >}}
+        {{< image src="img/flowers.jpg" ratio="16x9" portrait="true" >}}
+    {{< /card */>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -103,10 +119,14 @@ Set the `ratio` to `21x9` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="row">
-{{</* image src="img/flowers.jpg" ratio="21x9" wrapper="col-6 my-auto" */>}}
-{{</* image src="img/flowers.jpg" ratio="21x9" wrapper="col-6" portrait="true" */>}}
-</div>
+{{</* card-group cols="2" class="border-0" padding="0" responsive=false  */>}}
+    {{</* card class="my-auto" >}}
+        {{< image src="img/flowers.jpg" ratio="21x9" >}}
+    {{< /card */>}}
+    {{</* card >}}
+        {{< image src="img/flowers.jpg" ratio="21x9" portrait="true" >}}
+    {{< /card */>}}
+{{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 

@@ -1,7 +1,7 @@
 ---
 title: Analytics
 description: Enable analytics for your website to view usage statistics and more.
-date: 2023-08-03
+date: 2023-09-02
 layout: docs
 ---
 
@@ -31,24 +31,20 @@ By default, analytics is disabled when running on a local machine to prevent pol
 
 The file `assets/js/analytics.js` defines the JavaScript template that is ingested into the main bundle.
 
-<div class="mb-3 syntax-highlight">
-{{< highlight go-html-template "hl_lines=2" >}}
-    {{- $pc := .Site.Config.Privacy.GoogleAnalytics -}}
-    {{- if (and (not .Site.IsServer) (not $pc.Disable)) -}}
-    [...]
-    {{- end -}}
-{{< / highlight >}}
-</div>
+```go-html-template {hl_lines=2}
+{{- $pc := .Site.Config.Privacy.GoogleAnalytics -}}
+{{- if (and (not .Site.IsServer) (not $pc.Disable)) -}}
+[...]
+{{- end -}}
+```
 
 The partial `layouts/partials/footer/scripts.html` loads the Google Tag Manager if applicable (Google Analytics 4 only).
 
-<div class="mb-3 syntax-highlight">
-{{< highlight go-html-template "hl_lines=1" >}}
-    {{- if and (not site.IsServer) $header -}}
-    [...]
-    {{- end -}}
-{{< / highlight >}}
-</div>
+```go-html-template {hl_lines=1}
+{{- if and (not site.IsServer) $header -}}
+[...]
+{{- end -}}
+```
 
 ## Content Security Policy
 

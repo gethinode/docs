@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Carousel
-date: 2023-08-16
+date: 2023-09-02
 description: Use the carousel shortcode to display a carousel of several images.
 layout: docs
 icon: fas images
@@ -11,7 +11,7 @@ tags: component
 ## Overview
 
 {{< alert >}}
-<strong>New in v0.18.3 -</strong> The carousel shortcode now supports an additional ratio "3x2". It also recognizes page resources correctly.
+**New in v0.18.3** - The carousel shortcode now supports "3x2" as an additional ratio. It also recognizes page resources correctly.
 {{< /alert >}}
 
 {{< release version="v0.7.1" >}}

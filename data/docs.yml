@@ -47,6 +47,7 @@
 - title: Components
   pages:
     # - title: Overview
+    - title: Abbr
     - title: Accordion
     - title: Alert
     - title: Badge
@@ -66,8 +67,10 @@
     # - title: List group
     - title: Icon
     - title: Image
+    - title: Kbd
     - title: Link
     - title: Map
+    - title: Mark
     # - title: Modal
     - title: Navbar
     - title: Navs and tabs

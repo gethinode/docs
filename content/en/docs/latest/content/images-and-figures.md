@@ -1,7 +1,7 @@
 ---
 title: Images and figures
 description: Use the image shortcode to display a responsive image with optional caption.
-date: 2023-08-04
+date: 2023-08-30
 layout: docs
 ---
 
@@ -25,9 +25,7 @@ You can also reference remote images by specifying an URL. Hinode downloads the 
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-<div class="mx-auto w-25">
-    {{</* image src="https://picsum.photos/id/56/2880/1920" ratio="1x1" class="rounded" */>}}
-</div>
+{{</* image src="https://picsum.photos/id/56/2880/1920" ratio="1x1" class="rounded" wrapper="mx-auto w-25" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 

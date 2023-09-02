@@ -1,7 +1,7 @@
 ---
 title: Colors
 description: Use Bootstrap's color system to easily adjust your website's colors.
-date: 2023-07-04
+date: 2023-09-02
 layout: docs
 ---
 
@@ -13,135 +13,74 @@ Hinode uses Bootstrap's color system. You can adjust them in the `/config/_defau
 
 In addition, the background colors `black` and `white` are available too. Below is an overview of the rendered colors.
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-primary rounded-3 border">primary</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-secondary rounded-3 border">secondary</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-success rounded-3 border">success</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-danger rounded-3 border">danger</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-warning rounded-3 border">warning</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-info rounded-3 border">info</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-light rounded-3 border">light</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-dark rounded-3 border">dark</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-white text-bg-light rounded-3 border">white</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-black text-white rounded-3 border">black</div>
-    </div>
-</div>
+{{< card-group cols="3" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" >}}
+    {{< card color="primary" >}}primary{{< /card >}}
+    {{< card color="secondary" >}}secondary{{< /card >}}
+    {{< card color="success" >}}success{{< /card >}}
+    {{< card color="danger" >}}danger{{< /card >}}
+    {{< card color="warning" >}}warning{{< /card >}}
+    {{< card color="info" >}}info{{< /card >}}
+    {{< card color="light" >}}light{{< /card >}}
+    {{< card color="dark" >}}dark{{< /card >}}
+    {{< card color="white" class="text-bg-light" >}}white{{< /card >}}
+    {{< card color="black" class="text-white" >}}black{{< /card >}}
+{{< /card-group >}}
 
 ## Adaptive colors
 
 Several components support background colors that are [color-mode aware]({{< relref "color-modes" >}}). These colors respond to changes when the active theme is adjusted, such as by changing from a light theme to a dark theme. You can apply this color by adding `bg-body` or `bg-body-tertiary` to the class of an HTML element.
 
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-    <div class="row">
-        <div class="col-md-4">
-            <div class="p-3 mb-3 bg-body text-bg-white rounded-3 border">body</div>
-        </div>
-        <div class="col-md-4">
-            <div class="p-3 mb-3 bg-body-tertiary text-bg-white rounded-3 border">body-tertiary</div>
-        </div>
-    </div>
+{{</* card-group cols="2" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" */>}}
+    {{</* card class="bg-body text-bg-white" >}}body{{< /card */>}}
+    {{</* card class="bg-body-tertiary text-bg-white" >}}body-tertiary{{< /card */>}}
+{{</* /card-group */>}}
 {{< /example>}}
+<!-- markdownlint-enable MD037 -->
 
 ## Background colors
 
 Components such as the [timeline]({{< relref "timeline" >}}) support *subtle* background colors. These colors are also [adaptive]({{< relref "#adaptive-colors" >}}). The following background colors are available.
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-primary-subtle rounded-3 border">primary</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-secondary-subtle rounded-3 border">secondary</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-success-subtle rounded-3 border">success</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-danger-subtle rounded-3 border">danger</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-warning-subtle rounded-3 border">warning</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-info-subtle rounded-3 border">info</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-light-subtle rounded-3 border">light</div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-dark-subtle rounded-3 border">dark</div>
-    </div>
-</div>
+{{< card-group cols="3" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" >}}
+    {{< card class="bg-primary-subtle" >}}bg-primary-subtle{{< /card >}}
+    {{< card class="bg-secondary-subtle" >}}bg-secondary-subtle{{< /card >}}
+    {{< card class="bg-success-subtle" >}}bg-success-subtle{{< /card >}}
+    {{< card class="bg-danger-subtle" >}}bg-danger-subtle{{< /card >}}
+    {{< card class="bg-warning-subtle" >}}bg-warning-subtle{{< /card >}}
+    {{< card class="bg-info-subtle" >}}bg-info-subtle{{< /card >}}
+    {{< card class="bg-light-subtle" >}}bg-light-subtle{{< /card >}}
+    {{< card class="bg-dark-subtle" >}}bg-dark-subtle{{< /card >}}
+{{< /card-group >}}
 
 ## Colored contrasting links
 
 Hinode defines additional classes to render links that contrast with their background. Simply add `link-bg-<color>` to the class of an `<a>` anchor element. The next example adds a link constrasting with the background color `bg-success`.
 
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-<div class="col-md-2">
-    <div class="p-3 mb-3 bg-success rounded-3 text-center"><a class="link-bg-success" href="#!">Success</a></div>
-</div>
+{{</* card class="col-md-2 rounded-3 text-center" color="success" >}}{{< link href="#!" class="link-bg-success" >}}success{{< /link >}}{{< /card */>}}
 {{< /example>}}
+<!-- markdownlint-enable MD037 -->
 
 Below grid illustrates the contrasting colors for each background.
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-primary rounded-3 border"><a class="link-bg-primary" href="#!">primary</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-secondary rounded-3 border"><a class="link-bg-secondary" href="#!">secondary</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-success rounded-3 border"><a class="link-bg-success" href="#!">success</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-danger rounded-3 border"><a class="link-bg-danger" href="#!">danger</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-warning rounded-3 border"><a class="link-bg-warning" href="#!">warning</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-info rounded-3 border"><a class="link-bg-info" href="#!">info</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-light rounded-3 border"><a class="link-bg-light" href="#!">light</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 text-bg-dark rounded-3 border"><a class="link-bg-dark" href="#!">dark</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-white rounded-3 border"><a class="link-bg-white" href="#!">white</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-black text-white rounded-3 border"><a class="link-bg-black" href="#!">black</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-body text-bg-white rounded-3 border"><a class="link-bg-body" href="#!">body</a></div>
-    </div>
-    <div class="col-md-4">
-        <div class="p-3 mb-3 bg-body-tertiary text-bg-white rounded-3 border"><a class="link-bg-body-tertiary" href="#!">body-tertiary</a></div>
-    </div>
-</div>
+{{< card-group cols="3" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" >}}
+    {{< card color="primary" >}}{{< link href="#!" class="link-bg-primary" >}}primary{{< /link >}}{{< /card >}}
+    {{< card color="secondary" >}}{{< link href="#!" class="link-bg-secondary" >}}secondary{{< /link >}}{{< /card >}}
+    {{< card color="success" >}}{{< link href="#!" class="link-bg-success" >}}success{{< /link >}}{{< /card >}}
+    {{< card color="danger" >}}{{< link href="#!" class="link-bg-danger" >}}danger{{< /link >}}{{< /card >}}
+    {{< card color="warning" >}}{{< link href="#!" class="link-bg-warning" >}}warning{{< /link >}}{{< /card >}}
+    {{< card color="info" >}}{{< link href="#!" class="link-bg-info" >}}info{{< /link >}}{{< /card >}}
+    {{< card color="light" >}}{{< link href="#!" class="link-bg-light" >}}light{{< /link >}}{{< /card >}}
+    {{< card color="dark" >}}{{< link href="#!" class="link-bg-dark" >}}dark{{< /link >}}{{< /card >}}
+    {{< card color="white" class="text-bg-light" >}}{{< link href="#!" class="link-bg-white" >}}white{{< /link >}}{{< /card >}}
+    {{< card color="black" class="text-white" >}}{{< link href="#!" class="link-bg-black" >}}black{{< /link >}}{{< /card >}}
+
+    {{< card class="bg-body text-bg-white" >}}{{< link href="#!" class="link-bg-body" >}}body{{< /link >}}{{< /card >}}
+    {{< card class="bg-body-tertiary text-bg-white" >}}{{< link href="#!" class="link-bg-body-tertiary" >}}body-tertiary{{< /link >}}{{< /card >}}
+{{< /card-group >}}
 
 ## Generating helper
 

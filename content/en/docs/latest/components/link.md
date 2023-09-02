@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2023-08-17
+date: 2023-09-02
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -11,11 +11,11 @@ tags: component
 ## Overview
 
 {{< alert >}}
-<strong>New in v0.18.4 -</strong> The link shortcode now recognizes language-specific pages, identified by a language prefix. For example, use `/fr/about` to link to the French translation of the `about` page. Do **not** use the alias `/fr/a-propos` in this case.
+**New in v0.18.4** - The link shortcode now recognizes language-specific pages, identified by a language prefix. For example, use `/fr/about` to link to the French translation of the `about` page. Do **not** use the alias `/fr/a-propos` in this case.
 
 ---
 
-<strong>New in v0.18.3 -</strong> The link shortcode now uses the current page context to identify references to a local page. It now also supports page anchors identified by `#`.
+**New in v0.18.3** - The link shortcode now uses the current page context to identify references to a local page. It now also supports page anchors identified by `#`.
 {{< /alert >}}
 
 {{< release version="v0.16.8" >}}
@@ -36,7 +36,7 @@ The shortcode supports a single unnamed parameter, or various named parameters. 
 {{< table >}}
 | Argument    | Required | Description |
 |-------------|----------|-------------|
-| href        | Yes      | {{</* release version="v0.18.4" short="true" size="sm" inline="true" */>}} Required reference to either an external link (if it starts with http), a named link (if it can be found in "links" in the site's parameters), or internal reference. External and internal references may include an anchor "#".
+| href        | Yes      | {{</* release version="v0.18.4" short="true" size="sm" inline="true" */>}} Required reference to either an external link (if it starts with `http`), a named link (if it can be found in "links" in the site's parameters), or internal reference. External and internal references may include an anchor "#".
 | name        | No       | Alias of `href`. |
 | url         | No       | Alias of `href`. |
 | cue         | No       | Optional flag to indicate if an external link should show a visual cue, defaults to setting "main.externalLinks.cue" in the site's parameters. |
