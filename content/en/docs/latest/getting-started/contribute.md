@@ -98,7 +98,6 @@ In general, run `npm run lint` before committing to ensure your changes follow o
 {{< link html_codeguide >}}Adhere to the Code Guide{{< /link >}}.
 
 - Use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags).
-- Use npm packages for third-party JS when possible.
 - Use WAI-ARIA attributes in documentation examples to promote accessibility.
 
 ### CSS
