@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-08-04
+date: 2023-09-03
 aliases:
   - "/docs/contribute/"
   - "/contribute/"
@@ -98,7 +98,6 @@ In general, run `npm run lint` before committing to ensure your changes follow o
 {{< link html_codeguide >}}Adhere to the Code Guide{{< /link >}}.
 
 - Use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags).
-- Use npm packages for third-party JS when possible.
 - Use WAI-ARIA attributes in documentation examples to promote accessibility.
 
 ### CSS
@@ -127,7 +126,6 @@ See {{< link markdown_rules >}}markdown rules{{< /link >}} for more details. The
 | MD013 | {{</* link markdown_md013 >}}Line length{{< /link */>}}                                           | |
 | MD024 | {{</* link markdown_md024 >}}Multiple headings with the same content{{< /link */>}}               | |
 | MD026 | {{</* link markdown_md026 >}}Trailing punctuation in heading{{< /link */>}}                       | |
-| MD033 | {{</* link markdown_md033 >}}Inline HTML{{< /link */>}}                                           | |
 | MD034 | {{</* link markdown_md034 >}}Bare URL used{{< /link */>}}                                         | |
 | MD051 | {{</* link markdown_md051 >}}Link fragments should be valid{{< /link */>}}                        | |
 | MD053 | {{</* link markdown_md053 >}}Link and image reference definitions should be needed{{< /link */>}} | Disabled due to false positives |
