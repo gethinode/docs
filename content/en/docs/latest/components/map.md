@@ -38,6 +38,10 @@ The shortcode supports the following arguments:
 | popup-long  | No       | Longitude of the popup marker. |
 {{< /table >}}
 
+## Configuration
+
+By default, map support is optional. Be sure to include `leaflet` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
+
 ## Examples
 
 Change the location and style of your map with shortcode arguments.
