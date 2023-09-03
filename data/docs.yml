@@ -82,6 +82,9 @@
     # - title: Scrollspy
     - title: Release
     - title: Spinner
+    - title: Spinner
+    - title: Sub
+    - title: Sup
     - title: Timeline
     - title: Toast
     - title: Tooltip
