@@ -94,10 +94,10 @@ Use the `footer` argument to customize the contents of the card.
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* card-group cols="4" gutter="3" */>}}
-        {{</* card path="editing" header="none" footer="full" orientation="none" /*/>}}
-        {{</* card path="editing" header="none" footer="publication" orientation="none" /*/>}}
-        {{</* card path="editing" header="none" footer="tags" orientation="none" /*/>}}
-        {{</* card path="editing" header="none" footer="none" orientation="none" /*/>}}
+    {{</* card path="editing" header="none" footer="full" orientation="none" /*/>}}
+    {{</* card path="editing" header="none" footer="publication" orientation="none" /*/>}}
+    {{</* card path="editing" header="none" footer="tags" orientation="none" /*/>}}
+    {{</* card path="editing" header="none" footer="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
