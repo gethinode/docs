@@ -90,6 +90,6 @@
 	# srcdir = ""
 
 [[plugins]]
-    package = "netlify-plugin-lighthouse"
-    [plugins.inputs]
-    output_path = "reports/lighthouse.html"
+    package = "@netlify/plugin-lighthouse"
+    # [plugins.inputs]
+    # output_path = "reports/lighthouse.html"
