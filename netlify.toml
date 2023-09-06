@@ -82,3 +82,14 @@
 
 [[plugins]]
     package = "@gethinode/netlify-plugin-dartsass"
+
+[[plugins]]
+    package = "netlify-plugin-hugo-cache-resources"
+	[plugins.inputs]
+	# Relative path to source directory in case you use Hugo's "--s" option
+	# srcdir = ""
+
+[[plugins]]
+    package = "netlify-plugin-lighthouse"
+    [plugins.inputs]
+    output_path = "reports/lighthouse.html"
