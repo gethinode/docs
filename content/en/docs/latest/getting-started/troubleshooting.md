@@ -43,5 +43,8 @@ Review the table below for some common issues and their potential cause. Please 
   {{< accordion-item header="Enabling purging of styles throws an error" >}}
     Setting `purge = true` in the `style` section of your site parameters instructs Hinode to purge any unused styles from your generated stylesheet. The purger requires several npm packages to be installed, else it will throw an error such as `Cannot find module '@fullhuman/postcss-purgecss'`. You can use the {{</* link repository_template >}}Hinode template{{< /link */>}} as a starting point to set up npm and the required packages. Refer to the {{</* link "guides/optimization" >}}optimization guide{{< /link */>}} for more context.
   {{< /accordion-item >}}
+  {{< accordion-item header="Failed to transform css/main.css" >}}
+    Setting `build.transpiler = "dartsass"` in the `main` section of your site parameters instructs Hinode to use the Dart Sass transpiler. Unlike the default `libsass` transpiler, the `dartsass` binary needs to be installed seperately on your machine. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment. If Dart Sass is not required, you can revert back to `build.transpiler = "libsass"`. Else follow the {{</* link hugo_sass >}}installation instructions{{< /link */>}} on how to install the binary.
+  {{< /accordion-item >}}
 {{< /accordion >}}
 <!-- markdownlint-enable MD036 MD037 -->

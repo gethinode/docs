@@ -55,6 +55,7 @@ Hinode is fully open source. By default, the theme adds a link to Hinode in the 
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Setting            | Default           | Description |
 |--------------------|-------------------|-------------|
@@ -67,7 +68,9 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
 | externalLinks.cue  | false             | If set, adds a visual cue `{{</* fas up-right-from-square fa-2xs */>}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
 | externalLinks.tab  | false             | If set, opens [managed external links]({{< relref "links-and-cross-references#managed-links" >}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
+| build.transpiler   | "libsass"         | {{</* release version="v0.20.0-alpha" short="true" size="sm" inline="true" */>}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{</* link hugo_sass >}}installation of a separate binary on your machine{{< /link */>}}. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment.
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 

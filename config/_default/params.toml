@@ -309,7 +309,7 @@
     hugo_templates = "https://gohugo.io/templates/introduction"
     hugo_resource_from_template = "https://gohugo.io/hugo-pipes/resource-from-template/"
     hugo_lookup_order = "https://gohugo.io/templates/lookup-order"
-    hugo_sass = "https://discourse.gohugo.io/t/using-the-dart-sass-transpiler"
+    hugo_sass = "https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-development-environment"
     hugo_toc = "https://gohugo.io/content-management/toc"
     hugo_vars = "https://discourse.gohugo.io/t/initialize-sass-variables-from-hugo-templates"
     hugo_issue_10719 = "https://github.com/gohugoio/hugo/issues/10719"
