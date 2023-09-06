@@ -1,7 +1,7 @@
 const { env } = require('node:process');
 
 module.exports = {
-    onPreBuild({ netlifyConfig }) {
+    onPreBuild({ run, utils }) {
         let version = env.DART_SASS_VERSION || "1.66.1";
 
         let newCommand = `
@@ -10,10 +10,16 @@ module.exports = {
             rm dart-sass-${version}-linux-x64.tar.gz && \
             export PATH=/opt/build/repo/dart-sass:$PATH`
         
-
-        // Run a script prior to build command
-        netlifyConfig.build.command = netlifyConfig.build.command
-        ? `${newCommand} && ${netlifyConfig.build.command}`
-        : newCommand;
+        utils.status.show({
+            title: "Installing Dart Sass",
+            summary: `Version ${version}`,
+        });
+    
+        // install the Dart Sass binary
+        try {
+            run.command(newCommand)
+        } catch (error) {
+            utils.build.failBuild("Cannot install Dart Sass");
+        }
     },
 };
