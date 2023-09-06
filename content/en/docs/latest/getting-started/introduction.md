@@ -23,6 +23,7 @@ Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} t
 | {{</* link hugo_download >}}Hugo (extended){{< /link */>}} | {{</* fas check */>}} |                       | Embedded as npm binary |
 | {{</* link nodejs >}}Node.js{{< /link */>}}                |                       | {{</* fas check */>}} | The installation package includes npm |
 | {{</* link git_download >}}Git{{< /link */>}}              | recommended           | {{</* fas check */>}} | Recommended for version control |
+| {{</* link hugo_sass >}}Dart Sass{{< /link */>}}           | optional              | optional              | Required when using {{</* link "docs/configuration/layout#extended-configuration" >}}Dart Sass transpiler{{< /link */>}} |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
