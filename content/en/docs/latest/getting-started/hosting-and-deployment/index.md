@@ -174,7 +174,11 @@ The default configuration provides basic security headers. Please review the [se
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
-{{< docs name="netlify" file="netlify.toml" show="false" >}}
+{{< docs name="netlify" file="netlify.toml" show="true" >}}
+
+The same file also configures several optional plugins. Keep these plugins if you would like to support {{< link "docs/configuration/layout#extended-configuration" >}}Dart Sass{{< /link >}}, use caching, and generate a Lighthouse report upon each build.
+
+{{< docs name="plugins" file="netlify.toml" show="true" >}}
 
 ### Configure your site
 
@@ -211,7 +215,7 @@ Sign up for Netlify and configure your site in seven steps.
     Pick a repository from your Git provider. Ensure Netlify has access to the correct repository.
   {{< /accordion-item >}}
   {{< accordion-item header="Step 7. Configure the build settings" >}}
-    Review the basic build settings. Netlify will use the settings provided in the [preparations]({{< relref "#preparations" >}}). Click on the button `Deploy site` to start the build and deployment process.
+    Review the basic build settings. Netlify will use the settings provided in the [preparations]({{< relref "#preparations-1" >}}). Click on the button `Deploy site` to start the build and deployment process.
   {{< /accordion-item >}}
 {{< /accordion >}}
 <!-- markdownlint-enable MD037 -->
