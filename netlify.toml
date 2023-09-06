@@ -81,4 +81,4 @@
     autoLaunch = false
 
 [[plugins]]
-    package = "/plugins/netlify-plugin-dartsass"
+    package = "@gethinode/netlify-plugin-dartsass"
