@@ -211,7 +211,7 @@ Sign up for Netlify and configure your site in seven steps.
     Pick a repository from your Git provider. Ensure Netlify has access to the correct repository.
   {{< /accordion-item >}}
   {{< accordion-item header="Step 7. Configure the build settings" >}}
-    Review the basic build settings. Netlify will use the settings provided in the [preparations]({{< relref "#preparations" >}}). Click on the button `Deploy site` to start the build and deployment process.
+    Review the basic build settings. Netlify will use the settings provided in the [preparations]({{< relref "#preparations-1" >}}). Click on the button `Deploy site` to start the build and deployment process.
   {{< /accordion-item >}}
 {{< /accordion >}}
 <!-- markdownlint-enable MD037 -->
