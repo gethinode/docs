@@ -8,6 +8,8 @@
     [main.externalLinks]
         cue = true
         tab = true
+    [main.build]
+        transpiler = "dartsass"
 
 [modules]
     core = ["bootstrap", "flexsearch", "fontawesome"]
