@@ -1,11 +1,5 @@
 [build]
     publish = "public"
-
-[build.environment]
-    NODE_VERSION = "18.17.1"
-    NPM_VERSION = "9.6.7"
-
-[context]
     command = """\
     curl -LJO https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
     tar -xf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
@@ -14,11 +8,13 @@
     npm run build \
     """
 
-[context.environment]
+[build.environment]
     DART_SASS_VERSION = "1.66.1"
     HUGO_VERSION = "0.118.2"
     HUGO_ENV = "production"
     HUGO_ENABLEGITINFO = "true"
+    NODE_VERSION = "18.17.1"
+    NPM_VERSION = "9.6.7"
 
 [[redirects]]
   from = "/docs/0.9/*"
