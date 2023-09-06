@@ -1,5 +1,5 @@
 - id: ci/cd
-  long: "Continous Integration/Continuous Deployment"
+  long: "Continuous Integration/Continuous Deployment"
 
 - id: css
   long: "Cascading Style Sheets"
