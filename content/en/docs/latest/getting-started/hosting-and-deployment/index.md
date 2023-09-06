@@ -174,7 +174,11 @@ The default configuration provides basic security headers. Please review the [se
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
-{{< docs name="netlify" file="netlify.toml" show="false" >}}
+{{< docs name="netlify" file="netlify.toml" show="true" >}}
+
+The same file also configures several optional plugins. Keep these plugins if you would like to support {{< link "docs/configuration/layout#extended-configuration" >}}Dart Sass{{< /link >}}, use caching, and generate a Lighthouse report upon each build.
+
+{{< docs name="plugins" file="netlify.toml" show="true" >}}
 
 ### Configure your site
 
