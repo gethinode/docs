@@ -1,5 +1,18 @@
 # This file holds all entries for the release timeline
 
+- title: Dart Sass
+  icon: fab sass
+  color: info
+  date: 2023-09-06
+  badge: v0.20.0-alpha
+  url: v0.20.0-alpha
+  content:
+    The extended version of Hugo includes LibSass to transpile Sass to CSS. In 2020, the Sass team
+    {{< link hugo_sass >}}deprecated LibSass in favor of Dart Sass{{< /link >}}. Hinode now supports this new library so
+    you can use the latest features of the Sass language. Visit the {{< link "docs/advanced-settings/styles" >}}styles
+    settings on how to enable Dart Sass {{< /link >}}. The stylesheet now also takes advantage of caching, so you can
+    expect a reduction of ~25% build time.
+
 - title: Markdown by default
   icon: fab markdown
   color: warning
