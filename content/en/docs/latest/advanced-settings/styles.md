@@ -13,7 +13,7 @@ Hinode uses Sass files to take advantage of variables, maps, and functions to ge
 
 <!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
-**v0.20.0** - Hinode has added support for the Dart Sass transpiler in release v0.20.0. The default libsass transpiler has been {{</* link hugo_sass >}}deprecated in favor of Dart Sass{{< /link */>}}, but is still widely used. Hinode uses the libsass transpiler by default. Review the {{</* link "docs/configuration/layout#extended-configuration" >}}build configuration{{< /link */>}}  on how to change the transpiler being used.
+**v0.20.0** - Hinode has added support for the Dart Sass transpiler in release v0.20.0. The default libsass transpiler has been {{</* link hugo_sass >}}deprecated in favor of Dart Sass{{< /link */>}}, but is still widely used. Hinode uses the libsass transpiler by default. Review the {{</* link "docs/configuration/layout#extended-configuration" >}}build configuration{{< /link */>}} on how to change the transpiler being used.
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
