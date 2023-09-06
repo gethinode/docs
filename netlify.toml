@@ -1,12 +1,6 @@
 [build]
     publish = "public"
-    command = """\
-    curl -LJO https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
-    tar -xf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
-    rm dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
-    export PATH=/opt/build/repo/dart-sass:$PATH && \
-    npm run build \
-    """
+    command = "npm run build"
 
 [build.environment]
     DART_SASS_VERSION = "1.66.1"
@@ -85,3 +79,6 @@
     port = 8888
     publish = "public"
     autoLaunch = false
+
+[[plugins]]
+    package = "/plugins/netlify-plugin-dartsass"
