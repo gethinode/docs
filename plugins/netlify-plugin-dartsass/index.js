@@ -1,7 +1,7 @@
 const { env } = require('node:process');
 
 module.exports = {
-    onPreBuild({ run, utils }) {
+    onPreBuild({ utils }) {
         let version = env.DART_SASS_VERSION || "1.66.1";
 
         let newCommand = `
@@ -17,7 +17,7 @@ module.exports = {
     
         // install the Dart Sass binary
         try {
-            run.command(newCommand)
+            utils.run.command(newCommand)
         } catch (error) {
             utils.build.failBuild("Cannot install Dart Sass");
         }
