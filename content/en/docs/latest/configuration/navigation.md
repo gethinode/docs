@@ -1,7 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2023-08-04
+date: 2023-09-08
 layout: docs
 ---
 
@@ -63,7 +63,11 @@ Hinode supports optional sidebar navigation. It is intended to be used as compan
 
 ### Menus
 
-Inspired by Bootstrap's documentation site, Hinode uses a separate configuration file for the sidebar menus. A sidebar can be configured for each main section of the site. For example, the sidebar menu of the `docs` section is defined in `data/docs.yml`. The sidebar menu supports group items and single page items. The below example defines a group section called `Getting started` with three siblings. A single page `About` is added next.
+{{< alert >}}
+**New in v0.20.1** - Menu items now support an optional link argument. When defined, this link takes precedence over the link that is automatically derived from the menu.
+{{< /alert >}}
+
+Inspired by Bootstrap's documentation site, Hinode uses a separate configuration file for the sidebar menus. A sidebar can be configured for each main section of the site. For example, the sidebar menu of the `docs` section is defined in `data/docs.yml`. The sidebar menu supports group items and single page items. You can optionally provide an internal or external link for the destination page (see the {{< link "docs/components/link" >}}link shortcode{{< /link >}} for its behavior). By default, Hinode derives the destination from the menu item. The below example defines a group section called `Getting started` with three siblings. A single page `About` is added next. The latter redirects to an external website.
 
 ```yml
 - title: Getting started
@@ -72,6 +76,7 @@ Inspired by Bootstrap's documentation site, Hinode uses a separate configuration
     - title: Commands
     - title: Contribute
 - title: About
+  link: https://example.com
 ```
 
 Menu items can be nested within each other. The below example defines three content pages at the relative path `A/B/C`. The navigation path should be similar to the slug of the individual pages.
