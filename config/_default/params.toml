@@ -176,6 +176,7 @@
     darkModeTint = "40%"
     themeFont = "Inter"
     themeFontPath = "/fonts" # local path
+    fontSizeBase = "1rem"
 
 [schema]
     type = "Organization"
