@@ -13,7 +13,7 @@
 
 [modules]
     core = ["bootstrap", "flexsearch", "fontawesome"]
-    optional = ["leaflet", "katex"]
+    optional = ["leaflet", "katex", "lottie"]
     excludeSCSS = ["bootstrap"]
     disableTemplate = ["katex"]
     [modules.fontawesome]
@@ -176,6 +176,7 @@
     darkModeTint = "40%"
     themeFont = "Inter"
     themeFontPath = "/fonts" # local path
+    fontSizeBase = "1rem"
 
 [schema]
     type = "Organization"
@@ -325,6 +326,7 @@
     leaflet = "https://leafletjs.com"
     license = "https://github.com/gethinode/hinode/blob/main/LICENSE"
     logrocket_optimization = "https://blog.logrocket.com/9-tricks-eliminate-render-blocking-resources"
+    lottie = "https://airbnb.io/lottie/"
     markdown_guide = "https://www.markdownguide.org"
     markdown_emoji = "https://gist.github.com/rxaviers/7360908"
     markdown_md013 = "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md013---line-length"

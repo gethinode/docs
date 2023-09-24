@@ -66,12 +66,6 @@
 [context.branch-deploy]
     command = "npm run build -- -b $DEPLOY_PRIME_URL"
 
-[context.next]
-    command = "npm run build"
-
-[context.next.environment]
-    HUGO_ENV = "next"
-
 [dev]
     framework = "#custom"
     command = "npm run start"
