@@ -49,9 +49,11 @@ Change the behavior of your animation with shortcode arguments.
 
 Assign a valid path to `data` to provide a JSON file that contains the animation as input. The file should be stored in the `static` folder, or in one of its subfolders.
 
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* animation data="animation/gatin.json" class="col-6 mx-auto" */>}}
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Animation on hover
 
