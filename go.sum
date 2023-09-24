@@ -1,3 +1,5 @@
+github.com/airbnb/lottie-web v5.12.2+incompatible h1:Ldogtlhiucf7mMsgisyxSBY0qunV44+lpa9Icy2KoQc=
+github.com/airbnb/lottie-web v5.12.2+incompatible/go.mod h1:nTss557UK9FGnp8QYlCMO29tjUHwbdAHG/DprbGfHGE=
 github.com/gethinode/hinode v0.15.5 h1:eJNvuBpGMDAZ5Lq9B9ZjnC29iaR40A6zcvVOjEFVpac=
 github.com/gethinode/hinode v0.15.5/go.mod h1:1piFf+1Kwf5k6/bcNCtIxiAyqvZYvDqQfaGld7/XcF8=
 github.com/gethinode/hinode v0.16.0-beta h1:eXgYA5SOw6+NxHgScBy/VfprGjwL7WUa/56CCqtoRdo=
@@ -78,6 +80,8 @@ github.com/gethinode/hinode v0.20.1 h1:M2sNX1lpzwlogYFzn1fzZ5zTHU52zb7oSHIEnTze9
 github.com/gethinode/hinode v0.20.1/go.mod h1:55zVYVPWwIaJVdVXxDAQZn0sOXmPSA/kTLCuGLYCH/k=
 github.com/gethinode/hinode v0.20.3 h1:isWMVc6NAN3FuzXnIrvLKkaWbtwtyp7jYwoHGJdGx/4=
 github.com/gethinode/hinode v0.20.3/go.mod h1:55zVYVPWwIaJVdVXxDAQZn0sOXmPSA/kTLCuGLYCH/k=
+github.com/gethinode/hinode v0.20.4 h1:bdO6SqgY5goC1GhplfWXF4I7wDvPPGe0MZYqE4ygNU4=
+github.com/gethinode/hinode v0.20.4/go.mod h1:mGm4kP3NaGNdlnchj6UjxF0PsZ+bVTP1Rhjtq30kidQ=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=

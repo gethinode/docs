@@ -3,7 +3,8 @@ module github.com/gethinode/docs
 go 1.20
 
 require (
-	github.com/gethinode/hinode v0.20.3 // indirect
+	github.com/airbnb/lottie-web v5.12.2+incompatible // indirect
+	github.com/gethinode/hinode v0.20.4 // indirect
 	github.com/gethinode/mod-bootstrap v1.2.1 // indirect
 	github.com/gethinode/mod-flexsearch v1.4.1 // indirect
 	github.com/gethinode/mod-fontawesome v1.3.2 // indirect
