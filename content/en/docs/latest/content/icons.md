@@ -2,6 +2,7 @@
 title: Icons
 description: Use out-of-the-box Font Awesome icons to style your website.
 date: 2023-09-25
+date: 2023-09-25
 layout: docs
 ---
 
@@ -300,7 +301,7 @@ The following table describes the available classes.
 Hinode removes any embedded `height` and `width` attributes from the icon data to ensure the icon is responsive. The `viewBox` attribute is kept.
 {{< /alert >}}
 
-You can reference a custom family and icon stored in the local `assets` folder. The {{< link "docs/components/icon" />}} shortcode uses the path `assets/svgs/{family}/{icon}.svg`, replacing `{family}` and `{icon}` with the specified values. You can mix the custom icon with Font Awesome styling directives (such as `fa-4x`, although animations are typically not supported). The following example shows an icon called `activity` of the `custom` family of size `fa-4x`. 
+You can reference a custom family and icon stored in the local `assets` folder. The {{< link "docs/components/icon" />}} shortcode uses the path `assets/svgs/{family}/{icon}.svg`, replacing `{family}` and `{icon}` with the specified values. You can mix the custom icon with Font Awesome styling directives (such as `fa-4x`, although animations are typically not supported). The following example shows an icon called `activity` of the `custom` family of size `fa-4x`.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
