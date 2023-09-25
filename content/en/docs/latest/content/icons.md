@@ -2,7 +2,6 @@
 title: Icons
 description: Use out-of-the-box Font Awesome icons to style your website.
 date: 2023-09-25
-date: 2023-09-25
 layout: docs
 ---
 
