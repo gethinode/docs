@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Image
-date: 2023-08-16
+date: 2023-10-12
 description: Use the image shortcode to display a responsive image with a specific aspect ratio.
 layout: docs
 icon: fas image
@@ -53,20 +53,13 @@ Change the style of your card with class attributes and shortcode arguments.
 
 ### Aspect ratio
 
-As an example, the following shortcodes display a centered image with various aspect ratios. The images are wrapped in a `div` element to horizontally stack them.
+As an example, the following shortcodes display a centered image with various aspect ratios.
 
 Set the `ratio` to `1x1` for a square aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="2" class="border-0" padding="0" responsive=false */>}}
-    {{</* card >}}
-        {{< image src="img/flowers.jpg" ratio="1x1" >}}
-    {{< /card */>}}
-    {{</* card >}}
-        {{< image src="img/flowers.jpg" ratio="1x1" portrait="true" >}}
-    {{< /card */>}}
-{{</* /card-group */>}}
+{{</* image src="img/flowers.jpg" ratio="1x1" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -74,14 +67,7 @@ Set the `ratio` to `3x2` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="2" class="border-0" padding="0" responsive=false */>}}
-    {{</* card class="my-auto" >}}
-        {{< image src="img/flowers.jpg" ratio="3x2" >}}
-    {{< /card */>}}
-    {{</* card >}}
-        {{< image src="img/flowers.jpg" ratio="3x2" portrait="true" >}}
-    {{< /card */>}}
-{{</* /card-group */>}}
+{{</* image src="img/flowers.jpg" ratio="3x2" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -89,14 +75,7 @@ Set the `ratio` to `4x3` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="2" class="border-0" padding="0" responsive=false  */>}}
-    {{</* card class="my-auto" >}}
-        {{< image src="img/flowers.jpg" ratio="4x3" >}}
-    {{< /card */>}}
-    {{</* card >}}
-        {{< image src="img/flowers.jpg" ratio="4x3" portrait="true" >}}
-    {{< /card */>}}
-{{</* /card-group */>}}
+{{</* image src="img/flowers.jpg" ratio="4x3" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -104,14 +83,7 @@ Set the `ratio` to `16x9` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="2" class="border-0" padding="0" responsive=false  */>}}
-    {{</* card class="my-auto" >}}
-        {{< image src="img/flowers.jpg" ratio="16x9" >}}
-    {{< /card */>}}
-    {{</* card >}}
-        {{< image src="img/flowers.jpg" ratio="16x9" portrait="true" >}}
-    {{< /card */>}}
-{{</* /card-group */>}}
+{{</* image src="img/flowers.jpg" ratio="16x9" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -119,14 +91,7 @@ Set the `ratio` to `21x9` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="2" class="border-0" padding="0" responsive=false  */>}}
-    {{</* card class="my-auto" >}}
-        {{< image src="img/flowers.jpg" ratio="21x9" >}}
-    {{< /card */>}}
-    {{</* card >}}
-        {{< image src="img/flowers.jpg" ratio="21x9" portrait="true" >}}
-    {{< /card */>}}
-{{</* /card-group */>}}
+{{</* image src="img/flowers.jpg" ratio="21x9" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
