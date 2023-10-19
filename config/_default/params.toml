@@ -40,6 +40,11 @@
     fullCover = true
     centerHeadline = true
     style = "gradient-featured"
+    [home.feature]
+        orientation = "stacked"
+        color = ""
+        width = 6
+        align = "start"
 
 [navigation]
     anchor = true
@@ -283,6 +288,7 @@
     hugo_config = "https://gohugo.io/getting-started/configuration/#all-configuration-settings"
     hugo_config_dir = "https://gohugo.io/getting-started/configuration/#configuration-directory"
     hugo_content = "https://gohugo.io/content-management/formats"
+    hugo_content_view = "https://gohugo.io/templates/views/"
     hugo_chroma = "https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages"
     hugo_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy"
     hugo_deployment = "https://gohugo.io/hosting-and-deployment"
