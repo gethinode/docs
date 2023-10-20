@@ -1,5 +1,17 @@
 # This file holds all entries for the release timeline
 
+- title: Taxonomies
+  icon: fas list
+  color: info
+  date: 2023-10-20
+  badge: v0.21.0-alpha
+  url: v0.21.0-alpha
+  content:
+    This release introduces support to include taxonomies as regular content sections. You can filter the taxonomies by
+    keywords to make them more specific. In addition, Hinode now supports content view templates to simplify the
+    implementation of new layout types. Finally, the handling of images and script has been improved to further reduce
+    the loading time of the site.
+
 - title: Dart Sass
   icon: fab sass
   color: info
