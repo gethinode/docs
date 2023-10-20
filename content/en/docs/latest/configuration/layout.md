@@ -176,12 +176,16 @@ The configuration of the home page is set in the `home` section of the `site par
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
-| Setting      | Default           | Description |
-|--------------|-------------------|-------------|
-| sections     | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{</* link hugo_sections >}}all root sections.{{< /link */>}} |
-| featurePhoto | -                 | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
-| fullCover    | false             | Flag to indicate if the feature element should cover the entire front page. |
-| style        | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only. |
+| Setting             | Default           | Description |
+|---------------------|-------------------|-------------|
+| sections            | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{</* link hugo_sections >}}all root sections.{{< /link */>}} |
+| featurePhoto        | -                 | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
+| fullCover           | false             | Flag to indicate if the feature element should cover the entire front page. |
+| style               | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only.        |
+| feature.orientation | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
+| feature.color       | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
+| feature.width       | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
+
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -213,6 +217,10 @@ Section .col-12
 The list page uses the [configuration of a single section]({{< relref "#configuration-4" >}}).
 
 ## Single pages
+
+{{< alert >}}
+**New in v0.21.0** - Single pages now support {{< link hugo_content_view >}}content view templates{{< /link >}}. Set the `type` in the page's frontmatter to either docs or minimal to override the default layout. The `type` parameter replaces the previous `layout` parameter.
+{{< /alert >}}
 
 Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
 
@@ -271,7 +279,7 @@ Documentation pages use a more straightforward, simplified layout compared to th
 
 ```yml
 ---
-layout: docs
+type: docs
 ---
 ```
 
@@ -297,7 +305,7 @@ Pages with a minimal layout are similar to documentation pages, but do not inclu
 
 ```yml
 ---
-layout: minimal
+type: minimal
 ---
 ```
 
@@ -390,6 +398,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | background   | -                    | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | color        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
+| wrap         | false                {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}}| Optional flag to enable word wrapping of tab titles, defaults to false. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
