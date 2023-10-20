@@ -240,7 +240,7 @@ Use `fa-border` and `fa-pull-right` or `fa-pull-left` for easy pull quotes or ar
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* fas quote-left fa-2x fa-pull-left */>}}
+{{</* icon class="fas quote-left fa-2x fa-pull-left" spacing=false */>}}
 Gatsby believed in the green light, the orgastic future that year by year recedes before us.
 It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further...
 And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
