@@ -3,7 +3,7 @@
     description = "Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5."
     enableDarkMode = true
     modes = ["light", "dark"]
-    footerBelowFold = true
+    footerBelowFold = false
     canonifyAssetsURLs = false
     [main.externalLinks]
         cue = true
@@ -16,6 +16,8 @@
     optional = ["leaflet", "katex", "lottie"]
     excludeSCSS = ["bootstrap"]
     disableTemplate = ["katex"]
+    [modules.katex]
+        state = "defer"
     [modules.fontawesome]
         inline = true
         debug = true
@@ -38,13 +40,18 @@
     fullCover = true
     centerHeadline = true
     style = "gradient-featured"
+    [home.feature]
+        orientation = "stacked"
+        color = ""
+        width = 6
+        align = "start"
 
 [navigation]
     anchor = true
     logo = "/img/logo_icon.svg"
     color = ""
     fixed = true
-    offset = "3.8em"
+    offset = "5.5em"
     search = true
     breadcrumb = false
     toc = true
@@ -281,6 +288,7 @@
     hugo_config = "https://gohugo.io/getting-started/configuration/#all-configuration-settings"
     hugo_config_dir = "https://gohugo.io/getting-started/configuration/#configuration-directory"
     hugo_content = "https://gohugo.io/content-management/formats"
+    hugo_content_view = "https://gohugo.io/templates/views/"
     hugo_chroma = "https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages"
     hugo_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy"
     hugo_deployment = "https://gohugo.io/hosting-and-deployment"

@@ -101,12 +101,15 @@ Single pages define the content for a specific page, such as the [introduction p
 
 By default, single pages, such as a blog page, include the following elements in the body:
 
+<!-- markdownlint-disable MD037 -->
 - **Title** - the title of the page as set in the page's frontmatter.
 - **Metadata** - the date of the page, the modification date (if applicable), the read time, and the amount of words on the page.
 - **Tags** - links to any tags defined in the page's frontmatter.
 - **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
 - **Thumbnail** - a thumbnail image with figure caption that links to the photo credits (if defined in the frontmatter).
-- **Navigation links** - links on the bottom of the page that link to the previoud and next page within the current section.
+- **Download** - {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} a link to a local file that represents a downloadable version of the current article.
+- **Navigation links** - links on the bottom of the page that link to the previous and next page within the current section.
+<!-- markdownlint-enable MD037 -->
 
 The below example illustrates the parameters used in the page's frontmatter:
 
@@ -123,6 +126,7 @@ thumbnail:
     authorURL: https://unsplash.com/@kfred
     origin: Unsplash
     originURL: https://unsplash.com/photos/TYIzeCiZ_60
+download: /media/article.en.pdf
 ---
 ```
 

@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Button
-date: 2023-09-02
+date: 2023-10-12
 description: Use the button shortcode to display a button with a hyperlink.
 layout: docs
 icon: fa hand-pointer
@@ -49,7 +49,7 @@ The shortcode supports the following arguments:
 
 ## Examples
 
-### Statefull buttons
+### Stateful buttons
 
 Set the `state` argument to change the appearance and behavior of the button.
 
