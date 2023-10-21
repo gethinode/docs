@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Icon
-date: 2023-10-16
+date: 2023-10-21
 description: Use the icon shortcode to add a Font Awesome icon with ease.
 layout: docs
 icon: fa font-awesome
@@ -32,6 +32,7 @@ When using [inline vector icons]({{< relref "../configuration/modules#configurin
 
 The shortcode supports both unnamed arguments and named arguments. When using unnamed arguments, all attributes are mapped to the `class` argument, separated by spaces.
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
@@ -39,6 +40,7 @@ The shortcode supports both unnamed arguments and named arguments. When using un
 | style     | No | Optional custom style of the icon, e.g. `--fa-animation-duration: 2s;`. Hinode disables inline styles by default, review the [Content Security Policy]({{< relref "server-headers" >}}) for more details. |
 | spacing   | No | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional flag to add a trailing whitespace character to optimize inline rendering, defaults to "true". |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Remarks
 
