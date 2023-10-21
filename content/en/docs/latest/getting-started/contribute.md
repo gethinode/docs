@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-09-03
+date: 2023-10-21
 aliases:
   - "/docs/contribute/"
   - "/contribute/"
@@ -134,4 +134,4 @@ See {{< link markdown_rules >}}markdown rules{{< /link >}} for more details. The
 
 ## License
 
-By contributing your code, you agree to license your contribution under the {{< link license >}}MIT license{{< /link >}}. By contributing to the documentation, you agree to license your contribution under the Creative Commons ({{< link cc_by_nc_4_0 >}}CC BY-NC 4.0){{< /link >}} license.
+By contributing your code, you agree to license your contribution under the {{< link license >}}MIT license{{< /link >}}. By contributing to the documentation, you agree to license your contribution under the Creative Commons ({{< link cc_by_nc_4_0 >}}CC BY-NC 4.0{{< /link >}}) license.
