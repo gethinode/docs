@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-08-15
+date: 2023-10-21
 layout: docs
 ---
 
@@ -218,9 +218,11 @@ The list page uses the [configuration of a single section]({{< relref "#configur
 
 ## Single pages
 
+<!-- markdownlint-disable MD037 -->
 {{< alert >}}
-**New in v0.21.0** - Single pages now support {{< link hugo_content_view >}}content view templates{{< /link >}}. Set the `type` in the page's frontmatter to either docs or minimal to override the default layout. The `type` parameter replaces the previous `layout` parameter.
+**New in v0.21.0** - Single pages now support {{</* link hugo_content_view >}}content view templates{{< /link */>}}. Set the `type` in the page's frontmatter to either docs or minimal to override the default layout. The `type` parameter replaces the previous `layout` parameter.
 {{< /alert >}}
+<!-- markdownlint-enable MD037 -->
 
 Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
 
@@ -398,7 +400,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | background   | -                    | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | color        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
-| wrap         | false                {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}}| Optional flag to enable word wrapping of tab titles, defaults to false. |
+| wrap         | false                | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
