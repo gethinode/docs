@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Button
-date: 2023-10-12
+date: 2023-10-22
 description: Use the button shortcode to display a button with a hyperlink.
 layout: docs
 icon: fa hand-pointer
@@ -17,7 +17,7 @@ Use the `button` shortcode to display a button with a hyperlink. The inner conte
 {{</* button color="dark" tooltip="Click on the inbox to view your unread messages" href="#!" badge="99+" */>}}
     Inbox
 {{</* /button */>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ## Arguments
@@ -59,7 +59,7 @@ Set the `state` argument to change the appearance and behavior of the button.
 {{</* button color="primary" href="#!" state="disabled" */>}}Disabled{{</* /button */>}}
 {{</* button color="primary" href="#!" state="active" */>}}Active{{</* /button */>}}
 {{</* button color="primary" href="#!" state="inactive" */>}}Inactive{{</* /button */>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Sized buttons
@@ -71,7 +71,7 @@ Set the `size` argument to resize the button.
 {{</* button color="primary" href="#!" size="sm" */>}}sm{{</* /button */>}}
 {{</* button color="primary" href="#!" size="md" */>}}md{{</* /button */>}}
 {{</* button color="primary" href="#!" size="lg" */>}}lg{{</* /button */>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Colored buttons
@@ -88,7 +88,7 @@ Set the `color` argument to define the background color with a matching title co
 {{</* button color="info" href="#!" size="sm" */>}}info{{</* /button */>}}
 {{</* button color="light" href="#!" size="sm" */>}}light{{</* /button */>}}
 {{</* button color="dark" href="#!" size="sm" */>}}dark{{</* /button */>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Buttons with a badge
@@ -100,7 +100,7 @@ Set the `badge` argument to add a badge to the top right of the button.
 {{</* button color="secondary" href="#!" badge="99+" */>}}
     Inbox
 {{</* /button */>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Buttons with an icon
@@ -114,25 +114,25 @@ Set the `icon` argument to add an icon to the button. Use `order` to determine t
 {{</* button icon="fab linkedin" cue=false order="last" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
 
 {{</* button icon="fab linkedin" href="https://linkedin.com" /*/>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 Use `justify` to adjust the layout of the icon and button title.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="start" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+{{</* button icon="fab linkedin" cue=false class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4" justify="start" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
 
-{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="end" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+{{</* button icon="fab linkedin" cue=false class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4" justify="end" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
 
-{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="center" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+{{</* button icon="fab linkedin" cue=false class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4" justify="center" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
 
-{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="between" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+{{</* button icon="fab linkedin" cue=false class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4" justify="between" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
 
-{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="around" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+{{</* button icon="fab linkedin" cue=false class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4" justify="around" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
 
-{{</* button icon="fab linkedin" cue=false class="col-4 offset-4 mb-2" justify="evenly" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
-{{< /example>}}
+{{</* button icon="fab linkedin" cue=false class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4" justify="evenly" href="https://linkedin.com" >}}LinkedIn{{< /button */>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Outlined buttons
@@ -156,7 +156,7 @@ Set the `outline` argument to `true` to adjust the style of the button.
 {{</* button color="light" href="#!" size="sm" outline="true" */>}}light{{</* /button */>}}
 
 {{</* button color="dark" href="#!" size="sm" outline="true" */>}}dark{{</* /button */>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Buttons with a tooltip
@@ -180,7 +180,7 @@ Set the `tooltip` argument in conjunction with `placement` to show a tooltip whe
 {{</* button color="dark" tooltip="Click on the inbox to view your unread messages" href="#!" placement="right" */>}}
     Inbox
 {{</* /button */>}}
-{{< /example>}}
+{{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Buttons with a collapsible panel
