@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Image
-date: 2023-10-12
+date: 2023-10-30
 description: Use the image shortcode to display a responsive image with a specific aspect ratio.
 layout: docs
 icon: fas image
@@ -44,6 +44,7 @@ The shortcode supports the following arguments:
 | title     | No  | Optional alternate text of the image. |
 | caption   | No  | Optional figure caption. |
 | mode      | No  | Optional flag indicating if the image should support color modes. If set, the shortcode searches for images that having a matching color-mode suffix such as `light` or `dark`.|
+| loading   | No  | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional loading behavior of the image, either "eager" (default) or "lazy". The loading of lazily loaded images is deferred until the image is within scrolling range of the viewport. This should reduce the initial loading time of the website. It is recommended to lazily load only those images that are below the page fold. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
