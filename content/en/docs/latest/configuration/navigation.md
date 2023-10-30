@@ -58,6 +58,10 @@ The main navigation supports versioning too. When configured, a drop-down menu c
 
 Hinode includes a navigation bar at the top of the screen by default. You can modify the configuration in the `layouts/_default/baseof.html` file. The navigation bar is also available as [shortcode]({{< ref "navbar" >}}).
 
+The following variables are available to modify the styling of the horizontal navigation. You can override them in `assets/scss/theme/_variables.scss`.
+
+{{< docs name="horizontal-nav" file="assets/scss/common/_variables.scss" >}}
+
 ## Sidebar navigation
 
 Hinode supports optional sidebar navigation. It is intended to be used as companion to the main navigation and is typically used in content-heavy sections, such as documentation pages. On smaller screens, the sidebar is replaced with an {{< link bs_offcanvas >}}offcanvas element{{< /link >}}. In this case, the main navigation receives an additional toggler on the left of the screen.
