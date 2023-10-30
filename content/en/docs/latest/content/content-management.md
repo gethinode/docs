@@ -107,7 +107,7 @@ By default, single pages, such as a blog page, include the following elements in
 - **Tags** - links to any tags defined in the page's frontmatter.
 - **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
 - **Thumbnail** - a thumbnail image with figure caption that links to the photo credits (if defined in the frontmatter).
-- **Download** - {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} a link to a local file that represents a downloadable version of the current article.
+- **Download** - {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} a link to a local file that represents a downloadable version of the current article.
 - **Navigation links** - links on the bottom of the page that link to the previous and next page within the current section.
 <!-- markdownlint-enable MD037 -->
 

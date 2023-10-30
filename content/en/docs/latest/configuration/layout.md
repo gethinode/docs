@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-10-21
+date: 2023-10-30
 layout: docs
 ---
 
@@ -65,6 +65,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
 | endorse            | true              | If set, adds a link to `gethinode.com` in the page's footer. |
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
+| loading            | "eager"           | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{< relref "image" >}}) provides more details.|
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
 | externalLinks.cue  | false             | If set, adds a visual cue `{{</* fas up-right-from-square fa-2xs */>}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
 | externalLinks.tab  | false             | If set, opens [managed external links]({{< relref "links-and-cross-references#managed-links" >}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
@@ -182,9 +183,9 @@ The configuration of the home page is set in the `home` section of the `site par
 | featurePhoto        | -                 | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | fullCover           | false             | Flag to indicate if the feature element should cover the entire front page. |
 | style               | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only.        |
-| feature.orientation | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
-| feature.color       | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
-| feature.width       | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
+| feature.orientation | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
+| feature.color       | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
+| feature.width       | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
 
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
@@ -400,7 +401,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | background   | -                    | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | color        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
-| wrap         | false                | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
+| wrap         | false                | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
