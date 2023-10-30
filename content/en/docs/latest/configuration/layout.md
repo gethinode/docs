@@ -182,9 +182,9 @@ The configuration of the home page is set in the `home` section of the `site par
 | featurePhoto        | -                 | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | fullCover           | false             | Flag to indicate if the feature element should cover the entire front page. |
 | style               | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only.        |
-| feature.orientation | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
-| feature.color       | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
-| feature.width       | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
+| feature.orientation | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
+| feature.color       | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
+| feature.width       | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
 
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
@@ -400,7 +400,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | background   | -                    | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | color        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
-| wrap         | false                | {{</* release version="v0.21.0-alpha" short="true" size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
+| wrap         | false                | {{</* release version="v0.21.0-beta" short="true" size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
