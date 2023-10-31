@@ -51,7 +51,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.2.0",
     "eslint-plugin-promise": "^6.1.1",
-    "hugo-bin": "^0.115.0",
+    "hugo-bin": "^0.116.1",
     "markdownlint-cli2": "^0.10.0",
     "netlify-plugin-hugo-cache-resources": "^0.2.1",
     "postcss-cli": "^10.1.0",
