@@ -2,7 +2,6 @@ title = "Hinode"
 copyright = "© 2023 <a href='https://github.com/gethinode' class='link-bg-footer' target='_blank' rel='noopener noreferrer'>Hinode Team</a>"
 paginate = 9
 enableGitInfo = true
-googleAnalytics = "G-T85PPZ36GN"
 
 # additional settings
 baseURL = "https://gethinode.com/"
@@ -51,6 +50,8 @@ defaultContentLanguageInSubdir = false
     disableInlineCSS = true
   [services.twitter]
     disableInlineCSS = true
+  [services.googleAnalytics]
+    ID = "G-T85PPZ36GN"
 
 [outputFormats]
   [outputFormats.XML]
