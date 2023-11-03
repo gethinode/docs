@@ -4,7 +4,7 @@
 }
 
 .card-feature {
-    background-color: var(--bs-light) if($enable-important-utilities, !important, null);
+    background-color: var(--#{$prefix}light) if($enable-important-utilities, !important, null);
 }
 
 .card-feature div i {
@@ -28,16 +28,16 @@
 
 .footer {
     background-color: $gray-800 if($enable-important-utilities, !important, null);
-    color: var(--bs-light) if($enable-important-utilities, !important, null);
+    color: var(--#{$prefix}light) if($enable-important-utilities, !important, null);
 }
 
 .footer-muted {
-    color: var(--bs-light) if($enable-important-utilities, !important, null);
+    color: var(--#{$prefix}light) if($enable-important-utilities, !important, null);
     opacity: .7 if($enable-important-utilities, !important, null);
 }
 
 .link-bg-footer {
-    color: var(--bs-light) if($enable-important-utilities, !important, null);
+    color: var(--#{$prefix}light) if($enable-important-utilities, !important, null);
     &:hover,
     &:focus {
         color: $gray-400 if($enable-important-utilities, !important, null);
@@ -52,7 +52,7 @@
         }
 
         .card-feature {
-            background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
+            background-color: var(--#{$prefix}tertiary-bg) if($enable-important-utilities, !important, null);
         }
 
         .card-feature div i {
@@ -63,12 +63,12 @@
         }
         
         .footer {
-            background-color: var(--bs-tertiary-bg) if($enable-important-utilities, !important, null);
-            color: var(--bs-tertiary) if($enable-important-utilities, !important, null);
+            background-color: var(--#{$prefix}tertiary-bg) if($enable-important-utilities, !important, null);
+            color: var(--#{$prefix}tertiary) if($enable-important-utilities, !important, null);
         }
 
         .link-bg-footer {
-            color: var(--bs-tertiary) if($enable-important-utilities, !important, null);
+            color: var(--#{$prefix}tertiary) if($enable-important-utilities, !important, null);
             &:hover,
             &:focus {
                 color: $gray-400 if($enable-important-utilities, !important, null);
@@ -78,12 +78,12 @@
 }
 
 .accordion-theme {
-    --bs-accordion-btn-padding-x: 0;
-    --bs-accordion-btn-focus-border-color: none;
-    --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-body-padding-x: 0;
-    --bs-accordion-active-color: var(--bs-primary);
-    --bs-accordion-active-bg: none;
+    --#{$prefix}accordion-btn-padding-x: 0;
+    --#{$prefix}accordion-btn-focus-border-color: none;
+    --#{$prefix}accordion-btn-focus-box-shadow: none;
+    --#{$prefix}accordion-body-padding-x: 0;
+    --#{$prefix}accordion-active-color: var(--#{$prefix}primary);
+    --#{$prefix}accordion-active-bg: none;
 }
 
 @if $enable-dark-mode {
