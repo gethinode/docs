@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Navs and tabs
-date: 2023-09-02
+date: 2023-11-03
 description: Use the nav shortcode to show a group of multiple tab panes.
 layout: docs
 icon: fa folder
@@ -37,7 +37,7 @@ The shortcode supports the following arguments:
 | Argument    | Required | Description |
 |-------------|----------|-------------|
 | id          | No       | Optional identifier of the tab group, uses a generated sequence if not specified. |
-| type        | No       | Optional type of the tab group, either "tabs", "pills", or "underline". Uses links by default. |
+| type        | No       | Optional type of the tab group, either "tabs", "pills", "underline", or "callout". Uses links by default. |
 | vertical    | No       | Optional flag to show vertical tabs instead of horizontal tabs (default). |
 | fade        | No       | Optional flag to make tab panes fade in. |
 | class       | No       | Optional class attribute of the tab group, e.g. “nav-fill”. |
@@ -93,8 +93,13 @@ Stack your navigation by setting `vertical` to `true`.
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* nav vertical="true" */>}}
-  {{</* nav-item header="Nav Item #1" show="true" /*/>}}
-  {{</* nav-item header="Nav Item #2" /*/>}}
+  {{</* nav-item header="Nav Item #1" show="true" */>}}
+    This is the first item's nav body. It supports Markdown content. The item is shown by adding
+    the value `show` to the `class` argument.
+  {{</* /nav-item */>}}
+  {{</* nav-item header="Nav Item #2" */>}}
+    This is the second item's nav body. It too supports HTML content.
+  {{</* /nav-item */>}}
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
@@ -145,6 +150,27 @@ Take that same HTML, but using `underline` instead:
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* nav type="underline" id="underline-1" */>}}
+  {{</* nav-item header="Nav Item #1" show="true" */>}}
+    This is the first item's nav body. It supports Markdown content. The item is shown by adding
+    the value `show` to the `class` argument.
+  {{</* /nav-item */>}}
+  {{</* nav-item header="Nav Item #2" */>}}
+    This is the second item's nav body. It too supports HTML content.
+  {{</* /nav-item */>}}
+  {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
+{{</* /nav */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+### Callout
+
+{{< release version="v0.21.0" >}}
+
+Take that same HTML, but using `callout` instead:
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* nav type="callout" id="callout-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.

@@ -17,6 +17,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       './_vendor/github.com/gethinode/hinode/assets/scss/common/_styles.scss',
       './_vendor/github.com/gethinode/hinode/assets/scss/components/_clipboard.scss',
       './_vendor/github.com/gethinode/hinode/assets/scss/components/_command.scss',
+      './_vendor/github.com/gethinode/hinode/assets/scss/components/_nav.scss',
       './_vendor/github.com/gethinode/hinode/assets/scss/components/_navbar.scss',
       './_vendor/github.com/gethinode/hinode/assets/scss/components/_search.scss',
       './_vendor/github.com/gethinode/hinode/assets/scss/components/_sidebar.scss',
