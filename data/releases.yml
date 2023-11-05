@@ -3,9 +3,9 @@
 - title: Taxonomies
   icon: fas list
   color: primary
-  date: 2023-10-30
-  badge: v0.21.0-beta
-  url: v0.21.0-beta
+  date: 2023-11-05
+  badge: v0.21.0
+  url: v0.21.0
   content:
     This release introduces support to include taxonomies as regular content sections. You can filter the taxonomies by
     keywords to make them more specific. In addition, Hinode now supports content view templates to simplify the
