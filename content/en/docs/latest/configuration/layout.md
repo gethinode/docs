@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-11-05
+date: 2023-11-07
 layout: docs
 ---
 
@@ -196,6 +196,12 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## List pages
 
+<!-- markdownlint-disable MD037 -->
+{{< alert >}}
+**New in v0.21.0** - List pages now support {{</* link hugo_content_view >}}content view templates{{< /link */>}}. Set the `type` in the page's frontmatter.
+{{< /alert >}}
+<!-- markdownlint-enable MD037 -->
+
 List pages define one [configurable section]({{< relref "#page-sections" >}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
 
 ### Example
@@ -325,7 +331,24 @@ Description
 
 ### Configuration
 
-Please refer to the [content management section]({{< relref "content-management#single-pages" >}}) to review the elements available in the page's frontmatter. The configuration of the documentation pages is set in the `docs` section of the site parameters. The folllowing settings are supported:
+Please refer to the [content management section]({{< relref "content-management#single-pages" >}}) to review the elements available in the page's frontmatter. You can also set the default behavior by page type in the `pages` section of the site parameters. For example, the following configuration hides the modification date of all news articles, unless overridden in the page's frontmatter.
+
+```toml
+[pages]
+    [pages.news]
+        metadata = "original"
+```
+
+<!-- markdownlint-disable MD037 -->
+{{< table >}}
+| Setting      | Default              | Description |
+|--------------|----------------------|-------------|
+| metadata     | "full"               | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Defines the metadata to include in the header of a single page type. Supported values are "full" (default), "original", and "none". In the default configuration, the header includes metadata elements for the original publication date, modification date (if applicable), reading time, and word count. When set to `original`, the modification date is always omitted. Set `metadata` to `none` to suppress all metadata elements. |
+| sharing         | true              | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Optional flag to indicate if a single page should include sharing options (when the {{</* link "#social-sharing-configuration" >}}social sharing configuration{{< /link */>}} is enabled). |
+{{< /table >}}
+<!-- markdownlint-enable MD037 -->
+
+The configuration of the **documentation pages** is set in the `docs` section of the site parameters. The folllowing settings are supported:
 
 {{< table >}}
 | Setting      | Default | Description |
