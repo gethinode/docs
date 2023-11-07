@@ -196,6 +196,12 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## List pages
 
+<!-- markdownlint-disable MD037 -->
+{{< alert >}}
+**New in v0.21.0** - List pages now support {{</* link hugo_content_view >}}content view templates{{< /link */>}}. Set the `type` in the page's frontmatter.
+{{< /alert >}}
+<!-- markdownlint-enable MD037 -->
+
 List pages define one [configurable section]({{< relref "#page-sections" >}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
 
 ### Example
