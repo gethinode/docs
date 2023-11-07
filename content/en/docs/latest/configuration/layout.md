@@ -343,7 +343,7 @@ Please refer to the [content management section]({{< relref "content-management#
 {{< table >}}
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
-| metadata     | "full"               | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Defines the metadata to include in the header of a single page type. Supported values are "full" (default), "original", and "none". In the default configuration, the header includes metadata elements for the original publication date, modification date (if applicable), reading time, and word count. When set to `publication`, the modification date is always omitted. Set `metadata` to `none` to suppress all metadata elements. |
+| metadata     | "full"               | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Defines the metadata to include in the header of a single page type. Supported values are "full" (default), "original", and "none". In the default configuration, the header includes metadata elements for the original publication date, modification date (if applicable), reading time, and word count. When set to `original`, the modification date is always omitted. Set `metadata` to `none` to suppress all metadata elements. |
 | sharing         | true              | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Optional flag to indicate if a single page should include sharing options (when the {{</* link "#social-sharing-configuration" >}}social sharing configuration{{< /link */>}} is enabled). |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
