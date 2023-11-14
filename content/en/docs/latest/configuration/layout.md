@@ -67,7 +67,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
 | loading            | "eager"           | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{< relref "image" >}}) provides more details.|
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
-| externalLinks.cue  | false             | If set, adds a visual cue `{{</* fas up-right-from-square fa-2xs */>}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
+| externalLinks.cue  | false             | If set, adds a visual cue `{{</* icon class="fas up-right-from-square fa-2xs" spacing=false */>}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
 | externalLinks.tab  | false             | If set, opens [managed external links]({{< relref "links-and-cross-references#managed-links" >}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 | build.transpiler   | "libsass"         | {{</* release version="v0.20.0" short="true" size="sm" inline="true" */>}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{</* link hugo_sass >}}installation of a separate binary on your machine{{< /link */>}}. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment.
 {{< /table >}}
@@ -183,10 +183,9 @@ The configuration of the home page is set in the `home` section of the `site par
 | featurePhoto        | -                 | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | fullCover           | false             | Flag to indicate if the feature element should cover the entire front page. |
 | style               | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only.        |
-| feature.orientation | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
-| feature.color       | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
-| feature.width       | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
-
+| feature.orientation | "stacked"         | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
+| feature.color       | -                 | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
+| feature.width       | 6                 | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
