@@ -9,26 +9,26 @@
 
 <!-- Badges -->
 <p align="center">
-    <a href="https://gohugo.io" alt="Hugo website">
-        <img src="https://img.shields.io/badge/generator-hugo-brightgreen" />
+    <a href="https://gohugo.io">
+        <img src="https://img.shields.io/badge/generator-hugo-brightgreen" alt="Hugo website">
     </a>
-    <a href="https://app.netlify.com/sites/gethinode-docs/deploys" alt="Netlify Status">
-        <img src="https://img.shields.io/netlify/c38df4b6-7b7d-4300-a70b-8338b168a8c7" />
+    <a href="https://app.netlify.com/sites/gethinode-docs/deploys">
+        <img src="https://img.shields.io/netlify/c38df4b6-7b7d-4300-a70b-8338b168a8c7" alt="Netlify Status">
     </a>
-    <a href="https://stats.uptimerobot.com/xyGVYhLJmV" alt="UptimeRobot Status">
-        <img src="https://img.shields.io/uptimerobot/status/m793471943-776bdc7331e383e3e8ad8d8f" />
+    <a href="https://stats.uptimerobot.com/xyGVYhLJmV">
+        <img src="https://img.shields.io/uptimerobot/status/m793471943-776bdc7331e383e3e8ad8d8f" alt="UptimeRobot Status">
     </a>
-    <a href="https://github.com/gethinode/docs/commits/main" alt="Last commit">
-        <img src="https://img.shields.io/github/last-commit/gethinode/docs.svg" />
+    <a href="https://github.com/gethinode/docs/commits/main">
+        <img src="https://img.shields.io/github/last-commit/gethinode/docs.svg" alt="Last commit">
     </a>
-    <a href="https://github.com/gethinode/docs/issues" alt="Issues">
-        <img src="https://img.shields.io/github/issues/gethinode/docs.svg" />
+    <a href="https://github.com/gethinode/docs/issues">
+        <img src="https://img.shields.io/github/issues/gethinode/docs.svg" alt="Issues">
     </a>
-    <a href="https://github.com/gethinode/docs/pulls" alt="Pulls">
-        <img src="https://img.shields.io/github/issues-pr-raw/gethinode/docs.svg" />
+    <a href="https://github.com/gethinode/docs/pulls">
+        <img src="https://img.shields.io/github/issues-pr-raw/gethinode/docs.svg" alt="Pulls">
     </a>
-    <a href="https://github.com/gethinode/docs/blob/main/LICENSE" alt="License">
-        <img src="https://img.shields.io/github/license/gethinode/docs" />
+    <a href="https://github.com/gethinode/docs/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/gethinode/docs" alt="License">
     </a>
 </p>
 <!-- markdownlint-enable MD033 -->
