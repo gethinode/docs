@@ -437,7 +437,7 @@ The `card` layout supports the following additional arguments:
 | padding      | "auto"       | Padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
 | header       | "full"       | Header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
 | footer       | "none"       | Footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
-| orientation  | "stacked"    | Placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
+| orientation  | "stacked"    | Placement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
 | homepage     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
 | separator    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
 {{< /table >}}
