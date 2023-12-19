@@ -38,7 +38,7 @@ The shortcode supports the following arguments:
 | gutter      | No  | If set, adds a wrapper around the card that defines a gutter between columns in a group. The value can be either "0" (default), "1", "2", "3", "4", or "5". |
 | header      | No  | Optional header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
 | footer      | No  | Optional footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
-| orientation | No  | Optional placecement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
+| orientation | No  | Optional placement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
 | thumbnail   | No  | Optional thumbnail image url, displayed on the top or the left of the card. |
 | alt         | No  | {{</* release version="v0.19.0" short="true" size="sm" inline="true" */>}} Optional alternate text for the thumbnail, uses "title" by default. |
 | icon        | No  | Optional Font Awesome icon, displayed on the top or the left of the card. |

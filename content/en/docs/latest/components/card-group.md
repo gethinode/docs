@@ -58,7 +58,7 @@ In addition, the following arguments are passed to the individual cards.
 | padding     | No       | Optional padding of the content, either "0", "1", "2", "3" (default), "4", "5", or "auto".
 | header      | No       | Optional header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none".
 | footer      | No       | Optional footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default).
-| orientation | No       | Optional placecement of the thumbnail, either "stacked" (default), "horizontal", or "none".
+| orientation | No       | Optional placement of the thumbnail, either "stacked" (default), "horizontal", or "none".
 {{< /table >}}
 
 ## Examples
