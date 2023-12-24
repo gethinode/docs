@@ -47,7 +47,7 @@ The shortcode supports the following arguments:
 
 ## Examples
 
-Change the style of your card with class attributes and shortcode arguments. Use the
+Change the style of your card with class attributes and shortcode arguments.
 
 ### Colored cards
 
