@@ -1,8 +1,12 @@
 ---
 title: License
 description: Hinode's open-source license for the codebase and documentation.
-date: 2023-08-15
+date: 2023-12-24
 layout: docs
+aliases:
+  - "/docs/about/license/"
+  - "/docs/license/"
+  - "/license/"
 ---
 
 ## Codebase
