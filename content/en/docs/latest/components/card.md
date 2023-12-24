@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Card
-date: 2023-09-02
+date: 2023-12-24
 description: Use the card shortcode to display a card that links to a content page.
 layout: docs
 icon: fa address-card
@@ -26,24 +26,7 @@ Use the `card` shortcode to display a card that links to a content page. When us
 
 The shortcode supports the following arguments:
 
-<!-- markdownlint-disable MD037 -->
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| path        | No  | Path of the page that the card reference to. If omitted, specify the title, icon, thumbnail, and body (inner content) as needed. |
-| title       | No  | Optional title of the card, replaces the title of the referenced page (if any). |
-| class       | No  | Optional class attribute of the card element, e.g. “w-50”. |
-| color       | No  | Optional theme color of the card, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
-| padding     | No  | Optional padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
-| gutter      | No  | If set, adds a wrapper around the card that defines a gutter between columns in a group. The value can be either "0" (default), "1", "2", "3", "4", or "5". |
-| header      | No  | Optional header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
-| footer      | No  | Optional footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |
-| orientation | No  | Optional placement of the thumbnail, either "stacked" (default), "horizontal", or "none". |
-| thumbnail   | No  | Optional thumbnail image url, displayed on the top or the left of the card. |
-| alt         | No  | {{</* release version="v0.19.0" short="true" size="sm" inline="true" */>}} Optional alternate text for the thumbnail, uses "title" by default. |
-| icon        | No  | Optional Font Awesome icon, displayed on the top or the left of the card. |
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
+{{< args "card" "shortcode" >}}
 
 ## Examples
 
