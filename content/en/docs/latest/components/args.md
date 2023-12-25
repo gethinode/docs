@@ -29,7 +29,7 @@ The shortcode supports both unnamed and named arguments.
 ## Data format
 
 <!-- TODO: add args data format -->
-Define a file in the `data/structures` folder that contains the argument specifications. 
+Define a file in the `data/structures` folder that contains the argument specifications.
 
 ### Supported attributes
 
