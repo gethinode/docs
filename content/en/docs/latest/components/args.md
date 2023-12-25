@@ -42,6 +42,7 @@ The format supports the following attributes:
 | type | yes | Data type of the argument, either a primitive or complex type. |
 | optional | | Flag to indicate if the argument is optional, defaults to false. |
 | default | | Default value when no value is provided. |
+| parent  | | Defines if the argument inherits a value from its parent, either `cascade` or `merge`. |
 | comment | | Documentation about the argument. |
 | options | | Conditional value requirements, pending data type. |
 {{< /table >}}
@@ -71,4 +72,6 @@ Any provided type not matching a primitive is considered a complex type. Type co
 
 ### Example file
 
-{{< file path="data/structures/card.yml" full="false" >}}
+The following file illustrates the definition of the `card` shortcode and partial.
+
+{{< file path="data/structures/card.yml" full="true" show="false" >}}
