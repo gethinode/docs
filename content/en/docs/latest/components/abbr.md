@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Abbr
-date: 2023-09-02
+date: 2023-12-25
 description: Use the abbr shortcode to show the long form of an abbrevitation.
 layout: docs
 icon: fas question
@@ -23,7 +23,7 @@ Use the abbr shortcode to show the long form of an abbrevitation on hover. The a
 
 ## Arguments
 
-The shortcode supports a single unnamed argument, which maps to the `key` argument. When using naming parameters, the following arguments are supported:
+The shortcode supports a single unnamed argument, which maps to the `key` argument. When using named parameters, the following arguments are supported:
 
 {{< table >}}
 | Argument    | Required | Description |
@@ -35,7 +35,7 @@ The shortcode supports a single unnamed argument, which maps to the `key` argume
 
 ## Data format
 
-Define a file in the `data` folder that contains the abbrevation data. The format excpects the following attributes:
+Define a file in the `data` folder that contains the abbrevation data. The format expects the following attributes:
 
 {{< table >}}
 | Attribute | Required | Description |
