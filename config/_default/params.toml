@@ -325,6 +325,7 @@
     hugo_sass = "https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-development-environment"
     hugo_toc = "https://gohugo.io/content-management/toc"
     hugo_vars = "https://discourse.gohugo.io/t/initialize-sass-variables-from-hugo-templates"
+    hugo_youtube_privacy = "https://gohugo.io/about/hugo-and-gdpr/#youtube"
     hugo_issue_10719 = "https://github.com/gohugoio/hugo/issues/10719"
     initialcommit = "https://initialcommit.com/blog/git-commit-messages-best-practices"
     issue_tracker = "https://github.com/gethinode/hinode/issues"
