@@ -62,7 +62,7 @@ Font Awesome includes a range of t-shirt based sizes that are relative to the br
 
 The table below illustrates the relative sizing classes and their equivalent relative and absolute font size.
 
-{{< table "table-striped w-auto" >}}
+{{< table class="table-striped w-auto" >}}
 | Relative Sizing Class | Font Size | Equivalent in Pixels |
 |----------|--------:|-----:|
 | `fa-2x`  | 0.625em | 10px |
@@ -95,7 +95,7 @@ Font Awesome also supports absolute sizing on a scale of 1x to 10x. The icons do
 
 The table below illustrates the absolute sizing classes and their equivalent font size.
 
-{{< table "table-striped w-auto" >}}
+{{< table class="table-striped w-auto" >}}
 | Absolute Sizing Class | Font Size |
 |---------|--------:|
 | `fa-1x` | 1em |
@@ -193,7 +193,7 @@ Use specific classes to rotate the icon with a specific degree. The following ex
 
 The following classes are available:
 
-{{< table "table-striped w-auto" >}}
+{{< table class="table-striped w-auto" >}}
 | Class | Details |
 |---------|--------|
 | `fa-rotate-90` | Rotates an icon 90° |
@@ -222,7 +222,7 @@ Font Awesome supports various animations by simply adding a animation class to t
 
 The following table describes the available basic animation classes.
 
-{{< table "table-striped w-auto" >}}
+{{< table class="table-striped w-auto" >}}
 | Class | Details |
 |---------|--------|
 | `fa-beat` | Scales an icon up or down |
@@ -249,7 +249,7 @@ And one fine morning — So we beat on, boats against the current, borne back ce
 
 The following table describes the available classes.
 
-{{< table "table-striped w-auto" >}}
+{{< table class="table-striped w-auto" >}}
 | Class | Details |
 |-------|---------|
 | `fa-border` | Creates a border with border-radius and padding applied around an icons |
@@ -283,7 +283,7 @@ Use the `fa-stack` class on the parent HTML element of the two icons you want to
 
 The following table describes the available classes.
 
-{{< table "table-striped w-auto" >}}
+{{< table class="table-striped w-auto" >}}
 | Class | Details |
 |-------|---------|
 | `fa-stack`    | Used on a parent HTML element of the two icons to be stacked |
