@@ -28,7 +28,7 @@ Hugo's Markdown processor applies inline styles to align cells in a table, which
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* table "table-striped" */>}}
+{{</* table class="table-striped" */>}}
 | #  | Item        | Left aligned | Center aligned |   Right aligned|
 | -- | ----------- |:-------------|:--------------:| --------------:|
 | 1. | First item  | some text    | more text      | even more text |
@@ -159,11 +159,11 @@ By default, the `table` shortcode is responsive for all viewports.
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-Use `.table-responsive-none` to disable this behavior.
+Use `none` to disable this behavior.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="markdown" >}}
-{{</* table table-responsive-none */>}}
+{{</* table none */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
@@ -175,11 +175,11 @@ Use `.table-responsive-none` to disable this behavior.
 
 ### Breakpoint specific
 
-Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+Use `sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="markdown" >}}
-{{</* table table-responsive-sm */>}}
+{{</* table sm */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
@@ -187,7 +187,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to 
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 
-{{</* table table-responsive-md */>}}
+{{</* table md */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
@@ -195,7 +195,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to 
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 
-{{</* table table-responsive-lg */>}}
+{{</* table lg */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
@@ -203,7 +203,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to 
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 
-{{</* table table-responsive-xl */>}}
+{{</* table xl */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
@@ -211,7 +211,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` to create responsive tables up to 
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 
-{{</* table table-responsive-xxl */>}}
+{{</* table xxl */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
 | 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |

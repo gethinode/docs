@@ -1,7 +1,7 @@
 ---
 title: Hosting and deployment
 description: Deploy your Hinode site to popular hosting providers.
-date: 2023-08-04
+date: 2023-12-28
 layout: docs
 ---
 
@@ -40,7 +40,7 @@ Before deciding on your hosting and deployment approach, review the following co
 The table below gives a brief overview of the features supported by a few selected hosting providers. The next paragraphs describe the build and deployment process for each provider in more detail.
 
 <!-- markdownlint-disable MD037 -->
-{{< table "table-striped-columns w-auto" >}}
+{{< table class="table-striped-columns w-auto" >}}
 | Feature            | Azure blob storage | Netlify           |
 |--------------------|--------------------|-------------------|
 | Automation         | Custom action      | {{</* fas check */>}} |
