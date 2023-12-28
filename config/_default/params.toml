@@ -142,6 +142,7 @@
         pane = "persona"
         type = "pills"
         width = 50
+        vertical = false
     [sections.features]
         title = "Bring your static site to a new level"
         layout = "list"
