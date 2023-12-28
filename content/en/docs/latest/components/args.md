@@ -43,6 +43,8 @@ The format supports the following attributes:
 | optional | | Flag to indicate if the argument is optional, defaults to false. |
 | default | | Default value when no value is provided. |
 | parent  | | Defines if the argument inherits a value from its parent, either `cascade` or `merge`. |
+| release | | Points to the version in which the argument was released. See the {{</* link "release" /*/>}} shortcode for more details. |
+| deprecated | | Points to the version in which the argument was deprecated. See the {{</* link "release" /*/>}} shortcode for more details. |
 | comment | | Documentation about the argument. |
 | options | | Conditional value requirements, pending data type. |
 {{< /table >}}
