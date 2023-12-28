@@ -35,6 +35,7 @@ Define a file in the `data/structures` folder that contains the argument specifi
 
 The format supports the following attributes:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Name | Required | Description |
 |-----------|----------|-------------|
@@ -48,6 +49,7 @@ The format supports the following attributes:
 | comment | | Documentation about the argument. |
 | options | | Conditional value requirements, pending data type. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Supported primitive types
 
