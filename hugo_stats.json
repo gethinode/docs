@@ -25,6 +25,7 @@
       "hr",
       "html",
       "i",
+      "iframe",
       "img",
       "input",
       "kbd",
@@ -360,6 +361,7 @@
       "fa-x-twitter",
       "fa-xl",
       "fa-xs",
+      "fa-youtube",
       "fab",
       "fade",
       "fade-bottom",
@@ -710,7 +712,8 @@
       "w-100",
       "w-25",
       "w-50",
-      "w-auto"
+      "w-auto",
+      "youtube-embedded"
     ],
     "ids": [
       "-theme",
@@ -823,6 +826,12 @@
       "accordion-9-item-5",
       "accordion-9-item-6",
       "accordion-always-open",
+      "accordion-always-open-heading-0",
+      "accordion-always-open-heading-1",
+      "accordion-always-open-heading-2",
+      "accordion-always-open-item-0",
+      "accordion-always-open-item-1",
+      "accordion-always-open-item-2",
       "accordion-callout-1",
       "accordion-callout-1-heading-0",
       "accordion-callout-1-heading-1",

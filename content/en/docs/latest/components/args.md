@@ -35,6 +35,7 @@ Define a file in the `data/structures` folder that contains the argument specifi
 
 The format supports the following attributes:
 
+<!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Name | Required | Description |
 |-----------|----------|-------------|
@@ -42,9 +43,13 @@ The format supports the following attributes:
 | type | yes | Data type of the argument, either a primitive or complex type. |
 | optional | | Flag to indicate if the argument is optional, defaults to false. |
 | default | | Default value when no value is provided. |
+| parent  | | Defines if the argument inherits a value from its parent, either `cascade` or `merge`. |
+| release | | Points to the version in which the argument was released. See the {{</* link "release" /*/>}} shortcode for more details. |
+| deprecated | | Points to the version in which the argument was deprecated. See the {{</* link "release" /*/>}} shortcode for more details. |
 | comment | | Documentation about the argument. |
 | options | | Conditional value requirements, pending data type. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 ### Supported primitive types
 
@@ -71,4 +76,6 @@ Any provided type not matching a primitive is considered a complex type. Type co
 
 ### Example file
 
-{{< file path="data/structures/card.yml" full="false" >}}
+The following file illustrates the definition of the `card` shortcode and partial.
+
+{{< file path="data/structures/card.yml" full="true" show="false" >}}
