@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Kbd
-date: 2023-09-02
+date: 2023-12-29
 description: Use the kbd shortcode to show a keyboard input element.
 layout: docs
 icon: fa keyboard
@@ -24,17 +24,7 @@ Use the `kbd` shortcode to show a keyboard input element. As an example, the fol
 
 The shortcode supports the following arguments:
 
-<!-- markdownlint-disable MD037 -->
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| title     | Yes | Required title of the keyboard input. In shorthand notation, this is the first (and only) matched argument. |
-| class     | No  | Optional class attributes of the keyboard input element. |
-| color     | No  | Optional theme color of the element, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", or "black". By default, no theme color is used. |
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
-
-<!-- TODO: edit from here -->
+{{< args structure="kbd" group="shortcode" >}}
 
 ## Examples
 
