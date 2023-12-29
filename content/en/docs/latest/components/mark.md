@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Mark
-date: 2023-09-02
+date: 2023-12-29
 description: Use the mark shortcode to highlight text.
 layout: docs
 icon: fas highlighter
@@ -24,12 +24,7 @@ Use the mark shortcode to {{</* mark >}}highlight{{< /mark */>}} specific text.
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| color       | No  | Optional theme color of the highlight, either "primary", "secondary", "success", "danger",  "warning", "info", "light", "dark", "white" or "black". By default, the highlight uses the color of the HTML mark function (usually yellow). |
-| class       | No  | Optional class attribute of the mark element. |
-{{< /table >}}
+{{< args structure="mark" group="shortcode" >}}
 
 ## Examples
 
