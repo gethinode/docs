@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Carousel
-date: 2023-09-02
+date: 2023-12-29
 description: Use the carousel shortcode to display a carousel of several images.
 layout: docs
 icon: fas images
@@ -32,16 +32,7 @@ Use the `carousel` shortcode to display a carousel of several images, with simil
 
 The carousel shortcode supports the following arguments:
 
-<!-- markdownlint-disable MD037 -->
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| id        | No  | Optional id of the carousel, defaults to "carousel-n" with a sequential number `n`. |
-| ratio     | No  | Aspect ratio of the image, either "1x1", "3x2", "4x3", "16x9", or "21x9". If unspecified, the original aspect ratio is preserved. |
-| portrait  | No  | {{</* release version="v0.18.3" short="true" size="sm" inline="true" */>}} Optional flag to adjust the ratio from landscape to portrait. The images themselves are not rotated, only the crop area is adjusted. This value is ignored when no ratio is set. |
-| class     | No  | Optional class attribute of the `carousel` element, e.g. "w-75". |
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
+{{< args structure="carousel" group="shortcode" >}}
 
 {{< alert type="danger" >}}
 The carousel uses the original aspect ratio of the provided images when no aspect ratio is provided. Ensure the included images have a similar height and width to avoid inconsistent behavior.
@@ -49,12 +40,7 @@ The carousel uses the original aspect ratio of the provided images when no aspec
 
 Add an inner `img` element for each slide of the carousel. The `img` element supports the following arguments:
 
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| src       | Yes | Required url of the image, e.g. "img/boots.jpg". |
-| caption   | No  | Optional image caption. If set, the image is darkened to improve the contrast. The caption is hidden on smaller screens. |
-{{< /table >}}
+{{< args structure="carousel-item" group="shortcode" >}}
 
 ## Examples
 
