@@ -24,28 +24,7 @@ Use the `button` shortcode to display a button with a hyperlink. The inner conte
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| href        | No       | Optional address for the button or hyperlink. Automatically assigned when using collapse. |
-| relref      | No       | Optional name of the page to link to. Replaces `href` with a relative link if set. |
-| state       | No       | Optional state of the button, either "enabled" (default), "disabled", "active", or "inactive". |
-| size        | No       | Optional size of the button, either "sm", "md" (default), or "lg". |
-| color       | No       | Optional theme color of the element, either "primary" (default), "secondary", "success", "danger",  "warning", "info", "light", "dark", "white" or "black". |
-| badge       | No       | Optional positioned badge to display on top of the button. |
-| outline     | No       | Optional flag indicating the button should be outlined, either "false" (default) or "true". |
-| aria-label  | No       | Optional label for the badge. |
-| tooltip     | No       |  Optional text to display in a tooltip. Cannot be used together with collapse. Ignored for active/inactive buttons. |
-| toast       | No       | Optional id of the toast message to display when the button is clicked. |
-| collapse    | No       | Optional panel to collapse. Cannot be used together with tooltip. Ignored for active/inactive buttons. |
-| placement   | No       | How to position the tooltip: "top" (default), "bottom", "left", or "right". |
-| class       | No       | Optional class attribute of the button element, e.g. “p-5”. |
-| icon        | No       | Font Awesome icon class attribute, required unless button title is set. An example value is "fas sort". |
-| order       | No       | Optional order of the icon, either "first" or "last" (default). |
-| justify     | No       | Optional justification of the button title and icon, either "start", "end", "center" (default), "between", "around", or "evenly". |
-| cue         | No       | Optional flag to indicate if an external link should show a visual cue, defaults to setting "main.externalLinks.cue" in the site's parameters. |
-| tab         | No       | Optional flag to indicate if an external link should open in a new tab, defaults to setting "main.externalLinks.tab" in the site's parameters. |
-{{< /table >}}
+{{< args structure="button" group="shortcode" >}}
 
 ## Examples
 
