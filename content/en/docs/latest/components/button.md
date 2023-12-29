@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Button
-date: 2023-10-22
+date: 2023-12-29
 description: Use the button shortcode to display a button with a hyperlink.
 layout: docs
 icon: fa hand-pointer
@@ -14,7 +14,7 @@ Use the `button` shortcode to display a button with a hyperlink. The inner conte
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="dark" tooltip="Click on the inbox to view your unread messages" href="#!" badge="99+" */>}}
+{{</* button color="secondary" tooltip="Click on the inbox to view your unread messages" href="#!" badge="99+" */>}}
     Inbox
 {{</* /button */>}}
 {{< /example >}}
@@ -165,20 +165,20 @@ Set the `tooltip` argument in conjunction with `placement` to show a tooltip whe
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="dark" tooltip="Click on the inbox to view your unread messages" href="#!" placement="top" */>}}
-    Inbox
+{{</* button color="secondary" tooltip="Click on the inbox to view your unread messages" href="#!" placement="top" */>}}
+    top
 {{</* /button */>}}
 
-{{</* button color="dark" tooltip="Click on the inbox to view your unread messages" href="#!" placement="bottom" */>}}
-    Inbox
+{{</* button color="secondary" tooltip="Click on the inbox to view your unread messages" href="#!" placement="bottom" */>}}
+    bottom
 {{</* /button */>}}
 
-{{</* button color="dark" tooltip="Click on the inbox to view your unread messages" href="#!" placement="left" */>}}
-    Inbox
+{{</* button color="secondary" tooltip="Click on the inbox to view your unread messages" href="#!" placement="left" */>}}
+    left
 {{</* /button */>}}
 
-{{</* button color="dark" tooltip="Click on the inbox to view your unread messages" href="#!" placement="right" */>}}
-    Inbox
+{{</* button color="secondary" tooltip="Click on the inbox to view your unread messages" href="#!" placement="right" */>}}
+    right
 {{</* /button */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -189,7 +189,7 @@ Reveal or hide a collapsible panel by linking the panel's `id` to the button wit
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="dark" collapse="collapse-1" */>}}
+{{</* button color="secondary" collapse="collapse-1" */>}}
     Collapse
 {{</* /button */>}}
 
