@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Abbr
-date: 2023-12-25
+date: 2023-12-29
 description: Use the abbr shortcode to show the long form of an abbrevitation.
 layout: docs
 icon: fas question
@@ -25,13 +25,7 @@ Use the abbr shortcode to show the long form of an abbrevitation on hover. The a
 
 The shortcode supports a single unnamed argument, which maps to the `key` argument. When using named parameters, the following arguments are supported:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| key         | Yes      | Required case-insensitive key of the abbreviation. In shorthand notation, this is the first (and only) matched argument. Non-alphanumeric keys must be quoted. |
-| data        | No       | Optional filename of the abbrevation input. It defaults to "abbr.yaml" with translation support. You can omit the file extension.  The file should reside in the "data" folder. The data supports language extensions. For example, "abbr.en.yaml" refers to the English translation of the abbrevation data. The filename "abbr.yaml" is used when no suitable translation is found. |
-| class       | No       | Optional class attribute of the abbr element. For example, specify "initialism" for a slightly smaller font size.  |
-{{< /table >}}
+{{< args structure="abbr" group="shortcode" >}}
 
 ## Data format
 
