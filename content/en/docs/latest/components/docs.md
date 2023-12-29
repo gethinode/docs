@@ -28,16 +28,7 @@ The definition of the default `id` field fails when embedding (multiple) `docs` 
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| name      | Yes      | Name of the code snippet, used to identify the relevant section of the input file. |
-| file      | Yes      | Path of the input file. The path is relative to the `basePath` defined in the `docs` section of the site's parameters (see [page layout]({{< relref "layout#configuration-3" >}})). If the file starts with `./`, the path of the repository is used as base path instead. |
-| show      | No       | If unset, shows the panel with the code snippet in collapsed state. By default, the panel is expanded. |
-| full      | No       | If unset, shows the filename only. By default, the full relative path is shown. |
-| id        | No       | Optional id of the collapse panel, defaults to "docs-collapse-n" with a sequential number n starting at 1. |
-| class     | No       | Optional class argument of the tab control. |
-{{< /table >}}
+{{< args structure="docs" group="shortcode" >}}
 
 ## Input files
 
