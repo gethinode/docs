@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Example
-date: 2023-09-02
+date: 2023-12-29
 description: The example shortcode displays a code example and renders a preview of the same input.
 layout: docs
 icon: fa lightbulb
@@ -26,15 +26,7 @@ export MY_VAR=123
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument     | Required | Description |
-|--------------|----------|-------------|
-| id           | No | Optional identifier of the element's container. |
-| lang         | No | Language used to display the code. Use "hugo" to process Hugo (escaped) shortcodes, default value is "html". |
-| show_markup  | No | If the markup should be output in the HTML, defaults to "true". |
-| show_preview | No | If the preview should be output in the HTML, defaults to "true". |
-| class        | No | Optional class attributes of the element's container. |
-{{< /table >}}
+{{< args structure="example" group="shortcode" >}}
 
 ## Examples
 
