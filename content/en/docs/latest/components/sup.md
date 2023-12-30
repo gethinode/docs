@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Sup
-date: 2023-09-03
+date: 2023-12-30
 description: Use the sup shortcode to display text in superscript.
 layout: docs
 icon: fas superscript
@@ -22,4 +22,6 @@ As an example, the following shortcode displays superscript text.
 
 ## Arguments
 
-The shortcode does not support any arguments. Provide input as inner text.
+The shortcode supports the following arguments:
+
+{{< args structure="sup" group="shortcode" >}}

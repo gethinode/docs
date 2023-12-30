@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Sub
-date: 2023-09-03
+date: 2023-12-30
 description: Use the sub shortcode to display text in subscript.
 layout: docs
 icon: fas subscript
@@ -22,4 +22,6 @@ H{{</* sub 2 */>}}O is a liquid.
 
 ## Arguments
 
-The shortcode does not support any arguments. Provide input as inner text.
+The shortcode supports the following arguments:
+
+{{< args structure="sub" group="shortcode" >}}
