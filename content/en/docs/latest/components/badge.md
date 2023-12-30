@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Badge
-date: 2023-09-02
+date: 2023-12-29
 description: Use the badge shortcode to enrich headings.
 layout: docs
 icon: fas envelope-circle-check
@@ -25,15 +25,7 @@ Example heading of size four {{</* badge title="New" */>}}
 
 The shortcode supports the following arguments:
 
-<!-- markdownlint-disable MD037 -->
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| title     | Yes | Required title of the badge. |
-| class     | No  | Optional class attributes of the badge element. |
-| color     | No  | Optional theme color of the element, either "primary", "secondary" (default), "success", "danger", "warning", "info", "light", "dark", "white", or "black". |
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
+{{< args structure="badge" group="shortcode" >}}
 
 ## Examples
 

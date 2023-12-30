@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Collapse
-date: 2023-08-05
+date: 2023-12-29
 description: Use the collapse shortcode to reveil or hide a panel.
 layout: docs
 icon: fa eye-slash
@@ -33,12 +33,7 @@ The definition of the default `id` field fails when embedding (multiple) `collap
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| id          | Yes      | Required unique id of the collapse element, e.g. "collapse-1". |
-| class       | No       | Optional class attribute of the inner panel element, e.g. “p-3”. |
-{{< /table >}}
+{{< args structure="collapse" group="shortcode" >}}
 
 ## Remarks
 

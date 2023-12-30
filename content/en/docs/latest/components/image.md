@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Image
-date: 2023-11-05
+date: 2023-12-29
 description: Use the image shortcode to display a responsive image with a specific aspect ratio.
 layout: docs
 icon: fas image
@@ -32,21 +32,7 @@ As an example, the following shortcode displays an image with its original aspec
 
 The shortcode supports the following arguments:
 
-<!-- markdownlint-disable MD037 -->
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| src       | Yes | Required url of the image, e.g. "img/responsive.png". Images with multiple color modes are expected to have a basename that ends with either `-dark` or `-light`. |
-| ratio     | No  | Optional aspect ratio of the image, either "1x1", "3x2", "4x3", "16x9", or "21x9". If set, the image is resized and cropped to match the ratio. Vector images are resized instead of cropped to fit within the given dimension. |
-| portrait  | No  | {{</* release version="v0.18.3" short="true" size="sm" inline="true" */>}} Optional flag to adjust the ratio from landscape to portrait. The image itself is not rotated, only the crop area is adjusted. This value is ignored when no ratio is set. |
-| wrapper   | No  | {{</* release version="v0.18.3" short="true" size="sm" inline="true" */>}} Optional class attributes of the wrapper element, e.g. "mx-auto". |
-| class     | No  | Optional class attribute of the inner `img` element, e.g. "rounded". |
-| title     | No  | Optional alternate text of the image. |
-| caption   | No  | Optional figure caption. |
-| mode      | No  | Optional flag indicating if the image should support color modes. If set, the shortcode searches for images that having a matching color-mode suffix such as `light` or `dark`.|
-| loading   | No  | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional loading behavior of the image, either "eager" (default) or "lazy". The loading of lazily loaded images is deferred until the image is within scrolling range of the viewport. This should reduce the initial loading time of the website. It is recommended to lazily load only those images that are below the page fold. |
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
+{{< args structure="image" group="shortcode" >}}
 
 ## Examples
 

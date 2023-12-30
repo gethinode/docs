@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Navs and tabs
-date: 2023-11-05
+date: 2023-12-30
 description: Use the nav shortcode to show a group of multiple tab panes.
 layout: docs
 icon: fa folder
@@ -33,26 +33,15 @@ Use the `nav` shortcode to show a group of multiple tab panes. Add `nav-item` in
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| id          | No       | Optional identifier of the tab group, uses a generated sequence if not specified. |
-| type        | No       | Optional type of the tab group, either "tabs", "pills", "underline", or "callout". Uses links by default. |
-| vertical    | No       | Optional flag to show vertical tabs instead of horizontal tabs (default). |
-| fade        | No       | Optional flag to make tab panes fade in. |
-| class       | No       | Optional class attribute of the tab group, e.g. “nav-fill”. |
-{{< /table >}}
+{{< args structure="nav" group="shortcode" >}}
+
+In addition, the following arguments are passed to the individual navigation items.
+
+{{< args structure="nav-item" group="shortcode" parent="true" >}}
 
 Add an inner `nav-item` element for each item of the tab group. The `nav-item` element supports the following arguments:
 
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| header    | Yes | Required header of the tab pane. |
-| class     | No  | Optional class attribute of the inner tab pane. |
-| show      | No  | Optional flag to indicate an item should be shown as expanded (only one can be shown at a time). |
-| disabled  | No  | Optional flag to indicate an item should be in a disabled state. |
-{{< /table >}}
+{{< args structure="nav-item" group="shortcode" >}}
 
 ## Examples
 

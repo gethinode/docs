@@ -28,16 +28,7 @@ The definition of the default `id` field fails when embedding (multiple) `file` 
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument  | Required | Description |
-|-----------|----------|-------------|
-| path      | Yes      | Path of the input file. The path is relative to the `basePath` defined in the `docs` section of the site's parameters (see [page layout]({{< relref "layout#configuration-3" >}})). If the file starts with `./`, the path of the repository is used as base path instead. |
-| lang      | No       | Language to be used by the syntax highlighter. When no language is specified, the shortcode derives the language from the input file's extension. |
-| show      | No       | If unset, shows the panel with the code snippet in collapsed state. By default, the panel is expanded. |
-| full      | No       | If unset, shows the filename only. By default, the full relative path is shown. |
-| id        | No       | Optional id of the collapse panel, defaults to "file-collapse-n" with a sequential number n starting at 1. |
-| class     | No       | Optional class argument of the tab control. |
-{{< /table >}}
+{{< args structure="file" group="shortcode" >}}
 
 ## Examples
 

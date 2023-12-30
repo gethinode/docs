@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2023-09-02
+date: 2023-12-29
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -32,19 +32,7 @@ Since Hinode `v0.16.8` you can add a managed link to your page content using a c
 
 The shortcode supports a single unnamed parameter, or various named parameters. The unnamed parameter is recognized as a url if it starts with `http`, else it is treated as either a named link or **relative** internal reference (in that order). Any inner text is rendered as the link title, otherwise it uses the host name (for external links), link title (for internal links), or anchor name (for any local references containing a `#`). The shortcode supports the following named arguments:
 
-<!-- markdownlint-disable MD037 -->
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| href        | Yes      | {{</* release version="v0.18.4" short="true" size="sm" inline="true" */>}} Required reference to either an external link (if it starts with `http`), a named link (if it can be found in "links" in the site's parameters), or internal reference. External and internal references may include an anchor "#".
-| name        | No       | Alias of `href`. |
-| url         | No       | Alias of `href`. |
-| cue         | No       | Optional flag to indicate if an external link should show a visual cue, defaults to setting "main.externalLinks.cue" in the site's parameters. |
-| tab         | No       | Optional flag to indicate if an external link should open in a new tab, defaults to setting "main.externalLinks.tab" in the site's parameters. |
-| case        | No       | Optional flag to indicate if the retrieved title (e.g. no inner text is provided) of an internal link should use its original case, defaults to true. If false, the title is set to lower case. |
-| class       | No       | Optional class attribute of the anchor element. |
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
+{{< args structure="link" group="shortcode" >}}
 
 ## Site configuration
 

@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Toast
-date: 2023-09-02
+date: 2023-12-30
 description: Use the toast shortcode to display a dismissable message in the bottom-right corner of the screen.
 layout: docs
 icon: fas circle-info
@@ -38,15 +38,7 @@ Use the `toast` shortcode to display a dismissable message in the bottom-right c
 
 ## Arguments
 
-The shortcode supports the following arguments:
-
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| id          | No       | Optional id of the toast message, defaults to `toast-message-n` with sequence n. |
-| header      | No       | Optional header of the toast message. Uses the site title by default. |
-| class       | No       | Optional class attribute of the toast element. |
-{{< /table >}}
+{{< args structure="toast" group="shortcode" >}}
 
 ## Configuration
 

@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Button Group
-date: 2023-05-21
+date: 2023-12-29
 description: Use the button-group shortcode to display a group of buttons.
 layout: docs
 icon: fas ellipsis
@@ -26,11 +26,7 @@ Use the `button-group` shortcode to display a group of buttons. Add inner `<butt
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| aria-label  | No   | Optional assistive label for the button group. |
-{{< /table >}}
+{{< args structure="button-group" group="shortcode" >}}
 
 ## Examples
 

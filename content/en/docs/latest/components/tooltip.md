@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Tooltip
-date: 2023-08-27
+date: 2023-12-30
 description: Use the tooltip shortcode to display a tooltip for a hyperlink.
 layout: docs
 icon: fa message
@@ -24,15 +24,7 @@ Use the `tooltip` shortcode to display a tooltip for a hyperlink. Refer to the [
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| color       | No   | Optional theme color of the element, either "primary" (default), "secondary", "success", "danger",  "warning", "info", "light", or "dark". |
-| title       | Yes  | Title to display in the tooltip. |
-| href        | Yes  | Address for the button or hyperlink. |
-| placement   | No   | How to position the tooltip: "top" (default), "bottom", "left", or "right". |
-| class       | No   | Optional class attribute of the tooltip's button element. |
-{{< /table >}}
+{{< args structure="tooltip" group="shortcode" >}}
 
 ## Examples
 

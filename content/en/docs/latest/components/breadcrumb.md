@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Breadcrumb
-date: 2023-08-03
+date: 2023-12-29
 description: Use the breadcrumb shortcode to display the current page’s location within the site's navigational hierarchy.
 layout: docs
 icon: fas bread-slice
@@ -22,11 +22,7 @@ Use the `breadcrumb` shortcode to display the current page’s location within t
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| path        | No       | Optional path of the page, defaults to current page.
-{{< /table >}}
+{{< args structure="breadcrumb" group="shortcode" >}}
 
 ## Frontmatter configuration
 
