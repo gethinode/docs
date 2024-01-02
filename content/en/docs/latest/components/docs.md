@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Docs
-date: 2023-08-05
+date: 2024-01-02
 description: The docs shortcode captures a code snippet from a supported input file.
 layout: docs
 icon: fas bookmark
@@ -87,7 +87,7 @@ Provide a path that starts with `./` to use the path of the repository as base p
 
 ### Collapsed code snipppet
 
-Set `show` to `false` to hide the code snippet on page load. The code is reveiled when clicking the tab control.
+Set `show` to `false` to hide the code snippet on page load. The code is revealed when clicking the tab control.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

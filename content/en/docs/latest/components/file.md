@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: File
-date: 2023-08-05
+date: 2024-01-02
 description: The file shortcode prints the full content of any given file with syntax highlighting.
 layout: docs
 icon: fa file-lines
@@ -54,7 +54,7 @@ Provide a path that starts with `./` to use the path of the repository as base p
 
 ### Collapsed file preview
 
-Set `show` to `false` to hide the file content on page load. The content is reveiled when clicking the tab control.
+Set `show` to `false` to hide the file content on page load. The content is revealed when clicking the tab control.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
