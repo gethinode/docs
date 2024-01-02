@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Icon
-date: 2023-11-05
+date: 2024-01-02
 description: Use the icon shortcode to add a Font Awesome icon with ease.
 layout: docs
 icon: fa font-awesome
@@ -12,7 +12,7 @@ tags: component
 
 {{< release version="v0.8.0" >}}
 
-Use the `icon` shortcode to quickly add a Font Awesome icon to your content. You can also use `fa` for regular icons, `fab` for brand icons, and `fas` for solid icons. As an example, the following shortcodes show a square check, a brand logo, and a circle check.
+Use the `icon` shortcode to quickly add a Font Awesome icon to your content. You can also use `fa` for regular icons, `fab` for brand icons, and `fas` for solid icons. As an example, the following shortcodes show a square check, a brand logo, a circle check, and a custom icon.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -41,6 +41,8 @@ The shortcode supports both unnamed arguments and named arguments. When using un
 | spacing   | No | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional flag to add a trailing whitespace character to optimize inline rendering, defaults to "true". |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
+
+{{< args structure="icon" group="shortcode" >}}
 
 ## Remarks
 
