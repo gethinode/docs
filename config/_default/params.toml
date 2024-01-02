@@ -214,15 +214,6 @@
     images = ["logo.png"]
     locale = "en_US"
 
-[comments]
-    enabled = false
-    repo = "" # Replace with your repository.
-    #issueTerm = "pathname" # pathname, url, title, og:title
-    #label = "comment"
-    # By default, light and dark mode correspond to github-light and github-dark, respectively.
-    # Optional values: github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
-    #theme = "" 
-
 [links]
     angular_commit = "https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines"
     azure = "https://azure.microsoft.com"
@@ -385,7 +376,6 @@
     semver = "https://semver.org"
     siteground_compression = "https://www.siteground.com/blog/brotli-vs-gzip-compression"
     stylelint = "https://stylelint.io"
-    utterances = "https://utteranc.es"
     vscode_download = "https://code.visualstudio.com/download"
     wcag_contrast = "https://www.w3.org/TR/WCAG20/#visual-audio-contrast"
     webfonts_helper = "https://gwfh.mranftl.com"
