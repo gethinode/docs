@@ -60,6 +60,7 @@ Hinode is fully open source. By default, the theme adds a link to Hinode in the 
   [minify.tdewolff.html]
     keepWhitespace = true
 ```
+
 {{< /alert >}}
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:

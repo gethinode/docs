@@ -43,6 +43,7 @@ The shortcode supports a single unnamed parameter, or various named parameters. 
   [minify.tdewolff.html]
     keepWhitespace = true
 ```
+
 {{< /alert >}}
 
 You can [configure the behavior of managed links]({{< relref "layout#extended-configuration" >}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section. Manage the named links in the `links` section of the same file:
