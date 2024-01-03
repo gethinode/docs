@@ -1,7 +1,7 @@
 ---
 title: License
 description: Hinode's open-source license for the codebase and documentation.
-date: 2023-12-24
+date: 2024-01-01
 layout: docs
 aliases:
   - "/docs/about/license/"
@@ -11,7 +11,7 @@ aliases:
 
 ## Codebase
 
-The codebase of Hinode is open source under the conditions of the {{< link license >}}MIT license{{< /link >}} and is copyright &copy; 2023 by Mark Dumay. In short, the MIT license allows you to use the Hinode codebase for both personal and commercial use, as long as you include the original license and copyright notice. Licensed works, modifications, and larger works may be distributed under different terms and without source code. No liability or warranty is given.
+The codebase of Hinode is open source under the conditions of the {{< link license >}}MIT license{{< /link >}} and is copyright &copy; 2024 by Mark Dumay. In short, the MIT license allows you to use the Hinode codebase for both personal and commercial use, as long as you include the original license and copyright notice. Licensed works, modifications, and larger works may be distributed under different terms and without source code. No liability or warranty is given.
 
 ## Documentation
 

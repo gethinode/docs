@@ -1,8 +1,8 @@
 ---
 author: Mark Dumay
 title: Collapse
-date: 2023-12-29
-description: Use the collapse shortcode to reveil or hide a panel.
+date: 2024-01-02
+description: Use the collapse shortcode to reveal or hide a panel.
 layout: docs
 icon: fa eye-slash
 tags: component
@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-Use the `collapse` shortcode to reveil or hide a panel. The panel can contain both HTML code and plain text. Link a button to the panel by assigning it's ID to the `collapse` attribute. As an example, the following shortcode displays a button that, when clicked, triggers a panel to appear or disappear.
+Use the `collapse` shortcode to reveal or hide a panel. The panel can contain both HTML code and plain text. Link a button to the panel by assigning it's ID to the `collapse` attribute. As an example, the following shortcode displays a button that, when clicked, triggers a panel to appear or disappear.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

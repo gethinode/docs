@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Map
-date: 2023-08-03
+date: 2024-01-02
 description: Use the map shortcode to show an interactive map.
 layout: docs
 icon: fa map
@@ -13,7 +13,7 @@ modules: ["leaflet"]
 
 {{< release version="v0.16.0" >}}
 
-Use the map shortcode to show an interactive map, powered by {{< link leaflet >}}Leaflet{{< /link >}}. The shortcode is a simplified wrapper of the Leaflet library that provides basic functionality. As an example, the following shortcode displays an interactive map of the city of Amsterdam.
+Use the map shortcode to show an interactive map, powered by {{< link leaflet >}}Leaflet{{< /link >}}. The shortcode is a wrapper of the Leaflet library that provides basic functionality. As an example, the following shortcode displays an interactive map of the city of Amsterdam.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -25,18 +25,7 @@ Use the map shortcode to show an interactive map, powered by {{< link leaflet >}
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| id          | No       | Optional unique id of the map element, e.g. `leaflet-map-1`. |
-| class       | No       | Optional class attribute of the inner panel element, defaults to `ratio ratio-16x9 w-100 mx-auto`. |
-| lat         | No       | Latitude of the map center, defaults to `52.377`. |
-| long        | No       | Longitude of the map center, defaults to `4.90`. |
-| zoom        | No       | Initial map zoom level between 1 (minimum zoom) - 18 (maximum zoom), defaults to `13`. |
-| popup       | No       | Optional text of a popup marker. |
-| popup-lat   | No       | Latitude of the popup marker. |
-| popup-long  | No       | Longitude of the popup marker. |
-{{< /table >}}
+{{< args structure="map" group="shortcode" >}}
 
 ## Configuration
 

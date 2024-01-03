@@ -2,6 +2,7 @@
 author: Mark Dumay
 title: Creating your first site with Hinode
 date: 2023-04-03
+lastmod: 2024-01-02
 description: Guide on how to set up your site with version control using npm, GitHub and VSCode.
 tags: ["guide", "vscode"]
 weight: 10
@@ -102,7 +103,7 @@ The `mod:update` script requires some explanation. The command is defined in `pa
 "mod:vendor": "rimraf _vendor && hugo mod vendor",
 ```
 
-The update command chains several commands that each need to run successfully (hence the `&&` instructions). Click on each seperate command to reveil the context.
+The update command chains several commands that each need to run successfully (hence the `&&` instructions). Click on each seperate command to reveal the context.
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}

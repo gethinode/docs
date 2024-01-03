@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2023-10-21
+date: 2024-01-03
 aliases:
   - "/docs/contribute/"
   - "/contribute/"
@@ -92,6 +92,10 @@ Hinode supports Hugo modules to to provide a flexible and extensible modular fra
 ## Coding guidelines
 
 In general, run `npm run lint` before committing to ensure your changes follow our coding standards.
+
+### Partials and shortcodes
+
+{{< link "docs/advanced-settings/partial-development" >}}Follow the coding conventions for partial development{{< /link >}}.
 
 ### HTML
 

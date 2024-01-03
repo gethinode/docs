@@ -30,7 +30,6 @@
     - title: Documentation
     - title: Analytics
     - title: Modules
-    # - title: Comments
 
 # - title: Forms
 #   pages:
@@ -98,6 +97,7 @@
     - title: Styles
     - title: Scripts
     - title: Icons
+    - title: Partial development
     - title: Module development
     # - title: Metadata
     - title: Server headers

@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Animation
-date: 2023-09-24
+date: 2024-01-02
 description: Use the animation shortcode to show an After Effects animation.
 layout: docs
 icon: fa circle-play
@@ -25,17 +25,7 @@ Use the animation shortcode to show an After Effects animation, powered by {{< l
 
 The shortcode supports the following arguments:
 
-{{< table >}}
-| Argument    | Required | Description |
-|-------------|----------|-------------|
-| id          | No       | Optional unique id of the animation element, e.g. `lottie-animation-1`. |
-| class       | No       | Optional class attribute of the container element. |
-| data        | Yes      | Required path of the JSON file that contains the animation, relative to the `static` folder. |
-| loop        | No       | Flag to indicate the animation should play in a loop, defaults to `true`. |
-| auto        | No       | Flag to indicate the animation should start playing automatically, defaults to `true`. |
-| hover       | No       | Flag to indicate the animation should start playing when hovering the mouse over it, defaults to `false`. |
-| title       | No       | Optional accessible animation title. |
-{{< /table >}}
+{{< args structure="animation" group="shortcode" >}}
 
 ## Configuration
 
