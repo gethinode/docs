@@ -138,6 +138,8 @@ github.com/gethinode/hinode v0.22.0-beta5 h1:N2cMlkfeLeDoEZ7p+qND+kWKDzsbV7DnIwh
 github.com/gethinode/hinode v0.22.0-beta5/go.mod h1:C6aOmnjJCmAtlTPSv1xWyE9FZPir08l4B9uL5I/AXt0=
 github.com/gethinode/hinode v0.22.0-beta6 h1:PO5+hwY7IwV5d1qVc/jUnuKgdZvi7d/z/szC45MTJ8Q=
 github.com/gethinode/hinode v0.22.0-beta6/go.mod h1:YKCuIkYrXpkT+CxmtdGR+mhfzBQsUY74ceDBb7QjaGQ=
+github.com/gethinode/hinode v0.22.0-beta7 h1:+9/RPxdBgtXojOteBKOPf26IsV/u8q/lQrgyp36Z2G0=
+github.com/gethinode/hinode v0.22.0-beta7/go.mod h1:tGj2yUKDZTsuNZLjs8OJsn4etrn3V2mOwn4KZF7V2hY=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
@@ -196,6 +198,8 @@ github.com/gethinode/mod-fontawesome v1.6.1 h1:iqOgDGdw7Bs4hnzjF/8JsUn10omyKQZTg
 github.com/gethinode/mod-fontawesome v1.6.1/go.mod h1:Ki1qkWEOiF0hQpCgWeZRw+HkpL6nd1DxKFptU0O2feI=
 github.com/gethinode/mod-fontawesome v1.7.3 h1:YzRCYSasVRIcImVmTJYjqNJ+KmyNWfm/bMgtM0slvzs=
 github.com/gethinode/mod-fontawesome v1.7.3/go.mod h1:Ki1qkWEOiF0hQpCgWeZRw+HkpL6nd1DxKFptU0O2feI=
+github.com/gethinode/mod-fontawesome v1.8.0 h1:YEuCmvCdzcemF1eFK35Wnp1asKKO3/xbxGArnjq6PRY=
+github.com/gethinode/mod-fontawesome v1.8.0/go.mod h1:uvuC2YL8mdXNp6NRzFOu4TWsHvtY9AZ8YxJkF23/M/8=
 github.com/gethinode/mod-katex v1.0.2 h1:pIG4n3qLl/IVe7BEiwn+GL8r5lOCtF6FDxlcrPKdAXk=
 github.com/gethinode/mod-katex v1.0.2/go.mod h1:byAfpI3wuqNJIooTGVEGc1cjBhhCy4+CcK1H6495MYg=
 github.com/gethinode/mod-katex v1.0.3 h1:fvlUWqcUQqv2zRNM2kfmJ6GhXA816Tl1nfVrUkmBStI=
@@ -212,8 +216,14 @@ github.com/gethinode/mod-leaflet v0.3.4 h1:oY+YQ0JiJuhFQNrk9XgFdg0NMsTUQPXNfnILp
 github.com/gethinode/mod-leaflet v0.3.4/go.mod h1:uGggt87x4Fw7wBoJpSiUvNkYg+s/Ujne7klAX2rxMRk=
 github.com/gethinode/mod-leaflet v0.3.5 h1:69Bv/6zRXhbcTzo7TMr58h3ry47srHRpM1k81LrLbYU=
 github.com/gethinode/mod-leaflet v0.3.5/go.mod h1:uGggt87x4Fw7wBoJpSiUvNkYg+s/Ujne7klAX2rxMRk=
+github.com/gethinode/mod-leaflet v0.4.0 h1:Xc6c1UTf4m1saQLFfFWT5sEpwj25xVGuS8csGC82UUI=
+github.com/gethinode/mod-leaflet v0.4.0/go.mod h1:yr+bUKAstifdB16mbYh69OayAmgPOlNUubAmVn5eL2M=
 github.com/gethinode/mod-lottie v1.3.0 h1:vQ8CXkjdp2IeFskTzu+ZnKOEio8GtN08urVK+oCH81E=
 github.com/gethinode/mod-lottie v1.3.0/go.mod h1:erRCgSL2FCfKHI0jQbSpM+g0jXl7SjKVJrh7kWGteKs=
+github.com/gethinode/mod-lottie v1.4.0 h1:0Ls1Q/8p0gQpuX9+dtfNGKcjBNeymjE7gERdnN3lCCE=
+github.com/gethinode/mod-lottie v1.4.0/go.mod h1:57eu6glS5oxkew2dB1P2zsbhw444aRX0XfuyDe7k/dk=
+github.com/gethinode/mod-utils v1.0.0 h1:cqHm2xS5uDiJzRm1KfHaNbq6uMVDKLhQa8/BuTZ1nhY=
+github.com/gethinode/mod-utils v1.0.0/go.mod h1:ONJm3pHCq7nvaPNjusLZNCeCbhOhSBH4HVKHwK1FdYE=
 github.com/nextapps-de/flexsearch v0.0.0-20230711092928-1243fd883ec3 h1:H/qVR5O4BXjRjD+5PZB+r4ug2BSJ2Of4RtwOntd+OKo=
 github.com/nextapps-de/flexsearch v0.0.0-20230711092928-1243fd883ec3/go.mod h1:5GdMfPAXzbA2gXBqTjC6l27kioSYzHlqDMh0+wyx7sU=
 github.com/twbs/bootstrap v5.3.2+incompatible h1:tuiO5acc6xnZUR77Sbi5aKWXxjYxbmsSbJwYrhAKoQQ=
