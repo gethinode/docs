@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2023-11-14
+date: 2024-01-03
 layout: docs
 ---
 
@@ -51,6 +51,16 @@ The below configuration shows the default configuration set in `config/_default/
 
 {{< alert type="info" >}}
 Hinode is fully open source. By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled.
+{{< /alert >}}
+
+{{< alert type="danger" >}}The `--minify` flag of `hugo` purges HTML whitespace by default. Unfortunately, this also removes the spacing behind the visual cue of external links. When setting `externalLinks.cue` to `true`, be sure to add the following configuration to your main configuration to suppress the removal of whitespace:
+
+```toml
+[minify]
+  [minify.tdewolff.html]
+    keepWhitespace = true
+```
+
 {{< /alert >}}
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:

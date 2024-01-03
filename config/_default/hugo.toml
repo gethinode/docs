@@ -67,6 +67,8 @@ defaultContentLanguageInSubdir = false
     keepVarNames = true
     precision = 0
     version = 2022
+  [minify.tdewolff.html]
+    keepWhitespace = true
 
 [module]
   [module.hugoVersion]

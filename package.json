@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm run -s mod:vendor",
     "start": "hugo server --bind=0.0.0.0 --disableFastRender",
-    "start:prod": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings -e production",
+    "start:prod": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings -e production --minify",
     "prebuild": "npm run clean:public && npm run -s mod:vendor",
     "build": "hugo --gc --minify",
     "build:cache": "npm run -s prebuild && hugo --gc --minify -e ci",

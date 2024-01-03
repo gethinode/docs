@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2023-12-29
+date: 2024-01-03
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -35,6 +35,16 @@ The shortcode supports a single unnamed parameter, or various named parameters. 
 {{< args structure="link" group="shortcode" >}}
 
 ## Site configuration
+
+{{< alert type="danger" >}}The `--minify` flag of `hugo` purges HTML whitespace by default. Unfortunately, this also removes the spacing behind the visual cue of external links. Add the following configuration to your main configuration to prevent this:
+
+```toml
+[minify]
+  [minify.tdewolff.html]
+    keepWhitespace = true
+```
+
+{{< /alert >}}
 
 You can [configure the behavior of managed links]({{< relref "layout#extended-configuration" >}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section. Manage the named links in the `links` section of the same file:
 
