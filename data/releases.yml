@@ -1,5 +1,19 @@
 # This file holds all entries for the release timeline
 
+- title: Argument validation
+  icon: fas sliders
+  color: warning
+  date: 2024-01-04
+  badge: v0.22.0
+  url: v0.22.0
+  content:
+    Hinode supports more than 30 shortcodes. Most of these shortcodes support multiple arguments to configure their
+    behavior and to adjust their visual appearance. A new utility uses a data file to validate the available arguments,
+    their types, and supported values for each shortcode and underlying partial. A new shortcode
+    {{< link "docs/components/args" >}}args{{< /link >}} uses the same specification to generate shortcode
+    documentation. Visit the page about {{< link "docs/advanced-settings/partial-development/" />}} to familiarize
+    yourself with the new conventions.
+
 - title: Taxonomies
   icon: fas list
   color: primary
