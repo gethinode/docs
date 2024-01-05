@@ -1,7 +1,7 @@
 ---
 title: Tables
 description: Enhance out-of-the-box Markdown tables with Bootstrap styling.
-date: 2023-04-28
+date: 2024-01-05
 layout: docs
 ---
 
@@ -175,7 +175,7 @@ Use `none` to disable this behavior.
 
 ### Breakpoint specific
 
-Use `sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+Use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="markdown" >}}
