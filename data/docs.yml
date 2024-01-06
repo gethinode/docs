@@ -45,7 +45,6 @@
 
 - title: Components
   pages:
-    # - title: Overview
     - title: Abbr
     - title: Accordion
     - title: Alert
@@ -86,6 +85,7 @@
     - title: Spinner
     - title: Sub
     - title: Sup
+    - title: Table
     - title: Timeline
     - title: Toast
     - title: Tooltip

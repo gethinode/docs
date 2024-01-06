@@ -1,7 +1,7 @@
 ---
 title: Tables
 description: Enhance out-of-the-box Markdown tables with Bootstrap styling.
-date: 2024-01-05
+date: 2024-01-06
 layout: docs
 ---
 
@@ -141,7 +141,7 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 
 {{< release version="v0.8.0" >}}
 
-Embed the markdown table within the `table` shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens.
+Embed the markdown table within the {{< link "docs/components/table" />}} shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens.
 
 ### Always responsive
 
