@@ -14,8 +14,10 @@ tags: component
 
 {{< alert >}}
 **New in v0.22.0**
- - The prefix `table-responsive-` has been dropped to denote a responsive size. Instead, use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint.
- - Bootstrap styling attributes now require an explicit class argument. For example, use the following argument to accentuate a table with table-striped: `class="table-striped"`.
+
+- The prefix `table-responsive-` has been dropped to denote a responsive size. Instead, use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint.
+- Bootstrap styling attributes now require an explicit class argument. For example, use the following argument to accentuate a table with table-striped: `class="table-striped"`.
+
 {{< /alert >}}
 
 Use the table shortcode to make your markdown table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens. The following example illustrates how this works.
