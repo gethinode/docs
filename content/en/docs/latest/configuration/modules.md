@@ -66,9 +66,11 @@ The `fontawesome` module supports the following additional settings:
 
 The `utils` module supports the following additional settings:
 
+{{< table >}}
 | Setting                 | Default | Description |
 |-------------------------|---------|-------------|
 | utils.filter      | `[^0-9A-Za-zŽžÀ-ÿ ;.,\/'’"]` | Defines the regular expression for characters to remove from page descriptions. These page descriptions are used to define card content and metadata for search indexes. Adjust the filter to define which characters to support. You may need to adjust these settings to support specific diacritical letters. |
+{{< /table >}}
 
 Hinode uses the following module configuration by default:
 
