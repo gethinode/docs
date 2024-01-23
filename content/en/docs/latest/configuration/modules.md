@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2023-08-04
+date: 2024-01-23
 layout: docs
 ---
 
@@ -60,6 +60,16 @@ The `fontawesome` module supports the following additional settings:
 | fontawesome.inline      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon. |
 | fontawesome.debug       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
 | fontawesome.skipMissing | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
+{{< /table >}}
+
+{{< release version="v0.22.5" >}}
+
+The `utils` module supports the following additional settings:
+
+{{< table >}}
+| Setting                 | Default | Description |
+|-------------------------|---------|-------------|
+| utils.filter      | `[^0-9A-Za-zŽžÀ-ÿ ;.,\/'’"]` | Defines the regular expression for characters to remove from page descriptions. These page descriptions are used to define card content and metadata for search indexes. Adjust the filter to define which characters to support. You may need to adjust these settings to support specific diacritical letters. |
 {{< /table >}}
 
 Hinode uses the following module configuration by default:
