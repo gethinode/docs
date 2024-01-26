@@ -1,7 +1,7 @@
 ---
 title: Fonts
 description: Configure a specific font to style your website.
-date: 2023-08-04
+date: 2024-01-26
 layout: docs
 ---
 
@@ -32,6 +32,28 @@ themeFontPath = "/fonts"
 ```
 
 The font files are retrieved from the folder `static/fonts`. The {{< link webfonts_helper >}}google-webfonts-helper{{< /link >}} from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font-face definitions. Copy the definitions to the `assets/scss/theme/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
+
+### Using multiple fonts
+
+You can configure multiple fonts and apply them to different elements of your site. For example, you could pair a serif font with a sans serif font to get a more distinct look and feel. The following example configures `Fira Sans` as default font. It then configures `PT Serif` font to headings and display headings specifically.
+
+Define the font stack in `params.toml`, separating the family names by a comma:
+
+```toml
+[style]
+    themeFont = "Fira Sans, PT Serif"
+    themeFontPath = "/fonts" # local path
+```
+
+Use the {{< link webfonts_helper >}}google-webfonts-helper{{< /link >}} to download the two fonts. Copy the font files to your local `static/fonts` directory. Put the font face definitions in a new file `assets/scss/theme/fonts.scss`.
+
+Hinode now uses `Fira Sans` as default font for the entire site, as it is the first font in our custom font stack. We can then use a small stylesheet configuration to apply the serif font to our headings and display headings. Create a new file `assets/scss/theme/theme.scss` and apply the following style configuration:
+
+```scss
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'PT Serif';
+}
+```
 
 ## Customization
 
