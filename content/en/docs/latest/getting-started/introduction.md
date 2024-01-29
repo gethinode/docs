@@ -31,6 +31,10 @@ Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} t
 
 The next steps describe the approach how to initialize a new Hinode site using either Hugo or npm.
 
+{{< alert type="danger" >}}
+The installation for Windows requires PowerShell v7. Download it from the Microsoft Store as needed. Check your current version with the command `$PSVersionTable`.
+{{< /alert >}}
+
 <!-- markdownlint-disable MD005 MD029 MD037 -->
 {{< nav type="tabs" id="pills-1" >}}
   {{< nav-item header="Hugo" show="true" >}}
@@ -45,7 +49,8 @@ The next steps describe the approach how to initialize a new Hinode site using e
 
     {{</* command */>}}
     hugo mod init example.com/my-hinode-site
-    echo "[[module.imports]]\npath = 'github.com/gethinode/hinode'" >> hugo.toml
+    echo "[[module.imports]]" >> hugo.toml
+    echo "path = 'github.com/gethinode/hinode'" >> hugo.toml
     {{</* /command */>}}
 
 3. **Start a development server**
