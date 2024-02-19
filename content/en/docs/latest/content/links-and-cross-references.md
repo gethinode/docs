@@ -1,7 +1,7 @@
 ---
 title: Links and cross-references
 description: Generate internal links and external links using a combination of Markdown and Hugo shortcodes.
-date: 2023-08-04
+date: 2024-02-19
 layout: docs
 ---
 
@@ -87,7 +87,7 @@ Instead of using parentheses, you can use brackets to link to a predefined addre
 
 ### Managed links
 
-Hinode uses `config/default/params.toml` to manage links to external addresses in a single place. You can [use the link shortcode generate a managed link]({{< relref "link" >}}). The following snippet of `config/default/params.toml` defines the link address for `fontawesome`:
+Hinode uses `config/_default/params.toml` to manage links to external addresses in a single place. You can [use the link shortcode generate a managed link]({{< relref "link" >}}). The following snippet of `config/_default/params.toml` defines the link address for `fontawesome`:
 
 ```toml
 [links]
