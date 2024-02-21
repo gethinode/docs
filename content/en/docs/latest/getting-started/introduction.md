@@ -1,7 +1,7 @@
 ---
 title: Introduction
 description: Get started with Hinode, a clean documentation and blog theme for your Hugo site based on Bootstrap 5.
-date: 2023-08-15
+date: 2024-02-21
 aliases:
   - "/docs/getting-started/"
   - "/getting-started/"
@@ -30,6 +30,10 @@ Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} t
 ## Installation
 
 The next steps describe the approach how to initialize a new Hinode site using either Hugo or npm.
+
+{{< alert type="info" >}}
+In general, it is **not recommended** to fork the Hinode repository. Unlike the versioned releases, the repository `HEAD` is not guaranteed to be stable. Unless contributing to the development of Hinode, you are encouraged to use one of the installation options described below.
+{{< /alert >}}
 
 {{< alert type="danger" >}}
 The installation for Windows requires PowerShell v7. Download it from the Microsoft Store as needed. Check your current version with the command `$PSVersionTable`.
