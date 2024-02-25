@@ -13,7 +13,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 1. **Mount the JavaScript files maintained within the core modules**
 
-   Make JavaScripts defined in core modules available by mounting them into a seperate `assets/js/modules/{MODULE NAME}/` folder for each module. Adjust the mount points in `config/_default/hugo.toml` as needed.
+   Make JavaScripts defined in core modules available by mounting them into a separate `assets/js/modules/{MODULE NAME}/` folder for each module. Adjust the mount points in `config/_default/hugo.toml` as needed.
 
 2. **Add the local JavaScript files**
 
