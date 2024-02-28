@@ -9,7 +9,7 @@ Hinodes supports the configuration of documentation pages. You can either mainta
 
 ## Basic configuration
 
-The configuration of the documentation pages is set in the `docs` section of the site parameters. The folllowing settings are supported:
+The configuration of the documentation pages is set in the `docs` section of the site parameters. The following settings are supported:
 
 {{< table >}}
 | Setting      | Default | Description |

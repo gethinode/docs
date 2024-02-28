@@ -33,11 +33,11 @@ JavaScripts should be mounted in `assets/js/modules/{MODULE}/`. Hinode bundles t
 
 ## Automation
 
-Hinode modules use GitHub actions to keep dependencies up-to-date and to publish new releases automatically. Review the following sections how to configure dependency upgrades, how to automate Pull Requests merges, and how to publish new releases after each succesful merge.
+Hinode modules use GitHub actions to keep dependencies up-to-date and to publish new releases automatically. Review the following sections how to configure dependency upgrades, how to automate Pull Requests merges, and how to publish new releases after each successful merge.
 
 ### Dependency upgrades
 
-You can configure {{< link dependabot >}}Dependabot{{< /link >}} or set up a custom GitHub action to automatically upgrade your dependencies. The applicable approach depends wether you use npm packages or Hugo modules as your module source. Review the next two section how to configure automated dependency upgrades.
+You can configure {{< link dependabot >}}Dependabot{{< /link >}} or set up a custom GitHub action to automatically upgrade your dependencies. The applicable approach depends whether you use npm packages or Hugo modules as your module source. Review the next two section how to configure automated dependency upgrades.
 
 #### npm package upgrades
 
@@ -178,7 +178,7 @@ Hugo modules have several constraints to work properly. The below overview provi
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="The required distibution files are unavailable" >}}
+  {{< accordion-item header="The required distribution files are unavailable" >}}
     Hugo modules use the latest available release on GitHub, or the most recent HEAD of the default branch otherwise. However, not all repositories maintain their distribution files as part of version control or their GitHub release assets. One such example is the {{</* link leaflet >}}Leaflet library{{< /link */>}}. The repository does not include the compiled JavaScript, but only its source files. As a workaround, the {{</* link repository_mod_leaflet >}}Leaflet module{{< /link */>}} downloads the npm package instead and copies the required files in a `postinstall` script.
   {{< /accordion-item >}}
   {{< accordion-item header="The available releases do not adhere to semantic versioning" >}}

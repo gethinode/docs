@@ -17,7 +17,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 2. **Configure the build timeout**
 
-   You might encounter timeout errors when you generate a large site that contains many resources (such as images). Adjust the `timout` in `config/_default/hugo.toml` as needed.
+   You might encounter timeout errors when you generate a large site that contains many resources (such as images). Adjust the `timeout` in `config/_default/hugo.toml` as needed.
 
    {{< docs name="timeout" file="config/_default/hugo.toml" >}}
 
@@ -117,7 +117,7 @@ Deploy your site to Azure blob storage in six steps.
     {{</* /nav */>}}
   {{< /accordion-item >}}
   {{< accordion-item header="Step 5. Deploy the files" >}}
-    Deploy the files to your Azure blob storage using the folling command. Add `--dryRun` to review the upload before actually publishing the files.
+    Deploy the files to your Azure blob storage using the following command. Add `--dryRun` to review the upload before actually publishing the files.
     {{</* command user="user" host="localhost" */>}}
     hugo deploy
     {{</* /command */>}}
@@ -152,7 +152,7 @@ You can make your static website available via a custom domain. Visit the {{< li
 
 ## Host on Netlify
 
-Netlify can host your website with continous deployment from your Git provider. The starter price plan is free for any public repository and provides 100 GB bandwidth and 300 build minutes each month. Review the next sections how to automatically deploy your site to Netlify on each update to the main branch of your repository.
+Netlify can host your website with continuous deployment from your Git provider. The starter price plan is free for any public repository and provides 100 GB bandwidth and 300 build minutes each month. Review the next sections how to automatically deploy your site to Netlify on each update to the main branch of your repository.
 
 {{< alert type="info" >}}
 The starter plan requires your repository to be public. You will require a paid plan if your repository is set to private.

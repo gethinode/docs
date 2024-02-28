@@ -16,7 +16,7 @@ thumbnail:
 
 Providing up-to-date and accurate documentation is an important aspect of many software products. Hinode supports [sidebar navigation]({{< relref "navigation#sidebar-navigation" >}}) to help your users find the relevant content. However, as your software evolves, you might need to support different versions too. This guides illustrates how you can use Hinode to maintain versioned documentation.
 
-The next paragraphs explain two main strategies. The first strategy is to maintain seperate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
+The next paragraphs explain two main strategies. The first strategy is to maintain separate content folders in your repository. The second strategy uses so-called multi-branch deployments to publish a specific repository branch. You will need a [Netlify account]({{< relref "hosting-and-deployment#host-on-netlify" >}}) to be able to test the multi-branch deployment.
 
 <!-- markdownlint-disable MD037 -->
 {{< alert type="info" >}}
@@ -36,7 +36,7 @@ We will now create a new site using the Hinode template. Follow the **first step
 
 For the purpose of this guide we will support the English language only. Be sure to create a new branch first, so you can test any changes before publishing them. The remainder of this guide uses the `develop` branch for development and the `main` branch for production.
 
-Follow the steps decribed in the language configuration to [discard the localized content for the Dutch language]({{< relref "languages#discarding-localization" >}}). Start a local server to test the site is working as expected. Navigate in your browser to the local address (`http://localhost:1313/` by default) to visually inspect the site.
+Follow the steps described in the language configuration to [discard the localized content for the Dutch language]({{< relref "languages#discarding-localization" >}}). Start a local server to test the site is working as expected. Navigate in your browser to the local address (`http://localhost:1313/` by default) to visually inspect the site.
 
 {{< command user="user" host="localhost" prompt="version-demo $" >}}
 npm run start
@@ -246,7 +246,7 @@ By default, any changes submitted to the `v0.9` branch are processed and release
 
 {{< image src="img/versioning-0-9.png" mode="true" caption="Branch-deployed site for release v0.9" class="border" wrapper="col-sm-12 col-lg-8 mx-auto" >}}
 
-Test if the branch is deployed sucessfully by navigating to `https://{branch}--{sitename}.netlify.app/`. The default `netlify.toml` file in the repository root has enabled `netlify.app` in the Content Security Policy by default. [Review and adjust the server headers]({{< relref "server-headers" >}}) as needed.
+Test if the branch is deployed successfully by navigating to `https://{branch}--{sitename}.netlify.app/`. The default `netlify.toml` file in the repository root has enabled `netlify.app` in the Content Security Policy by default. [Review and adjust the server headers]({{< relref "server-headers" >}}) as needed.
 
 ## Step 4 - Updating the main site
 

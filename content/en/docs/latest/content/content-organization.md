@@ -15,7 +15,7 @@ Hinode recognizes three basic types of pages:
 - **Single pages** define a specific page that get published to a specific permalink
 - **Content snippets** provide input for a specific page, but do not have a permalink of their own
 
-All content resides in the `content` folder of the repository. The content for [multilanguage sites]({{< relref "languages" >}}) uses seperate subfolders for each language directly below the `content` folder. Usually a list page is defined by having an `_index.md` within its folder. A notable exception is the home page, which is defined in the `content` root folder. The next diagram illustrates a typical initial setup for a Hinode website that supports the English language.
+All content resides in the `content` folder of the repository. The content for [multilanguage sites]({{< relref "languages" >}}) uses separate subfolders for each language directly below the `content` folder. Usually a list page is defined by having an `_index.md` within its folder. A notable exception is the home page, which is defined in the `content` root folder. The next diagram illustrates a typical initial setup for a Hinode website that supports the English language.
 
 ```text
 .

@@ -9,7 +9,7 @@ Hinode supports several types of navigation that utilize Bootstrap elements. The
 
 ## Basic configuration
 
-The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The folllowing settings are supported:
+The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The following settings are supported:
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
@@ -136,7 +136,7 @@ The breadcrumb is also available as [shortcode]({{< ref "breadcrumb" >}}).
 
 ## Table of contents
 
-Single pages can optionally show an {{< link hugo_toc >}}table of contents{{< /link >}} on the right of the screen. The table of contents is automatically popuplated based on the headings within the page content (two levels deep). The table of contents is hidden if it has less than two items. On smaller screens, a drop-down menu is added to the top of the page. Enable the table of contents in the [basic navigation configuration](#basic-configuration). If enabled, all single pages will show the element, unless disabled in the page's frontmatter.
+Single pages can optionally show an {{< link hugo_toc >}}table of contents{{< /link >}} on the right of the screen. The table of contents is automatically populated based on the headings within the page content (two levels deep). The table of contents is hidden if it has less than two items. On smaller screens, a drop-down menu is added to the top of the page. Enable the table of contents in the [basic navigation configuration](#basic-configuration). If enabled, all single pages will show the element, unless disabled in the page's frontmatter.
 
 ### Customization
 
