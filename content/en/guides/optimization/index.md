@@ -39,7 +39,7 @@ Images, media files, and `<script>` tags placed at the bottom of the `<body>` se
 
 ## Step 1 - Setting up the test case
 
-We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunites for improvement. If not done so already, {{< link google_chrome >}}download and install Chrome{{< /link >}} from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm.
+We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunities for improvement. If not done so already, {{< link google_chrome >}}download and install Chrome{{< /link >}} from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm.
 
 {{< command >}}
 git clone https://github.com/gethinode/docs.git && cd docs

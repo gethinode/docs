@@ -29,7 +29,7 @@ Hinode anonymizes the visitor's IP address when the client sends a Do Not Track 
 
 ### Local development
 
-By default, analytics is disabled when running on a local machine to prevent polution of the gathered insights. Modify the condition `(not site.IsServer)` as needed.
+By default, analytics is disabled when running on a local machine to prevent pollution of the gathered insights. Modify the condition `(not site.IsServer)` as needed.
 
 The file `assets/js/analytics.js` defines the JavaScript template that is ingested into the main bundle.
 

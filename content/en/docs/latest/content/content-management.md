@@ -15,7 +15,7 @@ Markdown is a simple and easy-to-use markup language. It uses formatting element
 
 ### Front matter
 
-Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the {{< abbr YAML >}} format by default, denoted by `---` as the opening and closing tags. The folllowing example shows the front matter of the page you are currently reading.
+Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the {{< abbr YAML >}} format by default, denoted by `---` as the opening and closing tags. The following example shows the front matter of the page you are currently reading.
 
 ```yml
 ---

@@ -116,7 +116,7 @@ Use `title`, `thumbnail`, `icon`, and inner content to define the card's content
 
 ### Custom styling
 
-Use the `class` argument to customize the styling of the card. The folllowing example applies the style `card-shrink` to apply an animation effect when hovering over the card.
+Use the `class` argument to customize the styling of the card. The following example applies the style `card-shrink` to apply an animation effect when hovering over the card.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

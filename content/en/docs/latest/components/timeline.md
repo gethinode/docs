@@ -38,7 +38,7 @@ Define a file in the `data` folder that contains the timeline data. The format s
 | color     | No  | Optional [theme color]({{< relref "colors" >}}) of the timeline element, defaults to `primary`. |
 | date      | No  | Optional date of the timeline element, placed below the title. |
 | badge     | No  | Optional label of a [pill badge]({{< relref "badge#pill-badges" >}}) placed next to the title. |
-| url       | No  | Optional url of the timeline element, added as link to the title when set. The url is joined with the `release` attribute of the [documentation configuration]({{< relref "documentation#basic-configuration" >}}), unless the url is abolute (e.g. starts with `http`). |
+| url       | No  | Optional url of the timeline element, added as link to the title when set. The url is joined with the `release` attribute of the [documentation configuration]({{< relref "documentation#basic-configuration" >}}), unless the url is absolute (e.g. starts with `http`). |
 | content   | No  | Optional content of the timeline element, supports markdown. |
 {{< /table >}}
 

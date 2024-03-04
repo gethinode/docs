@@ -69,7 +69,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 {{< table >}}
 | Setting            | Default           | Description |
 |--------------------|-------------------|-------------|
-| separator          | "-"               | Seperator to join the website title and page title. |
+| separator          | "-"               | Separator to join the website title and page title. |
 | description        | -                 | Short description of the website that is added to the page metadata. |
 | enableDarkMode     | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
@@ -162,7 +162,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## Home page
 
-The home page introduces a feature section and several [configurable sections]({{< relref "#page-sections" >}}). The default home page of Hinode displays the three most recent blog posts and projects, each rendered as cards in a seperate section. A button that links to the related list page is added below each group. The feature section can optionally cover the entire viewscreen.
+The home page introduces a feature section and several [configurable sections]({{< relref "#page-sections" >}}). The default home page of Hinode displays the three most recent blog posts and projects, each rendered as cards in a separate section. A button that links to the related list page is added below each group. The feature section can optionally cover the entire viewscreen.
 
 ### Example
 
@@ -184,7 +184,7 @@ Feature .col-12 .flex-fill
 
 ### Configuration
 
-The configuration of the home page is set in the `home` section of the `site parameters`. The folllowing settings are supported:
+The configuration of the home page is set in the `home` section of the `site parameters`. The following settings are supported:
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
@@ -358,7 +358,7 @@ Please refer to the [content management section]({{< relref "content-management#
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
-The configuration of the **documentation pages** is set in the `docs` section of the site parameters. The folllowing settings are supported:
+The configuration of the **documentation pages** is set in the `docs` section of the site parameters. The following settings are supported:
 
 {{< table >}}
 | Setting      | Default | Description |
@@ -379,7 +379,7 @@ Both the home page and the list page use one or more page sections to display a 
 
 ### Card layout
 
-The card layout displays a group of cards in a grid. The default setting is to show nine items at a time. You can adjust these settings in the [page section configuration]({{< relref "#configurtion-4" >}}), including the style of the cards themselves. Refer to the [card shortcode documentation]({{< relref "card" >}}) to review the available card styles. The next diagram illustrates a typical card layout.
+The card layout displays a group of cards in a grid. The default setting is to show nine items at a time. You can adjust these settings in the [page section configuration]({{< relref "#configuration-4" >}}), including the style of the cards themselves. Refer to the [card shortcode documentation]({{< relref "card" >}}) to review the available card styles. The next diagram illustrates a typical card layout.
 
 {{< card-group color="info" cols="3" padding="3" gutter="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}Item 1{{< /card >}}
@@ -419,7 +419,7 @@ The nav layout shows a nav element where each tab pane represents a single item 
 
 ### Configuration
 
-The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The folllowing settings are supported per section:
+The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The following settings are supported per section:
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
@@ -443,7 +443,7 @@ The `card` layout supports the following additional arguments:
 {{< table >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
-| cols         | 3            | Number of columns to display in the card group, should be a value betweeen 1 and 5. The default value is 3. |
+| cols         | 3            | Number of columns to display in the card group, should be a value between 1 and 5. The default value is 3. |
 | padding      | "auto"       | Padding of the content, either "0", "1", "2", "3", "4", "5", or "auto" (default). |
 | header       | "full"       | Header components of the card, displayed in small caps. Supported values are "full" (default), "publication", "tags", and "none". |
 | footer       | "none"       | Footer components of the card, displayed in small caps. Supported values are "full", "publication", "tags", and "none" (default). |

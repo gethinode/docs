@@ -225,7 +225,7 @@ Use the `-` character to denote an unordered list.
 
 ### Nested list
 
-Use indendation and the `-` character to denote a nested list.
+Use indentation and the `-` character to denote a nested list.
 
 {{< example lang="markdown" >}}
 
@@ -251,11 +251,11 @@ Use the `-` character followed by either `[x]` or `[ ]` to indicate a (completed
 
 {{< /example >}}
 
-## Mathemetical formulas
+## Mathematical formulas
 
 {{< release version="v0.16.0" >}}
 
-Use {{< link katex >}}KaTeX{{< /link >}} to add mathemetical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
+Use {{< link katex >}}KaTeX{{< /link >}} to add mathematical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
 
 {{< example lang="markdown" >}}
 This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula

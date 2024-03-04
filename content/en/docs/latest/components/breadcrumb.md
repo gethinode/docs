@@ -28,7 +28,7 @@ The shortcode supports the following arguments:
 
 {{< release version="v0.14.1" >}}
 
-Hugo has the option to {{< link hugo_build >}}exclude certain pages from publishing{{< /link >}} using the build options in the page's frontmatter. These pages do not have a permalink, but are still part of the breadcrumb. You can set the optional paramater `redirect` to an alternative path if needed.
+Hugo has the option to {{< link hugo_build >}}exclude certain pages from publishing{{< /link >}} using the build options in the page's frontmatter. These pages do not have a permalink, but are still part of the breadcrumb. You can set the optional parameter `redirect` to an alternative path if needed.
 
 The following example is taken from the `content/en/docs/_index.md` page, which is the list page of the `docs` section in the {{< link repository_docs >}}Hinode docs repository{{< /link >}}. The docs section itself is redirected to the page `docs/getting-started/introduction/` using an alias in the frontmatter of the introduction page. The `redirect` parameter in the `_index.md` page instructs the breadcrumb to create a redirect to that same alias.
 

@@ -103,7 +103,7 @@ The `mod:update` script requires some explanation. The command is defined in `pa
 "mod:vendor": "rimraf _vendor && hugo mod vendor",
 ```
 
-The update command chains several commands that each need to run successfully (hence the `&&` instructions). Click on each seperate command to reveal the context.
+The update command chains several commands that each need to run successfully (hence the `&&` instructions). Click on each separate command to reveal the context.
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
@@ -258,7 +258,7 @@ By convention, a commit message should use the imperative mood and should be les
 {{< /alert >}}
 <!-- markdownlint-enable MD037 -->
 
-VSCode highlights two additional changes, one being our new post and the other a file called `hugo_stats.json`. This latter file is used by the purger to avoid required styles are removed unintentionally. Check the guide about [optimizing the user experience]({{< relref "optimization" >}}) for an elaborate deep-dive. Stage and commit these two changes too. Lastly, click on the blue button `Publish Branch` to submit tbe branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
+VSCode highlights two additional changes, one being our new post and the other a file called `hugo_stats.json`. This latter file is used by the purger to avoid required styles are removed unintentionally. Check the guide about [optimizing the user experience]({{< relref "optimization" >}}) for an elaborate deep-dive. Stage and commit these two changes too. Lastly, click on the blue button `Publish Branch` to submit the branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
 
 ## Step 4 - Submitting a Pull Request
 

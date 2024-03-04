@@ -29,7 +29,7 @@ The shortcode supports a single unnamed argument, which maps to the `key` argume
 
 ## Data format
 
-Define a file in the `data` folder that contains the abbrevation data. The format expects the following attributes:
+Define a file in the `data` folder that contains the abbreviation data. The format expects the following attributes:
 
 {{< table >}}
 | Attribute | Required | Description |
