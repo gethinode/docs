@@ -1,5 +1,20 @@
 # This file holds all entries for the release timeline
 
+
+- title: Maintenance
+  icon: fas screwdriver-wrench
+  color: info
+  date: 2024-03-17
+  badge: v0.23.0
+  url: v0.23.0
+  content:
+    This release is mostly a maintenance release that refactors several assets. It introduces several changes to ensure
+    Hinode is fully compatible with Hugo `v0.123.x` and `v0.124.0`. With Hugo's recent improvements, you can expect a
+    reduction of build times. Behind the scenes, this release introduces several changes to prepare for an upcoming
+    overhaul of the page rendering. Using so-called content blocks, a future release of Hinode will support composable
+    page elements such as a hero section, about section, and more. A sneak preview is available on
+    https://theme-agency.gethinode.com/en/.
+
 - title: Argument validation
   icon: fas sliders
   color: warning
