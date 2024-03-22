@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2024-01-03
+date: 2024-03-22
 layout: docs
 ---
 
@@ -114,8 +114,8 @@ Hinode can optionally add buttons to share a post via available social media. Us
 {{< table >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
-| enabled         | false         | Define if social sharing should be enabled for all single pages. You can override this setting by adding `enabled` to the individual page's frontmatter.
-| sort            | "weight"      | Sorting key to be used, either "name" or "weight". You can also reference a custom key defined in the provider configuration. |
+| enabled         | false         | Define if social sharing should be enabled for all single pages. You can override this setting by adding `sharing: false` to the individual page's frontmatter.
+| sort            | "weight"      | Sorting key to be used, either `name` or `weight`. You can also reference a custom key defined in the provider configuration. |
 | reverse         | false         | Flag to indicate if the sorting of the social sharing buttons should be reversed, defaults to false. |
 | webshare        | false         | Flag to indicate if native sharing provided by the Operating System should be enabled (via the web share API). If set and {{</* link caniuse_webshare >}}supported by the browser{{< /link */>}}, an additional button is added. |
 {{< /table >}}
