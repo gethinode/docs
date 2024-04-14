@@ -168,7 +168,7 @@ The following Markdown generates a blockquote with attribution. The citation its
 {{< example lang="markdown" >}}
 > Don't communicate by sharing memory, share memory by communicating.
 >
-> — *Rob Pike[^1]*
+> — _Rob Pike[^1]_
 {.blockquote}
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
