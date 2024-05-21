@@ -1,7 +1,7 @@
 ---
 title: Module development
 description: Develop your own Hugo modules compatible with Hinode.
-date: 2023-09-02
+date: 2024-05-21
 layout: docs
 ---
 
@@ -37,7 +37,7 @@ Hinode modules use GitHub actions to keep dependencies up-to-date and to publish
 
 ### Dependency upgrades
 
-You can configure {{< link dependabot >}}Dependabot{{< /link >}} or set up a custom GitHub action to automatically upgrade your dependencies. The applicable approach depends whether you use npm packages or Hugo modules as your module source. Review the next two section how to configure automated dependency upgrades.
+You can configure {{< link dependabot >}}Dependabot{{< /link >}} or set up a custom GitHub action to automatically upgrade your dependencies. The applicable approach depends whether you use npm packages or Hugo modules as your module source. Review the next two sections how to configure automated dependency upgrades.
 
 #### npm package upgrades
 
