@@ -41,11 +41,16 @@ You can configure {{< link dependabot >}}Dependabot{{< /link >}} or set up a cus
 
 #### npm package upgrades
 
-{{< link dependabot >}}Dependabot{{< /link >}} automatically keeps the dependencies and npm packages used in your repository updated to the latest version. The Hinode module template includes a basic configuration that is enabled by default. It checks for any version updates on a daily basis. The configuration is defined in `.github/dependabot.yml` and includes a commit-message that is used for [release automation]({{< relref "#release-automation" >}}).
+{{< link dependabot >}}Dependabot{{< /link >}} automatically keeps the dependencies and npm packages used in your repository updated to the latest version. The Hinode module template includes a basic configuration that is enabled by default. It checks for any version updates on a daily basis. Additionally, it checks for updates to GitHub actiob every week. The configuration is defined in `.github/dependabot.yml` and includes a commit-message that is used for [release automation]({{< relref "#release-automation" >}}).
 
 ```yml
 version: 2
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
   - package-ecosystem: npm
     directory: "/"
     schedule:
@@ -53,6 +58,7 @@ updates:
     commit-message:
       prefix: fix
       include: scope
+    versioning-strategy: increase
 ```
 
 #### Hugo module upgrades
