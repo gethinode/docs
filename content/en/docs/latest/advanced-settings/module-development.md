@@ -1,7 +1,7 @@
 ---
 title: Module development
 description: Develop your own Hugo modules compatible with Hinode.
-date: 2024-05-21
+date: 2024-05-22
 layout: docs
 ---
 
@@ -41,11 +41,16 @@ You can configure {{< link dependabot >}}Dependabot{{< /link >}} or set up a cus
 
 #### npm package upgrades
 
-{{< link dependabot >}}Dependabot{{< /link >}} automatically keeps the dependencies and npm packages used in your repository updated to the latest version. The Hinode module template includes a basic configuration that is enabled by default. It checks for any version updates on a daily basis. The configuration is defined in `.github/dependabot.yml` and includes a commit-message that is used for [release automation]({{< relref "#release-automation" >}}).
+{{< link dependabot >}}Dependabot{{< /link >}} automatically keeps the dependencies and npm packages used in your repository updated to the latest version. The Hinode module template includes a basic configuration that is enabled by default. It checks for any version updates on a daily basis. Additionally, it checks for updates to GitHub actiob every week. The configuration is defined in `.github/dependabot.yml` and includes a commit-message that is used for [release automation]({{< relref "#release-automation" >}}).
 
 ```yml
 version: 2
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
   - package-ecosystem: npm
     directory: "/"
     schedule:
@@ -53,6 +58,7 @@ updates:
     commit-message:
       prefix: fix
       include: scope
+    versioning-strategy: increase
 ```
 
 #### Hugo module upgrades
@@ -148,7 +154,7 @@ on:
 
 The workflow uses the {{< link semantic-release >}}semantic-release bot{{< /link >}} to automate the creation and publication of releases upon each merge to the main branch. The bot updates the repository content, such as new distribution files added by the `postinstall` npm script. It also scans all commit messages and determines the type of release. Finally, it publishes a new release with auto-generated release notes.
 
-Hinode uses the {{< link angular_commit >}}Angular Commit Message conventions{{< /link >}}. In brief, add the following prefixes to your commit messages to determine the type of release:
+Hinode uses the {{< link conventional_commit >}}Conventional Commits{{< /link >}} specification. In brief, add the following prefixes to your commit messages to determine the type of release. You can also run `npx git-cz` from the terminal to help prepare the commit message.
 
 - `feat!:` A breaking change (creates a new major release)
 - `feat:` A new feature (creates a new minor release)

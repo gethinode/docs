@@ -216,7 +216,7 @@
     locale = "en_US"
 
 [links]
-    angular_commit = "https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines"
+    conventional_commit = "https://www.conventionalcommits.org"
     azure = "https://azure.microsoft.com"
     az_blob_domain = "https://learn.microsoft.com/en-us/azure/storage/blobs/storage-custom-domain-name"
     az_blob_pricing = "https://azure.microsoft.com/en-us/free"
