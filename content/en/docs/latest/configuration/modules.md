@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2024-01-24
+date: 2024-05-24
 layout: docs
 ---
 
@@ -26,7 +26,7 @@ The main repository of Hinode imports the following modules by default.
 
 You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on an opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
 
-For core modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode parepares separate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
+For core modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode prepares separate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
 
 {{< alert type="info" >}}
 Hugo uses two different algorithms to merge the filesystems, depending on the file type:
@@ -45,7 +45,7 @@ The following table provides an overview of the available settings. Omit the `mo
 |-----------------|---------------|-------------|
 | core            | ["bootstrap", "flexsearch", "fontawesome"] | Core modules to be fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. |
 | optional        | ["leaflet"]   | Optional modules to be included by Hinode. Enable each module in the frontmatter of a page. |
-| excludeSCSS     | ["bootstrap"] | Disables {{</* link hugo_resource_from_template >}}processing as Hugo templates{{< /link */>}} of JavaScript files. |
+| excludeSCSS     | ["bootstrap"] | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles. |
 | disableTemplate | ["katex"]     | Scripts file within optional modules to exclude from processing as Hugo template. The scripts are bundled as-is instead. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
