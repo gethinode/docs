@@ -13,8 +13,7 @@ Hinodes uses Hugo’s {{< link "../content/images-and-figures" >}}image processi
 
 Hinode supports {{< link cloudinary>}}Cloudinary{{< /link >}}, {{< link imagekit>}}ImageKit.io{{< /link >}}, and {{< link imgix>}}Imgix{{< /link >}} as Digital Asset Manager (DAM). You can configure these managers in your site parameters. Link a DAM to a specific URL by providing a regular expression that matches the domain name of the URL. For example, the `host = cloudinary` matches the image `https://res.cloudinary.com/demo/image/upload/dog.webp` to {{< link cloudinary>}}Cloudinary{{< /link >}}. When no match is found, Hinode uses Hugo's image processing instead. Hinode uses the following configuration by default:
 
-<!-- TODO: enable -->
-{{</* docs name="images" file="config/_default/params.toml" */>}}
+{{< docs name="images" file="config/_default/params.toml" >}}
 
 ## Content Security Policy
 
@@ -63,5 +62,4 @@ Configuring an additional Digital Asset Manager? Please consider to contribute y
 
 You can configure additional Digital Asset Managers by adding a adapter to the folder `layouts/partials/assets/adapters/`. For example, the adapter for {{< link cloudinary>}}Cloudinary{{< /link >}} is available in `cloudinary.html`. Hinode supports basic image transformations such as adjusting the dimensions and cropping. Hinode passes the following arguments to each recognized adapter:
 
-<!-- TODO: enable -->
-{{</* args structure="image-adapter" group="partial" */>}}
+{{< args structure="image-adapter" group="partial" >}}
