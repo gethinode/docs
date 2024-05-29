@@ -1,8 +1,9 @@
 ---
 title: Digital Asset Managers
 description: Configure Digital Asset Managers to delegate the transformation of images
-date: 2024-05-26
+date: 2024-05-29
 layout: docs
+modules: katex
 ---
 
 {{< release version="v0.24.0-beta2 " >}}
@@ -53,6 +54,82 @@ You can include DAM-enabled images and figures using the regular {{< link "../co
     ratio="1x1" caption="imgix image" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
+
+## Rewriting origin URLs
+
+You can rewrite the URL of the image when using a different origin server. Currently, this feature is supported by the adapter for ImageKit.io. For example, when using Azure Blob Storage as origin, your input URL may look like the following:
+
+```math
+\texttt{https://}
+
+\rlap{$
+    \underbrace{
+        \vphantom{g}
+        \phantom{\texttt{account.blob.core.windows.net}}
+    }_{\text{origin}}
+$}
+
+\texttt{account.blob.core.windows.net/}
+
+\rlap{$
+    \underbrace{
+        \vphantom{g}
+        \phantom{\texttt{container}}
+    }_{\text{container}}
+$}
+
+\texttt{container/}
+
+\rlap{$
+    \underbrace{
+        \phantom{\texttt{dir/filename.jpg}}
+    }_{\text{path of the file}}
+$}
+
+\texttt{dir/filename.jpg}
+```
+
+Adjust your CDN configuration in the site's paramters to include the hostname, account, and container of your origin server. Next, set `rewrite = true` to trigger the adapter to rewrite your origin URL:
+
+```toml
+[images]
+    [images.imagekit]
+        host = "imagekit|windows"
+        account = "account"
+        container = "container"
+        rewrite = true
+```
+
+The resulting URL will look like this (notice the container name has been dropped from the URL):
+
+```math
+\texttt{https://}
+
+\rlap{$
+    \underbrace{
+        \phantom{\texttt{ik.imagekit.io}}
+    }_{\text{target}}
+$}
+
+\texttt{ik.imagekit.io/}
+
+\rlap{$
+    \underbrace{
+        \vphantom{g}
+        \phantom{\texttt{account}}
+    }_{\text{account}}
+$}
+
+\texttt{account/}
+
+\rlap{$
+    \underbrace{
+        \phantom{\texttt{dir/filename.jpg}}
+    }_{\text{path of the file}}
+$}
+
+\texttt{dir/filename.jpg}
+```
 
 ## Adding a custom DAM
 
