@@ -93,3 +93,14 @@
         }
     }
 }
+
+.math {
+    overflow-x: auto;
+    font-size: 0.7rem !important;
+}
+
+@include media-breakpoint-up(md) {
+    .math {
+        font-size: 1rem !important;
+    }
+}
