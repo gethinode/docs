@@ -10,7 +10,7 @@ require (
 	github.com/gethinode/mod-fontawesome v1.9.0 // indirect
 	github.com/gethinode/mod-katex v1.1.0 // indirect
 	github.com/gethinode/mod-leaflet v1.1.0 // indirect
-	github.com/gethinode/mod-lottie v1.5.0 // indirect
+	github.com/gethinode/mod-lottie v1.5.1 // indirect
 	github.com/gethinode/mod-utils/v2 v2.3.4 // indirect
 	github.com/nextapps-de/flexsearch v0.0.0-20240501124520-961c3ae84a87 // indirect
 	github.com/twbs/bootstrap v5.3.3+incompatible // indirect
