@@ -368,6 +368,8 @@ github.com/gethinode/mod-lottie v1.5.0 h1:LwEEY+p+sPrN01yz7GyVOsF5lZ4qMln69+gAxJ
 github.com/gethinode/mod-lottie v1.5.0/go.mod h1:FvcG3NjXOBOnwou0QvXYNPHpybxwT6yxmSh4N+nBD9s=
 github.com/gethinode/mod-lottie v1.5.3 h1:fvCjCoZoCEhY2aou30oEsEo6N4tVSI0ijFyXS3wNib0=
 github.com/gethinode/mod-lottie v1.5.3/go.mod h1:XHVMuPsuJIm9/Eb2ql4jsT49/BQqMlBiirQoty4uHAo=
+github.com/gethinode/mod-lottie v1.5.1 h1:84ZmOTKJH75wsd/YjPaaBRkTeLnmRROv9iFlQVMC+jA=
+github.com/gethinode/mod-lottie v1.5.1/go.mod h1:z0Q6EADM7pN7gmhCzDx2VR4uG5mxn9qbsphtxjIkssY=
 github.com/gethinode/mod-utils v1.0.0 h1:cqHm2xS5uDiJzRm1KfHaNbq6uMVDKLhQa8/BuTZ1nhY=
 github.com/gethinode/mod-utils v1.0.0/go.mod h1:ONJm3pHCq7nvaPNjusLZNCeCbhOhSBH4HVKHwK1FdYE=
 github.com/gethinode/mod-utils v1.0.1 h1:jhZGlGFHHL1f5HXbBMXfiZ2gCz4TVafAzjnRPTIBSEE=
