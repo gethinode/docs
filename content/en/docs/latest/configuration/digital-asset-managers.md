@@ -1,7 +1,7 @@
 ---
 title: Digital Asset Managers
 description: Configure Digital Asset Managers to delegate the transformation of images
-date: 2024-05-29
+date: 2024-05-30
 layout: docs
 modules: katex
 ---
@@ -66,7 +66,7 @@ You can rewrite the URL of the image when using a different origin server. Curre
     \underbrace{
         \vphantom{g}
         \phantom{\texttt{account.blob.core.windows.net}}
-    }_{\text{origin}}
+    }_{\text{origin host}}
 $}
 
 \texttt{account.blob.core.windows.net/}
@@ -83,7 +83,7 @@ $}
 \rlap{$
     \underbrace{
         \phantom{\texttt{dir/filename.jpg}}
-    }_{\text{path of the file}}
+    }_{\text{path to asset}}
 $}
 
 \texttt{dir/filename.jpg}
@@ -108,7 +108,7 @@ The resulting URL will look like this (notice the container name has been droppe
 \rlap{$
     \underbrace{
         \phantom{\texttt{ik.imagekit.io}}
-    }_{\text{target}}
+    }_{\text{target host}}
 $}
 
 \texttt{ik.imagekit.io/}
@@ -125,7 +125,7 @@ $}
 \rlap{$
     \underbrace{
         \phantom{\texttt{dir/filename.jpg}}
-    }_{\text{path of the file}}
+    }_{\text{path to asset}}
 $}
 
 \texttt{dir/filename.jpg}
