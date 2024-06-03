@@ -89,7 +89,7 @@ $}
 \texttt{dir/filename.jpg}
 ```
 
-Adjust your CDN configuration in the site's paramters to include the hostname, account, and container of your origin server. Next, set `rewrite = true` to trigger the adapter to rewrite your origin URL:
+Adjust your CDN configuration in the site's parameters to include the hostname, account, and container of your origin server. Next, set `rewrite = true` to trigger the adapter to rewrite your origin URL:
 
 ```toml
 [images]
