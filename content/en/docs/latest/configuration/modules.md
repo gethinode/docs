@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2024-05-24
+date: 2024-06-03
 layout: docs
 ---
 
@@ -25,7 +25,7 @@ The main repository of Hinode imports the following modules by default.
 ## Configuring modules
 
 {{< alert >}}
-**New in v0.24.0-beta2** - Hinode uses the default configuration of each referenced module. You can still override these settings in your site parameters.
+**New in v0.24.0** - Hinode uses the default configuration of each referenced module. You can still override these settings in your site parameters.
 {{< /alert >}}
 
 You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on an opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
@@ -41,7 +41,7 @@ Hugo uses two different algorithms to merge the filesystems, depending on the fi
 
 Adjust the `modules` section in your site's parameter configuration file `config/_default/params.toml` to configure the various modules. Modules can include files for each of the following folders: `archetypes`, `assets`, `content`, `data`, `i18n`, `layouts`, `static`. Modules can also have their own configuration files. Each module needs to be imported as well ([see the previous paragraph]({{< relref "#configuring-modules" >}})).
 
-{{< release version="v0.24.0-beta2" >}}
+{{< release version="v0.24.0" >}}
 
 The following table provides an overview of the available settings for each module. Omit the `mod-` prefix of the module's name.
 
