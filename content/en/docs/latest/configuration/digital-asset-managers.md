@@ -1,12 +1,12 @@
 ---
 title: Digital Asset Managers
 description: Configure Digital Asset Managers to delegate the transformation of images
-date: 2024-05-30
+date: 2024-06-03
 layout: docs
 modules: katex
 ---
 
-{{< release version="v0.24.0-beta2 " >}}
+{{< release version="v0.24.0 " >}}
 
 Hinodes uses Hugo’s {{< link "../content/images-and-figures" >}}image processing{{< /link>}} to preprocess images on the server side. Hugo uses caching to reduce the build time. Despite the caching techniques, the image processing can take significant time, especially on larger sites. An alternative approach is to use a dedicated Digital Asset Manager. Most managers offer an API to transform images on the fly. The following paragraphs explain how to enable these Digital Asset Managers.
 
@@ -89,7 +89,7 @@ $}
 \texttt{dir/filename.jpg}
 ```
 
-Adjust your CDN configuration in the site's paramters to include the hostname, account, and container of your origin server. Next, set `rewrite = true` to trigger the adapter to rewrite your origin URL:
+Adjust your CDN configuration in the site's parameters to include the hostname, account, and container of your origin server. Next, set `rewrite = true` to trigger the adapter to rewrite your origin URL:
 
 ```toml
 [images]

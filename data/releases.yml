@@ -1,6 +1,19 @@
 # This file holds all entries for the release timeline
 
 
+- title: Digital Asset Managers
+  icon: fa image
+  color: primary
+  date: 2024-06-03
+  badge: v0.24.0
+  url: v0.24.0
+  content:
+    Hinodes uses Hugo’s image processing to preprocess images on the server side. Hugo uses caching to reduce the build
+    time. Despite the caching techniques, the image processing can take significant time, especially on larger sites. 
+    An alternative approach is to use a dedicated Digital Asset Manager. Most managers offer an API to transform images
+    on the fly. This release introduces support for several {{< link "docs/configuration/digital-asset-managers" />}},
+    including Cloudinary, ImageKit.io, and Imgix. The required adapters are configurable.
+
 - title: Maintenance
   icon: fas screwdriver-wrench
   color: info
