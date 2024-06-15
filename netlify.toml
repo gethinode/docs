@@ -10,10 +10,6 @@
     NODE_VERSION = "18.19.0"
     NPM_VERSION = "10.2.3"
 
-[[redirects]]
-  from = "/docs/0.9/*"
-  to = "/docs/:splat"
-
 [[headers]]
     for = "/*"
     [headers.values]
