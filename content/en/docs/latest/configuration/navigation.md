@@ -102,7 +102,7 @@ Menu items can be nested within each other. The below example defines three cont
             - title: Third
 ```
 
-You can define separate data files for each available language in a multilingual site. Add the language code as suffix to your data file. For example, `data/blog.en.yml` defines the sidebar menu of the English translation of the blog section. Hinodes uses `data/blog.yml` as fallback (or any other {{< link hugo_data_sources >}}data format supported by Hugo{{< /link >}}). 
+You can define separate data files for each available language in a multilingual site. Add the language code as suffix to your data file. For example, `data/blog.en.yml` defines the sidebar menu of the English translation of the blog section. Hinodes uses `data/blog.yml` as fallback (or any other {{< link hugo_data_sources >}}data format supported by Hugo{{< /link >}}).
 
 ### Versioning
 
