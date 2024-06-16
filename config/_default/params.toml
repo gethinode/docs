@@ -275,6 +275,7 @@
     hugo_content = "https://gohugo.io/content-management/formats"
     hugo_content_view = "https://gohugo.io/templates/views/"
     hugo_chroma = "https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages"
+    hugo_data_sources = "https://gohugo.io/content-management/data-sources/"
     hugo_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy"
     hugo_deployment = "https://gohugo.io/hosting-and-deployment"
     hugo_config_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy/#configure-the-deployment"
