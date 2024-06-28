@@ -1,7 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2024-06-16
+date: 2024-06-28
 layout: docs
 ---
 
@@ -42,7 +42,19 @@ The main navigation uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} 
 
 ### Menus
 
-The navigation bar uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} to generate the menu items. The navigation supports nesting at one level deep. Hinode supports an additional parameter called `alias`. If set, the active menu item is linked to the specific menu entry instead of being derived from the target URL. The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
+The navigation bar uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} to generate the menu items. The navigation supports nesting at one level deep. Hinode supports three additional parameters:
+
+<!-- markdownlint-disable MD037 -->
+{{< table >}}
+| Argument  | Required | Description |
+|-----------|----------|-------------|
+| alias     | No       | If set, the active menu item is linked to the specific menu entry instead of being derived from the target URL. |
+| button    | No       | {{</* release version="v0.24.10" short="true" size="sm" inline="true" */>}} If set, renders the menu item as a (small) button. |
+| spacing   | No       | {{</* release version="v0.24.10" short="true" size="sm" inline="true" */>}} If set, inserts a spacer. All prior menu items are left aligned, whilst the remaining menu items and right aligned. |
+{{< /table >}}
+<!-- markdownlint-enable MD037 -->
+
+The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
 
 {{< docs name="sample-navigation" file="./config/_default/menus/menus.en.toml" >}}
 
