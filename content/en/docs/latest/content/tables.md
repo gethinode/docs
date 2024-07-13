@@ -1,8 +1,9 @@
 ---
 title: Tables
 description: Enhance out-of-the-box Markdown tables with Bootstrap styling.
-date: 2024-01-06
+date: 2024-07-13
 layout: docs
+modules: ["simple-datatables"]
 ---
 
 Hugo supports out-of-the box Markdown tables. Hinode enhances the basic tables with optional styling features provided by Bootstrap. The following paragraphs illustrate how to use basic tables, how to accent them, how to adjust the borders, and how to make the table more compact.
@@ -217,6 +218,59 @@ Use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoin
 | 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 | 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+{{</* /table */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
+
+## Data tables
+
+{{< release version="v0.24.13" >}}
+
+Include the module `simple-datatables` to add advanced controls to your table. Features include in-line pagination, search, and sorting. {{< link "../configuration/modules" >}}Enable the module{{< /link >}} in the frontmatter of your content page:
+
+```yml
+---
+modules: ["simple-datatables"]
+---
+```
+
+As an example, the following shortcode displays a responsive table that is `searchable`, supports `sorting`, and enables `paging`.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="markdown" >}}
+{{</* table sortable="true" paging="true" searchable="true" */>}}
+|  #  | Heading |
+|-----|---------|
+|  1. | Item 1  |
+|  2. | Item 2  |
+|  3. | Item 3  |
+|  4. | Item 4  |
+|  5. | Item 5  |
+|  6. | Item 6  |
+|  7. | Item 7  |
+|  8. | Item 8  |
+|  9. | Item 9  |
+| 10. | Item 10  |
+| 11. | Item 11  |
+| 12. | Item 12  |
+| 13. | Item 13  |
+| 14. | Item 14  |
+| 15. | Item 15  |
+| 16. | Item 16  |
+| 17. | Item 17  |
+| 18. | Item 18  |
+| 19. | Item 19  |
+| 20. | Item 20  |
+| 21. | Item 21  |
+| 22. | Item 22  |
+| 23. | Item 23  |
+| 24. | Item 24  |
+| 25. | Item 25  |
+| 26. | Item 26  |
+| 27. | Item 27  |
+| 28. | Item 28  |
+| 29. | Item 29  |
+| 30. | Item 30  |
 {{</* /table */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
