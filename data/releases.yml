@@ -1,6 +1,19 @@
 # This file holds all entries for the release timeline
 
 
+- title: Script bundle localization
+  icon: fab js
+  color: warning
+  date: 2024-08-02
+  badge: v0.25.0
+  url: v0.25.0
+  content:
+    Hinode includes search support out of the box. To limit the bundle size, the search index now includes entries for
+    the current translation only. To enable localization, the module configuration includes a new parameter `localize`.
+    By default, the FlexSearch module sets localization to true. See the
+    {{< link "docs/configuration/modules#configuring-modules" >}} module configuration{{< /link >}} for all available
+    options.
+
 - title: Digital Asset Managers
   icon: fa image
   color: primary
