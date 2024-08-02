@@ -1,6 +1,6 @@
 [[main]]
   name = "About"
-  pageRef = "/about/"
+  pageRef = "/docs/about/credits/"
   weight = 10
   [main.params]
     alias = true
@@ -12,7 +12,7 @@
 
 [[main]]
   name = "Components"
-  pageRef = "/components/"
+  pageRef = "/docs/components/"
   weight = 30
   [main.params]
     alias = true
@@ -38,7 +38,7 @@
 # toml-docs-start sample-navigation
 [[sample]]
   name = "About"
-  pageRef = "/about/"
+  pageRef = "/docs/about/credits/"
   weight = 10
   [sample.params]
     alias = true
@@ -56,8 +56,8 @@
 
 [[sample]]
   parent = "Guides"
-  name = "Adding packages"
-  pageRef = "/guides/packages/"
+  name = "Developing Hugo modules"
+  pageRef = "/guides/modules/"
   weight = 20
 
 [[sample]]
@@ -74,14 +74,14 @@
 
 [[alias]]
   name = "About"
-  pageRef = "/about/"
+  pageRef = "/docs/about/credits/"
   weight = 10
   [alias.params]
     alias = true
 
 [[alias]]
   name = "About (no alias)"
-  pageRef = "/about/"
+  pageRef = "/docs/about/credits/"
   weight = 20
 
 [[alias]]
@@ -97,8 +97,8 @@
 
 [[alias]]
   parent = "Guides"
-  name = "Adding packages"
-  pageRef = "/guides/packages/"
+  name = "Developing Hugo modules"
+  pageRef = "/guides/modules/"
   weight = 20
 
 [[alias]]
@@ -125,7 +125,7 @@
 [[footer]]
   parent = "Links"
   name = "About"
-  pageRef = "/about/"
+  pageRef = "/docs/about/credits/"
   weight = 10
   [footer.params]
     alias = true
@@ -139,7 +139,7 @@
 [[footer]]
   parent = "Links"
   name = "Components"
-  pageRef = "/components/"
+  pageRef = "/docs/components/"
   weight = 30
   [footer.params]
     alias = true
@@ -197,5 +197,5 @@
 [[footer]]
   parent = "Community"
   name = "Contribute"
-  pageRef = "/contribute"
+  pageRef = "/docs/getting-started/contribute/"
   weight = 30
