@@ -1,7 +1,7 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2023-09-02
+date: 2024-08-11
 layout: docs
 modules: ["katex"]
 ---
@@ -149,7 +149,11 @@ Use the {{< link "docs/components/abbr" >}}abbr shortcode{{< /link>}} for abbrev
 
 ## Blockquotes
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations. Use the `>` Markdown character to generate a blockquote and add `{.blockquote}` at the bottom of the block to apply the correct styling.
+{{< alert >}}
+**New in v0.25.2** - Blockquotes no longer require an additional styling directive. You can drop the now obsolete `{.blockquote}` from your input.
+{{< /alert >}}
+
+The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations. Use the `>` Markdown character to generate a blockquote.
 
 ### Blockquote without attribution
 
@@ -158,7 +162,6 @@ The following Markdown generates a blockquote without attribution.
 {{< example lang="markdown" >}}
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use _Markdown syntax_ within a blockquote.
-{.blockquote}
 {{< /example >}}
 
 ### Blockquote with attribution
@@ -169,7 +172,6 @@ The following Markdown generates a blockquote with attribution. The citation its
 > Don't communicate by sharing memory, share memory by communicating.
 >
 > — _Rob Pike[^1]_
-{.blockquote}
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 {{< /example >}}
