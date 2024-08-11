@@ -15,7 +15,7 @@ enableInlineShortcodes = true
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
-timeout = "300s"
+timeout = "600s"
 
 languageCode = "en-us"
 defaultContentLanguage = "en"
