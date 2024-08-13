@@ -368,6 +368,8 @@ github.com/gethinode/mod-katex v1.1.0 h1:PxST3HPUt6F2X/xKakTVeTkwWqCtEr53K1vYEOy
 github.com/gethinode/mod-katex v1.1.0/go.mod h1:byAfpI3wuqNJIooTGVEGc1cjBhhCy4+CcK1H6495MYg=
 github.com/gethinode/mod-katex v1.1.1 h1:z8+mfVI6UTWcfpQMVPIzxQzt6Lp9BcmXxSOILQ84qFg=
 github.com/gethinode/mod-katex v1.1.1/go.mod h1:byAfpI3wuqNJIooTGVEGc1cjBhhCy4+CcK1H6495MYg=
+github.com/gethinode/mod-katex v1.1.2 h1:TbeVIWeG5TqldlVxpM1upOWj11RljXy4fhpOQIwOnS4=
+github.com/gethinode/mod-katex v1.1.2/go.mod h1:byAfpI3wuqNJIooTGVEGc1cjBhhCy4+CcK1H6495MYg=
 github.com/gethinode/mod-leaflet v0.3.1 h1:H5MaOa+BB1KuVw7abTqfIn/SNzzRsAyx/WQoSe+2Ykc=
 github.com/gethinode/mod-leaflet v0.3.1/go.mod h1:uGggt87x4Fw7wBoJpSiUvNkYg+s/Ujne7klAX2rxMRk=
 github.com/gethinode/mod-leaflet v0.3.3 h1:isnjja6VRFvVWBatYSouh46TXSJg2C4/E2BQTrQw+yI=
