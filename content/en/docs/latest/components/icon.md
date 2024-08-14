@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Icon
-date: 2024-01-02
+date: 2024-08-14
 description: Use the icon shortcode to add a Font Awesome icon with ease.
 layout: docs
 icon: fa font-awesome
@@ -26,9 +26,8 @@ Use the `icon` shortcode to quickly add a Font Awesome icon to your content. You
 
 ## Arguments
 
-{{< alert type="danger" >}}
-When using [inline vector icons]({{< relref "../configuration/modules#configuring-modules" >}}), be sure to use the main name of the icon. The shortcode **does not recognize the aliases** of the icons and will throw an error or warning.
-{{< /alert>}}
+> [!IMPORTANT]
+> When using [inline vector icons]({{< relref "../configuration/modules#configuring-modules" >}}), be sure to use the main name of the icon. The shortcode **does not recognize the aliases** of the icons and will throw an error or warning. For example, use `{{</* fas house */>}}` instead of `{{</* fas home */>}}` to add a house icon.
 
 The shortcode supports both unnamed arguments and named arguments. When using unnamed arguments, all attributes are mapped to the `class` argument, separated by spaces.
 

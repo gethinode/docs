@@ -142,6 +142,9 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 
 {{< release version="v0.8.0" >}}
 
+> [!IMPORTANT]
+> The prefix `table-responsive-` has been dropped to denote a responsive size in release {{< release version="v0.22.0" short="true" type="link" >}}. Instead, use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint.
+
 Embed the markdown table within the {{< link "docs/components/table" />}} shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens.
 
 ### Always responsive

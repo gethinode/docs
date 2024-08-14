@@ -1,7 +1,7 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2024-08-11
+date: 2024-08-14
 layout: docs
 modules: ["katex"]
 ---
@@ -149,9 +149,8 @@ Use the {{< link "docs/components/abbr" >}}abbr shortcode{{< /link>}} for abbrev
 
 ## Blockquotes
 
-{{< alert >}}
-**New in v0.25.2** - Blockquotes no longer require an additional styling directive. You can drop the now obsolete `{.blockquote}` from your input.
-{{< /alert >}}
+> [!NOTE]
+> Since release {{< release version="v0.25.2" short="true" type="link" >}}, blockquotes no longer require an additional styling directive. You can drop the now obsolete `{.blockquote}` from your input.
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations. Use the `>` Markdown character to generate a blockquote.
 
@@ -175,6 +174,31 @@ The following Markdown generates a blockquote with attribution. The citation its
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 {{< /example >}}
+
+### GitHub-style alerts
+
+{{< release version="v0.25.5" >}}
+
+You can add an alert designator to a blockquote to generate a GitHub-style alert.
+
+<!-- markdownlint-disable MD028 -->
+{{< example lang="markdown" >}}
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+{{< /example >}}
+<!-- markdownlint-enable MD028 -->
 
 ## Code Blocks
 

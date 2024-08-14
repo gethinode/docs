@@ -17,6 +17,9 @@ modules: ["katex"]
 
 ## Introduction
 
+> [!NOTE]
+> This guide is primarily aimed at explaining how to develop a Hinode-compatible module. The KaTeX library used in this guide is also available as {{< link repository_mod_katex >}}managed module on GitHub{{< /link >}}. Hugo v0.132.0 introduced (experimental) support for [server-side rendering of KaTeX expressions](https://gohugo.io/functions/transform/tomath/), which might be a better alternative when looking for KaTeX support on your site.
+
 {{< link hugo_modules >}}Hugo modules{{< /link >}} provide a flexible and extensible modular framework. Hinode builds upon this framework by introducing core modules and optional modules to further streamline the build process and to minimize the final site assets. This guide helps to get you started with developing your own Hugo modules. It also explains how to take advantage of Hinode's build pipelines to optimize the generated stylesheet and script assets. As a case example, we will set up a module that wraps the functionality of {{< link katex >}}KaTeX{{< /link >}} - a popular math typesetting library. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm. We will also use Visual Studio Code (VSCode) for convenience - {{< link vscode_download >}}download your copy from the official website{{< /link >}}.
 
 {{< example lang="markdown" >}}
@@ -28,12 +31,6 @@ $$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$
 $$\forall x \in X, \quad \exists y \leq \epsilon$$
 {{< /example >}}
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-The KaTeX library is available as managed module on {{</* link repository_mod_katex >}}GitHub{{< /link */>}}.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
-
 ## Step 1 - Deciding upon the sourcing strategy
 
 In this guide, we will develop a module to wrap the functionality of the {{< link katex >}}KaTeX{{< /link >}} library. By wrapping this existing library, our Hugo module abstracts away from the technical details and provides intuitive access from within the Hugo ecosystem. Hugo modules uses Go modules under the hood to download the latest available release on GitHub, or the most recent HEAD of the default branch otherwise.
@@ -43,9 +40,8 @@ Hugo modules can include files for each of the following folders: `archetypes`, 
 - For `i18n` and `data` files, Hugo merges deeply using the translation ID and data key inside the files.
 - For `assets`, `content`, `static`, `layouts` (templates), and `archetypes` files, these are merged on file level. So the left-most file will be chosen.
 
-{{< alert type="info">}}
-You can choose to either fully integrate Hugo modules or to include them on a page-by-page basis. In this guide, we will configure KaTeX as an optional module, assuming we will only need KaTeX on a few pages. See [configuring modules]({{< relref "/docs/configuration/modules#configuring-modules" >}}) for more details.
-{{< /alert >}}
+> [!NOTE]
+> You can choose to either fully integrate Hugo modules or to include them on a page-by-page basis. In this guide, we will configure KaTeX as an optional module, assuming we will only need KaTeX on a few pages. See [configuring modules]({{< relref "/docs/configuration/modules#configuring-modules" >}}) for more details.
 
 Our module will wrap the functionality of KaTeX as a module for Hinode. The installation instructions of KaTeX tell us what files are needed to {{< link katex_self_hosted >}}host KaTeX ourselves{{< /link >}}. We will need the file `katex.js`, `katex.css`, and the `fonts` directory. We could also use minified versions, however, Hinode will take care of transpiling, bundling, and minifying the assets later on. For our purposes, we are better suited with the properly formatted files to simplify debugging. We also want to include the {{< link katex_autorender >}}auto-render extension{{< /link >}}. We will create a separate script with the instructions to invoke the function `renderMathInElement` later on.
 
@@ -77,9 +73,8 @@ Open the local repository in VSCode and create a `develop` branch first. Now sea
 
 We will now add KaTeX as npm package to our local repository. Run the following command from your terminal to add KaTeX as development dependency.
 
-{{< alert type="info" >}}
-You can install npm packages as either regular packages or development dependency. We do not need the KaTeX library at run-time, as Hugo compiles a static site. Additionally, we will redistribute the required KaTeX files as part of our site deployment. We can therefore install the KaTeX package as development dependency, listed under `devDependencies` in `package.json`.
-{{< /alert >}}
+> [!NOTE]
+> You can install npm packages as either regular packages or development dependency. We do not need the KaTeX library at run-time, as Hugo compiles a static site. Additionally, we will redistribute the required KaTeX files as part of our site deployment. We can therefore install the KaTeX package as development dependency, listed under `devDependencies` in `package.json`.
 
 {{< command >}}
 npm install -D katex
@@ -117,9 +112,8 @@ Modify the `postinstall` script to copy the required files to a local `dist` dir
 
 The line postinstall is split into separate lines for each copy command to improve readability (you could also use {{< link npm_run_all >}}npm-run-all{{< /link >}} to simplify the command even further). Each copy statement uses {{< link npm_cpy >}}cpy{{< /link >}}, a cross-platform copy command. The `--flat` argument instructs `cpy` to flatten the files in the destination directory `dist`. The negation pattern starting with `!` tells `cpy-cli` to skip files that end with `.min.js`.
 
-{{< alert type="danger" >}}
-We deliberately rename the `katex.css` file to a `katex.scss` file. The default `libsass` library, part of the [styles processing pipeline]({{< relref "styles" >}}), has difficulty processing the file otherwise.
-{{< /alert >}}
+> [!IMPORTANT]
+> We deliberately rename the `katex.css` file to a `katex.scss` file. The default `libsass` library, part of the [styles processing pipeline]({{< relref "styles" >}}), has difficulty processing the file otherwise.
 
 Run `npm install` from the command line to invoke the `postinstall` script automatically. You should now have a folder `dist` in your repository root with the correct files. This npm script works well in a {{< abbr "CI/CD" >}} pipeline too, which prepares us for automation of the dependency upgrades later on in this guide.
 

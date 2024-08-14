@@ -1,7 +1,7 @@
 ---
 title: Digital Asset Managers
 description: Configure Digital Asset Managers to delegate the transformation of images
-date: 2024-06-03
+date: 2024-08-14
 layout: docs
 modules: katex
 ---
@@ -133,11 +133,8 @@ $}
 
 ## Adding a custom DAM
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-Configuring an additional Digital Asset Manager? Please consider to contribute your adapter to the open-source community of Hinode. Review the {{</* link "../getting-started/contribute/">}}contributing guidelines{{< /link */>}} to find out more.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!TIP]
+> Configuring an additional Digital Asset Manager? Please consider to contribute your adapter to the open-source community of Hinode. Review the {{< link "../getting-started/contribute/">}}contributing guidelines{{< /link >}} to find out more.
 
 You can configure additional Digital Asset Managers by adding a adapter to the folder `layouts/partials/assets/adapters/`. For example, the adapter for {{< link cloudinary>}}Cloudinary{{< /link >}} is available in `cloudinary.html`. Hinode supports basic image transformations such as adjusting the dimensions and cropping. Hinode passes the following arguments to each recognized adapter:
 

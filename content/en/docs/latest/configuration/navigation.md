@@ -1,7 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2024-06-28
+date: 2024-08-14
 layout: docs
 ---
 
@@ -82,11 +82,8 @@ Hinode supports optional sidebar navigation. It is intended to be used as compan
 
 ### Menus
 
-{{< alert >}}
-**New in v0.24.4** - The sidebar now recognizes multilingual data files. Add the language code as suffix to your data file. For example, `data/blog.en.yml` defines the sidebar menu of the English translation of the blog section.
-
-**New in v0.20.1** - Menu items now support an optional link argument. When defined, this link takes precedence over the link that is automatically derived from the menu.
-{{< /alert >}}
+> [!IMPORTANT]
+> The sidebar recognizes multilingual data files. Add the language code as suffix to your data file. For example, `data/blog.en.yml` defines the sidebar menu of the English translation of the blog section.
 
 Inspired by Bootstrap's documentation site, Hinode uses a separate configuration file for the sidebar menus. A sidebar can be configured for each main section of the site. For example, the sidebar menu of the `docs` section is defined in `data/docs.yml`. The sidebar menu supports group items and single page items. You can optionally provide an internal or external link for the destination page (see the {{< link "docs/components/link" >}}link shortcode{{< /link >}} for its behavior). By default, Hinode derives the destination from the menu item. The below example defines a group section called `Getting started` with three siblings. A single page `About` is added next. The latter redirects to an external website.
 
@@ -120,9 +117,8 @@ You can define separate data files for each available language in a multilingual
 
 {{< release version="v0.15.0" >}}
 
-{{< alert type="info" >}}
-Release v0.15.0 of Hinode automatically detects the version of the current context. The configuration of the `version` attribute is no longer needed.
-{{< /alert >}}
+> [!NOTE]
+> Release v0.15.0 of Hinode automatically detects the version of the current context. The configuration of the `version` attribute is no longer needed.
 
 You can create versioned files for your menu data by adding a version suffix to the data file. For example, `data/docs-1.0.yml` contains the menu data for the `docs` menu of version `1.0`. Hinode uses `data/docs.yml` as default sidebar navigation data when no versioned file is available. See the [documentation configuration]({{< relref "documentation" >}}) for additional options.
 
