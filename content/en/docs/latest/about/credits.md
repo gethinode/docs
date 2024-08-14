@@ -1,7 +1,7 @@
 ---
 title: Credits
 description: Hinode is fully open source and uses several open-source frameworks and libraries.
-date: 2023-08-04
+date: 2023-08-14
 aliases:
   - "/docs/about/credits/"
   - "/docs/about/"
@@ -29,6 +29,9 @@ Hinode supports several opt-in components. In the default configuration, these c
 
 - {{< link katex >}}KaTeX{{< /link >}} is a fast math typesetting library for the web.
 - {{< link leaflet >}}Leaflet{{< /link >}} is an open-source JavaScript library for mobile-friendly interactive maps.
+- {{< link lottie >}}Lottie{{< /link >}} is a library that parses Adobe After Effects animations exported as JSON with Bodymovin and renders them natively.
+- {{< link mermaid >}}Mermaid{{< /link >}} is a diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.
+- {{< link simple_datatables >}}Simple Datatables{{< /link >}} is a lightweight, extendable, JavaScript HTML table library.
 
 ## Themes
 
