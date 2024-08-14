@@ -175,6 +175,31 @@ The following Markdown generates a blockquote with attribution. The citation its
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 {{< /example >}}
 
+### GitHub-style alerts
+
+{{< release version="v0.25.5" >}}
+
+You can add an alert designator to a blockquote to generate a GitHub-style alert.
+
+<!-- markdownlint-disable MD028 -->
+{{< example lang="markdown" >}}
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+{{< /example >}}
+<!-- markdownlint-enable MD028 -->
+
 ## Code Blocks
 
 Use a single backtick `` ` `` character to denote an inline code element. Use triple backticks `` ``` `` to denote the start and end of a code block. Add the language to the opening backticks to specify the syntax. Hugo uses Chroma highlighting to style the syntax of {{< link hugo_chroma >}}supported languages{{< /link >}}. The following example defines an `HTML` code block.
