@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: Configure and customize Hinode to your liking using modules, npm, and mounted folders.
-date: 2023-08-03
+date: 2023-08-14
 aliases:
   - "/docs/advanced-settings/"
   - "/advanced-settings/"
@@ -14,9 +14,8 @@ As a theme for Hugo, Hinode is highly configurable and customizable. Hinode util
 
 Hinode fully supports {{< link hugo_modules >}}Hugo modules{{< /link >}} to provide a flexible and extensible modular framework. These modules provide one or more of the seven component types defined in Hugo: `static`, `content`, `layouts`, `data`, `assets`, `i18n`, and `archetypes`. Powered by Go modules, Hugo verifies if a module is up-to-date and downloads the latest release if needed. This approach is compatible with any repository hosted on GitHub and is not exclusive to Hugo modules only.
 
-{{< alert type="info" >}}
-Hugo does have some requirements for the modules to work correctly in all scenarios. Review the [module development troubleshooting section]({{< relref "module-development#troubleshooting" >}}) to familiarize yourself with them.
-{{< /alert >}}
+> [!NOTE]
+> Hugo has several requirements for the modules to work correctly in all scenarios. Review the [module development troubleshooting section]({{< relref "module-development#troubleshooting" >}}) to familiarize yourself with them.
 
 Hinode uses Hugo modules to provide a flexible and extensible modular framework. Modules can be fully integrated into the main site or be included on a page-by-page basis. Core modules are fully integrated with the site's stylesheet and bundled JavaScript files. The stylesheet and scripts of optional modules are loaded on a specific page only to minimize overhead. Refer to the [modules]({{< relref "../configuration/modules" >}}) section for more details.
 
@@ -24,9 +23,8 @@ Hinode uses Hugo modules to provide a flexible and extensible modular framework.
 
 Hugo supports the {{< link hugo_mounts >}}mounting of folders{{< /link >}} since version 0.56.0. Hinode takes advantage of this feature to create a virtual file system, combining assets from multiple sources. Many of the predefined Hinode modules use mounted folders to expose relevant content and to standardize the folder structure. Take a look at the configuration of {{< link repository_mod_bootstrap >}}Hinode's Bootstrap module{{< /link >}}. The configuration uses the repository `github.com/twbs/bootstrap` as module source and exposes the SCSS files and bundled JavaScript file. These files are combined with the module's own files defined in the `assets` folder.
 
-{{< alert type="danger" >}}
-    When you add a mount, the default mount for the concerned target root is ignored: be sure to explicitly add it.
-{{< /alert >}}
+> [!IMPORTANT]
+> When you add a mount, the default mount for the concerned target root is ignored: be sure to explicitly add it.
 
 ```toml
 [module]

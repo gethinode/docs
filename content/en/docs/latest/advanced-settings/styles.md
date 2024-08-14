@@ -1,21 +1,16 @@
 ---
 title: Styles
 description: Use extensible Sass files to generate the stylesheets for your website.
-date: 2023-09-06
+date: 2024-08-14
 layout: docs
 ---
-
-<!-- TODO: include dartsass -->
 
 Hinode uses Sass files to take advantage of variables, maps, and functions to generate the cascading style sheets of the website. By utilizing [Hugo modules]({{< ref "overview" >}}), Bootstrap's source Sass file are automatically ingested and kept up to date.
 
 ## Build pipeline
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-**v0.20.0** - Hinode has added support for the Dart Sass transpiler in release v0.20.0. The default libsass transpiler has been {{</* link hugo_sass >}}deprecated in favor of Dart Sass{{< /link */>}}, but is still widely used. Hinode uses the libsass transpiler by default. Review the {{</* link "docs/configuration/layout#extended-configuration" >}}build configuration{{< /link */>}} on how to change the transpiler being used.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!NOTE]
+> Hinode has added support for the Dart Sass transpiler in release {{< release version="v0.20.0" short="true" type="link" >}}. The default libsass transpiler has been {{< link hugo_sass >}}deprecated in favor of Dart Sass{{< /link >}}, but is still widely used. Hinode uses the libsass transpiler by default. Review the {{< link "docs/configuration/layout#extended-configuration" >}}build configuration{{< /link >}} on how to change the transpiler being used.
 
 Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
 

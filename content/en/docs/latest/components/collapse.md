@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Collapse
-date: 2024-01-02
+date: 2024-08-14
 description: Use the collapse shortcode to reveal or hide a panel.
 layout: docs
 icon: fa eye-slash
@@ -27,9 +27,8 @@ Use the `collapse` shortcode to reveal or hide a panel. The panel can contain bo
 
 ## Arguments
 
-{{< alert type="danger" >}}
-The definition of the default `id` field fails when embedding (multiple) `collapse` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
-{{< /alert >}}
+> [!IMPORTANT]
+> The definition of the default `id` field fails when embedding (multiple) `collapse` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
 
 The shortcode supports the following arguments:
 

@@ -1,7 +1,7 @@
 ---
 title: Languages
 description: Configure multiple languages to enable multilingual sites.
-date: 2024-01-24
+date: 2024-08-14
 layout: docs
 ---
 
@@ -11,11 +11,8 @@ Hinode supports Hugo's {{< link hugo_lang >}}multilingual mode{{< /link >}} to c
 
 ## Language configuration
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="danger" >}}
-    By default, Hinode removes special characters from page descriptions to improve readability. Your language may include specific diacritics or other characters that should not be removed. Refine the {{</* link "modules#configuring-modules" >}}module configuration{{< /link */>}} to adjust or bypass the default character filter.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!IMPORTANT]
+> By default, Hinode removes special characters from page descriptions to improve readability. Your language may include specific diacritics or other characters that should not be removed. Refine the {{< link "modules#configuring-modules" >}}module configuration{{< /link >}} to adjust or bypass the default character filter (`utils.filter`).
 
 Define the languages available to your site in the main site configuration. The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
 

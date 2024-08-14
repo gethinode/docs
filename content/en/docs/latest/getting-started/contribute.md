@@ -1,7 +1,7 @@
 ---
 title: Contribute
 description: Contribute to the open-source development of Hinode.
-date: 2024-01-03
+date: 2024-08-14
 aliases:
   - "/docs/contribute/"
   - "/contribute/"
@@ -33,6 +33,9 @@ A bug is a *demonstrable problem* that is caused by the code in the repository. 
 Feature requests are welcome. But take a moment to find out whether your idea fits with the scope and aims of the project. Please use the provided template in the {{< link issue_tracker >}}issue tracker{{< /link >}} to capture the idea and context.
 
 ## Pull requests
+
+> [!IMPORTANT]
+> By submitting a patch, you agree to allow the project owners to license your work under the terms of the {{< link license >}}MIT license{{< /link >}} (if it includes code changes) and under the terms of the Creative Commons ({{< link cc_by_nc_4_0 >}}CC BY-NC 4.0){{< /link >}} license (if it includes documentation changes).
 
 Good pull requests—patches, improvements, new features—are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
 
@@ -78,12 +81,6 @@ Adhering to the following process is the best way to get your work included in t
     ```
 
 1. Open a {{< link github_pr >}}Pull Request{{< /link >}} with a clear title and description against the main branch.
-
-<!-- markdownlint-disable MD037 -->
-{{< alert type="danger" >}}
-**IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the terms of the {{</* link license >}}MIT license{{< /link */>}} (if it includes code changes) and under the terms of the Creative Commons ({{</* link cc_by_nc_4_0 >}}CC BY-NC 4.0){{< /link */>}} license (if it includes documentation changes).
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
 
 ## Module contributions
 

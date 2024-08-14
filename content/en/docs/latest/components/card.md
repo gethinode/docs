@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Card
-date: 2023-12-24
+date: 2024-08-14
 description: Use the card shortcode to display a card that links to a content page.
 layout: docs
 icon: fa address-card
@@ -10,9 +10,8 @@ tags: component
 
 ## Overview
 
-{{< alert >}}
-**New in v0.18.6** - The card now supports inner content too. As a result, references to the card shortcode must be closed of self-closed.
-{{< /alert >}}
+> [!IMPORTANT]
+> Cards support inner content since release {{< release version="v0.18.6" short="true" type="link" >}}. As a result, references to the card shortcode must be closed or self-closed.
 
 Use the `card` shortcode to display a card that links to a content page. When using a rich layout, the card includes a thumbnail (or icon) and a header. As an example, the following shortcode displays a horizontal card that links to the [editing]({{< ref "credits" >}}) guide. It includes a custom header and footer. You can use the {{< link "card-group" >}}card-group shortcode{{< /link >}} to align multiple cards and to position them in a grid.
 

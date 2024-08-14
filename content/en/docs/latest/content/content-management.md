@@ -1,7 +1,7 @@
 ---
 title: Content management
 description: Use Markdown and templates to define the content for your website.
-date: 2023-11-24
+date: 2024-08-14
 layout: docs
 ---
 
@@ -15,6 +15,9 @@ Markdown is a simple and easy-to-use markup language. It uses formatting element
 
 ### Front matter
 
+> [!IMPORTANT]
+> When using a local file, the page's thumbnail should be available as a global site asset. You cannot use a {{< link hugo_page_resources >}}page resource{{< /link >}} as thumbnail, as the thumbnail image is being referenced on other pages too.
+
 Hinode uses so-called front matter to capture the metadata of a document. The front matter usually includes the document title, the creation date, and a summary description. By convention, the front matter is defined at the top of the document. Hugo supports {{< link hugo_frontmatter >}}four types of front matter formats{{< /link >}}. Hinode uses the {{< abbr YAML >}} format by default, denoted by `---` as the opening and closing tags. The following example shows the front matter of the page you are currently reading.
 
 ```yml
@@ -26,12 +29,6 @@ date: 2023-02-19
 ```
 
 Hinode supports the following additional front matter parameters.
-
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-When using a local file, the page's thumbnail should be available as a global site asset. You cannot use an image from a {{</* link hugo_page_resources >}}page resource{{< /link */>}}, as the thumbnail is being referenced on other pages too. External images are downloaded automatically and further processed locally.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
@@ -52,15 +49,8 @@ When using a local file, the page's thumbnail should be available as a global si
 
 ### Mixed content
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="danger" >}}
-**v0.19.0** - Hinode disables HTML support by default since release v0.19.0.
-
----
-
-Mixing Markdown with HTML is considered unsafe. If you trust the input, you can enable this setting in the {{</* link hugo_goldmark >}}Goldmark configuration{{< /link */>}}, the default Markdown processor of Hugo. If you disable HTML, you can optionally set `purgeHTMLComments` in `params.debugging` to prevent HTML comments from generating a warning by Goldmark.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!CAUTION]
+> Mixing Markdown with HTML is considered unsafe. Hinode disables HTML support by default since release v0.19.0. If you trust the input, you can enable this setting in the {{< link hugo_goldmark >}}Goldmark configuration{{< /link >}}, the default Markdown processor of Hugo. If you disable HTML, you can optionally set `purgeHTMLComments` in `params.debugging` to prevent HTML comments from generating a warning by Goldmark.
 
 As explained in the [overview]({{< relref "#overview" >}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with {{< abbr HTML >}} as needed. The final output is rendered to HTML.
 

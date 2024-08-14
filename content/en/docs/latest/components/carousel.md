@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Carousel
-date: 2023-12-29
+date: 2024-08-14
 description: Use the carousel shortcode to display a carousel of several images.
 layout: docs
 icon: fas images
@@ -9,10 +9,6 @@ tags: component
 ---
 
 ## Overview
-
-{{< alert >}}
-**New in v0.18.3** - The carousel shortcode now supports "3x2" as an additional ratio. It also recognizes page resources correctly.
-{{< /alert >}}
 
 {{< release version="v0.7.1" >}}
 
@@ -34,17 +30,15 @@ The carousel shortcode supports the following arguments:
 
 {{< args structure="carousel" group="shortcode" >}}
 
-{{< alert type="danger" >}}
-The carousel uses the original aspect ratio of the provided images when no aspect ratio is provided. Ensure the included images have a similar height and width to avoid inconsistent behavior.
-{{< /alert >}}
-
 Add an inner `img` element for each slide of the carousel. The `img` element supports the following arguments:
 
 {{< args structure="carousel-item" group="shortcode" >}}
 
 ## Examples
 
-As an example, the following shortcodes display a centered carousel with three slides and various aspect ratio.
+Change the ratio and orientation of your carousel with shortcode arguments.
+
+### 1x1 ratio
 
 Set the `ratio` to `1x1` for a square aspect ratio.
 
@@ -70,6 +64,8 @@ Set the `ratio` to `3x2` for a landscape aspect ratio.
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
+### 4x3 ratio
+
 Set the `ratio` to `4x3` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
@@ -81,6 +77,8 @@ Set the `ratio` to `4x3` for a landscape aspect ratio.
 {{</* /carousel */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
+
+### 16x9 ratio
 
 Set the `ratio` to `16x9` for a landscape aspect ratio.
 
@@ -94,6 +92,8 @@ Set the `ratio` to `16x9` for a landscape aspect ratio.
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
+### 21x9 ratio
+
 Set the `ratio` to `21x9` for a landscape aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
@@ -106,11 +106,12 @@ Set the `ratio` to `21x9` for a landscape aspect ratio.
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-Omit the `ratio` to keep the original aspect ratio.
+### Original aspect ratio
 
-{{< alert color="danger" >}}
-    The carousel does not crop the images when omitting the aspect ratio. Instead, the images keep their original aspect ratio. Ensure the images have an equal aspect ratio to avoid layout shifting.
-{{< /alert >}}
+> [!IMPORTANT]
+> The carousel does not crop the images when omitting the aspect ratio. Instead, the images keep their original aspect ratio. Ensure the images have an equal aspect ratio to avoid layout shifting.
+
+Omit the `ratio` to keep the original aspect ratio.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

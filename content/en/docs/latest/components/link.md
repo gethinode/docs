@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2024-01-03
+date: 2024-08-14
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -9,14 +9,6 @@ tags: component
 ---
 
 ## Overview
-
-{{< alert >}}
-**New in v0.18.4** - The link shortcode now recognizes language-specific pages, identified by a language prefix. For example, use `/fr/about` to link to the French translation of the `about` page. Do **not** use the alias `/fr/a-propos` in this case.
-
----
-
-**New in v0.18.3** - The link shortcode now uses the current page context to identify references to a local page. It now also supports page anchors identified by `#`.
-{{< /alert >}}
 
 {{< release version="v0.16.8" >}}
 
@@ -30,21 +22,23 @@ Since Hinode `v0.16.8` you can add a managed link to your page content using a c
 
 ## Arguments
 
+> [!IMPORTANT]
+> The link shortcode recognizes language-specific pages, identified by a language prefix. For example, use `/fr/about` to link to the French translation of the `about` page. Do **not** use the alias `/fr/a-propos` in this case.
+
 The shortcode supports a single unnamed parameter, or various named parameters. The unnamed parameter is recognized as a url if it starts with `http`, else it is treated as either a named link or **relative** internal reference (in that order). Any inner text is rendered as the link title, otherwise it uses the host name (for external links), link title (for internal links), or anchor name (for any local references containing a `#`). The shortcode supports the following named arguments:
 
 {{< args structure="link" group="shortcode" >}}
 
 ## Site configuration
 
-{{< alert type="danger" >}}The `--minify` flag of `hugo` purges HTML whitespace by default. Unfortunately, this also removes the spacing behind the visual cue of external links. Add the following configuration to your main configuration to prevent this:
-
-```toml
-[minify]
-  [minify.tdewolff.html]
-    keepWhitespace = true
-```
-
-{{< /alert >}}
+> [!IMPORTANT]
+> The `--minify` flag of `hugo` purges HTML whitespace by default. Unfortunately, this also removes the spacing behind the visual cue of external links. Add the following configuration to your main configuration to prevent this:
+>
+>```toml
+>[minify]
+>  [minify.tdewolff.html]
+>    keepWhitespace = true
+>```
 
 You can [configure the behavior of managed links]({{< relref "layout#extended-configuration" >}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section. Manage the named links in the `links` section of the same file:
 

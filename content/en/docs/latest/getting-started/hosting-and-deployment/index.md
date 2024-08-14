@@ -1,7 +1,7 @@
 ---
 title: Hosting and deployment
 description: Deploy your Hinode site to popular hosting providers.
-date: 2023-12-28
+date: 2024-08-14
 layout: docs
 ---
 
@@ -154,9 +154,8 @@ You can make your static website available via a custom domain. Visit the {{< li
 
 Netlify can host your website with continuous deployment from your Git provider. The starter price plan is free for any public repository and provides 100 GB bandwidth and 300 build minutes each month. Review the next sections how to automatically deploy your site to Netlify on each update to the main branch of your repository.
 
-{{< alert type="info" >}}
-The starter plan requires your repository to be public. You will require a paid plan if your repository is set to private.
-{{< /alert >}}
+> [!NOTE]
+> The starter plan requires your repository to be public. You will require a paid plan if your repository is set to private.
 
 ### Assumptions
 
@@ -168,11 +167,8 @@ The starter plan requires your repository to be public. You will require a paid 
 
 The repository root should include a file `netlify.toml`. If not, copy it from the {{< link repository >}}Hinode main repository{{< /link >}}. The configuration file contains the build settings that Netlify will pick up when connecting to your repository. The panel below shows the default build settings. The key command to observe is `npm run build`, which ensures the site is built properly.
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server-headers" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the {{</* link netlify_cache >}}Netlify blog{{< /link */>}}.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!NOTE]
+> The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server-headers" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the {{< link netlify_cache >}}Netlify blog{{< /link >}}.
 
 {{< docs name="netlify" file="netlify.toml" show="true" >}}
 

@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2024-03-22
+date: 2024-08-14
 layout: docs
 ---
 
@@ -49,19 +49,14 @@ The below configuration shows the default configuration set in `config/_default/
 
 #### Extended configuration
 
-{{< alert type="info" >}}
-Hinode is fully open source. By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled.
-{{< /alert >}}
-
-{{< alert type="danger" >}}The `--minify` flag of `hugo` purges HTML whitespace by default. Unfortunately, this also removes the spacing behind the visual cue of external links. When setting `externalLinks.cue` to `true`, be sure to add the following configuration to your main configuration to suppress the removal of whitespace:
-
-```toml
-[minify]
-  [minify.tdewolff.html]
-    keepWhitespace = true
-```
-
-{{< /alert >}}
+> [!IMPORTANT]
+> The `--minify` flag of `hugo` purges HTML whitespace by default. Unfortunately, this also removes the spacing behind the visual cue of external links. When setting `externalLinks.cue` to `true`, be sure to add the following configuration to your main configuration to suppress the removal of whitespace:
+>
+> ```toml
+> [minify]
+>   [minify.tdewolff.html]
+>     keepWhitespace = true
+> ```
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
@@ -73,7 +68,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | description        | -                 | Short description of the website that is added to the page metadata. |
 | enableDarkMode     | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
-| endorse            | true              | If set, adds a link to `gethinode.com` in the page's footer. |
+| endorse            | true              | By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled. |
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
 | loading            | "eager"           | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{< relref "image" >}}) provides more details.|
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
@@ -206,11 +201,8 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## List pages
 
-<!-- markdownlint-disable MD037 -->
-{{< alert >}}
-**New in v0.21.0** - List pages now support {{</* link hugo_content_view >}}content view templates{{< /link */>}}. Set the `type` in the page's frontmatter.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!NOTE]
+> List pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter.
 
 List pages define one [configurable section]({{< relref "#page-sections" >}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
 
@@ -235,11 +227,8 @@ The list page uses the [configuration of a single section]({{< relref "#configur
 
 ## Single pages
 
-<!-- markdownlint-disable MD037 -->
-{{< alert >}}
-**New in v0.21.0** - Single pages now support {{</* link hugo_content_view >}}content view templates{{< /link */>}}. Set the `type` in the page's frontmatter to either docs or minimal to override the default layout. The `type` parameter replaces the previous `layout` parameter.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!IMPORTANT]
+> Single pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter. The `type` parameter replaces the previous `layout` parameter.
 
 Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
 
