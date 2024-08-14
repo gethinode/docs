@@ -1,11 +1,11 @@
 ---
 title: Icons
 description: Use out-of-the-box Font Awesome icons to style your website.
-date: 2023-09-25
+date: 2024-08-14
 layout: docs
 ---
 
-Hinode provides out-of-the box access to the free icons of {{< link fontawesome >}}Font Awesome{{< /link >}}. The [shortcodes]({{< relref "icon" >}}) `icon`, `fa`, `fab`, and `fas` are available to add these icons with as limited code as possible. The Font Awesome icon library provides various {{< link fa_styling >}}styling options{{< /link >}}. The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
+Hinode provides out-of-the box access to the free icons of {{< link fontawesome >}}Font Awesome{{< /link >}}. The [shortcodes]({{< relref "icon" >}}) `icon`, `fa`, `fab`, and `fas` are available to add these icons using shorthand notation. The Font Awesome icon library provides various {{< link fa_styling >}}styling options{{< /link >}}. The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
 
 ## Styling basics
 
@@ -112,21 +112,10 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 
 ### Responsive sizing
 
-{{< alert >}}
-**New in v0.19.0** - Added support for a wrapper argument that applies `fa-wrapper` and `fa-fluid` automatically.
-
----
-
-**New in v0.14.5** - Added support for responsive sizing using containers.
-{{< /alert >}}
-
 Hinode supports responsive sizing of icons using so-called containers. Assigning `wrapper` a value will wrap the icon in a HTML `div` element. Hinode assigns `.fa-wrapper` to the class attribute of the wrapper and `fa-fluid` to the icon itself. The icon is now dynamically resized.
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-Container support is a relatively new CSS feature that is not supported by all browsers yet. See this overview to {{</* link caniuse_container >}}check the current browser support{{< /link */>}}. Hinode uses a fixed-size icon with a `font-size` of `5rem` as fallback.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!NOTE]
+Container support is a relatively new CSS feature that is not supported by all browsers yet. See this overview to {{< link caniuse_container >}}check the current browser support{{< /link >}}. Hinode uses a fixed-size icon with a `font-size` of `5rem` as fallback.
 
 The following example demonstrates a centered, responsive icon. The icon keeps its original aspect ratio, so the wrapper may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
 
@@ -296,9 +285,8 @@ The following table describes the available classes.
 
 {{< release version="v0.20.5" >}}
 
-{{< alert type="info" >}}
-Hinode removes any embedded `height` and `width` attributes from the icon data to ensure the icon is responsive. The `viewBox` attribute is kept.
-{{< /alert >}}
+> [!NOTE]
+> Hinode removes any embedded `height` and `width` attributes from the icon data to ensure the icon is responsive. The `viewBox` attribute is kept.
 
 You can reference a custom family and icon stored in the local `assets` folder. The {{< link "docs/components/icon" />}} shortcode uses the path `assets/svgs/{family}/{icon}.svg`, replacing `{family}` and `{icon}` with the specified values. You can mix the custom icon with Font Awesome styling directives (such as `fa-4x`, although animations are typically not supported). The following example shows an icon called `activity` of the `custom` family of size `fa-4x`.
 

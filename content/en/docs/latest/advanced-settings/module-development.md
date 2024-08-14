@@ -1,19 +1,16 @@
 ---
 title: Module development
 description: Develop your own Hugo modules compatible with Hinode.
-date: 2024-05-22
+date: 2024-08-14
 layout: docs
 ---
 
 {{< release version="v0.16.0" >}}
 
-Hinode fully supports {{< link hugo_modules >}}Hugo modules{{< /link >}} to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for {{< link bootstrap >}}Bootstrap{{< /link >}}, {{< link flexsearch >}}FlexSearch{{< /link >}}, and {{< link fontawesome >}}Font Awesome{{< /link >}}. The following paragraphs describe the coding conventions of Hinode modules, illustrate how to automate your build and release process, and give an overview of common issues and resolutions.
+> [!TIP]
+> A {{< link repository_mod_template >}}template repository for Hugo modules that are compatible with Hinode{{< /link >}} is maintained on GitHub. The repository provides a starting point for developing your own modules.
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-A {{</* link repository_mod_template >}}template repository for Hugo modules that are compatible with Hinode{{< /link */>}} is maintained on GitHub. The repository provides a starting point for developing your own modules.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+Hinode fully supports {{< link hugo_modules >}}Hugo modules{{< /link >}} to provide a flexible and extensible modular framework. By default, Hinode includes core building blocks for {{< link bootstrap >}}Bootstrap{{< /link >}}, {{< link flexsearch >}}FlexSearch{{< /link >}}, and {{< link fontawesome >}}Font Awesome{{< /link >}}. The following paragraphs describe the coding conventions of Hinode modules, illustrate how to automate your build and release process, and give an overview of common issues and resolutions.
 
 ## Conventions
 
@@ -114,9 +111,8 @@ Head over to `Branches` section within `Code and automation` of your repository 
 
 Specify the test you defined previously as required status check. When using Hinode's default test, you would see six different checks (three platforms with two Node versions each).
 
-{{< alert type="info" >}}
-GitHub only displays selectable status checks when they have had an initial run, so be sure to run the test first. Also, the status checks are not automatically updated when the test script changes. You will need to manually update the status checks as required.
-{{< /alert >}}
+> [!IMPORTANT]
+> GitHub only displays selectable status checks when they have had an initial run, so be sure to run the test first. Also, the status checks are not automatically updated when the test script changes. You will need to manually update the status checks as required.
 
 #### Automated merging
 

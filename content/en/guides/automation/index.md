@@ -17,11 +17,8 @@ thumbnail:
 
 The Hinode template uses both Hugo modules and npm packages. In this guide we will use GitHub actions to upgrade both types of dependencies automatically, ensuring our repository is always up to date. However, before we enable these automation steps, we will set up branch protection first. This guide assumes you have successfully setup a site based on the Hinode template. See the guide on {{< link "editing" >}}how to create a site with Hinode{{< /link >}} for more information.
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-This guide uses branch protection. You will require a paid plan if you have a private repository. See {{</* link github_plans >}}GitHub's plans{{< /link */>}} for more details.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!NOTE]
+> This guide uses branch protection. You will require a paid plan if you have a private repository. See {{< link github_plans >}}GitHub's plans{{< /link >}} for more details.
 
 ## Step 1 - Testing the branch for the first time
 
@@ -55,9 +52,8 @@ Navigate to the homescreen of your repository on GitHub. You should see a warnin
   - Require branches to be up to date before merging
 {.tickmark}
 
-{{< alert type="danger" >}}
-GitHub does not automatically update your status checks. For example, if you decide to modify your test matrix, you need to manually remove the obsolete labels and add the new labels.
-{{< /alert >}}
+> [!IMPORTANT]
+> GitHub does not automatically update your status checks. For example, if you decide to modify your test matrix, you need to manually remove the obsolete labels and add the new labels.
 
 These settings ensure all proposed changes are submitted as part of a PR and prevents any commits directly on the main branch. We can then use each PR request as a trigger to test our codebase and build. We will now select the tests we ran previously in our `lint & build` action. Add all test labels to the second check (`Require status checks to pass before merging`) individually. For example, you can add the `build (18.x)` label as prerequisite, meaning that your site should be compatible with Node.js v18. We are now ready to automate our dependency upgrades.
 
@@ -88,11 +84,8 @@ The template repository includes a workflow created by Nícolas Iensen to {{< li
   {{< img src="img/gh-token-step07.png" caption="Step 7. Define the action secret HUGO_MOD_PR" >}}
 {{< /carousel >}}
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="danger" >}}
-Be careful with using actions from the marketplace, as this introduces a security risk. Rob Bos has written an excellent {{</* link devops_journal >}}blog about the risks involved and how you can mitigate this{{< /link */>}}.
-{{< /alert>}}
-<!-- markdownlint-enable MD037 -->
+> [!CAUTION]
+> Be careful with using actions from the marketplace, as this introduces a security risk. Rob Bos has written an excellent {{< link devops_journal >}}blog about the risks involved and how you can mitigate this{{< /link >}}.
 
 The `Update Hugo Dependencies` action requires elevated privileges. We will now create a new fine-grained Personal Access Token (PAT) called `HUGO_MOD_PR` to authorize this action to run on our behalf. Set up the token in the `Developer settings` of your **Account settings** on GitHub. The token requires access to your repository with the following permissions:
 

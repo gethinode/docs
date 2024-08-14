@@ -1,7 +1,7 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2024-08-11
+date: 2024-08-14
 layout: docs
 modules: ["katex"]
 ---
@@ -149,9 +149,8 @@ Use the {{< link "docs/components/abbr" >}}abbr shortcode{{< /link>}} for abbrev
 
 ## Blockquotes
 
-{{< alert >}}
-**New in v0.25.2** - Blockquotes no longer require an additional styling directive. You can drop the now obsolete `{.blockquote}` from your input.
-{{< /alert >}}
+> [!NOTE]
+> Since release {{< release version="v0.25.2" short="true" type="link" >}}, blockquotes no longer require an additional styling directive. You can drop the now obsolete `{.blockquote}` from your input.
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations. Use the `>` Markdown character to generate a blockquote.
 

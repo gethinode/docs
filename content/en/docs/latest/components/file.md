@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: File
-date: 2024-01-02
+date: 2024-08-14
 description: The file shortcode prints the full content of any given file with syntax highlighting.
 layout: docs
 icon: fa file-lines
@@ -22,9 +22,8 @@ The `file` shortcode prints and highlights the full content of a given input fil
 
 ## Arguments
 
-{{< alert type="danger" >}}
-The definition of the default `id` field fails when embedding (multiple) `file` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
-{{< /alert >}}
+> [!IMPORTANT]
+> The definition of the default `id` field fails when embedding (multiple) `file` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
 
 The shortcode supports the following arguments:
 

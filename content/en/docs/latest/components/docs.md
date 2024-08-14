@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Docs
-date: 2024-01-02
+date: 2024-08-14
 description: The docs shortcode captures a code snippet from a supported input file.
 layout: docs
 icon: fas bookmark
@@ -22,9 +22,8 @@ The `docs` shortcode captures a code snippet from a `toml` or `scss` input file.
 
 ## Arguments
 
-{{< alert type="danger" >}}
-The definition of the default `id` field fails when embedding (multiple) `docs` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
-{{< /alert >}}
+> [!IMPORTANT]
+> The definition of the default `id` field fails when embedding (multiple) `docs` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
 
 The shortcode supports the following arguments:
 

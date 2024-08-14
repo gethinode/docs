@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Toast
-date: 2023-12-30
+date: 2024-08-14
 description: Use the toast shortcode to display a dismissable message in the bottom-right corner of the screen.
 layout: docs
 icon: fas circle-info
@@ -10,9 +10,8 @@ tags: component
 
 ## Overview
 
-{{< alert >}}
-**New in v0.14.3** - To support multiple toast messages on the same page, each toast message is now explicitly linked to a button using the parameter `id`. Hinode wraps the individual toast messages in a container to stack them automatically.
-{{< /alert >}}
+> [!IMPORTANT]
+> To support multiple toast messages on the same page, each toast message is explicitly linked to a button using the parameter `id` since release {{< release version="v0.14.3" short="true" type="link" >}}. Hinode wraps the individual toast messages in a container to stack them automatically.
 
 Use the `toast` shortcode to display a dismissable message in the bottom-right corner of the screen. Give the toast a unique `id` and assign this value to the `toast` argument of a button. As an example, the following shortcode displays two buttons that, when clicked, trigger a toast message. The messages are stacked when both buttons are clicked in a short timeframe.
 

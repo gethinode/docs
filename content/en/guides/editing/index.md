@@ -16,9 +16,8 @@ thumbnail:
 
 ## Introduction
 
-{{< alert type="info" >}}
-The commands and code examples within this guide are written with macOS in mind. The commands should be transferrable to Windows and Linux too.
-{{< /alert >}}
+> [!NOTE]
+> The commands and code examples within this guide are written with macOS in mind. The commands should be transferrable to Windows and Linux too.
 
 Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{< relref "hosting-and-deployment">}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch.
 
@@ -252,11 +251,8 @@ npm run lint
 
 Head over to VSCode's Source Control to view the pending changes. Click on the file `_index.md` to open the code inspector. VSCode will then show the differences between the previous version and current version of the file. Content that has been replaced or removed is marked red, and content that has been added or modified is marked green. Verify the change and click on the `+` button to stage the modification of the `_index.md` file. Enter a descriptive commit message such as `Modify about section`. When done, click on the blue `Commit` button to commit the changes to the `develop` branch.
 
-<!-- markdownlint-disable MD037 -->
-{{< alert type="info" >}}
-By convention, a commit message should use the imperative mood and should be less than 150 characters in total. Review the blog from Initial Commit to see more {{</* link initialcommit >}}best practices and guidelines to write good commit messages{{< /link */>}}.
-{{< /alert >}}
-<!-- markdownlint-enable MD037 -->
+> [!TIP]
+> By convention, a commit message should use the imperative mood and should be less than 150 characters in total. Review the blog from Initial Commit to see more {{< link initialcommit >}}best practices and guidelines to write good commit messages{{< /link >}}.
 
 VSCode highlights two additional changes, one being our new post and the other a file called `hugo_stats.json`. This latter file is used by the purger to avoid required styles are removed unintentionally. Check the guide about [optimizing the user experience]({{< relref "optimization" >}}) for an elaborate deep-dive. Stage and commit these two changes too. Lastly, click on the blue button `Publish Branch` to submit the branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
 

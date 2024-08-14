@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Image
-date: 2023-12-29
+date: 2024-08-14
 description: Use the image shortcode to display a responsive image with a specific aspect ratio.
 layout: docs
 icon: fas image
@@ -10,15 +10,7 @@ tags: component
 
 ## Overview
 
-{{< alert >}}
-**New in v0.18.3** - The image shortcode now supports an additional ratio "3x2". It also recognizes page resources correctly.
-{{< /alert >}}
-
 Use the `image` shortcode to display a responsive image with a specific aspect ratio. The source link can refer to either an image available in the `/assets/img` folder of your site or a public web location. The shortcode renders the image as a so-called {{< link mozilla_image >}}image set{{< /link >}} to optimize the image for different screen sizes and resolutions. Behind the scenes, Hugo renders the images in `WebP` format and stores them in a local folder (`resources` or `public`). The images are processed using the quality setting specified in the `[imaging]` section of the main {{< link hugo_imaging >}}config file{{< /link >}} (defaults to 75). Supported image types are `.png`, `.jpeg`, `.gif`, `.tiff`, `.bmp`, and `.webp`. A fallback image of type `.jpeg` is provided for older browsers.
-
-{{< alert type="info" >}}
-The shortcode supports vector images too (identified by their extension `.svg`). However, these images are not processed but rather used as is.
-{{< /alert >}}
 
 As an example, the following shortcode displays an image with its original aspect ratio. The image is adjusted for the active color mode. The shortcode processes two images behind the scenes, being `img/responsive-light.png` and `img/responsive-dark.png`. Only the image that matches the current color mode is shown.
 
@@ -114,9 +106,8 @@ Add a `caption` to transform the image into a figure with caption.
 
 The shortcode supports vector images of type `.svg` too. The shortcode supports the regular arguments, however, vector images are contained instead of cropped when the `ratio` is set. The next example shows a color-mode-aware vector image. The background is set to a contrasting color to illustrate the ratio behavior.
 
-{{< alert type="info" >}}
-Unlike bitmap images, vector images are not processed but used as is. They should be maintained in the site's `static` folder instead of the `assets` folder. Add a leading `/` to specify the absolute image location.
-{{< /alert >}}
+> [!IMPORTANT]
+> Unlike bitmap images, vector images are not processed but used as is. They should be maintained in the site's `static` folder instead of the `assets` folder. Add a leading `/` to specify the absolute image location.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
