@@ -6,7 +6,7 @@ layout: docs
 ---
 
 > [!IMPORTANT]
-> Hinode uses render hooks since release {{< release version="v0.26.0" short="true" type="link" >}} to parse markdown images. Be sure to set {{< link "hugo_parser_image" >}}parser.wrapStandAloneImageWithinParagraph{{< /link >}} to `false` to correctly render images and figures. 
+> Hinode uses render hooks since release {{< release version="v0.26.0" short="true" type="link" >}} to parse markdown images. Be sure to set {{< link "hugo_parser_image" >}}parser.wrapStandAloneImageWithinParagraph{{< /link >}} to `false` to correctly render images and figures.
 
 Hinode uses Hugo's {{< link hugo_image >}}image processing{{< /link >}} to preprocess responsive images on the server side. By taking advantage of so-called {{< link mozilla_image >}}image sets{{< /link >}}, the client's browser can decide which image to download whilst reducing the download size. You also utilize external image processors, see {{< link "/docs/configuration/digital-asset-managers" />}} for more details.
 
@@ -31,7 +31,7 @@ You can also reference remote images by specifying an URL. Hinode downloads the 
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-You can also use native Markdown to include an image since release {{< release version="v0.26.0" short="true" type="link" >}}. 
+You can also use native Markdown to include an image since release {{< release version="v0.26.0" short="true" type="link" >}}.
 
 {{< example lang="hugo" >}}
 ![Flowers](/img/flowers.jpg)
@@ -48,7 +48,7 @@ Similar to the [images support]({{% relref "#images" %}}), you can add a caption
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-You can also use native Markdown to include a figure since release {{< release version="v0.26.0" short="true" type="link" >}}. 
+You can also use native Markdown to include a figure since release {{< release version="v0.26.0" short="true" type="link" >}}.
 
 {{< example lang="hugo" >}}
 ![Flowers](/img/flowers.jpg "Figure caption")

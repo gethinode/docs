@@ -307,7 +307,9 @@ $$\forall x \in X, \quad \exists y \leq \epsilon$$
 You can also include a codeblock of type `math` to render an inline element wrapped in a codeblock. In this case you should omit any delimiters.
 
 {{< example lang="markdown" >}}
+
 ```math
 -b \pm \sqrt{b^2 - 4ac} \over 2a
 ```
+
 {{< /example >}}

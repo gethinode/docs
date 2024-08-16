@@ -8,7 +8,7 @@ layout: docs
 ## Internal links
 
 > [!IMPORTANT]
-> Since release {{< release version="v0.26.0" short="true" type="link" >}}, Hinode renders all links using a render hook. The support for markdown links requires that any named links use the `{{%/* myshortcode */%}}` notation instead of `{{</* myshortcode */>}}` notation going forward. 
+> Since release {{< release version="v0.26.0" short="true" type="link" >}}, Hinode renders all links using a render hook. The support for markdown links requires that any named links use the `{{%/* myshortcode */%}}` notation instead of `{{</* myshortcode */>}}` notation going forward.
 
 Hugo provides the shortcode `ref` to link to another page within the site. The shortcode returns an absolute path. You can provide the document path as input. If you omit the leading `/`, the page is first resolved relative to the current page, then to the remainder of the site. Review {{< link hugo_links >}}Hugo's documentation{{< /link >}} for more examples and advanced options.
 
