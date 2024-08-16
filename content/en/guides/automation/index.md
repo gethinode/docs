@@ -108,4 +108,4 @@ We can now run the `Update Hugo Dependencies` action. Head over to the actions o
 
 ## Conclusion
 
-You have now successfully configured automated updates for your Hinode site. Review the [hosting and deployment options]({{< relref "hosting-and-deployment" >}}) to see various options on how to (automatically) publish your site to a hosting provider.
+You have now successfully configured automated updates for your Hinode site. Review the [hosting and deployment options]({{% relref "hosting-and-deployment" %}}) to see various options on how to (automatically) publish your site to a hosting provider.

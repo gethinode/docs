@@ -34,7 +34,7 @@ slug: "over-mij"
 ---
 ```
 
-The English page is available by navigating to `/en/about` and the Dutch translation is available on `/nl/over-mij`. The [main navigation]({{< ref "navigation#main-navigation" >}}) item shows a language switcher for both translations.
+The English page is available by navigating to `/en/about` and the Dutch translation is available on `/nl/over-mij`. The [main navigation]({{% ref "navigation#main-navigation" %}}) item shows a language switcher for both translations.
 
 ## Internationalization
 

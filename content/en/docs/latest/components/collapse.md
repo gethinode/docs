@@ -28,7 +28,7 @@ Use the `collapse` shortcode to reveal or hide a panel. The panel can contain bo
 ## Arguments
 
 > [!IMPORTANT]
-> The definition of the default `id` field fails when embedding (multiple) `collapse` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
+> The definition of the default `id` field fails when embedding (multiple) `collapse` shortcodes in an [example]({{% relref "example" %}}). Provide an explicit, unique `id` to prevent cross-interference.
 
 The shortcode supports the following arguments:
 
@@ -36,4 +36,4 @@ The shortcode supports the following arguments:
 
 ## Remarks
 
-The [nav shortcode]({{< relref "navs-and-tabs" >}}) uses multiple collapse panels under the hood to provide access to a group of tab panes.
+The [nav shortcode]({{% relref "navs-and-tabs" %}}) uses multiple collapse panels under the hood to provide access to a group of tab panes.

@@ -23,7 +23,7 @@ The `file` shortcode prints and highlights the full content of a given input fil
 ## Arguments
 
 > [!IMPORTANT]
-> The definition of the default `id` field fails when embedding (multiple) `file` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
+> The definition of the default `id` field fails when embedding (multiple) `file` shortcodes in an [example]({{% relref "example" %}}). Provide an explicit, unique `id` to prevent cross-interference.
 
 The shortcode supports the following arguments:
 
@@ -35,7 +35,7 @@ Change the style and language of your file preview with shortcode arguments.
 
 ### Default file preview
 
-Use the `path` argument to print the content of a specific file. By default, the shortcode uses the site's `basePath` (see [page layout]({{< relref "layout#configuration-3" >}}) for more information).
+Use the `path` argument to print the content of a specific file. By default, the shortcode uses the site's `basePath` (see [page layout]({{% relref "layout#configuration-3" %}}) for more information).
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

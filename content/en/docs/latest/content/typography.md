@@ -30,7 +30,7 @@ Use the native Markdown character `#` to generate headings for your content. The
 {{< /example >}}
 <!-- markdownlint-enable MD025 -->
 
-Alternatively, you can use `.h1` through `.h6` classes, for when you want to match the font styling of a heading but cannot use the associated HTML element. For example, using a `.h2` class will exclude the section heading from the generated [table of contents]({{< ref "navigation#table-of-contents" >}}).
+Alternatively, you can use `.h1` through `.h6` classes, for when you want to match the font styling of a heading but cannot use the associated HTML element. For example, using a `.h2` class will exclude the section heading from the generated [table of contents]({{% ref "navigation#table-of-contents" %}}).
 
 {{< example >}}
 H1
@@ -227,7 +227,7 @@ Use native Markdown to define ordered lists, unordered lists, and nested lists.
 
 ### Ordered List
 
-The following Markdown defines an ordered list of three items. The sequence is automatically determined, so simply add `1.` at the start of each element. The [linting rules]({{< ref "contribute#markdown" >}}) will raise an error if you add the sequence numbering yourself.
+The following Markdown defines an ordered list of three items. The sequence is automatically determined, so simply add `1.` at the start of each element. The [linting rules]({{% ref "contribute#markdown" %}}) will raise an error if you add the sequence numbering yourself.
 
 {{< example lang="markdown" >}}
 
@@ -281,7 +281,7 @@ Use the `-` character followed by either `[x]` or `[ ]` to indicate a (completed
 
 {{< release version="v0.16.0" >}}
 
-Use {{< link katex >}}KaTeX{{< /link >}} to add mathematical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
+Use {{< link katex >}}KaTeX{{< /link >}} to add mathematical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{% relref "../configuration/modules#configuring-modules" %}}) and [page frontmatter]({{% relref "../configuration/modules#enabling-optional-modules" %}}) as needed.
 
 {{< example lang="markdown" >}}
 This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula

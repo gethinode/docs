@@ -34,7 +34,7 @@ Hinode supports the following additional front matter parameters.
 {{< table >}}
 | Argument            | Description |
 |---------------------|-------------|
-| icon                | Shorthand notation for an [icon]({{< relref "icon" >}}) to be used on a [card]({{< relref "card" >}}). |
+| icon                | Shorthand notation for an [icon]({{% relref "icon" %}}) to be used on a [card]({{% relref "card" %}}). |
 | photoCredits        | {{</* release version="v0.18.0" state="deprecated" inline="true" size="sm" */>}} Use `thumbnail.author` instead. |
 | photoSource         | {{</* release version="v0.18.0" state="deprecated" inline="true" size="sm" */>}} Use `thumbnail.origin` instead. |
 | searchExclude       | {{</* release version="0.21.8" inline="true" size="sm" */>}} If true, the current page is excluded from the search index. |
@@ -52,7 +52,7 @@ Hinode supports the following additional front matter parameters.
 > [!CAUTION]
 > Mixing Markdown with HTML is considered unsafe. Hinode disables HTML support by default since release v0.19.0. If you trust the input, you can enable this setting in the {{< link hugo_goldmark >}}Goldmark configuration{{< /link >}}, the default Markdown processor of Hugo. If you disable HTML, you can optionally set `purgeHTMLComments` in `params.debugging` to prevent HTML comments from generating a warning by Goldmark.
 
-As explained in the [overview]({{< relref "#overview" >}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with {{< abbr HTML >}} as needed. The final output is rendered to HTML.
+As explained in the [overview]({{% relref "#overview" %}}), Hinode uses Markdown to format the content of a document. However, you can mix this content with {{< abbr HTML >}} as needed. The final output is rendered to HTML.
 
 ### Templates
 
@@ -67,7 +67,7 @@ Hinode uses several templates to prescribe the final output in HTML. Each templa
     └── index.html       // defines the layout for the homepage
 ```
 
-The [layout section]({{< relref "layout" >}}) provides more details about the available templates.
+The [layout section]({{% relref "layout" %}}) provides more details about the available templates.
 
 ### Shortcodes
 
@@ -86,7 +86,7 @@ Hugo provides more details about the {{< link hugo_shortcodes >}}usage of shortc
 
 ## Single pages
 
-Single pages define the content for a specific page, such as the [introduction page]({{< relref "introduction" >}}). Hinodes supports three types of single pages, which can be configured in the front matter. The next paragraphs describe each layout type in more detail. Refer to the [layout section]({{< relref "layout" >}}) to see additional configuration options.
+Single pages define the content for a specific page, such as the [introduction page]({{% relref "introduction" %}}). Hinodes supports three types of single pages, which can be configured in the front matter. The next paragraphs describe each layout type in more detail. Refer to the [layout section]({{% relref "layout" %}}) to see additional configuration options.
 
 ### Default layout
 
@@ -127,7 +127,7 @@ Documentation pages use a more straightforward, simplified layout compared to th
 
 - **Title** - the title of the page as set in the page's frontmatter.
 - **Description** - the description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.
-- **Metadata** - a revision date and link to the latest git commit on the bottom of the page. Enable `enableGitInfo` in the [main configuration]({{< relref "layout#main-configuration" >}}) for the git commit message to work.
+- **Metadata** - a revision date and link to the latest git commit on the bottom of the page. Enable `enableGitInfo` in the [main configuration]({{% relref "layout#main-configuration" %}}) for the git commit message to work.
 
 Be sure to select the `docs` layout in the page's frontmatter to enable the documentation layout:
 

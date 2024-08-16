@@ -29,7 +29,7 @@ The shortcode supports the following arguments:
 
 ## Configuration
 
-By default, map support is optional. Be sure to include `leaflet` in your [module configuration]({{< relref "../configuration/modules#configuring-modules" >}}) and [page frontmatter]({{< relref "../configuration/modules#enabling-optional-modules" >}}) as needed.
+By default, map support is optional. Be sure to include `leaflet` in your [module configuration]({{% relref "../configuration/modules#configuring-modules" %}}) and [page frontmatter]({{% relref "../configuration/modules#enabling-optional-modules" %}}) as needed.
 
 ## Examples
 

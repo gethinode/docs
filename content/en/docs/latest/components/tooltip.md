@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-Use the `tooltip` shortcode to display a tooltip for a hyperlink. Refer to the [button]({{< ref "#button" >}} "button") on how to display a tooltip for a button instead. The inner content is used as hyperlink text. As an example, the following shortcode displays a tooltip for a colored hyperlink.
+Use the `tooltip` shortcode to display a tooltip for a hyperlink. Refer to the [button]({{% ref "#button" %}} "button") on how to display a tooltip for a button instead. The inner content is used as hyperlink text. As an example, the following shortcode displays a tooltip for a colored hyperlink.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

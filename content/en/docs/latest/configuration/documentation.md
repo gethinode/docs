@@ -14,10 +14,10 @@ The configuration of the documentation pages is set in the `docs` section of the
 {{< table >}}
 | Setting      | Default | Description |
 |--------------|---------|-------------|
-| version      | -       | Default version to use in documentation links, only applicable when no other versions have been defined (see [next paragraph]({{< relref "documentation#versioned-documentation">}})). |
+| version      | -       | Default version to use in documentation links, only applicable when no other versions have been defined (see [next paragraph]({{% relref "documentation#versioned-documentation" %}})). |
 | basePath     | -       | Base path to use for file references. |
 | github       | -       | Repository URL for the docs site, overrides `schema/github` in `config/_default/params.toml`. |
-| release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{< relref "release" >}}) and [timeline shortcode]({{< relref "timeline" >}}).
+| release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{% relref "release" %}}) and [timeline shortcode]({{% relref "timeline" %}}).
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
@@ -46,5 +46,5 @@ Add each available version to `[[docs.releases]]`. The releases support the foll
 | label     | -       | Name of the release version, e.g. `v1.0`. When `url` is empty, the label is used for grouping instead. |
 | url       | -       | Local URL of the release, e.g. `/docs/1.0/`. |
 | latest    | false   | If set, adds the suffix `latest` to the label in the version switcher. |
-| redirect  | -       | If set, generates a server-side rewrite rule. You will need to [configure server-side redirection]({{< relref "server-side-redirection" >}}) too. |
+| redirect  | -       | If set, generates a server-side rewrite rule. You will need to [configure server-side redirection]({{% relref "server-side-redirection" %}}) too. |
 {{< /table >}}

@@ -12,7 +12,7 @@ tags: component
 
 {{< release version="v0.18.6" >}}
 
-Use the `card-group` shortcode to display a group of cards. Add inner `<card>` elements for each [card]({{< ref "card" >}} "card"). As an example, the following shortcode displays a group of three cards.
+Use the `card-group` shortcode to display a group of cards. Add inner `<card>` elements for each [card]({{% ref "card" %}} "card"). As an example, the following shortcode displays a group of three cards.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -44,4 +44,4 @@ In addition, the following arguments are passed to the individual cards.
 
 ## Examples
 
-See the [card shortcode documentation]({{< ref "card" >}} "card") for additional styling options.
+See the [card shortcode documentation]({{% ref "card" %}} "card") for additional styling options.

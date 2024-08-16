@@ -9,7 +9,7 @@ Hinode supports responsive images out-of-the-box. Although you can include image
 
 ## Images
 
-As an example, the following shortcode displays an image with rounded corners and a 21x9 aspect ratio. The [image shortcode documentation]({{< relref "image" >}}) provides more details.
+As an example, the following shortcode displays an image with rounded corners and a 21x9 aspect ratio. The [image shortcode documentation]({{% relref "image" %}}) provides more details.
 
 > [!IMPORTANT]
 > Be sure to store your local images in the `assets` folder to take advantage of the image processing features. Images stored in the `static` folder are not processed.
@@ -30,7 +30,7 @@ You can also reference remote images by specifying an URL. Hinode downloads the 
 
 ## Figures
 
-Similar to the [images support]({{< relref "#images" >}}), you can add a caption to display below the image. Add the argument `caption` to include a figure caption.
+Similar to the [images support]({{% relref "#images" %}}), you can add a caption to display below the image. Add the argument `caption` to include a figure caption.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

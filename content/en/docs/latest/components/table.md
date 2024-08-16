@@ -37,4 +37,4 @@ The shortcode supports the following arguments:
 
 ## Remarks
 
-See the [tables documentation]({{< relref "../content/tables" >}}) in the content section for additional styling options.
+See the [tables documentation]({{% relref "../content/tables" %}}) in the content section for additional styling options.

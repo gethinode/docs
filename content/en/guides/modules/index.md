@@ -20,7 +20,7 @@ modules: ["katex"]
 > [!NOTE]
 > This guide is primarily aimed at explaining how to develop a Hinode-compatible module. The KaTeX library used in this guide is also available as {{< link repository_mod_katex >}}managed module on GitHub{{< /link >}}. Hugo v0.132.0 introduced (experimental) support for [server-side rendering of KaTeX expressions](https://gohugo.io/functions/transform/tomath/), which might be a better alternative when looking for KaTeX support on your site.
 
-{{< link hugo_modules >}}Hugo modules{{< /link >}} provide a flexible and extensible modular framework. Hinode builds upon this framework by introducing core modules and optional modules to further streamline the build process and to minimize the final site assets. This guide helps to get you started with developing your own Hugo modules. It also explains how to take advantage of Hinode's build pipelines to optimize the generated stylesheet and script assets. As a case example, we will set up a module that wraps the functionality of {{< link katex >}}KaTeX{{< /link >}} - a popular math typesetting library. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm. We will also use Visual Studio Code (VSCode) for convenience - {{< link vscode_download >}}download your copy from the official website{{< /link >}}.
+{{< link hugo_modules >}}Hugo modules{{< /link >}} provide a flexible and extensible modular framework. Hinode builds upon this framework by introducing core modules and optional modules to further streamline the build process and to minimize the final site assets. This guide helps to get you started with developing your own Hugo modules. It also explains how to take advantage of Hinode's build pipelines to optimize the generated stylesheet and script assets. As a case example, we will set up a module that wraps the functionality of {{< link katex >}}KaTeX{{< /link >}} - a popular math typesetting library. Be sure to comply with [Hinode's prerequisites]({{% relref "introduction#prerequisites" %}}) first - this guide requires npm. We will also use Visual Studio Code (VSCode) for convenience - {{< link vscode_download >}}download your copy from the official website{{< /link >}}.
 
 {{< example lang="markdown" >}}
 This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula
@@ -41,7 +41,7 @@ Hugo modules can include files for each of the following folders: `archetypes`, 
 - For `assets`, `content`, `static`, `layouts` (templates), and `archetypes` files, these are merged on file level. So the left-most file will be chosen.
 
 > [!NOTE]
-> You can choose to either fully integrate Hugo modules or to include them on a page-by-page basis. In this guide, we will configure KaTeX as an optional module, assuming we will only need KaTeX on a few pages. See [configuring modules]({{< relref "/docs/configuration/modules#configuring-modules" >}}) for more details.
+> You can choose to either fully integrate Hugo modules or to include them on a page-by-page basis. In this guide, we will configure KaTeX as an optional module, assuming we will only need KaTeX on a few pages. See [configuring modules]({{% relref "/docs/configuration/modules#configuring-modules" %}}) for more details.
 
 Our module will wrap the functionality of KaTeX as a module for Hinode. The installation instructions of KaTeX tell us what files are needed to {{< link katex_self_hosted >}}host KaTeX ourselves{{< /link >}}. We will need the file `katex.js`, `katex.css`, and the `fonts` directory. We could also use minified versions, however, Hinode will take care of transpiling, bundling, and minifying the assets later on. For our purposes, we are better suited with the properly formatted files to simplify debugging. We also want to include the {{< link katex_autorender >}}auto-render extension{{< /link >}}. We will create a separate script with the instructions to invoke the function `renderMathInElement` later on.
 
@@ -113,7 +113,7 @@ Modify the `postinstall` script to copy the required files to a local `dist` dir
 The line postinstall is split into separate lines for each copy command to improve readability (you could also use {{< link npm_run_all >}}npm-run-all{{< /link >}} to simplify the command even further). Each copy statement uses {{< link npm_cpy >}}cpy{{< /link >}}, a cross-platform copy command. The `--flat` argument instructs `cpy` to flatten the files in the destination directory `dist`. The negation pattern starting with `!` tells `cpy-cli` to skip files that end with `.min.js`.
 
 > [!IMPORTANT]
-> We deliberately rename the `katex.css` file to a `katex.scss` file. The default `libsass` library, part of the [styles processing pipeline]({{< relref "styles" >}}), has difficulty processing the file otherwise.
+> We deliberately rename the `katex.css` file to a `katex.scss` file. The default `libsass` library, part of the [styles processing pipeline]({{% relref "styles" %}}), has difficulty processing the file otherwise.
 
 Run `npm install` from the command line to invoke the `postinstall` script automatically. You should now have a folder `dist` in your repository root with the correct files. This npm script works well in a {{< abbr "CI/CD" >}} pipeline too, which prepares us for automation of the dependency upgrades later on in this guide.
 
@@ -123,7 +123,7 @@ npm install
 (out)> npm run -s copy:css && npm run -s copy:js && npm run -s copy:fonts
 {{< /command >}}
 
-We will now expose the various files copied to our local `dist` folder using [Hugo mounts]({{< relref "/docs/advanced-settings/overview#mounted-folders" >}}). The below configuration adheres to Hinode's [conventions for the naming and paths of the exposed files]({{< relref "module-development#conventions" >}}). Also observe that we explicitly add the existing folders `layouts`, `assets`, and `static` as mount point. This is to ensure other mounts are merged with any existing directories, instead of these mounts replacing the local folders. Add this configuration to the `config.toml` file in your repository root.
+We will now expose the various files copied to our local `dist` folder using [Hugo mounts]({{% relref "/docs/advanced-settings/overview#mounted-folders" %}}). The below configuration adheres to Hinode's [conventions for the naming and paths of the exposed files]({{% relref "module-development#conventions" %}}). Also observe that we explicitly add the existing folders `layouts`, `assets`, and `static` as mount point. This is to ensure other mounts are merged with any existing directories, instead of these mounts replacing the local folders. Add this configuration to the `config.toml` file in your repository root.
 
 ```toml
 [module]
@@ -289,4 +289,4 @@ npm run start
 
 ## Conclusion
 
-We have now created a new module that wraps the functionality of KaTeX. You can now easily include the module as core module or optional module in your Hinode site. Visit the [modules]({{< relref "docs/configuration/modules" >}}) section for more instructions. As a next step, you could consider to automate the dependency tracking, merging, and publication of new releases for your module. Your module already inherited several workflows from the module template. Visit the [module development]({{< relref "module-development" >}}) section for more information.
+We have now created a new module that wraps the functionality of KaTeX. You can now easily include the module as core module or optional module in your Hinode site. Visit the [modules]({{% relref "docs/configuration/modules" %}}) section for more instructions. As a next step, you could consider to automate the dependency tracking, merging, and publication of new releases for your module. Your module already inherited several workflows from the module template. Visit the [module development]({{% relref "module-development" %}}) section for more information.

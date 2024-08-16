@@ -5,11 +5,11 @@ date: 2023-08-03
 layout: docs
 ---
 
-Hinode bundles local JavaScript files and JavaScript files defined in a core module into a single file. By utilizing [Hugo modules]({{< ref "overview" >}}), external JavaScript files are automatically ingested and kept up to date.
+Hinode bundles local JavaScript files and JavaScript files defined in a core module into a single file. By utilizing [Hugo modules]({{% ref "overview" %}}), external JavaScript files are automatically ingested and kept up to date.
 
 ## Build pipeline
 
-Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the JavaScript files consists of four steps.
+Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{% ref "overview" %}}) for a detailed explanation. The build pipeline of the JavaScript files consists of four steps.
 
 1. **Mount the JavaScript files maintained within the core modules**
 
@@ -29,7 +29,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 ## Critical files
 
-Hinode considers all files placed in the `assets/js/critical` folder as critical during page load. These files are bundled into the file `js/critical.bundle.js` and are included at the top of the page (right below the opening `<body>` tag). This ensures the browser processes these critical resources before rendering the initial site. By default, Hinode defines the JavaScript to toggle the site's [color mode]({{< relref "color-modes" >}}) as a critical resource to reduce screen flickering. The snippet below illustrates the page skeleton to include critical scripts as defined in `layouts/_default/baseof.html`.
+Hinode considers all files placed in the `assets/js/critical` folder as critical during page load. These files are bundled into the file `js/critical.bundle.js` and are included at the top of the page (right below the opening `<body>` tag). This ensures the browser processes these critical resources before rendering the initial site. By default, Hinode defines the JavaScript to toggle the site's [color mode]({{% relref "color-modes" %}}) as a critical resource to reduce screen flickering. The snippet below illustrates the page skeleton to include critical scripts as defined in `layouts/_default/baseof.html`.
 
 ```go-html-template
 [...]

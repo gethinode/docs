@@ -49,7 +49,7 @@ Set the argument `title` to add a brand text to the left of the navbar. The text
 ### Colored navbar
 
 > [!IMPORTANT]
-> To improve color-mode compatibility, the colors `dark` and `light` are no longer supported since {{< release version="v0.14.1" short="true" type="link" >}}. Use the adaptive colors `body` and `body-tertiary` instead, or apply a static `white` or `black` color. The background colors `white` and `black` use `data-bs-theme` to fix the text color. This setting requires [dark mode]({{< relref "layout#extended-configuration">}}) to be enabled.
+> To improve color-mode compatibility, the colors `dark` and `light` are no longer supported since {{< release version="v0.14.1" short="true" type="link" >}}. Use the adaptive colors `body` and `body-tertiary` instead, or apply a static `white` or `black` color. The background colors `white` and `black` use `data-bs-theme` to fix the text color. This setting requires [dark mode]({{% relref "layout#extended-configuration" %}}) to be enabled.
 
 Set the `color` argument to define the background color with a matching title color.
 
@@ -107,7 +107,7 @@ Set the argument `search` to `false` to disable search input.
 ### Mode switcher
 
 > [!IMPORTANT]
-> The mode switcher requires [dark mode]({{< relref "layout#extended-configuration">}}) to be enabled.
+> The mode switcher requires [dark mode]({{% relref "layout#extended-configuration" %}}) to be enabled.
 
 Set the argument `mode` to `true` to enable the mode switcher.
 
@@ -127,4 +127,4 @@ Set the argument `mode` to `false` to disable the mode switcher.
 
 ## Remarks
 
-See the [navigation documentation]({{< relref "navigation" >}}) for additional configuration options.
+See the [navigation documentation]({{% relref "navigation" %}}) for additional configuration options.

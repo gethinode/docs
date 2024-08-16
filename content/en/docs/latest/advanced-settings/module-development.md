@@ -26,7 +26,7 @@ Modules should define a single entrypoint for their stylesheets in `assets/scss/
 
 ### Scripts
 
-JavaScripts should be mounted in `assets/js/modules/{MODULE}/`. Hinode bundles these files into a single script if the module is a [core module]({{< relref "../configuration/modules" >}}). Be aware that the script files within the module are processed alphabetically, should you have any interdependencies in your scripts. You can set the value `showJS` to `true` in the `debugging` section of the site's parameters to show which files are processed in which order.
+JavaScripts should be mounted in `assets/js/modules/{MODULE}/`. Hinode bundles these files into a single script if the module is a [core module]({{% relref "../configuration/modules" %}}). Be aware that the script files within the module are processed alphabetically, should you have any interdependencies in your scripts. You can set the value `showJS` to `true` in the `debugging` section of the site's parameters to show which files are processed in which order.
 
 ## Automation
 
@@ -38,7 +38,7 @@ You can configure {{< link dependabot >}}Dependabot{{< /link >}} or set up a cus
 
 #### npm package upgrades
 
-{{< link dependabot >}}Dependabot{{< /link >}} automatically keeps the dependencies and npm packages used in your repository updated to the latest version. The Hinode module template includes a basic configuration that is enabled by default. It checks for any version updates on a daily basis. Additionally, it checks for updates to GitHub actiob every week. The configuration is defined in `.github/dependabot.yml` and includes a commit-message that is used for [release automation]({{< relref "#release-automation" >}}).
+{{< link dependabot >}}Dependabot{{< /link >}} automatically keeps the dependencies and npm packages used in your repository updated to the latest version. The Hinode module template includes a basic configuration that is enabled by default. It checks for any version updates on a daily basis. Additionally, it checks for updates to GitHub actiob every week. The configuration is defined in `.github/dependabot.yml` and includes a commit-message that is used for [release automation]({{% relref "#release-automation" %}}).
 
 ```yml
 version: 2
@@ -60,7 +60,7 @@ updates:
 
 #### Hugo module upgrades
 
-At this moment, {{< link dependabot >}}Dependabot{{< /link >}} has no support for Hugo modules yet (see {{< link dependabot_issue_6860 >}}feature request `#6860`{{< /link >}}). The Hinode module template provides a custom workflow in `.github/workflows/update.yml` to check for available Hugo module upgrades on a daily interval. It creates a Pull Request (PR) from a feature branch when it has found any upgrades. The workflow uses the {{< link create_pr >}}create-pull-request action from Peter Evans{{< /link >}} to ensure the PR includes commit messages that trigger the [semantic-release bot]({{< relref "#release-automation" >}}) (using the `fix` prefix).
+At this moment, {{< link dependabot >}}Dependabot{{< /link >}} has no support for Hugo modules yet (see {{< link dependabot_issue_6860 >}}feature request `#6860`{{< /link >}}). The Hinode module template provides a custom workflow in `.github/workflows/update.yml` to check for available Hugo module upgrades on a daily interval. It creates a Pull Request (PR) from a feature branch when it has found any upgrades. The workflow uses the {{< link create_pr >}}create-pull-request action from Peter Evans{{< /link >}} to ensure the PR includes commit messages that trigger the [semantic-release bot]({{% relref "#release-automation" %}}) (using the `fix` prefix).
 
 ```yml
 name: Update Hugo Dependencies
@@ -79,7 +79,7 @@ When done, head over `action secret` in the `security` section of the repository
 
 ### Automated merges
 
-GitHub's auto-merge feature automatically merges proposed Pull Requests (PRs) when all conditions have been met. This feature is especially helpful to merge dependency upgrades prepared by Dependabot (see the [dependency upgrades]({{< relref "#dependency-upgrades" >}}) section for more details). You are strongly encouraged to set up branch protection first, to prevent PRs from breaking your builds.
+GitHub's auto-merge feature automatically merges proposed Pull Requests (PRs) when all conditions have been met. This feature is especially helpful to merge dependency upgrades prepared by Dependabot (see the [dependency upgrades]({{% relref "#dependency-upgrades" %}}) section for more details). You are strongly encouraged to set up branch protection first, to prevent PRs from breaking your builds.
 
 #### Automated testing
 
@@ -154,7 +154,7 @@ Hinode uses the {{< link conventional_commit >}}Conventional Commits{{< /link >}
 
 - `feat!:` A breaking change (creates a new major release)
 - `feat:` A new feature (creates a new minor release)
-- `fix:` A bug fix (creates a new patch release, also triggered by [Dependabot upgrades]({{< relref "#npm-package-upgrades" >}}))
+- `fix:` A bug fix (creates a new patch release, also triggered by [Dependabot upgrades]({{% relref "#npm-package-upgrades" %}}))
 - `chore:` Changes to the build process or auxiliary tools and libraries such as documentation generation (does not trigger a new release)
 
 The workflow requires two secrets within your repository. Add them as `action secret` in the `security` section of the repository configuration.
@@ -187,7 +187,7 @@ Hugo modules have several constraints to work properly. The below overview provi
     Hugo requires repositories to use a consistent semantic versioning pattern when tagging their releases. In case a repository has changed its pattern, Hugo will not detect the latest version correctly. One such example is the {{</* link fontawesome >}}Font Awesome library{{< /link */>}}. It changed its release pattern from `v4.x.y` to `Release 5.x.y` (notice the drop of the `v` prefix). As a result, Hugo only downloads the old `v4.x.y` release. A workaround is to create a fork for version 6.x only and to use this as a source instead. This requires periodic synchronization of the fork though. Another approach is to use the npm release of Font Awesome instead and to mount the required files. This is the approach taken by the {{</* link repository_mod_fontawesome >}}Font Awesome module{{< /link */>}}.
   {{< /accordion-item >}}
   {{< accordion-item header="The Hugo modules are not updated by Dependabot" >}}
-    {{</* link dependabot >}}Dependabot{{< /link */>}} automatically keeps the dependencies and packages used in your repository updated to the latest version. However, the current version does not recognize Hugo modules. Set up a custom workflow instead, such as described in [Hugo module upgrades]({{< relref "#hugo-module-upgrades" >}}).
+    {{</* link dependabot >}}Dependabot{{< /link */>}} automatically keeps the dependencies and packages used in your repository updated to the latest version. However, the current version does not recognize Hugo modules. Set up a custom workflow instead, such as described in [Hugo module upgrades]({{% relref "#hugo-module-upgrades" %}}).
   {{< /accordion-item >}}
   {{< accordion-item header="The local installation of Hugo modules fails" >}}
     Hugo provides a configuration option to replace a remote module with a local folder to simplify development and testing. For example, the {{</* link repository_mod_flexsearch >}}FlexSearch module{{< /link */>}} uses a module replacement in the file `exampleSite/hugo.toml`. The replacement tells Hugo to use the module code of the parent folder, instead of downloading the remote release assets. However, if the module `mod-flexsearch` uses other Hugo modules itself (so-called transitive dependencies), Hugo will throw an error `Error: failed to load modules`. Vendor your modules with `hugo mod vendor` to fix this issue.

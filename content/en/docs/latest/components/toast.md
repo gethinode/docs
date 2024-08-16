@@ -41,4 +41,4 @@ Use the `toast` shortcode to display a dismissable message in the bottom-right c
 
 ## Configuration
 
-See the message section of the layout configuration to [modify the placement of the toast messages]({{< relref "layout#message-configuration" >}}).
+See the message section of the layout configuration to [modify the placement of the toast messages]({{% relref "layout#message-configuration" %}}).

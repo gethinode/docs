@@ -28,7 +28,7 @@ In addition, the background colors `black` and `white` are available too. Below 
 
 ## Adaptive colors
 
-Several components support background colors that are [color-mode aware]({{< relref "color-modes" >}}). These colors respond to changes when the active theme is adjusted, such as by changing from a light theme to a dark theme. You can apply this color by adding `bg-body` or `bg-body-tertiary` to the class of an HTML element.
+Several components support background colors that are [color-mode aware]({{% relref "color-modes" %}}). These colors respond to changes when the active theme is adjusted, such as by changing from a light theme to a dark theme. You can apply this color by adding `bg-body` or `bg-body-tertiary` to the class of an HTML element.
 
 <!-- markdownlint-disable MD037 -->
 {{< example >}}
@@ -41,7 +41,7 @@ Several components support background colors that are [color-mode aware]({{< rel
 
 ## Background colors
 
-Components such as the [timeline]({{< relref "timeline" >}}) support *subtle* background colors. These colors are also [adaptive]({{< relref "#adaptive-colors" >}}). The following background colors are available.
+Components such as the [timeline]({{% relref "timeline" %}}) support *subtle* background colors. These colors are also [adaptive]({{% relref "#adaptive-colors" %}}). The following background colors are available.
 
 {{< card-group cols="3" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" >}}
     {{< card class="bg-primary-subtle" >}}bg-primary-subtle{{< /card >}}
@@ -77,7 +77,6 @@ Below grid illustrates the contrasting colors for each background.
     {{< card color="dark" >}}{{< link href="#!" class="link-bg-dark" >}}dark{{< /link >}}{{< /card >}}
     {{< card color="white" class="text-bg-light" >}}{{< link href="#!" class="link-bg-white" >}}white{{< /link >}}{{< /card >}}
     {{< card color="black" class="text-white" >}}{{< link href="#!" class="link-bg-black" >}}black{{< /link >}}{{< /card >}}
-
     {{< card class="bg-body text-bg-white" >}}{{< link href="#!" class="link-bg-body" >}}body{{< /link >}}{{< /card >}}
     {{< card class="bg-body-tertiary text-bg-white" >}}{{< link href="#!" class="link-bg-body-tertiary" >}}body-tertiary{{< /link >}}{{< /card >}}
 {{< /card-group >}}

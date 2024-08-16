@@ -21,7 +21,7 @@ Set the `themeFontPath` to the address of your font provider, such as {{< link g
 themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap"
 ```
 
-Hinode enables support for Google Fonts by default. If you use a different font provider, be sure to adjust the Content Security Policy in the [server configuration]({{< relref "server-headers" >}}). The font-face definitions in the file `assets/scss/fonts.scss` are ignored when using an external font.
+Hinode enables support for Google Fonts by default. If you use a different font provider, be sure to adjust the Content Security Policy in the [server configuration]({{% relref "server-headers" %}}). The font-face definitions in the file `assets/scss/fonts.scss` are ignored when using an external font.
 
 ### Local fonts
 

@@ -13,9 +13,9 @@ Hugo provides the shortcode `ref` to link to another page within the site. The s
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Tables]({{</*ref "tables" */>}})
+[Tables]({{%/*ref "tables" */%}})
 
-[About]({{</*ref "credits" */>}})
+[About]({{%/*ref "credits" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -23,9 +23,9 @@ Similar to the `ref` shortcode, Hugo provides the shortcode `relref` to return a
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Tables]({{</*relref "tables" */>}})
+[Tables]({{%/*relref "tables" */%}})
 
-[About]({{</*relref "credits" */>}})
+[About]({{%/*relref "credits" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -47,9 +47,9 @@ You can add a cross-reference to the section heading by specifying the generated
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Reference]({{</* ref "#reference" */>}})
+[Reference]({{%/* ref "#reference" */%}})
 
-[Reference]({{</* relref "#reference" */>}})
+[Reference]({{%/* relref "#reference" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -87,7 +87,7 @@ Instead of using parentheses, you can use brackets to link to a predefined addre
 
 ### Managed links
 
-Hinode uses `config/_default/params.toml` to manage links to external addresses in a single place. You can [use the link shortcode generate a managed link]({{< relref "link" >}}). The following snippet of `config/_default/params.toml` defines the link address for `fontawesome`:
+Hinode uses `config/_default/params.toml` to manage links to external addresses in a single place. You can [use the link shortcode to generate a managed link]({{% relref "link" %}}). The following snippet of `config/_default/params.toml` defines the link address for `fontawesome`:
 
 ```toml
 [links]
@@ -102,4 +102,4 @@ You can then use the following statement to generate the link.
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-You can [configure the behavior of managed links]({{< relref "layout#extended-configuration" >}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section.
+You can [configure the behavior of managed links]({{% relref "layout#extended-configuration" %}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section.

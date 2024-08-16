@@ -23,7 +23,7 @@ The `docs` shortcode captures a code snippet from a `toml` or `scss` input file.
 ## Arguments
 
 > [!IMPORTANT]
-> The definition of the default `id` field fails when embedding (multiple) `docs` shortcodes in an [example]({{< relref "example" >}}). Provide an explicit, unique `id` to prevent cross-interference.
+> The definition of the default `id` field fails when embedding (multiple) `docs` shortcodes in an [example]({{% relref "example" %}}). Provide an explicit, unique `id` to prevent cross-interference.
 
 The shortcode supports the following arguments:
 
@@ -68,7 +68,7 @@ Change the style and language of your code snippet with shortcode arguments.
 
 ### Default code snipppet
 
-Use the `name` and `file` arguments to refer to a code snippet of a file. By default, the shortcode uses the site's `basePath` (see [page layout]({{< relref "layout#configuration-3" >}}) for more information).
+Use the `name` and `file` arguments to refer to a code snippet of a file. By default, the shortcode uses the site's `basePath` (see [page layout]({{% relref "layout#configuration-3" %}}) for more information).
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
