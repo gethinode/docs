@@ -39,7 +39,7 @@ Images, media files, and `<script>` tags placed at the bottom of the `<body>` se
 
 ## Step 1 - Setting up the test case
 
-We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunities for improvement. If not done so already, {{< link google_chrome >}}download and install Chrome{{< /link >}} from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{< relref "introduction#prerequisites" >}}) first - this guide requires npm.
+We will now use the Hinode documentation site as a real-life case example. We will use Google Chrome to establish the baseline performance and identify opportunities for improvement. If not done so already, {{< link google_chrome >}}download and install Chrome{{< /link >}} from the official site. Use the following commands to download the latest Hinode docs repository. Be sure to comply with [Hinode's prerequisites]({{% relref "introduction#prerequisites" %}}) first - this guide requires npm.
 
 {{< command >}}
 git clone https://github.com/gethinode/docs.git && cd docs
@@ -88,7 +88,7 @@ Scroll below in the Lighthouse evaluation report to study several opportunities 
 
 2. **Eliminate render-blocking resources**
 
-   Hinode includes the `main.bundle.js` file in the page body instead of the header by default, thus keeping this file from the critical rendering path. However, the `main.css` file is render-blocking by default - no matter where included. Reducing the size of this file will improve the page loading performance. One notable exception is the [script to control the site's color mode]({{< relref "scripts#critical-files" >}}), which is considered to be a critical resource.
+   Hinode includes the `main.bundle.js` file in the page body instead of the header by default, thus keeping this file from the critical rendering path. However, the `main.css` file is render-blocking by default - no matter where included. Reducing the size of this file will improve the page loading performance. One notable exception is the [script to control the site's color mode]({{% relref "scripts#critical-files" %}}), which is considered to be a critical resource.
 
 3. **Reduce unused CSS and JavaScript**
 
@@ -104,11 +104,11 @@ The Hinode documentation site uses several optimization strategies to reduce the
 
 1. **Add responsive images optimized for multiple screen sizes and devices**
 
-   Hinode supports responsive images out-of-the-box. Hinode uses Hugo to preprocess images on the server. By taking advantage of so-called image sets, the client’s browser can decide which image to download whilst reducing the download size. Review the [image documentation]({{< relref "images-and-figures" >}}) for more details.
+   Hinode supports responsive images out-of-the-box. Hinode uses Hugo to preprocess images on the server. By taking advantage of so-called image sets, the client’s browser can decide which image to download whilst reducing the download size. Review the [image documentation]({{% relref "images-and-figures" %}}) for more details.
 
 2. **Serve font files locally**
 
-   Font providers such as {{< link google_fonts >}}Google Fonts{{< /link >}} add font-face definitions for all the character sets a typeface comes with. By serving fonts locally you can define the exact definitions required. See the [fonts documentation]({{< relref "fonts#local-fonts" >}}) for more details.
+   Font providers such as {{< link google_fonts >}}Google Fonts{{< /link >}} add font-face definitions for all the character sets a typeface comes with. By serving fonts locally you can define the exact definitions required. See the [fonts documentation]({{% relref "fonts#local-fonts" %}}) for more details.
 
 3. **Minify CSS and JavaScript files in production**
 
@@ -172,7 +172,7 @@ As you might recall, the Lighthouse assessment also recommends to enable text co
 > [!IMPORTANT]
 > Please ensure the file `hugo_stats.json` is checked in to your repository (e.g. not listed in `.gitignore`). Netlify will not process the artifact during its build process otherwise.
 
-The actual deployment of our site is beyond the scope of this guide. Instead, we will review the live Hinode documentation site. You can review the documentation on how to [host your site on Netlify]({{< relref "hosting-and-deployment#host-on-netlify" >}}), which is the web server behind the Hinode documentation site.
+The actual deployment of our site is beyond the scope of this guide. Instead, we will review the live Hinode documentation site. You can review the documentation on how to [host your site on Netlify]({{% relref "hosting-and-deployment#host-on-netlify" %}}), which is the web server behind the Hinode documentation site.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/lighthouse-prod-step01.png" caption="Step 1. Inspect the downloaded assets" >}}

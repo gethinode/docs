@@ -1,5 +1,5 @@
 ---
-title: Upgrading
+title: Upgrading to Hugo modules
 description: Upgrade your existing Hinode site to take advantage of Hugo modules introduced in v0.16.
 date: 2023-08-04
 layout: docs
@@ -7,11 +7,11 @@ layout: docs
 
 {{< release version="v0.16.0" >}}
 
-Hinode v0.16 introduced support for {{< link hugo_modules >}}Hugo modules{{< /link >}} to provide a flexible and extensible modular framework. The prior versions of Hinode relied on {{< link npm >}}npm{{< /link >}} to track and update dependencies. Although npm is still supported, it is no longer a prerequisite to use Hinode. The following paragraphs highlight the key changes required to make your existing site compatible with Hugo modules. When done making your revisions, visit the [installation instructions for Hugo or npm]({{< relref "introduction" >}}) to build, serve, or publish your updated site.
+Hinode v0.16 introduced support for {{< link hugo_modules >}}Hugo modules{{< /link >}} to provide a flexible and extensible modular framework. The prior versions of Hinode relied on {{< link npm >}}npm{{< /link >}} to track and update dependencies. Although npm is still supported, it is no longer a prerequisite to use Hinode. The following paragraphs highlight the key changes required to make your existing site compatible with Hugo modules. When done making your revisions, visit the [installation instructions for Hugo or npm]({{% relref "introduction" %}}) to build, serve, or publish your updated site.
 
 ## Meeting the new prerequisites
 
-Hugo uses Go under the hood to manage and install modules. The **Go binary** should be installed on your local machine. If you use automation, be sure that Go is available on your build server too. You can {{< link golang_download >}}download Go from the official website{{< /link >}}. The getting started section in the Hinode documentation captures the [revised requirements of Hinode]({{< relref "introduction#prerequisites" >}}).
+Hugo uses Go under the hood to manage and install modules. The **Go binary** should be installed on your local machine. If you use automation, be sure that Go is available on your build server too. You can {{< link golang_download >}}download Go from the official website{{< /link >}}. The getting started section in the Hinode documentation captures the [revised requirements of Hinode]({{% relref "introduction#prerequisites" %}}).
 
 ## Initializing the module system
 
@@ -90,7 +90,7 @@ You can remove the now obsolete mounts highlighted in yellow from the same confi
 
 ## Adjusting the site parameters
 
-Hinodes supports core modules and optional modules. Core modules are fully integrated with the Hinode site, including stylesheets and Javascript bundles. On the other hand, optional modules are included on a page-by-page basis. Add the following configuration to your site's parameters. The full documentation is available in the [module configuration]({{< relref "docs/configuration/modules#configuring-modules" >}}).
+Hinodes supports core modules and optional modules. Core modules are fully integrated with the Hinode site, including stylesheets and Javascript bundles. On the other hand, optional modules are included on a page-by-page basis. Add the following configuration to your site's parameters. The full documentation is available in the [module configuration]({{% relref "docs/configuration/modules#configuring-modules" %}}).
 
 ```toml
 [modules]

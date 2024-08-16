@@ -11,7 +11,7 @@ layout: docs
 
 ## Team
 
-Hinode is maintained by {{< link repository_owner >}}Mark Dumay{{< /link >}} and several contributors as an open-source repository on {{< link repository >}}GitHub{{< /link >}}. You are more than welcome to contribute. Get involved in the development by {{< link issue_tracker >}}opening an issue{{< /link >}} or submitting a pull request. Read our [contributing guidelines]({{< ref "contribute" >}}) for information on how we develop.
+Hinode is maintained by {{< link repository_owner >}}Mark Dumay{{< /link >}} and several contributors as an open-source repository on {{< link repository >}}GitHub{{< /link >}}. You are more than welcome to contribute. Get involved in the development by {{< link issue_tracker >}}opening an issue{{< /link >}} or submitting a pull request. Read our [contributing guidelines]({{% ref "contribute" %}}) for information on how we develop.
 
 ## Core components
 

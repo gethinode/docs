@@ -5,7 +5,7 @@ date: 2024-08-14
 layout: docs
 ---
 
-As a static website, your Hinode site can be deployed virtually anywhere. Hugo provides a comprehensive overview of the more popular {{< link hugo_deployment >}}deployment solutions{{< /link >}}. Hinode uses a different build process compared to a default Hugo site. Review the [considerations]({{< relref "#considerations" >}}) for more details. The next paragraphs highlight the specific build and deployment process of Hinode for a few selected hosting providers.
+As a static website, your Hinode site can be deployed virtually anywhere. Hugo provides a comprehensive overview of the more popular {{< link hugo_deployment >}}deployment solutions{{< /link >}}. Hinode uses a different build process compared to a default Hugo site. Review the [considerations]({{% relref "#considerations" %}}) for more details. The next paragraphs highlight the specific build and deployment process of Hinode for a few selected hosting providers.
 
 ## Considerations
 
@@ -13,7 +13,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 1. **Include npm in your build process**
 
-   Hinode supports npm to automate the build process. Visit the [Hinode introduction]({{< relref "introduction" >}}) and [commands overview]({{< relref "commands" >}}) for more details.
+   Hinode supports npm to automate the build process. Visit the [Hinode introduction]({{% relref "introduction" %}}) and [commands overview]({{% relref "commands" %}}) for more details.
 
 2. **Configure the build timeout**
 
@@ -23,7 +23,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 3. **Consider using build automation**
 
-   Many popular Git providers provide the option to automate the build and deployment process ({{< abbr "CI/CD" >}}). You can trigger this process on each release to your main repository branch, or set up a preview during a Pull Request. The examples on this page assume you have a Git repository with GitHub.
+   Many popular Git providers provide the option to automate the build and deployment process ({{ abbr "CI/CD" >}}). You can trigger this process on each release to your main repository branch, or set up a preview during a Pull Request. The examples on this page assume you have a Git repository with GitHub.
 
 4. **Understand the support for custom domain names**
 
@@ -35,7 +35,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 6. **Consider using custom HTTP headers**
 
-   Hinode uses custom HTTP headers to enable the [Content Security Policy]({{< relref "server-headers" >}}). The support for custom HTTP headers varies per provider, and might need additional services and configuration.
+   Hinode uses custom HTTP headers to enable the [Content Security Policy]({{% relref "server-headers" %}}). The support for custom HTTP headers varies per provider, and might need additional services and configuration.
 
 The table below gives a brief overview of the features supported by a few selected hosting providers. The next paragraphs describe the build and deployment process for each provider in more detail.
 
@@ -61,7 +61,7 @@ The table below gives a brief overview of the features supported by a few select
 ## Host on Azure blob storage
 
 Azure supports hosting a static website directly from its blob storage. The service is {{< link az_blob_pricing >}}available for free{{< /link >}} for the first 12 months (conditions apply). The next sections describe how to configure the cloud storage correctly and how to deploy your website from your local computer to Azure.
-<!-- Consider using [Azure's Static Web App]({{< relref "#host-as-azure-static-web-app" >}}) if you plan to automate your deployments. The Static Web Apps have better support for integration with your Git provider and are easier to scale. -->
+<!-- Consider using [Azure's Static Web App]({{% relref "#host-as-azure-static-web-app" %}}) if you plan to automate your deployments. The Static Web Apps have better support for integration with your Git provider and are easier to scale. -->
 
 ### Assumptions
 
@@ -128,7 +128,7 @@ Deploy your site to Azure blob storage in six steps.
 {{< /accordion >}}
 <!-- markdownlint-enable MD037 -->
 
-You can make your static website available via a custom domain. Visit the {{< link az_blob_domain >}}Azure documentation{{< /link >}} on how to map a custom domain to your blob storage endpoint. The static website does not support configuration of HTTP headers. Use Azure CDN to {{< link az_cdn_rules >}}configure HTTP headers{{< /link >}} for your static website instead. Review the [server configuration]({{< relref "server-headers" >}}) to identify the recommended configuration of the Content Security Policy.
+You can make your static website available via a custom domain. Visit the {{< link az_blob_domain >}}Azure documentation{{< /link >}} on how to map a custom domain to your blob storage endpoint. The static website does not support configuration of HTTP headers. Use Azure CDN to {{< link az_cdn_rules >}}configure HTTP headers{{< /link >}} for your static website instead. Review the [server configuration]({{% relref "server-headers" %}}) to identify the recommended configuration of the Content Security Policy.
 
 <!-- ## Host as Azure Static Web App -->
 
@@ -168,7 +168,7 @@ Netlify can host your website with continuous deployment from your Git provider.
 The repository root should include a file `netlify.toml`. If not, copy it from the {{< link repository >}}Hinode main repository{{< /link >}}. The configuration file contains the build settings that Netlify will pick up when connecting to your repository. The panel below shows the default build settings. The key command to observe is `npm run build`, which ensures the site is built properly.
 
 > [!NOTE]
-> The default configuration provides basic security headers. Please review the [server configuration]({{< relref "server-headers" >}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the {{< link netlify_cache >}}Netlify blog{{< /link >}}.
+> The default configuration provides basic security headers. Please review the [server configuration]({{% relref "server-headers" %}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the {{< link netlify_cache >}}Netlify blog{{< /link >}}.
 
 {{< docs name="netlify" file="netlify.toml" show="true" >}}
 
@@ -211,9 +211,9 @@ Sign up for Netlify and configure your site in seven steps.
     Pick a repository from your Git provider. Ensure Netlify has access to the correct repository.
   {{< /accordion-item >}}
   {{< accordion-item header="Step 7. Configure the build settings" >}}
-    Review the basic build settings. Netlify will use the settings provided in the [preparations]({{< relref "#preparations-1" >}}). Click on the button `Deploy site` to start the build and deployment process.
+    Review the basic build settings. Netlify will use the settings provided in the [preparations]({{% relref "#preparations-1" %}}). Click on the button `Deploy site` to start the build and deployment process.
   {{< /accordion-item >}}
 {{< /accordion >}}
 <!-- markdownlint-enable MD037 -->
 
-Your site is now ready to be used. Click on the domain settings of your site within the `Site overview` page to provide a domain alias and to edit the site name as needed. The same section also allows the configuration of a custom domain. Be sure to review your [server configuration]({{< relref "server-headers" >}}) if you encounter any rendering issues, such as broken links or garbled stylesheets.
+Your site is now ready to be used. Click on the domain settings of your site within the `Site overview` page to provide a domain alias and to edit the site name as needed. The same section also allows the configuration of a custom domain. Be sure to review your [server configuration]({{% relref "server-headers" %}}) if you encounter any rendering issues, such as broken links or garbled stylesheets.

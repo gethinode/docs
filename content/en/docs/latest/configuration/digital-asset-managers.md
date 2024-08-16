@@ -3,7 +3,6 @@ title: Digital Asset Managers
 description: Configure Digital Asset Managers to delegate the transformation of images
 date: 2024-08-14
 layout: docs
-modules: katex
 ---
 
 {{< release version="v0.24.0 " >}}
@@ -59,7 +58,7 @@ You can include DAM-enabled images and figures using the regular {{< link "../co
 
 You can rewrite the URL of the image when using a different origin server. Currently, this feature is supported by the adapter for ImageKit.io. For example, when using Azure Blob Storage as origin, your input URL may look like the following:
 
-```math
+```math {class="mb-4"}
 \texttt{https://}
 
 \rlap{$

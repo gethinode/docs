@@ -5,14 +5,14 @@ date: 2024-08-14
 layout: docs
 ---
 
-Hinode uses Sass files to take advantage of variables, maps, and functions to generate the cascading style sheets of the website. By utilizing [Hugo modules]({{< ref "overview" >}}), Bootstrap's source Sass file are automatically ingested and kept up to date.
+Hinode uses Sass files to take advantage of variables, maps, and functions to generate the cascading style sheets of the website. By utilizing [Hugo modules]({{% ref "overview" %}}), Bootstrap's source Sass file are automatically ingested and kept up to date.
 
 ## Build pipeline
 
 > [!NOTE]
 > Hinode has added support for the Dart Sass transpiler in release {{< release version="v0.20.0" short="true" type="link" >}}. The default libsass transpiler has been {{< link hugo_sass >}}deprecated in favor of Dart Sass{{< /link >}}, but is still widely used. Hinode uses the libsass transpiler by default. Review the {{< link "docs/configuration/layout#extended-configuration" >}}build configuration{{< /link >}} on how to change the transpiler being used.
 
-Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{< ref "overview" >}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
+Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{% ref "overview" %}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
 
 <!-- markdownlint-disable MD037 -->
 {{< nav type="tabs" id="tabs-1" >}}
@@ -34,7 +34,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 3. **Import the Sass files of core modules**
 
-   Hinode automatically adds the content of each core module's Sass entrypoint to a virtual copy of the `assets/scss/app.scss` file, unless they are referenced in the [excludeSCSS setting]({{</* relref "../configuration/modules#configuring-modules" */>}}). Hinode expects a file `assets/scss/{MODULE NAME}.scss` for each core module. The referenced files are usually placed in `assets/scss/modules/{MODULE NAME}/`.
+   Hinode automatically adds the content of each core module's Sass entrypoint to a virtual copy of the `assets/scss/app.scss` file, unless they are referenced in the [excludeSCSS setting]({{%/* relref "../configuration/modules#configuring-modules" */%}}). Hinode expects a file `assets/scss/{MODULE NAME}.scss` for each core module. The referenced files are usually placed in `assets/scss/modules/{MODULE NAME}/`.
 
 4. **Override and expand the Sass configuration**
 
@@ -61,7 +61,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 3. **Import the Sass files of core modules**
 
-   Hinode automatically adds the content of each core module's Sass entrypoint to a virtual copy of the `assets/scss/app-dart.scss` file, unless they are referenced in the [excludeSCSS setting]({{</* relref "../configuration/modules#configuring-modules" */>}}). Hinode expects a file `assets/scss/{MODULE NAME}.scss` for each core module. The referenced files are usually placed in `assets/scss/modules/{MODULE NAME}/`.
+   Hinode automatically adds the content of each core module's Sass entrypoint to a virtual copy of the `assets/scss/app-dart.scss` file, unless they are referenced in the [excludeSCSS setting]({{%/* relref "../configuration/modules#configuring-modules" */%}}). Hinode expects a file `assets/scss/{MODULE NAME}.scss` for each core module. The referenced files are usually placed in `assets/scss/modules/{MODULE NAME}/`.
 
 4. **Override and expand the Sass configuration**
 

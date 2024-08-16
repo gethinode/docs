@@ -1,21 +1,22 @@
 ---
 title: Links and cross-references
-description: Generate internal links and external links using a combination of Markdown and Hugo shortcodes.
-date: 2024-02-19
+description: Generate internal links and external links using native Markdown links or a Hugo shortcode.
+date: 2024-08-16
 layout: docs
 ---
 
-<!-- TODO: expand -->
-
 ## Internal links
+
+> [!IMPORTANT]
+> Since release {{< release version="v0.26.0" short="true" type="link" >}}, Hinode renders all links using a render hook. The support for markdown links requires that any named links use the `{{%/* myshortcode */%}}` notation instead of `{{</* myshortcode */>}}` notation going forward.
 
 Hugo provides the shortcode `ref` to link to another page within the site. The shortcode returns an absolute path. You can provide the document path as input. If you omit the leading `/`, the page is first resolved relative to the current page, then to the remainder of the site. Review {{< link hugo_links >}}Hugo's documentation{{< /link >}} for more examples and advanced options.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Tables]({{</*ref "tables" */>}})
+[Tables]({{%/*ref "tables" */%}})
 
-[About]({{</*ref "credits" */>}})
+[About]({{%/*ref "credits" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -23,9 +24,9 @@ Similar to the `ref` shortcode, Hugo provides the shortcode `relref` to return a
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Tables]({{</*relref "tables" */>}})
+[Tables]({{%/*relref "tables" */%}})
 
-[About]({{</*relref "credits" */>}})
+[About]({{%/*relref "credits" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -47,9 +48,9 @@ You can add a cross-reference to the section heading by specifying the generated
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Reference]({{</* ref "#reference" */>}})
+[Reference]({{%/* ref "#reference" */%}})
 
-[Reference]({{</* relref "#reference" */>}})
+[Reference]({{%/* relref "#reference" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -87,7 +88,7 @@ Instead of using parentheses, you can use brackets to link to a predefined addre
 
 ### Managed links
 
-Hinode uses `config/_default/params.toml` to manage links to external addresses in a single place. You can [use the link shortcode generate a managed link]({{< relref "link" >}}). The following snippet of `config/_default/params.toml` defines the link address for `fontawesome`:
+Hinode uses `config/_default/params.toml` to manage links to external addresses in a single place. You can [use the link shortcode to generate a managed link]({{% relref "link" %}}). The following snippet of `config/_default/params.toml` defines the link address for `fontawesome`:
 
 ```toml
 [links]
@@ -102,4 +103,8 @@ You can then use the following statement to generate the link.
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-You can [configure the behavior of managed links]({{< relref "layout#extended-configuration" >}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section.
+You can [configure the behavior of managed links]({{% relref "layout#extended-configuration" %}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section.
+
+## Shortcode links
+
+You can also use the {{< link "/docs/components/link/" />}} shortcode as convenience.

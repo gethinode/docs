@@ -10,7 +10,7 @@ tags: component
 
 ## Overview
 
-Use the `button-group` shortcode to display a group of buttons. Add inner `<button>` elements for each [button]({{< ref "button" >}} "button"). As an example, the following shortcode displays a group of three buttons.
+Use the `button-group` shortcode to display a group of buttons. Add inner `<button>` elements for each [button]({{% ref "button" %}} "button"). As an example, the following shortcode displays a group of three buttons.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -30,4 +30,4 @@ The shortcode supports the following arguments:
 
 ## Examples
 
-See the [button shortcode documentation]({{< ref "button" >}} "button") for additional styling options.
+See the [button shortcode documentation]({{% ref "button" %}} "button") for additional styling options.

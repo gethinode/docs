@@ -29,7 +29,7 @@ Hinode uses the default configuration defined in each referenced module since re
 
 You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on an opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
 
-For core modules, Hinode bundles the provided [stylesheet files]({{< relref "styles" >}}) and [JavaScript files]({{< relref "scripts" >}}) into the main stylesheet and main script file. For optional modules, Hinode prepares separate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
+For core modules, Hinode bundles the provided [stylesheet files]({{% relref "styles" %}}) and [JavaScript files]({{% relref "scripts" %}}) into the main stylesheet and main script file. For optional modules, Hinode prepares separate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
 
 > [!NOTE]
 > Hugo uses two different algorithms to merge the filesystems, depending on the file type:
@@ -37,7 +37,7 @@ For core modules, Hinode bundles the provided [stylesheet files]({{< relref "sty
 > - For i18n and data files, Hugo merges deeply using the translation ID and data key inside the files.
 > - For static, layouts (templates), and archetypes files, these are merged on file level, so the left-most file will be chosen.
 
-Adjust the `modules` section in your site's parameter configuration file `config/_default/params.toml` to configure the various modules. Modules can include files for each of the following folders: `archetypes`, `assets`, `content`, `data`, `i18n`, `layouts`, `static`. Modules can also have their own configuration files. Each module needs to be imported as well ([see the previous paragraph]({{< relref "#configuring-modules" >}})).
+Adjust the `modules` section in your site's parameter configuration file `config/_default/params.toml` to configure the various modules. Modules can include files for each of the following folders: `archetypes`, `assets`, `content`, `data`, `i18n`, `layouts`, `static`. Modules can also have their own configuration files. Each module needs to be imported as well ([see the previous paragraph]({{% relref "#configuring-modules" %}})).
 
 {{< release version="v0.24.0" >}}
 

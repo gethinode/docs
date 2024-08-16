@@ -17,7 +17,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 |-------------|---------|-------------|
 | anchor      | -       | Flag indicating to display anchor links on hovering a heading. |
 | logo        | -       | Address of the brand logo image, e.g. "/img/logo_embedded.svg". The vector image file is expected to be present in your local `static/img` folder. |
-| color       | -       | [Theme color]({{< ref "colors" >}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
+| color       | -       | [Theme color]({{% ref "colors" %}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
 | style       | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly.  |
 | fixed       | false   | Flag indicating to keep the navigation bar fixed at the top of the screen. |
 | overlay     | false   | {{</* release version="v0.23.0" short="true" size="sm" inline="true" */>}} Flag indicating to render the navigation bar as overlay on top of the page body. In this state, the navigation is transparent and the page body starts at the top of the viewport. The navigation becomes opaque when scrolling and is set to the specified theme `color`. |
@@ -66,11 +66,11 @@ The example below illustrates the navigation bar based on the sample configurati
 
 ### Versioning
 
-The main navigation supports versioning too. When configured, a drop-down menu containing the available versions is automatically added. See the [documentation configuration]({{< relref "documentation" >}}) for more details.
+The main navigation supports versioning too. When configured, a drop-down menu containing the available versions is automatically added. See the [documentation configuration]({{% relref "documentation" %}}) for more details.
 
 ### Customization
 
-Hinode includes a navigation bar at the top of the screen by default. You can modify the configuration in the `layouts/_default/baseof.html` file. The navigation bar is also available as [shortcode]({{< ref "navbar" >}}).
+Hinode includes a navigation bar at the top of the screen by default. You can modify the configuration in the `layouts/_default/baseof.html` file. The navigation bar is also available as [shortcode]({{% ref "navbar" %}}).
 
 The following variables are available to modify the styling of the horizontal navigation. You can override them in `assets/scss/theme/_variables.scss`.
 
@@ -120,7 +120,7 @@ You can define separate data files for each available language in a multilingual
 > [!NOTE]
 > Release v0.15.0 of Hinode automatically detects the version of the current context. The configuration of the `version` attribute is no longer needed.
 
-You can create versioned files for your menu data by adding a version suffix to the data file. For example, `data/docs-1.0.yml` contains the menu data for the `docs` menu of version `1.0`. Hinode uses `data/docs.yml` as default sidebar navigation data when no versioned file is available. See the [documentation configuration]({{< relref "documentation" >}}) for additional options.
+You can create versioned files for your menu data by adding a version suffix to the data file. For example, `data/docs-1.0.yml` contains the menu data for the `docs` menu of version `1.0`. Hinode uses `data/docs.yml` as default sidebar navigation data when no versioned file is available. See the [documentation configuration]({{% relref "documentation" %}}) for additional options.
 
 ### Customization
 
@@ -144,7 +144,7 @@ When enabled, the breadcrumb looks like this:
 
 ### Customization
 
-The breadcrumb is also available as [shortcode]({{< ref "breadcrumb" >}}).
+The breadcrumb is also available as [shortcode]({{% ref "breadcrumb" %}}).
 
 ## Table of contents
 

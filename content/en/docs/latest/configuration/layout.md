@@ -9,7 +9,7 @@ Hinode uses Bootstrap's {{< link bs_grid >}}grid system{{< /link >}} and {{< lin
 
 ## Base layout
 
-The base layout defines a page skeleton of which all other pages are derived. It consists of four major sections, being a header, body, social footer, and bottom footer. It also loads sytlesheets, scripts, and generates the metadata. The header includes the [main navigation]({{< ref "navigation#main-navigation" >}}) and can be optionally fixed to the top. The width of the base layout is maximized to 1320 pixels (see the `container-xxl` setting of the {{< link bs_container >}}Bootstrap containers{{< /link >}}). The height is set to a least 100% of the viewport, to ensure the footer is always aligned to the bottom on the page.
+The base layout defines a page skeleton of which all other pages are derived. It consists of four major sections, being a header, body, social footer, and bottom footer. It also loads sytlesheets, scripts, and generates the metadata. The header includes the [main navigation]({{% ref "navigation#main-navigation" %}}) and can be optionally fixed to the top. The width of the base layout is maximized to 1320 pixels (see the `container-xxl` setting of the {{< link bs_container >}}Bootstrap containers{{< /link >}}). The height is set to a least 100% of the viewport, to ensure the footer is always aligned to the bottom on the page.
 
 ### Example
 
@@ -40,7 +40,7 @@ The base layout uses the {{< link hugo_config >}}main configuration{{< /link >}}
 | title         | -       | Title of the website, joined with the separator and title of the current page. |
 | copyright     | -       | Copyright notice added to the page footer. |
 | paginate      | 9       | Maximum number of elements to display on a [list page](#list-pages) before pagination. |
-| enableGitInfo | -       | Enables git information, which is used by [documentation pages]({{< relref "content-management#documentation-layout" >}}). |
+| enableGitInfo | -       | Enables git information, which is used by [documentation pages]({{% relref "content-management#documentation-layout" %}}). |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/hugo.toml`.
@@ -66,15 +66,15 @@ Hinode uses the following extended settings in the `main` section of the `site p
 |--------------------|-------------------|-------------|
 | separator          | "-"               | Separator to join the website title and page title. |
 | description        | -                 | Short description of the website that is added to the page metadata. |
-| enableDarkMode     | true              | Enables switcher for [light mode and dark mode]({{< relref "color-modes" >}}). |
+| enableDarkMode     | true              | Enables switcher for [light mode and dark mode]({{% relref "color-modes" %}}). |
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
 | endorse            | true              | By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled. |
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
-| loading            | "eager"           | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{< relref "image" >}}) provides more details.|
+| loading            | "eager"           | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{% relref "image" %}}) provides more details.|
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
 | breakpoint         | "md"              | {{</* release version="v0.21.7" short="true" size="sm" inline="true" */>}} Breakpoint for single pages and list pages to start showing the sidebar navigation and table of content panel. Card groups use the same breakpoint to decide how many columns to display in the current viewport. |
-| externalLinks.cue  | false             | If set, adds a visual cue `{{</* icon class="fas up-right-from-square fa-2xs" spacing=false */>}}` as suffix to [managed external links]({{< relref "links-and-cross-references#managed-links" >}}). |
-| externalLinks.tab  | false             | If set, opens [managed external links]({{< relref "links-and-cross-references#managed-links" >}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
+| externalLinks.cue  | false             | If set, adds a visual cue `{{</* icon class="fas up-right-from-square fa-2xs" spacing=false */>}}` as suffix to [managed external links]({{% relref "links-and-cross-references#managed-links" %}}). |
+| externalLinks.tab  | false             | If set, opens [managed external links]({{% relref "links-and-cross-references#managed-links" %}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 | build.transpiler   | "libsass"         | {{</* release version="v0.20.0" short="true" size="sm" inline="true" */>}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{</* link hugo_sass >}}installation of a separate binary on your machine{{< /link */>}}. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment.
 {{< /table >}}
 <!-- markdownlint-enable MD037 -->
@@ -87,7 +87,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 {{< release version="v0.14.4" >}}
 
-You can show informative messages using the [toast shortcode]({{< relref "toast" >}}). By default, toast messages are displayed in the bottom right of the viewport. Hinode vertically stacks multiple toast messages automatically. Adjust the configuration by adjusting `messages` in the `site parameters`. The following arguments are supported:
+You can show informative messages using the [toast shortcode]({{% relref "toast" %}}). By default, toast messages are displayed in the bottom right of the viewport. Hinode vertically stacks multiple toast messages automatically. Adjust the configuration by adjusting `messages` in the `site parameters`. The following arguments are supported:
 
 {{< table >}}
 | Setting         | Default        | Description |
@@ -123,9 +123,9 @@ Add each available provider to `[[sharing.providers]]`. The providers support th
 |-----------|---------|-------------|
 | name      | -       | Name of the provider, added as assistive title to improve accessibility. |
 | url       | -       | Parameterized URL of the social media provider. The `url` supports the parameters `{url}` and `{title}`. The `{url}` is replaced with the page's permalink, and `{title}` with the page's title. |
-| icon      | -       | Shorthand notation of the [Font Awesome icon]({{< relref "../content/icons" >}}) to be used as button, e.g. `fab linkedin`. |
+| icon      | -       | Shorthand notation of the [Font Awesome icon]({{% relref "../content/icons" %}}) to be used as button, e.g. `fab linkedin`. |
 | weight    | -       | Weight of the social sharing button, to be used as sorting key. |
-| clipboard | false   | If set, the defined url is copied to the clipboard instead of being opened. A [toast message]({{< relref "toast" >}}) is shown to inform the user. |
+| clipboard | false   | If set, the defined url is copied to the clipboard instead of being opened. A [toast message]({{% relref "toast" %}}) is shown to inform the user. |
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
@@ -134,14 +134,14 @@ The below configuration shows the default configuration set in `config/_default/
 
 #### Language-specific configuration
 
-Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{< ref "languages" >}}) section to review the various configuration options to enable multilingual content.
+Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{% ref "languages" %}}) section to review the various configuration options to enable multilingual content.
 
 <!-- markdownlint-disable MD037 -->
 {{< table >}}
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
-| feature | link          | -       | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{</* relref "languages" */>}})). |
+| feature | link          | -       | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{%/* relref "languages" */%}})). |
 | feature | caption       | "About" | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} See `feature.link`. |
 | social  | title         | -       | Title displayed in the site's social footer. |
 | social  | caption       | -       | Caption displayed in the site's social footer. |
@@ -157,7 +157,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## Home page
 
-The home page introduces a feature section and several [configurable sections]({{< relref "#page-sections" >}}). The default home page of Hinode displays the three most recent blog posts and projects, each rendered as cards in a separate section. A button that links to the related list page is added below each group. The feature section can optionally cover the entire viewscreen.
+The home page introduces a feature section and several [configurable sections]({{% relref "#page-sections" %}}). The default home page of Hinode displays the three most recent blog posts and projects, each rendered as cards in a separate section. A button that links to the related list page is added below each group. The feature section can optionally cover the entire viewscreen.
 
 ### Example
 
@@ -204,7 +204,7 @@ The below configuration shows the default configuration set in `config/_default/
 > [!NOTE]
 > List pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter.
 
-List pages define one [configurable section]({{< relref "#page-sections" >}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
+List pages define one [configurable section]({{% relref "#page-sections" %}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
 
 ### Example
 
@@ -223,14 +223,14 @@ Section .col-12
 
 ### Configuration
 
-The list page uses the [configuration of a single section]({{< relref "#configuration-4" >}}).
+The list page uses the [configuration of a single section]({{% relref "#configuration-4" %}}).
 
 ## Single pages
 
 > [!IMPORTANT]
 > Single pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter. The `type` parameter replaces the previous `layout` parameter.
 
-Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{< ref "navigation#sidebar-navigation" >}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{< ref "navigation#table-of-contents" >}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
+Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{% ref "navigation#sidebar-navigation" %}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{% ref "navigation#table-of-contents" %}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
 
 {{< card-group color="body-tertiary" cols="auto" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card class="col-12" >}}Header .col-12{{< /card >}}
@@ -330,7 +330,7 @@ Description
 
 ### Configuration
 
-Please refer to the [content management section]({{< relref "content-management#single-pages" >}}) to review the elements available in the page's frontmatter. You can also set the default behavior by page type in the `pages` section of the site parameters. For example, the following configuration hides the modification date of all news articles, unless overridden in the page's frontmatter.
+Please refer to the [content management section]({{% relref "content-management#single-pages" %}}) to review the elements available in the page's frontmatter. You can also set the default behavior by page type in the `pages` section of the site parameters. For example, the following configuration hides the modification date of all news articles, unless overridden in the page's frontmatter.
 
 ```toml
 [pages]
@@ -355,7 +355,7 @@ The configuration of the **documentation pages** is set in the `docs` section of
 | version      | -       | Default version to use in documentation links. |
 | basePath     | -       | Base path to use for file references. |
 | github       | -       | Repository URL for the docs site, overrides `schema/github` in  `config/_default/params.toml`. |
-| release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{< relref "release" >}}).
+| release      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{% relref "release" %}}).
 {{< /table >}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
@@ -364,11 +364,11 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## Page sections
 
-Both the home page and the list page use one or more page sections to display a sorted list of items. The lists can contain either [regular pages  or page snippets]({{< relref "content-organization" >}}). The next paragraphs describe the three available layout types.
+Both the home page and the list page use one or more page sections to display a sorted list of items. The lists can contain either [regular pages  or page snippets]({{% relref "content-organization" %}}). The next paragraphs describe the three available layout types.
 
 ### Card layout
 
-The card layout displays a group of cards in a grid. The default setting is to show nine items at a time. You can adjust these settings in the [page section configuration]({{< relref "#configuration-4" >}}), including the style of the cards themselves. Refer to the [card shortcode documentation]({{< relref "card" >}}) to review the available card styles. The next diagram illustrates a typical card layout.
+The card layout displays a group of cards in a grid. The default setting is to show nine items at a time. You can adjust these settings in the [page section configuration]({{% relref "#configuration-4" %}}), including the style of the cards themselves. Refer to the [card shortcode documentation]({{% relref "card" %}}) to review the available card styles. The next diagram illustrates a typical card layout.
 
 {{< card-group color="info" cols="3" padding="3" gutter="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}Item 1{{< /card >}}
@@ -453,6 +453,6 @@ The `nav` layout supports the following additional arguments:
 | width        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
 {{< /table >}}
 
-The below configuration shows an example configuration of the [guides available on this site]({{< relref "guides" >}}). The configuration is set in `config/_default/params.toml`.
+The below configuration shows an example configuration of the [guides available on this site]({{% relref "guides" %}}). The configuration is set in `config/_default/params.toml`.
 
 {{< docs name="sections" file="./config/_default/params.toml" >}}

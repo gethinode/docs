@@ -84,7 +84,7 @@ Adhering to the following process is the best way to get your work included in t
 
 ## Module contributions
 
-Hinode supports Hugo modules to to provide a flexible and extensible modular framework. Please consider the [module development conventions]({{< relref "module-development" >}}) to take full advantage of Hinode's processing pipelines.
+Hinode supports Hugo modules to to provide a flexible and extensible modular framework. Please consider the [module development conventions]({{% relref "module-development" %}}) to take full advantage of Hinode's processing pipelines.
 
 ## Coding guidelines
 

@@ -9,20 +9,22 @@ layout: docs
 
 {{< release version="v0.9.0" >}}
 
-Hinode supports color modes, or themes, as introduced by Bootstrap `v5.3.0`. By default, the site is rendered in light mode. If dark mode is enabled, a toggler is added to the main navigation. The toggler enables switching between modes, or can be set to `auto`. In the latter mode, the site uses the mode as preferred by the device. Hinode uses data attributes to toggle the site's color mode. Visit the {{< link bs_color_sass >}}Bootstrap documentation{{< /link >}} for more information. You can enable of disable the support for dark mode in the [extended layout configuration]({{< relref "layout#extended-configuration" >}}).
+Hinode supports color modes, or themes, as introduced by Bootstrap `v5.3.0`. By default, the site is rendered in light mode. If dark mode is enabled, a toggler is added to the main navigation. The toggler enables switching between modes, or can be set to `auto`. In the latter mode, the site uses the mode as preferred by the device. Hinode uses data attributes to toggle the site's color mode. Visit the {{< link bs_color_sass >}}Bootstrap documentation{{< /link >}} for more information. You can enable of disable the support for dark mode in the [extended layout configuration]({{% relref "layout#extended-configuration" %}}).
 
 ## Display property
 
 Hinode defines two classes to simplify the development of color-mode aware websites. Simply add `.d-none-dark` as class attribute to block the display of an element in dark mode. Vice versa, use `.d-none-light` to block the content from rendering in light mode. The following example illustrates this behavior. Toggle the color mode of the current website to test the behavior.
 
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-I'm visible in {{< mark >}}light mode{{< /mark >}} only
+I'm visible in {{</* mark >}}light mode{{< /mark */>}} only
 {.d-none-dark}
 
-I'm visible in {{< mark >}}dark mode{{< /mark >}} only
+I'm visible in {{</* mark >}}dark mode{{< /mark */>}} only
 {.d-none-light}
 
 {{< /example >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Accessibility
 
@@ -41,7 +43,7 @@ The argument `darkModeTint` lightens the primary color with a given percentage, 
 
 ## Sass
 
-The helper `color-mode` is available to simplify the development of color-mode aware stylesheets. The following example defines a default background gradient for the colors white and the primary [theme color]({{< relref "colors" >}}). If `$enable-dark-mode` is enabled (see [extended layout configuration]({{< relref "layout#extended-configuration" >}})), the helper `color-mode` inserts an alternative gradient that is applicable to dark mode.
+The helper `color-mode` is available to simplify the development of color-mode aware stylesheets. The following example defines a default background gradient for the colors white and the primary [theme color]({{% relref "colors" %}}). If `$enable-dark-mode` is enabled (see [extended layout configuration]({{% relref "layout#extended-configuration" %}})), the helper `color-mode` inserts an alternative gradient that is applicable to dark mode.
 
 ```scss
 .gradient-featured {

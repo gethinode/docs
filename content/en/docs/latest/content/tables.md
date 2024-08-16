@@ -25,7 +25,7 @@ Hugo supports tables out-of-the-box by using the `|` and `-` characters. Add `{.
 
 ### Aligned cells and headers
 
-Hugo's Markdown processor applies inline styles to align cells in a table, which is blocked by Hinode's [Content Security Policy]({{< relref "server-headers" >}}). Use the `table` shortcode to wrap your Markdown input instead. You can then align header and cell data to the left, center, or right of a column using the `:` character. Pass additional class attributes between double quotes, e.g. `"table-striped"`. See the [next section](#accented-tables) for more options.
+Hugo's Markdown processor applies inline styles to align cells in a table, which is blocked by Hinode's [Content Security Policy]({{% relref "server-headers" %}}). Use the `table` shortcode to wrap your Markdown input instead. You can then align header and cell data to the left, center, or right of a column using the `:` character. Pass additional class attributes between double quotes, e.g. `"table-striped"`. See the [next section](#accented-tables) for more options.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -84,7 +84,7 @@ Add `.table-hover` to enable a hover state on the table rows.
 
 ### Colored tables
 
-Add `table-<theme>` to apply [theme colors]({{< ref "colors" >}}) to your table. You can mix them with other classes, such as `.table-striped`.
+Add `table-<theme>` to apply [theme colors]({{% ref "colors" %}}) to your table. You can mix them with other classes, such as `.table-striped`.
 
 {{< example lang="markdown" >}}
 | #  | Item        |
@@ -101,7 +101,7 @@ Adjust the borders of a table to match your style preferences.
 
 ### Bordered tables
 
-Add `.table-bordered` for borders on all sides of the table and cells. Add an optional `border-<theme>` class to apply [theme colors]({{< ref "colors" >}}) to the table borders.
+Add `.table-bordered` for borders on all sides of the table and cells. Add an optional `border-<theme>` class to apply [theme colors]({{% ref "colors" %}}) to the table borders.
 
 {{< example lang="markdown" >}}
 | #  | Item        |

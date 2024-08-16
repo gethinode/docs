@@ -15,7 +15,7 @@ Hinode recognizes three basic types of pages:
 - **Single pages** define a specific page that get published to a specific permalink
 - **Content snippets** provide input for a specific page, but do not have a permalink of their own
 
-All content resides in the `content` folder of the repository. The content for [multilanguage sites]({{< relref "languages" >}}) uses separate subfolders for each language directly below the `content` folder. Usually a list page is defined by having an `_index.md` within its folder. A notable exception is the home page, which is defined in the `content` root folder. The next diagram illustrates a typical initial setup for a Hinode website that supports the English language.
+All content resides in the `content` folder of the repository. The content for [multilanguage sites]({{% relref "languages" %}}) uses separate subfolders for each language directly below the `content` folder. Usually a list page is defined by having an `_index.md` within its folder. A notable exception is the home page, which is defined in the `content` root folder. The next diagram illustrates a typical initial setup for a Hinode website that supports the English language.
 
 ```text
 .
@@ -36,7 +36,7 @@ All content resides in the `content` folder of the repository. The content for [
 
 ## Defining alternative paths
 
-You can adjust the path or provide an alias of a page in its [frontmatter]({{< relref "layout#default-layout" >}}). For example, the following aliases ensure the [introduction ]({{< relref "introduction" >}}) of the Hinode docs is available on four alternative paths:
+You can adjust the path or provide an alias of a page in its [frontmatter]({{% relref "layout#default-layout" %}}). For example, the following aliases ensure the [introduction ]({{% relref "introduction" %}}) of the Hinode docs is available on four alternative paths:
 
 ```yml
 ---
@@ -50,13 +50,13 @@ layout: docs
 ---
 ```
 
-Similarly, you can link multiple translations of a page and still provide a language-specific path. See the [languages configuration]({{< relref "languages#content-translation" >}}) for more details.
+Similarly, you can link multiple translations of a page and still provide a language-specific path. See the [languages configuration]({{% relref "languages#content-translation" %}}) for more details.
 
 ## Configuring content snippets
 
 {{< release version="v0.12.0" >}}
 
-Hinode supports content snippets that are not published anywhere, unlike list pages and single pages. These snippets can be referenced by regular pages instead. A typical example would be an overview of product features. The features themselves can be listed on the homepage, but do not have a permalink of their own. Content snippets can be [listed like a regular section]({{< relref "layout#page-sections" >}}).
+Hinode supports content snippets that are not published anywhere, unlike list pages and single pages. These snippets can be referenced by regular pages instead. A typical example would be an overview of product features. The features themselves can be listed on the homepage, but do not have a permalink of their own. Content snippets can be [listed like a regular section]({{% relref "layout#page-sections" %}}).
 
 Add a file `index.md` to the root of your section that contains your code snippets (please observe the absence of the '_' prefix). Set the parameter `headless` to `true` in file's frontmatter to {{< link hugo_headless >}}make the section headless{{< /link >}}:
 

@@ -28,7 +28,7 @@ The shortcode supports the following arguments:
 
 ## Site configuration
 
-Ensure the `release` parameter is set in the [site's configuration]({{< relref "layout#configuration-3">}}).
+Ensure the `release` parameter is set in the [site's configuration]({{% relref "layout#configuration-3" %}}).
 
 ## Examples
 

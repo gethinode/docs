@@ -36,7 +36,7 @@ The file `assets/js/analytics.js` defines the JavaScript template that is ingest
 {{- end -}}
 ```
 
-The partial `layouts/partials/footer/scripts.html` loads the Google Tag Manager if applicable (Google Analytics 4 only).
+The partial `layouts/partials/footer/scripts.html` loads the Google Tag Manager if applicable.
 
 ```go-html-template {hl_lines=1}
 {{- if and (not site.IsServer) $header -}}
@@ -46,7 +46,7 @@ The partial `layouts/partials/footer/scripts.html` loads the Google Tag Manager 
 
 ## Content Security Policy
 
-{{< link google_analytics_csp >}}Google Analytics requires several Content Security Policies{{< /link >}} to be set in the [server headers]({{< relref "server-headers" >}}). Hinode has enabled access for Google Analytics 4 by default. The following settings are added to `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository’s root when deploying to {{< link netlify >}}Netlify{{< /link >}}.
+{{< link google_analytics_csp >}}Google Analytics requires several Content Security Policies{{< /link >}} to be set in the [server headers]({{% relref "server-headers" %}}). Hinode has enabled access for Google Analytics 4 by default. The following settings are added to `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository’s root when deploying to {{< link netlify >}}Netlify{{< /link >}}.
 
 ```yaml
 script-src:  https://*.googletagmanager.com

@@ -5,11 +5,11 @@ date: 2024-08-14
 layout: docs
 ---
 
-Hinode provides out-of-the box access to the free icons of {{< link fontawesome >}}Font Awesome{{< /link >}}. The [shortcodes]({{< relref "icon" >}}) `icon`, `fa`, `fab`, and `fas` are available to add these icons using shorthand notation. The Font Awesome icon library provides various {{< link fa_styling >}}styling options{{< /link >}}. The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{< relref "server-headers" >}}).
+Hinode provides out-of-the box access to the free icons of {{< link fontawesome >}}Font Awesome{{< /link >}}. The [shortcodes]({{% relref "icon" %}}) `icon`, `fa`, `fab`, and `fas` are available to add these icons using shorthand notation. The Font Awesome icon library provides various {{< link fa_styling >}}styling options{{< /link >}}. The below paragraphs illustrate how to apply the styling options compatible with Markdown, Bootstrap, and the [content security policy]({{% relref "server-headers" %}}).
 
 ## Styling basics
 
-The {{< link fa_icons >}}Font Awesome icon library{{< /link >}} provides access to more than 2.000 free and open-source icons. Simply search for a keyword and review the presented options. For example, searching for the keyword `music` and filtering for `free` returns a list of nearly 30 icons. Use one of the following three [shortcodes]({{< relref "icon" >}}) to add an icon to your Markdown content:
+The {{< link fa_icons >}}Font Awesome icon library{{< /link >}} provides access to more than 2.000 free and open-source icons. Simply search for a keyword and review the presented options. For example, searching for the keyword `music` and filtering for `free` returns a list of nearly 30 icons. Use one of the following three [shortcodes]({{% relref "icon" %}}) to add an icon to your Markdown content:
 
 - `fa` - regular Font Awesome icon library
 - `fab` - brands Font Awesome icon library
@@ -23,7 +23,7 @@ Specify the correct icon library and omit the `fa-` prefix from the icon name to
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
-The icons inherit the current styling options and as such blend in with text inline. For example, apply the [theme color]({{< relref "colors" >}}) `text-primary` to the paragraph containing the icon to change its color. You can also pass the class attribute directly to the shortcode, such as `text-info`.
+The icons inherit the current styling options and as such blend in with text inline. For example, apply the [theme color]({{% relref "colors" %}}) `text-primary` to the paragraph containing the icon to change its color. You can also pass the class attribute directly to the shortcode, such as `text-info`.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -195,7 +195,7 @@ The following classes are available:
 
 ## Animating icons
 
-Font Awesome supports various animations by simply adding a animation class to the HTML element. The following example illustrates the available basic animations. Add custom styles to your [Sass files]({{< ref "styles" >}}) to apply additional {{< link fa_animation >}}animation utilities{{< /link >}}.
+Font Awesome supports various animations by simply adding a animation class to the HTML element. The following example illustrates the available basic animations. Add custom styles to your [Sass files]({{% ref "styles" %}}) to apply additional {{< link fa_animation >}}animation utilities{{< /link >}}.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
@@ -248,7 +248,7 @@ The following table describes the available classes.
 
 ## Stacking icons
 
-Use the `fa-stack` class on the parent HTML element of the two icons you want to stack. Then add the `fa-stack-1x` class for the regularly sized icon and add the `fa-stack-2x` class for the larger icon. `fa-inverse` can be added to the icon with the `fa-stack-1x` to help with a knock-out looking effect. Add a [theme color]({{< ref "colors" >}}) such as `text-primary` to change the color of the icon. The following example illustrates the available options.
+Use the `fa-stack` class on the parent HTML element of the two icons you want to stack. Then add the `fa-stack-1x` class for the regularly sized icon and add the `fa-stack-2x` class for the larger icon. `fa-inverse` can be added to the icon with the `fa-stack-1x` to help with a knock-out looking effect. Add a [theme color]({{% ref "colors" %}}) such as `text-primary` to change the color of the icon. The following example illustrates the available options.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
