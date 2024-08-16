@@ -1,9 +1,8 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2024-08-14
+date: 2024-08-16
 layout: docs
-modules: ["katex"]
 ---
 
 Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for the typography. The following paragraphs illustrate the most common applications. Refer to the Hugo documentation to review the extended description of supported {{< link hugo_content >}}content formats{{< /link >}}. It also contains links to external resource about Markdown.
@@ -281,13 +280,34 @@ Use the `-` character followed by either `[x]` or `[ ]` to indicate a (completed
 
 {{< release version="v0.16.0" >}}
 
-Use {{< link katex >}}KaTeX{{< /link >}} to add mathematical formulas to your content pages. By default, the support for KaTeX is optional. Be sure to include `katex` in your [module configuration]({{% relref "../configuration/modules#configuring-modules" %}}) and [page frontmatter]({{% relref "../configuration/modules#enabling-optional-modules" %}}) as needed.
+Use {{< link katex >}}KaTeX{{< /link >}} to add mathematical formulas to your content pages. You can use server-side math rendering since Hinode release {{< release version="v0.26.0" short="true" type="link" >}}. Add the following configuration to your site configuration (e.g. `hugo.toml`) to configure the required passthrough delimiters:
+
+```toml
+[markup.goldmark]
+    [markup.goldmark.extensions.passthrough]
+        enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)'], ['$', '$']]
+```
+
+Alternatively, you can use the {{< link repository_mod_katex >}}mod-katex module{{< /link >}} to include a client-side script and custom style. Be sure to include `katex` in your [module configuration]({{% relref "../configuration/modules#configuring-modules" %}}) and [page frontmatter]({{% relref "../configuration/modules#enabling-optional-modules" %}}) as needed.
+
+The following example displays an inline and block element formula using the configured delimiters `$` and `$$`.
 
 {{< example lang="markdown" >}}
 This is an inline $-b \pm \sqrt{b^2 - 4ac} \over 2a$ formula
 
 This is not an inline formula:
 
-$$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$  
+$$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$$
 $$\forall x \in X, \quad \exists y \leq \epsilon$$
+{{< /example >}}
+
+You can also include a codeblock of type `math` to render an inline element wrapped in a codeblock. In this case you should omit any delimiters.
+
+{{< example lang="markdown" >}}
+```math
+-b \pm \sqrt{b^2 - 4ac} \over 2a
+```
 {{< /example >}}
