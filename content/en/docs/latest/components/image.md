@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Image
-date: 2024-08-14
+date: 2024-08-17
 description: Use the image shortcode to display a responsive image with a specific aspect ratio.
 layout: docs
 icon: fas image
@@ -107,7 +107,7 @@ Add a `caption` to transform the image into a figure with caption.
 The shortcode supports vector images of type `.svg` too. The shortcode supports the regular arguments, however, vector images are contained instead of cropped when the `ratio` is set. The next example shows a color-mode-aware vector image. The background is set to a contrasting color to illustrate the ratio behavior.
 
 > [!IMPORTANT]
-> Unlike bitmap images, vector images are not processed but used as is. They should be maintained in the site's `static` folder instead of the `assets` folder. Add a leading `/` to specify the absolute image location.
+> Since release {{< release version="v0.26.3" short="true" type="link" >}}, vector images stored in the site's `assets` folder are embedded as inline vector images. Vector images stored in the `static` folder are kept as separate files.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

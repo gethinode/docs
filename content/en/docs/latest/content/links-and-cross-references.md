@@ -1,7 +1,7 @@
 ---
 title: Links and cross-references
 description: Generate internal links and external links using native Markdown links or a Hugo shortcode.
-date: 2024-08-16
+date: 2024-08-17
 layout: docs
 ---
 
@@ -65,6 +65,16 @@ Hugo supports basic Markdown to create links to external websites. To create a l
 {{< example lang="markdown" >}}
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 {{< /example >}}
+
+### Asset links
+
+Hinode supports validated links to published assets since release {{< release version="v0.26.3" short="true" type="link" >}}. Store the assets as either {{< link hugo_page_resources >}}page resource{{< /link >}} or in the site's `static` folder. Pending on the media type, the browser will open or download the file.
+
+The following example opens an image stored in the `static` folder (photo by {{< link "https://unsplash.com/@christiane_simone_coaching" >}}Christiane S Hartl{{< /link >}} on {{< link "https://unsplash.com/photos/green-frog-on-black-leather-textile-gsqpUyM0DPI" >}}Unsplash{{< /link >}}) in the current window.
+
+{{< example lang="markdown" >}}
+[View example image](/img/sample-frog.jpg)
+{{< /example>}}
 
 ### URLs and email addresses
 
