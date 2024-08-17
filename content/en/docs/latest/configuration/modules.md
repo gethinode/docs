@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2024-08-14
+date: 2024-08-17
 layout: docs
 ---
 
@@ -69,6 +69,7 @@ The `fontawesome` module supports the following additional settings:
 {{< table >}}
 | Setting                 | Default | Description |
 |-------------------------|---------|-------------|
+| fontawesome.embed       | true    | {{</* release version="v0.26.3" short="true" size="sm" inline="true" */>}} If set, generates a symbol map with embedded vector images. Only works in conjunction with `inline`. Include the symbol map with the partial `assets/symbols.html` (requires the current page context). |
 | fontawesome.inline      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon. |
 | fontawesome.debug       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
 | fontawesome.skipMissing | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
