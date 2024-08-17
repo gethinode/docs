@@ -64,6 +64,7 @@ For example, Bootstrap uses the following configuration in its module configurat
 
 {{< release version="v0.17.0" >}}
 
+<!-- markdownlint-disable MD037 -->
 The `fontawesome` module supports the following additional settings:
 
 {{< table >}}
@@ -74,6 +75,7 @@ The `fontawesome` module supports the following additional settings:
 | fontawesome.debug       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
 | fontawesome.skipMissing | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
 {{< /table >}}
+<!-- markdownlint-enable MD037 -->
 
 {{< release version="v0.22.5" >}}
 
