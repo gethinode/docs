@@ -1,7 +1,7 @@
 ---
 author: Mark Dumay
 title: Link
-date: 2024-08-14
+date: 2024-08-17
 description: Use the link shortcode to add a managed link to your page content.
 layout: docs
 icon: fas link
@@ -12,7 +12,7 @@ tags: component
 
 {{< release version="v0.16.8" >}}
 
-Since Hinode `v0.16.8` you can add a managed link to your page content using a configurable shortcode. Managed links refer to an external URL that is centrally maintained in the site's parameters. The shortcode also supports internal links that refer to a regular page.
+Since Hinode `v0.16.8` you can add a managed link to your page content using a configurable shortcode. Managed links refer to an external URL that is centrally maintained in the site's parameters. The shortcode also supports internal links that refer to a regular page or published asset.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
