@@ -2,7 +2,7 @@
 author: Mark Dumay
 title: Creating your first site with Hinode
 date: 2023-04-03
-lastmod: 2024-01-02
+lastmod: 2024-08-18
 description: Guide on how to set up your site with version control using npm, GitHub and VSCode.
 tags: ["guide", "vscode"]
 weight: 10
@@ -81,7 +81,7 @@ npm install
 (out)found 0 vulnerabilities
 {{< /command >}}
 
-Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include the Leaflet module on those pages only. This helps to reduce the size of your page assets\
+Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include the Leaflet module on those pages only. This helps to reduce the size of your page assets.
 
 Hinode itself is also a module that is used by the Hinode template. This allows us to use the shortcodes and other components provided by Hinode, without having to worry about their implementation. We can use {{< link hugo_modules >}}Hugo's module system{{< /link >}} to update the used modules to their latest version. Run the script `mod:update` to download and install the latest version of the modules.
 
