@@ -29,11 +29,9 @@ In the first step, we will create a basic documentation site using the Hinode te
 
 We will now create a new site using the Hinode template. Follow the **first step** of the guide on how to [set up a new site using the Hinode template]({{% relref "editing#step-1---initializing-the-project" %}}). Give the repository a recognizable name, such as `version-demo`.
 
-### Discarding localization
+### Starting a local server
 
-For the purpose of this guide we will support the English language only. Be sure to create a new branch first, so you can test any changes before publishing them. The remainder of this guide uses the `develop` branch for development and the `main` branch for production.
-
-Follow the steps described in the language configuration to [discard the localized content for the Dutch language]({{% relref "languages#discarding-localization" %}}). Start a local server to test the site is working as expected. Navigate in your browser to the local address (`http://localhost:1313/` by default) to visually inspect the site.
+For the purpose of this guide we will support the English language only. Be sure to create a new branch first, so you can test any changes before publishing them. The remainder of this guide uses the `develop` branch for development and the `main` branch for production. Start a local server to test the site is working as expected. Navigate in your browser to the local address (`http://localhost:1313/` by default) to visually inspect the site.
 
 {{< command user="user" host="localhost" prompt="version-demo $" >}}
 npm run start
