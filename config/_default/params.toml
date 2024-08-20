@@ -93,8 +93,8 @@
     [sections.guides]
         title = "Check our guides to get you started"
         layout = "card"
-        sort = "weight"
-        reverse = false
+        sort = "date"
+        reverse = true
         background = ""
         color = "body-tertiary"
         style = "border-0 shadow card-zoom card-body-margin"
@@ -271,6 +271,7 @@
     hugo = "https://gohugo.io"
     hugo_alias = "https://gohugo.io/content-management/urls/#aliases"
     hugo_build = "https://gohugo.io/content-management/build-options"
+    hugo_config_overview = "https://gohugo.io/getting-started/configuration/"
     hugo_config = "https://gohugo.io/getting-started/configuration/#all-configuration-settings"
     hugo_config_dir = "https://gohugo.io/getting-started/configuration/#configuration-directory"
     hugo_content = "https://gohugo.io/content-management/formats"

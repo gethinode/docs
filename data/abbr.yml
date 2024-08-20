@@ -10,6 +10,9 @@
 - id: ddos
   long: "Distributed Denial of Service"
 
+- id: dry
+  long: "Don't Repeat Yourself"
+
 - id: html
   long: "HyperText Markup Language"
 
