@@ -17,7 +17,7 @@ thumbnail:
 Hinode is a Hugo theme focused on blogs and documentation sites. Using the flexibility of Hugo's templates, you can adapt the layout to your needs and liking. In this guide, we will first customize the homepage using the predefined configuration options. Next, we will replace the grid layout with a custom layout that displays a simple list of articles. Finally, we will customize the header of the single page layout by adding an author name.
 
 > [!NOTE]
-> A full-working example of this guide is available on {{< link repository_versioning >}}GitHub{{< /link >}}. Visit {{< link hinode_version_demo />}} for a live demo.
+> A full-working example of this guide is available on {{< link repository_versioning >}}GitHub{{< /link >}}. Visit {{< link hinode_customization_demo />}} for a live demo.
 
 ## Step 1 - Preparing the basic content
 
