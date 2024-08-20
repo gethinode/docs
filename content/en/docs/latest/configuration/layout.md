@@ -230,21 +230,21 @@ The list page uses the [configuration of a single section]({{% relref "#configur
 > [!IMPORTANT]
 > Single pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter. The `type` parameter replaces the previous `layout` parameter.
 
-Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{% ref "navigation#sidebar-navigation" %}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{% ref "navigation#table-of-contents" %}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout.
+Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{% ref "navigation#sidebar-navigation" %}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{% ref "navigation#table-of-contents" %}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout (note: this may best be viewed on a larger screen).
 
-{{< card-group color="body-tertiary" cols="auto" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
+{{< card-group color="body-tertiary" cols="auto" padding="3" class="text-center bg-opacity-10 text-body d-fluid" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card class="col-12" >}}Header .col-12{{< /card >}}
-    {{< card color="info" class="col-3" >}}
+    {{< card color="info" class="col-12 col-lg-2 flex-grow-1 d-none d-lg-block" >}}
 Sidebar
 
 *sticky*
     {{< /card >}}
-    {{< card color="info" class="col mx-4" >}}
+    {{< card color="info" class="col-12 col-lg-6 mx-lg-4" >}}
 Body .col-8 .flex-fill
 
 *expands to fill viewport*
     {{< /card >}}
-    {{< card color="info" class="col-3" >}}
+    {{< card color="info" class="col-12 col-lg-2 flex-grow-1 d-none d-lg-block" >}}
 TOC
 
 *sticky*
