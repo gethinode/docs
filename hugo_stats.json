@@ -508,6 +508,8 @@
       "mt-4",
       "mt-5",
       "mt-auto",
+      "mt-lg-0",
+      "mt-md-0",
       "mt-n4",
       "multi-docs-collapse-0",
       "multi-docs-collapse-1",
@@ -751,12 +753,12 @@
       "top-bar",
       "translate-middle",
       "translate-middle-y",
+      "video-embedded",
       "visually-hidden",
       "w-100",
       "w-25",
       "w-50",
-      "w-auto",
-      "youtube-embedded"
+      "w-auto"
     ],
     "ids": [
       "16x9-ratio",
@@ -1530,6 +1532,9 @@
       "versioning",
       "versioning-1",
       "vertical",
+      "video",
+      "vimeo",
+      "youtube",
       "zoom-level"
     ]
   }
