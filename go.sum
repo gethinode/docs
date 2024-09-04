@@ -270,6 +270,8 @@ github.com/gethinode/hinode v0.26.5 h1:qt5FKuqbg2TJmRh6SkI52h5sOVaLBBkDnVYY782Nx
 github.com/gethinode/hinode v0.26.5/go.mod h1:zpNIM+xzVvXtdAvJUzhwEefLiqhScWfcPtC8/7n8xYY=
 github.com/gethinode/hinode v0.26.6 h1:wHSZlUH+0qH+6ifyGXHen4+QFjuYfbgKAIM44NgrONk=
 github.com/gethinode/hinode v0.26.6/go.mod h1:55RIU/2XkuJiJyPE4DUV0J8Q0bTS7dcqhmQB4FARk5c=
+github.com/gethinode/hinode v0.26.7 h1:KxsuJ7n6M8DYQNasw8KOAGWUb/OsxA6SMkKDDTcvorU=
+github.com/gethinode/hinode v0.26.7/go.mod h1:YYtAJzvr7yTsc/7agiyDyMWm1QMHynqmR/+F5jfUrDQ=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
