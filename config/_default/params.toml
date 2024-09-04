@@ -300,6 +300,7 @@
     hugo_imaging = "https://gohugo.io/content-management/image-processing/#imaging-configuration"
     hugo_ordering = "https://gohugo.io/templates/lists/#order-content"
     hugo_page_resources = "https://gohugo.io/content-management/page-resources/"
+    hugo_pagination = "https://gohugo.io/templates/pagination/#configuration"
     hugo_pipes = "https://gohugo.io/hugo-pipes/introduction"
     hugo_postprocess = "https://gohugo.io/hugo-pipes/postprocess"
     hugo_release_v0_109_0 = "https://github.com/gohugoio/hugo/releases/tag/v0.109.0"
