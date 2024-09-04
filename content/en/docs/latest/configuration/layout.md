@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2024-08-14
+date: 2024-09-04
 layout: docs
 ---
 
@@ -39,7 +39,6 @@ The base layout uses the {{< link hugo_config >}}main configuration{{< /link >}}
 |---------------|---------|-------------|
 | title         | -       | Title of the website, joined with the separator and title of the current page. |
 | copyright     | -       | Copyright notice added to the page footer. |
-| paginate      | 9       | Maximum number of elements to display on a [list page](#list-pages) before pagination. |
 | enableGitInfo | -       | Enables git information, which is used by [documentation pages]({{% relref "content-management#documentation-layout" %}}). |
 {{< /table >}}
 
@@ -204,7 +203,7 @@ The below configuration shows the default configuration set in `config/_default/
 > [!NOTE]
 > List pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter.
 
-List pages define one [configurable section]({{% relref "#page-sections" %}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `paginate` in the [main configuration](#configuration) as needed.
+List pages define one [configurable section]({{% relref "#page-sections" %}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `pagerSize` in the {{< link hugo_pagination >}}main configuration{{< /link >}} as needed.
 
 ### Example
 
