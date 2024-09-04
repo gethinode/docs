@@ -1,6 +1,5 @@
 title = "Hinode"
 copyright = "© 2024 <a href='https://github.com/gethinode' class='link-bg-footer' target='_blank' rel='noopener noreferrer'>Hinode Team</a>"
-paginate = 9
 enableGitInfo = true
 
 # additional settings
@@ -26,6 +25,9 @@ defaultContentLanguageInSubdir = false
 
 [taxonomies]
   tag = 'tags'
+
+[pagination]
+  pagerSize = 9
 
 [privacy]
   [privacy.vimeo]
