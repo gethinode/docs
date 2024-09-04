@@ -1,12 +1,15 @@
 ---
 title: Tables
 description: Enhance out-of-the-box Markdown tables with Bootstrap styling.
-date: 2024-07-13
+date: 2024-09-04
 layout: docs
 modules: ["simple-datatables"]
 ---
 
-Hugo supports out-of-the box Markdown tables. Hinode enhances the basic tables with optional styling features provided by Bootstrap. The following paragraphs illustrate how to use basic tables, how to accent them, how to adjust the borders, and how to make the table more compact.
+> [!NOTE]
+> Since Hinode {{< release version="v0.26.7" short="true" type="link" >}} you no longer need to include the `.table` attribute with your Markdown table. Hinode uses a render hook to ensure the Markdown table uses Bootstrap's styling automatically. You can still use the `table` shortcode as equivalent - which also adds support for data tables.
+
+Hugo supports Markdown tables natively. Hinode enhances these tables with optional styling features provided by Bootstrap. The following paragraphs illustrate how to use basic tables, how to accent them, how to adjust the borders, and how to make the table more compact.
 
 ## Basic tables
 
@@ -14,28 +17,25 @@ Hugo supports tables out-of-the-box with extended Markdown. Use an optional shor
 
 ### Default alignment
 
-Hugo supports tables out-of-the-box by using the `|` and `-` characters. Add `{.table}` at the bottom of the block to apply the correct styling. You can mix the content with inline Markdown.
+Hugo supports tables out-of-the-box by using the `|` and `-` characters.
 
 {{< example lang="markdown" >}}
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
-{.table}
 {{< /example >}}
 
 ### Aligned cells and headers
 
-Hugo's Markdown processor applies inline styles to align cells in a table, which is blocked by Hinode's [Content Security Policy]({{% relref "server-headers" %}}). Use the `table` shortcode to wrap your Markdown input instead. You can then align header and cell data to the left, center, or right of a column using the `:` character. Pass additional class attributes between double quotes, e.g. `"table-striped"`. See the [next section](#accented-tables) for more options.
+You can align header and cell data to the left, center, or right of a column using the `:` character.
 
 <!-- markdownlint-disable MD037 -->
-{{< example lang="hugo" >}}
-{{</* table class="table-striped" */>}}
+{{< example lang="markdown" >}}
 | #  | Item        | Left aligned | Center aligned |   Right aligned|
 | -- | ----------- |:-------------|:--------------:| --------------:|
 | 1. | First item  | some text    | more text      | even more text |
 | 2. | Second item | some text    | more text      | even more text |
 | 3. | Third item  | some text    | more text      | even more text |
-{{</* /table */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -53,7 +53,7 @@ Use `.table-striped` to add zebra-striping to any table row.
 | 1. | First item  |
 | 2. | Second item |
 | 3. | Third item  |
-{.table .table-striped}
+{.table-striped}
 {{< /example >}}
 
 ### Striped columns
@@ -66,7 +66,7 @@ Use `.table-striped-columns` to add zebra-striping to any table column.
 | 1. | First item  | This is the first row  |
 | 2. | Second item | This is the second row |
 | 3. | Third item  | This is the third row  |
-{.table .table-striped-columns}
+{.table-striped-columns}
 {{< /example >}}
 
 ### Hoverable rows
@@ -79,7 +79,7 @@ Add `.table-hover` to enable a hover state on the table rows.
 | 1. | First item  |
 | 2. | Second item |
 | 3. | Third item  |
-{.table .table-hover}
+{.table-hover}
 {{< /example >}}
 
 ### Colored tables
@@ -92,7 +92,7 @@ Add `table-<theme>` to apply [theme colors]({{% ref "colors" %}}) to your table.
 | 1. | First item  |
 | 2. | Second item |
 | 3. | Third item  |
-{.table .table-success .table-striped}
+{.table-success .table-striped}
 {{< /example>}}
 
 ## Table borders
@@ -109,7 +109,7 @@ Add `.table-bordered` for borders on all sides of the table and cells. Add an op
 | 1. | First item  |
 | 2. | Second item |
 | 3. | Third item  |
-{.table .table-bordered .border-primary}
+{.table-bordered .border-primary}
 {{< /example >}}
 
 ### Tables without borders
@@ -122,7 +122,7 @@ Add `.table-borderless` for a table without borders.
 | 1. | First item  |
 | 2. | Second item |
 | 3. | Third item  |
-{.table .table-borderless}
+{.table-borderless}
 {{< /example >}}
 
 ## Small tables
@@ -135,7 +135,7 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 | 1. | First item  |
 | 2. | Second item |
 | 3. | Third item  |
-{.table .table-sm}
+{.table-sm}
 {{< /example >}}
 
 ## Responsive tables
