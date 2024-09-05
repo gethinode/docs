@@ -43,7 +43,7 @@
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
     "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.5",
+    "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.5",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
