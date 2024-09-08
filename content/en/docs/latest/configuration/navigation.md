@@ -12,7 +12,6 @@ Hinode supports several types of navigation that utilize Bootstrap elements. The
 The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The following settings are supported:
 
 <!-- markdownlint-disable MD037 -->
-{{< table >}}
 | Setting     | Default | Description |
 |-------------|---------|-------------|
 | anchor      | -       | Flag indicating to display anchor links on hovering a heading. |
@@ -20,17 +19,16 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | color       | -       | [Theme color]({{% ref "colors" %}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
 | style       | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly.  |
 | fixed       | false   | Flag indicating to keep the navigation bar fixed at the top of the screen. |
-| overlay     | false   | {{</* release version="v0.23.0" short="true" size="sm" inline="true" */>}} Flag indicating to render the navigation bar as overlay on top of the page body. In this state, the navigation is transparent and the page body starts at the top of the viewport. The navigation becomes opaque when scrolling and is set to the specified theme `color`. |
-| overlayMode | "dark"  | {{</* release version="v0.23.0" short="true" size="sm" inline="true" */>}} Style of the navigation bar when `overlay` is set, either “light” or “dark”. |
-| horizontal | false   | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Flag indicating the second level navigation should render horizontally. By default, the navbar uses regular dropdown menus instead. |
-| offset      | "3em"   | Applies an {{</* link bs_navbar_placement >}}offset to main elements{{< /link */>}} when `fixed` is set to true. |
+| overlay     | false   | {{< release version="v0.23.0" short="true" size="sm" inline="true" >}} Flag indicating to render the navigation bar as overlay on top of the page body. In this state, the navigation is transparent and the page body starts at the top of the viewport. The navigation becomes opaque when scrolling and is set to the specified theme `color`. |
+| overlayMode | "dark"  | {{< release version="v0.23.0" short="true" size="sm" inline="true" >}} Style of the navigation bar when `overlay` is set, either “light” or “dark”. |
+| horizontal | false   | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Flag indicating the second level navigation should render horizontally. By default, the navbar uses regular dropdown menus instead. |
+| offset      | "3em"   | Applies an {{< link bs_navbar_placement >}}offset to main elements{{< /link >}} when `fixed` is set to true. |
 | size        | "md"    | Optional breakpoint of the navbar toggler, either "xs", "sm", "md" (default), "lg", or "xl". |
 | search      | true    | Flag indicating to include a search input. |
 | breadcrumb  | false   | Flag indicating to add breadcrumb navigation to the top of any single page. List pages are excluded. |
 | toc         | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | sidebar     | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
+<!-- markdownlint-denable MD037 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -45,13 +43,11 @@ The main navigation uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} 
 The navigation bar uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} to generate the menu items. The navigation supports nesting at one level deep. Hinode supports three additional parameters:
 
 <!-- markdownlint-disable MD037 -->
-{{< table >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | alias     | No       | If set, the active menu item is linked to the specific menu entry instead of being derived from the target URL. |
-| button    | No       | {{</* release version="v0.24.10" short="true" size="sm" inline="true" */>}} If set, renders the menu item as a (small) button. |
-| spacing   | No       | {{</* release version="v0.24.10" short="true" size="sm" inline="true" */>}} If set, inserts a spacer. All prior menu items are left aligned, whilst the remaining menu items and right aligned. |
-{{< /table >}}
+| button    | No       | {{< release version="v0.24.10" short="true" size="sm" inline="true" >}} If set, renders the menu item as a (small) button. |
+| spacing   | No       | {{< release version="v0.24.10" short="true" size="sm" inline="true" >}} If set, inserts a spacer. All prior menu items are left aligned, whilst the remaining menu items and right aligned. |
 <!-- markdownlint-enable MD037 -->
 
 The following example defines an example menu configuration called `sample` (the main configuration is called `main`).

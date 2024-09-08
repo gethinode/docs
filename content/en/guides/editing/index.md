@@ -167,7 +167,6 @@ It usually takes less than a minute to build the site and to start the web serve
 
 We will now use VSCode to modify the content of our demo site. Start the application and open the `hinode-demo` folder. The explorer view provides an overview of the folders and files of the repository. The key folders are the following:
 
-{{< table >}}
 | Folder    | Description |
 |-----------|-------------|
 | `assets`  | Contains static files such as images and stylesheets that are processed by Hugo during build. |
@@ -175,7 +174,6 @@ We will now use VSCode to modify the content of our demo site. Start the applica
 | `content` | Maintains the content and its translations of the site. |
 | `layouts` | Defines Hugo shortcodes and partials. |
 | `static`  | Specifies static files to be deployed as-is, thus without any processing by Hugo. |
-{{< /table >}}
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/vscode-edit-step01.png" caption="Step 1. Open the source code folder in VSCode" >}}

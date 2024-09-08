@@ -36,7 +36,6 @@ Define a file in the `data/structures` folder that contains the argument specifi
 The format supports the following attributes:
 
 <!-- markdownlint-disable MD037 -->
-{{< table >}}
 | Name | Required | Description |
 |-----------|----------|-------------|
 | name | yes | Argument name. |
@@ -44,18 +43,16 @@ The format supports the following attributes:
 | optional | | Flag to indicate if the argument is optional, defaults to false. |
 | default | | Default value when no value is provided. |
 | parent  | | Defines if the argument inherits a value from its parent, either `cascade` or `merge`. |
-| release | | Points to the version in which the argument was released. See the {{</* link "release" /*/>}} shortcode for more details. |
-| deprecated | | Points to the version in which the argument was deprecated. See the {{</* link "release" /*/>}} shortcode for more details. |
+| release | | Points to the version in which the argument was released. See the {{< link "release" />}} shortcode for more details. |
+| deprecated | | Points to the version in which the argument was deprecated. See the {{< link "release" />}} shortcode for more details. |
 | comment | | Documentation about the argument. |
 | options | | Conditional value requirements, pending data type. |
-{{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Supported primitive types
 
 Several primitives are supported. The validation function uses these to test if the provided argument value conforms to the expected data type.
 
-{{< table >}}
 | Primitive | Description |
 |-----------|-------------|
 | bool      | Boolean, either `true` or `false`. The validation supports both quoted and unquoted values. Maps to the Hugo type `bool`. |
@@ -66,7 +63,6 @@ Several primitives are supported. The validation function uses these to test if 
 | datetime  | A date with optional time value. |
 | url       | A web address to a particular file or page. The address should include the protocol, hostname, and optional file name. Maps to the Hugo type `string`. |
 | path      | Path to a local file or directory. By convention, paths that start with `/` are relative to the repository root. When used as source argument, the base directory may be mapped to one of Hugo's mount folders (e.g. `assets`, `data`, `content`, `static`). Windows paths are mapped to Unix-style paths using forward slashes. Maps to the Hugo type `string`. |
-{{< /table >}}
 
 ### Supported complex types
 
