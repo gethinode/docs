@@ -16,15 +16,13 @@ Hinode is a clean documentation and blog theme for {{< link hugo >}}Hugo{{< /lin
 Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} to install and maintain various components. It can be installed using either Hugo or npm. If you would like to take advantage of automation, the npm approach is recommended. Hinode requires the following software to be installed on your local machine:
 
 <!-- markdownlint-disable MD037 -->
-{{< table >}}
 | Software                                                   | Hugo                  | npm                   | Remarks |
 |------------------------------------------------------------|-----------------------|-----------------------|---------|
-| {{</* link golang_download >}}Go binary{{< /link */>}}     | {{</* fas check */>}} | {{</* fas check */>}} | Required for Hugo modules, including Hinode itself |
-| {{</* link hugo_download >}}Hugo (extended){{< /link */>}} | {{</* fas check */>}} |                       | Embedded as npm binary |
-| {{</* link nodejs >}}Node.js{{< /link */>}}                |                       | {{</* fas check */>}} | The installation package includes npm |
-| {{</* link git_download >}}Git{{< /link */>}}              | recommended           | {{</* fas check */>}} | Recommended for version control |
-| {{</* link hugo_sass >}}Dart Sass{{< /link */>}}           | optional              | optional              | Required when using {{</* link "docs/configuration/layout#extended-configuration" >}}Dart Sass transpiler{{< /link */>}} |
-{{< /table >}}
+| {{< link golang_download >}}Go binary{{< /link >}}     | {{< fas check >}} | {{< fas check >}} | Required for Hugo modules, including Hinode itself |
+| {{< link hugo_download >}}Hugo (extended){{< /link >}} | {{< fas check >}} |                       | Embedded as npm binary |
+| {{< link nodejs >}}Node.js{{< /link >}}                |                       | {{< fas check >}} | The installation package includes npm |
+| {{< link git_download >}}Git{{< /link >}}              | recommended           | {{< fas check >}} | Recommended for version control |
+| {{< link hugo_sass >}}Dart Sass{{< /link >}}           | optional              | optional              | Required when using {{< link "docs/configuration/layout#extended-configuration" >}}Dart Sass transpiler{{< /link >}} |
 <!-- markdownlint-enable MD037 -->
 
 ## Installation

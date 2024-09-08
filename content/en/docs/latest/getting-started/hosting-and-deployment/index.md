@@ -39,7 +39,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 The table below gives a brief overview of the features supported by a few selected hosting providers. The next paragraphs describe the build and deployment process for each provider in more detail.
 
-<!-- markdownlint-disable MD037 -->
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table class="table-striped-columns w-auto" >}}
 | Feature            | Azure blob storage | Netlify           |
 |--------------------|--------------------|-------------------|
@@ -48,7 +48,7 @@ The table below gives a brief overview of the features supported by a few select
 | CDN / Edge network | Requires Azure CDN | {{</* fas check */>}} |
 | HTTP headers       | Requires Azure CDN | {{</* fas check */>}} |
 {{< /table >}}
-<!-- markdownlint-enable MD037 -->
+<!-- markdownlint-enable MD037 MD058 -->
 
 <!-- | Feature            | Azure blob storage | Azure Static Web App | GitHub pages      | Netlify           |
 |--------------------|--------------------|----------------------|-------------------|-------------------|
