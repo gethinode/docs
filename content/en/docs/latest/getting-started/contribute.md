@@ -121,16 +121,14 @@ Bundle related client-side javascript in a logically named file. Add the file to
 See {{< link markdown_rules >}}markdown rules{{< /link >}} for more details. The following rules are globally disabled:
 
 <!-- markdownlint-disable MD037 -->
-{{< table >}}
 | #     | Rule | Remarks |
-|-------|-----------------------------------------------------------------------------------------------|---------------------------------|
-| MD013 | {{</* link markdown_md013 >}}Line length{{< /link */>}}                                           | |
-| MD024 | {{</* link markdown_md024 >}}Multiple headings with the same content{{< /link */>}}               | |
-| MD026 | {{</* link markdown_md026 >}}Trailing punctuation in heading{{< /link */>}}                       | |
-| MD034 | {{</* link markdown_md034 >}}Bare URL used{{< /link */>}}                                         | |
-| MD051 | {{</* link markdown_md051 >}}Link fragments should be valid{{< /link */>}}                        | |
-| MD053 | {{</* link markdown_md053 >}}Link and image reference definitions should be needed{{< /link */>}} | Disabled due to false positives |
-{{< /table >}}
+|-------|---------------------------------------------------------------------------------------------------|---------------------------------|
+| MD013 | {{< link markdown_md013 >}}Line length{{< /link >}}                                           | |
+| MD024 | {{< link markdown_md024 >}}Multiple headings with the same content{{< /link >}}               | |
+| MD026 | {{< link markdown_md026 >}}Trailing punctuation in heading{{< /link >}}                       | |
+| MD034 | {{< link markdown_md034 >}}Bare URL used{{< /link >}}                                         | |
+| MD051 | {{< link markdown_md051 >}}Link fragments should be valid{{< /link >}}                        | |
+| MD053 | {{< link markdown_md053 >}}Link and image reference definitions should be needed{{< /link >}} | Disabled due to false positives |
 <!-- markdownlint-enable MD037 -->
 
 ## License

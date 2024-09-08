@@ -62,6 +62,7 @@ Font Awesome includes a range of t-shirt based sizes that are relative to the br
 
 The table below illustrates the relative sizing classes and their equivalent relative and absolute font size.
 
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Relative Sizing Class | Font Size | Equivalent in Pixels |
 |----------|--------:|-----:|
@@ -73,6 +74,7 @@ The table below illustrates the relative sizing classes and their equivalent rel
 | `fa-xl`  | 1.5em   | 24px |
 | `fa-2xl` | 2em     | 32px |
 {{< /table >}}
+<!-- markdownlint-enable MD058 -->
 
 ### Absolute sizing
 
@@ -95,6 +97,7 @@ Font Awesome also supports absolute sizing on a scale of 1x to 10x. The icons do
 
 The table below illustrates the absolute sizing classes and their equivalent font size.
 
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Absolute Sizing Class | Font Size |
 |---------|--------:|
@@ -109,6 +112,7 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 | `fa-9x` | 9em |
 | `fa-10x` | 10em |
 {{< /table >}}
+<!-- markdownlint-enable MD058 -->
 
 ### Responsive sizing
 
@@ -182,6 +186,7 @@ Use specific classes to rotate the icon with a specific degree. The following ex
 
 The following classes are available:
 
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |---------|--------|
@@ -192,6 +197,7 @@ The following classes are available:
 | `fa-flip-vertical` | Mirrors an icon vertically |
 | `fa-flip-both` | Mirrors an icon both vertically and horizontally |
 {{< /table >}}
+<!-- markdownlint-enable MD058 -->
 
 ## Animating icons
 
@@ -211,6 +217,7 @@ Font Awesome supports various animations by simply adding a animation class to t
 
 The following table describes the available basic animation classes.
 
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |---------|--------|
@@ -222,6 +229,7 @@ The following table describes the available basic animation classes.
 | `fa-shake` | Shakes an icon back and forth |
 | `fa-spin` | Roates an icon |
 {{< /table >}}
+<!-- markdownlint-enable MD058 -->
 
 ## Bordered and pulled icons
 
@@ -238,6 +246,7 @@ And one fine morning — So we beat on, boats against the current, borne back ce
 
 The following table describes the available classes.
 
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |-------|---------|
@@ -245,6 +254,7 @@ The following table describes the available classes.
 | `fa-pull-left` | Pulls an icon by floating it left and applying a margin-right |
 | `fa-pull-right` | Pulls an icon by floating it right and applying a margin-left |
 {{< /table >}}
+<!-- markdownlint-enable MD058 -->
 
 ## Stacking icons
 
@@ -272,6 +282,7 @@ Use the `fa-stack` class on the parent HTML element of the two icons you want to
 
 The following table describes the available classes.
 
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |-------|---------|
@@ -280,6 +291,7 @@ The following table describes the available classes.
 | `fa-stack-2x` | Used on the icon which should be displayed larger when stacked |
 | `fa-inverse`  | Inverts the color of the icon displayed at base size when stacked |
 {{< /table >}}
+<!-- markdownlint-enable MD058 -->
 
 ## Adding custom icons
 

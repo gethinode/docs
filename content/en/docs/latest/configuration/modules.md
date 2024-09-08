@@ -44,15 +44,13 @@ Adjust the `modules` section in your site's parameter configuration file `config
 The following table provides an overview of the available settings for each module. Omit the `mod-` prefix of the module's name.
 
 <!-- markdownlint-disable MD037 -->
-{{< table >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
 | integration     | optional      | Module integration, either `core` or `optional`. Core modules are fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. Optional modules are only included on those pages that reference the module in the frontmatter. Hinode includes the following core modules by default: ["bootstrap", "flexsearch", "fontawesome"]. |
 | excludeSCSS     | false | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles. |
 | disableTemplate | false         | Excludes all scripts files from processing as Hugo template. The scripts are bundled as-is instead. This only applies to optional modules. |
-| localize        | false         | {{</* release version="v0.25.0" short="true" size="sm" inline="true" */>}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`.
-{{< /table >}}
-<!-- markdownlint-enable MD037 -->
+| localize        | false         | {{< release version="v0.25.0" short="true" size="sm" inline="true" >}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`. |
+<!-- markdownlint-disable MD037 -->
 
 For example, Bootstrap uses the following configuration in its module configuration:
 
@@ -64,29 +62,25 @@ For example, Bootstrap uses the following configuration in its module configurat
 
 {{< release version="v0.17.0" >}}
 
-<!-- markdownlint-disable MD037 -->
 The `fontawesome` module supports the following additional settings:
 
-{{< table >}}
+<!-- markdownlint-disable MD037 -->
 | Setting                 | Default | Description |
 |-------------------------|---------|-------------|
-| fontawesome.embed       | true    | {{</* release version="v0.26.3" short="true" size="sm" inline="true" */>}} If set, generates a symbol map with embedded vector images. Only works in conjunction with `inline`. Include the symbol map with the partial `assets/symbols.html` (requires the current page context). |
+| fontawesome.embed       | true    | {{< release version="v0.26.3" short="true" size="sm" inline="true" >}} If set, generates a symbol map with embedded vector images. Only works in conjunction with `inline`. Include the symbol map with the partial `assets/symbols.html` (requires the current page context). |
 | fontawesome.inline      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon. |
 | fontawesome.debug       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
 | fontawesome.skipMissing | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
-{{< /table >}}
 <!-- markdownlint-enable MD037 -->
 
 {{< release version="v0.22.5" >}}
 
 The `utils` module supports the following additional settings:
 
-{{< table >}}
 | Setting                 | Default | Description |
 |-------------------------|---------|-------------|
 | utils.filter      | `[^0-9A-Za-zŽžÀ-ÿ ;.,\/'’"]` | Defines the regular expression for characters to remove from page descriptions. These page descriptions are used to define card content and metadata for search indexes. Adjust the filter to define which characters to support. You may need to adjust these settings to support specific diacritical letters. |
 | utils.raw         | false | Flag to indicate page descriptions should be returned as-is. In this setting, the filter is ignored. |
-{{< /table >}}
 
 ## Enabling optional modules
 
