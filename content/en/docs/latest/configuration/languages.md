@@ -27,11 +27,11 @@ The default behavior is set in `config/_default/hugo.toml`. For example, you can
 > [!IMPORTANT]
 > You may need to adjust the mount configuration pending on the setup of your site. The Hinode theme mounts the folder `content` by default, which includes a basic site index defined in `_index.md`. Override this file or disable the `content` mount entirely (usually defined in `config/_default/hugo.toml`) if you encounter any issues.
 
-You need to the define the menu and social media buttons for each configured language. You can use the file `config/_default/menus/menus.en.toml` as starting point for the menu configuration. The same file also defines the available social media buttons and their labels. More information is available in the {{< link "/docs/configuration/navigation/#main-navigation" >}}main navigation configuration{{< /link >}}. 
+You need to the define the menu and social media buttons for each configured language. You can use the file `config/_default/menus/menus.en.toml` as starting point for the menu configuration. The same file also defines the available social media buttons and their labels. More information is available in the {{< link "/docs/configuration/navigation/#main-navigation" >}}main navigation configuration{{< /link >}}.
 
 The labels of the social media footer are defined in `config/_default/languages.toml` by default. Add the `title` and `caption` parameters for each defined language code:
 
-```
+```toml
 [en]
     [en.params.social]
         title = "Follow me"
