@@ -1,7 +1,7 @@
 ---
 title: Languages
 description: Configure multiple languages to enable multilingual sites.
-date: 2024-08-18
+date: 2024-09-11
 layout: docs
 ---
 
@@ -21,6 +21,22 @@ Define the languages available to your site in the main site configuration. The 
 The default behavior is set in `config/_default/hugo.toml`. For example, you can set the `defaultContentLanguageInSubdir` to `false` to remove the language slug `/en` from your site entirely.
 
 {{< docs name="language" file="config/_default/hugo.toml" >}}
+
+## Site configuration
+
+> [!IMPORTANT]
+> You may need to adjust the mount configuration pending on the setup of your site. The Hinode theme mounts the folder `content` by default, which includes a basic site index defined in `_index.md`. Override this file or disable the `content` mount entirely (usually defined in `config/_default/hugo.toml`) if you encounter any issues.
+
+You need to the define the menu and social media buttons for each configured language. You can use the file `config/_default/menus/menus.en.toml` as starting point for the menu configuration. The same file also defines the available social media buttons and their labels. More information is available in the {{< link "/docs/configuration/navigation/#main-navigation" >}}main navigation configuration{{< /link >}}. 
+
+The labels of the social media footer are defined in `config/_default/languages.toml` by default. Add the `title` and `caption` parameters for each defined language code:
+
+```
+[en]
+    [en.params.social]
+        title = "Follow me"
+        caption = "The latest news"
+```
 
 ## Content translation
 
