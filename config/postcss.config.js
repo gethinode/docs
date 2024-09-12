@@ -11,7 +11,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])]
   },
   dynamicAttributes: ['data-bs-theme'],
-  safelist: [
+  safelist: ['was-validated',
     ...whitelister([
       './assets/scss/theme/theme.scss',
       './_vendor/github.com/gethinode/hinode/assets/scss/common/_styles.scss',
