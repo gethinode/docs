@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2024-08-17
+date: 2024-09-18
 layout: docs
 ---
 
@@ -50,6 +50,7 @@ The following table provides an overview of the available settings for each modu
 | excludeSCSS     | false | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles. |
 | disableTemplate | false         | Excludes all scripts files from processing as Hugo template. The scripts are bundled as-is instead. This only applies to optional modules. |
 | localize        | false         | {{< release version="v0.25.0" short="true" size="sm" inline="true" >}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`. |
+| category        | other         | {{< release version="v0.27.0-alpha8" short="true" size="sm" inline="true" >}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{< link "cookie-consent" />}} for more details. |
 <!-- markdownlint-disable MD037 -->
 
 For example, Bootstrap uses the following configuration in its module configuration:
