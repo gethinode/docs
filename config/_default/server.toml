@@ -11,6 +11,8 @@ for = '/**'
         object-src 'none'; \
         base-uri 'self'; \
         connect-src 'self'
+            https://*.cookieyes.com \
+            https://cdn-cookieyes.com \
             https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; \
         font-src 'self' https://fonts.gstatic.com; \
         frame-src 'self' https://player.cloudinary.com https://player.vimeo.com https://www.youtube-nocookie.com https://www.youtube.com; \
