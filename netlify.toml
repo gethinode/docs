@@ -20,6 +20,7 @@
             default-src 'self'; \
             child-src 'self' app.netlify.com; \
             script-src 'self' \
+                https://cdn-cookieyes.com \
                 https://*.netlify.app app.netlify.com netlify-cdp-loader.netlify.app \
                 https://*.google-analytics.com https://*.googletagmanager.com; \
             style-src 'self' \
