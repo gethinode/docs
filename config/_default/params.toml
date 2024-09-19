@@ -14,7 +14,7 @@
         transpiler = "dartsass"
 
 [debugging]
-    showJS = false
+    showJS = true
     showSCSS = false
     purgeHTMLComments = true
 
@@ -388,3 +388,10 @@
     wcag_contrast = "https://www.w3.org/TR/WCAG20/#visual-audio-contrast"
     webfonts_helper = "https://gwfh.mranftl.com"
     youtube = "https://youtube.com"
+
+[modules.cookieyes]
+    integration = "critical"
+    state = "immediate"
+    category = "necessary"
+    id = "a54b5553f349dd13bd225f8e"
+    force = true
