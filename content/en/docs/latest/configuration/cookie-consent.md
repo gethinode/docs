@@ -1,39 +1,39 @@
 ---
 title: Cookie consent (alpha release)
 description: Configure cookie consent to comply with regulatory requirements.
-date: 2024-09-18
+date: 2024-09-19
 layout: docs
 ---
 
 > [!IMPORTANT]
 > The materials on this website are purely informative and represent a personal view; they do not constitute legal or other professional advice. Consult your professional adviser for legal or other advice.
 
-{{< release version="v0.27.0-alpha8" >}}
+{{< release version="v0.27.0-alpha9" >}}
 
 > [!CAUTION]
 > The support for cookie consent is still in alpha-stage of development by the Hinode team. As a result, the implementation is subject to change.
 
-Regulations such as GDPR (in the EU and UK) and CCPA/CPRA (California) require consent from users about the use of cookies. Without prior consent, the website should refrain from storing or accessing any cookies, unless they are absolutely essential. Site owners should also be able to share proof of the consents (consent logging) on request of the authorities. Lastly, certain countries put restrictions on where to physically store the consent logs.
+Regulations such as GDPR (in the EU and UK) and CCPA/CPRA (California) require consent from users about the use of cookies. Without prior consent, the website should refrain from storing or accessing any cookies, unless they are absolutely essential. Site owners should also be able to share proof of the consents (consent logging) on request of the authorities. Lastly, certain countries put restrictions on where to geographically store the consent logs.
 
-Since release {{< release version="v0.27.0-alpha8" short="true" type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution. Review the next paragraphs to familiarize yourself with the available options and configurations.
+Since release {{< release version="v0.27.0-alpha9" short="true" type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution. Review the next paragraphs to familiarize yourself with the available options and configurations.
 
 ## Categorizing scripts
 
-Although the laws and regulations specifically mention cookies, strictly speaking, it are the scripts that actually create and interact with cookies. Assigning a Hinode script (or a script bundle) to a specific category informs users about their intent
+Modern websites typically use a combination of local storage, session storage, and cookies to collect and store data. Although the various laws and regulations are commonly referred to as cookie law, the legislation is applicable to all kinds of technologies that enable data collection and processing. In practice, we should look into the scripts that interact with these data storages. Assigning a Hinode script (or a script bundle) to a specific category informs users about their intent.
 
 ### Available categories
 
 > [!IMPORTANT]
 > The available categories and their descriptions are used for illustrative purposes only. It is the responsibility of the site administrator to assign scripts to the correct category.
 
-Hinodes supports the following categorization of cookies:
+Hinodes supports the following categorization of scripts and their intent:
 
 - **necessary** - Necessary cookies are linked to the site's essential features, which include secure log-in and customizable consent settings. There is no personally identifying information stored by these cookies.
 - **functional** - Functional cookies facilitate the performance of specific tasks, such as gathering user comments, disseminating the website's content on social media, and enabling additional third-party capabilities. Hinode uses functional cookies to store the user's preferred language and theme.
 - **analytics** - Cookies with analytical functions are employed to comprehend how users engage with the website. These cookies aid in the provision of data on metrics like number of visitors, bounce rate, source of traffic, etc. Hinode provides a module to integrate with Google Analytics out of the box.
 - **performance** - In order to provide users with a better user experience, performance cookies are employed to comprehend and evaluate the website's important performance indicators.
 - **advertisement** - Advertisement cookies are used to track the success of ad campaigns and show users personalized advertisements depending on the pages they have previously viewed.
-- **other** - Unassigned cookies are categorized as `other` by default. Any cookies used by these scripts should be reviewed and assigned to a specific category by the site administrator.
+- **other** - Unassigned scripts are categorized as `other` by default. Any cookies used by these scripts should be reviewed and assigned to a specific category by the site administrator. Hinode also assigns scripts to this category that do not necessarily interact with cookies at all.
 
 ### Assigning categories to Hinode modules
 
@@ -100,5 +100,8 @@ You can modify this template to your needs. For example, {{< link "cookieyes_scr
 
 ## Using API calls
 
-> [!NOTE]
-> This code is being implemented and will be released soon.
+Hinode uses several script to access and store the user's preferences, including the selected theme and language. Instead of assigning an entire script or script bundle to a category, you can also use predefined APIs. These APIs will give you fine-grained control on when to invoke a cookie consent check. Use the `get*` and `set*` functions to interact with the local storage and session storage respectively. The `hasConsent()` function is a placeholder that should be hooked to your cookie consent manager of choice.
+
+The available functions are defined in `/assets/js/critical/_cookie.js`:
+
+{{< file path="./_vendor/github.com/gethinode/hinode/assets/js/critical/_cookie.js" full="false" >}}
