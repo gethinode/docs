@@ -1,0 +1,20 @@
+{{- if or site.Params.modules.cookieyes.force (not hugo.IsServer) -}}
+    {{ with site.Params.modules.cookieyes.id }}
+class CookieYesManager {
+    hasConsent (category) {
+        console.log('invoke cky consent')
+    }
+}
+ 
+let _manager
+const script = document.createElement("script");
+script.setAttribute("src", "https://cdn-cookieyes.com/client_data/{{ (. | urlize) }}/script.js");
+// script.onload = function() {
+    let ckyMgr = new CookieYesManager()
+    registerConsentManager (ckyMgr)
+// }
+// document.head.appendChild(script);
+    {{ else }}
+        {{ warnf "Cannot find CookieYes ID, check 'params.modules.cookieyes.id'" }}
+    {{ end }}
+{{ end }}
