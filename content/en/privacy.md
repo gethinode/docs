@@ -4,8 +4,8 @@ description: Privacy policy of gethinode.com
 date: 2024-09-19
 layout: docs
 ---
+<!-- markdownlint-disable MD036 -->
 *Effective Date 19-Sep-2024*
-
 
 This Privacy Policy describes the policies of gethinode.com on the collection, use and disclosure of your information that we collect when you use our website (https://gethinode.com, referred to as the “Service”). By accessing or using the Service, you are consenting to the collection, use and disclosure of your information in accordance with this Privacy Policy. If you do not consent to the same, please do not access or use the Service.
 
@@ -16,7 +16,7 @@ We may modify this Privacy Policy at any time without any prior notice to you an
 We will not transfer your personal information to any third party without seeking your consent, except in limited circumstances as described
 below:
 
- - Analytics
+- Analytics
 
 We require such third party’s to use the personal information we transfer to them only for the purpose for which it was transferred and not to retain it for longer than is required for fulfilling the said purpose.
 
@@ -29,6 +29,7 @@ Depending on the law that applies, you may have a right to access and rectify or
 Do note that if you do not allow us to collect or process the required personal information or withdraw the consent to process the same for the required purposes, you may not be able to access or use the services for which your information was sought.
 
 ## Cookies etc.
+
 To learn more about how we use these and your choices in relation to these tracking technologies, please refer to our {{< link "cookies" >}}Cookie Policy{{< /link >}}.
 
 ## Security
