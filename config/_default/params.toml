@@ -390,8 +390,5 @@
     youtube = "https://youtube.com"
 
 [modules.cookieyes]
-    integration = "critical"
-    state = "immediate"
-    category = "necessary"
     id = "a54b5553f349dd13bd225f8e"
-    force = true
+    force = false
