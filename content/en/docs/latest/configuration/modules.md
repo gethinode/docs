@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2024-09-19
+date: 2024-09-24
 layout: docs
 ---
 
@@ -29,13 +29,13 @@ Hinode uses the default configuration defined in each referenced module since re
 
 You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on an opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
 
-For core modules, Hinode bundles the provided [stylesheet files]({{% relref "styles" %}}) and [JavaScript files]({{% relref "scripts" %}}) into the main stylesheet and main script file. For optional modules, Hinode prepares separate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
+For core modules, Hinode bundles the provided [stylesheet files]({{% relref "styles" %}}) and [JavaScript files]({{% relref "scripts" %}}) into the main stylesheet and core script bundles. For optional modules, Hinode prepares separate stylesheet files and JavaScript files for each individual module. The configuration order of the core modules is important: **the first module is processed before the next modules**.
 
 > [!NOTE]
 > Hugo uses two different algorithms to merge the filesystems, depending on the file type:
 >
-> - For i18n and data files, Hugo merges deeply using the translation ID and data key inside the files.
-> - For static, layouts (templates), and archetypes files, these are merged on file level, so the left-most file will be chosen.
+> - For `i18n` and `data` files, Hugo merges deeply using the translation ID and data key inside the files.
+> - For `static`, `layouts` (templates), and `archetypes` files, these are merged on file level, so the left-most file will be chosen.
 
 Adjust the `modules` section in your site's parameter configuration file `config/_default/params.toml` to configure the various modules. Modules can include files for each of the following folders: `archetypes`, `assets`, `content`, `data`, `i18n`, `layouts`, `static`. Modules can also have their own configuration files. Each module needs to be imported as well ([see the previous paragraph]({{% relref "#configuring-modules" %}})).
 
@@ -50,7 +50,9 @@ The following table provides an overview of the available settings for each modu
 | excludeSCSS     | false | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles. |
 | disableTemplate | false         | Excludes all scripts files from processing as Hugo template. The scripts are bundled as-is instead. This only applies to optional modules. |
 | localize        | false         | {{< release version="v0.25.0" short="true" size="sm" inline="true" >}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`. |
-| category        | other         | {{< release version="v0.27.0-alpha9" short="true" size="sm" inline="true" >}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{< link "cookie-consent" />}} for more details. |
+| category        | other         | {{< release version="v0.27.0-beta" short="true" size="sm" inline="true" >}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{< link "cookie-consent" />}} for more details. |
+| local           | false         | {{< release version="v0.27.0-beta" short="true" size="sm" inline="true" >}} Includes an external URL in local mode too. By default, external scripts are only included in the built site. |
+| url             |               | {{< release version="0.27.0-beta" short="true" size="sm" inline="true" >}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{< link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link >}} for more information. |
 <!-- markdownlint-disable MD037 -->
 
 For example, Bootstrap uses the following configuration in its module configuration:
@@ -60,6 +62,23 @@ For example, Bootstrap uses the following configuration in its module configurat
   integration = "core"
   excludeSCSS = true
 ```
+
+## Configuring module-specific extensions
+
+Several modules support additional, module-specific configurations. Review them in the next paragraphs.
+
+### CookieYes
+
+{{< release version="v0.27.0-beta" >}}
+
+The `cookieyes` module requires the following settings:
+
+| Setting                   | Default | Description |
+|---------------------------|---------|-------------|
+| cookieyes.local           | false   | Trigger to force include the CookieYes scripts, bypassing other settings. Use this setting for debugging and testing only. |
+| cookieyes.url             |         | Link to your personalized CookieYes script. See the installation code in the advanced settings of your CookieYes account. The code is available by clicking the button next to the cookie banner status. The link has the following pattern: `https://cdn-cookieyes.com/client_data/{installation code}/script.js`. |
+
+### Font Awesome
 
 {{< release version="v0.17.0" >}}
 
@@ -73,6 +92,38 @@ The `fontawesome` module supports the following additional settings:
 | fontawesome.debug       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
 | fontawesome.skipMissing | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
 <!-- markdownlint-enable MD037 -->
+
+### Google Analytics
+
+{{< release version="v0.27.0-beta" >}}
+
+> [!NOTE]
+> By convention, Hinode uses kebab case as naming convention for module names. However, the module name in the site parameters is renamed to `GoogleAnalytics` to align with Hugo's privacy settings.
+
+Set you `G-tag` in your site configuration (usually `hugo.toml`) in the following section:
+
+```toml
+[services]
+  [services.googleAnalytics]
+    ID = "G-xxxxxxxxxx"
+```
+
+You can modify the privacy configuration in the following section:
+
+```toml
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = false
+```
+
+The `google-analytics` module supports the following additional settings:
+
+| Setting                   | Default | Description |
+|---------------------------|---------|-------------|
+| GoogleAnalytics.local     | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
+
+### Utils
 
 {{< release version="v0.22.5" >}}
 

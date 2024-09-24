@@ -25,6 +25,9 @@
 - id: svg
   long: "Scalable Vector Graphics"
 
+- id: ui
+  long: "User Interface"
+
 - id: wysiwyg
   long: "What you see is what you get"
 
