@@ -300,6 +300,8 @@ github.com/gethinode/mod-cookieyes v1.0.2 h1:WL9sjpYKjkV+jRKIrm6H82UpthQjFksvKGp
 github.com/gethinode/mod-cookieyes v1.0.2/go.mod h1:VrBUKm5apop6KIb+R8eRqvlf3AAPnv5aMajL0RorIjY=
 github.com/gethinode/mod-cookieyes/v2 v2.0.3 h1:o5PAAOjx8baRcSkhTAQuZ+hX9cK8oWjeC3sYxt1DT2c=
 github.com/gethinode/mod-cookieyes/v2 v2.0.3/go.mod h1:tULb7D7CoTycGUyL7ryqHJKaX11XuL2SN+XwP7/DI0Y=
+github.com/gethinode/mod-cookieyes/v2 v2.0.4 h1:QgYSD3S23351e7xEeQb+Mon+e+I6RbnnrTyvpxBST1A=
+github.com/gethinode/mod-cookieyes/v2 v2.0.4/go.mod h1:tULb7D7CoTycGUyL7ryqHJKaX11XuL2SN+XwP7/DI0Y=
 github.com/gethinode/mod-flexsearch v1.1.0 h1:7BCMyQDlYlskNXuazt8Jg/jg9WREexu2xVkYqThkAX4=
 github.com/gethinode/mod-flexsearch v1.1.0/go.mod h1:TXbGbWsvmhBdsTzRt887mcpFfr4ORpzG3+h/l4W3YM4=
 github.com/gethinode/mod-flexsearch v1.1.1 h1:zHypfKR/rWPAwqNXvo09Pp3vGqU4w3r7d2VtMudIzkI=
