@@ -30,7 +30,7 @@ Do note that if you do not allow us to collect or process the required personal 
 
 ## Cookies etc.
 
-To learn more about how we use these and your choices in relation to these tracking technologies, please refer to our {{< link "cookies" >}}Cookie Policy{{< /link >}}.
+To learn more about how we use these and your choices in relation to these tracking technologies, please refer to our {{< link "cookies" >}}Cookie Policy/Settings{{< /link >}}.
 
 ## Security
 

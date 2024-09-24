@@ -232,7 +232,10 @@
     commit_message = "https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html"
     community_guidelines = "https://docs.github.com/articles/github-community-guidelines"
     contrast_checker = "https://accessibleweb.com/color-contrast-checker/"
+    cookieyes = "https://www.cookieyes.com"
     cookieyes_script_code = "https://www.cookieyes.com/documentation/implement-prior-consent-using-cookieyes/"
+    cookieyes_csp = "https://www.cookieyes.com/documentation/content-security-policy/"
+    cookieyes_staging = "https://www.cookieyes.com/documentation/add-staging-site/"
     core_web_vitals = "https://web.dev/vitals/#core-web-vitals"
     create_pr = "https://github.com/peter-evans/create-pull-request"
     css_codeguide = "https://codeguide.co/#css"
@@ -390,5 +393,5 @@
     youtube = "https://youtube.com"
 
 [modules.cookieyes]
-    id = "a54b5553f349dd13bd225f8e"
-    force = false
+    url = "https://cdn-cookieyes.com/client_data/a54b5553f349dd13bd225f8e/script.js"
+    local = false

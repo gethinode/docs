@@ -1,59 +1,134 @@
 ---
 title: Scripts
-description: Automatically bundle local and external JavaScript files into a single file.
-date: 2023-08-03
+description: Bundle local and external JavaScript files by intent and rendering impact.
+date: 2023-09-24
 layout: docs
 ---
 
-Hinode bundles local JavaScript files and JavaScript files defined in a core module into a single file. By utilizing [Hugo modules]({{% ref "overview" %}}), external JavaScript files are automatically ingested and kept up to date.
+> [!IMPORTANT]
+> Hinode release {{< release version="v0.27.0-beta" short="true" type="link" >}} has overhauled the build pipeline of scripts and modules. The bundled files now support categorization by intent.
 
-## Build pipeline
+Hinodes bundles JavaScript files to optimize the page loading speed. By utilizing [Hugo modules]({{% ref "overview" %}}), referenced JavaScript files are automatically ingested and version controlled. Since release {{< release version="v0.27.0-beta" short="true" type="link" >}}, Hinode also supports the grouping of scripts by their intent. Review the next sections to familiarize yourself with the build system.
 
-Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{% ref "overview" %}}) for a detailed explanation. The build pipeline of the JavaScript files consists of four steps.
+## Types of integrations
 
-1. **Mount the JavaScript files maintained within the core modules**
+Hinodes recognizes three types of integrations for JavaScript files. You can mount these files directly into Hugo's virtual file system, or use modules instead.
 
-   Make JavaScripts defined in core modules available by mounting them into a separate `assets/js/modules/{MODULE NAME}/` folder for each module. Adjust the mount points in `config/_default/hugo.toml` as needed.
+<!-- markdownlint-disable MD037 -->
+{{< accordion class="accordion-theme accordion-flush" >}}
+   {{< accordion-item header="Critical" >}}
+      Critical scripts are loaded immediately as part of the page header. The included scripts are considered vital for the initial page to render correctly and are blocking. For example, Hinode includes a script to toggle the site's [color mode]({{% relref "color-modes" %}}). It should be loaded before the page is being displayed to reduce screen flickering.
+   {{< /accordion-item >}}
+   {{< accordion-item header="Core" >}}
+      Core scripts offer functionality that is used throughout the entire site. An example is the {{</* link bootstrap >}}Bootstrap{{< /link */>}} framework, which includes various scripts to provide interactive {{</* abbr UI */>}} elements. Core scripts are lazily loaded as part of the page's body to improve the initial page loading.
+  {{< /accordion-item >}}
+  {{< accordion-item header="Optional" >}}
+      Optional scripts are only included on the pages that require them. An example is the {{</* link leaflet >}}Leaflet{{< /link */>}} module, that renders an interactive map. Optional scripts are lazily loaded similarly to core scripts, unless specified otherwise.
+  {{< /accordion-item >}}
+{{< /accordion >}}
+<!-- markdownlint-enable MD037 -->
 
-2. **Add the local JavaScript files**
+## Available script categories
 
-   Add the local JavaScript files to the `assets/js` folder with a recognizable filename.
+In addition to their integration type, you can also bundle scripts by their intent category. You can use this intent category in combination with a {{< link "docs/configuration/cookie-consent" >}}cookie consent manager{{< /link >}} to dynamically load scripts in compliance with privacy regulations. Hinodes supports the following categories. Refer to the {{< link "docs/configuration/cookie-consent#available-categories" >}}cookie consent categories{{< /link >}} for more details.
 
-3. **Bundle the JavaScript files**
+- necessary
+- functional
+- analytics
+- performance
+- advertisement
+- other
 
-   The partial `partials/footer/scripts.html` bundles all files that end with `.js` recursively into a single file called `js/main.bundle.js`. The files are processed in the order of the configured core modules and are sorted alphabetically within each module. JavaScript files defined in the current repository are added last, sorted alphabetically too. In production mode, the bundled output is minified and linked to with a {{< link hugo_fingerprint >}}fingerprint{{< /link >}}.
+## Naming conventions
 
-4. **Link to the JavaScript in the base layout**
+Hinode uses the following naming conventions for each type of script:
 
-   Hinode's base layout `layouts/_default/baseof.html` imports the bundled JavaScript file in the footer. The file is cached to improve performance.
+| Integration | Basename | Description |
+|-----------------|-----------------------------------|-------------|
+| **critical** | `critical.bundle` | Critical scripts are bundled by intent category. The target bundle's filename uses `critical.bundle` as basename and the category name as suffix. When the category is `other`, the suffix is omitted. Localized modules trigger a language code extension. |
+| **core** | `core.bundle` | Core scripts are bundled similarly as critical scripts. The target bundle's filename uses `core.bundle` as basename. |
+| **optional** | `<module name>` | Scripts that are part of an optional module are bundled by their module name and optional category. Similar to core scripts, optional scripts bundles can also receive a language code extension. |
 
-## Critical files
+## Integration approaches
 
-Hinode considers all files placed in the `assets/js/critical` folder as critical during page load. These files are bundled into the file `js/critical.bundle.js` and are included at the top of the page (right below the opening `<body>` tag). This ensures the browser processes these critical resources before rendering the initial site. By default, Hinode defines the JavaScript to toggle the site's [color mode]({{% relref "color-modes" %}}) as a critical resource to reduce screen flickering. The snippet below illustrates the page skeleton to include critical scripts as defined in `layouts/_default/baseof.html`.
+Hinodes supports three types of integration approaches. The next paragraphs describe the available approaches in detail.
 
-```go-html-template
-[...]
+### JavaScript files
 
-<!doctype html>
-<html lang="{{ .Site.Language.Lang }}" class="no-js">
-    <head>
-        {{ block "head" . }}{{ end -}}
-    </head>
+The main Hinode repository includes several scripts maintained within the `assets/js` folder. You can add (or mount) your own scripts to this folder to include them in the build pipeline. Hinode supports the following directories relative to the `assets` mount point:
 
-    <body>
-        {{- if site.Params.main.enableDarkMode -}}
-            {{- partial "footer/scripts.html" (dict 
-               "filename" "js/critical.bundle.js" 
-               "match" "js/critical/**.js" 
-               "page" .) 
-            -}}
-        {{- end -}}
+| Category        | Match (glob pattern)              | Target bundle |
+|-----------------|-----------------------------------|-------------|
+| `other`         | `js/critical/*.js`                | `/js/critical.bundle.js` |
+| `functional`    | `js/critical/functional/**.js`    | `/js/critical.bundle-functional.js` |
+| `analytics`     | `js/critical/analytics/**.js`     | `/js/critical.bundle-analytics.js` |
+| `performance`   | `js/critical/performance/**.js`   | `/js/critical.bundle-performance.js` |
+| `advertisement` | `js/critical/advertisement/**.js` | `/js/critical.bundle-advertisement.js` |
+| `core`          | `{js/*.js,js/vendor/**.js}`       | `/js/core.bundle.js` |
 
-        [...]
-    </body>
-</html>
+### Scripts embedded within a module
+
+> [!NOTE]
+> Review the {{< link "module-development" >}}module development guidelines{{< /link >}} to see the detailed mounting requirements for the scripts embedded in a module.
+
+Hinodes uses {{< link "docs/configuration/modules/" >}}modules{{< /link >}} to include features and functionality as needed. This reduces overhead and improves performance. Each module provides a default integration configuration. You can override these settings in your site's parameters. The following example illustrates the default configuration of the {{< link google_analytics >}}Google Analytics{{< /link >}} module. Refer to the {{< link "docs/configuration/modules/#configuring-modules" >}}module configuration {{< /link >}} to see the available settings and values.
+
+```toml
+[params.modules.GoogleAnalytics]
+  integration = "core"
+  state = "async"
+  category = "analytics"
 ```
 
-## Optional module files
+### External scripts
 
-Hinode bundles the JavaScript files that are part of an optional module into a single file for each module. The input files are expected to be mounted to `assets/js/modules/{MODULE NAME}/`. The base layout `layouts/_default/baseof.html` includes these optional bundle files in order of their configuration. By default, the scripts are loaded after the main bundle,  right above the closing `</body>` tag.
+> [!CAUTION]
+> In general, you are encouraged to embed external scripts within a module. This ensures the scripts are bundled together and are version controlled. Only use external links when absolute necessary.
+
+You can also reference an external script by including its url in the module configuration. These external scripts are not bundled but included as reference instead. The module for {{< link cookieyes >}}CookieYes{{< /link >}} uses the following configuration to ensure the cookie script is always loaded first:
+
+```toml
+[params.modules.cookieyes]
+    integration = "critical"
+    url = "https://cdn-cookieyes.com/client_data/{ID redacted}/script.js"
+```
+
+## Rendering example
+
+The following example illustrates the files as used by the {{< link "hinode_demo_components" >}}components page on the demo site{{< /link >}}. The integrity hashes have been omitted for clarity.
+
+1. The page implements cookie consent management by {{< link cookieyes >}}CookieYes{{< /link >}} as critical module using an external url.
+2. Next, two critical script bundles are included. These scripts use the match patterns `js/critical/functional/**.js` and `js/critical/*.js` respectively.
+3. In this example, no core external URLs are used, however, they would be added first in the final part of the page body.
+4. Instead, two core bundles are included. The file `js/core.bundle-analytics.en.min.js` uses the script defined in the {{< link google_analytics >}}Google Analytics{{< /link >}} module. The other core file uses a mix of core modules (such as {{< link bootstrap >}}Bootstrap{{< /link >}}, {{< link flexsearch >}}FlexSearch{{< /link >}}, and {{< link fontawesome >}}Font Awesome{{< /link >}}) and scripts defined in the `assets/js` folder (without nesting).
+5. Lastly, the page loads {{< link leaflet >}}Leaflet{{< /link >}}, {{< link lottie >}}Lottie{{< /link >}}, and {{< link simple_datatables >}}Simple Datatables{{< /link >}} as optional modules.
+
+```html {hl_lines=[4,7,16,18,22]}
+<!doctype html>
+<html lang=en class=no-js>
+  <head>
+    1) External, critical URLs are referenced first
+    <script src="https://cdn-cookieyes.com/client_data/{ID redacted}/script.js"></script>
+
+    2) Critical bundle files are included next
+    <script src="/js/critical.bundle-functional.js" data-category="functional"></script>
+    <script src="/js/critical.bundle.js"></script>
+    [...]
+  </head>
+
+  <body>
+    [...]
+
+    3) External, core URLs are referenced here (N/A in this example)
+
+    4) Core bundle files are referenced near the body closing tag
+    <script src=/js/core.bundle-analytics.en.min.js data-category="analytics" async></script>
+    <script src=/js/core.bundle.en.min.js async></script>
+
+    5) Optional module file are referenced last
+    <script src=/js/leaflet.min.js></script>
+    <script src=/js/lottie.min.js></script>
+    <script src=/js/simple-datatables.js async></script>
+  </body>
+</html>
+```
