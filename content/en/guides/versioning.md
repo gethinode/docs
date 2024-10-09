@@ -263,7 +263,7 @@ notAlternative = true
 delimiter = ""
 
 [outputs]
-home = ["HTML", "RSS", "REDIR"]
+home = ["HTML", "RSS", "REDIR", "netlify", "server"]
 ```
 
 ### Redirecting the versioned docs

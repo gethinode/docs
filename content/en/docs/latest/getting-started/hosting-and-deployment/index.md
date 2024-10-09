@@ -170,11 +170,11 @@ The repository root should include a file `netlify.toml`. If not, copy it from t
 > [!NOTE]
 > The default configuration provides basic security headers. Please review the [server configuration]({{% relref "server-headers" %}}) for more details about the Content Security Policy. The cache settings are explained in more detail in the {{< link netlify_cache >}}Netlify blog{{< /link >}}.
 
-{{< docs name="netlify" file="netlify.toml" show="true" >}}
+{{< docs name="netlify" file="data/netlify.toml" show="true" >}}
 
 The same file also configures several optional plugins. Keep these plugins if you would like to support {{< link "docs/configuration/layout#extended-configuration" >}}Dart Sass{{< /link >}}, use caching, and generate a Lighthouse report upon each build.
 
-{{< docs name="plugins" file="netlify.toml" show="true" >}}
+{{< docs name="plugins" file="data/netlify.toml" show="true" >}}
 
 ### Configure your site
 
