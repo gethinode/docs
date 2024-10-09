@@ -124,7 +124,7 @@ npm run build:headers
 (out)
 (out)                   | EN   
 (out)-------------------+------
-(out)  Pages            |   2  
+(out)  Pages            |   2
 (out)  Paginator pages  |   0  
 (out)  Non-page files   |   0  
 (out)  Static files     | 114  
