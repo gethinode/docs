@@ -122,7 +122,7 @@ npm run build:headers
 (out)WARN  Generating server headers: /netlify.toml
 (out)WARN  Generating server headers: /server.toml
 (out)
-(out)                   | EN   
+(out)                   | EN
 (out)-------------------+------
 (out)  Pages            |   2
 (out)  Paginator pages  |   0  
