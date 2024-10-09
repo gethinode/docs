@@ -14,7 +14,7 @@
         transpiler = "dartsass"
 
 [debugging]
-    showJS = true
+    showJS = false
     showSCSS = false
     purgeHTMLComments = true
 
@@ -239,6 +239,7 @@
     core_web_vitals = "https://web.dev/vitals/#core-web-vitals"
     create_pr = "https://github.com/peter-evans/create-pull-request"
     css_codeguide = "https://codeguide.co/#css"
+    csp = "https://content-security-policy.com"
     dependabot = "https://docs.github.com/en/code-security/dependabot/dependabot-version-updates"
     dependabot_issue_6860 = "https://github.com/dependabot/dependabot-core/issues/6860"
     devops_journal = "https://devopsjournal.io/blog/2021/02/06/GitHub-Actions-Forking-Repositories"
@@ -268,6 +269,7 @@
     google_chrome = "https://www.google.com/chrome"
     google_fonts = "https://fonts.google.com"
     hinode = "https://gethinode.com"
+    hinode_csp = "https://github.com/gethinode/mod-csp"
     hinode_demo = "https://demo.gethinode.com/"
     hinode_fr = "https://demo.gethinode.com/fr/"
     hinode_release_v0_22_0 = "https://github.com/gethinode/hinode/releases/tag/v0.22.0-beta7"
@@ -284,6 +286,7 @@
     hugo_content = "https://gohugo.io/content-management/formats"
     hugo_content_view = "https://gohugo.io/templates/views/"
     hugo_chroma = "https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages"
+    hugo_custom_output = "https://gohugo.io/templates/output-formats"
     hugo_data_sources = "https://gohugo.io/content-management/data-sources/"
     hugo_deploy = "https://gohugo.io/hosting-and-deployment/hugo-deploy"
     hugo_deployment = "https://gohugo.io/hosting-and-deployment"
@@ -312,6 +315,8 @@
     hugo_release_v0_109_0 = "https://github.com/gohugoio/hugo/releases/tag/v0.109.0"
     hugo_scratch = "https://gohugo.io/methods/shortcode/scratch"
     hugo_sections = "https://gohugo.io/content-management/sections"
+    hugo_segments = "https://gohugo.io/getting-started/configuration/#configure-segments"
+    hugo_server = "https://gohugo.io/getting-started/configuration/#configure-server"
     hugo_shortcodes = "https://gohugo.io/content-management/shortcodes"
     hugo_structure = "https://gohugo.io/content-management/organization"
     hugo_templates = "https://gohugo.io/templates/introduction"

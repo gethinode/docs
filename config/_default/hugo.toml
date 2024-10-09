@@ -56,6 +56,20 @@ defaultContentLanguageInSubdir = false
     ID = "G-T85PPZ36GN"
 
 [outputFormats]
+  [outputFormats.server]
+    mediaType = "application/toml"
+    baseName = "server"
+    isPlainText = true
+    notAlternative = true
+    permalinkable = true
+    root = true
+  [outputFormats.netlify]
+    mediaType = "application/toml"
+    baseName = "netlify"
+    isPlainText = true
+    notAlternative = true
+    permalinkable = true
+    root = true
   [outputFormats.XML]
     isPlainText = false
     mediaType = "application/xml"
@@ -64,6 +78,9 @@ defaultContentLanguageInSubdir = false
     permalinkable = false
     name = "xml"
 
+[outputs]
+home = ["HTML", "RSS", "REDIR", "netlify", "server"]
+
 [minify]
   [minify.tdewolff.js]
     keepVarNames = true
@@ -71,6 +88,12 @@ defaultContentLanguageInSubdir = false
     version = 2022
   [minify.tdewolff.html]
     keepWhitespace = true
+
+[segments]
+  [segments.headers]
+    [[segments.headers.includes]]
+       kind = '{home}'
+       output = '{netlify,server}'
 
 [module]
   [module.hugoVersion]

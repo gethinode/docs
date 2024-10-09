@@ -1,7 +1,7 @@
 ---
 title: Server-side redirection
 description: Enable server-side redirection (Netlify only)
-date: 2023-08-03
+date: 2024-10-09
 layout: docs
 ---
 
@@ -24,5 +24,5 @@ notAlternative = true
 delimiter = ""
 
 [outputs]
-home = ["HTML", "RSS", "REDIR"]
+home = ["HTML", "RSS", "REDIR", "netlify", "server"]
 ```
