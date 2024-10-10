@@ -134,3 +134,5 @@ npm run build:headers
 (out)
 (out)Total in 281 ms
 {{< /command >}}
+
+Add the `/prebuild` folder to your `.gitignore` file to prevent polluting your source code repository.
