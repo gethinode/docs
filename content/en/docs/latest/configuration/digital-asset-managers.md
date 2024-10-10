@@ -1,7 +1,7 @@
 ---
 title: Digital Asset Managers
 description: Configure Digital Asset Managers to delegate the transformation of images
-date: 2024-08-14
+date: 2024-10-10
 layout: docs
 ---
 
@@ -17,10 +17,18 @@ Hinode supports {{< link cloudinary>}}Cloudinary{{< /link >}}, {{< link imagekit
 
 ## Content Security Policy
 
-Hinode has enabled access for Cloudinary, ImageKit.io, and Imgix by default. The following settings are set in `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository’s root when deploying to {{< link netlify >}}Netlify{{< /link >}}. Revise the Content Security Policy as needed.
+Hinode has enabled access for Cloudinary, ImageKit.io, and Imgix by default. The following settings are set in the site's parameters (usually `hugo.toml`). See the {{< link "/docs/advanced-settings/server-headers" >}}Content Security Policy{{< /link >}} for more information.
 
-```yaml
-img-src:    https://*.imgix.net https://*.imagekit.io https://*.cloudinary.com
+```toml
+[params.modules.hinode.csp]
+    frame-src = [
+        "player.cloudinary.com",
+    ]
+    img-src = [
+        "*.imgix.net",
+        "*.imagekit.io",
+        "*.cloudinary.com"
+    ]
 ```
 
 ## Supported providers
