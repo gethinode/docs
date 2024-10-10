@@ -1,7 +1,7 @@
 ---
 title: Server headers
 description: Configure the server headers to refine the content security policy.
-date: 2024-10-09
+date: 2024-10-10
 layout: docs
 aliases:
   - "/docs/server/"
@@ -101,7 +101,7 @@ First, we will define a new hugo build command `build:headers` as npm script. It
 
 {{< docs name="segments" file="config/_default/hugo.toml" >}}
 
-As we cannot mount files into the `config` folder or base foloder, we need to copy the generated files ourselves. The following script uses the package `cpy-cli` to copy the generated files cross platform.
+As we cannot mount files into the `config` folder or base folder, we need to copy the generated files ourselves. The following script uses the package `cpy-cli` to copy the generated files cross platform.
 
 ```json
   "scripts": {
@@ -134,3 +134,5 @@ npm run build:headers
 (out)
 (out)Total in 281 ms
 {{< /command >}}
+
+Add the `/prebuild` folder to your `.gitignore` file to prevent polluting your source code repository.
