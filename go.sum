@@ -282,6 +282,8 @@ github.com/gethinode/hinode v0.27.0-beta2 h1:1mNREshKQUuL8WK8u8VfBrZocHXtQx9eYQw
 github.com/gethinode/hinode v0.27.0-beta2/go.mod h1:bxXGMI7srGWYFKOlZ5/Iv8twxG724YSa9XMXY+yuKw0=
 github.com/gethinode/hinode v0.27.0-beta3 h1:3MBVjah9da5pmstqedWs7D91DjfJcAXTcLIrJAuGvwg=
 github.com/gethinode/hinode v0.27.0-beta3/go.mod h1:d9kWKiY4wYQYH9skMYRoRDzgVB8UzRAiabMzt5cvOFE=
+github.com/gethinode/hinode v0.27.0-beta4 h1:Nq4VyZ5ITEzQsDl+o9XSrLL4gB7wocTtD80KE55dcBI=
+github.com/gethinode/hinode v0.27.0-beta4/go.mod h1:d9kWKiY4wYQYH9skMYRoRDzgVB8UzRAiabMzt5cvOFE=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
@@ -542,6 +544,8 @@ github.com/gethinode/mod-utils/v2 v2.7.0 h1:5CKygjsc7X4dFtb90ihWyDVvUp2iqoJE8C7M
 github.com/gethinode/mod-utils/v2 v2.7.0/go.mod h1:GTYeknoLujNjfDxI+V9Dcug26CYJSTJ0B/U2dagw9oY=
 github.com/gethinode/mod-utils/v2 v2.8.1 h1:u7sFbgJ5sBEMYC/GwcMRyjRAd5NxTjBnbld5b0V5n98=
 github.com/gethinode/mod-utils/v2 v2.8.1/go.mod h1:GTYeknoLujNjfDxI+V9Dcug26CYJSTJ0B/U2dagw9oY=
+github.com/gethinode/mod-utils/v2 v2.8.2 h1:rKndAMmRBSO5Cgoa/2CvF5XchDSvLvd4TYAbfbbQVhE=
+github.com/gethinode/mod-utils/v2 v2.8.2/go.mod h1:GTYeknoLujNjfDxI+V9Dcug26CYJSTJ0B/U2dagw9oY=
 github.com/nextapps-de/flexsearch v0.0.0-20230711092928-1243fd883ec3 h1:H/qVR5O4BXjRjD+5PZB+r4ug2BSJ2Of4RtwOntd+OKo=
 github.com/nextapps-de/flexsearch v0.0.0-20230711092928-1243fd883ec3/go.mod h1:5GdMfPAXzbA2gXBqTjC6l27kioSYzHlqDMh0+wyx7sU=
 github.com/nextapps-de/flexsearch v0.0.0-20240108021025-afd75f742f22 h1:re7L8FxbXQpnX8BgzkdUnDpsUmloGNyLmiy2ZCln8pg=
