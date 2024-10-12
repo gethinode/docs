@@ -1,7 +1,7 @@
 ---
 title: Server headers
 description: Configure the server headers to refine the content security policy.
-date: 2024-10-10
+date: 2024-10-12
 layout: docs
 aliases:
   - "/docs/server/"
@@ -48,6 +48,27 @@ You can merge the generated file with another input file. The supported formats 
 [params.headers]
   [params.headers.netlify]
     source = "netlify.toml"
+```
+
+## Configuring custom 404 pages
+
+When your site uses multiple languages, you may {{< link hugo_404 >}}run into an issue with your custom `404` page{{< /link >}}. Hugo does not render the `404` page correctly when `defaultContentLanguageInSubdir` is set to `true` in your site configuration (usually `hugo.toml`). You can include the necessary redirects in `data/server.toml`. This will fix the issue for the hugo server and Netlify server. The following example is used by the {{< link hinode_demo >}}Hinode demo site{{< /link >}}, which is available in three languages:
+
+```toml
+[[redirects]]
+from = '/nl/*'
+to = '/nl/404.html'
+status = 404
+
+[[redirects]]
+from = '/en/*'
+to = '/en/404.html'
+status = 404
+
+[[redirects]]  # Default language should be last.
+from = '/*'
+to = '/en/404.html'
+status = 404
 ```
 
 ## Merging module policies

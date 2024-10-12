@@ -278,6 +278,7 @@
     hinode_demo_components = "https://demo.gethinode.com/en/blog/components/"
     html_codeguide = "https://codeguide.co/#html"
     hugo = "https://gohugo.io"
+    hugo_404 = "https://github.com/gohugoio/hugo/issues/5161"
     hugo_alias = "https://gohugo.io/content-management/urls/#aliases"
     hugo_build = "https://gohugo.io/content-management/build-options"
     hugo_config_overview = "https://gohugo.io/getting-started/configuration/"
