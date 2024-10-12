@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/airbnb/lottie-web v5.12.2+incompatible // indirect
-	github.com/gethinode/hinode v0.27.0-beta3 // indirect
+	github.com/gethinode/hinode v0.27.0-beta5 // indirect
 	github.com/gethinode/mod-bootstrap v1.3.1 // indirect
 	github.com/gethinode/mod-cookieyes/v2 v2.2.1 // indirect
 	github.com/gethinode/mod-csp v1.0.2 // indirect
@@ -13,9 +13,9 @@ require (
 	github.com/gethinode/mod-google-analytics v1.1.2 // indirect
 	github.com/gethinode/mod-katex v1.1.2 // indirect
 	github.com/gethinode/mod-leaflet v1.2.0 // indirect
-	github.com/gethinode/mod-lottie v1.5.10 // indirect
+	github.com/gethinode/mod-lottie v1.5.11 // indirect
 	github.com/gethinode/mod-simple-datatables v1.0.13 // indirect
-	github.com/gethinode/mod-utils/v2 v2.8.1 // indirect
+	github.com/gethinode/mod-utils/v2 v2.8.2 // indirect
 	github.com/nextapps-de/flexsearch v0.0.0-20240501124520-961c3ae84a87 // indirect
 	github.com/twbs/bootstrap v5.3.3+incompatible // indirect
 )
