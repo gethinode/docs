@@ -1,21 +1,18 @@
 ---
-title: Cookie consent (beta release)
+title: Cookie consent
 description: Configure cookie consent to comply with regulatory requirements.
-date: 2024-09-24
+date: 2024-10-21
 layout: docs
 ---
 
-> [!CAUTION]
-> The support for cookie consent is still in beta-stage of development by the Hinode team. As a result, the implementation is subject to change.
-
-{{< release version="v0.27.0-beta" >}}
+{{< release version="v0.27.0" >}}
 
 > [!IMPORTANT]
 > The materials on this website are purely informative and represent a personal view; they do not constitute legal or other professional advice. Consult your professional adviser for legal or other advice.
 
 Regulations such as GDPR (in the EU and UK) and CCPA/CPRA (California) require consent from users about the use of cookies. Without prior consent, the website should refrain from storing or accessing any cookies, unless they are absolutely essential. Site owners should also be able to share proof of the consents (consent logging) on request of the authorities. Lastly, certain countries put restrictions on where to geographically store the consent logs.
 
-Since release {{< release version="v0.27.0-beta" short="true" type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution using the pointers in this section. Review the next paragraphs to familiarize yourself with the available options and configurations.
+Since release {{< release version="v0.27.0" short="true" type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution using the pointers in this section. Review the next paragraphs to familiarize yourself with the available options and configurations.
 
 ## Categorizing scripts
 
@@ -84,14 +81,11 @@ You can modify this template to your needs. For example, {{< link "cookieyes_scr
 
 ## Using API calls
 
-> [!NOTE]
-> Hinode categorizes the cookie API as `functional` by default, as Hinode only uses these functions to store and retrieve user preferences. By design, the `hasConsent()` function always returns true. If the user has declined functional cookies, the entire function is not exposed.
-
 Hinode uses several scripts to access and store the user's preferences, including the selected theme and language. Instead of assigning an entire script or script bundle to a category, you can also use predefined APIs. These APIs will give you fine-grained control on when to invoke a cookie consent check. Use the `get*` and `set*` functions to interact with the local storage and session storage respectively. The `hasConsent()` function is a placeholder that should be hooked to your cookie consent manager of choice.
 
-The available functions are defined in `/assets/js/critical/functional/_cookie.js`:
+The available functions are defined in `/assets/js/critical/_cookie.js`:
 
-{{< file path="./_vendor/github.com/gethinode/hinode/assets/js/critical/functional/_cookie.js" full="false" >}}
+{{< file path="./_vendor/github.com/gethinode/hinode/assets/js/critical/_cookie.js" full="false" >}}
 
 Pending your cookie consent configuration, the API functions may not be available at all times. The following code illustrates how to test for the availability of the `getLocalStorage()` function:
 

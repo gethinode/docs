@@ -1,14 +1,14 @@
 ---
 title: Scripts
 description: Bundle local and external JavaScript files by intent and rendering impact.
-date: 2023-09-24
+date: 2023-10-21
 layout: docs
 ---
 
 > [!IMPORTANT]
-> Hinode release {{< release version="v0.27.0-beta" short="true" type="link" >}} has overhauled the build pipeline of scripts and modules. The bundled files now support categorization by intent.
+> Hinode release {{< release version="v0.27.0" short="true" type="link" >}} has overhauled the build pipeline of scripts and modules. The bundled files now support categorization by intent.
 
-Hinodes bundles JavaScript files to optimize the page loading speed. By utilizing [Hugo modules]({{% ref "overview" %}}), referenced JavaScript files are automatically ingested and version controlled. Since release {{< release version="v0.27.0-beta" short="true" type="link" >}}, Hinode also supports the grouping of scripts by their intent. Review the next sections to familiarize yourself with the build system.
+Hinodes bundles JavaScript files to optimize the page loading speed. By utilizing [Hugo modules]({{% ref "overview" %}}), referenced JavaScript files are automatically ingested and version controlled. Since release {{< release version="v0.27.0" short="true" type="link" >}}, Hinode also supports the grouping of scripts by their intent. Review the next sections to familiarize yourself with the build system.
 
 ## Types of integrations
 

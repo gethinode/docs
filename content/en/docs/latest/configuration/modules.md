@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2024-09-24
+date: 2024-10-21
 layout: docs
 ---
 
@@ -50,9 +50,9 @@ The following table provides an overview of the available settings for each modu
 | excludeSCSS     | false | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles. |
 | disableTemplate | false         | Excludes all scripts files from processing as Hugo template. The scripts are bundled as-is instead. This only applies to optional modules. |
 | localize        | false         | {{< release version="v0.25.0" short="true" size="sm" inline="true" >}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`. |
-| category        | other         | {{< release version="v0.27.0-beta" short="true" size="sm" inline="true" >}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{< link "cookie-consent" />}} for more details. |
-| local           | false         | {{< release version="v0.27.0-beta" short="true" size="sm" inline="true" >}} Includes an external URL in local mode too. By default, external scripts are only included in the built site. |
-| url             |               | {{< release version="0.27.0-beta" short="true" size="sm" inline="true" >}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{< link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link >}} for more information. |
+| category        | other         | {{< release version="v0.27.0" short="true" size="sm" inline="true" >}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{< link "cookie-consent" />}} for more details. |
+| local           | false         | {{< release version="v0.27.0" short="true" size="sm" inline="true" >}} Includes an external URL in local mode too. By default, external scripts are only included in the built site. |
+| url             |               | {{< release version="0.27.0" short="true" size="sm" inline="true" >}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{< link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link >}} for more information. |
 <!-- markdownlint-disable MD037 -->
 
 For example, Bootstrap uses the following configuration in its module configuration:
@@ -69,7 +69,7 @@ Several modules support additional, module-specific configurations. Review them 
 
 ### CookieYes
 
-{{< release version="v0.27.0-beta" >}}
+{{< release version="v0.27.0" >}}
 
 The `cookieyes` module requires the following settings:
 
@@ -95,7 +95,7 @@ The `fontawesome` module supports the following additional settings:
 
 ### Google Analytics
 
-{{< release version="v0.27.0-beta" >}}
+{{< release version="v0.27.0" >}}
 
 > [!NOTE]
 > By convention, Hinode uses kebab case as naming convention for module names. However, the module name in the site parameters is renamed to `GoogleAnalytics` to align with Hugo's privacy settings.

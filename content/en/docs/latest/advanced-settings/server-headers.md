@@ -1,13 +1,13 @@
 ---
 title: Server headers
 description: Configure the server headers to refine the content security policy.
-date: 2024-10-12
+date: 2024-10-21
 layout: docs
 aliases:
   - "/docs/server/"
 ---
 
-{{< release version="v0.27.0-beta3" >}}
+{{< release version="v0.27.0" >}}
 
 Hinode uses strict security policies to ensure the site is {{< link observatory >}}secure by default{{< /link >}}. If you want to include external resources, such as images and videos, you will need to explicitly add these sources to the server headers. If omitted, the browser will refuse to load these resources, resulting in broken links or missing elements. Review the next sections to learn how to configure your policies correctly.
 
@@ -16,7 +16,7 @@ Hinode uses strict security policies to ensure the site is {{< link observatory 
 > [!TIP]
 > The {{< link hugo_server >}}server header configuration used by Hugo{{< /link >}} is similar to the configuration supported by Netlify. We can therefore reuse the same template code to configure both environments. This simplifies development and testing, and ensures the local development environment and production environment are comparable.
 
-Since {{< release version="v0.27.0-beta3" short="true" type="link" >}}, Hinode includes {{< link "hinode_csp" >}} a module to generate the server headers automatically{{< /link >}}. It uses a feature from Hugo that enables the definition of a {{< link "hugo_custom_output" >}}custom output format{{< /link >}}. The main Hinode repository defines two custom output formats. The first one generates the server headers for a local web server provided by Hugo. The second output format defines a similar configuration for the deployment to Netlify.
+Since {{< release version="v0.27.0" short="true" type="link" >}}, Hinode includes {{< link "hinode_csp" >}} a module to generate the server headers automatically{{< /link >}}. It uses a feature from Hugo that enables the definition of a {{< link "hugo_custom_output" >}}custom output format{{< /link >}}. The main Hinode repository defines two custom output formats. The first one generates the server headers for a local web server provided by Hugo. The second output format defines a similar configuration for the deployment to Netlify.
 
 Add the following configuration to your main configuration (usually `hugo.toml`). The setting `root = true` ensures the output files are placed in the root of the build folder. Otherwise, Hugo would create a separate output for each one of the defined site languages.
 
