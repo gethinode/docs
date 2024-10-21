@@ -1,5 +1,17 @@
 # This file holds all entries for the release timeline
 
+- title: Cookies
+  icon: fas cookie-bite
+  color: primary
+  date: 2024-10-21
+  badge: v0.27.0
+  url: v0.27.0
+  content: >-
+    This release simplifies the {{< link "docs/configuration/cookie-consent/" >}}integration with cookie consent managers
+    {{< /link >}}. A reference implementation for  {{< link hinode_mod_cookieyes >}}CookieYes{{< /link >}} is available
+    as a separate module. This release also improves the management of content security policies. You can now define the
+    required policies in each individual module, and Hinode will {{< link "docs/advanced-settings/server-headers/" >}}
+    generate the required server headers{{< /link >}}.
 
 - title: Render hooks
   icon: fa file-lines

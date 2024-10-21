@@ -272,6 +272,7 @@
     hinode_csp = "https://github.com/gethinode/mod-csp"
     hinode_demo = "https://demo.gethinode.com/"
     hinode_fr = "https://demo.gethinode.com/fr/"
+    hinode_mod_cookieyes = "https://github.com/gethinode/mod-cookieyes"
     hinode_release_v0_22_0 = "https://github.com/gethinode/hinode/releases/tag/v0.22.0-beta7"
     hinode_customization_demo = "https://customization-demo.gethinode.com/"
     hinode_version_demo = "https://version-demo.gethinode.com/"
