@@ -11,37 +11,37 @@ Hinode supports {{< link npm >}}Node Package Manager{{< /link >}} to automate th
 
 You will need to install the required Hugo modules before starting a local server. The following command downloads the latest available version of the configured modules recursively, vendors the modules, and does some housekeeping of the module files.
 
-{{% command %}}
+{{< command >}}
 npm run mod:update
-{{% /command %}}
+{{< /command >}}
 
 ## Starting a local server
 
 Use the following command from the command prompt to start a local **development server**. The command removes any previous build artifacts in the `public` and `resources` folders. The command invokes the local web server from Hugo, which watches for changes in the key system files and configuration directory. By default the generated site is available at `http://localhost:1313/` and is responsive to changes. This allows for interactive development and testing. When in development mode, the generated assets (such as javascripts and CSS files) are not minified to simplify debugging.
 
-{{% command %}}
+{{< command >}}
 npm run start
-{{% /command %}}
+{{< /command >}}
 
 Use the following command to mimic the site in **production mode**. In this setting, generated assets are minified and compliant with the Content Security Policy. Although Hugo's web server is not meant to be run in a real production environment, it does allow validation of the site in an environment close to production.
 
-{{% command %}}
+{{< command >}}
 npm run start:prod
-{{% /command %}}
+{{< /command >}}
 
 ## Generating a web site
 
 Use the following command to generate the static site. The build artifacts are stored in the local `public` folder. You can deploy these files to your **production** server. The build command invokes `mod:update` prior to the build.
 
-{{% command %}}
+{{< command >}}
 npm run build
-{{% /command %}}
+{{< /command >}}
 
 Add the prefix `debug` to generate a site suitable for **debugging**. The build artifacts are not minified to simplify review and testing.
 
-{{% command %}}
+{{< command >}}
 npm run build:debug
-{{% /command %}}
+{{< /command >}}
 
 ## Validating linting rules
 
@@ -53,9 +53,9 @@ Use the the following command to analyze the source code and to test for any sty
 
 The basic configuration of these linting tools is defined in the repository root.
 
-{{% command %}}
+{{< command >}}
 npm run lint
-{{% /command %}}
+{{< /command >}}
 
 Be sure to adhere to the linting rules before submitting any code changes / Pull Requests to Hinode's repository.
 
@@ -63,12 +63,12 @@ Be sure to adhere to the linting rules before submitting any code changes / Pull
 
 Use the following command to test for any available upgrades of used packages. The command runs `npx` to validate the dependencies and to upgrade the dependency versions in `package.json`.
 
-{{% command %}}
+{{< command >}}
 npm run upgrade
-{{% /command %}}
+{{< /command >}}
 
 Be sure to install the upgraded dependencies if needed:
 
-{{% command %}}
+{{< command >}}
 npm install
-{{% /command %}}
+{{< /command >}}
