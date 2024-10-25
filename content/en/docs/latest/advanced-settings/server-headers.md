@@ -1,7 +1,7 @@
 ---
 title: Server headers
 description: Configure the server headers to refine the content security policy.
-date: 2024-10-21
+date: 2024-10-25
 layout: docs
 aliases:
   - "/docs/server/"
@@ -81,7 +81,6 @@ Hinode merges the Content Security Policies of each configured module. You can d
     font-src = ["fonts.gstatic.com"]
     frame-src = [
         "player.cloudinary.com",
-        "player.vimeo.com",
         "www.youtube-nocookie.com",
         "www.youtube.com"
     ]
@@ -90,7 +89,6 @@ Hinode merges the Content Security Policies of each configured module. You can d
         "*.imgix.net",
         "*.imagekit.io",
         "*.cloudinary.com",
-        "i.vimeocdn.com",
         "i.ytimg.com"
     ]
 ```
