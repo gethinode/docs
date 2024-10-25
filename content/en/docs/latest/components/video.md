@@ -9,6 +9,7 @@ description: Use the video shortcode to embed a responsive video on your site.
 layout: docs
 icon: fab youtube
 tags: component
+modules: ["vimeo"]
 ---
 
 ## Overview
@@ -52,8 +53,8 @@ As an example, the following shortcode displays an Elephants video hosted by Clo
 
 ### Vimeo
 
-> [!NOTE]
-> When setting {{< link hugo_vimeo_privacy >}}enableDNT{{< /link >}} to true, the Vimeo player will be blocked from tracking any session data, including all cookies and stats.
+> [!IMPORTANT]
+> Since Hinode {{< release version="v0.27.3" short="true" type="link" >}} you need to explicitly add `vimeo` to your page's {{< link "docs/configuration/modules/#enabling-optional-modules" >}}optional modules{{</ link>}} to ensure compliance with the Content Security Policies. When setting {{< link hugo_vimeo_privacy >}}enableDNT{{< /link >}} to true, the Vimeo player will be blocked from tracking any session data, including all cookies and stats.
 
 As an example, the following shortcode displays a Vimeo video. By setting `autotitle` to `true`, Hinode captures the video's title as defined by Vimeo and assigns this to the title of the video frame.
 
