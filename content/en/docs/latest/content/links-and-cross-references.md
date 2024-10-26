@@ -1,7 +1,7 @@
 ---
 title: Links and cross-references
 description: Generate internal links and external links using native Markdown links or a Hugo shortcode.
-date: 2024-08-17
+date: 2024-10-25
 layout: docs
 ---
 
@@ -14,9 +14,9 @@ Hugo provides the shortcode `ref` to link to another page within the site. The s
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Tables]({{%/*ref "tables" */%}})
+[Tables]({{%/* ref "tables" */%}})
 
-[About]({{%/*ref "credits" */%}})
+[About]({{%/* ref "credits" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -24,9 +24,9 @@ Similar to the `ref` shortcode, Hugo provides the shortcode `relref` to return a
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-[Tables]({{%/*relref "tables" */%}})
+[Tables]({{%/* relref "tables" */%}})
 
-[About]({{%/*relref "credits" */%}})
+[About]({{%/* relref "credits" */%}})
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 

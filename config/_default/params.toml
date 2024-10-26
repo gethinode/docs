@@ -298,6 +298,7 @@
     hugo_frontmatter = "https://gohugo.io/content-management/front-matter"
     hugo_goldmark = "https://gohugo.io/getting-started/configuration-markup/#goldmark"
     hugo_headless = "https://gohugo.io/content-management/page-bundles/#headless-bundle"
+    hugo_highlight = "https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode"
     hugo_i18n = "https://gohugo.io/functions/i18n"
     hugo_image = "https://gohugo.io/content-management/image-processing"
     hugo_lang = "https://gohugo.io/content-management/multilingual"
