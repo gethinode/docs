@@ -70,3 +70,16 @@ Set `full` to `false` to show the filename only.
 {{</* file full="false" path="./config/_default/languages.toml" id="file-collapse-5" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
+
+### Syntax highlighting
+
+{{< release version="0.27.6" >}}
+
+Use the {{< link hugo_highlight >}}Hugo syntax highlighting options{{< /link >}} for marking lines in the file. Pass the settings to the `options` argument.
+
+<!-- markdownlint-disable MD037 -->
+{{< example lang="hugo" >}}
+{{</* file full="false" path="./config/_default/languages.toml" id="file-collapse-5"
+    options="linenos=table,hl_lines=2-4 6,linenostart=10" */>}}
+{{< /example >}}
+<!-- markdownlint-enable MD037 -->
