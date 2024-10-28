@@ -253,11 +253,11 @@ modules: ["simple-datatables"]
 ---
 ```
 
-As an example, the following shortcode displays a responsive table that is `searchable`, supports `sorting`, and enables `paging`.
+As an example, the following shortcode displays a responsive table that is `searchable`, is `sortable`, and enables `paging` with a page size (`pagingOptionPerPage`) of 5.
 
 <!-- markdownlint-disable MD037 MD058 -->
 {{< example lang="markdown" >}}
-{{</* table sortable="true" paging="true" searchable="true" */>}}
+{{</* table sortable="true" paging="true" searchable="true" pagingOptionPerPage=5 */>}}
 |  #  | Heading |
 |-----|---------|
 |  1. | Item 1  |
