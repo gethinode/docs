@@ -50,7 +50,7 @@
     "eslint": "^9.14.0",
     "hugo-bin": "^0.135.0",
     "markdownlint-cli2": "^0.15.0",
-    "neostandard": "^0.11.7",
+    "neostandard": "^0.11.8",
     "netlify-plugin-hugo-cache-resources": "^0.2.1",
     "postcss-cli": "^11.0.0",
     "purgecss-whitelister": "^2.4.0",
