@@ -48,7 +48,7 @@
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
     "eslint": "^9.15.0",
-    "hugo-bin": "^0.135.0",
+    "hugo-bin": "^0.136.0",
     "markdownlint-cli2": "^0.15.0",
     "neostandard": "^0.11.8",
     "netlify-plugin-hugo-cache-resources": "^0.2.1",
