@@ -51,7 +51,7 @@ Even if the first requirement has not been met, we can still use the Hugo module
 
 ## Step 2 - Initializing the module template
 
-Hinode maintains a module template to quickly get you started with developing your own modules. Navigate to the repository on GitHub and click on the button `Use this template`. Next, fill in the repository settings such as the name and description, and click on the button `Create repository`. When GitHub has initialized the repository, click on the `<> Code` button and copy the remote git URL (`https`).
+Hinode maintains a [module template](https://github.com/gethinode/template) to quickly get you started with developing your own modules. Navigate to the repository on GitHub and click on the button `Use this template`. Next, fill in the repository settings such as the name and description, and click on the button `Create repository`. When GitHub has initialized the repository, click on the `<> Code` button and copy the remote git URL (`https`).
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/module-template-step01.png" caption="Step 1. Use the module template" >}}
