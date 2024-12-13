@@ -30,14 +30,14 @@ In addition, the background colors `black` and `white` are available too. Below 
 
 Several components support background colors that are [color-mode aware]({{% relref "color-modes" %}}). These colors respond to changes when the active theme is adjusted, such as by changing from a light theme to a dark theme. You can apply this color by adding `bg-body` or `bg-body-tertiary` to the class of an HTML element.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 {{</* card-group cols="2" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" */>}}
     {{</* card class="bg-body text-bg-white" >}}body{{< /card */>}}
     {{</* card class="bg-body-tertiary text-bg-white" >}}body-tertiary{{< /card */>}}
 {{</* /card-group */>}}
 {{< /example>}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Background colors
 
@@ -56,13 +56,13 @@ Components such as the [timeline]({{% relref "timeline" %}}) support *subtle* ba
 
 ## Colored contrasting links
 
-Hinode defines additional classes to render links that contrast with their background. Simply add `link-bg-<color>` to the class of an `<a>` anchor element. The next example adds a link constrasting with the background color `bg-success`.
+Hinode defines additional classes to render links that contrast with their background. Simply add `link-bg-<color>` to the class of an `a` anchor element. The next example adds a link constrasting with the background color `bg-success`.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 {{</* card class="col-md-2 rounded-3 text-center" color="success" >}}{{< link href="#!" class="link-bg-success" >}}success{{< /link >}}{{< /card */>}}
 {{< /example>}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 Below grid illustrates the contrasting colors for each background.
 

@@ -104,7 +104,7 @@ The `mod:update` script requires some explanation. The command is defined in `pa
 
 The update command chains several commands that each need to run successfully (hence the `&&` instructions). Click on each separate command to reveal the context.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="rimraf _vendor" >}}
   Hinode requires the modules to be vendored (see `npm run -s mod:vendor`). To avoid synchronization issues, the `_vendor` folder is purged prior to each module update.
@@ -122,7 +122,7 @@ The update command chains several commands that each need to run successfully (h
   The command `hugo mod tidy` removes unused entries in `go.mod` and `go.sum`.
   {{< /accordion-item >}}
 {{< /accordion >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Running a local development server
 

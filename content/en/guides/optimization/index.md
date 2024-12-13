@@ -129,7 +129,7 @@ Rerun the Lighthouse test once your site is up and running. The performance scor
 
 Although we have increased the site's performance, we still have several remaining areas of improvement. From a build perspective, you can either limit what you put into the build pipeline, or remove unused items from the build output. The Bootstrap documentation explains how to {{< link bs_lean >}}use lean file imports{{< /link >}}, catering for the first strategy. Being a documentation site, the current test case uses all Bootstrap elements. This guide therefore focuses on purging the stylesheets as last step in the build pipeline.
 
-<!-- TODO: add build pipeline illustration -->
+{{% comment %}}<!-- TODO: add build pipeline illustration -->{{% /comment %}}
 
 Hinode uses {{< abbr SCSS >}} files as part of its pipeline to generate the stylesheets for your site. Under the hood, Hinode utilizes {{< link hugo_pipes >}}Hugo's pipe functionality{{< /link >}} to process its SCSS files. We will now set the `purge` setting to `true` in `config/_default/params.toml`:
 

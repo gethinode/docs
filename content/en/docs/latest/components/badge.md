@@ -14,12 +14,12 @@ tags: component
 
 Badges can be added to headings and buttons. The badge for a button is part of a [custom shortcode]({{% ref "button" %}} "custom shortcode"). The example below illustrates the shortcode for a heading.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 Example heading of size four {{</* badge title="New" */>}}
 {.h4}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
@@ -35,7 +35,7 @@ Use the badge shortcode to display a badge for a heading. See the Bootstrap {{< 
 
 Badges scale to match the size of the immediate parent element by using relative font sizing and em units. Use Hugo's {{< link hugo_goldmark >}}curly brackets syntax{{< /link >}} to apply a heading class.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 Heading 1 {{</* badge title="New" */>}}
 {.h1}
@@ -55,13 +55,13 @@ Heading 5 {{</* badge title="New" */>}}
 Heading 6 {{</* badge title="New" */>}}
 {.h6}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Colored badges
 
 Set a background color with contrasting foreground color with the `color` argument.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 {{</* badge title="primary" color="primary" */>}}
 {{</* badge title="secondary" color="secondary" */>}}
@@ -72,13 +72,13 @@ Set a background color with contrasting foreground color with the `color` argume
 {{</* badge title="light" color="light" */>}}
 {{</* badge title="dark" color="dark" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Pill badges
 
 Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 {{</* badge title="primary" color="primary" class="rounded-pill" */>}}
 {{</* badge title="secondary" color="secondary" class="rounded-pill" */>}}
@@ -89,4 +89,4 @@ Use the `.rounded-pill` utility class to make badges more rounded with a larger 
 {{</* badge title="light" color="light" class="rounded-pill" */>}}
 {{</* badge title="dark" color="dark" class="rounded-pill" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}

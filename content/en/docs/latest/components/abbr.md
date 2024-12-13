@@ -14,12 +14,12 @@ tags: component
 
 Use the abbr shortcode to show the long form of an abbrevitation on hover. The abbreviation data is retrieved from a central data file. By default, the shortcode uses "data/abbr.yaml" with translation support.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* abbr HTML */>}}
 {{</* abbr key="html" class="initialism" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 

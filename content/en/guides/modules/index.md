@@ -67,8 +67,6 @@ git clone https://github.com/{OWNER}/{REPOSITORY}.git && cd {REPOSITORY}
 
 Open the local repository in VSCode and create a `develop` branch first. Now search for the keyword `gethinode/mod-template` and replace it with `markdumay/mod-katex`, except for the file `package-lock.json` - that gets updated automatically. Likewise, replace the remaining `mod-template` keywords with `mod-katex`. Feel free to adjust the files `package.json` and `README.md` as needed, such as updating the package description. Head over to source control, provide a commit message, and publish the `develop` branch to GitHub.
 
-<!-- ### Setting up an example site -->
-
 ## Step 3 - Exposing the KaTeX distribution files
 
 We will now add KaTeX as npm package to our local repository. Run the following command from your terminal to add KaTeX as development dependency.

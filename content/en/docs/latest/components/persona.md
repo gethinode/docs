@@ -12,7 +12,7 @@ tags: component
 
 Use the persona shortcode to display a custom card. As an example, the following shortcode displays a persona card with a primary color.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* persona thumbnail="/img/creator-1x1.jpg" title="Creators" color="primary" */>}}
   As a content creator you value your independence. You like to take control of your
@@ -24,7 +24,7 @@ Use the persona shortcode to display a custom card. As an example, the following
   Hinode.
 {{</* /persona */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
