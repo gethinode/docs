@@ -14,11 +14,11 @@ tags: component
 
 As an example, the following shortcode displays subscript text.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 H{{</* sub 2 */>}}O is a liquid.
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 

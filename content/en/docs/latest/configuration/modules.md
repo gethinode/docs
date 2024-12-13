@@ -43,7 +43,7 @@ Adjust the `modules` section in your site's parameter configuration file `config
 
 The following table provides an overview of the available settings for each module. Omit the `mod-` prefix of the module's name.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
 | integration     | optional      | Module integration, either `core` or `optional`. Core modules are fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. Optional modules are only included on those pages that reference the module in the frontmatter. Hinode includes the following core modules by default: ["bootstrap", "flexsearch", "fontawesome"]. |
@@ -53,7 +53,7 @@ The following table provides an overview of the available settings for each modu
 | category        | other         | {{< release version="v0.27.0" short="true" size="sm" inline="true" >}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{< link "cookie-consent" />}} for more details. |
 | local           | false         | {{< release version="v0.27.0" short="true" size="sm" inline="true" >}} Includes an external URL in local mode too. By default, external scripts are only included in the built site. |
 | url             |               | {{< release version="0.27.0" short="true" size="sm" inline="true" >}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{< link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link >}} for more information. |
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 
 For example, Bootstrap uses the following configuration in its module configuration:
 
@@ -84,14 +84,14 @@ The `cookieyes` module requires the following settings:
 
 The `fontawesome` module supports the following additional settings:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting                 | Default | Description |
 |-------------------------|---------|-------------|
 | fontawesome.embed       | true    | {{< release version="v0.26.3" short="true" size="sm" inline="true" >}} If set, generates a symbol map with embedded vector images. Only works in conjunction with `inline`. Include the symbol map with the partial `assets/symbols.html` (requires the current page context). |
 | fontawesome.inline      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon. |
 | fontawesome.debug       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
 | fontawesome.skipMissing | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 ### Google Analytics
 

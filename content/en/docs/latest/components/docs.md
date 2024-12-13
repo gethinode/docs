@@ -14,11 +14,11 @@ tags: component
 
 The `docs` shortcode captures a code snippet from a `toml` or `scss` input file. It scans for named markers in a local file. The snippet between the two markers is then rendered using syntax highlighting.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* docs name="main" file="config/_default/hugo.toml" id="docs-collapse-1" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
@@ -38,7 +38,7 @@ The `docs` shortcode supports `.toml` and `.scss` file formats. Use a marker to 
 
 Click on one the tabs to see a full example of an input file.
 
-<!-- markdownlint-disable MD031 -->
+{{% comment %}}<!-- markdownlint-disable MD031 -->{{% /comment %}}
 {{< nav type="tabs" id="tabs-1" >}}
   {{< nav-item header="toml" show="true" >}}
 ```toml
@@ -59,7 +59,7 @@ enableGitInfo = true
 ```
   {{< /nav-item >}}
 {{< /nav >}}
-<!-- markdownlint-enable MD031 -->
+{{% comment %}}<!-- markdownlint-enable MD031 -->{{% /comment %}}
 
 ## Examples
 
@@ -69,36 +69,36 @@ Change the style and language of your code snippet with shortcode arguments.
 
 Use the `name` and `file` arguments to refer to a code snippet of a file. By default, the shortcode uses the site's `basePath` (see [page layout]({{% relref "layout#configuration-3" %}}) for more information).
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* docs name="main" file="config/_default/hugo.toml" id="docs-collapse-2" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 Provide a path that starts with `./` to use the path of the repository as base path instead.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* docs name="styling" file="./assets/scss/theme/theme.scss" id="docs-collapse-3" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Collapsed code snipppet
 
 Set `show` to `false` to hide the code snippet on page load. The code is revealed when clicking the tab control.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* docs name="styling" show="false" file="./assets/scss/theme/theme.scss" id="docs-collapse-4" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Code snipppet with filename only
 
 Set `full` to `false` to show the filename only.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* docs name="styling" full="false" file="./assets/scss/theme/theme.scss" id="docs-collapse-5" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}

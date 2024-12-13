@@ -12,11 +12,11 @@ tags: component
 
 Use the `navbar` shortcode to display a navigation header with a toggler. The menu items are derived from the site's configuration, which defaults to the menus defined under `main`. Nested items are supported at one-level depth. The navigation bar includes a search area and a language switcher if applicable. The items in the navigation header are accentuated if the current page or any of its descendants is active. As an example, the following shortcode displays a navigation header with a body color.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-overview" path="credits" color="body" size="md" search="false" menus="sample" title="Brand" mode="false" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
@@ -32,19 +32,19 @@ Change the style of your navbar with shortcode arguments.
 
 Set the argument `logo` to an image to add a brand logo to the left of the navbar. The logo moves to the center on smaller screens, pending on the `size` setting.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-logo" logo="/img/logo_icon.svg" path="credits" color="body" size="md" search="false" menus="sample" mode="false" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 Set the argument `title` to add a brand text to the left of the navbar. The text moves to the center on smaller screens, pending on the `size` setting.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-title" title="Brand" path="credits" color="body" size="md" search="false" menus="sample" mode="false" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Colored navbar
 
@@ -53,7 +53,7 @@ Set the argument `title` to add a brand text to the left of the navbar. The text
 
 Set the `color` argument to define the background color with a matching title color.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-color-1" path="credits" color="primary" size="sm" search="false" menus="sample" mode="false" */>}}
 {.mb-3}
@@ -84,25 +84,25 @@ Set the `color` argument to define the background color with a matching title co
 
 {{</* navbar id="navbar-color-10" path="credits" color="body-tertiary" size="sm" search="false" menus="sample" mode="false" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Search input
 
 Set the argument `search` to `true` to enable search input.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-search-1" search="true" path="credits" color="body" size="md" menus="sample" mode="false" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 Set the argument `search` to `false` to disable search input.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-search-2" search="false" path="credits" color="body" size="md" menus="sample" mode="false" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Mode switcher
 
@@ -111,19 +111,19 @@ Set the argument `search` to `false` to disable search input.
 
 Set the argument `mode` to `true` to enable the mode switcher.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-mode-1" mode="true" search="false" path="credits" color="body" size="md" menus="sample" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 Set the argument `mode` to `false` to disable the mode switcher.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* navbar id="navbar-mode-2" mode="false" search="false" path="credits" color="body" size="md" menus="sample" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Remarks
 

@@ -12,11 +12,11 @@ tags: component
 
 Use the `breadcrumb` shortcode to display the current page’s location within the site's navigational hierarchy. As an example, the following shortcode displays a breadcrumb for the current page.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* breadcrumb path="breadcrumb" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 

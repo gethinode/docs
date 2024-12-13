@@ -15,7 +15,7 @@ Hinode is a clean documentation and blog theme for {{< link hugo >}}Hugo{{< /lin
 
 Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} to install and maintain various components. It can be installed using either Hugo or npm. If you would like to take advantage of automation, the npm approach is recommended. Hinode requires the following software to be installed on your local machine:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Software                                                   | Hugo                  | npm                   | Remarks |
 |------------------------------------------------------------|-----------------------|-----------------------|---------|
 | {{< link golang_download >}}Go binary{{< /link >}}     | {{< fas check >}} | {{< fas check >}} | Required for Hugo modules, including Hinode itself |
@@ -23,7 +23,7 @@ Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} t
 | {{< link nodejs >}}Node.js{{< /link >}}                |                       | {{< fas check >}} | The installation package includes npm |
 | {{< link git_download >}}Git{{< /link >}}              | recommended           | {{< fas check >}} | Recommended for version control |
 | {{< link hugo_sass >}}Dart Sass{{< /link >}}           | optional              | optional              | Required when using {{< link "docs/configuration/layout#extended-configuration" >}}Dart Sass transpiler{{< /link >}} |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 ## Installation
 
@@ -40,7 +40,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
   The installation for Windows requires PowerShell v7. Download it from the Microsoft Store as needed. Check your current version with the command `$PSVersionTable`.
 {{< /collapse >}}
 
-<!-- markdownlint-disable MD005 MD029 MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD005 MD029 MD037 -->{{% /comment %}}
 {{< nav type="tabs" id="pills-1" >}}
   {{< nav-item header="Hugo" show="true" >}}
 
@@ -97,7 +97,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
     {{</* /command */>}}
   {{< /nav-item >}}
 {{< /nav >}}
-<!-- markdownlint-enable MD005 MD029 -->
+{{% comment %}}<!-- markdownlint-enable MD005 MD029 -->{{% /comment %}}
 
 ## Adding content
 
@@ -153,7 +153,7 @@ The main site configuration is available in `./config/_default`. Review the foll
 
 The next topics give an overview of the advanced configuration settings.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="Review the approach to dependency management and virtualization" >}}
     Hinode supports {{</* link npm >}}npm{{< /link */>}} packages to automate various tasks. In addition, it uses Hugo's {{</* link hugo_mounts >}}mounted folders{{< /link */>}} to create a virtual file system. Review the [advanced settings overview]({{% relref "../advanced-settings/overview" %}}) for more details.
@@ -171,4 +171,4 @@ The next topics give an overview of the advanced configuration settings.
     Hinode uses rather strict security policies to ensure the site is secure by default. Be sure to include references to external sources in the header configuration to avoid broken links. The settings of the local development server are defined in `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository's root when deploying to {{</* link netlify >}}Netlify{{< /link */>}}. See the [server documentation]({{% relref "server-headers" %}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}

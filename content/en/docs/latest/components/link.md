@@ -14,11 +14,11 @@ tags: component
 
 Since Hinode `v0.16.8` you can add a managed link to your page content using a configurable shortcode. Managed links refer to an external URL that is centrally maintained in the site's parameters. The shortcode also supports internal links that refer to a regular page or published asset.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* link mozilla_image /*/>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
@@ -53,7 +53,7 @@ Use either named links or common url's to generate a managed link. If a link nam
 
 Use the `cue` and `tab` arguments to override the default behavior of displaying and opening external links. Omit the link's content to generate a reference to the host (for external links) or the target page's title (for internal links). Lastly, set `case` to false to set the obtained page title to lower case.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 
 - {{</* link mozilla_image >}}Named link with default settings{{< /link */>}}
@@ -70,4 +70,4 @@ Use the `cue` and `tab` arguments to override the default behavior of displaying
 - {{</* link "image#examples" /*/>}}
 
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}

@@ -11,7 +11,7 @@ Hinode supports several types of navigation that utilize Bootstrap elements. The
 
 The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The following settings are supported:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting     | Default | Description |
 |-------------|---------|-------------|
 | anchor      | -       | Flag indicating to display anchor links on hovering a heading. |
@@ -28,7 +28,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | breadcrumb  | false   | Flag indicating to add breadcrumb navigation to the top of any single page. List pages are excluded. |
 | toc         | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | sidebar     | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
-<!-- markdownlint-denable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -42,13 +42,13 @@ The main navigation uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} 
 
 The navigation bar uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} to generate the menu items. The navigation supports nesting at one level deep. Hinode supports three additional parameters:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | alias     | No       | If set, the active menu item is linked to the specific menu entry instead of being derived from the target URL. |
 | button    | No       | {{< release version="v0.24.10" short="true" size="sm" inline="true" >}} If set, renders the menu item as a (small) button. |
 | spacing   | No       | {{< release version="v0.24.10" short="true" size="sm" inline="true" >}} If set, inserts a spacer. All prior menu items are left aligned, whilst the remaining menu items and right aligned. |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
 
@@ -132,11 +132,11 @@ Hinode supports optional breadcrumb navigation. The breadcrumb indicates the cur
 
 When enabled, the breadcrumb looks like this:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* breadcrumb path="breadcrumb" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Customization
 

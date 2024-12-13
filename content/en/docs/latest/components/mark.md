@@ -14,11 +14,11 @@ tags: component
 
 Use the `mark` shortcode to highlight text. The inner content is used as input.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 Use the mark shortcode to {{</* mark >}}highlight{{< /mark */>}} specific text.
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
@@ -30,7 +30,7 @@ The shortcode supports the following arguments:
 
 Specify a theme color to define the background color of the highlighted text. As an example, the following shortcodes display a highlight for each theme color.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 
 - Use the mark shortcode to {{</* mark color="primary" >}}highlight{{< /mark */>}} specific text.
@@ -43,4 +43,4 @@ Specify a theme color to define the background color of the highlighted text. As
 - Use the mark shortcode to {{</* mark color="dark" >}}highlight{{< /mark */>}} specific text.
 
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}

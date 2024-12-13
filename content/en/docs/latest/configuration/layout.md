@@ -57,7 +57,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting            | Default           | Description |
 |--------------------|-------------------|-------------|
 | separator          | "-"               | Separator to join the website title and page title. |
@@ -72,7 +72,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | externalLinks.cue  | false             | If set, adds a visual cue `{{< icon class="fas up-right-from-square fa-2xs" spacing=false >}}` as suffix to [managed external links]({{% relref "links-and-cross-references#managed-links" %}}). |
 | externalLinks.tab  | false             | If set, opens [managed external links]({{% relref "links-and-cross-references#managed-links" %}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 | build.transpiler   | "libsass"         | {{< release version="v0.20.0" short="true" size="sm" inline="true" >}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{< link hugo_sass >}}installation of a separate binary on your machine{{< /link >}}. This includes any production servers used for {{< abbr "CI/CD" >}} automation and deployment.|
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -98,14 +98,14 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode can optionally add buttons to share a post via available social media. Use the following extended settings in the `sharing` section of the `site parameters` to configure these buttons:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
 | enabled         | false         | Define if social sharing should be enabled for all single pages. You can override this setting by adding `sharing: false` to the individual page's frontmatter.
 | sort            | "weight"      | Sorting key to be used, either `name` or `weight`. You can also reference a custom key defined in the provider configuration. |
 | reverse         | false         | Flag to indicate if the sorting of the social sharing buttons should be reversed, defaults to false. |
 | webshare        | false         | Flag to indicate if native sharing provided by the Operating System should be enabled (via the web share API). If set and {{< link caniuse_webshare >}}supported by the browser{{< /link >}}, an additional button is added. |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 Add each available provider to `[[sharing.providers]]`. The providers support the following arguments:
 
@@ -125,7 +125,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{% ref "languages" %}}) section to review the various configuration options to enable multilingual content.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | head    | tagline       | -       | Tagline used on the site's title for the home page. |
@@ -136,7 +136,7 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | footer  | license       | -       | License displayed on the site's footer. |
 | footer  | socialTitle   | -       | {{< release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" >}} Use `social.title` instead. |
 | footer  | socialCaption | -       | {{< release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" >}} Use `social.caption` instead. |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
 
@@ -168,7 +168,7 @@ Feature .col-12 .flex-fill
 
 The configuration of the home page is set in the `home` section of the `site parameters`. The following settings are supported:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting             | Default           | Description |
 |---------------------|-------------------|-------------|
 | sections            | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{< link hugo_sections >}}all root sections.{{< /link >}} |
@@ -178,7 +178,7 @@ The configuration of the home page is set in the `home` section of the `site par
 | feature.orientation | "stacked"         | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
 | feature.color       | -                 | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
 | feature.width       | 6                 | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Optional column width of the main featured section, supported values are 1 - 12. |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`. The `sections` are commented out, meaning all root sections are enabled by default.
 
@@ -244,7 +244,7 @@ Single pages support three optional layout types, which can be configured in the
 
 By default, single pages, such as a blog page, include multiple elements, such as a rich header, thumbnail, body, and footer. The following diagram illustrates the default layout of a single page.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}
 **Page header**
@@ -264,7 +264,7 @@ Description
 Navigation links
     {{< /card >}}
 {{< /card-group >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Documentation layout
 
@@ -323,12 +323,12 @@ Please refer to the [content management section]({{% relref "content-management#
         metadata = "original"
 ```
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
 | metadata     | "full"               | {{< release version="v0.21.2" short="true" size="sm" inline="true" >}} Defines the metadata to include in the header of a single page type. Supported values are "full" (default), "original", and "none". In the default configuration, the header includes metadata elements for the original publication date, modification date (if applicable), reading time, and word count. When set to `original`, the modification date is always omitted. Set `metadata` to `none` to suppress all metadata elements. |
 | sharing         | true              | {{< release version="v0.21.2" short="true" size="sm" inline="true" >}} Optional flag to indicate if a single page should include sharing options (when the {{< link "#social-sharing-configuration" >}}social sharing configuration{{< /link >}} is enabled). |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The configuration of the **documentation pages** is set in the `docs` section of the site parameters. The following settings are supported:
 
@@ -367,7 +367,7 @@ The card layout displays a group of cards in a grid. The default setting is to s
 
 The list layout shows the page bundle's items as a vertical list. The thumbnail alternates between being left-aligned and right-aligned for each row. Remove the `description` from the page's frontmatter to display the full content instead of the description. The content of the item is displayed next to the thumbnail.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< card-group color="info" cols="2" padding="3" gutter="3" responsive=false class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}{{</* fas image */>}}{{< /card >}}
     {{< card >}}Item 1{{< /card >}}
@@ -376,7 +376,7 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
     {{< card >}}{{</* fas image */>}}{{< /card >}}
     {{< card >}}Item 3{{< /card >}}
 {{< /card-group >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Nav layout
 
@@ -391,7 +391,7 @@ The nav layout shows a nav element where each tab pane represents a single item 
 
 The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The following settings are supported per section:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
 | title        | ""                   | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. When using a multi-lingual site, make sure to properly translate this setting. |
@@ -404,7 +404,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | color        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | style        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
 | wrap         | false                | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Optional flag to enable word wrapping of tab titles, defaults to false. |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The `card` layout supports the following additional arguments:
 
