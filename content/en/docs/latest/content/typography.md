@@ -94,13 +94,15 @@ Use native Markdown apply basic styling to your text.
 
 <!-- markdownlint-disable MD049 -->
 {{< example lang="markdown" >}}
-~~This line of text is meant to be treated as deleted text.~~
+**This is bold text**
 
-_This line of text renders as underlined._
+_This text is italicized_
 
-**This line of text renders as bold text.**
+~~This was mistaken text~~
 
-*This line of text renders as italicized text.*
+**This text is _extremely_ important**
+
+***All this text is important***
 {{< /example >}}
 <!-- markdownlint-enable MD049 -->
 
