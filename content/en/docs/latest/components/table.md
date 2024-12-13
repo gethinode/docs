@@ -17,7 +17,7 @@ tags: component
 
 Use the table shortcode to make your markdown table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens. The following example illustrates how this works.
 
-<!-- markdownlint-disable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 {{</* table */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
@@ -27,7 +27,7 @@ Use the table shortcode to make your markdown table responsive. Responsive table
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 ## Arguments
 
