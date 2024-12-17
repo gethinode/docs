@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2024-09-04
+date: 2024-12-17
 layout: docs
 ---
 
@@ -72,6 +72,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | externalLinks.cue  | false             | If set, adds a visual cue `{{< icon class="fas up-right-from-square fa-2xs" spacing=false >}}` as suffix to [managed external links]({{% relref "links-and-cross-references#managed-links" %}}). |
 | externalLinks.tab  | false             | If set, opens [managed external links]({{% relref "links-and-cross-references#managed-links" %}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 | build.transpiler   | "libsass"         | {{< release version="v0.20.0" short="true" size="sm" inline="true" >}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{< link hugo_sass >}}installation of a separate binary on your machine{{< /link >}}. This includes any production servers used for {{< abbr "CI/CD" >}} automation and deployment.|
+| build.silenceDeprecations   | false         | {{< release version="v0.27.9" short="true" size="sm" inline="true" >}} Silences any deprecation warnings raised by the Dart Sass transpiler. |
 {{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
