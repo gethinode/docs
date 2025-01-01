@@ -19,19 +19,19 @@ Hugo supports tables out-of-the-box with extended Markdown. Use an optional shor
 
 Hugo supports tables out-of-the-box by using the `|` and `-` characters.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
 {{< /example >}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ### Aligned cells and headers
 
 You can align header and cell data to the left, center, or right of a column using the `:` character.
 
-<!-- markdownlint-disable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        | Left aligned | Center aligned |   Right aligned|
 | -- | ----------- |:-------------|:--------------:| --------------:|
@@ -39,7 +39,7 @@ You can align header and cell data to the left, center, or right of a column usi
 | 2. | Second item | some text    | more text      | even more text |
 | 3. | Third item  | some text    | more text      | even more text |
 {{< /example >}}
-<!-- markdownlint-enable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 ## Accented tables
 
@@ -49,7 +49,7 @@ Add optional class attributes to style the table using Bootstrap.
 
 Use `.table-striped` to add zebra-striping to any table row.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        |
 | -- | ----------- |
@@ -58,13 +58,13 @@ Use `.table-striped` to add zebra-striping to any table row.
 | 3. | Third item  |
 {.table-striped}
 {{< /example >}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ### Striped columns
 
 Use `.table-striped-columns` to add zebra-striping to any table column.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        | Description            |
 | -- | ----------- | ---------------------- |
@@ -73,13 +73,13 @@ Use `.table-striped-columns` to add zebra-striping to any table column.
 | 3. | Third item  | This is the third row  |
 {.table-striped-columns}
 {{< /example >}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ### Hoverable rows
 
 Add `.table-hover` to enable a hover state on the table rows.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        |
 | -- | ----------- |
@@ -88,13 +88,13 @@ Add `.table-hover` to enable a hover state on the table rows.
 | 3. | Third item  |
 {.table-hover}
 {{< /example >}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ### Colored tables
 
 Add `table-<theme>` to apply [theme colors]({{% ref "colors" %}}) to your table. You can mix them with other classes, such as `.table-striped`.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        |
 | -- | ----------- |
@@ -103,7 +103,7 @@ Add `table-<theme>` to apply [theme colors]({{% ref "colors" %}}) to your table.
 | 3. | Third item  |
 {.table-success .table-striped}
 {{< /example>}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ## Table borders
 
@@ -113,7 +113,7 @@ Adjust the borders of a table to match your style preferences.
 
 Add `.table-bordered` for borders on all sides of the table and cells. Add an optional `border-<theme>` class to apply [theme colors]({{% ref "colors" %}}) to the table borders.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        |
 | -- | ----------- |
@@ -122,13 +122,13 @@ Add `.table-bordered` for borders on all sides of the table and cells. Add an op
 | 3. | Third item  |
 {.table-bordered .border-primary}
 {{< /example >}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ### Tables without borders
 
 Add `.table-borderless` for a table without borders.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        |
 | -- | ----------- |
@@ -137,13 +137,13 @@ Add `.table-borderless` for a table without borders.
 | 3. | Third item  |
 {.table-borderless}
 {{< /example >}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ## Small tables
 
 Add `.table-sm` to make any table more compact by cutting all cell padding in half.
 
-<!-- markdownlint-disable MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 | #  | Item        |
 | -- | ----------- |
@@ -152,7 +152,7 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 | 3. | Third item  |
 {.table-sm}
 {{< /example >}}
-<!-- markdownlint-enable MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ## Responsive tables
 
@@ -167,7 +167,7 @@ Embed the markdown table within the {{< link "docs/components/table" />}} shortc
 
 By default, the `table` shortcode is responsive for all viewports.
 
-<!-- markdownlint-disable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 {{</* table */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
@@ -177,11 +177,11 @@ By default, the `table` shortcode is responsive for all viewports.
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 Use `none` to disable this behavior.
 
-<!-- markdownlint-disable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 {{</* table none */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
@@ -191,13 +191,13 @@ Use `none` to disable this behavior.
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 ### Breakpoint specific
 
 Use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
-<!-- markdownlint-disable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 {{</* table sm */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
@@ -239,7 +239,7 @@ Use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoin
 | 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
 {{</* /table */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 ## Data tables
 
@@ -255,7 +255,7 @@ modules: ["simple-datatables"]
 
 As an example, the following shortcode displays a responsive table that is `searchable`, is `sortable`, and enables `paging` with a page size (`pagingOptionPerPage`) of 5.
 
-<!-- markdownlint-disable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 {{</* table sortable="true" paging="true" searchable="true" pagingOptionPerPage=5 */>}}
 |  #  | Heading |
@@ -292,4 +292,4 @@ As an example, the following shortcode displays a responsive table that is `sear
 | 30. | Item 30  |
 {{</* /table */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 MD058 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}

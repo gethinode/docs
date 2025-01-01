@@ -14,7 +14,7 @@ Hinode uses Sass files to take advantage of variables, maps, and functions to ge
 
 Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{% ref "overview" %}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< nav type="tabs" id="tabs-1" >}}
   {{< nav-item header="libsass" show="true" >}}
 
@@ -77,7 +77,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
   {{< /nav-item >}}
 {{< /nav >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Example
 

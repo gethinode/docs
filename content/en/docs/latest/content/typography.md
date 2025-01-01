@@ -1,7 +1,7 @@
 ---
 title: Typography
 description: Use a mix of Markdown and HTML syntax to style your content.
-date: 2024-08-16
+date: 2024-12-13
 layout: docs
 ---
 
@@ -11,7 +11,7 @@ Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for t
 
 Use the native Markdown character `#` to generate headings for your content. The following input represents six levels of section headings. They are generated as HTML `<h1>`—`<h6>` elements. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-<!-- markdownlint-disable MD025 -->
+{{% comment %}}<!-- markdownlint-disable MD025 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 
 # H1. Heading
@@ -27,7 +27,7 @@ Use the native Markdown character `#` to generate headings for your content. The
 ###### H6. Heading
 
 {{< /example >}}
-<!-- markdownlint-enable MD025 -->
+{{% comment %}}<!-- markdownlint-enable MD025 -->{{% /comment %}}
 
 Alternatively, you can use `.h1` through `.h6` classes, for when you want to match the font styling of a heading but cannot use the associated HTML element. For example, using a `.h2` class will exclude the section heading from the generated [table of contents]({{% ref "navigation#table-of-contents" %}}).
 
@@ -92,17 +92,19 @@ You can use native Markdown to apply basic styling. Use HTML elements for additi
 
 Use native Markdown apply basic styling to your text.
 
-<!-- markdownlint-disable MD049 -->
+{{% comment %}}<!-- markdownlint-disable MD036 MD049 -->{{% /comment %}}
 {{< example lang="markdown" >}}
-~~This line of text is meant to be treated as deleted text.~~
+**This is bold text**
 
-_This line of text renders as underlined._
+_This text is italicized_
 
-**This line of text renders as bold text.**
+~~This was mistaken text~~
 
-*This line of text renders as italicized text.*
+**This text is _extremely_ important**
+
+***All this text is important***
 {{< /example >}}
-<!-- markdownlint-enable MD049 -->
+{{% comment %}}<!-- markdownlint-enable MD036 MD049 -->{{% /comment %}}
 
 ### Extended Styling
 
@@ -110,7 +112,7 @@ _This line of text renders as underlined._
 
 Use shortcodes and classes for additional styling options. The following example illustrates highlighting, fine print, subscript, and superscript.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 You can use the mark shortcode to {{</* mark >}}highlight{{< /mark */>}} text.
 
@@ -120,8 +122,11 @@ This line of text is meant to be treated as fine print.
 H{{</* sub 2 */>}}O is a liquid.
 
 2{{</* sup 10 */>}} is 1024.
+
+This is an {{</* ins >}}underlined text{{< /ins */>}}.
+
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Emoji
 
@@ -140,11 +145,11 @@ That is so funny! :smiley:
 
 Use the {{< link "docs/components/abbr" >}}abbr shortcode{{< /link>}} for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example >}}
 {{</* abbr HTML */>}}
 {{< /example >}}
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 
 ## Blockquotes
 
@@ -180,7 +185,7 @@ The following Markdown generates a blockquote with attribution. The citation its
 
 You can add an alert designator to a blockquote to generate a GitHub-style alert.
 
-<!-- markdownlint-disable MD028 -->
+{{% comment %}}<!-- markdownlint-disable MD028 -->{{% /comment %}}
 {{< example lang="markdown" >}}
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
@@ -197,7 +202,7 @@ You can add an alert designator to a blockquote to generate a GitHub-style alert
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 {{< /example >}}
-<!-- markdownlint-enable MD028 -->
+{{% comment %}}<!-- markdownlint-enable MD028 -->{{% /comment %}}
 
 ## Code Blocks
 

@@ -11,7 +11,7 @@ Hinode uses Markdown and templates to define the content for your website. Hugo 
 
 Markdown is a simple and easy-to-use markup language. It uses formatting elements in plaintext documents to format documents. Using Markdown is different than using a {{< abbr WYSIWYG >}}editor. Such editors apply the formatting styles as you go. Instead, Markdown shows the formatting codes next to the content. Although this may require getting used to, the advantage is that you have full control over your document. The {{< link markdown_guide >}}Markdown guide{{< /link >}} provides a comprehensive overview of the Markdown format. Hugo supports additional content formats next to Markdown. See Hugo's documentation for a full overview of {{< link hugo_content >}}supported content formats{{< /link >}}.
 
-<!-- TODO: insert VS Code screenshot -->
+{{% comment %}}<!-- TODO: insert VS Code screenshot -->{{% /comment %}}
 
 ### Front matter
 
@@ -30,7 +30,7 @@ date: 2023-02-19
 
 Hinode supports the following additional front matter parameters.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Argument            | Description |
 |---------------------|-------------|
 | icon                | Shorthand notation for an [icon]({{% relref "icon" %}}) to be used on a [card]({{% relref "card" %}}). |
@@ -43,7 +43,7 @@ Hinode supports the following additional front matter parameters.
 | thumbnail.authorURL | URL of the thumbnail author, added as caption link to the thumbnail on single pages. |
 | thumbnail.origin    | Name of the thumbnail origin, e.g. Unsplash or Pexels. |
 | thumbnail.originURL | URL of the thumbnail origin, added as caption link to the thumbnail on single pages. |
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 ### Mixed content
 
@@ -76,11 +76,11 @@ Shortcodes are an addition provided by Hugo to simplify the inclusion of common 
 
 Hugo provides more details about the {{< link hugo_shortcodes >}}usage of shortcodes{{< /link >}}. Hinode provides several shortcodes that wrap common Bootstrap elements. Explore the `components` section in the docs navigation for an overview of the available shortcodes. As an example, the following shortcode displays an image with rounded corners and a 21x9 aspect ratio:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* image src="img/flowers.jpg" ratio="21x9" caption="Figure caption" class="rounded" */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Single pages
 
@@ -90,7 +90,7 @@ Single pages define the content for a specific page, such as the [introduction p
 
 By default, single pages, such as a blog page, include the following elements in the body:
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
 | Element            | Description |
 |--------------------|-------------|
 | Title | The title of the page as set in the page's frontmatter.|
@@ -100,7 +100,7 @@ By default, single pages, such as a blog page, include the following elements in
 | Thumbnail | A thumbnail image with figure caption that links to the photo credits (if defined in the frontmatter).|
 | Download | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} a link to a local file that represents a downloadable version of the current article.|
 | Navigation links | Links on the bottom of the page that link to the previous and next page within the current section.|
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The below example illustrates the parameters used in the page's frontmatter:
 

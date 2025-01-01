@@ -15,11 +15,11 @@ tags: component
 
 Use the `card` shortcode to display a card that links to a content page. When using a rich layout, the card includes a thumbnail (or icon) and a header. As an example, the following shortcode displays a horizontal card that links to the [editing]({{% ref "editing" %}}) guide. It includes a custom header and footer. You can use the {{< link "card-group" >}}card-group shortcode{{< /link >}} to align multiple cards and to position them in a grid.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card path="/guides/editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
@@ -35,7 +35,7 @@ Change the style of your card with class attributes and shortcode arguments.
 
 Use the `color` argument to set the background color of the card. As an example, the following shortcodes display a plain card for each available color. The cards are embedded in a grid. The final two cards with the color `body` and `body-tertiary` are [color-mode aware]({{% relref "color-modes" %}}).
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card-group cols="4" gutter="3" */>}}
     {{</* card color="primary" path="/docs/components/button/" header="none" orientation="none" /*/>}}
@@ -52,13 +52,13 @@ Use the `color` argument to set the background color of the card. As an example,
     {{</* card color="body-tertiary" path="/docs/components/button/" header="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Custom header
 
 Use the `header` argument to customize the contents of the card.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card-group cols="4" gutter="3" */>}}
     {{</* card path="/guides/editing" header="full" orientation="none" /*/>}}
@@ -67,13 +67,13 @@ Use the `header` argument to customize the contents of the card.
     {{</* card path="/guides/editing" header="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Custom footer
 
 Use the `footer` argument to customize the contents of the card.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card-group cols="4" gutter="3" */>}}
     {{</* card path="/guides/editing" header="none" footer="full" orientation="none" /*/>}}
@@ -82,26 +82,26 @@ Use the `footer` argument to customize the contents of the card.
     {{</* card path="/guides/editing" header="none" footer="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Image placement
 
 Use the `orientation` argument to customize the placement of the card's thumbnail or icon.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card path="/guides/editing" header="none" footer="none" orientation="stacked" class="col-sm-12 col-lg-6 mx-auto mb-3" /*/>}}
 {{</* card path="/docs/components/button/" header="none" footer="none" orientation="stacked" padding="3" class="col-sm-12 col-lg-6 mx-auto mb-3" /*/>}}
 {{</* card path="/guides/editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
 {{</* card path="/docs/components/button/" header="publication" footer="tags" orientation="horizontal" padding="3" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Inline content
 
 Use `title`, `thumbnail`, `icon`, and inner content to define the card's content inline.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto mb-3" title="Title" icon="fa address-card" */>}}
     This is the `body` of the card. It supports Markdown.
@@ -111,17 +111,17 @@ Use `title`, `thumbnail`, `icon`, and inner content to define the card's content
     This is the `body` of the card. It supports Markdown too.
 {{</* /card */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Custom styling
 
 Use the `class` argument to customize the styling of the card. The following example applies the style `card-shrink` to apply an animation effect when hovering over the card.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card path="/docs/components/button/" header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto card-shrink" /*/>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 The style is defined in the `theme.scss` file, which is transpiled into the [site's stylesheet]({{% relref "styles" %}}).
 

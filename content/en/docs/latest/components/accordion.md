@@ -12,7 +12,7 @@ tags: component
 
 Use the `accordion` shortcode to show a group of vertically collapsing and expanding items. Add `accordion-item` inner elements for each accordion item.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-default" */>}}
   {{</* accordion-item header="Accordion Item #1" show="true" */>}}
@@ -27,7 +27,7 @@ Use the `accordion` shortcode to show a group of vertically collapsing and expan
   {{</* /accordion-item */>}}
 {{</* /accordion */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
@@ -47,7 +47,7 @@ Change the style of your accordion with class attributes and arguments.
 
 Add `.accordion-flush` to remove some borders and rounded corners to render accordions edge-to-edge with their parent container.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-flush" class="accordion-flush" */>}}
   {{</* accordion-item header="Accordion Item #1" */>}}
@@ -62,13 +62,13 @@ Add `.accordion-flush` to remove some borders and rounded corners to render acco
   {{</* /accordion-item */>}}
 {{</* /accordion */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ### Always open
 
 Set `always-open` to `true` to make accordion items stay open when another item is opened.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-always-open" always-open="true" */>}}
   {{</* accordion-item header="Accordion Item #1" */>}}
@@ -83,4 +83,4 @@ Set `always-open` to `true` to make accordion items stay open when another item 
   {{</* /accordion-item */>}}
 {{</* /accordion */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}

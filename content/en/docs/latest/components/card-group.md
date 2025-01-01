@@ -14,7 +14,7 @@ tags: component
 
 Use the `card-group` shortcode to display a group of cards. Add inner `<card>` elements for each [card]({{% ref "card" %}} "card"). As an example, the following shortcode displays a group of three cards.
 
-<!-- markdownlint-disable MD037 -->
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< example lang="hugo" >}}
 {{</* card-group padding="3" gutter="3" */>}}
     {{</* card title="Bootstrap framework" icon="fab bootstrap" */>}}
@@ -30,7 +30,7 @@ Use the `card-group` shortcode to display a group of cards. Add inner `<card>` e
     {{</* /card */>}}
 {{</* /card-group */>}}
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 ## Arguments
 
