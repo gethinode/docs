@@ -123,7 +123,7 @@ npm install
 (out)> npm run -s copy:css && npm run -s copy:js && npm run -s copy:fonts
 {{< /command >}}
 
-We will now expose the various files copied to our local `dist` folder using [Hugo mounts]({{% relref "/docs/advanced-settings/overview#mounted-folders" %}}). The below configuration adheres to Hinode's [conventions for the naming and paths of the exposed files]({{% relref "module-development#conventions" %}}). Also observe that we explicitly add the existing folders `layouts`, `assets`, and `static` as mount point. This is to ensure other mounts are merged with any existing directories, instead of these mounts replacing the local folders. Add this configuration to the `config.toml` file in your repository root.
+We will now expose the various files copied to our local `dist` folder using [Hugo mounts]({{% relref "/docs/advanced-settings/overview#mounted-folders" %}}). The below configuration adheres to Hinode's [conventions for the naming and paths of the exposed files]({{% relref "module-development#conventions" %}}). Also observe that we explicitly add the existing folders `layouts`, `assets`, and `static` as mount point. This is to ensure other mounts are merged with any existing directories, instead of these mounts replacing the local folders. Add this configuration to the `config.toml` file in your repository root. Make sure to keep the existing `workspace = "mod-katex.work"` line from the template. Pay attention to also rename the `mod-template.work` file to `mod-katex.work` in the exampleSite directory.
 
 ```toml
 [module]
