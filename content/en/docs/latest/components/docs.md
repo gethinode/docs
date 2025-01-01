@@ -44,7 +44,7 @@ Click on one the tabs to see a full example of an input file.
 ```toml
 # toml-docs-start main
 title = "Hinode"
-copyright = "Copyright © 2024 Mark Dumay."
+copyright = "Copyright © 2022 - 2025 Mark Dumay."
 enableGitInfo = true
 # toml-docs-end main
 ```

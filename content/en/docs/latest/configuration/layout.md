@@ -1,7 +1,7 @@
 ---
 title: Layout
 description: Hinode uses a grid-based, responsive design for the home page, single pages and list pages.
-date: 2024-09-04
+date: 2025-01-01
 layout: docs
 ---
 
@@ -69,9 +69,12 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | loading            | "eager"           | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{% relref "image" %}}) provides more details.|
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
 | breakpoint         | "md"              | {{< release version="v0.21.7" short="true" size="sm" inline="true" >}} Breakpoint for single pages and list pages to start showing the sidebar navigation and table of content panel. Card groups use the same breakpoint to decide how many columns to display in the current viewport. |
+| internalLinks.validate  | true             | If set, validates if internal links reference a valid page. |
+| internalLinks.pretty  | false             | {{< release version="v0.27.19" short="true" size="sm" inline="true" >}} If set, adds a trailing slash to rendered links. |
 | externalLinks.cue  | false             | If set, adds a visual cue `{{< icon class="fas up-right-from-square fa-2xs" spacing=false >}}` as suffix to [managed external links]({{% relref "links-and-cross-references#managed-links" %}}). |
 | externalLinks.tab  | false             | If set, opens [managed external links]({{% relref "links-and-cross-references#managed-links" %}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 | build.transpiler   | "libsass"         | {{< release version="v0.20.0" short="true" size="sm" inline="true" >}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{< link hugo_sass >}}installation of a separate binary on your machine{{< /link >}}. This includes any production servers used for {{< abbr "CI/CD" >}} automation and deployment.|
+| build.silenceDeprecations   | false         | {{< release version="v0.27.9" short="true" size="sm" inline="true" >}} Silences any deprecation warnings raised by the Dart Sass transpiler. |
 {{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
