@@ -11,7 +11,7 @@ aliases:
 
 ## Codebase
 
-The codebase of Hinode is open source under the conditions of the {{< link license >}}MIT license{{< /link >}} and is copyright &copy; 2024 by Mark Dumay. In short, the MIT license allows you to use the Hinode codebase for both personal and commercial use, as long as you include the original license and copyright notice. Licensed works, modifications, and larger works may be distributed under different terms and without source code. No liability or warranty is given.
+The codebase of Hinode is open source under the conditions of the {{< link license >}}MIT license{{< /link >}} and is copyright &copy; 2022 - 2025 by Mark Dumay. In short, the MIT license allows you to use the Hinode codebase for both personal and commercial use, as long as you include the original license and copyright notice. Licensed works, modifications, and larger works may be distributed under different terms and without source code. No liability or warranty is given.
 
 ## Documentation
 
