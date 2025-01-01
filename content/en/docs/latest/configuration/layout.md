@@ -65,6 +65,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | enableDarkMode     | true              | Enables switcher for [light mode and dark mode]({{% relref "color-modes" %}}). |
 | modes              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
 | endorse            | true              | By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled. |
+| enableLanguageSelectionStorage | false | If set, stores the last selected language in the site's local storage. Pages are automatically redirected to the related page translation, if available. |
 | footerBelowFold    | false             | If set, pushes the footer including social links to below the page fold. |
 | loading            | "eager"           | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{% relref "image" %}}) provides more details.|
 | canonifyAssetsURLs | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
