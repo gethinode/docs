@@ -121,7 +121,7 @@ npm install
 (out)> npm run -s copy:css && npm run -s copy:js && npm run -s copy:fonts
 {{< /command >}}
 
-We will now expose the various files copied to our local `dist` folder using [Hugo mounts]({{% relref "/docs/advanced-settings/overview#mounted-folders" %}}). The below configuration adheres to Hinode's [conventions for the naming and paths of the exposed files]({{% relref "module-development#conventions" %}}). Also observe that we explicitly add the existing folders `layouts`, `assets`, and `static` as mount point. This is to ensure other mounts are merged with any existing directories, instead of these mounts replacing the local folders. Add this configuration to the `config.toml` file in your repository root. Make sure to keep the existing `workspace = "mod-katex.work"` line from the template. Pay attention to also rename the `mod-template.work` file to `mod-katex.work` in the exampleSite directory.
+We will now expose the various files copied to our local `dist` folder using [Hugo mounts]({{% relref "/docs/advanced-settings/overview#mounted-folders" %}}). The below configuration adheres to Hinode's [conventions for the naming and paths of the exposed files]({{% relref "module-development#conventions" %}}). Also observe that we explicitly add the existing folders `layouts`, `assets`, and `static` as mount point. This is to ensure other mounts are merged with any existing directories, instead of these mounts replacing the local folders. Add this configuration to the `config.toml` file in your repository root.
 
 ```toml
 [module]
@@ -162,13 +162,13 @@ As a final step we will include a basic script to initialize KaTeX when the page
 The module template provides a simple website for local testing. Open the file `exampleSite/hugo.toml` and update the configuration:
 
 ```toml
-[module]
-  replacements = 'github.com/markdumay/mod-katex -> ../..'
+  # Build and serve using local mod-katex clone declared in the named Hugo workspace:
+  workspace = "mod-katex.work"
   [[module.mounts]]
     source = "static"
     target = "static"
   [[module.imports]]
-    path = "github.com/markdumay/mod-katex"
+    path = "github.com/gethinode/mod-katex"
   [[module.imports.mounts]]
     source = "dist/katex.scss"
     target = "static/katex.css"
@@ -184,9 +184,14 @@ The module template provides a simple website for local testing. Open the file `
   [[module.imports.mounts]]
     source = "assets/js/modules/katex/katex-autoload.js"
     target = "static/js/katex-autoload.js"
+  [[module.imports.mounts]]
+    source = 'layouts'
+    target = 'layouts'
 ```
 
-The `replacements` instruction tells Hugo to source the `mod-katex` module from the parent folder instead of the remote repository. This is of great help for local development and testing, as we would otherwise need to synchronize our repositories, submit a PR, and pull the latest version for each revision. The next line instructs our example site to use the `mod-katex` module (now sourced locally) and to adjust the mount points of the `.css` file and `.js` files. In this simple site for testing, we have no need for complex processing or bundling of assets, so we can use static imports instead.
+The configuration uses a [workspace](https://gohugo.io/hugo-modules/use-modules/#module-workspaces) to simplify local development. Rename the existing template file from `mod-template.work` to `mod-katex.work` for consistency. Ensure you reference the correct file in the above configuration.
+
+Workspaces are of great help for local development and testing, as we would otherwise need to synchronize our repositories, submit a PR, and pull the latest version for each revision. The next line instructs our example site to use the `mod-katex` module (now sourced locally) and to adjust the mount points of the `.css` file and `.js` files. In this simple site for testing, we have no need for complex processing or bundling of assets, so we can use static imports instead.
 
 We will now run the `mod:update` script to install the Hugo module(s) and to check for any updates. The `package.json` contains several scripts to help us:
 
