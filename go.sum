@@ -302,6 +302,8 @@ github.com/gethinode/hinode v0.27.13 h1:P5tJF+KHlz6AJbd6kOi3wH6cZ8dXzr8csXzt/4xI
 github.com/gethinode/hinode v0.27.13/go.mod h1:k+TUNPNBbNY2kNlzDySw3k/GuDHetfKN/qTXKHwlbk0=
 github.com/gethinode/hinode v0.27.19 h1:M+pxKLE5LHgyarc1kT0moMx49JIRBQ6ctdmiTUd3mj8=
 github.com/gethinode/hinode v0.27.19/go.mod h1:k+TUNPNBbNY2kNlzDySw3k/GuDHetfKN/qTXKHwlbk0=
+github.com/gethinode/hinode v0.27.23 h1:iwpX0uOhCfxHwyc42xG20kdRU4zOyptkTZCBnsLboWc=
+github.com/gethinode/hinode v0.27.23/go.mod h1:ttSWx852Qo41ZLx8g8DQNwd/Q3nIca1Uxvs1D1/hd8M=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
@@ -440,6 +442,8 @@ github.com/gethinode/mod-google-analytics v1.1.5 h1:wlOcgwNEJAnIQmPJIo3cT06xnr1d
 github.com/gethinode/mod-google-analytics v1.1.5/go.mod h1:dl628cFozpCvoIMCiV7ujzQipjxcm3eatXrSfLPWNII=
 github.com/gethinode/mod-google-analytics v1.1.6 h1:0eNIM4NTzXnnRHMM04IVnYPPGwbMAmit6fjuUuCQv2I=
 github.com/gethinode/mod-google-analytics v1.1.6/go.mod h1:dl628cFozpCvoIMCiV7ujzQipjxcm3eatXrSfLPWNII=
+github.com/gethinode/mod-google-analytics v1.1.9 h1:ld3bRGiJiUCfe/deH+4vOP3oZNhG6mPssT254EcK0Ro=
+github.com/gethinode/mod-google-analytics v1.1.9/go.mod h1:dl628cFozpCvoIMCiV7ujzQipjxcm3eatXrSfLPWNII=
 github.com/gethinode/mod-katex v1.0.2 h1:pIG4n3qLl/IVe7BEiwn+GL8r5lOCtF6FDxlcrPKdAXk=
 github.com/gethinode/mod-katex v1.0.2/go.mod h1:byAfpI3wuqNJIooTGVEGc1cjBhhCy4+CcK1H6495MYg=
 github.com/gethinode/mod-katex v1.0.3 h1:fvlUWqcUQqv2zRNM2kfmJ6GhXA816Tl1nfVrUkmBStI=
