@@ -76,7 +76,7 @@ This module supports the following parameters (see the section `params.modules` 
 
 | Setting                   | Default | Description |
 |---------------------------|---------|-------------|
-| clarity.id                |         | Tracking code of Microsoft Clarity (see [installation instructions][clarity_code])
+| clarity.id                |         | Tracking code of Microsoft Clarity (see {{< link clarity_code >}}installation instructions{{< /link >}})
 | clarity.force             | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
 
 ### CookieYes

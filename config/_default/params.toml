@@ -228,6 +228,7 @@
     caniuse_container = "https://caniuse.com/?search=%40container"
     caniuse_webshare = "https://caniuse.com/?search=navigator.share"
     cc_by_nc_4_0 = "https://creativecommons.org/licenses/by-nc/4.0/"
+    clarity_code = "https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup#install-manually"
     cloudflare = "https://cloudflare.com"
     cloudinary = "https://cloudinary.com"
     commit_message = "https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html"
