@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Customize and extend Hinode with Hugo modules.
-date: 2024-10-21
+date: 2025-01-05
 layout: docs
 ---
 
@@ -67,6 +67,18 @@ For example, Bootstrap uses the following configuration in its module configurat
 
 Several modules support additional, module-specific configurations. Review them in the next paragraphs.
 
+### Clarity
+
+> [!WARNING]
+> This module assumes you have properly configured a Cookie Consent Manager. The Clarity script is assigned to the category `analytics`. Cookie consent is automatically given when this script is loaded. Do not load this script without explicit consent from the user. See the [Hinode docs](docs/configuration/cookie-consent/) for more details.
+
+This module supports the following parameters (see the section `params.modules` in `config.toml`):
+
+| Setting                   | Default | Description |
+|---------------------------|---------|-------------|
+| clarity.id                |         | Tracking code of Microsoft Clarity (see {{< link clarity_code >}}installation instructions{{< /link >}})
+| clarity.force             | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
+
 ### CookieYes
 
 {{< release version="v0.27.0" >}}
@@ -121,7 +133,7 @@ The `google-analytics` module supports the following additional settings:
 
 | Setting                   | Default | Description |
 |---------------------------|---------|-------------|
-| GoogleAnalytics.local     | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
+| GoogleAnalytics.force     | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
 
 ### Utils
 
