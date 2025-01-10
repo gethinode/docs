@@ -1,0 +1,13 @@
+$theme-border-radius:           1rem;
+
+.sidebar-item {
+    --bs-border-radius: #{$theme-border-radius};
+    --bs-border-radius-sm: #{$theme-border-radius};
+    --bs-border-radius-lg: #{$theme-border-radius};
+    --bs-border-radius-xl: #{$theme-border-radius};
+    --bs-border-radius-xxl: #{$theme-border-radius};
+}
+
+.sidebar-item-group {
+    border-radius: #{$theme-border-radius};
+}
