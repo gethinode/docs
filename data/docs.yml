@@ -46,6 +46,7 @@
 #     - title: Validation
 
 - title: Components
+  link: "#"
   pages:
     - title: Abbr
     - title: Accordion

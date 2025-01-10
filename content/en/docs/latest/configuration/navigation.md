@@ -1,7 +1,7 @@
 ---
 title: Navigation
 description: Help the user navigate your website using configurable navigation elements.
-date: 2024-08-14
+date: 2025-01-10
 layout: docs
 ---
 
@@ -108,6 +108,15 @@ Menu items can be nested within each other. The below example defines three cont
 ```
 
 You can define separate data files for each available language in a multilingual site. Add the language code as suffix to your data file. For example, `data/blog.en.yml` defines the sidebar menu of the English translation of the blog section. Hinodes uses `data/blog.yml` as fallback (or any other {{< link hugo_data_sources >}}data format supported by Hugo{{< /link >}}).
+
+Since {{< release version="v0.27.27" short="true" type="link" >}}, Hinode renders a link for group items when a matching list page is found. You can suppress this behavior for a group item by setting its link value to `"#"` (the value is double-quoted to ensure the value is not interpreted as  a YAML comment). For example, the Hinode docs includes a group item `Components`. The link `/docs/components/` redirects to a list page that shows all available Hinode components. This list page breaks out from the sidebar navigation layout. To avoid navgigating to this page, the Hinode docs suppresses this link. Instead, the group item is expanded or collapsed, pending current state.
+
+```yml
+- title: Components
+  link: "#"
+  pages:
+    - title: Abbr
+```
 
 ### Versioning
 
