@@ -77,6 +77,7 @@
       "use"
     ],
     "classes": [
+      "%!s(<nil>)",
       "accordion",
       "accordion-body",
       "accordion-button",
@@ -685,6 +686,7 @@
       "tab-content",
       "tab-pane",
       "table",
+      "table-border-bottom-wrap",
       "table-bordered",
       "table-borderless",
       "table-hover",
@@ -698,6 +700,7 @@
       "table-striped",
       "table-striped-columns",
       "table-success",
+      "table-wrap",
       "tag-link",
       "text-bg-black",
       "text-bg-body",
@@ -1611,6 +1614,7 @@
       "video",
       "vimeo",
       "what-are-cookies",
+      "wrapped-columns",
       "your-rights",
       "youtube",
       "zoom-level"
