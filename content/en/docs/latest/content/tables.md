@@ -1,7 +1,7 @@
 ---
 title: Tables
 description: Enhance out-of-the-box Markdown tables with Bootstrap styling.
-date: 2024-09-04
+date: 2025-01-16
 layout: docs
 modules: ["simple-datatables"]
 ---
@@ -172,9 +172,9 @@ By default, the `table` shortcode is responsive for all viewports.
 {{</* table */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 1. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 2. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 3. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
 {{</* /table */>}}
 {{< /example >}}
 {{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
@@ -186,9 +186,9 @@ Use `none` to disable this behavior.
 {{</* table none */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 1. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 2. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 3. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
 {{</* /table */>}}
 {{< /example >}}
 {{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
@@ -202,41 +202,59 @@ Use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoin
 {{</* table sm */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 1. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 2. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 3. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
 {{</* /table */>}}
 
 {{</* table md */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 1. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 2. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 3. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
 {{</* /table */>}}
 
 {{</* table lg */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 1. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 2. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 3. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
 {{</* /table */>}}
 
 {{</* table xl */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 1. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 2. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 3. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
 {{</* /table */>}}
 
 {{</* table xxl */>}}
 | #  | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading | Heading |
 |----|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-| 1. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 2. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
-| 3. | cell    | cel     | cel     | cel     | cel     | cel     | cel     | cel     | cel     |
+| 1. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 2. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+| 3. | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    | cell    |
+{{</* /table */>}}
+{{< /example >}}
+{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+
+### Wrapped columns
+
+{{< release version="v0.28.0" >}}
+
+You can wrap the last column to a new row to improve readability on smaller devices. Add the argument `wrap=true` to enable this behavior. The following example illustrates how this works. Adjust your viewport to see the wrapping behavior using the current [breakpoint](/docs/configuration/layout/#extended-configuration).
+
+{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+{{< example lang="markdown" >}}
+{{</* table wrap=true */>}}
+| #  | Col 1   | Col 2   | Description |
+|----|---------|---------|-------------|
+| 1. | cell    | cell    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros eu nunc consequat interdum. |
+| 2. | cell    | cell    | Nulla pretium viverra nisl, id luctus justo placerat vel. Cras elit dui, efficitur sed lobortis vitae, ullamcorper ac libero. |
+| 3. | cell    | cell    | Nam blandit, nunc eget gravida dictum, orci nibh placerat ex, malesuada sagittis ligula massa quis urna. |
 {{</* /table */>}}
 {{< /example >}}
 {{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
