@@ -1,5 +1,15 @@
 # This file holds all entries for the release timeline
 
+- title: Title case
+  icon: fas heading
+  color: info
+  date: 2025-01-20
+  badge: v0.29.0
+  url: v0.29.0
+  content: >-
+    This release introduces support to apply title case to page headers and select elements. When enabled, titles will
+    automatically follow the capitalization rules as defined in the
+    [site's configuration](https://gohugo.io/getting-started/configuration/#configure-title-case).
 
 - title: Table wrapping
   icon: fas table
