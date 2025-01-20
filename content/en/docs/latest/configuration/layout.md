@@ -34,13 +34,15 @@ Hinode uses several settings from Hugo's {{< link hugo_config >}}main configurat
 
 The base layout uses the {{< link hugo_config >}}main configuration{{< /link >}} of Hugo. The settings below are actively used by Hinode:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
-| Setting        | Default | Description |
-|----------------|---------|-------------|
+| Setting         | Default | Description |
+|-----------------|---------|-------------|
 | `title`         | -       | Title of the website, joined with the separator and title of the current page. |
 | `copyright`     | -       | Copyright notice added to the page footer. |
 | `enableGitInfo` | -       | Enables git information, which is used by [documentation pages]({{% relref "content-management#documentation-layout" %}}). |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/hugo.toml`.
 
@@ -93,11 +95,13 @@ The below configuration shows the default configuration set in `config/_default/
 
 You can show informative messages using the [toast shortcode]({{% relref "toast" %}}). By default, toast messages are displayed in the bottom right of the viewport. Hinode vertically stacks multiple toast messages automatically. Adjust the configuration by adjusting `messages` in the `site parameters`. The following arguments are supported:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting         | Default        | Description |
 |-----------------|----------------|-------------|
 | `placement`       | "bottom-right" | Optional position of the toast messages relative to the viewport: "top-left", "top-center","top-right", "middle-left", "middle-center", "middle-right", "bottom-left", "bottom-center", or "bottom-right" (default). |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -122,6 +126,7 @@ Hinode can optionally add buttons to share a post via available social media. Us
 
 Add each available provider to `[[sharing.providers]]`. The providers support the following arguments:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting   | Default | Description |
 |-----------|---------|-------------|
@@ -131,6 +136,7 @@ Add each available provider to `[[sharing.providers]]`. The providers support th
 | `weight`    | -       | Weight of the social sharing button, to be used as sorting key. |
 | `clipboard` | false   | If set, the defined url is copied to the clipboard instead of being opened. A [toast message]({{% relref "toast" %}}) is shown to inform the user. |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -353,6 +359,7 @@ Please refer to the [content management section]({{% relref "content-management#
 
 The configuration of the **documentation pages** is set in the `docs` section of the site parameters. The following settings are supported:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting      | Default | Description |
 |--------------|---------|-------------|
@@ -361,6 +368,7 @@ The configuration of the **documentation pages** is set in the `docs` section of
 | `github`       | -       | Repository URL for the docs site, overrides `schema/github` in  `config/_default/params.toml`. |
 | `release`      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{% relref "release" %}}).
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -433,6 +441,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 
 The `card` layout supports the following additional arguments:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
@@ -444,9 +453,11 @@ The `card` layout supports the following additional arguments:
 | `homepage`     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
 | `separator`    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 The `nav` layout supports the following additional arguments:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
@@ -456,6 +467,7 @@ The `nav` layout supports the following additional arguments:
 | `pane`         | "none"       | Optional style of the panes, either "none" (default) or "persona". |
 | `width`        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 The below configuration shows an example configuration of the [guides available on this site]({{% relref "guides" %}}). The configuration is set in `config/_default/params.toml`.
 

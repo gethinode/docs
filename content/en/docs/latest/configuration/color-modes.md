@@ -34,12 +34,14 @@ Contrast is an important aspect of your site accessibility. The {{< link wcag_co
 
 The argument `darkModeTint` lightens the primary color with a given percentage, while `darkModeShade` darkens the primary background color. You can adjust these settings in the `style` section of the `site parameters`.
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting       | Default | Description |
 |---------------|---------|-------------|
 | darkModeShade | "20%"   | Darkens the primary background color in dark mode with a given percentage, defaults to 20%. |
 | darkModeTint  | "40%"   | Lightens the primary color in dark mode with a given percentage, defaults to 40%. |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ## Sass
 

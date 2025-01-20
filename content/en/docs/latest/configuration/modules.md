@@ -140,11 +140,13 @@ You can modify the privacy configuration in the following section:
 
 The `google-analytics` module supports the following additional settings:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting                   | Default | Description |
 |---------------------------|---------|-------------|
 | `GoogleAnalytics.force`   | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ### Utils
 
@@ -152,12 +154,14 @@ The `google-analytics` module supports the following additional settings:
 
 The `utils` module supports the following additional settings:
 
+{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
 {{< table wrap=true >}}
 | Setting           | Default | Description |
 |-------------------|---------|-------------|
 | `utils.filter`    | `[^0-9A-Za-zŽžÀ-ÿ ;.,\/'’"]` | Defines the regular expression for characters to remove from page descriptions. These page descriptions are used to define card content and metadata for search indexes. Adjust the filter to define which characters to support. You may need to adjust these settings to support specific diacritical letters. |
 | `utils.raw`       | false | Flag to indicate page descriptions should be returned as-is. In this setting, the filter is ignored. |
 {{< /table >}}
+{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
 ## Enabling optional modules
 
