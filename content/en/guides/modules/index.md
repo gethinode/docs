@@ -12,7 +12,6 @@ thumbnail:
     origin: Unsplash
     originURL: https://unsplash.com/photos/5siQcvSxCP8
 modules: ["katex"]
-
 ---
 
 ## Introduction
