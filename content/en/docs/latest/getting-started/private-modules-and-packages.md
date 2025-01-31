@@ -20,6 +20,7 @@ Hinode provides several themes and modules as a private Hugo module. You will ne
 
 [GitHub provides a CLI](https://cli.github.com/) to enable authentication to private and public repositories. When using the command `gh auth`, the CLI tool opens a new browser window, where you can authenticate yourself with GitHub. The login procedure supports both login/password and tokens. By default, this procedure supports one account per domain only. Run the following command to instruct git to use the full HTTP path of the repository instead.
 
+{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
 {{< nav type="tabs" id="tabs-hugo-1" >}}
   {{< nav-item header="macOS/Linux" show="true" >}}
 {{</* command */>}}
@@ -33,6 +34,7 @@ git config --global credential.useHttpPath true
   {{< /nav-item >}}
 {{< /nav >}}
 {.mb-4}
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 From now on, git will trigger a authencation request when accessing a new repository. The GitHub CLI will store this information in the credential manager provided by your Operating System.
 
@@ -40,6 +42,7 @@ From now on, git will trigger a authencation request when accessing a new reposi
 
 As an alternative, you can also use a git configuration that links a Personal Access Token to a specific domain using the `insteadOf` directive. For example, you can use the following command to configure a token to access the private module `github.com/gethinode/mod-bookshop`. Replace `<PAT>` with the actual token value. The value for `<ACCOUNT>` can be anything (but is mandatory). Git stores the token as plain text in `~/.gitconfig`, which is less secure than the preferred approach.
 
+{{% comment %}}<!-- markdownlint-disable MD033 MD037 -->{{% /comment %}}
 {{< nav type="tabs" id="tabs-hugo-2" >}}
   {{< nav-item header="macOS/Linux" show="true" >}}
 {{</* command */>}}
@@ -57,6 +60,7 @@ url."https://<ACCOUNT>:<PAT>@github.com/gethinode/mod-bookshop".insteadOf \
   {{< /nav-item >}}
 {{< /nav >}}
 {.mb-4}
+{{% comment %}}<!-- markdownlint-enable MD033 MD037 -->{{% /comment %}}
 
 To update an existing token, you need to manually remove the existing entry in `~/.gitconfig` and rerun the `git config` command. Alternatively, you can update the existing token in the `~/.gitconfig` file yourself.
 
@@ -116,6 +120,7 @@ Open a new `bash` terminal to load the environment variable.
   {{< /nav-item >}}
 {{</ nav >}}
 {.mb-4}
+{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
 
 We will now use a npm configuration file to set up the authentication token. Create a new file `.npmrc` in the root folder of your local repository with the following content:
 
@@ -137,7 +142,7 @@ You can use repository secrets to safely store the tokens in a GitHub Action. By
 
 Generate a `.netrc` file for the current user of the GitHub runner to configure access to a private Hugo module. Configure `HUGO_TOKEN` as repository secret. Then use the following step prior to the Hugo build step to generate (or overwrite) the `~/.npmrc` file. Go, the underlying module framework used by Hugo, will use this token for all private modules hosted on `github.com`.
 
-```
+```yaml
 # Generate a .netrc file with the substituted HUGO_TOKEN secret for the current user
 - name: Use GitHub token
     run: echo "machine github.com login ci password ${{ secrets.HUGO_TOKEN }}" > ~/.netrc
@@ -150,7 +155,7 @@ Generate a `.netrc` file for the current user of the GitHub runner to configure 
 
 You can use an `.npmrc` file with the authentication token to configure the access to a private npm package. Configure `NPM_TOKEN` as repository secret. Then use the following step prior to the npm installation step to generate (or overwrite) the `.npmrc` file. npm will use this token for all packages owned by the `@gethinode` organization, hosted on the GitHub package registry `npm.pkg.github.com`.
 
-```yml
+```yaml
 - name: Update .npmrc
     run: |
     echo "@gethinode:registry=https://npm.pkg.github.com/" > .npmrc
@@ -165,7 +170,7 @@ You can use an `.npmrc` file with the authentication token to configure the acce
 
 The following example action builds a Hinode website that uses both private npm packages and Hugo modules. Deploy this action to your `.github` folder as usual.
 
-```yml
+```yaml
 name: Build
 on:
   workflow_dispatch:
