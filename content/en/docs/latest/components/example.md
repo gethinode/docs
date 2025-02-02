@@ -14,13 +14,13 @@ tags: component
 
 The `example` shortcode displays a code example and renders a preview of the same input. The shortcode accepts the {{< link hugo_chroma >}}languages supported by Hugo's highlight function{{< /link >}}.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* command */>}}
 export MY_VAR=123
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -38,13 +38,13 @@ Set the `lang` argument to `hugo` to render a Hugo code example. Be sure to esca
 
 #### Preview
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo">}}
 {{</* command */>}}
 export MY_VAR=123
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 #### Input
 

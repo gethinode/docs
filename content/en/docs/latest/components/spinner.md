@@ -15,13 +15,13 @@ tags: component
 
 Use the `spinner` shortcode to indicate the loading state of a component or page. The inner content is used as alternative description. As an example, the following shortcode displays a centered spinner.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* spinner color="info" class="text-center" */>}}
 Loading...
 {{</* /spinner */>}}
 {{< /example>}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -37,7 +37,7 @@ Change the style of your spinner with shortcode arguments.
 
 Set the `color` argument to apply a theme color to the spinner. The following shortcodes display a centered spinner for each available color.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* spinner color="primary" */>}}Loading...{{</* /spinner */>}}
 {{</* spinner color="secondary" */>}}Loading...{{</* /spinner */>}}
@@ -50,16 +50,16 @@ Set the `color` argument to apply a theme color to the spinner. The following sh
 {{</* spinner color="white" */>}}Loading...{{</* /spinner */>}}
 {{</* spinner color="black" */>}}Loading...{{</* /spinner */>}}
 {{< /example>}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Growing spinner
 
 Set `grow` to `true` to show a growing spinner.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* spinner grow="true" color="info" class="text-center" */>}}
 Loading...
 {{</* /spinner */>}}
 {{< /example>}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

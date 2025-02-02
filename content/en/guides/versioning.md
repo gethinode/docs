@@ -169,7 +169,7 @@ The approach with various version folders in the same repository might be adequa
 
 **Create a new branch** called `v0.9` that is derived from your current branch (be sure to commit the current branch first). For demonstration purposes, we will expose the `latest` folder as the specific version `0.9`. Ofcourse, we could simply rename the physical folder and be done with it. However, we would loose the ability to easily track changes to our documentation in the Git repository. Renaming a folder implies that the old folder and content are removed, and a new folder is created. Instead, we will use Hugo's mounting feature to rename and expose the folder on the fly[^1].
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 > [!IMPORTANT]
 > {{< link hugo_mounts >}}Mounting a content folder overrides the language-specific settings{{< /link >}}. In our configuration we have set `defaultContentLanguage` to `en` and `defaultContentLanguageInSubdir` to `false`. We will need to manually refine our mounts to achieve the same behavior.
 

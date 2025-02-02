@@ -37,30 +37,30 @@ You can include DAM-enabled images and figures using the regular {{< link "../co
 
 ### Cloudinary
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* image src="https://res.cloudinary.com/demo/image/upload/dog.webp"
     ratio="1x1" caption="Cloudinary image" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### ImageKit.io
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* image src="https://ik.imagekit.io/demo/default-image.jpg"
     ratio="1x1" caption="ImageKit.io image" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Imgix
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* image src="https://assets.imgix.net/examples/bluehat.jpg"
     ratio="1x1" caption="imgix image" wrapper="col-6 mx-auto" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Rewriting origin URLs
 

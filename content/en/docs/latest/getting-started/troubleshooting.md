@@ -7,7 +7,7 @@ layout: docs
 
 Review the table below for some common issues and their potential cause. Please file a [bug report]({{% relref "contribute#bug-reports" %}}) if you believe you have encountered an unknown issue.
 
-{{% comment %}}<!-- markdownlint-disable MD036 MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD036 MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="The published website is not applying the styles correctly" >}}
     Incorrect styling of your published website may have several causes:
@@ -47,4 +47,4 @@ Review the table below for some common issues and their potential cause. Please 
     Setting `build.transpiler = "dartsass"` in the `main` section of your site parameters instructs Hinode to use the Dart Sass transpiler. Unlike the default `libsass` transpiler, the `dartsass` binary needs to be installed separately on your machine. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment. If Dart Sass is not required, you can revert back to `build.transpiler = "libsass"`. Else follow the {{</* link hugo_sass >}}installation instructions{{< /link */>}} on how to install the binary.
   {{< /accordion-item >}}
 {{< /accordion >}}
-{{% comment %}}<!-- markdownlint-enable MD036 MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD036 MD037 -->

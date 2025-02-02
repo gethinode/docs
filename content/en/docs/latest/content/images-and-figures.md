@@ -17,19 +17,19 @@ As an example, the following shortcode displays an image with rounded corners an
 > [!IMPORTANT]
 > Be sure to store your local images in the `assets` folder to take advantage of the image processing features. Images stored in the `static` folder are not processed.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* image src="img/flowers.jpg" ratio="21x9" class="rounded" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 You can also reference remote images by specifying an URL. Hinode downloads the image to the server and stores the processed images in the local `resources` folder (during debugging) or `public` folder (during build).
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* image src="https://picsum.photos/id/56/2880/1920" ratio="1x1" class="rounded" wrapper="mx-auto w-25" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 You can also use native Markdown to include an image since release {{< release version="v0.26.0" short="true" type="link" >}}.
 
@@ -42,11 +42,11 @@ You can also use native Markdown to include an image since release {{< release v
 
 Similar to the [images support]({{% relref "#images" %}}), you can add a caption to display below the image. Add the argument `caption` to include a figure caption.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* image src="img/coffee.jpg" ratio="21x9" caption="Figure caption" class="rounded" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 You can also use native Markdown to include a figure since release {{< release version="v0.26.0" short="true" type="link" >}}.
 

@@ -12,23 +12,23 @@ layout: docs
 
 Hugo provides the shortcode `ref` to link to another page within the site. The shortcode returns an absolute path. You can provide the document path as input. If you omit the leading `/`, the page is first resolved relative to the current page, then to the remainder of the site. Review {{< link hugo_links >}}Hugo's documentation{{< /link >}} for more examples and advanced options.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 [Tables]({{%/* ref "tables" */%}})
 
 [About]({{%/* ref "credits" */%}})
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 Similar to the `ref` shortcode, Hugo provides the shortcode `relref` to return a path relative to the current page.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 [Tables]({{%/* relref "tables" */%}})
 
 [About]({{%/* relref "credits" */%}})
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Cross-references
 
@@ -46,13 +46,13 @@ produces the following HTML:
 
 You can add a cross-reference to the section heading by specifying the generated ID as input for the `ref` and `relref` shortcodes, preceded by a `#`.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 [Reference]({{%/* ref "#reference" */%}})
 
 [Reference]({{%/* relref "#reference" */%}})
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## External links
 
@@ -107,11 +107,11 @@ Hinode uses `config/_default/params.toml` to manage links to external addresses 
 
 You can then use the following statement to generate the link.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="markdown" >}}
 {{</* link fontawesome /*/>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 You can [configure the behavior of managed links]({{% relref "layout#extended-configuration" %}}) in the `/config/_default/params.toml` file in the `main.externalLinks` section.
 

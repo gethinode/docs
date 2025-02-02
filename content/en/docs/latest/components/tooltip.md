@@ -12,13 +12,13 @@ tags: component
 
 Use the `tooltip` shortcode to display a tooltip for a hyperlink. Refer to the [button]({{% ref "#button" %}} "button") on how to display a tooltip for a button instead. The inner content is used as hyperlink text. As an example, the following shortcode displays a tooltip for a colored hyperlink.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* tooltip color="info" title="Tooltip" href="#!" */>}}
     Tooltip demonstration
 {{</* /tooltip */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -34,7 +34,7 @@ Change the style of your tooltip with shortcode arguments.
 
 Set `color` to adjust the color of the text element to which the tooltip is applied. As an example, the following shortcodes display a tooltip for each available color.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* tooltip color="primary" title="Tooltip" href="#!" */>}}Primary{{</* /tooltip */>}}&bull;
 {{</* tooltip color="secondary" title="Tooltip" class="d-none-dark" href="#!" */>}}Secondary{{</* /tooltip */>}}
@@ -47,17 +47,17 @@ Set `color` to adjust the color of the text element to which the tooltip is appl
 {{</* tooltip color="dark" title="Tooltip" class="d-none-dark" href="#!" */>}}Dark{{</* /tooltip */>}}
 {{</* tooltip color="dark" title="Tooltip" class="d-none-light bg-light" href="#!" */>}}Dark{{</* /tooltip */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Placement
 
 Set `placement` to adjust the placement of the tooltip.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* tooltip title="Tooltip" href="#!" placement="top" */>}}Top{{</* /tooltip */>}}&bull;
 {{</* tooltip title="Tooltip" href="#!" placement="bottom" */>}}Bottom{{</* /tooltip */>}}&bull;
 {{</* tooltip title="Tooltip" href="#!" placement="left" */>}}Left{{</* /tooltip */>}}&bull;
 {{</* tooltip title="Tooltip" href="#!" placement="right" */>}}Right{{</* /tooltip */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

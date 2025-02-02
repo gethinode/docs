@@ -34,7 +34,7 @@ Hinode uses several settings from Hugo's {{< link hugo_config >}}main configurat
 
 The base layout uses the {{< link hugo_config >}}main configuration{{< /link >}} of Hugo. The settings below are actively used by Hinode:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting         | Default | Description |
 |-----------------|---------|-------------|
@@ -42,7 +42,7 @@ The base layout uses the {{< link hugo_config >}}main configuration{{< /link >}}
 | `copyright`     | -       | Copyright notice added to the page footer. |
 | `enableGitInfo` | -       | Enables git information, which is used by [documentation pages]({{% relref "content-management#documentation-layout" %}}). |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/hugo.toml`.
 
@@ -61,7 +61,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode uses the following extended settings in the `main` section of the `site parameters`:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting            | Default           | Description |
 |--------------------|-------------------|-------------|
@@ -83,7 +83,7 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | `build.transpiler`   | "libsass"         | {{</* release version="v0.20.0" short="true" size="sm" inline="true" */>}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{</* link hugo_sass >}}installation of a separate binary on your machine{{< /link */>}}. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment.|
 | `build.silenceDeprecations`   | false         | {{</* release version="v0.27.9" short="true" size="sm" inline="true" */>}} Silences any deprecation warnings raised by the Dart Sass transpiler. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -95,13 +95,13 @@ The below configuration shows the default configuration set in `config/_default/
 
 You can show informative messages using the [toast shortcode]({{% relref "toast" %}}). By default, toast messages are displayed in the bottom right of the viewport. Hinode vertically stacks multiple toast messages automatically. Adjust the configuration by adjusting `messages` in the `site parameters`. The following arguments are supported:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting         | Default        | Description |
 |-----------------|----------------|-------------|
 | `placement`       | "bottom-right" | Optional position of the toast messages relative to the viewport: "top-left", "top-center","top-right", "middle-left", "middle-center", "middle-right", "bottom-left", "bottom-center", or "bottom-right" (default). |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -113,7 +113,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode can optionally add buttons to share a post via available social media. Use the following extended settings in the `sharing` section of the `site parameters` to configure these buttons:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
@@ -122,11 +122,11 @@ Hinode can optionally add buttons to share a post via available social media. Us
 | `reverse`         | false         | Flag to indicate if the sorting of the social sharing buttons should be reversed, defaults to false. |
 | `webshare`        | false         | Flag to indicate if native sharing provided by the Operating System should be enabled (via the web share API). If set and {{</* link caniuse_webshare >}}supported by the browser{{< /link */>}}, an additional button is added. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 Add each available provider to `[[sharing.providers]]`. The providers support the following arguments:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting   | Default | Description |
 |-----------|---------|-------------|
@@ -136,7 +136,7 @@ Add each available provider to `[[sharing.providers]]`. The providers support th
 | `weight`    | -       | Weight of the social sharing button, to be used as sorting key. |
 | `clipboard` | false   | If set, the defined url is copied to the clipboard instead of being opened. A [toast message]({{% relref "toast" %}}) is shown to inform the user. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -146,7 +146,7 @@ The below configuration shows the default configuration set in `config/_default/
 
 Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. The following parameters are used in the site's footer, header, and meta data. Refer to the [languages]({{% ref "languages" %}}) section to review the various configuration options to enable multilingual content.
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
@@ -159,7 +159,7 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | `footer`  | `socialTitle`   | -       | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.title` instead. |
 | `footer`  | `socialCaption` | -       | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.caption` instead. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/languages.toml` for the English language.
 
@@ -191,7 +191,7 @@ Feature .col-12 .flex-fill
 
 The configuration of the home page is set in the `home` section of the `site parameters`. The following settings are supported:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting             | Default           | Description |
 |---------------------|-------------------|-------------|
@@ -203,7 +203,7 @@ The configuration of the home page is set in the `home` section of the `site par
 | `feature.color`       | -                 | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
 | `feature.width`       | 6                 | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`. The `sections` are commented out, meaning all root sections are enabled by default.
 
@@ -269,7 +269,7 @@ Single pages support three optional layout types, which can be configured in the
 
 By default, single pages, such as a blog page, include multiple elements, such as a rich header, thumbnail, body, and footer. The following diagram illustrates the default layout of a single page.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< card-group color="info" cols="1" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}
 **Page header**
@@ -289,7 +289,7 @@ Description
 Navigation links
     {{< /card >}}
 {{< /card-group >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Documentation layout
 
@@ -348,18 +348,18 @@ Please refer to the [content management section]({{% relref "content-management#
         metadata = "original"
 ```
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
 | `metadata`     | "full"               | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Defines the metadata to include in the header of a single page type. Supported values are "full" (default), "original", and "none". In the default configuration, the header includes metadata elements for the original publication date, modification date (if applicable), reading time, and word count. When set to `original`, the modification date is always omitted. Set `metadata` to `none` to suppress all metadata elements. |
 | `sharing`         | true              | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Optional flag to indicate if a single page should include sharing options (when the {{</* link "#social-sharing-configuration" >}}social sharing configuration{{< /link */>}} is enabled). |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 The configuration of the **documentation pages** is set in the `docs` section of the site parameters. The following settings are supported:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting      | Default | Description |
 |--------------|---------|-------------|
@@ -368,7 +368,7 @@ The configuration of the **documentation pages** is set in the `docs` section of
 | `github`       | -       | Repository URL for the docs site, overrides `schema/github` in  `config/_default/params.toml`. |
 | `release`      | -       | Release url for the docs site, e.g. `https://github.com/gethinode/hinode/releases/tag/`. This setting is used by the [release shortcode]({{% relref "release" %}}).
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -398,7 +398,7 @@ The card layout displays a group of cards in a grid. The default setting is to s
 
 The list layout shows the page bundle's items as a vertical list. The thumbnail alternates between being left-aligned and right-aligned for each row. Remove the `description` from the page's frontmatter to display the full content instead of the description. The content of the item is displayed next to the thumbnail.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< card-group color="info" cols="2" padding="3" gutter="3" responsive=false class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card >}}{{</* fas image */>}}{{< /card >}}
     {{< card >}}Item 1{{< /card >}}
@@ -407,7 +407,7 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
     {{< card >}}{{</* fas image */>}}{{< /card >}}
     {{< card >}}Item 3{{< /card >}}
 {{< /card-group >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Nav layout
 
@@ -422,7 +422,7 @@ The nav layout shows a nav element where each tab pane represents a single item 
 
 The configuration of each section is set in the `sections` setting of the `site parameters`. The entire configuration is fully optional and uses default settings if omitted. The following settings are supported per section:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
@@ -437,11 +437,11 @@ The configuration of each section is set in the `sections` setting of the `site 
 | `style`        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
 | `wrap`         | false                | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 The `card` layout supports the following additional arguments:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
@@ -453,11 +453,11 @@ The `card` layout supports the following additional arguments:
 | `homepage`     | 3            | Maximum number of items to display on the home page (if defined in the [configuration](#configuration-1)), defaults to 3. |
 | `separator`    | false        | Flag to indicate a horizontal line should be added between items on small screens. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 The `nav` layout supports the following additional arguments:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting      | Default      | Description |
 |--------------|--------------|-------------|
@@ -467,7 +467,7 @@ The `nav` layout supports the following additional arguments:
 | `pane`         | "none"       | Optional style of the panes, either "none" (default) or "persona". |
 | `width`        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 The below configuration shows an example configuration of the [guides available on this site]({{% relref "guides" %}}). The configuration is set in `config/_default/params.toml`.
 

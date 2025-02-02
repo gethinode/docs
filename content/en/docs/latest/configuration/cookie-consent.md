@@ -21,7 +21,7 @@ Since release {{< release version="v0.27.0" short="true" type="link" >}} Hinode 
 
 Modern websites typically use a combination of local storage, session storage, and cookies to collect and store data. Although the various laws and regulations are commonly referred to as cookie law, the legislation is applicable to all kinds of technologies that enable data collection and processing. In practice, we should look into the scripts that interact with these data storages. Assigning a Hinode script (or a script bundle) to a specific category informs users about their intent. Hinodes supports the following categorization of scripts and their intent:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="necessary" >}}
     Necessary cookies are linked to the site's essential features, which include secure log-in and customizable consent settings. There is no personally identifying information stored by these cookies.
@@ -42,7 +42,7 @@ Modern websites typically use a combination of local storage, session storage, a
     Unassigned scripts are categorized as `other` by default. Any cookies used by these scripts should be reviewed and assigned to a specific category by the site administrator. Hinode also assigns scripts to this category that do not necessarily interact with cookies at all.
   {{< /accordion-item >}}
 {{< /accordion >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Assigning scripts to a category
 

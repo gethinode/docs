@@ -15,7 +15,7 @@ Hinode supports color modes, or themes, as introduced by Bootstrap `v5.3.0`. By 
 
 Hinode defines two classes to simplify the development of color-mode aware websites. Simply add `.d-none-dark` as class attribute to block the display of an element in dark mode. Vice versa, use `.d-none-light` to block the content from rendering in light mode. The following example illustrates this behavior. Toggle the color mode of the current website to test the behavior.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
 I'm visible in {{</* mark >}}light mode{{< /mark */>}} only
 {.d-none-dark}
@@ -24,7 +24,7 @@ I'm visible in {{</* mark >}}dark mode{{< /mark */>}} only
 {.d-none-light}
 
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Accessibility
 
@@ -34,14 +34,14 @@ Contrast is an important aspect of your site accessibility. The {{< link wcag_co
 
 The argument `darkModeTint` lightens the primary color with a given percentage, while `darkModeShade` darkens the primary background color. You can adjust these settings in the `style` section of the `site parameters`.
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting       | Default | Description |
 |---------------|---------|-------------|
 | darkModeShade | "20%"   | Darkens the primary background color in dark mode with a given percentage, defaults to 20%. |
 | darkModeTint  | "40%"   | Lightens the primary color in dark mode with a given percentage, defaults to 40%. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ## Sass
 
