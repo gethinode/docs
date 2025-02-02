@@ -178,7 +178,7 @@ The workflow requires two secrets within your repository. Add them as `action se
 
 Hugo modules have several constraints to work properly. The below overview provides some common challenges and how to overcome them.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="The required distribution files are unavailable" >}}
     Hugo modules use the latest available release on GitHub, or the most recent HEAD of the default branch otherwise. However, not all repositories maintain their distribution files as part of version control or their GitHub release assets. One such example is the {{</* link leaflet >}}Leaflet library{{< /link */>}}. The repository does not include the compiled JavaScript, but only its source files. As a workaround, the {{</* link repository_mod_leaflet >}}Leaflet module{{< /link */>}} downloads the npm package instead and copies the required files in a `postinstall` script.
@@ -202,4 +202,4 @@ Hugo modules have several constraints to work properly. The below overview provi
     You might have an issue with your Hugo module cache. Certain operating systems such as macOS have a volatile cache system, that is modified when your machine has restarted or was recently suspended. Try running `hugo mod clean` to clear the Hugo module cache and then rerun `hugo mod get -u`.
   {{< /accordion-item >}}
 {{< /accordion >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

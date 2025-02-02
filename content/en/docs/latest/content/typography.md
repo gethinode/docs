@@ -11,7 +11,7 @@ Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for t
 
 Use the native Markdown character `#` to generate headings for your content. The following input represents six levels of section headings. They are generated as HTML `<h1>`—`<h6>` elements. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-{{% comment %}}<!-- markdownlint-disable MD025 -->{{% /comment %}}
+<!-- markdownlint-disable MD025 -->
 {{< example lang="markdown" >}}
 
 # H1. Heading
@@ -27,7 +27,7 @@ Use the native Markdown character `#` to generate headings for your content. The
 ###### H6. Heading
 
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD025 -->{{% /comment %}}
+<!-- markdownlint-enable MD025 -->
 
 Alternatively, you can use `.h1` through `.h6` classes, for when you want to match the font styling of a heading but cannot use the associated HTML element. For example, using a `.h2` class will exclude the section heading from the generated [table of contents]({{% ref "navigation#table-of-contents" %}}).
 
@@ -92,7 +92,7 @@ You can use native Markdown to apply basic styling. Use HTML elements for additi
 
 Use native Markdown apply basic styling to your text.
 
-{{% comment %}}<!-- markdownlint-disable MD036 MD049 -->{{% /comment %}}
+<!-- markdownlint-disable MD036 MD049 -->
 {{< example lang="markdown" >}}
 **This is bold text**
 
@@ -104,7 +104,7 @@ _This text is italicized_
 
 ***All this text is important***
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD036 MD049 -->{{% /comment %}}
+<!-- markdownlint-enable MD036 MD049 -->
 
 ### Extended Styling
 
@@ -112,7 +112,7 @@ _This text is italicized_
 
 Use shortcodes and classes for additional styling options. The following example illustrates highlighting, fine print, subscript, and superscript.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
 You can use the mark shortcode to {{</* mark >}}highlight{{< /mark */>}} text.
 
@@ -126,7 +126,7 @@ H{{</* sub 2 */>}}O is a liquid.
 This is an {{</* ins >}}underlined text{{< /ins */>}}.
 
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Emoji
 
@@ -145,11 +145,11 @@ That is so funny! :smiley:
 
 Use the {{< link "docs/components/abbr" >}}abbr shortcode{{< /link>}} for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
 {{</* abbr HTML */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 
 ## Blockquotes
 
@@ -185,7 +185,7 @@ The following Markdown generates a blockquote with attribution. The citation its
 
 You can add an alert designator to a blockquote to generate a GitHub-style alert.
 
-{{% comment %}}<!-- markdownlint-disable MD028 -->{{% /comment %}}
+<!-- markdownlint-disable MD028 -->
 {{< example lang="markdown" >}}
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
@@ -202,7 +202,7 @@ You can add an alert designator to a blockquote to generate a GitHub-style alert
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD028 -->{{% /comment %}}
+<!-- markdownlint-enable MD028 -->
 
 ## Code Blocks
 

@@ -58,13 +58,13 @@ Most shortcodes support multiple arguments to configure their behavior and to re
 
 Let's consider the following example. The {{< link "docs/components/toast" />}} shortcode displays a dismissable message in the bottom-right corner of the screen. We can trigger it by assigning its unique identifier to a button.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* button toast="toast-example-1" */>}}Show toast{{</* /button */>}}
 
 {{</* toast id="toast-example-1" header="First title" */>}}This is a toast message{{</* /toast */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The toast shortcode displays the message `This is a toast message` provided as inner input. Additionally, it supports the following arguments:
 

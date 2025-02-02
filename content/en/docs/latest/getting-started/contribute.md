@@ -120,7 +120,7 @@ Bundle related client-side javascript in a logically named file. Add the file to
 
 See {{< link markdown_rules >}}markdown rules{{< /link >}} for more details. The following rules are globally disabled:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 | #     | Rule | Remarks |
 |-------|---------------------------------------------------------------------------------------------------|---------------------------------|
 | MD013 | {{< link markdown_md013 >}}Line length{{< /link >}}                                           | |
@@ -129,7 +129,7 @@ See {{< link markdown_rules >}}markdown rules{{< /link >}} for more details. The
 | MD034 | {{< link markdown_md034 >}}Bare URL used{{< /link >}}                                         | |
 | MD051 | {{< link markdown_md051 >}}Link fragments should be valid{{< /link >}}                        | |
 | MD053 | {{< link markdown_md053 >}}Link and image reference definitions should be needed{{< /link >}} | Disabled due to false positives |
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 ## License
 

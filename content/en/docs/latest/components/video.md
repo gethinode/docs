@@ -19,11 +19,11 @@ modules: ["vimeo"]
 
 Use the `video` shortcode to embed a responsive video on your site. The shortcode currently supports three providers, being {{< link cloudinary>}}Cloudinary{{< /link >}}, {{< link vimeo>}}Vimeo{{< /link >}}, and {{< link youtube>}}YouTube{{< /link >}}. The last two providers also support shorthand notation. As an example, the following shortcode displays a Hugo quickstart guide:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* youtube w7Ft2ymGmfc */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -45,11 +45,11 @@ Embed a responsive video by specifying the hosting provider.
 
 As an example, the following shortcode displays an Elephants video hosted by Cloudinary. Cloudinary requires both an account name and a public ID of the video. You can provide the account name as shortcode argument, or {{< link "#configuration" >}}configure a default account name{{< /link >}} in the site's parameters.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* video host="cloudinary" account="demo" id="elephants" autoplay=true */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Vimeo
 
@@ -58,11 +58,11 @@ As an example, the following shortcode displays an Elephants video hosted by Clo
 
 As an example, the following shortcode displays a Vimeo video. By setting `autotitle` to `true`, Hinode captures the video's title as defined by Vimeo and assigns this to the title of the video frame.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* vimeo id="55073825" autoplay=true autotitle=true */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### YouTube
 
@@ -71,8 +71,8 @@ As an example, the following shortcode displays a Vimeo video. By setting `autot
 
 As an example, the following shortcode displays a Hugo quickstart guide hosted by YouTube.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* youtube id="w7Ft2ymGmfc" autoplay=true autotitle=true */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

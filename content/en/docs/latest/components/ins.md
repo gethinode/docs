@@ -14,11 +14,11 @@ tags: component
 
 As an example, the following shortcode displays underlined text.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
 This is an {{</* ins */>}}underlined text{{</* /ins */>}}.
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
