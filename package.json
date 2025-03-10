@@ -43,7 +43,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "cpy-cli": "^5.0.0",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",
