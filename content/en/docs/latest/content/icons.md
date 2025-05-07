@@ -227,7 +227,7 @@ The following table describes the available basic animation classes.
 | `fa-bounce` | Bounces an icon up and down |
 | `fa-flip` | Rotates an icon about the Y axis 180 degrees |
 | `fa-shake` | Shakes an icon back and forth |
-| `fa-spin` | Roates an icon |
+| `fa-spin` | Rotates an icon |
 {{< /table >}}
 {{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
 
