@@ -49,7 +49,7 @@
     "cssnano-preset-advanced": "^7.0.7",
     "eslint": "^9.26.0",
     "hugo-bin": "^0.142.0",
-    "markdownlint-cli2": "^0.18.0",
+    "markdownlint-cli2": "^0.18.1",
     "neostandard": "^0.12.1",
     "netlify-plugin-hugo-cache-resources": "^0.2.1",
     "postcss-cli": "^11.0.1",
