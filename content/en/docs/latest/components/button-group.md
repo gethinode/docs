@@ -12,7 +12,7 @@ tags: component
 
 Use the `button-group` shortcode to display a group of buttons. Add inner `<button>` elements for each [button]({{% ref "button" %}} "button"). As an example, the following shortcode displays a group of three buttons.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* button-group aria-label="Basic example" */>}}
   {{</* button color="primary" href="#!" */>}}Left{{</* /button */>}}
@@ -20,7 +20,7 @@ Use the `button-group` shortcode to display a group of buttons. Add inner `<butt
   {{</* button color="primary" href="#!" */>}}Right{{</* /button */>}}
 {{</* /button-group */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 

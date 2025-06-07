@@ -14,13 +14,13 @@ tags: component
 
 The `command` shortcode generates terminal output for either `bash`, `powershell`, or `sql` shell languages. The following example generates a block with a default bash command prompt.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* command */>}}
 export MY_VAR=123
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -36,7 +36,7 @@ Change the style and language of your command prompt with shortcode arguments.
 
 Specify `user` and `host` to add the user context to the prompt. In addition, use `(out)` to specify an output line and use `\` to denote a line continuation.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* command user="user" host="localhost" */>}}
 export MY_VAR=123
@@ -50,13 +50,13 @@ echo "goodbye"
 (out)goodbye
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### PowerShell
 
 Set the `shell` argument to `powershell` to generate a PowerShell terminal. Override the `prompt` to add a directory if needed. Use the backtick `` ` `` symbol to denote a line continuation.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* command prompt="PS C:\Users\User>" shell="powershell" */>}}
 Write-Host `
@@ -68,13 +68,13 @@ Write-Host 'Goodbye from PowerShell!'
 (out)Goodbye from PowerShell!
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### SQL
 
 Set the `shell` argument to `sql` to generate a SQL terminal. Use the `(con)` suffix to denote a line continuation.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* command prompt="mysql>" shell="sql" */>}}
 set @my_var = 'foo';
@@ -98,4 +98,4 @@ order by last_name;
 (out)1 row in set (0.00 sec)
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-ensable MD037 -->{{% /comment %}}
+<!-- markdownlint-ensable MD037 -->
