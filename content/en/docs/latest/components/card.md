@@ -11,7 +11,7 @@ tags: component
 ## Overview
 
 > [!IMPORTANT]
-> Cards support inner content since release {{< release version="v0.18.6" short="true" type="link" >}}. As a result, references to the card shortcode must be closed or self-closed.
+> Cards support inner content since release {{< release version="v0.18.6" short="true" link-type="link" >}}. As a result, references to the card shortcode must be closed or self-closed.
 
 Use the `card` shortcode to display a card that links to a content page. When using a rich layout, the card includes a thumbnail (or icon) and a header. As an example, the following shortcode displays a horizontal card that links to the [editing]({{% ref "editing" %}}) guide. It includes a custom header and footer. You can use the {{< link "card-group" >}}card-group shortcode{{< /link >}} to align multiple cards and to position them in a grid.
 

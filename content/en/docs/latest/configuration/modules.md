@@ -25,7 +25,7 @@ The main repository of Hinode imports the following modules by default.
 ## Configuring modules
 
 > [!NOTE]
-Hinode uses the default configuration defined in each referenced module since release {{< release version="v0.24.0" short="true" type="link" >}}. You can override these settings in your site parameters.
+Hinode uses the default configuration defined in each referenced module since release {{< release version="v0.24.0" short="true" link-type="link" >}}. You can override these settings in your site parameters.
 
 You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on an opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
 

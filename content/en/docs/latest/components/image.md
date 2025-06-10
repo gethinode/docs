@@ -107,7 +107,7 @@ Add a `caption` to transform the image into a figure with caption.
 The shortcode supports vector images of type `.svg` too. The shortcode supports the regular arguments, however, vector images are contained instead of cropped when the `ratio` is set. The next example shows a color-mode-aware vector image. The background is set to a contrasting color to illustrate the ratio behavior.
 
 > [!IMPORTANT]
-> Since release {{< release version="v0.26.3" short="true" type="link" >}}, vector images stored in the site's `assets` folder are embedded as inline vector images. Vector images stored in the `static` folder are kept as separate files.
+> Since release {{< release version="v0.26.3" short="true" link-type="link" >}}, vector images stored in the site's `assets` folder are embedded as inline vector images. Vector images stored in the `static` folder are kept as separate files.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}

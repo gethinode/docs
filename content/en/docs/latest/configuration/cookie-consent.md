@@ -12,7 +12,7 @@ layout: docs
 
 Regulations such as GDPR (in the EU and UK) and CCPA/CPRA (California) require consent from users about the use of cookies. Without prior consent, the website should refrain from storing or accessing any cookies, unless they are absolutely essential. Site owners should also be able to share proof of the consents (consent logging) on request of the authorities. Lastly, certain countries put restrictions on where to geographically store the consent logs.
 
-Since release {{< release version="v0.27.0" short="true" type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution using the pointers in this section. Review the next paragraphs to familiarize yourself with the available options and configurations.
+Since release {{< release version="v0.27.0" short="true" link-type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution using the pointers in this section. Review the next paragraphs to familiarize yourself with the available options and configurations.
 
 ## Categorizing scripts
 

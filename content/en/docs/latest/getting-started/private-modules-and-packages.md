@@ -21,7 +21,7 @@ Hinode provides several themes and modules as a private Hugo module. You will ne
 [GitHub provides a CLI](https://cli.github.com/) to enable authentication to private and public repositories. When using the command `gh auth`, the CLI tool opens a new browser window, where you can authenticate yourself with GitHub. The login procedure supports both login/password and tokens. By default, this procedure supports one account per domain only. Run the following command to instruct git to use the full HTTP path of the repository instead.
 
 <!-- markdownlint-disable MD037 -->
-{{< nav type="tabs" id="tabs-hugo-1" >}}
+{{< nav tab-type="tabs" id="tabs-hugo-1" >}}
   {{< nav-item header="macOS/Linux" show="true" >}}
 {{</* command */>}}
 git config --global credential.useHttpPath true
@@ -43,7 +43,7 @@ From now on, git will trigger a authencation request when accessing a new reposi
 As an alternative, you can also use a git configuration that links a Personal Access Token to a specific domain using the `insteadOf` directive. For example, you can use the following command to configure a token to access the private module `github.com/gethinode/mod-bookshop`. Replace `<PAT>` with the actual token value. The value for `<ACCOUNT>` can be anything (but is mandatory). Git stores the token as plain text in `~/.gitconfig`, which is less secure than the preferred approach.
 
 <!-- markdownlint-disable MD033 MD037 -->
-{{< nav type="tabs" id="tabs-hugo-2" >}}
+{{< nav tab-type="tabs" id="tabs-hugo-2" >}}
   {{< nav-item header="macOS/Linux" show="true" >}}
 {{</* command */>}}
 git config --global \
@@ -71,7 +71,7 @@ Hinode publishes several utilities as npm packages on `npm.pkg.github.com`. The 
 Follow the instructions for your operating system below.
 
 <!-- markdownlint-disable MD037 -->
-{{< nav type="tabs" id="tabs-npm-1" >}}
+{{< nav tab-type="tabs" id="tabs-npm-1" >}}
   {{< nav-item header="macOS" show="true" >}}
 
 > [!NOTE]

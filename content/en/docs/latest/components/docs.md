@@ -39,7 +39,7 @@ The `docs` shortcode supports `.toml` and `.scss` file formats. Use a marker to 
 Click on one the tabs to see a full example of an input file.
 
 <!-- markdownlint-disable MD031 -->
-{{< nav type="tabs" id="tabs-1" >}}
+{{< nav tab-type="tabs" id="tabs-1" >}}
   {{< nav-item header="toml" show="true" >}}
 ```toml
 # toml-docs-start main

@@ -8,7 +8,7 @@ layout: docs
 ## Internal links
 
 > [!IMPORTANT]
-> Since release {{< release version="v0.26.0" short="true" type="link" >}}, Hinode renders all links using a render hook. The support for markdown links requires that any named links use the `{{%/* myshortcode */%}}` notation instead of `{{</* myshortcode */>}}` notation going forward.
+> Since release {{< release version="v0.26.0" short="true" link-type="link" >}}, Hinode renders all links using a render hook. The support for markdown links requires that any named links use the `{{%/* myshortcode */%}}` notation instead of `{{</* myshortcode */>}}` notation going forward.
 
 Hugo provides the shortcode `ref` to link to another page within the site. The shortcode returns an absolute path. You can provide the document path as input. If you omit the leading `/`, the page is first resolved relative to the current page, then to the remainder of the site. Review {{< link hugo_links >}}Hugo's documentation{{< /link >}} for more examples and advanced options.
 
@@ -68,7 +68,7 @@ My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 
 ### Asset links
 
-Hinode supports validated links to published assets since release {{< release version="v0.26.3" short="true" type="link" >}}. Store the assets as either {{< link hugo_page_resources >}}page resource{{< /link >}} or in the site's `static` folder. Pending on the media type, the browser will open or download the file.
+Hinode supports validated links to published assets since release {{< release version="v0.26.3" short="true" link-type="link" >}}. Store the assets as either {{< link hugo_page_resources >}}page resource{{< /link >}} or in the site's `static` folder. Pending on the media type, the browser will open or download the file.
 
 The following example opens an image stored in the `static` folder (photo by {{< link "https://unsplash.com/@christiane_simone_coaching" >}}Christiane S Hartl{{< /link >}} on {{< link "https://unsplash.com/photos/green-frog-on-black-leather-textile-gsqpUyM0DPI" >}}Unsplash{{< /link >}}) in the current window.
 

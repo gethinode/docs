@@ -100,7 +100,7 @@ As an example, the following shortcode displays an informative alert with an ico
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* alert type="info" */>}}
+{{</* alert alert-type="info" */>}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -115,7 +115,7 @@ As an example, the following shortcode displays a warning with an icon.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* alert type="danger" */>}}
+{{</* alert alert-type="danger" */>}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in

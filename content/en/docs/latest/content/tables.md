@@ -7,7 +7,7 @@ modules: ["simple-datatables"]
 ---
 
 > [!NOTE]
-> Since Hinode {{< release version="v0.26.7" short="true" type="link" >}} you no longer need to include the `.table` attribute with your Markdown table. Hinode uses a render hook to ensure the Markdown table uses Bootstrap's styling automatically. You can still use the `table` shortcode as equivalent - which also adds support for data tables.
+> Since Hinode {{< release version="v0.26.7" short="true" link-type="link" >}} you no longer need to include the `.table` attribute with your Markdown table. Hinode uses a render hook to ensure the Markdown table uses Bootstrap's styling automatically. You can still use the `table` shortcode as equivalent - which also adds support for data tables.
 
 Hugo supports Markdown tables natively. Hinode enhances these tables with optional styling features provided by Bootstrap. The following paragraphs illustrate how to use basic tables, how to accent them, how to adjust the borders, and how to make the table more compact.
 
@@ -159,7 +159,7 @@ Add `.table-sm` to make any table more compact by cutting all cell padding in ha
 {{< release version="v0.8.0" >}}
 
 > [!IMPORTANT]
-> The prefix `table-responsive-` has been dropped to denote a responsive size in release {{< release version="v0.22.0" short="true" type="link" >}}. Instead, use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint.
+> The prefix `table-responsive-` has been dropped to denote a responsive size in release {{< release version="v0.22.0" short="true" link-type="link" >}}. Instead, use `{sm|md|lg|xl|xxl}` to create responsive tables up to a particular breakpoint.
 
 Embed the markdown table within the {{< link "docs/components/table" />}} shortcode to make the table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens.
 

@@ -212,7 +212,7 @@ The below configuration shows the default configuration set in `config/_default/
 ## List pages
 
 > [!NOTE]
-> List pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter.
+> List pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" link-type="link" >}}. Set the `type` in the page's frontmatter.
 
 List pages define one [configurable section]({{% relref "#page-sections" %}}) for the available content within the page bundle. By default, list pages display the most recent nine items as card group. If the section contains more items, a paginator is added below the card group. Adjust the setting `pagerSize` in the {{< link hugo_pagination >}}main configuration{{< /link >}} as needed.
 
@@ -238,11 +238,11 @@ The list page uses the [configuration of a single section]({{% relref "#configur
 ## Single pages
 
 > [!IMPORTANT]
-> Single pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" type="link" >}}. Set the `type` in the page's frontmatter. The `type` parameter replaces the previous `layout` parameter.
+> Single pages support {{< link hugo_content_view >}}content view templates{{< /link >}} since release {{< release version="v0.21.0" short="true" link-type="link" >}}. Set the `type` in the page's frontmatter. The `type` parameter replaces the previous `layout` parameter.
 
 Single pages follow the base layout but introduce two columns next to the body content. The left column shows a [sidebar navigation]({{% ref "navigation#sidebar-navigation" %}}) if applicable and is left empty otherwise. The right column shows a [table of contents]({{% ref "navigation#table-of-contents" %}}) for the current page if applicable. On smaller viewscreens, the sidebar navigation folds into an offcanvas element, whilst the table of contents is hidden. On medium-sized screens the sidebar navigation takes precedence over the table of contents. The following diagram illustrates the base layout (note: this may best be viewed on a larger screen).
 
-{{< card-group color="body-tertiary" cols="auto" padding="3" class="text-center bg-opacity-10 text-body d-fluid" wrapper="border rounded-3 my-4 p-4" >}}
+{{< card-group color="body-tertiary" padding="3" class="text-center bg-opacity-10 text-body d-fluid" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card class="col-12" >}}Header .col-12{{< /card >}}
     {{< card color="info" class="col-12 col-lg-2 flex-grow-1 d-none d-lg-block" >}}
 Sidebar
@@ -413,7 +413,7 @@ The list layout shows the page bundle's items as a vertical list. The thumbnail 
 
 The nav layout shows a nav element where each tab pane represents a single item of the page bundle. Remove the `description` from the page's frontmatter to display the full content instead of the description. The tab pane shows the content of the selected item.
 
-{{< card-group color="info" cols="auto" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
+{{< card-group color="info" padding="3" class="text-center bg-opacity-10 text-body" wrapper="border rounded-3 my-4 p-4" >}}
     {{< card class="col-7" >}}**Item 1** | Item 2 | Item 3{{< /card >}}
     {{< card class="col-12" >}}Content .col-12{{< /card >}}
 {{< /card-group >}}

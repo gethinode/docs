@@ -16,7 +16,7 @@ Use the `nav` shortcode to show a group of multiple tab panes. Add `nav-item` in
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav id="links-1" fade="true" */>}}
+{{</* nav id="links-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -37,11 +37,11 @@ The shortcode supports the following arguments:
 
 In addition, the following arguments are passed to the individual navigation items.
 
-{{< args structure="nav-item" group="shortcode" parent="true" >}}
+{{< args structure="nav-item" group="shortcode" parent="true" render-type="arguments" >}}
 
 Add an inner `nav-item` element for each item of the tab group. The `nav-item` element supports the following arguments:
 
-{{< args structure="nav-item" group="shortcode" >}}
+{{< args structure="nav-item" group="shortcode" render-type="both" >}}
 
 ## Examples
 
@@ -100,7 +100,7 @@ Takes the basic nav from above and generates a tabbed interface by setting `type
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="tabs" id="tabs-1" */>}}
+{{</* nav tab-type="tabs" id="tabs-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -119,7 +119,7 @@ Take that same HTML, but using `pills` instead:
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="pills" id="pills-1" */>}}
+{{</* nav tab-type="pills" id="pills-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -138,7 +138,7 @@ Take that same HTML, but using `underline` instead:
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="underline" id="underline-1" */>}}
+{{</* nav tab-type="underline" id="underline-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -159,7 +159,7 @@ Take that same HTML, but using `callout` instead:
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="callout" id="callout-1" */>}}
+{{</* nav tab-type="callout" id="callout-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -178,7 +178,7 @@ To proportionately fill all available space with your `.nav-items`, use `.nav-fi
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="pills" class="nav-fill" */>}}
+{{</* nav tab-type="pills" class="nav-fill" */>}}
   {{</* nav-item header="Nav Item #1" show="true" /*/>}}
   {{</* nav-item header="Much longer nav item #2" /*/>}}
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
@@ -190,7 +190,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="pills" class="nav-justified" */>}}
+{{</* nav tab-type="pills" class="nav-justified" */>}}
   {{</* nav-item header="Nav Item #1" show="true" /*/>}}
   {{</* nav-item header="Much longer nav item #2" /*/>}}
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}

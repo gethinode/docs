@@ -154,7 +154,7 @@ Use the {{< link "docs/components/abbr" >}}abbr shortcode{{< /link>}} for abbrev
 ## Blockquotes
 
 > [!NOTE]
-> Since release {{< release version="v0.25.2" short="true" type="link" >}}, blockquotes no longer require an additional styling directive. You can drop the now obsolete `{.blockquote}` from your input.
+> Since release {{< release version="v0.25.2" short="true" link-type="link" >}}, blockquotes no longer require an additional styling directive. You can drop the now obsolete `{.blockquote}` from your input.
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations. Use the `>` Markdown character to generate a blockquote.
 
@@ -285,7 +285,7 @@ Use the `-` character followed by either `[x]` or `[ ]` to indicate a (completed
 
 {{< release version="v0.16.0" >}}
 
-Use {{< link katex >}}KaTeX{{< /link >}} to add mathematical formulas to your content pages. You can use server-side math rendering since Hinode release {{< release version="v0.26.0" short="true" type="link" >}}. Add the following configuration to your site configuration (e.g. `hugo.toml`) to configure the required passthrough delimiters:
+Use {{< link katex >}}KaTeX{{< /link >}} to add mathematical formulas to your content pages. You can use server-side math rendering since Hinode release {{< release version="v0.26.0" short="true" link-type="link" >}}. Add the following configuration to your site configuration (e.g. `hugo.toml`) to configure the required passthrough delimiters:
 
 ```toml
 [markup.goldmark]

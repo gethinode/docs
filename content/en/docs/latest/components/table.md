@@ -13,7 +13,7 @@ tags: component
 {{< release version="v0.8.0" >}}
 
 > [!IMPORTANT]
-> Bootstrap styling attributes require an explicit class argument as of release {{< release version="v0.22.0" short="true" type="link" >}}. For example, use the following argument to accentuate a table with table-striped: `class="table-striped"`.
+> Bootstrap styling attributes require an explicit class argument as of release {{< release version="v0.22.0" short="true" link-type="link" >}}. For example, use the following argument to accentuate a table with table-striped: `class="table-striped"`.
 
 Use the table shortcode to make your markdown table responsive. Responsive tables scroll horizontally to improve the layout on smaller screens. The following example illustrates how this works.
 
