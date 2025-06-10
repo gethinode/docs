@@ -65,7 +65,7 @@ Hinode includes a partial template to render the script references. It is invoke
 
 Hinode includes a basic script template in `layouts/partials/templates/script.html`. It includes the following code:
 
-{{< file path="./_vendor/github.com/gethinode/hinode/layouts/partials/templates/script.html" full="false" >}}
+{{< file path="./_vendor/github.com/gethinode/hinode/layouts/_partials/templates/script.html" full="false" >}}
 
 You can modify this template to your needs. For example, {{< link "cookieyes_script_code" >}}CookieYes supports a custom attribute{{< /link >}} called `data-cookieyes` to categorize the referenced script. You could modify the template to include this custom attribute:
 
