@@ -93,19 +93,14 @@ Deploy your site to Azure blob storage in six steps.
     {{</* /command */>}}
   {{< /accordion-item >}}
   {{< accordion-item header="Step 4. Build the website locally" >}}
-    Run the following command to build your website locally:
-    {{</* nav type="tabs" id="pills-1" */>}}
-      {{</* nav-item header="Hugo" show="true" */>}}
-        {{</* command user="user" host="localhost" */>}}
-        hugo mod get -u ./... && hugo mod tidy && hugo --gc --minify
-        {{</* /command */>}}
-      {{</* /nav-item */>}}
-      {{</* nav-item header="npm" */>}}
-        {{</* command user="user" host="localhost" */>}}
-        npm install && npm run mod:update && npm run build
-        {{</* /command */>}}
-      {{</* /nav-item */>}}
-    {{</* /nav */>}}
+    Run the following command to build your website locally using `hugo`:
+      {{</* command user="hugo" host="localhost" */>}}
+      hugo mod get -u ./... && hugo mod tidy && hugo --gc --minify
+      {{</* /command */>}}
+    Alternatively, use the following command when using `npm`: 
+      {{</* command user="npm" host="localhost" */>}}
+      npm install && npm run mod:update && npm run build
+      {{</* /command */>}}
   {{< /accordion-item >}}
   {{< accordion-item header="Step 5. Deploy the files" >}}
     Deploy the files to your Azure blob storage using the following command. Add `--dryRun` to review the upload before actually publishing the files.
