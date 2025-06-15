@@ -46,6 +46,16 @@
 #     - title: Layout
 #     - title: Validation
 
+- title: Content Blocks
+  link: "#"
+  pages:
+    - title: About
+    - title: FAQ
+    - title: Hero
+    - title: Releases
+    - title: Separator
+    - title: Video message
+
 - title: Components
   link: "#"
   pages:
@@ -76,6 +86,7 @@
     - title: Link
     - title: Map
     - title: Mark
+    - title: Mermaid
     # - title: Modal
     - title: Navbar
     - title: Navs and tabs
