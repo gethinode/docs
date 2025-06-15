@@ -12,7 +12,7 @@ tags: component
 
 {{< release version="v0.19.0" >}}
 
-Use the abbr shortcode to show the long form of an abbreviation on hover. The abbreviation data is retrieved from a central data file. By default, the shortcode uses "data/abbr.yaml" with translation support.
+Use the abbr shortcode to show the long form of an abbreviation on hover. The abbreviation data is retrieved from a central data file. By default, the shortcode uses `data/abbr.yaml` with translation support.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
