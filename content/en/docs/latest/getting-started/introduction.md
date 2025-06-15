@@ -41,7 +41,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
 {{< /collapse >}}
 
 <!-- markdownlint-disable MD005 MD029 MD037 -->
-{{< nav type="tabs" id="pills-1" >}}
+{{< nav tab-type="tabs" id="pills-1" >}}
   {{< nav-item header="Hugo" show="true" >}}
 
 1. **Create a new site**
