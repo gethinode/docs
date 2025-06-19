@@ -14,9 +14,9 @@ tags: component
 
 Use the `nav` shortcode to show a group of multiple tab panes. Add `nav-item` inner elements for each tab pane.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav id="links-1" fade="true" */>}}
+{{</* nav id="links-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -27,7 +27,7 @@ Use the `nav` shortcode to show a group of multiple tab panes. Add `nav-item` in
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -37,11 +37,11 @@ The shortcode supports the following arguments:
 
 In addition, the following arguments are passed to the individual navigation items.
 
-{{< args structure="nav-item" group="shortcode" parent="true" >}}
+{{< args structure="nav-item" group="shortcode" parent="true" render-type="arguments" >}}
 
 Add an inner `nav-item` element for each item of the tab group. The `nav-item` element supports the following arguments:
 
-{{< args structure="nav-item" group="shortcode" >}}
+{{< args structure="nav-item" group="shortcode" render-type="both" >}}
 
 ## Examples
 
@@ -53,7 +53,7 @@ By default, navs are left-aligned, but you can easily change them to center or r
 
 Centered with `.justify-content-center`:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* nav class="justify-content-center" */>}}
   {{</* nav-item header="Nav Item #1" show="true" /*/>}}
@@ -61,11 +61,11 @@ Centered with `.justify-content-center`:
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 Right-aligned with `.justify-content-end`:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* nav class="justify-content-end" */>}}
   {{</* nav-item header="Nav Item #1" show="true" /*/>}}
@@ -73,13 +73,13 @@ Right-aligned with `.justify-content-end`:
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Vertical
 
 Stack your navigation by setting `vertical` to `true`.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* nav vertical="true" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
@@ -92,15 +92,15 @@ Stack your navigation by setting `vertical` to `true`.
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Tabs
 
 Takes the basic nav from above and generates a tabbed interface by setting `type` to `tabs`. The inner content of each `nav-item` is rendered within a linked tab pane. The content supports embedded HTML.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="tabs" id="tabs-1" */>}}
+{{</* nav tab-type="tabs" id="tabs-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -111,15 +111,15 @@ Takes the basic nav from above and generates a tabbed interface by setting `type
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Pills
 
 Take that same HTML, but using `pills` instead:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="pills" id="pills-1" */>}}
+{{</* nav tab-type="pills" id="pills-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -130,15 +130,15 @@ Take that same HTML, but using `pills` instead:
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Underline
 
 Take that same HTML, but using `underline` instead:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="underline" id="underline-1" */>}}
+{{</* nav tab-type="underline" id="underline-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -149,7 +149,7 @@ Take that same HTML, but using `underline` instead:
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Callout
 
@@ -157,9 +157,9 @@ Take that same HTML, but using `underline` instead:
 
 Take that same HTML, but using `callout` instead:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="callout" id="callout-1" */>}}
+{{</* nav tab-type="callout" id="callout-1" */>}}
   {{</* nav-item header="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
@@ -170,30 +170,30 @@ Take that same HTML, but using `callout` instead:
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Fill and justify
 
 To proportionately fill all available space with your `.nav-items`, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="pills" class="nav-fill" */>}}
+{{</* nav tab-type="pills" class="nav-fill" */>}}
   {{</* nav-item header="Nav Item #1" show="true" /*/>}}
   {{</* nav-item header="Much longer nav item #2" /*/>}}
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 For equal-width elements, use `.nav-justified`. All horizontal space will be occupied by nav links, but unlike the `.nav-fill` above, every nav item will be the same width.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav type="pills" class="nav-justified" */>}}
+{{</* nav tab-type="pills" class="nav-justified" */>}}
   {{</* nav-item header="Nav Item #1" show="true" /*/>}}
   {{</* nav-item header="Much longer nav item #2" /*/>}}
   {{</* nav-item header="Nav Item #3" disabled="true" /*/>}}
 {{</* /nav */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

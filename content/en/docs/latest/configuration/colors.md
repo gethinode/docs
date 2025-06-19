@@ -30,14 +30,14 @@ In addition, the background colors `black` and `white` are available too. Below 
 
 Several components support background colors that are [color-mode aware]({{% relref "color-modes" %}}). These colors respond to changes when the active theme is adjusted, such as by changing from a light theme to a dark theme. You can apply this color by adding `bg-body` or `bg-body-tertiary` to the class of an HTML element.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
 {{</* card-group cols="2" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" */>}}
-    {{</* card class="bg-body text-bg-white" >}}body{{< /card */>}}
-    {{</* card class="bg-body-tertiary text-bg-white" >}}body-tertiary{{< /card */>}}
+    {{</* card class="bg-body" >}}body{{< /card */>}}
+    {{</* card class="bg-body-tertiary" >}}body-tertiary{{< /card */>}}
 {{</* /card-group */>}}
 {{< /example>}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Background colors
 
@@ -58,28 +58,30 @@ Components such as the [timeline]({{% relref "timeline" %}}) support *subtle* ba
 
 Hinode defines additional classes to render links that contrast with their background. Simply add `link-bg-<color>` to the class of an `a` anchor element. The next example adds a link constrasting with the background color `bg-success`.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-{{</* card class="col-md-2 rounded-3 text-center" color="success" >}}{{< link href="#!" class="link-bg-success" >}}success{{< /link >}}{{< /card */>}}
+{{</* link href="#!" class="link-bg-success bg-success p-1 rounded" >}}success{{< /link */>}}
 {{< /example>}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 Below grid illustrates the contrasting colors for each background.
 
+<!-- markdownlint-disable MD037 -->
 {{< card-group cols="3" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" >}}
-    {{< card color="primary" >}}{{< link href="#!" class="link-bg-primary" >}}primary{{< /link >}}{{< /card >}}
-    {{< card color="secondary" >}}{{< link href="#!" class="link-bg-secondary" >}}secondary{{< /link >}}{{< /card >}}
-    {{< card color="success" >}}{{< link href="#!" class="link-bg-success" >}}success{{< /link >}}{{< /card >}}
-    {{< card color="danger" >}}{{< link href="#!" class="link-bg-danger" >}}danger{{< /link >}}{{< /card >}}
-    {{< card color="warning" >}}{{< link href="#!" class="link-bg-warning" >}}warning{{< /link >}}{{< /card >}}
-    {{< card color="info" >}}{{< link href="#!" class="link-bg-info" >}}info{{< /link >}}{{< /card >}}
-    {{< card color="light" >}}{{< link href="#!" class="link-bg-light" >}}light{{< /link >}}{{< /card >}}
-    {{< card color="dark" >}}{{< link href="#!" class="link-bg-dark" >}}dark{{< /link >}}{{< /card >}}
-    {{< card color="white" class="text-bg-light" >}}{{< link href="#!" class="link-bg-white" >}}white{{< /link >}}{{< /card >}}
-    {{< card color="black" class="text-white" >}}{{< link href="#!" class="link-bg-black" >}}black{{< /link >}}{{< /card >}}
-    {{< card class="bg-body text-bg-white" >}}{{< link href="#!" class="link-bg-body" >}}body{{< /link >}}{{< /card >}}
-    {{< card class="bg-body-tertiary text-bg-white" >}}{{< link href="#!" class="link-bg-body-tertiary" >}}body-tertiary{{< /link >}}{{< /card >}}
+    {{< card color="primary" >}}{{</* link href="#!" class="link-bg-primary" >}}primary{{< /link */>}}{{< /card >}}
+    {{< card color="secondary" >}}{{</* link href="#!" class="link-bg-secondary" >}}secondary{{< /link */>}}{{< /card >}}
+    {{< card color="success" >}}{{</* link href="#!" class="link-bg-success" >}}success{{< /link */>}}{{< /card >}}
+    {{< card color="danger" >}}{{</* link href="#!" class="link-bg-danger" >}}danger{{< /link */>}}{{< /card >}}
+    {{< card color="warning" >}}{{</* link href="#!" class="link-bg-warning" >}}warning{{< /link */>}}{{< /card >}}
+    {{< card color="info" >}}{{</* link href="#!" class="link-bg-info" >}}info{{< /link */>}}{{< /card >}}
+    {{< card color="light" >}}{{</* link href="#!" class="link-bg-light" >}}light{{< /link */>}}{{< /card >}}
+    {{< card color="dark" >}}{{</* link href="#!" class="link-bg-dark" >}}dark{{< /link */>}}{{< /card >}}
+    {{< card color="white" class="text-bg-light" >}}{{</* link href="#!" class="link-bg-white" >}}white{{< /link */>}}{{< /card >}}
+    {{< card color="black" class="text-white" >}}{{</* link href="#!" class="link-bg-black" >}}black{{< /link */>}}{{< /card >}}
+    {{< card class="bg-body text-bg-white" >}}{{</* link href="#!" class="link-bg-body" >}}body{{< /link */>}}{{< /card >}}
+    {{< card class="bg-body-tertiary text-bg-white" >}}{{</* link href="#!" class="link-bg-body-tertiary" >}}body-tertiary{{< /link */>}}{{< /card >}}
 {{< /card-group >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Generating helper
 

@@ -54,6 +54,9 @@ Similarly, you can link multiple translations of a page and still provide a lang
 
 ## Configuring content snippets
 
+> [!IMPORTANT]
+> Content snippets will no longer be supported in future Hinode releases. Instead, content editors are encouraged to use content blocks instead. Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
+
 {{< release version="v0.12.0" >}}
 
 Hinode supports content snippets that are not published anywhere, unlike list pages and single pages. These snippets can be referenced by regular pages instead. A typical example would be an overview of product features. The features themselves can be listed on the homepage, but do not have a permalink of their own. Content snippets can be [listed like a regular section]({{% relref "layout#page-sections" %}}).

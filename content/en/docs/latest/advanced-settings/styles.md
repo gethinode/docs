@@ -10,12 +10,12 @@ Hinode uses Sass files to take advantage of variables, maps, and functions to ge
 ## Build pipeline
 
 > [!NOTE]
-> Hinode has added support for the Dart Sass transpiler in release {{< release version="v0.20.0" short="true" type="link" >}}. The default libsass transpiler has been {{< link hugo_sass >}}deprecated in favor of Dart Sass{{< /link >}}, but is still widely used. Hinode uses the libsass transpiler by default. Review the {{< link "docs/configuration/layout#extended-configuration" >}}build configuration{{< /link >}} on how to change the transpiler being used.
+> Hinode has added support for the Dart Sass transpiler in release {{< release version="v0.20.0" short="true" link-type="link" >}}. The default libsass transpiler has been {{< link hugo_sass >}}deprecated in favor of Dart Sass{{< /link >}}, but is still widely used. Hinode uses the libsass transpiler by default. Review the {{< link "docs/configuration/layout#extended-configuration" >}}build configuration{{< /link >}} on how to change the transpiler being used.
 
 Hinodes uses Hugo modules and mounted folders to create a flexible virtual file system that is automatically kept up to date. Review the [overview]({{% ref "overview" %}}) for a detailed explanation. The build pipeline of the stylesheet consists of six steps.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
-{{< nav type="tabs" id="tabs-1" >}}
+<!-- markdownlint-disable MD037 -->
+{{< nav tab-type="tabs" id="tabs-1" >}}
   {{< nav-item header="libsass" show="true" >}}
 
 1. **Initialize the Sass variables**
@@ -77,13 +77,13 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
   {{< /nav-item >}}
 {{< /nav >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Example
 
 The below Sass file defines a skeleton configuration for the main entrypoint. The full configuration is defined in `assets/scss/app.scss` (`libsass`) and `assets/scss/app-dart.scss` (`dartsass`) respectively.
 
-{{< nav type="tabs" id="tabs-2" >}}
+{{< nav tab-type="tabs" id="tabs-2" >}}
   {{< nav-item header="libsass" show="true" >}}
 
 ```scss

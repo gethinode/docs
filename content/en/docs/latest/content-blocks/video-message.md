@@ -1,0 +1,88 @@
+---
+_schema: default
+title: Video message
+description: >-
+  Features a video with optional messages.
+icon: fas circle-play
+---
+
+> [!IMPORTANT]
+> Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
+
+## Overview
+
+The `video` content block renders a horizontal line to separate sections. The separator spans the entire page from edge to edge on smaller devices. On larger screens, the line is bound by the maximum container width that contains the section.
+
+<!-- markdownlint-disable MD037 -->
+{{< example-bookshop lang="bookshop" >}}
+
+```yml
+- _bookshop_name: video-message
+  heading:
+    preheading: Preheading
+    title: Heading
+    content: Video content. It supports multiple lines.
+    align: start
+  background:
+    color: primary
+    subtle: true
+  orientation: horizontal
+  video:
+    provider: vimeo
+    media-id: "55073825"
+    autoplay: true
+  messages:
+    - title: First Message
+      icon: fas 1
+    - title: Second Message
+      icon: fas 2
+    - title: Third Message
+      icon: fas 3
+```
+
+{{< /example-bookshop >}}
+<!-- markdownlint-enable MD037 -->
+
+## Arguments
+
+The content block supports the following arguments:
+
+{{< args bookshop-video-message >}}
+
+## Examples
+
+Change the style of your video block with the available arguments.
+
+### Stacked video message
+
+Set `orientation` to `stacked` to use a stacked arrangement.
+
+<!-- markdownlint-disable MD037 -->
+{{< example-bookshop lang="bookshop" >}}
+
+```yml
+- _bookshop_name: video-message
+  heading:
+    preheading: Preheading
+    title: Heading
+    content: Video content. It supports multiple lines.
+    align: start
+  background:
+    color: primary
+    subtle: true
+  orientation: stacked
+  video:
+    provider: vimeo
+    media-id: "55073825"
+    autoplay: true
+  messages:
+    - title: First Message
+      icon: fas 1
+    - title: Second Message
+      icon: fas 2
+    - title: Third Message
+      icon: fas 3
+```
+
+{{< /example-bookshop >}}
+<!-- markdownlint-enable MD037 -->

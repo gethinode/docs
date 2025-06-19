@@ -1,7 +1,11 @@
 ---
 author: Mark Dumay
 title: Releases
-date: 2023-08-14
+date: 2025-06-11
+aliases:
+  - "/docs/about/releases/"
+  - "/docs/releases/"
+  - "/releases/"
 description: A chronological overview of key releases since the initial launch of Hinode.
 ---
 

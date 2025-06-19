@@ -11,20 +11,20 @@
   weight = 20
 
 [[main]]
+  name = "Content Blocks"
+  pageRef = "/docs/content-blocks"
+  weight = 30
+
+[[main]]
   name = "Components"
   pageRef = "/docs/components/"
-  weight = 30
+  weight = 40
   [main.params]
     alias = true
 
 [[main]]
   name = "Guides"
   pageRef = "/guides/"
-  weight = 40
-
-[[main]]
-  name = "Releases"
-  pageRef = "/releases/"
   weight = 50
 
 [[main]]
@@ -138,17 +138,17 @@
 
 [[footer]]
   parent = "Links"
-  name = "Components"
-  pageRef = "/docs/components/"
+  name = "Content blocks"
+  pageRef = "/docs/content-blocks/"
   weight = 30
-  [footer.params]
-    alias = true
 
 [[footer]]
   parent = "Links"
-  name = "Releases"
-  pageRef = "/releases/"
+  name = "Components"
+  pageRef = "/docs/components/"
   weight = 40
+  [footer.params]
+    alias = true
 
 [[footer]]
   name = "Guides"

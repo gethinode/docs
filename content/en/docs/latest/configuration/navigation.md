@@ -11,7 +11,7 @@ Hinode supports several types of navigation that utilize Bootstrap elements. The
 
 The basic configuration of the navigation elements is set in the `navigation` section of the site parameters. The following settings are supported:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting     | Default | Description |
 |-------------|---------|-------------|
@@ -30,7 +30,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | `toc`         | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | `sidebar`     | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 The below configuration shows the default configuration set in `config/_default/params.toml`.
 
@@ -44,7 +44,7 @@ The main navigation uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} 
 
 The navigation bar uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} to generate the menu items. The navigation supports nesting at one level deep. Hinode supports three additional parameters:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Argument  | Required | Description |
 |-----------|----------|-------------|
@@ -52,7 +52,7 @@ The navigation bar uses {{< link hugo_menus >}}Hugo's menu system{{< /link >}} t
 | `button`    | No       | {{</* release version="v0.24.10" short="true" size="sm" inline="true" */>}} If set, renders the menu item as a (small) button. |
 | `spacing`   | No       | {{</* release version="v0.24.10" short="true" size="sm" inline="true" */>}} If set, inserts a spacer. All prior menu items are left aligned, whilst the remaining menu items and right aligned. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 The following example defines an example menu configuration called `sample` (the main configuration is called `main`).
 
@@ -113,7 +113,7 @@ Menu items can be nested within each other. The below example defines three cont
 
 You can define separate data files for each available language in a multilingual site. Add the language code as suffix to your data file. For example, `data/blog.en.yml` defines the sidebar menu of the English translation of the blog section. Hinodes uses `data/blog.yml` as fallback (or any other {{< link hugo_data_sources >}}data format supported by Hugo{{< /link >}}).
 
-Since {{< release version="v0.27.27" short="true" type="link" >}}, Hinode renders a link for group items when a matching list page is found. You can suppress this behavior for a group item by setting its link value to `"#"` (the value is double-quoted to ensure the value is not interpreted as  a YAML comment). For example, the Hinode docs includes a group item `Components`. The link `/docs/components/` redirects to a list page that shows all available Hinode components. This list page breaks out from the sidebar navigation layout. To avoid navgigating to this page, the Hinode docs suppresses this link. Instead, the group item is expanded or collapsed, pending current state.
+Since {{< release version="v0.27.27" short="true" link-type="link" >}}, Hinode renders a link for group items when a matching list page is found. You can suppress this behavior for a group item by setting its link value to `"#"` (the value is double-quoted to ensure the value is not interpreted as  a YAML comment). For example, the Hinode docs includes a group item `Components`. The link `/docs/components/` redirects to a list page that shows all available Hinode components. This list page breaks out from the sidebar navigation layout. To avoid navgigating to this page, the Hinode docs suppresses this link. Instead, the group item is expanded or collapsed, pending current state.
 
 ```yml
 - title: Components
@@ -145,11 +145,11 @@ Hinode supports optional breadcrumb navigation. The breadcrumb indicates the cur
 
 When enabled, the breadcrumb looks like this:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* breadcrumb path="breadcrumb" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Customization
 

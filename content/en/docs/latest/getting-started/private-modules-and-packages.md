@@ -20,8 +20,8 @@ Hinode provides several themes and modules as a private Hugo module. You will ne
 
 [GitHub provides a CLI](https://cli.github.com/) to enable authentication to private and public repositories. When using the command `gh auth`, the CLI tool opens a new browser window, where you can authenticate yourself with GitHub. The login procedure supports both login/password and tokens. By default, this procedure supports one account per domain only. Run the following command to instruct git to use the full HTTP path of the repository instead.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
-{{< nav type="tabs" id="tabs-hugo-1" >}}
+<!-- markdownlint-disable MD037 -->
+{{< nav tab-type="tabs" id="tabs-hugo-1" >}}
   {{< nav-item header="macOS/Linux" show="true" >}}
 {{</* command */>}}
 git config --global credential.useHttpPath true
@@ -34,7 +34,7 @@ git config --global credential.useHttpPath true
   {{< /nav-item >}}
 {{< /nav >}}
 {.mb-4}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 From now on, git will trigger a authencation request when accessing a new repository. The GitHub CLI will store this information in the credential manager provided by your Operating System.
 
@@ -42,8 +42,8 @@ From now on, git will trigger a authencation request when accessing a new reposi
 
 As an alternative, you can also use a git configuration that links a Personal Access Token to a specific domain using the `insteadOf` directive. For example, you can use the following command to configure a token to access the private module `github.com/gethinode/mod-bookshop`. Replace `<PAT>` with the actual token value. The value for `<ACCOUNT>` can be anything (but is mandatory). Git stores the token as plain text in `~/.gitconfig`, which is less secure than the preferred approach.
 
-{{% comment %}}<!-- markdownlint-disable MD033 MD037 -->{{% /comment %}}
-{{< nav type="tabs" id="tabs-hugo-2" >}}
+<!-- markdownlint-disable MD033 MD037 -->
+{{< nav tab-type="tabs" id="tabs-hugo-2" >}}
   {{< nav-item header="macOS/Linux" show="true" >}}
 {{</* command */>}}
 git config --global \
@@ -60,7 +60,7 @@ url."https://<ACCOUNT>:<PAT>@github.com/gethinode/mod-bookshop".insteadOf \
   {{< /nav-item >}}
 {{< /nav >}}
 {.mb-4}
-{{% comment %}}<!-- markdownlint-enable MD033 MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD033 MD037 -->
 
 To update an existing token, you need to manually remove the existing entry in `~/.gitconfig` and rerun the `git config` command. Alternatively, you can update the existing token in the `~/.gitconfig` file yourself.
 
@@ -70,8 +70,8 @@ Hinode publishes several utilities as npm packages on `npm.pkg.github.com`. The 
 
 Follow the instructions for your operating system below.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
-{{< nav type="tabs" id="tabs-npm-1" >}}
+<!-- markdownlint-disable MD037 -->
+{{< nav tab-type="tabs" id="tabs-npm-1" >}}
   {{< nav-item header="macOS" show="true" >}}
 
 > [!NOTE]
@@ -120,7 +120,7 @@ Open a new `bash` terminal to load the environment variable.
   {{< /nav-item >}}
 {{</ nav >}}
 {.mb-4}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 We will now use a npm configuration file to set up the authentication token. Create a new file `.npmrc` in the root folder of your local repository with the following content:
 

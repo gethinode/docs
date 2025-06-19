@@ -6,15 +6,15 @@ layout: docs
 ---
 
 > [!IMPORTANT]
-> Hinode release {{< release version="v0.27.0" short="true" type="link" >}} has overhauled the build pipeline of scripts and modules. The bundled files now support categorization by intent.
+> Hinode release {{< release version="v0.27.0" short="true" link-type="link" >}} has overhauled the build pipeline of scripts and modules. The bundled files now support categorization by intent.
 
-Hinodes bundles JavaScript files to optimize the page loading speed. By utilizing [Hugo modules]({{% ref "overview" %}}), referenced JavaScript files are automatically ingested and version controlled. Since release {{< release version="v0.27.0" short="true" type="link" >}}, Hinode also supports the grouping of scripts by their intent. Review the next sections to familiarize yourself with the build system.
+Hinodes bundles JavaScript files to optimize the page loading speed. By utilizing [Hugo modules]({{% ref "overview" %}}), referenced JavaScript files are automatically ingested and version controlled. Since release {{< release version="v0.27.0" short="true" link-type="link" >}}, Hinode also supports the grouping of scripts by their intent. Review the next sections to familiarize yourself with the build system.
 
 ## Types of integrations
 
 Hinodes recognizes three types of integrations for JavaScript files. You can mount these files directly into Hugo's virtual file system, or use modules instead.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
    {{< accordion-item header="Critical" >}}
       Critical scripts are loaded immediately as part of the page header. The included scripts are considered vital for the initial page to render correctly and are blocking. For example, Hinode includes a script to toggle the site's [color mode]({{% relref "color-modes" %}}). It should be loaded before the page is being displayed to reduce screen flickering.
@@ -26,7 +26,7 @@ Hinodes recognizes three types of integrations for JavaScript files. You can mou
       Optional scripts are only included on the pages that require them. An example is the {{</* link leaflet >}}Leaflet{{< /link */>}} module, that renders an interactive map. Optional scripts are lazily loaded similarly to core scripts, unless specified otherwise.
   {{< /accordion-item >}}
 {{< /accordion >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Available script categories
 

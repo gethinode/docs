@@ -12,7 +12,7 @@ layout: docs
 
 Regulations such as GDPR (in the EU and UK) and CCPA/CPRA (California) require consent from users about the use of cookies. Without prior consent, the website should refrain from storing or accessing any cookies, unless they are absolutely essential. Site owners should also be able to share proof of the consents (consent logging) on request of the authorities. Lastly, certain countries put restrictions on where to geographically store the consent logs.
 
-Since release {{< release version="v0.27.0" short="true" type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution using the pointers in this section. Review the next paragraphs to familiarize yourself with the available options and configurations.
+Since release {{< release version="v0.27.0" short="true" link-type="link" >}} Hinode provides support to simplify the integration with cookie consent managers. Cookie consent management itself is not offered by Hinode, but should be relatively easy to implement by integrating with a third-party solution using the pointers in this section. Review the next paragraphs to familiarize yourself with the available options and configurations.
 
 ## Categorizing scripts
 
@@ -21,7 +21,7 @@ Since release {{< release version="v0.27.0" short="true" type="link" >}} Hinode 
 
 Modern websites typically use a combination of local storage, session storage, and cookies to collect and store data. Although the various laws and regulations are commonly referred to as cookie law, the legislation is applicable to all kinds of technologies that enable data collection and processing. In practice, we should look into the scripts that interact with these data storages. Assigning a Hinode script (or a script bundle) to a specific category informs users about their intent. Hinodes supports the following categorization of scripts and their intent:
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
   {{< accordion-item header="necessary" >}}
     Necessary cookies are linked to the site's essential features, which include secure log-in and customizable consent settings. There is no personally identifying information stored by these cookies.
@@ -42,7 +42,7 @@ Modern websites typically use a combination of local storage, session storage, a
     Unassigned scripts are categorized as `other` by default. Any cookies used by these scripts should be reviewed and assigned to a specific category by the site administrator. Hinode also assigns scripts to this category that do not necessarily interact with cookies at all.
   {{< /accordion-item >}}
 {{< /accordion >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Assigning scripts to a category
 
@@ -65,7 +65,7 @@ Hinode includes a partial template to render the script references. It is invoke
 
 Hinode includes a basic script template in `layouts/partials/templates/script.html`. It includes the following code:
 
-{{< file path="./_vendor/github.com/gethinode/hinode/layouts/partials/templates/script.html" full="false" >}}
+{{< file path="./_vendor/github.com/gethinode/hinode/layouts/_partials/templates/script.html" full="false" >}}
 
 You can modify this template to your needs. For example, {{< link "cookieyes_script_code" >}}CookieYes supports a custom attribute{{< /link >}} called `data-cookieyes` to categorize the referenced script. You could modify the template to include this custom attribute:
 
