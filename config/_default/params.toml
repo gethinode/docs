@@ -40,7 +40,7 @@
 
 [navigation]
     anchor = true
-    logo = "/img/logo_icon.svg"
+    logo = "/img/logo_var.svg#logo"
     color = ""
     fixed = true
     offset = "5.5em"
