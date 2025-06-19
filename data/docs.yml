@@ -50,6 +50,8 @@
   link: "#"
   pages:
     - title: About
+    - title: Articles
+    - title: Cards
     - title: FAQ
     - title: Hero
     - title: Releases
