@@ -97,7 +97,7 @@ Deploy your site to Azure blob storage in six steps.
       {{</* command user="hugo" host="localhost" */>}}
       hugo mod get -u ./... && hugo mod tidy && hugo --gc --minify
       {{</* /command */>}}
-    Alternatively, use the following command when using `npm`: 
+    Alternatively, use the following command when using `npm`:
       {{</* command user="npm" host="localhost" */>}}
       npm install && npm run mod:update && npm run build
       {{</* /command */>}}

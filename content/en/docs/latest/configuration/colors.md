@@ -66,6 +66,7 @@ Hinode defines additional classes to render links that contrast with their backg
 
 Below grid illustrates the contrasting colors for each background.
 
+<!-- markdownlint-disable MD037 -->
 {{< card-group cols="3" padding="3" gutter="3" wrapper="my-4 p-4" class="border rounded-3" >}}
     {{< card color="primary" >}}{{</* link href="#!" class="link-bg-primary" >}}primary{{< /link */>}}{{< /card >}}
     {{< card color="secondary" >}}{{</* link href="#!" class="link-bg-secondary" >}}secondary{{< /link */>}}{{< /card >}}
@@ -80,6 +81,7 @@ Below grid illustrates the contrasting colors for each background.
     {{< card class="bg-body text-bg-white" >}}{{</* link href="#!" class="link-bg-body" >}}body{{< /link */>}}{{< /card >}}
     {{< card class="bg-body-tertiary text-bg-white" >}}{{</* link href="#!" class="link-bg-body-tertiary" >}}body-tertiary{{< /link */>}}{{< /card >}}
 {{< /card-group >}}
+<!-- markdownlint-enable MD037 -->
 
 ## Generating helper
 

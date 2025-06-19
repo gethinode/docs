@@ -449,7 +449,7 @@ stateDiagram-v2
 
 ### Timeline
 
-<!-- markdownlint-disable MD037 -->
+<!-- markdownlint-disable MD033 MD037 -->
 {{< example lang="hugo" >}}
 
 {{</* mermaid */>}}
@@ -466,7 +466,7 @@ timeline
 {{</* /mermaid */>}}
 
 {{< /example >}}
-<!-- markdownlint-enable MD037 -->
+<!-- markdownlint-enable MD033 MD037 -->
 
 ### User Journey
 
@@ -509,6 +509,7 @@ xychart-beta
 
 The `mermaid` shortcode supports dark mode and allows creation of a custom Mermaid theme by overriding and setting the theme variables in the site's Sass files. Refer to the [styles documentation](/docs/advanced-settings/styles/) on how to adjust Hinode's build pipeline for styles. Checkout the [Mermaid docs](https://mermaid.js.org/config/theming.html) for the custom styling options of Mermaid. All theme variables can be used, but in kebab case and with prefix as shown in the example below. Also Bootstrap theme variables can be referenced.
 
+<!-- markdownlint-disable MD046 -->
 ```scss
 [data-mermaid-theme="light"] {
     // The Mermaid Theme (only 'base' does support custom theming)
@@ -530,3 +531,4 @@ The `mermaid` shortcode supports dark mode and allows creation of a custom Merma
     //...
 }
 ```
+<!-- markdownlint-enable MD046 -->
