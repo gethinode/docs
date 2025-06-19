@@ -5,6 +5,9 @@ description: Use the cards content block to show a card group of messages.
 icon: fa address-card
 ---
 
+> [!IMPORTANT]
+> Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
+
 ## Overview
 
 The `cards` content block renders a group of content cards.

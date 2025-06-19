@@ -5,6 +5,9 @@ date: 2024-01-03
 layout: docs
 ---
 
+> [!IMPORTANT]
+> The partial development is being revised. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
+
 Hinode supports more than 30 shortcodes. Many of these shortcodes wrap an predefined Bootstrap component, such as the {{< link "docs/components/button" />}} or {{< link "docs/components/tooltip" />}}. Custom shortcodes include a {{< link "docs/components/command-prompt" />}}, {{< link "docs/components/image" />}}, and {{< link "docs/components/timeline" />}}. Some of these components are maintained in a separate module, such as the {{< link "docs/components/animation" />}} or {{< link "docs/components/map" />}}. Hinode follows several conventions to standardize and streamline the development of shortcodes and partials. You are encouraged to use the same conventions, especially when contributing your own code for sharing.
 
 ## Shared partials

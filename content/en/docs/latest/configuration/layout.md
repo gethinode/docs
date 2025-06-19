@@ -5,6 +5,9 @@ date: 2025-01-20
 layout: docs
 ---
 
+> [!IMPORTANT]
+> The page rendering is being revised. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
+
 Hinode uses Bootstrap's {{< link bs_grid >}}grid system{{< /link >}} and {{< link bs_breakpoints >}}breakpoints{{< /link >}} to create a responsive layout across devices or viewport sizes. All pages follow the same base layout, which includes headers and footers. The next paragraphs explain the layout styles in more detail.
 
 ## Base layout

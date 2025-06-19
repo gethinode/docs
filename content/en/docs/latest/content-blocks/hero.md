@@ -8,6 +8,9 @@ description: >-
 icon: fas h
 ---
 
+> [!IMPORTANT]
+> Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
+
 ## Overview
 
 The `hero` content block renders a page hero, typically at the top of the page. Set `cover` to true to display a full-page hero.
@@ -21,7 +24,7 @@ The `hero` content block renders a page hero, typically at the top of the page. 
     title: Title
     align: start
     content: Hero content
-    width: 12
+    width: 8
   background:
     backdrop: /assets/img/nat-9l98kFByiao-unsplash.jpg
   breadcrumb: true
@@ -51,9 +54,9 @@ Apply an `illustration` and set `orientation` to `horizontal` to create an illus
 - _bookshop_name: hero
   heading:
     title: Title
-    align: center
+    align: start
     content: Hero content
-    width: 12
+    width: 8
   background:
     backdrop: /assets/img/nat-9l98kFByiao-unsplash.jpg
   order: last
@@ -66,7 +69,6 @@ Apply an `illustration` and set `orientation` to `horizontal` to create an illus
 {{< /example-bookshop >}}
 <!-- markdownlint-enable MD037 -->
 
-
 ### Full-Screen Hero
 
 Set `cover` to `true` to add a full-screen hero. A typical use case is to apply such a full-screen element to the top of a landing page.
@@ -78,9 +80,9 @@ Set `cover` to `true` to add a full-screen hero. A typical use case is to apply 
 - _bookshop_name: hero
   heading:
     title: Title
-    align: center
+    align: start
     content: Hero content
-    width: 12
+    width: 8
   background:
     backdrop: /assets/img/nat-9l98kFByiao-unsplash.jpg
   align: center
