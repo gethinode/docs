@@ -43,13 +43,14 @@ Set the `button-state` argument to change the appearance and behavior of the but
 
 ### Sized buttons
 
-Set the `size` argument to resize the button.
+Set the `button-size` argument to resize the button.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="primary" href="#!" button-size="sm" */>}}sm{{</* /button */>}}
-{{</* button color="primary" href="#!" button-size="md" */>}}md{{</* /button */>}}
-{{</* button color="primary" href="#!" button-size="lg" */>}}lg{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="xs" */>}}extra small{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="sm" */>}}small{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="md" */>}}medium{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="lg" */>}}large{{</* /button */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
