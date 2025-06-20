@@ -36,7 +36,7 @@ git config --global credential.useHttpPath true
 {.mb-4}
 <!-- markdownlint-enable MD037 -->
 
-From now on, git will trigger a authencation request when accessing a new repository. The GitHub CLI will store this information in the credential manager provided by your Operating System.
+From now on, git will trigger a authentication request when accessing a new repository. The GitHub CLI will store this information in the credential manager provided by your Operating System.
 
 #### Using Git configuration (alternative)
 
@@ -75,7 +75,7 @@ Follow the instructions for your operating system below.
   {{< nav-item title="macOS" show="true" >}}
 
 > [!NOTE]
-> macOS supports multiple shells, including bash and Z shell (zsh). Adjust the commands pending your prefered shell. You can check your current shell with `echo $SHELL`.
+> macOS supports multiple shells, including bash and Z shell (zsh). Adjust the commands pending your preferred shell. You can check your current shell with `echo $SHELL`.
 
 Add the npm token to your keychain with the following command, providing your token (twice) when prompted for the password:
 
