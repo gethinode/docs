@@ -37,19 +37,19 @@ Use the `color` argument to set the background color of the card. As an example,
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="4" gutter="3" */>}}
-    {{</* card color="primary" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="secondary" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="success" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="danger" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="warning" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="info" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="light" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="dark" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="white" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="black" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="body" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
-    {{</* card color="body-tertiary" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+{{</* card-group cols="4" gutter="3" header-style="none" orientation="none" */>}}
+    {{</* card color="primary" path="/docs/components/button/" /*/>}}
+    {{</* card color="secondary" path="/docs/components/button/" /*/>}}
+    {{</* card color="success" path="/docs/components/button/" /*/>}}
+    {{</* card color="danger" path="/docs/components/button/" /*/>}}
+    {{</* card color="warning" path="/docs/components/button/" /*/>}}
+    {{</* card color="info" path="/docs/components/button/" /*/>}}
+    {{</* card color="light" path="/docs/components/button/" /*/>}}
+    {{</* card color="dark" path="/docs/components/button/" /*/>}}
+    {{</* card color="white" path="/docs/components/button/" /*/>}}
+    {{</* card color="black" path="/docs/components/button/" /*/>}}
+    {{</* card color="body" path="/docs/components/button/" /*/>}}
+    {{</* card color="body-tertiary" path="/docs/components/button/" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -60,11 +60,11 @@ Use the `header` argument to customize the contents of the card.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="4" gutter="3" */>}}
-    {{</* card path="/guides/editing" header-style="full" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header-style="publication" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header-style="tags" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header-style="none" orientation="none" /*/>}}
+{{</* card-group cols="4" gutter="3" orientation="none" */>}}
+    {{</* card path="/guides/editing" header-style="full"  /*/>}}
+    {{</* card path="/guides/editing" header-style="publication" /*/>}}
+    {{</* card path="/guides/editing" header-style="tags" /*/>}}
+    {{</* card path="/guides/editing" header-style="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -75,11 +75,11 @@ Use the `footer-style` argument to customize the contents of the card.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card-group cols="4" gutter="3" */>}}
-    {{</* card path="/guides/editing" header-style="none" footer-style="full" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header-style="none" footer-style="publication" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header-style="none" footer-style="tags" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header-style="none" footer-style="none" orientation="none" /*/>}}
+{{</* card-group cols="4" gutter="3" header-style="none" */>}}
+    {{</* card path="/guides/editing" footer-style="full" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" footer-style="publication" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" footer-style="tags" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" footer-style="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
