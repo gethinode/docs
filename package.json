@@ -43,20 +43,20 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "cpy-cli": "^5.0.0",
-    "cssnano": "^7.0.6",
-    "cssnano-preset-advanced": "^7.0.6",
-    "eslint": "^9.19.0",
-    "hugo-bin": "^0.139.0",
-    "markdownlint-cli2": "^0.17.2",
-    "neostandard": "^0.12.0",
+    "cssnano": "^7.0.7",
+    "cssnano-preset-advanced": "^7.0.7",
+    "eslint": "^9.29.0",
+    "hugo-bin": "^0.144.8",
+    "markdownlint-cli2": "^0.18.1",
+    "neostandard": "^0.12.1",
     "netlify-plugin-hugo-cache-resources": "^0.2.1",
-    "postcss-cli": "^11.0.0",
+    "postcss-cli": "^11.0.1",
     "purgecss-whitelister": "^2.4.0",
     "rimraf": "^6.0.1",
-    "stylelint": "^16.14.1",
-    "stylelint-config-standard-scss": "^14.0.0"
+    "stylelint": "^16.21.0",
+    "stylelint-config-standard-scss": "^15.0.1"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.3"

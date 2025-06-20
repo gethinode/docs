@@ -14,13 +14,13 @@ tags: component
 
 The `example` shortcode displays a code example and renders a preview of the same input. The shortcode accepts the {{< link hugo_chroma >}}languages supported by Hugo's highlight function{{< /link >}}.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* command */>}}
 export MY_VAR=123
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -38,13 +38,13 @@ Set the `lang` argument to `hugo` to render a Hugo code example. Be sure to esca
 
 #### Preview
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo">}}
 {{</* command */>}}
 export MY_VAR=123
 {{</* /command */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 #### Input
 
@@ -58,11 +58,11 @@ export MY_VAR=123
 
 ### Hidden markup
 
-Set `show_markup` to `false` to hide the code input and to display the preview only.
+Set `show-markup` to `false` to hide the code input and to display the preview only.
 
 #### Preview
 
-{{< example lang="hugo" show_markup=false >}}
+{{< example lang="hugo" show-markup=false >}}
 This is a lead paragraph. It stands out from regular paragraphs.
 {.lead}
 {{< /example >}}
@@ -70,7 +70,7 @@ This is a lead paragraph. It stands out from regular paragraphs.
 #### Input
 
 ```go-html-template
-{{</* example show_markup=false */>}}
+{{</* example show-markup=false */>}}
 This is a lead paragraph. It stands out from regular paragraphs.
 {.lead}
 {{</* /example */>}}
@@ -78,11 +78,11 @@ This is a lead paragraph. It stands out from regular paragraphs.
 
 ### Hidden preview
 
-Set `show_preview` to `false` to hide the output and to display the code input only.
+Set `show-preview` to `false` to hide the output and to display the code input only.
 
 #### Preview
 
-{{< example lang="hugo" show_preview=false >}}
+{{< example lang="hugo" show-preview=false >}}
 This is a lead paragraph. It stands out from regular paragraphs.
 {.lead}
 {{< /example >}}
@@ -90,7 +90,7 @@ This is a lead paragraph. It stands out from regular paragraphs.
 #### Input
 
 ```go-html-template
-{{</* example show_preview=false */>}}
+{{</* example show-preview=false */>}}
 This is a lead paragraph. It stands out from regular paragraphs.
 {.lead}
 {{</* /example */>}}

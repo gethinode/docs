@@ -15,11 +15,11 @@ modules: ["lottie"]
 
 Use the animation shortcode to show an After Effects animation, powered by {{< link lottie >}}Lottie{{< /link >}}. The Lottie library supports animations that have been exported as JSON with Bodymovin. The animation uses vector graphics and is responsive. The shortcode is a simplified wrapper of the Lottie library that provides basic functionality. As an example, the following shortcode shows an animation that plays when hovering the mouse over it.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation data="animation/gatin.json" auto=false hover=true class="col-6 mx-auto" */>}}
+{{</* animation animation-data="animation/gatin.json" autoplay=false hover=true class="col-6 mx-auto" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -39,28 +39,28 @@ Change the behavior of your animation with shortcode arguments.
 
 Assign a valid path to `data` to provide a JSON file that contains the animation as input. The file should be stored in the `static` folder, or in one of its subfolders.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation data="animation/gatin.json" class="col-6 mx-auto" */>}}
+{{</* animation animation-data="animation/gatin.json" class="col-6 mx-auto" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Animation on hover
 
 Set `auto` to false and `hover` to true to trigger the animation when hovering the mouse over it.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation data="animation/gatin.json" auto=false hover=true class="col-6 mx-auto" */>}}
+{{</* animation animation-data="animation/gatin.json" autoplay=false hover=true class="col-6 mx-auto" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Identification
 
 Assign a specific identified to the animation by setting the `id` argument. The following example assigns the id `gatin-animation` to the animation.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation id="gatin-animation" data="animation/gatin.json" class="col-6 mx-auto" */>}}
+{{</* animation id="gatin-animation" animation-data="animation/gatin.json" class="col-6 mx-auto" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

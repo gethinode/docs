@@ -14,11 +14,11 @@ tags: component
 
 Since Hinode `v0.14.1` you can indicate the availability of a specific feature. The `release` shortcode renders a button that links to the specific release. Use the state to indicate if the feature is new or deprecated.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* release version="v0.14.1" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -38,29 +38,29 @@ Change the style of your release button using the available arguments.
 
 Indicate a new feature by using default values for the optional arguments.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* release version="v0.14.1" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Deprecated feature
 
 Indicate a deprecated feature by setting `state` to `deprecated`.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* release version="v0.14.1" state="deprecated" */>}}
+{{</* release version="v0.14.1" release-state="deprecated" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Short feature
 
 Shorten the button title by setting `short` to `true`.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* release version="v0.14.1" short="true" */>}}
-{{</* release version="v0.14.1" short="true" state="deprecated" */>}}
+{{</* release version="v0.14.1" short="true" release-state="deprecated" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

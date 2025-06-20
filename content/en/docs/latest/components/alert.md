@@ -12,13 +12,13 @@ tags: component
 
 Use the `alert` shortcode to display a contextual feedback message. The inner content is used as alert text.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* alert color="danger" */>}}
     A simple danger alert—check it out!
 {{</* /alert */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -34,7 +34,7 @@ Change the style of your accordion with arguments.
 
 As an example, the following shortcodes displays a simple alert for each theme color.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* alert color="primary" */>}}
     A simple primary alert—check it out!
@@ -68,39 +68,39 @@ As an example, the following shortcodes displays a simple alert for each theme c
     A simple dark alert—check it out!
 {{</* /alert */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Dismissible alert
 
 As an example, the following shortcode displays a dismissible alert.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* alert color="danger" dismissible="true" */>}}
     A dismissible alert—check it out!
 {{</* /alert */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Alert with icon
 
 As an example, the following shortcode displays an alert with an icon. The icon is resized to size `2x` and pulled to the left by default.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* alert color="danger" icon="fas triangle-exclamation" */>}}
     An illustrated alert—check it out!
 {{</* /alert */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ### Alert of specific type
 
 As an example, the following shortcode displays an informative alert with an icon.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* alert type="info" */>}}
+{{</* alert alert-type="info" */>}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -109,13 +109,13 @@ sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
 est laborum.
 {{</* /alert */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 As an example, the following shortcode displays a warning with an icon.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* alert type="danger" */>}}
+{{</* alert alert-type="danger" */>}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -124,4 +124,4 @@ sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
 est laborum.
 {{</* /alert */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

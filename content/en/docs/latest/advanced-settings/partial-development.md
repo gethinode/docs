@@ -5,6 +5,9 @@ date: 2024-01-03
 layout: docs
 ---
 
+> [!IMPORTANT]
+> The partial development is being revised. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
+
 Hinode supports more than 30 shortcodes. Many of these shortcodes wrap an predefined Bootstrap component, such as the {{< link "docs/components/button" />}} or {{< link "docs/components/tooltip" />}}. Custom shortcodes include a {{< link "docs/components/command-prompt" />}}, {{< link "docs/components/image" />}}, and {{< link "docs/components/timeline" />}}. Some of these components are maintained in a separate module, such as the {{< link "docs/components/animation" />}} or {{< link "docs/components/map" />}}. Hinode follows several conventions to standardize and streamline the development of shortcodes and partials. You are encouraged to use the same conventions, especially when contributing your own code for sharing.
 
 ## Shared partials
@@ -58,13 +61,13 @@ Most shortcodes support multiple arguments to configure their behavior and to re
 
 Let's consider the following example. The {{< link "docs/components/toast" />}} shortcode displays a dismissable message in the bottom-right corner of the screen. We can trigger it by assigning its unique identifier to a button.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button toast="toast-example-1" */>}}Show toast{{</* /button */>}}
+{{</* button toast-id="toast-example-1" */>}}Show toast{{</* /button */>}}
 
-{{</* toast id="toast-example-1" header="First title" */>}}This is a toast message{{</* /toast */>}}
+{{</* toast id="toast-example-1" title="First title" */>}}This is a toast message{{</* /toast */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The toast shortcode displays the message `This is a toast message` provided as inner input. Additionally, it supports the following arguments:
 
@@ -72,7 +75,7 @@ The toast shortcode displays the message `This is a toast message` provided as i
 
 The toast shortcode invokes the underlying partial to render the actual HTML output. The partial supports similar arguments, but expects the inner content to be passed as argument `message` instead. The following file formalizes these specifications:
 
-{{< file path="./_vendor/github.com/gethinode/hinode/data/structures/toast.yml" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/data/structures/toast.yml" full=false >}}
 
 The shortcode uses the following code to validate its arguments, excluding the `message` argument that belongs to the `partial` group. When an error occurs, the shortcode logs an error message with a reference to the context `.Position`.
 

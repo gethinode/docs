@@ -17,22 +17,22 @@ The {{< link fa_icons >}}Font Awesome icon library{{< /link >}} provides access 
 
 Specify the correct icon library and omit the `fa-` prefix from the icon name to insert an icon.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas music */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The icons inherit the current styling options and as such blend in with text inline. For example, apply the [theme color]({{% relref "colors" %}}) `text-primary` to the paragraph containing the icon to change its color. You can also pass the class attribute directly to the shortcode, such as `text-info`.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas music */>}}
 {.text-primary}
 
 {{</* fas music text-info */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Sizing icons
 
@@ -42,7 +42,7 @@ Font Awesome supports both relative and absolute sizing. The following two secti
 
 Font Awesome includes a range of t-shirt based sizes that are relative to the browser's default font size of 16px. The icons align to the inline text. The following example illustrative the available relative sizes.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas mug-saucer fa-2xs */>}} When my six o’clock alarm buzzes, I require a pot of good java.
 
@@ -58,11 +58,11 @@ Font Awesome includes a range of t-shirt based sizes that are relative to the br
 
 {{</* fas mug-saucer fa-2xl */>}} When my six o’clock alarm buzzes, I require a pot of good java.
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The table below illustrates the relative sizing classes and their equivalent relative and absolute font size.
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Relative Sizing Class | Font Size | Equivalent in Pixels |
 |----------|--------:|-----:|
@@ -74,13 +74,13 @@ The table below illustrates the relative sizing classes and their equivalent rel
 | `fa-xl`  | 1.5em   | 24px |
 | `fa-2xl` | 2em     | 32px |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ### Absolute sizing
 
 Font Awesome also supports absolute sizing on a scale of 1x to 10x. The icons do not necessarily align to their surrounding text. The following example illustrative the various absolute sizes.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas camera fa-1x */>}}
 {{</* fas camera fa-2x */>}}
@@ -93,11 +93,11 @@ Font Awesome also supports absolute sizing on a scale of 1x to 10x. The icons do
 {{</* fas camera fa-9x */>}}
 {{</* fas camera fa-10x */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The table below illustrates the absolute sizing classes and their equivalent font size.
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Absolute Sizing Class | Font Size |
 |---------|--------:|
@@ -112,7 +112,7 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 | `fa-9x` | 9em |
 | `fa-10x` | 10em |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ### Responsive sizing
 
@@ -123,17 +123,17 @@ Container support is a relatively new CSS feature that is not supported by all b
 
 The following example demonstrates a centered, responsive icon. The icon keeps its original aspect ratio, so the wrapper may have some whitespace. Use `text-center` to center the icon within the container, and `mx-auto` to center the container itself.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* fas class="rocket bg-body-tertiary" wrapper="col-6 mx-auto text-center" */>}}
+{{</* fas icon="rocket bg-body-tertiary" wrapper="col-6 mx-auto text-center" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Fixed width
 
 Add `fa-fw` to the class of the HTML element referencing your icon to apply a fixed width. This ensures icons of varying icon width are properly aligned to each other. The following example illustrates how this works.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas person-skating fa-fw bg-body-tertiary */>}} Skating
 {.fa-3x}
@@ -150,29 +150,29 @@ Add `fa-fw` to the class of the HTML element referencing your icon to apply a fi
 {{</* fas snowplow fa-fw bg-body-tertiary */>}} Snowplow
 {.fa-3x}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Lists
 
 Use the classes `.fa-ul` and `.fa-li` to replace default bullets in unordered lists. The following example illustrates how this works.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 
-- {{</* fas class="circle-check" wrapper="fa-li" */>}}List icons can
-- {{</* fas class="square-check" wrapper="fa-li" */>}}be used to
-- {{</* fas class="spinner fa-pulse" wrapper="fa-li" */>}} replace bullets
-- {{</* fa class="square" wrapper="fa-li" */>}} in lists
+- {{</* fas icon="circle-check" wrapper="fa-li" */>}}List icons can
+- {{</* fas icon="square-check" wrapper="fa-li" */>}}be used to
+- {{</* fas icon="spinner fa-pulse" wrapper="fa-li" */>}} replace bullets
+- {{</* fa icon="square" wrapper="fa-li" */>}} in lists
 {.fa-ul}
 
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Rotating icons
 
 Use specific classes to rotate the icon with a specific degree. The following example illustrates how this works.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas person-snowboarding fa-3x */>}}
 {{</* fas person-snowboarding fa-3x fa-rotate-90 */>}}
@@ -182,11 +182,11 @@ Use specific classes to rotate the icon with a specific degree. The following ex
 {{</* fas person-snowboarding fa-3x fa-flip-vertical */>}}
 {{</* fas person-snowboarding fa-3x fa-flip-both */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The following classes are available:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |---------|--------|
@@ -197,13 +197,13 @@ The following classes are available:
 | `fa-flip-vertical` | Mirrors an icon vertically |
 | `fa-flip-both` | Mirrors an icon both vertically and horizontally |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ## Animating icons
 
 Font Awesome supports various animations by simply adding a animation class to the HTML element. The following example illustrates the available basic animations. Add custom styles to your [Sass files]({{% ref "styles" %}}) to apply additional {{< link fa_animation >}}animation utilities{{< /link >}}.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas heart fa-3x fa-beat */>}}
 {{</* fas triangle-exclamation fa-3x fa-fade */>}}
@@ -213,11 +213,11 @@ Font Awesome supports various animations by simply adding a animation class to t
 {{</* fas bell fa-3x fa-shake */>}}
 {{</* fas arrows-rotate fa-3x fa-spin */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The following table describes the available basic animation classes.
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |---------|--------|
@@ -229,24 +229,24 @@ The following table describes the available basic animation classes.
 | `fa-shake` | Shakes an icon back and forth |
 | `fa-spin` | Rotates an icon |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ## Bordered and pulled icons
 
 Use `fa-border` and `fa-pull-right` or `fa-pull-left` for easy pull quotes or article icons. The following example illustrates a quote.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* icon class="fas quote-left fa-2x fa-pull-left" spacing=false */>}}
+{{</* icon icon="fas quote-left fa-2x fa-pull-left" spacing=false */>}}
 Gatsby believed in the green light, the orgastic future that year by year recedes before us.
 It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further...
 And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The following table describes the available classes.
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |-------|---------|
@@ -254,13 +254,13 @@ The following table describes the available classes.
 | `fa-pull-left` | Pulls an icon by floating it left and applying a margin-right |
 | `fa-pull-right` | Pulls an icon by floating it right and applying a margin-left |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ## Stacking icons
 
 Use the `fa-stack` class on the parent HTML element of the two icons you want to stack. Then add the `fa-stack-1x` class for the regularly sized icon and add the `fa-stack-2x` class for the larger icon. `fa-inverse` can be added to the icon with the `fa-stack-1x` to help with a knock-out looking effect. Add a [theme color]({{% ref "colors" %}}) such as `text-primary` to change the color of the icon. The following example illustrates the available options.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* fas square fa-stack-2x */>}}
 {{</* fab x-twitter fa-stack-1x fa-inverse */>}}
@@ -278,11 +278,11 @@ Use the `fa-stack` class on the parent HTML element of the two icons you want to
 {{</* fas terminal fa-stack-1x fa-inverse */>}}
 {.fa-stack .fa-4x}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 The following table describes the available classes.
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Class | Details |
 |-------|---------|
@@ -291,7 +291,7 @@ The following table describes the available classes.
 | `fa-stack-2x` | Used on the icon which should be displayed larger when stacked |
 | `fa-inverse`  | Inverts the color of the icon displayed at base size when stacked |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ## Adding custom icons
 
@@ -302,8 +302,8 @@ The following table describes the available classes.
 
 You can reference a custom family and icon stored in the local `assets` folder. The {{< link "docs/components/icon" />}} shortcode uses the path `assets/svgs/{family}/{icon}.svg`, replacing `{family}` and `{icon}` with the specified values. You can mix the custom icon with Font Awesome styling directives (such as `fa-4x`, although animations are typically not supported). The following example shows an icon called `activity` of the `custom` family of size `fa-4x`.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* icon custom activity fa-4x */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

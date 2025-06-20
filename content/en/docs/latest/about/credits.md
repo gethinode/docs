@@ -20,6 +20,7 @@ Hinode is based on the following core components:
 - {{< link hugo >}}Hugo{{< /link >}} is a static HTML and CSS website generator written in the {{< link golang >}}Go language{{< /link >}}. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with {{< link markdown_guide >}}Markdown content{{< /link >}} and templates and renders them into a full HTML website.
 - {{< link bootstrap >}}Bootstrap{{< /link >}} is a popular, open-source web development framework. Using a mobile-first approach, it provides several functions and components to simplify the creation of responsive websites.
 - {{< link npm >}}npm{{< /link >}} is a software registry that enables the sharing and reuse of both open-source and private software packages. By taking advantage of its version management, software dependencies are easily tracked and updated.
+- [Bookshop](https://github.com/CloudCannon/bookshop) is a component development workflow for static websites.
 - {{< link flexsearch >}}FlexSearch{{< /link >}} is a flexible search library to enable full text search across your site.
 - {{< link fontawesome >}}Font Awesome{{< /link >}} is a popular icon library and toolkit, used on over 200 million sites. The free version provides access to more than 2,000 icons. The toolkit also provides various styling and animation options out of the box.
 

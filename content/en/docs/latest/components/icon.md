@@ -14,7 +14,7 @@ tags: component
 
 Use the `icon` shortcode to quickly add a Font Awesome icon to your content. You can also use `fa` for regular icons, `fab` for brand icons, and `fas` for solid icons. As an example, the following shortcodes show a square check, a brand logo, a circle check, and a custom icon.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* icon fa square-check */>}}
 {{</* fa square-check */>}}
@@ -22,7 +22,7 @@ Use the `icon` shortcode to quickly add a Font Awesome icon to your content. You
 {{</* fas circle-check */>}}
 {{</* icon custom activity */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -31,13 +31,13 @@ Use the `icon` shortcode to quickly add a Font Awesome icon to your content. You
 
 The shortcode supports both unnamed arguments and named arguments. When using unnamed arguments, all attributes are mapped to the `class` argument, separated by spaces.
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 | Argument  | Required | Description |
 |-----------|----------|-------------|
 | class     | Yes | Family, name, and styling of the icon to display. The shortcode expects the following format and order: `{family} {name} {style attributes}`. The shortcode supports the default families of the free version of Font Awesome, including shorthand notation: "fa-solid" ("fas"), "fa-regular" ("fa"), "fa-brands" ("fab"). You can omit the `fa-` prefix of the icon name. Alternatively, you can reference a custom family and icon stored in `assets/svgs/{family}/{icon}.svg`. |
 | style     | No | Optional custom style of the icon, e.g. `--fa-animation-duration: 2s;`. Hinode disables inline styles by default, review the [Content Security Policy]({{% relref "server-headers" %}}) for more details. |
-| spacing   | No | {{< release version="v0.21.0" short="true" size="sm" inline="true" >}} Optional flag to add a trailing whitespace character to optimize inline rendering, defaults to "true". |
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+| spacing   | No | {{< release version="v0.21.0" short="true" button-size="sm" inline="true" >}} Optional flag to add a trailing whitespace character to optimize inline rendering, defaults to "true". |
+<!-- markdownlint-enable MD037 MD058 -->
 
 {{< args structure="icon" group="shortcode" >}}
 

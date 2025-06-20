@@ -12,9 +12,9 @@ tags: component
 
 Use the `collapse` shortcode to reveal or hide a panel. The panel can contain both HTML code and plain text. Link a button to the panel by assigning it's ID to the `collapse` attribute. As an example, the following shortcode displays a button that, when clicked, triggers a panel to appear or disappear.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button collapse="collapse-1" */>}}
+{{</* button collapse-id="collapse-1" */>}}
     Trigger panel
 {{</* /button */>}}
 
@@ -23,7 +23,7 @@ Use the `collapse` shortcode to reveal or hide a panel. The panel can contain bo
     revealed when the user activates the relevant trigger.
 {{</* /collapse */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 

@@ -25,7 +25,7 @@ The main repository of Hinode imports the following modules by default.
 ## Configuring modules
 
 > [!NOTE]
-Hinode uses the default configuration defined in each referenced module since release {{< release version="v0.24.0" short="true" type="link" >}}. You can override these settings in your site parameters.
+Hinode uses the default configuration defined in each referenced module since release {{< release version="v0.24.0" short="true" link-type="link" >}}. You can override these settings in your site parameters.
 
 You can choose to either fully integrate compatible modules or to include them on a page-by-page basis. For example, you might only want to display an interactive map on a few pages. In this case, you could choose to include the `leaflet` module on an opt-in basis. This ensures the page size is minimized. On the other hand, as `bootstrap` is used on every single page, it makes sense to include it as a core module.
 
@@ -43,20 +43,20 @@ Adjust the `modules` section in your site's parameter configuration file `config
 
 The following table provides an overview of the available settings for each module. Omit the `mod-` prefix of the module's name.
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting         | Default       | Description |
 |-----------------|---------------|-------------|
 | `integration`     | optional      | Module integration, either `core` or `optional`. Core modules are fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. Optional modules are only included on those pages that reference the module in the frontmatter. Hinode includes the following core modules by default: ["bootstrap", "flexsearch", "fontawesome"]. |
 | `excludeSCSS`     | false | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles. |
 | `disableTemplate` | false         | Excludes all scripts files from processing as Hugo template. The scripts are bundled as-is instead. This only applies to optional modules. |
-| `localize`        | false         | {{</* release version="v0.25.0" short="true" size="sm" inline="true" */>}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`. |
-| `category`        | other         | {{</* release version="v0.27.0" short="true" size="sm" inline="true" */>}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{</* link "cookie-consent" /*/>}} for more details. |
-| `local`          | false         | {{</* release version="v0.27.0" short="true" size="sm" inline="true" */>}} Includes an external URL in local mode too. By default, external scripts are only included in the built site. |
-| `url`             |               | {{</* release version="0.27.0" short="true" size="sm" inline="true" */>}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{</* link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link */>}} for more information. |
+| `localize`        | false         | {{</* release version="v0.25.0" short="true" button-size="sm" inline="true" */>}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`. |
+| `category`        | other         | {{</* release version="v0.27.0" short="true" button-size="sm" inline="true" */>}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{</* link "cookie-consent" /*/>}} for more details. |
+| `local`          | false         | {{</* release version="v0.27.0" short="true" button-size="sm" inline="true" */>}} Includes an external URL in local mode too. By default, external scripts are only included in the built site. |
+| `url`             |               | {{</* release version="0.27.0" short="true" button-size="sm" inline="true" */>}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{</* link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link */>}} for more information. |
 {{< /table >}}
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 
 For example, Bootstrap uses the following configuration in its module configuration:
 
@@ -103,16 +103,16 @@ The `cookieyes` module requires the following settings:
 
 The `fontawesome` module supports the following additional settings:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
 | Setting                 | Default | Description |
 |-------------------------|---------|-------------|
-| `fontawesome.embed`       | true    | {{</* release version="v0.26.3" short="true" size="sm" inline="true" */>}} If set, generates a symbol map with embedded vector images. Only works in conjunction with `inline`. Include the symbol map with the partial `assets/symbols.html` (requires the current page context). |
+| `fontawesome.embed`       | true    | {{</* release version="v0.26.3" short="true" button-size="sm" inline="true" */>}} If set, generates a symbol map with embedded vector images. Only works in conjunction with `inline`. Include the symbol map with the partial `assets/symbols.html` (requires the current page context). |
 | `fontawesome.inline`      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon. |
 | `fontawesome.debug`       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
 | `fontawesome.skipMissing` | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 ### Google Analytics
 
@@ -140,13 +140,13 @@ You can modify the privacy configuration in the following section:
 
 The `google-analytics` module supports the following additional settings:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting                   | Default | Description |
 |---------------------------|---------|-------------|
 | `GoogleAnalytics.force`   | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ### Utils
 
@@ -154,14 +154,14 @@ The `google-analytics` module supports the following additional settings:
 
 The `utils` module supports the following additional settings:
 
-{{% comment %}}<!-- markdownlint-disable MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
 | Setting           | Default | Description |
 |-------------------|---------|-------------|
 | `utils.filter`    | `[^0-9A-Za-zŽžÀ-ÿ ;.,\/'’"]` | Defines the regular expression for characters to remove from page descriptions. These page descriptions are used to define card content and metadata for search indexes. Adjust the filter to define which characters to support. You may need to adjust these settings to support specific diacritical letters. |
 | `utils.raw`       | false | Flag to indicate page descriptions should be returned as-is. In this setting, the filter is ignored. |
 {{< /table >}}
-{{% comment %}}<!-- markdownlint-enable MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD058 -->
 
 ## Enabling optional modules
 

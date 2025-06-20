@@ -15,7 +15,7 @@ Hinode is a clean documentation and blog theme for {{< link hugo >}}Hugo{{< /lin
 
 Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} to install and maintain various components. It can be installed using either Hugo or npm. If you would like to take advantage of automation, the npm approach is recommended. Hinode requires the following software to be installed on your local machine:
 
-{{% comment %}}<!-- markdownlint-disable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 MD058 -->
 | Software                                                   | Hugo                  | npm                   | Remarks |
 |------------------------------------------------------------|-----------------------|-----------------------|---------|
 | {{< link golang_download >}}Go binary{{< /link >}}     | {{< fas check >}} | {{< fas check >}} | Required for Hugo modules, including Hinode itself |
@@ -23,7 +23,7 @@ Hinode is a {{< link hugo_modules >}}Hugo theme that uses modules{{< /link >}} t
 | {{< link nodejs >}}Node.js{{< /link >}}                |                       | {{< fas check >}} | The installation package includes npm |
 | {{< link git_download >}}Git{{< /link >}}              | recommended           | {{< fas check >}} | Recommended for version control |
 | {{< link hugo_sass >}}Dart Sass{{< /link >}}           | optional              | optional              | Required when using {{< link "docs/configuration/layout#extended-configuration" >}}Dart Sass transpiler{{< /link >}} |
-{{% comment %}}<!-- markdownlint-enable MD037 MD058 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 MD058 -->
 
 ## Installation
 
@@ -32,7 +32,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
 > [!CAUTION]
 > In general, it is **not recommended** to fork the Hinode repository. Unlike the versioned releases, the repository `HEAD` is not guaranteed to be stable. Unless contributing to the development of Hinode, you are encouraged to use one of the installation options described below.
 
-{{< button collapse="collapse-1" outline=true color="secondary" icon="fab windows" order="first" size="sm" class="mb-4" >}}
+{{< button collapse-id="collapse-1" outline=true color="secondary" icon="fab windows" order="first" button-size="sm" class="mb-4" >}}
     Windows installation notes
 {{< /button >}}
 
@@ -40,9 +40,9 @@ The next steps describe the approach how to initialize a new Hinode site using e
   The installation for Windows requires PowerShell v7. Download it from the Microsoft Store as needed. Check your current version with the command `$PSVersionTable`.
 {{< /collapse >}}
 
-{{% comment %}}<!-- markdownlint-disable MD005 MD029 MD037 -->{{% /comment %}}
-{{< nav type="tabs" id="pills-1" >}}
-  {{< nav-item header="Hugo" show="true" >}}
+<!-- markdownlint-disable MD005 MD029 MD037 -->
+{{< nav tab-type="tabs" id="pills-1" >}}
+  {{< nav-item title="Hugo" show="true" >}}
 
 1. **Create a new site**
 
@@ -64,7 +64,7 @@ The next steps describe the approach how to initialize a new Hinode site using e
     hugo server
     {{</* /command */>}}
   {{< /nav-item >}}
-  {{< nav-item header="npm" >}}
+  {{< nav-item title="npm" >}}
 
 1. **Create a new repository**
 
@@ -97,32 +97,32 @@ The next steps describe the approach how to initialize a new Hinode site using e
     {{</* /command */>}}
   {{< /nav-item >}}
 {{< /nav >}}
-{{% comment %}}<!-- markdownlint-enable MD005 MD029 -->{{% /comment %}}
+<!-- markdownlint-enable MD005 MD029 -->
 
 ## Adding content
 
 The {{< link repository >}}main Hinode repository{{< /link >}} contains a folder `exampleSite` with sample content for a blog and a project portfolio. The examples are available in English, French, and Dutch. Review the following items on to how organize and enrich your content.
 
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="Adding content" >}}
+  {{< accordion-item title="Adding content" >}}
     Hinode uses Markdown and templates to define the content for your website. See the [content management]({{% relref "content-management" %}}) page for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Organize the content" >}}
+  {{< accordion-item title="Organize the content" >}}
     Hinode uses a structured approach to organize and present content. See the [content organization]({{% relref "content-organization" %}}) page for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Enrich Markdown content with Bootstrap styling" >}}
+  {{< accordion-item title="Enrich Markdown content with Bootstrap styling" >}}
     Hinode uses a mix of basic Markdown syntax enriched with Bootstrap styling for the typography. Review the [typography documentation]({{% relref "typography" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Use Markdown and Hugo shortcodes to generate links and cross-references" >}}
+  {{< accordion-item title="Use Markdown and Hugo shortcodes to generate links and cross-references" >}}
     Generate internal links and external links using a combination of Markdown and Hugo shortcodes. You can optionally manage your external links in a central configuration file. Review the [links documentation]({{% relref "links-and-cross-references" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Add responsive images optimized for multiple screen sizes and devices">}}
+  {{< accordion-item title="Add responsive images optimized for multiple screen sizes and devices">}}
     Hinode supports responsive images out-of-the-box. Hinode uses Hugo to preprocess images on the server. By taking advantage of so-called image sets, the client’s browser can decide which image to download whilst reducing the download size. Review the [image documentation]({{% relref "images-and-figures" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Apply Bootstrap styling to your tables" >}}
+  {{< accordion-item title="Apply Bootstrap styling to your tables" >}}
     Hinode enhances the basic tables available in Markdown with optional styling features provided by Bootstrap. You can customize the accentuation, adjust the borders, and make tables more compact. Review the [tables documentation]({{% relref "tables" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Include Font Awesome icons on the fly" >}}
+  {{< accordion-item title="Include Font Awesome icons on the fly" >}}
     Hinode provides out-of-the box access to the free icons of {{</* link fontawesome >}}Font Awesome{{< /link */>}}. The icon library provides various styling options. Review the [icons documentation]({{% relref "../content/icons" %}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}
@@ -132,19 +132,19 @@ The {{< link repository >}}main Hinode repository{{< /link >}} contains a folder
 The main site configuration is available in `./config/_default`. Review the following items to get you started.
 
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="Review the layout options" >}}
+  {{< accordion-item title="Review the layout options" >}}
     Hinode uses a base layout for the home page, list pages, and individual pages. Individual pages can also be configured as documentation page instead of a regular page. Review the [layout documentation]({{% relref "colors" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Adjust the theme colors" >}}
+  {{< accordion-item title="Adjust the theme colors" >}}
     Hinode uses eight configurable theme colors. You can adjust them in the `style` section of  `/config/_default/params.toml`. Review the [colors documentation]({{% relref "colors" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Set the main font" >}}
+  {{< accordion-item title="Set the main font" >}}
     Set the `themeFont` and `themeFontPath` in the `style` section of `/config/_default/params.toml` to adjust the main font. Hinode includes supports for [Emoji]({{% relref "typography#emoji" %}}) by default. Review the [fonts documentation]({{% relref "fonts" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Configure the supported languages">}}
+  {{< accordion-item title="Configure the supported languages">}}
     Configure each supported language in `config/_default/languages.toml`. Set the default behavior in `config/_default/hugo.toml`. Review the [languages documentation]({{% relref "languages" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Define the main menu" >}}
+  {{< accordion-item title="Define the main menu" >}}
     Define the main menu entries for each language in `config/_default/menus`. For example, the English menu entries are defined in `menus.en.toml`. See the [navigation documentation]({{% relref "navigation" %}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}
@@ -153,22 +153,22 @@ The main site configuration is available in `./config/_default`. Review the foll
 
 The next topics give an overview of the advanced configuration settings.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="Review the approach to dependency management and virtualization" >}}
+  {{< accordion-item title="Review the approach to dependency management and virtualization" >}}
     Hinode supports {{</* link npm >}}npm{{< /link */>}} packages to automate various tasks. In addition, it uses Hugo's {{</* link hugo_mounts >}}mounted folders{{< /link */>}} to create a virtual file system. Review the [advanced settings overview]({{% relref "../advanced-settings/overview" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Adjust the build pipeline for Sass files" >}}
+  {{< accordion-item title="Adjust the build pipeline for Sass files" >}}
     Hinode uses Bootstrap's Sass files to generate the cascading style sheets of the website. The main entrypoint is defined in `assets/scss/app.scss`. See the [styles documentation]({{% relref "styles" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Bundle JavaScript files for deployment">}}
+  {{< accordion-item title="Bundle JavaScript files for deployment">}}
     Hinodes uses npm to include the latest JavaScript files of external packages such as {{</* link bootstrap >}}Bootstrap{{< /link */>}} and {{</* link flexsearch >}}FlexSearch{{< /link */>}}. All local and external files are bundled in a single JavaScript file. See the [scripts documentation]({{% relref "scripts" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Process icon files to apply theme colors" >}}
+  {{< accordion-item title="Process icon files to apply theme colors" >}}
     Hinode replaces Bootstrap's embedded icons with file-based icons to comply with its security settings. The icon files are parameterized to use the theme colors. See the [icons documentation]({{% relref "../advanced-settings/icons" %}}) for more details.
   {{< /accordion-item >}}
-  {{< accordion-item header="Refine header settings to adjust the Content Security Policy" >}}
+  {{< accordion-item title="Refine header settings to adjust the Content Security Policy" >}}
     Hinode uses rather strict security policies to ensure the site is secure by default. Be sure to include references to external sources in the header configuration to avoid broken links. The settings of the local development server are defined in `config/_default/server.toml`. Similar settings are defined in the `netlify.toml` file provided in the repository's root when deploying to {{</* link netlify >}}Netlify{{< /link */>}}. See the [server documentation]({{% relref "server-headers" %}}) for more details.
   {{< /accordion-item >}}
 {{< /accordion >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

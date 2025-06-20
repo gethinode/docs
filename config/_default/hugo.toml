@@ -34,7 +34,7 @@ defaultContentLanguageInSubdir = false
     disabled = false
     simple = true
 
-  [privacy.twitter]
+  [privacy.x]
     disabled = false
     enableDNT = true
     simple = true
@@ -50,7 +50,7 @@ defaultContentLanguageInSubdir = false
 [services]
   [services.instagram]
     disableInlineCSS = true
-  [services.twitter]
+  [services.x]
     disableInlineCSS = true
   [services.googleAnalytics]
     ID = "G-T85PPZ36GN"

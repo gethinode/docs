@@ -14,11 +14,11 @@ tags: component
 
 Use the `kbd` shortcode to show a keyboard input element. As an example, the following shortcodes shows a simple `CTRL-C` command.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
 {{</* kbd "CTRL-C" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -30,15 +30,15 @@ The shortcode supports the following arguments:
 
 Set a background color with contrasting foreground color with the `color` argument.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example >}}
-{{</* kbd title="primary" color="primary" */>}}
-{{</* kbd title="secondary" color="secondary" */>}}
-{{</* kbd title="success" color="success" */>}}
-{{</* kbd title="danger" color="danger" */>}}
-{{</* kbd title="warning" color="warning" */>}}
-{{</* kbd title="info" color="info" */>}}
-{{</* kbd title="light" color="light" */>}}
-{{</* kbd title="dark" color="dark" */>}}
+{{</* kbd text="primary" color="primary" */>}}
+{{</* kbd text="secondary" color="secondary" */>}}
+{{</* kbd text="success" color="success" */>}}
+{{</* kbd text="danger" color="danger" */>}}
+{{</* kbd text="warning" color="warning" */>}}
+{{</* kbd text="info" color="info" */>}}
+{{</* kbd text="light" color="light" */>}}
+{{</* kbd text="dark" color="dark" */>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

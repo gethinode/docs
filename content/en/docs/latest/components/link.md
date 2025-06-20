@@ -14,11 +14,11 @@ tags: component
 
 Since Hinode `v0.16.8` you can add a managed link to your page content using a configurable shortcode. Managed links refer to an external URL that is centrally maintained in the site's parameters. The shortcode also supports internal links that refer to a regular page or published asset.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* link mozilla_image /*/>}}
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->
 
 ## Arguments
 
@@ -53,21 +53,21 @@ Use either named links or common url's to generate a managed link. If a link nam
 
 Use the `cue` and `tab` arguments to override the default behavior of displaying and opening external links. Omit the link's content to generate a reference to the host (for external links) or the target page's title (for internal links). Lastly, set `case` to false to set the obtained page title to lower case.
 
-{{% comment %}}<!-- markdownlint-disable MD037 -->{{% /comment %}}
+<!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 
 - {{</* link mozilla_image >}}Named link with default settings{{< /link */>}}
-- {{</* link name=mozilla_image cue=false tab=false >}}Named link opening in current tab w/o icon{{< /link */>}}
-- {{</* link name=mozilla_image cue=true tab=true >}}Named link opening in new tab with icon{{< /link */>}}
+- {{</* link href=mozilla_image cue=false tab=false >}}Named link opening in current tab w/o icon{{< /link */>}}
+- {{</* link href=mozilla_image cue=true tab=true >}}Named link opening in new tab with icon{{< /link */>}}
 - {{</* link mozilla_image /*/>}}
 - {{</* link "https://developer.mozilla.org" >}}External link{{< /link */>}}
 - {{</* link "../getting-started/introduction" >}}Internal link with title{{< /link */>}}
 - {{</* link "../about/license" >}}Internal link with relative path{{< /link */>}}
 - {{</* link "/docs/about/license" >}}Internal link with absolute path{{< /link */>}}
 - {{</* link "docs/about/license" >}}Internal link with full path{{< /link */>}}
-- {{</* link url="../about/license" case=false /*/>}}
+- {{</* link href="../about/license" case=false /*/>}}
 - {{</* link "#arguments" /*/>}}
 - {{</* link "image#examples" /*/>}}
 
 {{< /example >}}
-{{% comment %}}<!-- markdownlint-enable MD037 -->{{% /comment %}}
+<!-- markdownlint-enable MD037 -->

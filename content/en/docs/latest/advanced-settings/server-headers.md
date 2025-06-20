@@ -16,7 +16,7 @@ Hinode uses strict security policies to ensure the site is {{< link observatory 
 > [!TIP]
 > The {{< link hugo_server >}}server header configuration used by Hugo{{< /link >}} is similar to the configuration supported by Netlify. We can therefore reuse the same template code to configure both environments. This simplifies development and testing, and ensures the local development environment and production environment are comparable.
 
-Since {{< release version="v0.27.0" short="true" type="link" >}}, Hinode includes {{< link "hinode_csp" >}} a module to generate the server headers automatically{{< /link >}}. It uses a feature from Hugo that enables the definition of a {{< link "hugo_custom_output" >}}custom output format{{< /link >}}. The main Hinode repository defines two custom output formats. The first one generates the server headers for a local web server provided by Hugo. The second output format defines a similar configuration for the deployment to Netlify.
+Since {{< release version="v0.27.0" short="true" link-type="link" >}}, Hinode includes {{< link "hinode_csp" >}} a module to generate the server headers automatically{{< /link >}}. It uses a feature from Hugo that enables the definition of a {{< link "hugo_custom_output" >}}custom output format{{< /link >}}. The main Hinode repository defines two custom output formats. The first one generates the server headers for a local web server provided by Hugo. The second output format defines a similar configuration for the deployment to Netlify.
 
 Add the following configuration to your main configuration (usually `hugo.toml`). The setting `root = true` ensures the output files are placed in the root of the build folder. Otherwise, Hugo would create a separate output for each one of the defined site languages.
 
@@ -40,7 +40,7 @@ Each file calls a custom partial called `assets/server-headers.html`, which is d
 
 By default, Hinode generates the server headers using a default policy. Click on the tab below to review the default settings.
 
-{{< file path="./_vendor/github.com/gethinode/hinode/data/server.toml" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/data/server.toml" full=false >}}
 
 You can merge the generated file with another input file. The supported formats are `JSON`, `TOML`, `YAML`, and `XML`. For example, you could include additional settings for the deployment to Netlify. Include the settings in your `data` folder and add the relative path to the `source` parameter of your header configuration. For example, the following configuration merges the file `data/netlify.toml` with the Netlify server headers. Add the configuration to your site's parameters (e.g. `hugo.toml`).
 
