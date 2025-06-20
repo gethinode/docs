@@ -75,7 +75,7 @@ The toast shortcode displays the message `This is a toast message` provided as i
 
 The toast shortcode invokes the underlying partial to render the actual HTML output. The partial supports similar arguments, but expects the inner content to be passed as argument `message` instead. The following file formalizes these specifications:
 
-{{< file file="./_vendor/github.com/gethinode/hinode/data/structures/toast.yml" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/data/structures/toast.yml" full=false >}}
 
 The shortcode uses the following code to validate its arguments, excluding the `message` argument that belongs to the `partial` group. When an error occurs, the shortcode logs an error message with a reference to the context `.Position`.
 

@@ -99,6 +99,6 @@ Set `full` to `false` to show the filename only.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* docs name="styling" full="false" file="./assets/scss/theme/theme.scss" id="docs-collapse-5" */>}}
+{{</* docs name="styling" full=false file="./assets/scss/theme/theme.scss" id="docs-collapse-5" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

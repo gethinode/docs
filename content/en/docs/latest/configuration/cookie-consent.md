@@ -65,7 +65,7 @@ Hinode includes a partial template to render the script references. It is invoke
 
 Hinode includes a basic script template in `layouts/partials/templates/script.html`. It includes the following code:
 
-{{< file file="./_vendor/github.com/gethinode/hinode/layouts/_partials/templates/script.html" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/layouts/_partials/templates/script.html" full=false >}}
 
 You can modify this template to your needs. For example, {{< link "cookieyes_script_code" >}}CookieYes supports a custom attribute{{< /link >}} called `data-cookieyes` to categorize the referenced script. You could modify the template to include this custom attribute:
 
@@ -85,7 +85,7 @@ Hinode uses several scripts to access and store the user's preferences, includin
 
 The available functions are defined in `/assets/js/critical/_cookie.js`:
 
-{{< file file="./_vendor/github.com/gethinode/hinode/assets/js/critical/_cookie.js" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/assets/js/critical/_cookie.js" full=false >}}
 
 Pending your cookie consent configuration, the API functions may not be available at all times. The following code illustrates how to test for the availability of the `getLocalStorage()` function:
 
