@@ -106,19 +106,19 @@ The update command chains several commands that each need to run successfully (h
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="rimraf _vendor" >}}
+  {{< accordion-item title="rimraf _vendor" >}}
   Hinode requires the modules to be vendored (see `npm run -s mod:vendor`). To avoid synchronization issues, the `_vendor` folder is purged prior to each module update.
   {{< /accordion-item >}}
-  {{< accordion-item header="hugo mod get -u ./..." >}}
+  {{< accordion-item title="hugo mod get -u ./..." >}}
   Hugo calls `go mod get` behind the scenes to download and install the required modules, taking version requirements into account. The `-u` flag requests Hugo to update the modules to their latest version too. The `./...` argument instructs Hugo to update all modules recursively. This includes the `exampleSite` subfolder, if any.
   {{< /accordion-item >}}
-  {{< accordion-item header="hugo mod get -u" >}}
+  {{< accordion-item title="hugo mod get -u" >}}
   The previous command seemingly has a bug (see {{</* link hugo_issue_10719>}}#10719{{< /link */>}}), in which it does not update the main `go.mod` file in the repository root when updating any module files in subfolders (such as `exampleSite`). Running `hugo mod get -u` without the recursive argument is a workaround to fix this.
   {{< /accordion-item >}}
-  {{< accordion-item header="npm run -s mod:vendor" >}}
+  {{< accordion-item title="npm run -s mod:vendor" >}}
   Hugo stores the installed modules in a local cache folder. This cache folder is volatile and can differ per OS, such as macOS, Windows, and Linux distribution. Hinode uses purging to reduce the overhead of stylesheets. The purger requires access to specific files of the main Hinode repository. Vendoring the modules, including the main Hinode module, ensures the various files are available on a known path (usually `./_vendor`). Vendoring is also required when you have a subsite, such as `exampleSite`, or if you would like to reference a specific file from a module (using for example the {{</* link "/docs/components/docs/" >}}docs shortcode{{< /link */>}} ).
   {{< /accordion-item >}}
-  {{< accordion-item header="npm run -s mod:tidy" >}}
+  {{< accordion-item title="npm run -s mod:tidy" >}}
   The command `hugo mod tidy` removes unused entries in `go.mod` and `go.sum`.
   {{< /accordion-item >}}
 {{< /accordion >}}

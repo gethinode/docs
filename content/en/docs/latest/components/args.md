@@ -74,4 +74,4 @@ Any provided type not matching a primitive is considered a complex type. Type co
 
 The following file illustrates the definition of the `card` shortcode and partial.
 
-{{< file path="data/structures/card.yml" full="true" show="false" >}}
+{{< file file="data/structures/card.yml" full="true" show="false" >}}

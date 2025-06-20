@@ -30,14 +30,14 @@ The shortcode supports the following arguments:
 
 ### Stateful buttons
 
-Set the `state` argument to change the appearance and behavior of the button.
+Set the `button-state` argument to change the appearance and behavior of the button.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="primary" href="#!" state="enabled" */>}}Enabled{{</* /button */>}}
-{{</* button color="primary" href="#!" state="disabled" */>}}Disabled{{</* /button */>}}
-{{</* button color="primary" href="#!" state="active" */>}}Active{{</* /button */>}}
-{{</* button color="primary" href="#!" state="inactive" */>}}Inactive{{</* /button */>}}
+{{</* button color="primary" href="#!" button-state="enabled" */>}}Enabled{{</* /button */>}}
+{{</* button color="primary" href="#!" button-state="disabled" */>}}Disabled{{</* /button */>}}
+{{</* button color="primary" href="#!" button-state="active" */>}}Active{{</* /button */>}}
+{{</* button color="primary" href="#!" button-state="inactive" */>}}Inactive{{</* /button */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -47,9 +47,9 @@ Set the `size` argument to resize the button.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="primary" href="#!" size="sm" */>}}sm{{</* /button */>}}
-{{</* button color="primary" href="#!" size="md" */>}}md{{</* /button */>}}
-{{</* button color="primary" href="#!" size="lg" */>}}lg{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="sm" */>}}sm{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="md" */>}}md{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="lg" */>}}lg{{</* /button */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -59,14 +59,14 @@ Set the `color` argument to define the background color with a matching title co
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="primary" href="#!" size="sm" */>}}primary{{</* /button */>}}
-{{</* button color="secondary" href="#!" size="sm" */>}}secondary{{</* /button */>}}
-{{</* button color="success" href="#!" size="sm" */>}}success{{</* /button */>}}
-{{</* button color="danger" href="#!" size="sm" */>}}danger{{</* /button */>}}
-{{</* button color="warning" href="#!" size="sm" */>}}warning{{</* /button */>}}
-{{</* button color="info" href="#!" size="sm" */>}}info{{</* /button */>}}
-{{</* button color="light" href="#!" size="sm" */>}}light{{</* /button */>}}
-{{</* button color="dark" href="#!" size="sm" */>}}dark{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="sm" */>}}primary{{</* /button */>}}
+{{</* button color="secondary" href="#!" button-size="sm" */>}}secondary{{</* /button */>}}
+{{</* button color="success" href="#!" button-size="sm" */>}}success{{</* /button */>}}
+{{</* button color="danger" href="#!" button-size="sm" */>}}danger{{</* /button */>}}
+{{</* button color="warning" href="#!" button-size="sm" */>}}warning{{</* /button */>}}
+{{</* button color="info" href="#!" button-size="sm" */>}}info{{</* /button */>}}
+{{</* button color="light" href="#!" button-size="sm" */>}}light{{</* /button */>}}
+{{</* button color="dark" href="#!" button-size="sm" */>}}dark{{</* /button */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -120,21 +120,21 @@ Set the `outline` argument to `true` to adjust the style of the button.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="primary" href="#!" size="sm" outline="true" */>}}primary{{</* /button */>}}
+{{</* button color="primary" href="#!" button-size="sm" outline="true" */>}}primary{{</* /button */>}}
 
-{{</* button color="secondary" href="#!" size="sm" outline="true" */>}}secondary{{</* /button */>}}
+{{</* button color="secondary" href="#!" button-size="sm" outline="true" */>}}secondary{{</* /button */>}}
 
-{{</* button color="success" href="#!" size="sm" outline="true" */>}}success{{</* /button */>}}
+{{</* button color="success" href="#!" button-size="sm" outline="true" */>}}success{{</* /button */>}}
 
-{{</* button color="danger" href="#!" size="sm" outline="true" */>}}danger{{</* /button */>}}
+{{</* button color="danger" href="#!" button-size="sm" outline="true" */>}}danger{{</* /button */>}}
 
-{{</* button color="warning" href="#!" size="sm" outline="true" */>}}warning{{</* /button */>}}
+{{</* button color="warning" href="#!" button-size="sm" outline="true" */>}}warning{{</* /button */>}}
 
-{{</* button color="info" href="#!" size="sm" outline="true" */>}}info{{</* /button */>}}
+{{</* button color="info" href="#!" button-size="sm" outline="true" */>}}info{{</* /button */>}}
 
-{{</* button color="light" href="#!" size="sm" outline="true" */>}}light{{</* /button */>}}
+{{</* button color="light" href="#!" button-size="sm" outline="true" */>}}light{{</* /button */>}}
 
-{{</* button color="dark" href="#!" size="sm" outline="true" */>}}dark{{</* /button */>}}
+{{</* button color="dark" href="#!" button-size="sm" outline="true" */>}}dark{{</* /button */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -164,11 +164,11 @@ Set the `tooltip` argument in conjunction with `placement` to show a tooltip whe
 
 ### Buttons with a collapsible panel
 
-Reveal or hide a collapsible panel by linking the panel's `id` to the button with the argument `collapse`.
+Reveal or hide a collapsible panel by linking the panel's `id` to the button with the argument `collapse-id`.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button color="secondary" collapse="collapse-1" */>}}
+{{</* button color="secondary" collapse-id="collapse-1" */>}}
     Collapse
 {{</* /button */>}}
 

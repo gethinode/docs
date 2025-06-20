@@ -75,16 +75,16 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | `endorse`            | true              | By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled. |
 | `enableLanguageSelectionStorage` | false | If set, stores the last selected language in the site's local storage. Pages are automatically redirected to the related page translation, if available. |
 | `footerBelowFold`    | false             | If set, pushes the footer including social links to below the page fold. |
-| `loading`            | "eager"           | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{% relref "image" %}}) provides more details.|
+| `loading`            | "eager"           | {{</* release version="v0.21.0" short="true" button-size="sm" inline="true" */>}} Sets the default loading behavior of images below the page fold. Supported values are either "eager" (default) or "lazy". In practice, Hinode can only determine if an image is below the page fold when `fullCover` is set to true and the current page is a list page or the homepage. The [image shortcode documentation]({{% relref "image" %}}) provides more details.|
 | `canonifyAssetsURLs` | false             | If set, makes permalinks to site assets (favicons, images, scripts, and stylesheets) absolute instead of relative. |
-| `breakpoint`         | "md"              | {{</* release version="v0.21.7" short="true" size="sm" inline="true" */>}} Breakpoint for single pages and list pages to start showing the sidebar navigation and table of content panel. Card groups use the same breakpoint to decide how many columns to display in the current viewport. |
-| `titleCase`          | false             | {{</* release version="v0.29.0" short="true" size="sm" inline="true" */>}} If set, applies title case to headers and other select elements. Configure the title style in the [site configuration](https://gohugo.io/getting-started/configuration/#configure-title-case). |
+| `breakpoint`         | "md"              | {{</* release version="v0.21.7" short="true" button-size="sm" inline="true" */>}} Breakpoint for single pages and list pages to start showing the sidebar navigation and table of content panel. Card groups use the same breakpoint to decide how many columns to display in the current viewport. |
+| `titleCase`          | false             | {{</* release version="v0.29.0" short="true" button-size="sm" inline="true" */>}} If set, applies title case to headers and other select elements. Configure the title style in the [site configuration](https://gohugo.io/getting-started/configuration/#configure-title-case). |
 | `internalLinks.validate`  | true         | If set, validates if internal links reference a valid page. |
-| `internalLinks.pretty`  | false          | {{</* release version="v0.27.19" short="true" size="sm" inline="true" */>}} If set, adds a trailing slash to rendered links. |
-| `externalLinks.cue`  | false             | If set, adds a visual cue `{{</* icon class="fas up-right-from-square fa-2xs" spacing=false */>}}` as suffix to [managed external links]({{% relref "links-and-cross-references#managed-links" %}}). |
+| `internalLinks.pretty`  | false          | {{</* release version="v0.27.19" short="true" button-size="sm" inline="true" */>}} If set, adds a trailing slash to rendered links. |
+| `externalLinks.cue`  | false             | If set, adds a visual cue `{{</* icon icon="fas up-right-from-square fa-2xs" spacing=false */>}}` as suffix to [managed external links]({{% relref "links-and-cross-references#managed-links" %}}). |
 | `externalLinks.tab`  | false             | If set, opens [managed external links]({{% relref "links-and-cross-references#managed-links" %}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
-| `build.transpiler`   | "libsass"         | {{</* release version="v0.20.0" short="true" size="sm" inline="true" */>}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{</* link hugo_sass >}}installation of a separate binary on your machine{{< /link */>}}. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment.|
-| `build.silenceDeprecations`   | false         | {{</* release version="v0.27.9" short="true" size="sm" inline="true" */>}} Silences any deprecation warnings raised by the Dart Sass transpiler. |
+| `build.transpiler`   | "libsass"         | {{</* release version="v0.20.0" short="true" button-size="sm" inline="true" */>}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{</* link hugo_sass >}}installation of a separate binary on your machine{{< /link */>}}. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment.|
+| `build.silenceDeprecations`   | false         | {{</* release version="v0.27.9" short="true" button-size="sm" inline="true" */>}} Silences any deprecation warnings raised by the Dart Sass transpiler. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 
@@ -154,13 +154,13 @@ Hinode supports {{< link hugo_lang_config >}}multilingual content{{< /link >}}. 
 | Section | Setting       | Default | Description |
 |---------|---------------|---------|-------------|
 | `head`    | `tagline`       | -       | Tagline used on the site's title for the home page. |
-| `feature` | `link`          | -       | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{% relref "languages" %}})). |
-| `feature` | `caption`       | "About" | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} See `feature.link`. |
+| `feature` | `link`          | -       | {{</* release version="v0.18.0" short="true" release-state="deprecated" button-size="sm" inline="true" */>}} Modify `content/{LANG}/_index.md` directly (`{LANG}` is optional, pending on your [language settings]({{% relref "languages" %}})). |
+| `feature` | `caption`       | "About" | {{</* release version="v0.18.0" short="true" release-state="deprecated" button-size="sm" inline="true" */>}} See `feature.link`. |
 | `social`  | `title`         | -       | Title displayed in the site's social footer. |
 | `social`  | `caption`       | -       | Caption displayed in the site's social footer. |
 | `footer`  | `license`       | -       | License displayed on the site's footer. |
-| `footer`  | `socialTitle`   | -       | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.title` instead. |
-| `footer`  | `socialCaption` | -       | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `social.caption` instead. |
+| `footer`  | `socialTitle`   | -       | {{</* release version="v0.18.0" short="true" release-state="deprecated" button-size="sm" inline="true" */>}} Use `social.title` instead. |
+| `footer`  | `socialCaption` | -       | {{</* release version="v0.18.0" short="true" release-state="deprecated" button-size="sm" inline="true" */>}} Use `social.caption` instead. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 
@@ -199,12 +199,12 @@ The configuration of the home page is set in the `home` section of the `site par
 | Setting             | Default           | Description |
 |---------------------|-------------------|-------------|
 | `sections`            | All root sections | Sections to include on the home page, e.g. `["blog", "projects"]` - defaults to {{</* link hugo_sections >}}all root sections.{{< /link */>}} |
-| `featurePhoto`        | -                 | {{</* release version="v0.18.0" short="true" state="deprecated" size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
+| `featurePhoto`        | -                 | {{</* release version="v0.18.0" short="true" release-state="deprecated" button-size="sm" inline="true" */>}} Use `thumbnail` of the homepage (e.g. `content/_index.md`) instead. |
 | `fullCover`           | false             | Flag to indicate if the feature element should cover the entire front page. |
 | `style`               | -                 | Optional class attributes to add to the main `<div>` element of the base page. Applies to the homepage only.        |
-| `feature.orientation` | "stacked"         | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
-| `feature.color`       | -                 | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
-| `feature.width`       | 6                 | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
+| `feature.orientation` | "stacked"         | {{</* release version="v0.21.0" short="true" button-size="sm" inline="true" */>}} Orientation of the featured section, either "stacked" (default) or "horizontal". |
+| `feature.color`       | -                 | {{</* release version="v0.21.0" short="true" button-size="sm" inline="true" */>}} Optional background color of the featured section, used in conjunction with `style.themeOpacity` in the site's parameters. |
+| `feature.width`       | 6                 | {{</* release version="v0.21.0" short="true" button-size="sm" inline="true" */>}} Optional column width of the main featured section, supported values are 1 - 12. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 
@@ -355,8 +355,8 @@ Please refer to the [content management section]({{% relref "content-management#
 {{< table wrap=true >}}
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
-| `metadata`     | "full"               | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Defines the metadata to include in the header of a single page type. Supported values are "full" (default), "original", and "none". In the default configuration, the header includes metadata elements for the original publication date, modification date (if applicable), reading time, and word count. When set to `original`, the modification date is always omitted. Set `metadata` to `none` to suppress all metadata elements. |
-| `sharing`         | true              | {{</* release version="v0.21.2" short="true" size="sm" inline="true" */>}} Optional flag to indicate if a single page should include sharing options (when the {{</* link "#social-sharing-configuration" >}}social sharing configuration{{< /link */>}} is enabled). |
+| `metadata`     | "full"               | {{</* release version="v0.21.2" short="true" button-size="sm" inline="true" */>}} Defines the metadata to include in the header of a single page type. Supported values are "full" (default), "original", and "none". In the default configuration, the header includes metadata elements for the original publication date, modification date (if applicable), reading time, and word count. When set to `original`, the modification date is always omitted. Set `metadata` to `none` to suppress all metadata elements. |
+| `sharing`         | true              | {{</* release version="v0.21.2" short="true" button-size="sm" inline="true" */>}} Optional flag to indicate if a single page should include sharing options (when the {{</* link "#social-sharing-configuration" >}}social sharing configuration{{< /link */>}} is enabled). |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 
@@ -430,7 +430,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | Setting      | Default              | Description |
 |--------------|----------------------|-------------|
 | `title`        | ""                   | Title of the section on the home page. It overrides the title of the page bundle. On list pages, the title defined in the page bundle's frontmatter is used instead. When using a multi-lingual site, make sure to properly translate this setting. |
-| `reference`    | "More {{section}}"   | {{</* release version="v0.18.0" short="true" size="sm" inline="true" */>}} Caption of the button that links to the section's associated list page (if applicable). By default, the title is set to "More {{section}}", where `{{section}}` is the section title in plural. When using a multi-lingual site, make sure to properly translate this setting. |
+| `reference`    | "More {{section}}"   | {{</* release version="v0.18.0" short="true" button-size="sm" inline="true" */>}} Caption of the button that links to the section's associated list page (if applicable). By default, the title is set to "More {{section}}", where `{{section}}` is the section title in plural. When using a multi-lingual site, make sure to properly translate this setting. |
 | `layout`       | "card"               | Layout of the section, either "card" (default), "list", or "nav". |
 | `sort`         | "date"               | Sorting key to be used, based on a frontmatter parameter. Examples are "date" (default), "lastmod", "weight", or "title". You can also use custom parameters, as long as they are defined in the page's frontmatter. |
 | `reverse`      | true                 | Flag to indicate the sorting of the section content should be reversed, defaults to true. |
@@ -438,7 +438,7 @@ The configuration of each section is set in the `sections` setting of the `site 
 | `background`   | -                    | Theme color of the section background, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. The background expands across the entire viewport (thus is not constrained to the page's maximum width of 1320 pixels). |
 | `color`        | -                    | Theme color of the section elements, either "primary", "secondary", "success", "danger", "warning", "info", "light", "dark", "white", "black", "body", or "body-tertiary". By default, no color is specified. |
 | `style`        | "border-0 card-zoom" | Optional styling attributes added to selection elements, e.g. "border-0" to remove the borders. |
-| `wrap`         | false                | {{</* release version="v0.21.0" short="true" size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
+| `wrap`         | false                | {{</* release version="v0.21.0" short="true" button-size="sm" inline="true" */>}} Optional flag to enable word wrapping of tab titles, defaults to false. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 

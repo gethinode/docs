@@ -154,7 +154,7 @@ We will now expose the various files copied to our local `dist` folder using [Hu
 
 As a final step we will include a basic script to initialize KaTeX when the page loads. An example script is available on the {{< link katex_load >}}KaTeX site{{< /link >}}. Create a file `assets/js/modules/katex/katex-autoload.js` and copy-paste the following script (copied from the KaTeX site for convenience). When done, push the latest changes to your remote git repository.
 
-{{< file path="./_vendor/github.com/gethinode/mod-katex/assets/js/modules/katex/katex-autoload.js" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/mod-katex/assets/js/modules/katex/katex-autoload.js" full="false" >}}
 
 ## Step 4 - Testing the KaTeX markup
 

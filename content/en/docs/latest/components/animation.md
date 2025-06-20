@@ -17,7 +17,7 @@ Use the animation shortcode to show an After Effects animation, powered by {{< l
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation data="animation/gatin.json" auto=false hover=true class="col-6 mx-auto" */>}}
+{{</* animation animation-data="animation/gatin.json" autoplay=false hover=true class="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -41,7 +41,7 @@ Assign a valid path to `data` to provide a JSON file that contains the animation
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation data="animation/gatin.json" class="col-6 mx-auto" */>}}
+{{</* animation animation-data="animation/gatin.json" class="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -51,7 +51,7 @@ Set `auto` to false and `hover` to true to trigger the animation when hovering t
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation data="animation/gatin.json" auto=false hover=true class="col-6 mx-auto" */>}}
+{{</* animation animation-data="animation/gatin.json" autoplay=false hover=true class="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -61,6 +61,6 @@ Assign a specific identified to the animation by setting the `id` argument. The 
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* animation id="gatin-animation" data="animation/gatin.json" class="col-6 mx-auto" */>}}
+{{</* animation id="gatin-animation" animation-data="animation/gatin.json" class="col-6 mx-auto" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

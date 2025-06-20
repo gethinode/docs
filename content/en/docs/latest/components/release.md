@@ -50,7 +50,7 @@ Indicate a deprecated feature by setting `state` to `deprecated`.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* release version="v0.14.1" state="deprecated" */>}}
+{{</* release version="v0.14.1" release-state="deprecated" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -61,6 +61,6 @@ Shorten the button title by setting `short` to `true`.
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* release version="v0.14.1" short="true" */>}}
-{{</* release version="v0.14.1" short="true" state="deprecated" */>}}
+{{</* release version="v0.14.1" short="true" release-state="deprecated" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

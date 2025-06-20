@@ -180,16 +180,16 @@ Hugo modules have several constraints to work properly. The below overview provi
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="The required distribution files are unavailable" >}}
+  {{< accordion-item title="The required distribution files are unavailable" >}}
     Hugo modules use the latest available release on GitHub, or the most recent HEAD of the default branch otherwise. However, not all repositories maintain their distribution files as part of version control or their GitHub release assets. One such example is the {{</* link leaflet >}}Leaflet library{{< /link */>}}. The repository does not include the compiled JavaScript, but only its source files. As a workaround, the {{</* link repository_mod_leaflet >}}Leaflet module{{< /link */>}} downloads the npm package instead and copies the required files in a `postinstall` script.
   {{< /accordion-item >}}
-  {{< accordion-item header="The available releases do not adhere to semantic versioning" >}}
+  {{< accordion-item title="The available releases do not adhere to semantic versioning" >}}
     Hugo requires repositories to use a consistent semantic versioning pattern when tagging their releases. In case a repository has changed its pattern, Hugo will not detect the latest version correctly. One such example is the {{</* link fontawesome >}}Font Awesome library{{< /link */>}}. It changed its release pattern from `v4.x.y` to `Release 5.x.y` (notice the drop of the `v` prefix). As a result, Hugo only downloads the old `v4.x.y` release. A workaround is to create a fork for version 6.x only and to use this as a source instead. This requires periodic synchronization of the fork though. Another approach is to use the npm release of Font Awesome instead and to mount the required files. This is the approach taken by the {{</* link repository_mod_fontawesome >}}Font Awesome module{{< /link */>}}.
   {{< /accordion-item >}}
-  {{< accordion-item header="The Hugo modules are not updated by Dependabot" >}}
+  {{< accordion-item title="The Hugo modules are not updated by Dependabot" >}}
     {{</* link dependabot >}}Dependabot{{< /link */>}} automatically keeps the dependencies and packages used in your repository updated to the latest version. However, the current version does not recognize Hugo modules. Set up a custom workflow instead, such as described in [Hugo module upgrades]({{% relref "#hugo-module-upgrades" %}}).
   {{< /accordion-item >}}
-  {{< accordion-item header="The local installation of Hugo modules fails" >}}
+  {{< accordion-item title="The local installation of Hugo modules fails" >}}
     Hugo provides a configuration option to replace a remote module with a local folder to simplify development and testing. For example, the {{</* link repository_mod_flexsearch >}}FlexSearch module{{< /link */>}} uses a module replacement in the file `exampleSite/hugo.toml`. The replacement tells Hugo to use the module code of the parent folder, instead of downloading the remote release assets. However, if the module `mod-flexsearch` uses other Hugo modules itself (so-called transitive dependencies), Hugo will throw an error `Error: failed to load modules`. Vendor your modules with `hugo mod vendor` to fix this issue.
 
 ```toml
@@ -198,7 +198,7 @@ Hugo modules have several constraints to work properly. The below overview provi
 ```
 
   {{< /accordion-item >}}
-  {{< accordion-item header="The Hugo modules appear incomplete when installed or updated" >}}
+  {{< accordion-item title="The Hugo modules appear incomplete when installed or updated" >}}
     You might have an issue with your Hugo module cache. Certain operating systems such as macOS have a volatile cache system, that is modified when your machine has restarted or was recently suspended. Try running `hugo mod clean` to clear the Hugo module cache and then rerun `hugo mod get -u`.
   {{< /accordion-item >}}
 {{< /accordion >}}

@@ -79,20 +79,20 @@ Deploy your site to Azure blob storage in six steps.
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="Step 1. Create a storage account" >}}
+  {{< accordion-item title="Step 1. Create a storage account" >}}
     If not done so already, sign up for an account on the {{</* link azure >}}Azure website{{< /link */>}}. Log in to the Azure portal and create a storage account. The storage account needs to have a unique name across Azure. Select a region that best fits your needs. Leave all other options to their default value.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 2. Enable the static website" >}}
+  {{< accordion-item title="Step 2. Enable the static website" >}}
     Go to the menu section `Data management` and select `Static website`. Set the toggle for `Static website` to `Enabled`. Azure will then create a storage container `$web` within your storage account to host your website. Capture the primary endpoint, for example `https://gethinode.z6.web.core.windows.net/`. Set the `Index document name` to `index.html`. Hit the `Save` button when done.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 3. Configure environment variables" >}}
+  {{< accordion-item title="Step 3. Configure environment variables" >}}
     Go to the menu section `Security + networking` and select `Access keys`. Capture the storage account name, e.g. `gethinode`. Next, copy either of the two keys to your clipboard. Set the credentials on your local computer:
     {{</* command user="user" host="localhost" */>}}
     export AZURE_STORAGE_ACCOUNT="{account name}"
     export AZURE_STORAGE_KEY="{storage key}"
     {{</* /command */>}}
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 4. Build the website locally" >}}
+  {{< accordion-item title="Step 4. Build the website locally" >}}
     Run the following command to build your website locally using `hugo`:
       {{</* command user="hugo" host="localhost" */>}}
       hugo mod get -u ./... && hugo mod tidy && hugo --gc --minify
@@ -102,13 +102,13 @@ Deploy your site to Azure blob storage in six steps.
       npm install && npm run mod:update && npm run build
       {{</* /command */>}}
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 5. Deploy the files" >}}
+  {{< accordion-item title="Step 5. Deploy the files" >}}
     Deploy the files to your Azure blob storage using the following command. Add `--dryRun` to review the upload before actually publishing the files.
     {{</* command user="user" host="localhost" */>}}
     hugo deploy
     {{</* /command */>}}
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 6. Visit the end point" >}}
+  {{< accordion-item title="Step 6. Visit the end point" >}}
     Once the deployment has finished, visit the end point captured in step 2 to test the website in your browser.
   {{< /accordion-item >}}
 {{< /accordion >}}
@@ -158,25 +158,25 @@ Sign up for Netlify and configure your site in seven steps.
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="Step 1. Sign up for Netlify" >}}
+  {{< accordion-item title="Step 1. Sign up for Netlify" >}}
     Go to {{</* link netlify >}}netlify.com{{< /link */>}} and click on the button `Sign up`. Select your preferred signup method next. This will likely be a hosted Git provider, although you also have the option to sign up with an email address. The next steps use GitHub, but other Git providers will follow a similar process.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 2. Sign in with your Git provider" >}}
+  {{< accordion-item title="Step 2. Sign in with your Git provider" >}}
     Enter the credentials for your Git provider and click the button to sign in.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 3. Authenticate your sign in (2FA)" >}}
+  {{< accordion-item title="Step 3. Authenticate your sign in (2FA)" >}}
     Assuming you have enabled two-factor authentication with your Git provider, authenticate the sign in next. This example uses the GitHub Mobile app.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 4. Add a new site" >}}
+  {{< accordion-item title="Step 4. Add a new site" >}}
     Click on the button `Add new site` to set up a new site with Netlify.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 5. Connect to your Git provider" >}}
+  {{< accordion-item title="Step 5. Connect to your Git provider" >}}
     Connect to your Git provider to import your existing Hinode repository.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 6. Import an existing project" >}}
+  {{< accordion-item title="Step 6. Import an existing project" >}}
     Pick a repository from your Git provider. Ensure Netlify has access to the correct repository.
   {{< /accordion-item >}}
-  {{< accordion-item header="Step 7. Configure the build settings" >}}
+  {{< accordion-item title="Step 7. Configure the build settings" >}}
     Review the basic build settings. Netlify will use the settings provided in the [preparations]({{% relref "#preparations-1" %}}). Click on the button `Deploy site` to start the build and deployment process.
   {{< /accordion-item >}}
 {{< /accordion >}}

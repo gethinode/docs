@@ -57,15 +57,15 @@ Use the `cue` and `tab` arguments to override the default behavior of displaying
 {{< example lang="hugo" >}}
 
 - {{</* link mozilla_image >}}Named link with default settings{{< /link */>}}
-- {{</* link name=mozilla_image cue=false tab=false >}}Named link opening in current tab w/o icon{{< /link */>}}
-- {{</* link name=mozilla_image cue=true tab=true >}}Named link opening in new tab with icon{{< /link */>}}
+- {{</* link href=mozilla_image cue=false tab=false >}}Named link opening in current tab w/o icon{{< /link */>}}
+- {{</* link href=mozilla_image cue=true tab=true >}}Named link opening in new tab with icon{{< /link */>}}
 - {{</* link mozilla_image /*/>}}
 - {{</* link "https://developer.mozilla.org" >}}External link{{< /link */>}}
 - {{</* link "../getting-started/introduction" >}}Internal link with title{{< /link */>}}
 - {{</* link "../about/license" >}}Internal link with relative path{{< /link */>}}
 - {{</* link "/docs/about/license" >}}Internal link with absolute path{{< /link */>}}
 - {{</* link "docs/about/license" >}}Internal link with full path{{< /link */>}}
-- {{</* link url="../about/license" case=false /*/>}}
+- {{</* link href="../about/license" case=false /*/>}}
 - {{</* link "#arguments" /*/>}}
 - {{</* link "image#examples" /*/>}}
 
