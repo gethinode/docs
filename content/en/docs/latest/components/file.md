@@ -16,7 +16,7 @@ The `file` shortcode prints and highlights the full content of a given input fil
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* file path="./config/_default/languages.toml" id="file-collapse-1" */>}}
+{{</* file file="./config/_default/languages.toml" id="file-collapse-1" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -35,11 +35,11 @@ Change the style and language of your file preview with shortcode arguments.
 
 ### Default file preview
 
-Use the `path` argument to print the content of a specific file. By default, the shortcode uses the site's `basePath` (see [page layout]({{% relref "layout#configuration-3" %}}) for more information).
+Use the `file` argument to print the content of a specific file. By default, the shortcode uses the site's `basePath` (see [page layout]({{% relref "layout#configuration-3" %}}) for more information).
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* file path="config/_default/languages.toml" id="file-collapse-2" */>}}
+{{</* file file="config/_default/languages.toml" id="file-collapse-2" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -47,7 +47,7 @@ Provide a path that starts with `./` to use the path of the repository as base p
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* file path="./config/_default/languages.toml" id="file-collapse-3" */>}}
+{{</* file file="./config/_default/languages.toml" id="file-collapse-3" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -57,7 +57,7 @@ Set `show` to `false` to hide the file content on page load. The content is reve
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* file show="false"  path="./config/_default/languages.toml" id="file-collapse-4" */>}}
+{{</* file show="false" file="./config/_default/languages.toml" id="file-collapse-4" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -67,7 +67,7 @@ Set `full` to `false` to show the filename only.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* file full="false" path="./config/_default/languages.toml" id="file-collapse-5" */>}}
+{{</* file full=false file="./config/_default/languages.toml" id="file-collapse-5" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -79,7 +79,7 @@ Use the {{< link hugo_highlight >}}Hugo syntax highlighting options{{< /link >}}
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* file full="false" path="./config/_default/languages.toml" id="file-collapse-5"
+{{</* file full=false file="./config/_default/languages.toml" id="file-collapse-5"
     options="linenos=table,hl_lines=2-4 6,linenostart=10" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

@@ -17,19 +17,19 @@ Use the `toast` shortcode to display a dismissable message in the bottom-right c
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button toast="toast-example-1" */>}}
+{{</* button toast-id="toast-example-1" */>}}
     Show toast 1
 {{</* /button */>}}
 
-{{</* button toast="toast-example-2" */>}}
+{{</* button toast-id="toast-example-2" */>}}
     Show toast 2
 {{</* /button */>}}
 
-{{</* toast id="toast-example-1" header="First title" */>}}
+{{</* toast id="toast-example-1" title="First title" */>}}
     This is the first toast message.
 {{</* /toast */>}}
 
-{{</* toast id="toast-example-2" header="Second title" */>}}
+{{</* toast id="toast-example-2" title="Second title" */>}}
     This is the second toast message.
 {{</* /toast */>}}
 {{< /example >}}

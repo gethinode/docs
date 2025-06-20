@@ -15,14 +15,14 @@ Use the `accordion` shortcode to show a group of vertically collapsing and expan
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-default" */>}}
-  {{</* accordion-item header="Accordion Item #1" show="true" */>}}
+  {{</* accordion-item title="Accordion Item #1" show="true" */>}}
     This is the first item's accordion body. It supports Markdown content. The item is shown by
     adding the value `show` to the `class` argument.
   {{</* /accordion-item */>}}
-  {{</* accordion-item header="Accordion Item #2" */>}}
+  {{</* accordion-item title="Accordion Item #2" */>}}
     This is the second item's accordion body. It too supports Markdown content.
   {{</* /accordion-item */>}}
-  {{</* accordion-item header="Accordion Item #3" */>}}
+  {{</* accordion-item title="Accordion Item #3" */>}}
     This is the third item's accordion body.
   {{</* /accordion-item */>}}
 {{</* /accordion */>}}
@@ -50,14 +50,14 @@ Add `.accordion-flush` to remove some borders and rounded corners to render acco
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-flush" class="accordion-flush" */>}}
-  {{</* accordion-item header="Accordion Item #1" */>}}
+  {{</* accordion-item title="Accordion Item #1" */>}}
     This is the first item's accordion body. It supports Markdown content. The item is shown by
     adding the value `show` to the `class` argument.
   {{</* /accordion-item */>}}
-  {{</* accordion-item header="Accordion Item #2" */>}}
+  {{</* accordion-item title="Accordion Item #2" */>}}
     This is the second item's accordion body. It too supports Markdown content.
   {{</* /accordion-item */>}}
-  {{</* accordion-item header="Accordion Item #3" */>}}
+  {{</* accordion-item title="Accordion Item #3" */>}}
     This is the third item's accordion body.
   {{</* /accordion-item */>}}
 {{</* /accordion */>}}
@@ -71,14 +71,14 @@ Set `always-open` to `true` to make accordion items stay open when another item 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* accordion id="accordion-always-open" always-open="true" */>}}
-  {{</* accordion-item header="Accordion Item #1" */>}}
+  {{</* accordion-item title="Accordion Item #1" */>}}
     This is the first item's accordion body. It supports Markdown content. The item is shown by
     adding the value `show` to the `class` argument.
   {{</* /accordion-item */>}}
-  {{</* accordion-item header="Accordion Item #2" */>}}
+  {{</* accordion-item title="Accordion Item #2" */>}}
     This is the second item's accordion body. It too supports Markdown content.
   {{</* /accordion-item */>}}
-  {{</* accordion-item header="Accordion Item #3" */>}}
+  {{</* accordion-item title="Accordion Item #3" */>}}
     This is the third item's accordion body.
   {{</* /accordion-item */>}}
 {{</* /accordion */>}}

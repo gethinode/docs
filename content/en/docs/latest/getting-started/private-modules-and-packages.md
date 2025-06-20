@@ -22,12 +22,12 @@ Hinode provides several themes and modules as a private Hugo module. You will ne
 
 <!-- markdownlint-disable MD037 -->
 {{< nav tab-type="tabs" id="tabs-hugo-1" >}}
-  {{< nav-item header="macOS/Linux" show="true" >}}
+  {{< nav-item title="macOS/Linux" show="true" >}}
 {{</* command */>}}
 git config --global credential.useHttpPath true
 {{</* /command */>}}
   {{< /nav-item >}}
-  {{< nav-item header="Windows" >}}
+  {{< nav-item title="Windows" >}}
 {{</* command prompt="PS >" shell="powershell" */>}}
 git config --global credential.useHttpPath true
 {{</* /command */>}}
@@ -44,14 +44,14 @@ As an alternative, you can also use a git configuration that links a Personal Ac
 
 <!-- markdownlint-disable MD033 MD037 -->
 {{< nav tab-type="tabs" id="tabs-hugo-2" >}}
-  {{< nav-item header="macOS/Linux" show="true" >}}
+  {{< nav-item title="macOS/Linux" show="true" >}}
 {{</* command */>}}
 git config --global \
 url."https://<ACCOUNT>:<PAT>@github.com/gethinode/mod-bookshop".insteadOf \
 "https://github.com/gethinode/mod-bookshop"
 {{</* /command */>}}
   {{< /nav-item >}}
-  {{< nav-item header="Windows" >}}
+  {{< nav-item title="Windows" >}}
 {{</* command prompt="PS >" shell="powershell" */>}}
 git config --global \
 url."https://<ACCOUNT>:<PAT>@github.com/gethinode/mod-bookshop".insteadOf \
@@ -72,7 +72,7 @@ Follow the instructions for your operating system below.
 
 <!-- markdownlint-disable MD037 -->
 {{< nav tab-type="tabs" id="tabs-npm-1" >}}
-  {{< nav-item header="macOS" show="true" >}}
+  {{< nav-item title="macOS" show="true" >}}
 
 > [!NOTE]
 > macOS supports multiple shells, including bash and Z shell (zsh). Adjust the commands pending your prefered shell. You can check your current shell with `echo $SHELL`.
@@ -92,7 +92,7 @@ export NPM_TOKEN=$(security find-generic-password -s 'NPM_TOKEN' -w)
 Open a new `bash` or `zsh` terminal to load the environment variable.
 
   {{< /nav-item >}}
-  {{< nav-item header="Linux" >}}
+  {{< nav-item title="Linux" >}}
 
 > [!NOTE]
 > The following commands have been tested with Ubuntu and `bash`. You may need to change the package manager or commands when using a different Linux distribution or shell.

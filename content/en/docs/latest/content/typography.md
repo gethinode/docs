@@ -137,7 +137,7 @@ Use shortcodes to insert Emoji into your content. You can use this {{< link mark
 
 The result looks like this:
 
-{{< example show_markup=false >}}
+{{< example show-markup=false >}}
 That is so funny! :smiley:
 {{< /example >}}
 

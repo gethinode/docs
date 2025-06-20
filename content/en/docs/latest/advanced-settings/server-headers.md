@@ -40,7 +40,7 @@ Each file calls a custom partial called `assets/server-headers.html`, which is d
 
 By default, Hinode generates the server headers using a default policy. Click on the tab below to review the default settings.
 
-{{< file path="./_vendor/github.com/gethinode/hinode/data/server.toml" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/data/server.toml" full=false >}}
 
 You can merge the generated file with another input file. The supported formats are `JSON`, `TOML`, `YAML`, and `XML`. For example, you could include additional settings for the deployment to Netlify. Include the settings in your `data` folder and add the relative path to the `source` parameter of your header configuration. For example, the following configuration merges the file `data/netlify.toml` with the Netlify server headers. Add the configuration to your site's parameters (e.g. `hugo.toml`).
 

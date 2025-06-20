@@ -40,7 +40,7 @@ Click on one the tabs to see a full example of an input file.
 
 <!-- markdownlint-disable MD031 -->
 {{< nav tab-type="tabs" id="tabs-1" >}}
-  {{< nav-item header="toml" show="true" >}}
+  {{< nav-item title="toml" show="true" >}}
 ```toml
 # toml-docs-start main
 title = "Hinode"
@@ -49,7 +49,7 @@ enableGitInfo = true
 # toml-docs-end main
 ```
   {{< /nav-item >}}
-  {{< nav-item header="scss" >}}
+  {{< nav-item title="scss" >}}
 ```scss
 // scss-docs-start breadcrumb
 .breadcrumb {
@@ -99,6 +99,6 @@ Set `full` to `false` to show the filename only.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* docs name="styling" full="false" file="./assets/scss/theme/theme.scss" id="docs-collapse-5" */>}}
+{{</* docs name="styling" full=false file="./assets/scss/theme/theme.scss" id="docs-collapse-5" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

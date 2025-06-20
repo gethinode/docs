@@ -23,22 +23,22 @@ Modern websites typically use a combination of local storage, session storage, a
 
 <!-- markdownlint-disable MD037 -->
 {{< accordion class="accordion-theme accordion-flush" >}}
-  {{< accordion-item header="necessary" >}}
+  {{< accordion-item title="necessary" >}}
     Necessary cookies are linked to the site's essential features, which include secure log-in and customizable consent settings. There is no personally identifying information stored by these cookies.
   {{< /accordion-item >}}
-  {{< accordion-item header="functional" >}}
+  {{< accordion-item title="functional" >}}
     Functional cookies facilitate the performance of specific tasks, such as gathering user comments, disseminating the website's content on social media, and enabling additional third-party capabilities. Hinode uses functional cookies to store the user's preferred language and theme.
   {{< /accordion-item >}}
-  {{< accordion-item header="analytics" >}}
+  {{< accordion-item title="analytics" >}}
     Cookies with analytical functions are employed to comprehend how users engage with the website. These cookies aid in the provision of data on metrics like number of visitors, bounce rate, source of traffic, etc. Hinode provides a module to integrate with {{</* link google_analytics >}}Google Analytics{{< /link */>}} out of the box.
   {{< /accordion-item >}}
-  {{< accordion-item header="performance" >}}
+  {{< accordion-item title="performance" >}}
     In order to provide users with a better user experience, performance cookies are employed to comprehend and evaluate the website's important performance indicators.
   {{< /accordion-item >}}
-  {{< accordion-item header="advertisement" >}}
+  {{< accordion-item title="advertisement" >}}
     Advertisement cookies are used to track the success of ad campaigns and show users personalized advertisements depending on the pages they have previously viewed.
   {{< /accordion-item >}}
-  {{< accordion-item header="other" >}}
+  {{< accordion-item title="other" >}}
     Unassigned scripts are categorized as `other` by default. Any cookies used by these scripts should be reviewed and assigned to a specific category by the site administrator. Hinode also assigns scripts to this category that do not necessarily interact with cookies at all.
   {{< /accordion-item >}}
 {{< /accordion >}}
@@ -65,7 +65,7 @@ Hinode includes a partial template to render the script references. It is invoke
 
 Hinode includes a basic script template in `layouts/partials/templates/script.html`. It includes the following code:
 
-{{< file path="./_vendor/github.com/gethinode/hinode/layouts/_partials/templates/script.html" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/layouts/_partials/templates/script.html" full=false >}}
 
 You can modify this template to your needs. For example, {{< link "cookieyes_script_code" >}}CookieYes supports a custom attribute{{< /link >}} called `data-cookieyes` to categorize the referenced script. You could modify the template to include this custom attribute:
 
@@ -85,7 +85,7 @@ Hinode uses several scripts to access and store the user's preferences, includin
 
 The available functions are defined in `/assets/js/critical/_cookie.js`:
 
-{{< file path="./_vendor/github.com/gethinode/hinode/assets/js/critical/_cookie.js" full="false" >}}
+{{< file file="./_vendor/github.com/gethinode/hinode/assets/js/critical/_cookie.js" full=false >}}
 
 Pending your cookie consent configuration, the API functions may not be available at all times. The following code illustrates how to test for the availability of the `getLocalStorage()` function:
 

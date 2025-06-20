@@ -17,7 +17,7 @@ Use the `card` shortcode to display a card that links to a content page. When us
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="/guides/editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
+{{</* card path="/guides/editing" header-style="publication" footer-style="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -38,18 +38,18 @@ Use the `color` argument to set the background color of the card. As an example,
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* card-group cols="4" gutter="3" */>}}
-    {{</* card color="primary" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="secondary" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="success" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="danger" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="warning" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="info" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="light" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="dark" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="white" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="black" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="body" path="/docs/components/button/" header="none" orientation="none" /*/>}}
-    {{</* card color="body-tertiary" path="/docs/components/button/" header="none" orientation="none" /*/>}}
+    {{</* card color="primary" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="secondary" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="success" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="danger" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="warning" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="info" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="light" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="dark" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="white" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="black" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="body" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
+    {{</* card color="body-tertiary" path="/docs/components/button/" header-style="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -61,25 +61,25 @@ Use the `header` argument to customize the contents of the card.
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* card-group cols="4" gutter="3" */>}}
-    {{</* card path="/guides/editing" header="full" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header="publication" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header="tags" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header="none" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="full" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="publication" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="tags" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
 ### Custom footer
 
-Use the `footer` argument to customize the contents of the card.
+Use the `footer-style` argument to customize the contents of the card.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* card-group cols="4" gutter="3" */>}}
-    {{</* card path="/guides/editing" header="none" footer="full" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header="none" footer="publication" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header="none" footer="tags" orientation="none" /*/>}}
-    {{</* card path="/guides/editing" header="none" footer="none" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="none" footer-style="full" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="none" footer-style="publication" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="none" footer-style="tags" orientation="none" /*/>}}
+    {{</* card path="/guides/editing" header-style="none" footer-style="none" orientation="none" /*/>}}
 {{</* /card-group */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
@@ -90,10 +90,10 @@ Use the `orientation` argument to customize the placement of the card's thumbnai
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="/guides/editing" header="none" footer="none" orientation="stacked" class="col-sm-12 col-lg-6 mx-auto mb-3" /*/>}}
-{{</* card path="/docs/components/button/" header="none" footer="none" orientation="stacked" padding="3" class="col-sm-12 col-lg-6 mx-auto mb-3" /*/>}}
-{{</* card path="/guides/editing" header="publication" footer="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
-{{</* card path="/docs/components/button/" header="publication" footer="tags" orientation="horizontal" padding="3" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
+{{</* card path="/guides/editing" header-style="none" footer-style="none" orientation="stacked" class="col-sm-12 col-lg-6 mx-auto mb-3" /*/>}}
+{{</* card path="/docs/components/button/" header-style="none" footer-style="none" orientation="stacked" padding="3" class="col-sm-12 col-lg-6 mx-auto mb-3" /*/>}}
+{{</* card path="/guides/editing" header-style="publication" footer-style="tags" orientation="horizontal" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
+{{</* card path="/docs/components/button/" header-style="publication" footer-style="tags" orientation="horizontal" padding="3" class="col-sm-12 col-lg-8 mx-auto" /*/>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -103,11 +103,11 @@ Use `title`, `thumbnail`, `icon`, and inner content to define the card's content
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto mb-3" title="Title" icon="fa address-card" */>}}
+{{</* card header-style="none" footer-style="none" padding="3" class="col-sm-12 col-lg-8 mx-auto mb-3" title="Title" icon="fa address-card" */>}}
     This is the `body` of the card. It supports Markdown.
 {{</* /card */>}}
 
-{{</* card header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto" title="Title" thumbnail="img/watch.jpg" */>}}
+{{</* card header-style="none" footer-style="none" padding="3" class="col-sm-12 col-lg-8 mx-auto" title="Title" thumbnail="img/watch.jpg" */>}}
     This is the `body` of the card. It supports Markdown too.
 {{</* /card */>}}
 {{< /example >}}
@@ -119,7 +119,7 @@ Use the `class` argument to customize the styling of the card. The following exa
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* card path="/docs/components/button/" header="none" footer="none" padding="3" class="col-sm-12 col-lg-8 mx-auto card-shrink" /*/>}}
+{{</* card path="/docs/components/button/" header-style="none" footer-style="none" padding="3" class="col-sm-12 col-lg-8 mx-auto card-shrink" /*/>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 

@@ -16,7 +16,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 <!-- markdownlint-disable MD037 -->
 {{< nav tab-type="tabs" id="tabs-1" >}}
-  {{< nav-item header="libsass" show="true" >}}
+  {{< nav-item title="libsass" show="true" >}}
 
 1. **Initialize the Sass variables**
 
@@ -49,7 +49,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
    Hinode's base layout `layouts/_default/baseof.html` imports the generated stylesheet in the header section of the webpage via the partial `layouts/partials/head/head.html`.
 
   {{< /nav-item >}}
-  {{< nav-item header="dartsass" >}}
+  {{< nav-item title="dartsass" >}}
 
 1. **Initialize the Sass variables**
 
@@ -84,7 +84,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 The below Sass file defines a skeleton configuration for the main entrypoint. The full configuration is defined in `assets/scss/app.scss` (`libsass`) and `assets/scss/app-dart.scss` (`dartsass`) respectively.
 
 {{< nav tab-type="tabs" id="tabs-2" >}}
-  {{< nav-item header="libsass" show="true" >}}
+  {{< nav-item title="libsass" show="true" >}}
 
 ```scss
 // 1) Define template variables (linking to Hugo config)
@@ -111,7 +111,7 @@ The below Sass file defines a skeleton configuration for the main entrypoint. Th
 ```
 
   {{< /nav-item >}}
-  {{< nav-item header="dartsass" >}}
+  {{< nav-item title="dartsass" >}}
 
 ```scss
 // 1) Define template variables (linking to Hugo config)

@@ -14,7 +14,7 @@ Use the `collapse` shortcode to reveal or hide a panel. The panel can contain bo
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* button collapse="collapse-1" */>}}
+{{</* button collapse-id="collapse-1" */>}}
     Trigger panel
 {{</* /button */>}}
 

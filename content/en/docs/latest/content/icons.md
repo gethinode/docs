@@ -125,7 +125,7 @@ The following example demonstrates a centered, responsive icon. The icon keeps i
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* fas class="rocket bg-body-tertiary" wrapper="col-6 mx-auto text-center" */>}}
+{{</* fas icon="rocket bg-body-tertiary" wrapper="col-6 mx-auto text-center" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
 
@@ -159,10 +159,10 @@ Use the classes `.fa-ul` and `.fa-li` to replace default bullets in unordered li
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 
-- {{</* fas class="circle-check" wrapper="fa-li" */>}}List icons can
-- {{</* fas class="square-check" wrapper="fa-li" */>}}be used to
-- {{</* fas class="spinner fa-pulse" wrapper="fa-li" */>}} replace bullets
-- {{</* fa class="square" wrapper="fa-li" */>}} in lists
+- {{</* fas icon="circle-check" wrapper="fa-li" */>}}List icons can
+- {{</* fas icon="square-check" wrapper="fa-li" */>}}be used to
+- {{</* fas icon="spinner fa-pulse" wrapper="fa-li" */>}} replace bullets
+- {{</* fa icon="square" wrapper="fa-li" */>}} in lists
 {.fa-ul}
 
 {{< /example >}}
@@ -237,7 +237,7 @@ Use `fa-border` and `fa-pull-right` or `fa-pull-left` for easy pull quotes or ar
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* icon class="fas quote-left fa-2x fa-pull-left" spacing=false */>}}
+{{</* icon icon="fas quote-left fa-2x fa-pull-left" spacing=false */>}}
 Gatsby believed in the green light, the orgastic future that year by year recedes before us.
 It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further...
 And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
