@@ -81,7 +81,7 @@ content_blocks:
     heading:
       title: Powered by open source
       content: >-
-        Hinode builds upon several open-source packages, such as Hugo, Bootstrap, and Font Awesome. Want to make Hinode even better? Hinode is [open to contributions](/docs/getting-started/contribute/).
+        Hinode builds upon several open-source packages, such as Hugo, Bootstrap, and Bookshop. Want to make Hinode even better? Hinode is [open to contributions](/docs/getting-started/contribute/).
       align: center
       width: 8
     orientation: stacked
@@ -94,10 +94,10 @@ content_blocks:
         icon: fab bootstrap
         content: >-
           [Bootstrap](https://getbootstrap.com) is a popular, open-source web development framework. Is uses a mobile-first approach to create responsive websites.
-      - title: Font Awesome
-        icon: fa font-awesome
+      - title: Bookshop
+        icon: fas book-open
         content: >-
-          [Font Awesome](https://fontawesome.com) is a popular icon library and toolkit, used on over 200 million sites. The free version provides more than 2,000 icons.
+          [Bookshop](https://github.com/CloudCannon/bookshop) is a component development workflow for static websites. It embeds the configuration of content blocks within the page's frontmatter.
     justify: center
 ---
 
