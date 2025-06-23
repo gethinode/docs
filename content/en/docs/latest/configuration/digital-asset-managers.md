@@ -143,6 +143,6 @@ $}
 > [!TIP]
 > Configuring an additional Digital Asset Manager? Please consider to contribute your adapter to the open-source community of Hinode. Review the {{< link "../getting-started/contribute/">}}contributing guidelines{{< /link >}} to find out more.
 
-You can configure additional Digital Asset Managers by adding a adapter to the folder `layouts/partials/assets/adapters/`. For example, the adapter for {{< link cloudinary>}}Cloudinary{{< /link >}} is available in `cloudinary.html`. Hinode supports basic image transformations such as adjusting the dimensions and cropping. Hinode passes the following arguments to each recognized adapter:
+You can configure additional Digital Asset Managers by adding a adapter to the folder `layouts/_partials/assets/adapters/`. For example, the adapter for {{< link cloudinary>}}Cloudinary{{< /link >}} is available in `cloudinary.html`. Hinode supports basic image transformations such as adjusting the dimensions and cropping. Hinode passes the following arguments to each recognized adapter:
 
 {{< args structure="image-adapter" group="partial" >}}

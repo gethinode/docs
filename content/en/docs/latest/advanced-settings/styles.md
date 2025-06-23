@@ -20,7 +20,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 1. **Initialize the Sass variables**
 
-   Hugo {{</* link hugo_release_v0_109_0 >}}v0.109.0{{< /link */>}} introduced a convenient way to {{</* link hugo_vars >}}initialize Sass variables from your templates{{< /link */>}}. Hinode initializes several variables in the file `layouts/partials/head/stylesheet.html`. For example, the primary theme color is available as `$primary`.
+   Hugo {{</* link hugo_release_v0_109_0 >}}v0.109.0{{< /link */>}} introduced a convenient way to {{</* link hugo_vars >}}initialize Sass variables from your templates{{< /link */>}}. Hinode initializes several variables in the file `layouts/_partials/head/stylesheet.html`. For example, the primary theme color is available as `$primary`.
 
 2. **Define the Sass entrypoint**
 
@@ -46,14 +46,14 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 6. **Link to the stylesheet in the base layout**
 
-   Hinode's base layout `layouts/_default/baseof.html` imports the generated stylesheet in the header section of the webpage via the partial `layouts/partials/head/head.html`.
+   Hinode's base layout `layouts/_default/baseof.html` imports the generated stylesheet in the header section of the webpage via the partial `layouts/_partials/head/head.html`.
 
   {{< /nav-item >}}
   {{< nav-item title="dartsass" >}}
 
 1. **Initialize the Sass variables**
 
-   Hugo {{</* link hugo_release_v0_109_0 >}}v0.109.0{{< /link */>}} introduced a convenient way to {{</* link hugo_vars >}}initialize Sass variables from your templates{{< /link */>}}. Hinode initializes several variables in the file `layouts/partials/head/stylesheet.html`. For example, the primary theme color is available as `$primary`.
+   Hugo {{</* link hugo_release_v0_109_0 >}}v0.109.0{{< /link */>}} introduced a convenient way to {{</* link hugo_vars >}}initialize Sass variables from your templates{{< /link */>}}. Hinode initializes several variables in the file `layouts/_partials/head/stylesheet.html`. For example, the primary theme color is available as `$primary`.
 
 2. **Define the Sass entrypoint**
 
@@ -73,7 +73,7 @@ Hinodes uses Hugo modules and mounted folders to create a flexible virtual file 
 
 6. **Link to the stylesheet in the base layout**
 
-   Hinode's base layout `layouts/_default/baseof.html` imports the generated stylesheet in the header section of the webpage via the partial `layouts/partials/head/head.html`.
+   Hinode's base layout `layouts/_default/baseof.html` imports the generated stylesheet in the header section of the webpage via the partial `layouts/_partials/head/head.html`.
 
   {{< /nav-item >}}
 {{< /nav >}}

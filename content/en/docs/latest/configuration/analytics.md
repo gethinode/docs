@@ -36,7 +36,7 @@ The file `assets/js/analytics.js` defines the JavaScript template that is ingest
 {{- end -}}
 ```
 
-The partial `layouts/partials/footer/scripts.html` loads the Google Tag Manager if applicable.
+The partial `layouts/_partials/footer/scripts.html` loads the Google Tag Manager if applicable.
 
 ```go-html-template {hl_lines=1}
 {{- if and (not site.IsServer) $header -}}
