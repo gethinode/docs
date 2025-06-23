@@ -12,6 +12,9 @@ thumbnail:
     originURL: https://unsplash.com/photos/person-writing-on-white-paper-gcsNOsPEXfs
 ---
 
+> [!IMPORTANT]
+> The page rendering is being revised. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
+
 ## Introduction
 
 Hinode is a Hugo theme focused on blogs and documentation sites. Using the flexibility of Hugo's templates, you can adapt the layout to your needs and liking. In this guide, we will first customize the homepage using the predefined configuration options. Next, we will replace the grid layout with a custom layout that displays a simple list of articles. Finally, we will customize the header of the single page layout by adding an author name.
@@ -138,7 +141,7 @@ arguments:
 > [!TIP]
 > You can identify the type of an (internal) Hugo variable by printing its value type with `%T`. For example, the command `warnf "Page type: %T" .Page` would print the value `*hugolib.pageState` for the current `.Page` context (when invoked from a regular page template).
 
-Create a new file in `layouts/partials/assets/custom-list.html`. We will now use Hinode's utility partial `utilities/IsInvalidArgs.html` to validate any arguments passed to our partial. Using this convention, we can validate all variables are of the expected type and value. The utility also confirms all mandatory arguments are available. Copy the following code to your new partial file:
+Create a new file in `layouts/_partials/assets/custom-list.html`. We will now use Hinode's utility partial `utilities/IsInvalidArgs.html` to validate any arguments passed to our partial. Using this convention, we can validate all variables are of the expected type and value. The utility also confirms all mandatory arguments are available. Copy the following code to your new partial file:
 
 ```go-template {lineNos=inline}
 {{ $error := false }}
@@ -154,7 +157,7 @@ Create a new file in `layouts/partials/assets/custom-list.html`. We will now use
 
 With the arguments defined and validated we can now construct the HTML element that generates our table. The following code creates a responsive grid of two columns. The first column display the publication date of the article and the second column displays the article's title and author. By using the `range` function we can iterate over the available articles.
 
-Copy the following code to your partial template in `layouts/partials/assets/custom-list.html`. The code is quite minimalistic. You could further enhance it by adding {{< link hugo_i18n >}}internationalization support{{< /link >}} and pagination. Both features are beyond the scope of this guide.
+Copy the following code to your partial template in `layouts/_partials/assets/custom-list.html`. The code is quite minimalistic. You could further enhance it by adding {{< link hugo_i18n >}}internationalization support{{< /link >}} and pagination. Both features are beyond the scope of this guide.
 
 ```go-template {lineNos=inline lineNoStart=9}
 {{/* Initialize arguments */}}
@@ -180,7 +183,7 @@ Copy the following code to your partial template in `layouts/partials/assets/cus
 
 ### Modifying the section list component
 
-As a final step we will update the controller that invokes the available list partials. The `layouts/partials/assets/section-list.html` initializes the configuration as defined in {{< link "#step-2---changing-the-homepage-layout" >}}step 2 of this guide{{< /link >}}. Copy the file from the base Hinode repository to your local repository. Line `120` of the partial defines the recognized layout types. We will add the `custom-list` to this definition:
+As a final step we will update the controller that invokes the available list partials. The `layouts/_partials/assets/section-list.html` initializes the configuration as defined in {{< link "#step-2---changing-the-homepage-layout" >}}step 2 of this guide{{< /link >}}. Copy the file from the base Hinode repository to your local repository. Line `120` of the partial defines the recognized layout types. We will add the `custom-list` to this definition:
 
 ```go-template {lineNos=inline lineNoStart=120 hl_Lines=1}
 {{- $supportedLayouts := slice "card" "custom-list" "list" "nav" -}}

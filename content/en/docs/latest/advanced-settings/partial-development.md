@@ -1,20 +1,17 @@
 ---
 title: Partial development
 description: Develop custom partials and shortcodes following Hinode's coding conventions.
-date: 2024-01-03
+date: 2025-06-23
 layout: docs
 ---
-
-> [!IMPORTANT]
-> The partial development is being revised. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
 
 Hinode supports more than 30 shortcodes. Many of these shortcodes wrap an predefined Bootstrap component, such as the {{< link "docs/components/button" />}} or {{< link "docs/components/tooltip" />}}. Custom shortcodes include a {{< link "docs/components/command-prompt" />}}, {{< link "docs/components/image" />}}, and {{< link "docs/components/timeline" />}}. Some of these components are maintained in a separate module, such as the {{< link "docs/components/animation" />}} or {{< link "docs/components/map" />}}. Hinode follows several conventions to standardize and streamline the development of shortcodes and partials. You are encouraged to use the same conventions, especially when contributing your own code for sharing.
 
 ## Shared partials
 
-Hugo supports two kinds of reusable components, being partials and shortcodes. A shortcode can be referenced from within content files, such as Markdown. Partials can be referenced by layout files, other partials, and shortcodes too. You cannot reference a shortcode from a partial though. To enable reuse, Hinode has shifted the bulk of the implementation of many of its shortcodes to separate partials. These partials are maintained in the `layouts/partials/assets` folder. The related shortcode then simply references the partial.
+Hugo supports two kinds of reusable components, being partials and shortcodes. A shortcode can be referenced from within content files, such as Markdown. Partials can be referenced by layout files, other partials, and shortcodes too. You cannot reference a shortcode from a partial though. To enable reuse, Hinode has shifted the bulk of the implementation of most shortcodes to separate partials. These partials are maintained in the `layouts/_partials/assets` folder. The related shortcode then simply references the partial.
 
-As an example, consider the implementation of the {{< link "docs/components/breadcrumb" />}}. Hinode adds a breadcrumb to all pages (except the homepage) if enabled in the {{< link "docs/configuration/navigation#basic-configuration" >}}site parameters{{< /link >}}. The implementation is available in `layouts/partials/assets/breadcrumb.html`. The same component is also exposed as a shortcode, so it can be called from within a content page. The shortcode file `layouts/shortcodes/breadcrumb.html` includes the following statement to invoke the partial. The `page` argument passes the current page context to the underlying partial:
+As an example, consider the implementation of the {{< link "docs/components/breadcrumb" />}}. Hinode adds a breadcrumb to all pages (except the homepage) if enabled in the {{< link "docs/configuration/navigation#basic-configuration" >}}site parameters{{< /link >}}. The implementation is available in `layouts/_partials/assets/breadcrumb.html`. The same component is also exposed as a shortcode, so it can be called from within a content page. The shortcode file `layouts/_shortcodes/breadcrumb.html` includes the following statement to invoke the partial. The `page` argument passes the current page context to the underlying partial:
 
 ```go-template
 {{ partial "assets/breadcrumb.html" (dict "page" .page) }}
@@ -55,9 +52,12 @@ Next, the parent `card-group` shortcode reads the scratch variable `inner` and p
 
 ## Argument validation
 
-{{< release version="0.22.0" >}}
+> [!NOTE]
+> Hinode has revised the argument validation in {{< release version="v1.0.0-beta3" short="true" link-type="link" >}}. Partials and shortcodes now use the utility function `utilities/InitArgs.html`. The previous function `utilities/IsInvalidArgs.html` is no longer supported.
 
-Most shortcodes support multiple arguments to configure their behavior and to refine their appearance. These shortcodes share many of these arguments with an underlying partial. Hinode uses a standardized approach to validate these arguments. All arguments are formally defined in a separate data structure file. Hinode uses the {{< abbr YAML >}} format by default, although several formats are supported. The partial `utilities/IsInvalidArgs.html` (provided by the {{< link "repository_mod_utils" >}}mod-utils module{{< /link >}}) then uses this specification to validate all arguments. Refer to the documentation to review the {{< link "docs/components/args#data-format" >}}supported data format{{< /link >}}.
+{{< release version="1.0.0-beta3" >}}
+
+Most shortcodes support multiple arguments to configure their behavior and to refine their appearance. These shortcodes share many of these arguments with an underlying partial. Hinode uses a standardized approach to validate and initialize these arguments. All arguments are formally defined in a separate data structure file. Hinode uses the {{< abbr YAML >}} format by default, although several formats are supported. The partial `utilities/InitArgs.html` (provided by the {{< link "repository_mod_utils" >}}mod-utils module{{< /link >}}) then uses this specification to validate all arguments.
 
 Let's consider the following example. The {{< link "docs/components/toast" />}} shortcode displays a dismissable message in the bottom-right corner of the screen. We can trigger it by assigning its unique identifier to a button.
 
@@ -80,17 +80,79 @@ The toast shortcode invokes the underlying partial to render the actual HTML out
 The shortcode uses the following code to validate its arguments, excluding the `message` argument that belongs to the `partial` group. When an error occurs, the shortcode logs an error message with a reference to the context `.Position`.
 
 ```go-template
-{{ if partial "utilities/IsInvalidArgs.html" (dict "structure" "toast" "args" .Params "group" "shortcode") }}
-    {{ errorf "Invalid arguments: %s" .Position -}}
-    {{ $error = true }}
+{{ $args := partial "utilities/InitArgs.html" (dict "structure" "toast" "args" .Params "named" .IsNamedParams "group" "shortcode") }}
+{{ if or $args.err $args.warnmsg }}
+    {{ partial (cond $args.err "utilities/LogErr.html" "utilities/LogWarn.html") (dict 
+        "partial"  "shortcodes/toast.html" 
+        "warnid"   "warn-invalid-arguments"
+        "msg"      "Invalid arguments"
+        "details"  ($args.errmsg | append $args.warnmsg)
+        "file"     page.File
+        "position" .Position
+    )}}
+    {{ $error = $args.err }}
 {{ end }}
 ```
 
-The underlying partial uses a similar call. Notable differences are the validated arguments (`.` instead of `.Params`) and the `group` (`partial` instead of `shortcode`). Partials are not aware of their context, so a generic error is logged instead.
+The underlying partial uses a similar call. Notable differences are the validated arguments (`.` instead of `.Params`) and the `group` (`partial` instead of `shortcode`). Partials are not aware of their context, so the `position` argument is dropped.
 
 ```go-template
-{{ if partial "utilities/IsInvalidArgs.html" (dict "structure" "toast" "args" . "group" "partial") }}
-    {{- errorf "partial [assets/toast.html] - Invalid arguments" -}}
-    {{ $error = true }}
+{{ $args := partial "utilities/InitArgs.html" (dict "structure" "toast" "args" . "group" "partial")}}
+{{ if or $args.err $args.warnmsg }}
+    {{ partial (cond $args.err "utilities/LogErr.html" "utilities/LogWarn.html") (dict 
+        "partial" "assets/toast.html" 
+        "warnid"  "warn-invalid-arguments"
+        "msg"     "Invalid arguments"
+        "details" ($args.errmsg | append $args.warnmsg)
+        "file"    page.File
+    )}}
+    {{ $error = $args.err }}
 {{ end }}
 ```
+
+## Argument and type definitions
+
+Since {{< release version="v1.0.0-beta3" short="true" link-type="link" >}}, Hinode maintains all argument definitions in a centrally managed file within the `mod-utils` module. You can [explore the entire file on GitHub](https://github.com/gethinode/mod-utils/blob/main/data/structures/_arguments.yml). This approach enables reuse and ensures the arguments are consistent across partials and shortcodes. For example, let's consider the `title` argument as defined in `toast.yml`. It includes a single attribute `release` only.
+
+```yml
+title:
+    release: v1.0.0
+```
+
+The `InitArgs.html` function merges the shortcode's type definition with the argument defined in `_arguments.yml`.
+
+```yml
+title:
+    type:
+        - string
+        - hstring.RenderedString
+        - hstring.HTML
+        - template.HTML
+    optional: true
+    comment: >-
+        Title of the element. If the element references a (local) page, the title
+        overrides the referenced page's title.
+```
+
+Arguments support the following elements:
+
+{{< args structure="_args" >}}
+
+### Supported primitive types
+
+The following primitive types are supported.
+
+| Primitive | Description |
+|-----------|-------------|
+| bool      | Boolean, either `true` or `false`. The validation supports both quoted and unquoted values. Maps to the Hugo type `bool`. |
+| dict      | A map of key-value pairs, see [collections.Dictionary](https://gohugo.io/functions/collections/dictionary/). Consider using a defined complex type instead. |
+| int, int64  | A whole number, including negative values. Optionally, specify the allowed value range using `options.min` and `options.max`. Maps to the Hugo type `int`. |
+| float, float64 | A fractional number, including negative values. Optionally, specify the allowed value range using `options.min` and `options.max`. Maps to the Hugo type `float64`. |
+| path      | Path to a local file or directory. By convention, paths that start with `/` are relative to the repository root. When used as source argument, the base directory may be mapped to one of Hugo's mount folders (e.g. `assets`, `data`, `content`, `static`). Windows paths are mapped to Unix-style paths using forward slashes. Maps to the Hugo type `string`. |
+| select    | A single string value from a set of options. Specify the allowed values in `options.values`. Maps to the Hugo type `string`. |
+| slice      | An ordered list of values, see [collections.Dictionary](https://gohugo.io/functions/collections/slice/). Consider using a defined complex type instead. |
+| string | Free format plain text. Maps to the Hugo type `string`. |
+
+### Supported complex types
+
+Any provided type not matching a primitive is considered a complex type. Type confirmation is tested with `printf "%T"`. For example, to validate if the page context is of the correct type, use `*hugolib.pageState`.

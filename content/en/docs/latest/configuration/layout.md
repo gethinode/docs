@@ -379,6 +379,9 @@ The below configuration shows the default configuration set in `config/_default/
 
 ## Page sections
 
+> [!IMPORTANT]
+> Page sections are no longer supported as of Hinode {{< release version="v1.0.0-beta3" short="true" link-type="link" >}}.
+
 Both the home page and the list page use one or more page sections to display a sorted list of items. The lists can contain either [regular pages  or page snippets]({{% relref "content-organization" %}}). The next paragraphs describe the three available layout types.
 
 ### Card layout

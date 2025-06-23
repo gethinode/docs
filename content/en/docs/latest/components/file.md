@@ -80,6 +80,6 @@ Use the {{< link hugo_highlight >}}Hugo syntax highlighting options{{< /link >}}
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
 {{</* file full=false file="./config/_default/languages.toml" id="file-collapse-5"
-    options="linenos=table,hl_lines=2-4 6,linenostart=10" */>}}
+    highlight-options="linenos=table,hl_lines=2-4 6,linenostart=10" */>}}
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->
