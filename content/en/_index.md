@@ -44,7 +44,7 @@ content_blocks:
     more:
       title: More Guides
     padding: 0
-    max: 3
+    limit: 3
     class: border-0 card-zoom card-body-margin
     justify: center
 

@@ -28,7 +28,7 @@ content_blocks:
       sort: title
     cols: 3
     padding: 3
-    max: 9
+    limit: 9
     paginate: true
     cover: false
     header-style: none
