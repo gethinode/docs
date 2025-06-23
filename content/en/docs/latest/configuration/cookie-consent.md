@@ -63,7 +63,7 @@ Hinode includes a partial template to render the script references. It is invoke
 
 {{< args structure="script" >}}
 
-Hinode includes a basic script template in `layouts/partials/templates/script.html`. It includes the following code:
+Hinode includes a basic script template in `layouts/_partials/templates/script.html`. It includes the following code:
 
 {{< file file="./_vendor/github.com/gethinode/hinode/layouts/_partials/templates/script.html" full=false >}}
 
