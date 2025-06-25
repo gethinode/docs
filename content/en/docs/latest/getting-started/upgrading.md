@@ -34,7 +34,7 @@ Hinode now supports reusable page elements called content blocks, such as a hero
   class: border-0 card-zoom card-body-margin
 ```
 
-You will have to manually replace any obsolete page section with either an [articles content block](/docs/content-blocks/articles/) (when referring to a site section) or a [cards content block](http://localhost:1313/docs/content-blocks/cards/) (when using direct input).
+You will have to manually replace any obsolete page section with either an [articles content block](/docs/content-blocks/articles/) (when referring to a site section) or a [cards content block](/docs/content-blocks/cards/) (when using direct input).
 
 ## Structured Arguments
 
