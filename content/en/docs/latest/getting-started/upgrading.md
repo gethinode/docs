@@ -46,3 +46,23 @@ All partials, shortcodes, and utility functions now use a standardized approach 
 > Hinode is now fully compatible with the refreshed template system of [Hugo v0.146.0](https://github.com/gohugoio/hugo/releases/tag/v0.146.0). Although the Hugo team has made significant effort to make this template system backwards compatible, some compatibility issues are to be expected. Hinode has bumped all modules with a new major version to signal a breaking change.
 
 Pages now use a simplified template for rendering. The core templates (`baseof.html`, `list.html`, and `single.html`) have been moved to the core `layouts` folder. The templates themselves have been refactored to simplify maintenance and customization. Partials now reside in `layouts/_partials` folder. Similarly, shortcode now use the `layouts/_shortcodes` folder. Move your custom templates, partials, and shortcodes to the correct folder to ensure Hinode renders them correctly.
+
+Inline partials require special attention. When invoking an inline partial, the partial name should **not** include the prefix `partials` or `_partials`. For example, the `card.html` partial contains the following inline partial to render a card body:
+
+```go-template
+{{- define "_partials/inline/card-body.html" -}}
+{{/* Partial code */}}
+{{- end -}}
+```
+
+The following code to invoke this inline partial no longer works and results in an error:
+
+```go-template
+{{- partial "_partials/inline/card-body.html" -}}
+```
+
+Instead, drop the `_partials` prefix from the partial name:
+
+```go-template
+{{- partial "inline/card-body.html" -}}
+```
