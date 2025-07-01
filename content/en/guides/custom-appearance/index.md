@@ -3,7 +3,7 @@ title: Customizing the appearance of your site
 description: Guide on how to use custom layouts to change the appearance of the homepage, single pages, and list pages.
 date: 2024-08-20
 tags: ["guide", "customization"]
-weight: 60
+weight: 20
 thumbnail: 
     url: img/sketching.jpg
     author: Firmbee.com
@@ -13,7 +13,7 @@ thumbnail:
 ---
 
 > [!IMPORTANT]
-> The page rendering is being revised. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
+> The page rendering has been revised in Hinode {{< release version="v1.0.0" short="true" link-type="link" >}}. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
 
 ## Introduction
 

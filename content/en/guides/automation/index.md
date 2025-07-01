@@ -4,7 +4,7 @@ title: Automating dependency updates
 date: 2023-08-21
 description: Guide on how to automate npm and hugo dependencies with GitHub actions.
 tags: ["guide", "action"]
-weight: 15
+weight: 50
 thumbnail: 
     url: img/cogs.jpg
     author: Laura Ockel
