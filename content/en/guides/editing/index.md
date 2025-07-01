@@ -3,7 +3,7 @@ author: Mark Dumay
 title: Creating your first site with Hinode
 date: 2023-04-03
 lastmod: 2024-08-18
-description: Guide on how to set up your site with version control using npm, GitHub and VSCode.
+description: Set up your Hinode site with version control using npm, GitHub and VSCode.
 tags: ["guide", "vscode"]
 weight: 10
 thumbnail: 
@@ -19,7 +19,7 @@ thumbnail:
 > [!NOTE]
 > The commands and code examples within this guide are written with macOS in mind. The commands should be transferrable to Windows and Linux too.
 
-Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere]({{% relref "hosting-and-deployment" %}}). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch.
+Hinode uses {{< link hugo >}}Hugo{{< /link >}}, a popular open-source generator, to generate a static website. Static websites do not require a database and can be [hosted virtually anywhere](/docs/getting-started/hosting-and-deployment/). In this guide, we will set up a new site using a template from GitHub. We will then edit our Markdown content with Visual Studio Code (VSCode). Lastly, we will submit our changes to the main branch.
 
 This guide requires a GitHub account to host the remote demo repository. Next, Git, Node.js and npm are required for local development and testing. The guide also uses VSCode to edit the content. Click on each of the following links to sign up and install the required software as necessary. The software packages should be compatible with Windows, macOS, and most Linux distributions.
 
@@ -43,7 +43,7 @@ Hinode comes in two flavors: a {{< link repository_template >}}template{{< /link
   {{< img src="img/github-init-step03.png" caption="Step 3. Review the initialized repository" >}}
 {{< /carousel >}}
 
-Navigate to the {{< link repository_template >}}template repository{{< /link >}} in your browser and click on the green button `Use this template {{< fas caret-down >}}` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone, such as open-source projects. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
+Navigate to the {{< link repository_template >}}template repository{{< /link >}} in your browser and click on the green button `Use this template {{< fas caret-down >}}` to create a new repository. You may need to sign in to GitHub for the button to become available. Provide a meaningful name for your repository, such as `hinode-demo`. The repository's visibility can be either private or public. Public repositories can be seen by anyone. Private repositories are only visible to yourself, or to anyone you have granted access. Lastly, click on the green button `Create repository from template` to create your repository.
 
 ### Connecting your local machine
 
@@ -81,7 +81,7 @@ npm install
 (out)found 0 vulnerabilities
 {{< /command >}}
 
-Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an interactive map on a few pages, you can include the Leaflet module on those pages only. This helps to reduce the size of your page assets.
+Lastly, we will install the Hugo modules used by Hinode. Hinode supports two types of modules. **Core modules** are embedded in the main stylesheet and script bundle, ensuring they are available to all pages across the site. On the other hand, **optional modules** are only included on a page-by-page basis. For example, if your site only requires an [interactive map](/docs/components/map/) on a few pages, you can include the Leaflet module on those pages only. This helps to reduce the size of your page assets.
 
 Hinode itself is also a module that is used by the Hinode template. This allows us to use the shortcodes and other components provided by Hinode, without having to worry about their implementation. We can use {{< link hugo_modules >}}Hugo's module system{{< /link >}} to update the used modules to their latest version. Run the script `mod:update` to download and install the latest version of the modules.
 
@@ -219,7 +219,7 @@ Check back to see the changes in your web browser. If you do not see the new pos
 
 ## Step 3 - Validating the changes
 
-Hinode defines severals tests to validate the code adheres to [coding standards]({{% relref "contribute#coding-guidelines" %}}). Run the following command to run the tests locally. The test should confirm our code is safe to check in.
+Hinode defines severals tests to validate the code adheres to [coding standards](/docs/getting-started/contribute#coding-guidelines). Run the following command to run the tests locally. The test should confirm our code is safe to check in.
 
 {{< command prompt="hinode-demo $" >}}
 npm run lint
@@ -252,13 +252,13 @@ Head over to VSCode's Source Control to view the pending changes. Click on the f
 > [!TIP]
 > By convention, a commit message should use the imperative mood and should be less than 150 characters in total. Review the blog from Initial Commit to see more {{< link initialcommit >}}best practices and guidelines to write good commit messages{{< /link >}}.
 
-VSCode highlights two additional changes, one being our new post and the other a file called `hugo_stats.json`. This latter file is used by the purger to avoid required styles are removed unintentionally. Check the guide about [optimizing the user experience]({{% relref "optimization" %}}) for an elaborate deep-dive. Stage and commit these two changes too. Lastly, click on the blue button `Publish Branch` to submit the branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
+VSCode highlights two additional changes, one being our new post and the other a file called `hugo_stats.json`. This latter file is used by the purger to avoid required styles are removed unintentionally. Check the guide about [optimizing the user experience](optimization) for an elaborate deep-dive. Stage and commit these two changes too. Lastly, click on the blue button `Publish Branch` to submit the branch and its content to GitHub. For an existing branch you would push the button `Sync Changes` instead.
 
 ## Step 4 - Submitting a Pull Request
 
 With your changes committed to the remote develop branch, you can now merge the changes with the main branch. Head over to your repository on GitHub to submit a Pull Request (PR). Click on the green button `New pull request` within the menu `Pull Requests` to do so. Enter a descriptive title for the PR, or confirm the default title suggested by GitHub. Click on the green button to submit the PR, which triggers GitHub to run several checks.
 
-By default, Hinode runs a linting test and builds the web site with the latest stable (`LTS`) versions of Node.js. The linting test is the same test that ran in the [previous step]({{% relref "#step-3---validating-the-changes" %}}). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
+By default, Hinode runs a linting test and builds the web site with the latest stable (`LTS`) versions of Node.js. The linting test is the same test that ran in the [previous step](#step-3---validating-the-changes). The tests act as a sort of safeguard to prevent changes breaking the main repository. You can confirm the merge when all checks have passed successfully. You can then observe the commit message associated with the `content` folder when you head back to the code of the main repository.
 
 {{< carousel class="col-sm-12 col-lg-8 mx-auto" >}}
   {{< img src="img/github-pr-step01.png" caption="Step 1. Open a pull request" >}}
@@ -271,7 +271,7 @@ By default, Hinode runs a linting test and builds the web site with the latest s
 
 ## Conclusion
 
-You have now successfully created your initial Hinode site with version control and automated updates. You can look into the guide to {{< link "automation" >}} automate the dependency upgrades using GitHub actions{{< /link >}}. Review the [hosting and deployment options]({{% relref "hosting-and-deployment" %}}) to see various options on how to (automatically) publish your site to a hosting provider.
+You have now successfully created your initial Hinode site with version control and automated updates. You can look into the guide to {{< link "automation" >}} automate the dependency upgrades using GitHub actions{{< /link >}}. Review the [hosting and deployment options](/docs/getting-started/hosting-and-deployment/) to see various options on how to (automatically) publish your site to a hosting provider.
 
-[^1]: Refer to the [installation instructions]({{% relref "introduction" %}}) if you prefer to install Hinode as a regular Hugo theme.
+[^1]: Refer to the [installation instructions](/docs/getting-started/introduction/) if you prefer to install Hinode as a regular Hugo theme.
 [^2]: By default macOS synchronizes your `~/Documents` folder with iCloud. Unfortunately this interferes with npm and could lead to all kinds of synchronization issues. You can better select a folder that is **not** synchronized with iCloud and let git handle your version control.

@@ -6,7 +6,7 @@ layout: docs
 ---
 
 > [!IMPORTANT]
-> The page rendering is being revised. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
+> The page rendering has been revised in Hinode {{< release version="v1.0.0" short="true" link-type="link" >}}. The documentation on this page is still to be updated. Visit this [GitHub issue](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852) for more information.
 
 Hinode uses Bootstrap's {{< link bs_grid >}}grid system{{< /link >}} and {{< link bs_breakpoints >}}breakpoints{{< /link >}} to create a responsive layout across devices or viewport sizes. All pages follow the same base layout, which includes headers and footers. The next paragraphs explain the layout styles in more detail.
 
@@ -380,7 +380,7 @@ The below configuration shows the default configuration set in `config/_default/
 ## Page sections
 
 > [!IMPORTANT]
-> Page sections are no longer supported as of Hinode {{< release version="v1.0.0-beta3" short="true" link-type="link" >}}.
+> Page sections are no longer supported as of Hinode {{< release version="v1.0.0" short="true" link-type="link" >}}.
 
 Both the home page and the list page use one or more page sections to display a sorted list of items. The lists can contain either [regular pages  or page snippets]({{% relref "content-organization" %}}). The next paragraphs describe the three available layout types.
 

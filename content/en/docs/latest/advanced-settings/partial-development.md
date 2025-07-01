@@ -53,9 +53,9 @@ Next, the parent `card-group` shortcode reads the scratch variable `inner` and p
 ## Argument validation
 
 > [!NOTE]
-> Hinode has revised the argument validation in {{< release version="v1.0.0-beta3" short="true" link-type="link" >}}. Partials and shortcodes now use the utility function `utilities/InitArgs.html`. The previous function `utilities/IsInvalidArgs.html` is no longer supported.
+> Hinode has revised the argument validation in {{< release version="v1.0.0" short="true" link-type="link" >}}. Partials and shortcodes now use the utility function `utilities/InitArgs.html`. The previous function `utilities/IsInvalidArgs.html` is no longer supported.
 
-{{< release version="1.0.0-beta3" >}}
+{{< release version="1.0.0" >}}
 
 Most shortcodes support multiple arguments to configure their behavior and to refine their appearance. These shortcodes share many of these arguments with an underlying partial. Hinode uses a standardized approach to validate and initialize these arguments. All arguments are formally defined in a separate data structure file. Hinode uses the {{< abbr YAML >}} format by default, although several formats are supported. The partial `utilities/InitArgs.html` (provided by the {{< link "repository_mod_utils" >}}mod-utils module{{< /link >}}) then uses this specification to validate all arguments.
 
