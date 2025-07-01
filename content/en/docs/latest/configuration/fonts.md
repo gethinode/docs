@@ -33,7 +33,7 @@ themeFontPath = "/fonts"
 
 The font files are retrieved from the folder `static/fonts`. The {{< link webfonts_helper >}}google-webfonts-helper{{< /link >}} from Mario Ranftl is a helpful tool to download the correct font files. It also generates the proper font-face definitions. Copy the definitions to the `assets/scss/theme/fonts.scss` file and download the font files themselves to the `static/fonts` folder.
 
-{{< release version="0.23.0-beta" >}}
+{{< release version="0.23.0" >}}
 
 You can preload the font to improve loading speed. Select the primary font that is used above the page fold. In the next example, we select the `Inter regular` font of type `woff2` to preload. Hinode uses the font file extension to determine the font type automatically.
 
