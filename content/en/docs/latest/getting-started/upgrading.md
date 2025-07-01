@@ -10,7 +10,7 @@ layout: docs
 > [!NOTE]
 > Upgrading to the modules introduced in Hinode v0.16? Check out [this page](upgrading-modules) instead.
 
-Hinode v{{< release version="v1.0.0" short="true" link-type="link" >}} introduced a new approach to reusable page elements. It now also support the revised template system introduced by [Hugo v0.146.0](https://github.com/gohugoio/hugo/releases/tag/v0.146.0). This release of Hinode is a breaking change with all `0.x` releases. Review the core changes below on how to upgrade your existing site to the latest Hinode version. Please use [GitHub discussions](https://github.com/gethinode/hinode/discussions/1431) when encountering any challenges, or use the [issue tracker](https://github.com/gethinode/hinode/issues) for bug reports.
+Hinode {{< release version="v1.0.0" short="true" link-type="link" >}} introduces a new approach to reusable page elements. It now also support the revised template system introduced by [Hugo v0.146.0](https://github.com/gohugoio/hugo/releases/tag/v0.146.0). This release of Hinode is a breaking change with all `0.x` releases. Review the core changes below on how to upgrade your existing site to the latest Hinode version. Please use [GitHub discussions](https://github.com/gethinode/hinode/discussions/1431) when encountering any challenges, or use the [issue tracker](https://github.com/gethinode/hinode/issues) for bug reports.
 
 ## Content Blocks
 
