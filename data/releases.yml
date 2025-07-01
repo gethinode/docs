@@ -1,5 +1,17 @@
 # This file holds all entries for the release timeline
 
+- title: Content blocks
+  icon: fas section
+  color: primary
+  date: 2025-07-01
+  badge: v1.0.0
+  url: v1.0.0
+  content: >-
+    This release introduces a new approach to reusable page elements. It now also support the revised template system
+    introduced by [Hugo v0.146.0](https://github.com/gohugoio/hugo/releases/tag/v0.146.0). This release of Hinode is a
+    breaking change with all `0.x` releases. Review the [docs](/docs/getting-started/upgrading/) on how to upgrade your
+    existing site to the latest Hinode version.
+
 - title: Title case
   icon: fas heading
   color: info
