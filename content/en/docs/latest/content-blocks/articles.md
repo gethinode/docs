@@ -5,9 +5,6 @@ description: Use the articles content block to show a group of article cards.
 icon: fas grip
 ---
 
-> [!IMPORTANT]
-> Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
-
 ## Overview
 
 The `articles` content block renders a group of article cards.
