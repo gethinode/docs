@@ -5,9 +5,6 @@ description: Use the releases content block to display a timeline with release i
 icon: fas timeline fa-rotate-90
 ---
 
-> [!IMPORTANT]
-> Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
-
 ## Overview
 
 The `releases` content block displays a timeline with release information.

@@ -7,9 +7,6 @@ description: >-
 icon: fas circle-question
 ---
 
-> [!IMPORTANT]
-> Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
-
 ## Overview
 
 The `FAQ` content block renders an accordion of frequently asked questions. Clicking on a question reveals the answer interactively.

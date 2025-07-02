@@ -8,9 +8,6 @@ description: >-
 icon: fas h
 ---
 
-> [!IMPORTANT]
-> Content blocks are a new feature that is still in [beta](https://github.com/gethinode/hinode/issues/1430#issuecomment-2988697852). The implementation is subject to change. The documentation on this website is still being worked on.
-
 ## Overview
 
 The `hero` content block renders a page hero, typically at the top of the page. Set `cover` to true to display a full-page hero.
