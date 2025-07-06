@@ -81,7 +81,7 @@ Stack your navigation by setting `vertical` to `true`.
 
 <!-- markdownlint-disable MD037 -->
 {{< example lang="hugo" >}}
-{{</* nav vertical="true" */>}}
+{{</* nav vertical="true" id="vertical-1" */>}}
   {{</* nav-item title="Nav Item #1" show="true" */>}}
     This is the first item's nav body. It supports Markdown content. The item is shown by adding
     the value `show` to the `class` argument.
