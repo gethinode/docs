@@ -2,6 +2,8 @@ github.com/airbnb/lottie-web v5.12.2+incompatible h1:Ldogtlhiucf7mMsgisyxSBY0qun
 github.com/airbnb/lottie-web v5.12.2+incompatible/go.mod h1:nTss557UK9FGnp8QYlCMO29tjUHwbdAHG/DprbGfHGE=
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.1 h1:WByz6rqg28h94VLVLscu77/CHhi2peig/LqrnVomX0Y=
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.1/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
+github.com/cloudcannon/bookshop/hugo/v3 v3.16.3 h1:/Z66xKILl1SNGQePHZCnxo6vFgED7AGI600OSPotXj4=
+github.com/cloudcannon/bookshop/hugo/v3 v3.16.3/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
 github.com/gethinode/hinode v0.15.5 h1:eJNvuBpGMDAZ5Lq9B9ZjnC29iaR40A6zcvVOjEFVpac=
 github.com/gethinode/hinode v0.15.5/go.mod h1:1piFf+1Kwf5k6/bcNCtIxiAyqvZYvDqQfaGld7/XcF8=
 github.com/gethinode/hinode v0.16.0-beta h1:eXgYA5SOw6+NxHgScBy/VfprGjwL7WUa/56CCqtoRdo=
@@ -356,6 +358,8 @@ github.com/gethinode/hinode v1.2.1 h1:ZSp1ACtRUy/Zk1yA5tkzClnAnjBRUCCx4wb31to6xv
 github.com/gethinode/hinode v1.2.1/go.mod h1:AmOfArOmOkjxCY86xNdHXeeobvbK3tFos0vlNo74AFc=
 github.com/gethinode/hinode v1.4.1 h1:zmCJje5mY2dGTZwgwI3dA2CO0jBZLN05Kn106+Vs1Pw=
 github.com/gethinode/hinode v1.4.1/go.mod h1:m8Qxd/NlpsaPLULyNKAM2QwDTXmVqDogVsBptEFJZi0=
+github.com/gethinode/hinode v1.5.0 h1:+wFMhDMBU7e1jruYP/82LP7bLTbJwsDVByJxIwlXBEI=
+github.com/gethinode/hinode v1.5.0/go.mod h1:m8Qxd/NlpsaPLULyNKAM2QwDTXmVqDogVsBptEFJZi0=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
