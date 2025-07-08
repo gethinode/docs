@@ -8,6 +8,9 @@
     footerBelowFold = false
     loading = "lazy"
     titleCase = true
+    [main.padding]
+        x = 4
+        y = 5
     [main.externalLinks]
         cue = true
         tab = true
