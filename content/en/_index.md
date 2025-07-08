@@ -58,6 +58,7 @@ content_blocks:
     background:
       color: body-tertiary
     orientation: horizontal
+    icon-style: fa-lg
     video:
       provider: youtube
       media-id: "w7Ft2ymGmfc"
@@ -85,6 +86,7 @@ content_blocks:
       align: center
       width: 8
     orientation: stacked
+    icon-style: fa-2xl
     elements:
       - title: Hugo
         icon: fab markdown

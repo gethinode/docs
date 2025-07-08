@@ -474,7 +474,3 @@ The `nav` layout supports the following additional arguments:
 | `width`        | 100          | Optional responsive width of the tab group, either 50 or 100 (default). |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
-
-The below configuration shows an example configuration of the [guides available on this site]({{% relref "guides" %}}). The configuration is set in `config/_default/params.toml`.
-
-{{< docs name="sections" file="./config/_default/params.toml" >}}

@@ -8,6 +8,9 @@
     footerBelowFold = false
     loading = "lazy"
     titleCase = true
+    [main.padding]
+        x = 4
+        y = 5
     [main.externalLinks]
         cue = true
         tab = true
@@ -89,72 +92,6 @@
     icon = "fas link"
     weight = 50
     clipboard = true
-
-# toml-docs-start sections
-[sections]
-    [sections.guides]
-        title = "Check our guides to get you started"
-        layout = "card"
-        sort = "date"
-        reverse = true
-        background = ""
-        color = "body-tertiary"
-        style = "border-0 shadow card-zoom card-body-margin"
-        cols = 3
-        padding = "3"
-        header = "full"
-        footer = "none"
-        orientation = "stacked"
-        homepage = 3
-# toml-docs-end sections
-    [sections.docs]
-        title = "Components"
-        layout = "card"
-        sort = "title"
-        reverse = false
-        nested = false
-        background = ""
-        color = "body-tertiary"
-        style = "border-0 shadow card-feature card-shrink card-body-margin"
-        cols = 3
-        padding = "3"
-        header = "none"
-        footer = "none"
-        orientation = "stacked"
-        homepage = 3
-    [sections.users]
-        title = "Discover how Hinode can help you"
-        layout = "nav"
-        sort = "weight"
-        reverse = false
-        background = "body-tertiary"
-        color = "primary"
-        style = "justify-content-center"
-        pane = "persona"
-        type = "pills"
-        width = 50
-        vertical = false
-    [sections.features]
-        title = "Bring your static site to a new level"
-        layout = "list"
-        sort = "weight"
-        reverse = false
-        style = "justify-content-center"
-    [sections.opensource]
-        title = "Embrace the power of open source"
-        sectionHeader = "justify-content-end"
-        layout = "card"
-        sort = "weight"
-        reverse = false
-        background = "body-tertiary"
-        color = "body"
-        style = "border card-feature"
-        cols = 3
-        padding = "3"
-        header = "none"
-        footer = "none"
-        orientation = "stacked"
-        homepage = 3
 
 [favicon]
     logo = "img/favicon.png"

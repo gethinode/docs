@@ -163,8 +163,8 @@ The workflow requires two secrets within your repository. Add them as `action se
 
   The bot requires elevated privileges to your module repository. Create a fine-grained Personal Access Token (PAT) first. Set up the token in the `Developer settings` of your **Account** settings on GitHub. The token requires access to your module repository with the following permissions:
 
-  - Read access to actions, commit statuses, metadata, and pull requests
-  - Read and Write access to content (code) and issues
+  - Read access to actions, commit statuses, and metadata
+  - Read and Write access to content (code), issues, and pull requests
 
   When done, create a new `Repository token` with the name `SEMANTIC_RELEASE_GIT` in your **repository** configuration and paste the PAT as content.
 
