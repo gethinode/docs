@@ -148,6 +148,30 @@ The `google-analytics` module supports the following additional settings:
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
+### Mermaid
+
+{{< release version="v1.7.0" >}}
+
+The `mermaid` module supports the following parameters:
+
+| Setting          | Default   | Description |
+|------------------|-----------|-------------|
+| `mermaid.elk`    | false     | If set, installs the layout engine for Mermaid based on the ELK layout engine. |
+| `mermaid.layout` | `dagre`   | Defines which layout algorithm to use for rendering Mermaid diagrams. The default algorithm is `dagre`. Additional options are available when `mermaid.elk` is enabled, see the table below. |
+| `mermaid.look`   | `classic` | Defines the default look for Mermaid diagrams, either `classic` or `handDrawn`. |
+
+The following table defines the available layout algorithms. The `elk` values require installation of the ELK layout engine (set `mermaid.elk` to `true`).
+
+| Layout             | Description |
+|--------------------|-------------|
+| `dagre`            | The default Mermaid layout. |
+| `elk`              | The default ELK layout, which is `elk.layered`. |
+| `elk.layered`      | Layered layout. |
+| `elk.stress`       | Stress layout. |
+| `elk.force`        | Force layout. |
+| `elk.mrtree`       | Multi-root tree layout. |
+| `elk.sporeOverlap` | Spore overlap layout. |
+
 ### Utils
 
 {{< release version="v0.22.5" >}}
