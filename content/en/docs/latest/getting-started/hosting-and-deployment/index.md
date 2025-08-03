@@ -23,7 +23,7 @@ Before deciding on your hosting and deployment approach, review the following co
 
 3. **Consider using build automation**
 
-   Many popular Git providers provide the option to automate the build and deployment process ({{ abbr "CI/CD" >}}). You can trigger this process on each release to your main repository branch, or set up a preview during a Pull Request. The examples on this page assume you have a Git repository with GitHub.
+   Many popular Git providers provide the option to automate the build and deployment process ({{< abbr "CI/CD" >}}). You can trigger this process on each release to your main repository branch, or set up a preview during a Pull Request. The examples on this page assume you have a Git repository with GitHub.
 
 4. **Understand the support for custom domain names**
 

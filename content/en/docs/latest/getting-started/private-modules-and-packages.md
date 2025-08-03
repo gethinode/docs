@@ -137,10 +137,15 @@ You can use repository secrets to safely store the tokens in a GitHub Action. By
 
 ### Hugo modules
 
+<!-- markdownlint-disable MD028 -->
 > [!CAUTION]
 > Avoid using the `.netrc` file for local development, as this intervenes with your current git authentication. Use the method described in [local development](#local-development) instead.
 
+> [!IMPORTANT]
+> Cloudflare does not recognize the `.netrc` file. Authorize Cloudflare to access the required (GitHub) repositories instead.
+
 Generate a `.netrc` file for the current user of the GitHub runner to configure access to a private Hugo module. Configure `HUGO_TOKEN` as repository secret. Then use the following step prior to the Hugo build step to generate (or overwrite) the `~/.npmrc` file. Go, the underlying module framework used by Hugo, will use this token for all private modules hosted on `github.com`.
+<!-- markdownlint-enable MD028 -->
 
 ```yaml
 # Generate a .netrc file with the substituted HUGO_TOKEN secret for the current user
