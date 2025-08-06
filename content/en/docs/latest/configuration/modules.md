@@ -152,7 +152,7 @@ The `google-analytics` module supports the following additional settings:
 
 {{< release version="v1.8.0" >}}
 
-This `hanko` module supports the following parameters:
+The `hanko` module supports the following parameters:
 
 | Setting                   | Default | Description |
 |---------------------------|---------|-------------|
