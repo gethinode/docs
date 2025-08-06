@@ -148,6 +148,29 @@ The `google-analytics` module supports the following additional settings:
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
+### Hanko
+
+{{< release version="v1.8.0" >}}
+
+A login template is available in the `layouts` folder, which is automatically mounted into your site. You can reference this template by setting `layout: login` in the frontmatter of your content page. For example, create a login page `content/login.md` with the following content.
+
+```yml
+---
+title: Login
+description: Login page
+layout: login
+---
+```
+
+The `hanko` module supports the following parameters:
+
+| Setting                     | Default | Description |
+|-----------------------------|---------|-------------|
+| `endpoint`                  |         | Hanko API URL, such as `https://f4****-4802-49ad-8e0b-3d3****ab32.hanko.io`. Check the [Hanko console](https://cloud.hanko.io/) to retrieve the value. |
+| `login-redirect`            |         | Redirect destination after a successful login, e.g. `/` to redirect to the site's homepage. |
+| `logout-redirect`           |         | Redirect destination after a successful logout, e.g. `/login/` to redirect to the login page. |
+| `timeout-redirect`          |         | Redirect destination when the session has expired, e.g. `/login/` to redirect to the login page. A modal dialog is shown to confirm the redirect. |
+
 ### Mermaid
 
 {{< release version="v1.7.0" >}}
