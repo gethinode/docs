@@ -4,6 +4,8 @@ github.com/cloudcannon/bookshop/hugo/v3 v3.16.1 h1:WByz6rqg28h94VLVLscu77/CHhi2p
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.1/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.3 h1:/Z66xKILl1SNGQePHZCnxo6vFgED7AGI600OSPotXj4=
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.3/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
+github.com/cloudcannon/bookshop/hugo/v3 v3.16.4 h1:k233xdD3ydE6iN8QB+c37//rSsFVtLIo5OUNRN4E3bc=
+github.com/cloudcannon/bookshop/hugo/v3 v3.16.4/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
 github.com/gethinode/hinode v0.15.5 h1:eJNvuBpGMDAZ5Lq9B9ZjnC29iaR40A6zcvVOjEFVpac=
 github.com/gethinode/hinode v0.15.5/go.mod h1:1piFf+1Kwf5k6/bcNCtIxiAyqvZYvDqQfaGld7/XcF8=
 github.com/gethinode/hinode v0.16.0-beta h1:eXgYA5SOw6+NxHgScBy/VfprGjwL7WUa/56CCqtoRdo=
@@ -366,6 +368,8 @@ github.com/gethinode/hinode v1.8.0 h1:Cae5nwNjaspOaZAFQvNxq/X/iPtnghLkdmUAnkrF5Z
 github.com/gethinode/hinode v1.8.0/go.mod h1:UN9DB9WbfTW2f4JhPJi4p75BQZYAxaRTONzBF8C4f9Y=
 github.com/gethinode/hinode v1.10.0 h1:ZFm0YzOizplzETH4mpIjT1pFe9ZvUhnPDQJb8VVHTOE=
 github.com/gethinode/hinode v1.10.0/go.mod h1:UN9DB9WbfTW2f4JhPJi4p75BQZYAxaRTONzBF8C4f9Y=
+github.com/gethinode/hinode v1.11.1 h1:xVUI5r6ECo136UCSv6qo0Glo7Oe5wnBWn/ucyuioEEw=
+github.com/gethinode/hinode v1.11.1/go.mod h1:ph5XKBDg27Q5Je8TPEfQ0Ii1cbGWFVJcWfuVGkzSGaM=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
