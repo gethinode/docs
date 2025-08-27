@@ -36,7 +36,7 @@ The following example is taken from the `content/en/docs/_index.md` page, which 
 ---
 title: Docs
 redirect: "/docs/"
-_build:
+build:
   list: false
   render: false
 ---

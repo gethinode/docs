@@ -74,7 +74,7 @@ Hugo recognizes the `/docs/` page as a list page by default. To properly map thi
 ---
 title: Docs
 redirect: "/docs/"
-_build:
+build:
   list: false
   render: false
 ---

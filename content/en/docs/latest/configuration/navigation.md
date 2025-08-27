@@ -25,10 +25,15 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | `horizontal` | false   | {{</* release version="v0.21.0" short="true" button-size="sm" inline="true" */>}} Flag indicating the second level navigation should render horizontally. By default, the navbar uses regular dropdown menus instead. |
 | `offset`      | "3em"   | Applies an {{</* link bs_navbar_placement >}}offset to main elements{{< /link */>}} when `fixed` is set to true. |
 | `size`        | "md"    | Optional breakpoint of the navbar toggler, either "xs", "sm", "md" (default), "lg", or "xl". |
-| `search`      | true    | Flag indicating to include a search input. |
+| `fontsizeCollapsed` | 6 | Font size of the menu items in collapsed state. The available sizes are `[1..6]`, similar to the size of the headings `[h1..h6]`. |
+| `search`      | true    | {{</* release version="v0.18.0" short="true" release-state="deprecated" button-size="sm" inline="true" */>}} Flag indicating to include a search input. |
 | `breadcrumb`  | false   | Flag indicating to add breadcrumb navigation to the top of any single page. List pages are excluded. |
 | `toc`         | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | `sidebar`     | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
+| `language.icon` | "fas globe" | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Icon to use for the language selector. |
+| `search.enabled` | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Flag indicating to include a search input. |
+| `search.modal` | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Flag to trigger a modal input form for search queries and results. By default, an input field is added to the navbar instead. |
+| `search.icon` | "fas magnifying-glass" | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Icon to use for the modal search button. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 

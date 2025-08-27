@@ -171,6 +171,15 @@ The `hanko` module supports the following parameters:
 | `logout-redirect`           |         | Redirect destination after a successful logout, e.g. `/login/` to redirect to the login page. |
 | `timeout-redirect`          |         | Redirect destination when the session has expired, e.g. `/login/` to redirect to the login page. A modal dialog is shown to confirm the redirect. |
 
+When using Content Security Policies, be sure to add the endpoint to the `connect-src` safelist. For example, the following configuration in your site parameters will enable connections to the example Hanko API URL.
+
+```toml
+[modules.hanko.csp]
+    connect-src = [
+        "f4****-4802-49ad-8e0b-3d3****ab32.hanko.io"
+    ]
+```
+
 ### Mermaid
 
 {{< release version="v1.7.0" >}}

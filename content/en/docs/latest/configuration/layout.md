@@ -70,8 +70,8 @@ Hinode uses the following extended settings in the `main` section of the `site p
 |--------------------|-------------------|-------------|
 | `separator`          | "-"               | Separator to join the website title and page title. |
 | `description`        | -                 | Short description of the website that is added to the page metadata. |
-| `enableDarkMode`     | true              | Enables switcher for [light mode and dark mode]({{% relref "color-modes" %}}). |
-| `modes`              | ["light", "dark"] | Supported color modes, used as identifier for color-mode aware images. |
+| `enableDarkMode`     | true              | {{</* release version="v1.12.0" release-state="deprecated" short="true" button-size="sm" inline="true" */>}} Enables switcher for [light mode and dark mode]({{% relref "color-modes" %}}). |
+| `modes`              | ["light", "dark"] | {{</* release version="v1.12.0" release-state="deprecated" short="true" button-size="sm" inline="true" */>}}Supported color modes, used as identifier for color-mode aware images. |
 | `endorse`            | true              | By default, the theme adds a link to Hinode in the page's footer. You can disable it by setting `endorse` to `false`, but we would appreciate it if you leave it enabled. |
 | `enableLanguageSelectionStorage` | false | If set, stores the last selected language in the site's local storage. Pages are automatically redirected to the related page translation, if available. |
 | `footerBelowFold`    | false             | If set, pushes the footer including social links to below the page fold. |
@@ -85,6 +85,12 @@ Hinode uses the following extended settings in the `main` section of the `site p
 | `externalLinks.tab`  | false             | If set, opens [managed external links]({{% relref "links-and-cross-references#managed-links" %}}) in a new browser tab using the HTML attributes `target="_blank" rel= "noopener noreferrer"`. |
 | `build.transpiler`   | "libsass"         | {{</* release version="v0.20.0" short="true" button-size="sm" inline="true" */>}} Defines the Sass transpiler to be used, either "libsass" (default) or "dartsass". The Dart Sass transpiler requires {{</* link hugo_sass >}}installation of a separate binary on your machine{{< /link */>}}. This includes any production servers used for {{</* abbr "CI/CD" */>}} automation and deployment.|
 | `build.silenceDeprecations`   | false         | {{</* release version="v0.27.9" short="true" button-size="sm" inline="true" */>}} Silences any deprecation warnings raised by the Dart Sass transpiler. |
+| `colorMode.enabled`   | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Enables switcher for [light mode and dark mode]({{% relref "color-modes" %}}). |
+| `colorMode.modes`     | ["light", "dark"] | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}}Supported color modes, used as identifier for color-mode aware images. |
+| `colorMode.toggle`    | false | If set, uses a toggle instead of a switch to change the colo mode. |
+| `colorMode.iconLight` | "fas sun" | Icon to use for light mode. |
+| `colorMode.iconDark`  | "fas moon" | Icon to use for dark mode. |
+| `language.icon` | "fas globe" | Icon to use for the language selector. |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 
