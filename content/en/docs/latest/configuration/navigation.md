@@ -31,7 +31,7 @@ The basic configuration of the navigation elements is set in the `navigation` se
 | `toc`         | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | `sidebar`     | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
 | `language.icon` | "fas globe" | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Icon to use for the language selector. |
-| `search.enabled` | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Flag indicating to include a search input. | 
+| `search.enabled` | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Flag indicating to include a search input. |
 | `search.modal` | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Flag to trigger a modal input form for search queries and results. By default, an input field is added to the navbar instead. |
 | `search.icon` | "fas magnifying-glass" | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Icon to use for the modal search button. |
 {{< /table >}}
