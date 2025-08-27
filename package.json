@@ -47,7 +47,7 @@
     "cpy-cli": "^6.0.0",
     "cssnano": "^7.1.1",
     "cssnano-preset-advanced": "^7.0.8",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "hugo-bin": "^0.145.2",
     "markdownlint-cli2": "^0.18.1",
     "neostandard": "^0.12.2",
