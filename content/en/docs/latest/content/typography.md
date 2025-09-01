@@ -110,20 +110,22 @@ _This text is italicized_
 
 {{< release version="v0.19.0" >}}
 
-Use shortcodes and classes for additional styling options. The following example illustrates highlighting, fine print, subscript, and superscript.
+Hugo supports several extensions to the Markdown syntax, such as deleted text, inserted text, marked text, subscript, and superscript. These extensions need to be [enabled explicitly in the site configuration](https://gohugo.io/configuration/markup/#extras). Alternatively, you can use Hinode shortcodes for several extensions as well.
 
 <!-- markdownlint-disable MD037 -->
 {{< example >}}
-You can use the mark shortcode to {{</* mark >}}highlight{{< /mark */>}} text.
+You can use the {{</* mark >}}mark{{< /mark */>}} shortcode or ==mark== extra to highlight text.
+
+H{{</* sub 2 */>}}O is a liquid and CO~2~ is a gas.
+
+2{{</* sup 10 */>}} is 1024 and 10^2^ is 100.
+
+Use the {{</* ins >}}ins{{< /ins */>}} shortcode or ++insert++ extra to insert (underline) text.
+
+Use the ~~delete~~ extra to delete text.
 
 This line of text is meant to be treated as fine print.
 {.small}
-
-H{{</* sub 2 */>}}O is a liquid.
-
-2{{</* sup 10 */>}} is 1024.
-
-This is an {{</* ins >}}underlined text{{< /ins */>}}.
 
 {{< /example >}}
 <!-- markdownlint-enable MD037 -->

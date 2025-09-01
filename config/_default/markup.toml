@@ -18,7 +18,7 @@ defaultMarkdownHandler = "goldmark"
         definitionList = true
         footnote = true
         linkify = true
-        strikethrough = true
+        strikethrough = false
         table = true
         taskList = true
         typographer = true
@@ -27,6 +27,17 @@ defaultMarkdownHandler = "goldmark"
     [goldmark.extensions.passthrough.delimiters]
         block = [['\[', '\]'], ['$$', '$$']]
         inline = [['\(', '\)'], ['$', '$']]
+    [goldmark.extensions.extras]
+    [goldmark.extensions.extras.delete]
+        enable = true
+    [goldmark.extensions.extras.insert]
+        enable = true
+    [goldmark.extensions.extras.mark]
+        enable = true
+    [goldmark.extensions.extras.subscript]
+        enable = true
+    [goldmark.extensions.extras.superscript]
+        enable = true
     [goldmark.parser]
         autoHeadingID = true
         autoHeadingIDType = 'github'
