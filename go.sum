@@ -1,5 +1,7 @@
 github.com/airbnb/lottie-web v5.12.2+incompatible h1:Ldogtlhiucf7mMsgisyxSBY0qunV44+lpa9Icy2KoQc=
 github.com/airbnb/lottie-web v5.12.2+incompatible/go.mod h1:nTss557UK9FGnp8QYlCMO29tjUHwbdAHG/DprbGfHGE=
+github.com/airbnb/lottie-web v5.13.0+incompatible h1:plBV5Uq/F1kK0EC61Hr0cBGReI9OgUfd/pp0baoDX8o=
+github.com/airbnb/lottie-web v5.13.0+incompatible/go.mod h1:nTss557UK9FGnp8QYlCMO29tjUHwbdAHG/DprbGfHGE=
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.1 h1:WByz6rqg28h94VLVLscu77/CHhi2peig/LqrnVomX0Y=
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.1/go.mod h1:s7mIonDhtsLcn10ZKuVXyqd6BDHI8vT1WQhZw8rPfY8=
 github.com/cloudcannon/bookshop/hugo/v3 v3.16.3 h1:/Z66xKILl1SNGQePHZCnxo6vFgED7AGI600OSPotXj4=
@@ -378,6 +380,8 @@ github.com/gethinode/hinode v1.12.3 h1:CLMiB8tTR6QHK+E6adzA/bYLRSohhLqkNYfM6UjQ1
 github.com/gethinode/hinode v1.12.3/go.mod h1:E8W8fxjBw+78+BAwt0zgyMVAGi9+DdefqyckrqlQ7oE=
 github.com/gethinode/hinode v1.12.4 h1:t+awyvIddKyvjhWv07+6ZE4W11reHKUaOv4oZDMbbLs=
 github.com/gethinode/hinode v1.12.4/go.mod h1:E8W8fxjBw+78+BAwt0zgyMVAGi9+DdefqyckrqlQ7oE=
+github.com/gethinode/hinode v1.13.0 h1:Ci5ozvGetoA5XVqKwG7N3sKTjQeHc9Eng8Olikzdu28=
+github.com/gethinode/hinode v1.13.0/go.mod h1:gucMoRpFB3bMoKfeZMr9aZAOWO49bL9FJjBoyP2AtUM=
 github.com/gethinode/mod-bootstrap v1.1.0 h1:BbalsW8kmFhv+J+dcc41TGcjIlM/p69AB0h0oGhAXIU=
 github.com/gethinode/mod-bootstrap v1.1.0/go.mod h1:DcpPc2cNaXUPGEvhD7npuEEPA7573NvakTlrwFbyjr8=
 github.com/gethinode/mod-bootstrap v1.1.1 h1:Tx4M5hGVOFrEaxnUONDAm6N9xuRi5UphKlT7F26HujU=
@@ -789,6 +793,8 @@ github.com/gethinode/mod-utils/v4 v4.11.1 h1:12CzZjyLOb/FSXbX8mDAWqs8y4OCXOEavKw
 github.com/gethinode/mod-utils/v4 v4.11.1/go.mod h1:bYmvRdAo4ICy5MpSGafDvO4p5bTDpsDKFCPL3bH0mN4=
 github.com/gethinode/mod-utils/v4 v4.13.0 h1:VKAA+wKy4saayXfgJuVBRfhNVWQWmxOjO8LSpQCvLfw=
 github.com/gethinode/mod-utils/v4 v4.13.0/go.mod h1:bYmvRdAo4ICy5MpSGafDvO4p5bTDpsDKFCPL3bH0mN4=
+github.com/gethinode/mod-utils/v4 v4.14.0 h1:CF5dy+HWg22L306bWVhClWK9b1NVinEqtb4Qr2vcl9A=
+github.com/gethinode/mod-utils/v4 v4.14.0/go.mod h1:bYmvRdAo4ICy5MpSGafDvO4p5bTDpsDKFCPL3bH0mN4=
 github.com/nextapps-de/flexsearch v0.0.0-20230711092928-1243fd883ec3 h1:H/qVR5O4BXjRjD+5PZB+r4ug2BSJ2Of4RtwOntd+OKo=
 github.com/nextapps-de/flexsearch v0.0.0-20230711092928-1243fd883ec3/go.mod h1:5GdMfPAXzbA2gXBqTjC6l27kioSYzHlqDMh0+wyx7sU=
 github.com/nextapps-de/flexsearch v0.0.0-20240108021025-afd75f742f22 h1:re7L8FxbXQpnX8BgzkdUnDpsUmloGNyLmiy2ZCln8pg=
