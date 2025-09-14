@@ -13,24 +13,27 @@ The basic configuration of the navigation elements is set in the `navigation` se
 
 <!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
-| Setting     | Default | Description |
-|-------------|---------|-------------|
-| `anchor`      | -       | Flag indicating to display anchor links on hovering a heading. |
-| `logo`        | -       | Address of the brand logo image, e.g. "/img/logo_embedded.svg". The vector image file is expected to be present in your local `static/img` folder. |
-| `color`       | -       | [Theme color]({{% ref "colors" %}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
-| `style`       | "light" | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly.  |
+| Setting       | Default  | Description |
+|---------------|----------|-------------|
+| `anchor`      | -        | Flag indicating to display anchor links on hovering a heading. |
+| `logo`        | -        | Address of the brand logo image, e.g. "/img/logo_embedded.svg". The vector image file is expected to be present in your local `static/img` folder. |
+| `logo-mode`   | `false`  | {{</* release version="v1.15.0" short="true" button-size="sm" inline="true" */>}} Flag indicating if the brand logo should support color modes. If set, the navbar searches for images having a matching color-mode suffix such as `-light` or `-dark`. |
+| `logo-align`  | `center` | {{</* release version="v1.15.0" short="true" button-size="sm" inline="true" */>}} Alignment of the brand logo when the navbar is in collapsed mode, either `start` or `center`. |
+| `logo-height` | 30       | Height of the brand logo in pixels. |
+| `color`       | -        | [Theme color]({{% ref "colors" %}}) of the navigation bar. Set the style to set the correct contrast of the menu items. The navigation bar is transparent when no color is set, but is set to the body color when scrolling to enhance the contrast. |
+| `style`       | `light` | Style of the navigation bar, either "light" or "dark". It changes the colors of the menu items accordingly.  |
 | `fixed`       | false   | Flag indicating to keep the navigation bar fixed at the top of the screen. |
 | `overlay`     | false   | {{</* release version="v0.23.0" short="true" button-size="sm" inline="true" */>}} Flag indicating to render the navigation bar as overlay on top of the page body. In this state, the navigation is transparent and the page body starts at the top of the viewport. The navigation becomes opaque when scrolling and is set to the specified theme `color`. |
-| `overlayMode` | "dark"  | {{</* release version="v0.23.0" short="true" button-size="sm" inline="true" */>}} Style of the navigation bar when `overlay` is set, either “light” or “dark”. |
+| `overlayMode` | `dark`  | {{</* release version="v0.23.0" short="true" button-size="sm" inline="true" */>}} Style of the navigation bar when `overlay` is set, either “light” or “dark”. |
 | `horizontal` | false   | {{</* release version="v0.21.0" short="true" button-size="sm" inline="true" */>}} Flag indicating the second level navigation should render horizontally. By default, the navbar uses regular dropdown menus instead. |
-| `offset`      | "3em"   | Applies an {{</* link bs_navbar_placement >}}offset to main elements{{< /link */>}} when `fixed` is set to true. |
-| `size`        | "md"    | Optional breakpoint of the navbar toggler, either "xs", "sm", "md" (default), "lg", or "xl". |
+| `offset`      | `3em`   | Applies an {{</* link bs_navbar_placement >}}offset to main elements{{< /link */>}} when `fixed` is set to true. |
+| `size`        | `md`    | Optional breakpoint of the navbar toggler, either "xs", "sm", "md" (default), "lg", or "xl". |
 | `fontsizeCollapsed` | 6 | Font size of the menu items in collapsed state. The available sizes are `[1..6]`, similar to the size of the headings `[h1..h6]`. |
 | `search`      | true    | {{</* release version="v0.18.0" short="true" release-state="deprecated" button-size="sm" inline="true" */>}} Flag indicating to include a search input. |
 | `breadcrumb`  | false   | Flag indicating to add breadcrumb navigation to the top of any single page. List pages are excluded. |
 | `toc`         | true    | Flag indicating to enable table of contents globally. Individual pages can override this setting in the frontmatter using the value `includeToc`. |
 | `sidebar`     | true    | Flag indicating to enable sidebar navigation globally. If set, a sidebar is displayed when applicable. |
-| `language.icon` | "fas globe" | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Icon to use for the language selector. |
+| `language.icon` | `fas globe` | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Icon to use for the language selector. |
 | `search.enabled` | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Flag indicating to include a search input. |
 | `search.modal` | true | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Flag to trigger a modal input form for search queries and results. By default, an input field is added to the navbar instead. |
 | `search.icon` | "fas magnifying-glass" | {{</* release version="v1.12.0" short="true" button-size="sm" inline="true" */>}} Icon to use for the modal search button. |
