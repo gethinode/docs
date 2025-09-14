@@ -24,6 +24,7 @@ The `video` content block renders a horizontal line to separate sections. The se
     color: primary
     subtle: true
   orientation: horizontal
+  icon-style: fa-lg
   video:
     provider: vimeo
     media-id: "55073825"
@@ -68,6 +69,7 @@ Set `orientation` to `stacked` to use a stacked arrangement.
     color: primary
     subtle: true
   orientation: stacked
+  icon-style: fa-xs
   video:
     provider: vimeo
     media-id: "55073825"
