@@ -46,7 +46,7 @@
     "autoprefixer": "^10.4.21",
     "cpy-cli": "^6.0.0",
     "cssnano": "^7.1.2",
-    "cssnano-preset-advanced": "^7.0.9",
+    "cssnano-preset-advanced": "^7.0.10",
     "eslint": "^9.38.0",
     "hugo-bin": "^0.149.2",
     "markdownlint-cli2": "^0.18.1",
