@@ -45,7 +45,7 @@
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
     "autoprefixer": "^10.4.21",
     "cpy-cli": "^6.0.0",
-    "cssnano": "^7.1.1",
+    "cssnano": "^7.1.2",
     "cssnano-preset-advanced": "^7.0.9",
     "eslint": "^9.38.0",
     "hugo-bin": "^0.149.2",
