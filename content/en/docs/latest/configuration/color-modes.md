@@ -36,10 +36,10 @@ The argument `darkModeTint` lightens the primary color with a given percentage, 
 
 <!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
-| Setting       | Default | Description |
-|---------------|---------|-------------|
+| Setting       | Default | Description                                                                                 |
+|---------------|---------|---------------------------------------------------------------------------------------------|
 | darkModeShade | "20%"   | Darkens the primary background color in dark mode with a given percentage, defaults to 20%. |
-| darkModeTint  | "40%"   | Lightens the primary color in dark mode with a given percentage, defaults to 40%. |
+| darkModeTint  | "40%"   | Lightens the primary color in dark mode with a given percentage, defaults to 40%.           |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 

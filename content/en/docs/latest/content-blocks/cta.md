@@ -42,15 +42,15 @@ The content block supports the following arguments:
 
 Define a file in the `data` folder that contains the contacts data. The format supports the following attributes:
 
-| Attribute | Required | Description |
-|-----------|----------|-------------|
-| name      | Yes | Full name of the contact, e.g. `Betty White`. |
-| preferred | No  | Preferred name of the contact, e.g. `Betty`. |
-| image     | No  | Path or url of the image, e.g. `img/betty.png`. |
-| function  | No  | Function title of the contact. |
-| linkedin  | No  | URL of the contact's LinkedIn profile. |
-| keywords  | No  | Keywords to associate with the contact. |
-| biography | No  | Biography of the contact. |
+| Attribute | Required | Description                                     |
+|-----------|----------|-------------------------------------------------|
+| name      | Yes      | Full name of the contact, e.g. `Betty White`.   |
+| preferred | No       | Preferred name of the contact, e.g. `Betty`.    |
+| image     | No       | Path or url of the image, e.g. `img/betty.png`. |
+| function  | No       | Function title of the contact.                  |
+| linkedin  | No       | URL of the contact's LinkedIn profile.          |
+| keywords  | No       | Keywords to associate with the contact.         |
+| biography | No       | Biography of the contact.                       |
 
 The following snippet defines a single contact in `yml` format.
 

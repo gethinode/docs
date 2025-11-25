@@ -31,16 +31,16 @@ date: 2023-02-19
 Hinode supports the following additional frontmatter parameters.
 
 <!-- markdownlint-disable MD037 MD058 -->
-| Argument            | Description |
-|---------------------|-------------|
-| icon                | Shorthand notation for an [icon]({{% relref "icon" %}}) to be used on a [card]({{% relref "card" %}}). |
-| searchExclude       | {{< release version="0.21.8" inline="true" button-size="sm" >}} If true, the current page is excluded from the search index. |
+| Argument            | Description                                                                                                                                                                                                 |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| icon                | Shorthand notation for an [icon]({{% relref "icon" %}}) to be used on a [card]({{% relref "card" %}}).                                                                                                      |
+| searchExclude       | {{< release version="0.21.8" inline="true" button-size="sm" >}} If true, the current page is excluded from the search index.                                                                                |
 | thumbnail           | URL or local path of the thumbnail image, shorthand notation for `thumbnail.url`. When using shorthand notation, the additional thumbnail metadata is unavailable (and will throw an error when specified). |
-| thumbnail.url       | URL or local path of the thumbnail image. When set, be sure to clear the shorthand `thumbnail` value. |
-| thumbnail.author    | Name of the thumbnail author, added as caption to the thumbnail on single pages. |
-| thumbnail.authorURL | URL of the thumbnail author, added as caption link to the thumbnail on single pages. |
-| thumbnail.origin    | Name of the thumbnail origin, e.g. Unsplash or Pexels. |
-| thumbnail.originURL | URL of the thumbnail origin, added as caption link to the thumbnail on single pages. |
+| thumbnail.url       | URL or local path of the thumbnail image. When set, be sure to clear the shorthand `thumbnail` value.                                                                                                       |
+| thumbnail.author    | Name of the thumbnail author, added as caption to the thumbnail on single pages.                                                                                                                            |
+| thumbnail.authorURL | URL of the thumbnail author, added as caption link to the thumbnail on single pages.                                                                                                                        |
+| thumbnail.origin    | Name of the thumbnail origin, e.g. Unsplash or Pexels.                                                                                                                                                      |
+| thumbnail.originURL | URL of the thumbnail origin, added as caption link to the thumbnail on single pages.                                                                                                                        |
 <!-- markdownlint-enable MD037 MD058 -->
 
 ### Mixed content
@@ -89,15 +89,15 @@ Single pages define the content for a specific page, such as the [introduction p
 By default, single pages, such as a blog page, include the following elements in the body:
 
 <!-- markdownlint-disable MD037 MD058 -->
-| Element            | Description |
-|--------------------|-------------|
-| Title | The title of the page as set in the page's frontmatter.|
-| Metadata | The date of the page, the modification date (if applicable), the read time, and the amount of words on the page.|
-| Tags | Links to any tags defined in the page's frontmatter.|
-| Description | The description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.|
-| Thumbnail | A thumbnail image with figure caption that links to the photo credits (if defined in the frontmatter).|
-| Download | {{< release version="v0.21.0" short="true" button-size="sm" inline="true" >}} a link to a local file that represents a downloadable version of the current article.|
-| Navigation links | Links on the bottom of the page that link to the previous and next page within the current section.|
+| Element          | Description                                                                                                                                                         |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Title            | The title of the page as set in the page's frontmatter.                                                                                                             |
+| Metadata         | The date of the page, the modification date (if applicable), the read time, and the amount of words on the page.                                                    |
+| Tags             | Links to any tags defined in the page's frontmatter.                                                                                                                |
+| Description      | The description as defined in the page's frontmatter, or as summarized by Hugo if omitted in the frontmatter.                                                       |
+| Thumbnail        | A thumbnail image with figure caption that links to the photo credits (if defined in the frontmatter).                                                              |
+| Download         | {{< release version="v0.21.0" short="true" button-size="sm" inline="true" >}} a link to a local file that represents a downloadable version of the current article. |
+| Navigation links | Links on the bottom of the page that link to the previous and next page within the current section.                                                                 |
 <!-- markdownlint-enable MD037 MD058 -->
 
 The below example illustrates the parameters used in the page's frontmatter:

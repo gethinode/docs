@@ -47,12 +47,12 @@ npm run start
 
 Create a new folder `blog` within `content` to create a new section. We will now copy a few sample posts from Hinode's example site. Navigate to the folder `exampleSite/content/en/blog` in the main {{< link repository >}}Hinode repository{{< /link >}}. Copy the following posts (drop the `en` subfolder in the target):
 
-| Source (Hinode repository) | Target (`demo`) |
-| -------|--------|
-| `exampleSite/content/en/blog/_index.md` | `content/blog/_index.md` |
-| `exampleSite/content/en/blog/first-post.md` | `content/blog/first-post.md` |
+| Source (Hinode repository)                   | Target (`demo`)               |
+|----------------------------------------------|-------------------------------|
+| `exampleSite/content/en/blog/_index.md`      | `content/blog/_index.md`      |
+| `exampleSite/content/en/blog/first-post.md`  | `content/blog/first-post.md`  |
 | `exampleSite/content/en/blog/second-post.md` | `content/blog/second-post.md` |
-| `exampleSite/content/en/blog/third-post.md` | `content/blog/third-post.md` |
+| `exampleSite/content/en/blog/third-post.md`  | `content/blog/third-post.md`  |
 | `exampleSite/content/en/blog/fourth-post.md` | `content/blog/fourth-post.md` |
 
 ### Inspecting the default site

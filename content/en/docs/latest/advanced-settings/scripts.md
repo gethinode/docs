@@ -43,11 +43,11 @@ In addition to their integration type, you can also bundle scripts by their inte
 
 Hinode uses the following naming conventions for each type of script:
 
-| Integration | Basename | Description |
-|-----------------|-----------------------------------|-------------|
+| Integration  | Basename          | Description                                                                                                                                                                                                                                                 |
+|--------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **critical** | `critical.bundle` | Critical scripts are bundled by intent category. The target bundle's filename uses `critical.bundle` as basename and the category name as suffix. When the category is `other`, the suffix is omitted. Localized modules trigger a language code extension. |
-| **core** | `core.bundle` | Core scripts are bundled similarly as critical scripts. The target bundle's filename uses `core.bundle` as basename. |
-| **optional** | `<module name>` | Scripts that are part of an optional module are bundled by their module name and optional category. Similar to core scripts, optional scripts bundles can also receive a language code extension. |
+| **core**     | `core.bundle`     | Core scripts are bundled similarly as critical scripts. The target bundle's filename uses `core.bundle` as basename.                                                                                                                                        |
+| **optional** | `<module name>`   | Scripts that are part of an optional module are bundled by their module name and optional category. Similar to core scripts, optional scripts bundles can also receive a language code extension.                                                           |
 
 ## Integration approaches
 
@@ -57,14 +57,14 @@ Hinodes supports three types of integration approaches. The next paragraphs desc
 
 The main Hinode repository includes several scripts maintained within the `assets/js` folder. You can add (or mount) your own scripts to this folder to include them in the build pipeline. Hinode supports the following directories relative to the `assets` mount point:
 
-| Category        | Match (glob pattern)              | Target bundle |
-|-----------------|-----------------------------------|-------------|
-| `other`         | `js/critical/*.js`                | `/js/critical.bundle.js` |
-| `functional`    | `js/critical/functional/**.js`    | `/js/critical.bundle-functional.js` |
-| `analytics`     | `js/critical/analytics/**.js`     | `/js/critical.bundle-analytics.js` |
-| `performance`   | `js/critical/performance/**.js`   | `/js/critical.bundle-performance.js` |
+| Category        | Match (glob pattern)              | Target bundle                          |
+|-----------------|-----------------------------------|----------------------------------------|
+| `other`         | `js/critical/*.js`                | `/js/critical.bundle.js`               |
+| `functional`    | `js/critical/functional/**.js`    | `/js/critical.bundle-functional.js`    |
+| `analytics`     | `js/critical/analytics/**.js`     | `/js/critical.bundle-analytics.js`     |
+| `performance`   | `js/critical/performance/**.js`   | `/js/critical.bundle-performance.js`   |
 | `advertisement` | `js/critical/advertisement/**.js` | `/js/critical.bundle-advertisement.js` |
-| `core`          | `{js/*.js,js/vendor/**.js}`       | `/js/core.bundle.js` |
+| `core`          | `{js/*.js,js/vendor/**.js}`       | `/js/core.bundle.js`                   |
 
 ### Scripts embedded within a module
 
