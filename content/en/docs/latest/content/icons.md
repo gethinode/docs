@@ -65,14 +65,14 @@ The table below illustrates the relative sizing classes and their equivalent rel
 <!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Relative Sizing Class | Font Size | Equivalent in Pixels |
-|----------|--------:|-----:|
-| `fa-2x`  | 0.625em | 10px |
-| `fa-xs`  | 0.75em  | 12px |
-| `fa-sm`  | 0.875em | 14px |
-| `fa`     | 1em     | 16px |
-| `fa-lg`  | 1.25em  | 20px |
-| `fa-xl`  | 1.5em   | 24px |
-| `fa-2xl` | 2em     | 32px |
+|-----------------------|----------:|---------------------:|
+| `fa-2x`               |   0.625em |                 10px |
+| `fa-xs`               |    0.75em |                 12px |
+| `fa-sm`               |   0.875em |                 14px |
+| `fa`                  |       1em |                 16px |
+| `fa-lg`               |    1.25em |                 20px |
+| `fa-xl`               |     1.5em |                 24px |
+| `fa-2xl`              |       2em |                 32px |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
@@ -100,17 +100,17 @@ The table below illustrates the absolute sizing classes and their equivalent fon
 <!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
 | Absolute Sizing Class | Font Size |
-|---------|--------:|
-| `fa-1x` | 1em |
-| `fa-2x` | 2em |
-| `fa-3x` | 3em |
-| `fa-4x` | 4em |
-| `fa-5x` | 5em |
-| `fa-6x` | 6em |
-| `fa-7x` | 7em |
-| `fa-8x` | 8em |
-| `fa-9x` | 9em |
-| `fa-10x` | 10em |
+|-----------------------|----------:|
+| `fa-1x`               |       1em |
+| `fa-2x`               |       2em |
+| `fa-3x`               |       3em |
+| `fa-4x`               |       4em |
+| `fa-5x`               |       5em |
+| `fa-6x`               |       6em |
+| `fa-7x`               |       7em |
+| `fa-8x`               |       8em |
+| `fa-9x`               |       9em |
+| `fa-10x`              |      10em |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
@@ -188,14 +188,14 @@ The following classes are available:
 
 <!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
-| Class | Details |
-|---------|--------|
-| `fa-rotate-90` | Rotates an icon 90° |
-| `fa-rotate-180` | Rotates an icon 180° |
-| `fa-rotate-270` | Rotates an icon 270° |
-| `fa-flip-horizontal` | Mirrors an icon horizontally |
-| `fa-flip-vertical` | Mirrors an icon vertically |
-| `fa-flip-both` | Mirrors an icon both vertically and horizontally |
+| Class                | Details                                          |
+|----------------------|--------------------------------------------------|
+| `fa-rotate-90`       | Rotates an icon 90°                              |
+| `fa-rotate-180`      | Rotates an icon 180°                             |
+| `fa-rotate-270`      | Rotates an icon 270°                             |
+| `fa-flip-horizontal` | Mirrors an icon horizontally                     |
+| `fa-flip-vertical`   | Mirrors an icon vertically                       |
+| `fa-flip-both`       | Mirrors an icon both vertically and horizontally |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
@@ -219,15 +219,15 @@ The following table describes the available basic animation classes.
 
 <!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
-| Class | Details |
-|---------|--------|
-| `fa-beat` | Scales an icon up or down |
-| `fa-fade` | Fades an icon in and out |
-| `fa-beat-fade` | Scales and pulses an icon in and out |
-| `fa-bounce` | Bounces an icon up and down |
-| `fa-flip` | Rotates an icon about the Y axis 180 degrees |
-| `fa-shake` | Shakes an icon back and forth |
-| `fa-spin` | Rotates an icon |
+| Class          | Details                                      |
+|----------------|----------------------------------------------|
+| `fa-beat`      | Scales an icon up or down                    |
+| `fa-fade`      | Fades an icon in and out                     |
+| `fa-beat-fade` | Scales and pulses an icon in and out         |
+| `fa-bounce`    | Bounces an icon up and down                  |
+| `fa-flip`      | Rotates an icon about the Y axis 180 degrees |
+| `fa-shake`     | Shakes an icon back and forth                |
+| `fa-spin`      | Rotates an icon                              |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
@@ -248,11 +248,11 @@ The following table describes the available classes.
 
 <!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
-| Class | Details |
-|-------|---------|
-| `fa-border` | Creates a border with border-radius and padding applied around an icons |
-| `fa-pull-left` | Pulls an icon by floating it left and applying a margin-right |
-| `fa-pull-right` | Pulls an icon by floating it right and applying a margin-left |
+| Class           | Details                                                                 |
+|-----------------|-------------------------------------------------------------------------|
+| `fa-border`     | Creates a border with border-radius and padding applied around an icons |
+| `fa-pull-left`  | Pulls an icon by floating it left and applying a margin-right           |
+| `fa-pull-right` | Pulls an icon by floating it right and applying a margin-left           |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
@@ -284,12 +284,12 @@ The following table describes the available classes.
 
 <!-- markdownlint-disable MD058 -->
 {{< table class="table-striped w-auto" >}}
-| Class | Details |
-|-------|---------|
-| `fa-stack`    | Used on a parent HTML element of the two icons to be stacked |
+| Class         | Details                                                              |
+|---------------|----------------------------------------------------------------------|
+| `fa-stack`    | Used on a parent HTML element of the two icons to be stacked         |
 | `fa-stack-1x` | Used on the icon which should be displayed at base size when stacked |
-| `fa-stack-2x` | Used on the icon which should be displayed larger when stacked |
-| `fa-inverse`  | Inverts the color of the icon displayed at base size when stacked |
+| `fa-stack-2x` | Used on the icon which should be displayed larger when stacked       |
+| `fa-inverse`  | Inverts the color of the icon displayed at base size when stacked    |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 

@@ -45,15 +45,15 @@ The following table provides an overview of the available settings for each modu
 
 <!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
-| Setting         | Default       | Description |
-|-----------------|---------------|-------------|
-| `integration`     | optional      | Module integration, either `core` or `optional`. Core modules are fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. Optional modules are only included on those pages that reference the module in the frontmatter. Hinode includes the following core modules by default: ["bootstrap", "flexsearch", "fontawesome"]. |
-| `excludeSCSS`     | false | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles. |
-| `disableTemplate` | false         | Excludes all scripts files from processing as Hugo template. The scripts are bundled as-is instead. This only applies to optional modules. |
-| `localize`        | false         | {{</* release version="v0.25.0" short="true" button-size="sm" inline="true" */>}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`. |
-| `category`        | other         | {{</* release version="v0.27.0" short="true" button-size="sm" inline="true" */>}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{</* link "cookie-consent" /*/>}} for more details. |
-| `local`          | false         | {{</* release version="v0.27.0" short="true" button-size="sm" inline="true" */>}} Includes an external URL in local mode too. By default, external scripts are only included in the built site. |
-| `url`             |               | {{</* release version="0.27.0" short="true" button-size="sm" inline="true" */>}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{</* link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link */>}} for more information. |
+| Setting           | Default  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|-------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `integration`     | optional | Module integration, either `core` or `optional`. Core modules are fully integrated with the Hinode site, including stylesheets and Javascript bundles. The modules are processed in order of priority, with the first module taking precedence. Optional modules are only included on those pages that reference the module in the frontmatter. Hinode includes the following core modules by default: ["bootstrap", "flexsearch", "fontawesome"]. |
+| `excludeSCSS`     | false    | Excludes the module from the stylesheet processing pipeline. Use this setting to get more control of when and where to include the module's stylesheet. For example, the Bootstrap stylesheet is imported by the main stylesheet after initializing the theme variables, but before the custom component styles.                                                                                                                                   |
+| `disableTemplate` | false    | Excludes all scripts files from processing as Hugo template. The scripts are bundled as-is instead. This only applies to optional modules.                                                                                                                                                                                                                                                                                                         |
+| `localize`        | false    | {{</* release version="v0.25.0" short="true" button-size="sm" inline="true" */>}} Triggers the creation of a language-specific bundle file. The language code is appended as suffix to the base name. For example, the English version of `js/main.bundle.js` becomes `js/main.bundle.en.js`.                                                                                                                                                      |
+| `category`        | other    | {{</* release version="v0.27.0" short="true" button-size="sm" inline="true" */>}} Assigns the module's scripts to a category used for cookie consent. Available values are `necessary`, `functional`, `analytics`, `performance`, `advertisement`, and `other`. See {{</* link "cookie-consent" /*/>}} for more details.                                                                                                                           |
+| `local`           | false    | {{</* release version="v0.27.0" short="true" button-size="sm" inline="true" */>}} Includes an external URL in local mode too. By default, external scripts are only included in the built site.                                                                                                                                                                                                                                                    |
+| `url`             |          | {{</* release version="0.27.0" short="true" button-size="sm" inline="true" */>}} Optional url for an external link. If set, the link is included in the page header or page body, pending `integration` type. See the {{</* link "/docs/advanced-settings/scripts" >}}scripts documentation{{< /link */>}} for more information.                                                                                                                   |
 {{< /table >}}
 
 <!-- markdownlint-disable MD037 MD058 -->
@@ -78,10 +78,10 @@ Several modules support additional, module-specific configurations. Review them 
 This module supports the following parameters (see the section `params.modules` in `config.toml`):
 
 {{< table wrap=true >}}
-| Setting                   | Default | Description |
-|---------------------------|---------|-------------|
-| `clarity.id`              |         | Tracking code of Microsoft Clarity (see {{</* link clarity_code >}}installation instructions{{< /link */>}})
-| `clarity.force`           | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
+| Setting         | Default | Description                                                                                                                |
+|-----------------|---------|----------------------------------------------------------------------------------------------------------------------------|
+| `clarity.id`    |         | Tracking code of Microsoft Clarity (see {{</* link clarity_code >}}installation instructions{{< /link */>}})               |
+| `clarity.force` | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
 {{< /table >}}
 
 ### CookieYes
@@ -91,10 +91,10 @@ This module supports the following parameters (see the section `params.modules` 
 The `cookieyes` module requires the following settings:
 
 {{< table wrap=true >}}
-| Setting                   | Default | Description |
-|---------------------------|---------|-------------|
-| `cookieyes.local`         | false   | Trigger to force include the CookieYes scripts, bypassing other settings. Use this setting for debugging and testing only. |
-| `cookieyes.url`           |         | Link to your personalized CookieYes script. See the installation code in the advanced settings of your CookieYes account. The code is available by clicking the button next to the cookie banner status. The link has the following pattern: `https://cdn-cookieyes.com/client_data/{installation code}/script.js`. |
+| Setting           | Default | Description                                                                                                                                                                                                                                                                                                         |
+|-------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `cookieyes.local` | false   | Trigger to force include the CookieYes scripts, bypassing other settings. Use this setting for debugging and testing only.                                                                                                                                                                                          |
+| `cookieyes.url`   |         | Link to your personalized CookieYes script. See the installation code in the advanced settings of your CookieYes account. The code is available by clicking the button next to the cookie banner status. The link has the following pattern: `https://cdn-cookieyes.com/client_data/{installation code}/script.js`. |
 {{< /table  >}}
 
 ### Font Awesome
@@ -105,12 +105,12 @@ The `fontawesome` module supports the following additional settings:
 
 <!-- markdownlint-disable MD037 MD058 -->
 {{< table wrap=true >}}
-| Setting                 | Default | Description |
-|-------------------------|---------|-------------|
+| Setting                   | Default | Description                                                                                                                                                                                                                                                                               |
+|---------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fontawesome.embed`       | true    | {{</* release version="v0.26.3" short="true" button-size="sm" inline="true" */>}} If set, generates a symbol map with embedded vector images. Only works in conjunction with `inline`. Include the symbol map with the partial `assets/symbols.html` (requires the current page context). |
-| `fontawesome.inline`      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon. |
-| `fontawesome.debug`       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image. |
-| `fontawesome.skipMissing` | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing. |
+| `fontawesome.inline`      | true    | If set, uses inline vector images instead of web fonts. Both methods support Font Awesome styling and animation. However, when using vector images you cannot use aliases. Instead, use the default name of the icon.                                                                     |
+| `fontawesome.debug`       | true    | If set, prints the original code `<i class="[...]" style=[...]></i>` as comments next to the inline vector image.                                                                                                                                                                         |
+| `fontawesome.skipMissing` | false   | If set, displays a warning when an icon cannot be found. The missing icon is replaced with a dummy. By default, Hinode exits with an error when an icon is missing.                                                                                                                       |
 {{< /table >}}
 <!-- markdownlint-enable MD037 MD058 -->
 
@@ -142,9 +142,9 @@ The `google-analytics` module supports the following additional settings:
 
 <!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
-| Setting                   | Default | Description |
-|---------------------------|---------|-------------|
-| `GoogleAnalytics.force`   | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
+| Setting                 | Default | Description                                                                                                                |
+|-------------------------|---------|----------------------------------------------------------------------------------------------------------------------------|
+| `GoogleAnalytics.force` | false   | Trigger to force include the analytics scripts, bypassing other settings. Use this setting for debugging and testing only. |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 
@@ -164,12 +164,12 @@ layout: login
 
 The `hanko` module supports the following parameters:
 
-| Setting                     | Default | Description |
-|-----------------------------|---------|-------------|
-| `endpoint`                  |         | Hanko API URL, such as `https://f4****-4802-49ad-8e0b-3d3****ab32.hanko.io`. Check the [Hanko console](https://cloud.hanko.io/) to retrieve the value. |
-| `login-redirect`            |         | Redirect destination after a successful login, e.g. `/` to redirect to the site's homepage. |
-| `logout-redirect`           |         | Redirect destination after a successful logout, e.g. `/login/` to redirect to the login page. |
-| `timeout-redirect`          |         | Redirect destination when the session has expired, e.g. `/login/` to redirect to the login page. A modal dialog is shown to confirm the redirect. |
+| Setting            | Default | Description                                                                                                                                            |
+|--------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `endpoint`         |         | Hanko API URL, such as `https://f4****-4802-49ad-8e0b-3d3****ab32.hanko.io`. Check the [Hanko console](https://cloud.hanko.io/) to retrieve the value. |
+| `login-redirect`   |         | Redirect destination after a successful login, e.g. `/` to redirect to the site's homepage.                                                            |
+| `logout-redirect`  |         | Redirect destination after a successful logout, e.g. `/login/` to redirect to the login page.                                                          |
+| `timeout-redirect` |         | Redirect destination when the session has expired, e.g. `/login/` to redirect to the login page. A modal dialog is shown to confirm the redirect.      |
 
 When using Content Security Policies, be sure to add the endpoint to the `connect-src` safelist. For example, the following configuration in your site parameters will enable connections to the example Hanko API URL.
 
@@ -186,23 +186,23 @@ When using Content Security Policies, be sure to add the endpoint to the `connec
 
 The `mermaid` module supports the following parameters:
 
-| Setting          | Default   | Description |
-|------------------|-----------|-------------|
-| `mermaid.elk`    | false     | If set, installs the layout engine for Mermaid based on the ELK layout engine. |
+| Setting          | Default   | Description                                                                                                                                                                                  |
+|------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `mermaid.elk`    | false     | If set, installs the layout engine for Mermaid based on the ELK layout engine.                                                                                                               |
 | `mermaid.layout` | `dagre`   | Defines which layout algorithm to use for rendering Mermaid diagrams. The default algorithm is `dagre`. Additional options are available when `mermaid.elk` is enabled, see the table below. |
-| `mermaid.look`   | `classic` | Defines the default look for Mermaid diagrams, either `classic` or `handDrawn`. |
+| `mermaid.look`   | `classic` | Defines the default look for Mermaid diagrams, either `classic` or `handDrawn`.                                                                                                              |
 
 The following table defines the available layout algorithms. The `elk` values require installation of the ELK layout engine (set `mermaid.elk` to `true`).
 
-| Layout             | Description |
-|--------------------|-------------|
-| `dagre`            | The default Mermaid layout. |
+| Layout             | Description                                     |
+|--------------------|-------------------------------------------------|
+| `dagre`            | The default Mermaid layout.                     |
 | `elk`              | The default ELK layout, which is `elk.layered`. |
-| `elk.layered`      | Layered layout. |
-| `elk.stress`       | Stress layout. |
-| `elk.force`        | Force layout. |
-| `elk.mrtree`       | Multi-root tree layout. |
-| `elk.sporeOverlap` | Spore overlap layout. |
+| `elk.layered`      | Layered layout.                                 |
+| `elk.stress`       | Stress layout.                                  |
+| `elk.force`        | Force layout.                                   |
+| `elk.mrtree`       | Multi-root tree layout.                         |
+| `elk.sporeOverlap` | Spore overlap layout.                           |
 
 ### Utils
 
@@ -212,10 +212,10 @@ The `utils` module supports the following additional settings:
 
 <!-- markdownlint-disable MD058 -->
 {{< table wrap=true >}}
-| Setting           | Default | Description |
-|-------------------|---------|-------------|
-| `utils.filter`    | `[^0-9A-Za-zŽžÀ-ÿ ;.,\/'’"]` | Defines the regular expression for characters to remove from page descriptions. These page descriptions are used to define card content and metadata for search indexes. Adjust the filter to define which characters to support. You may need to adjust these settings to support specific diacritical letters. |
-| `utils.raw`       | false | Flag to indicate page descriptions should be returned as-is. In this setting, the filter is ignored. |
+| Setting        | Default                      | Description                                                                                                                                                                                                                                                                                                      |
+|----------------|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `utils.filter` | `[^0-9A-Za-zŽžÀ-ÿ ;.,\/'’"]` | Defines the regular expression for characters to remove from page descriptions. These page descriptions are used to define card content and metadata for search indexes. Adjust the filter to define which characters to support. You may need to adjust these settings to support specific diacritical letters. |
+| `utils.raw`    | false                        | Flag to indicate page descriptions should be returned as-is. In this setting, the filter is ignored.                                                                                                                                                                                                             |
 {{< /table >}}
 <!-- markdownlint-enable MD058 -->
 

@@ -41,8 +41,8 @@ The table below gives a brief overview of the features supported by a few select
 
 <!-- markdownlint-disable MD037 MD058 -->
 {{< table class="table-striped-columns w-auto" >}}
-| Feature            | Azure blob storage | Netlify           |
-|--------------------|--------------------|-------------------|
+| Feature            | Azure blob storage | Netlify               |
+|--------------------|--------------------|-----------------------|
 | Automation         | Custom action      | {{</* fas check */>}} |
 | Custom domain name | Requires Azure CDN | {{</* fas check */>}} |
 | CDN / Edge network | Requires Azure CDN | {{</* fas check */>}} |

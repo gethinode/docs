@@ -142,16 +142,16 @@ Arguments support the following elements:
 
 The following primitive types are supported.
 
-| Primitive | Description |
-|-----------|-------------|
-| bool      | Boolean, either `true` or `false`. The validation supports both quoted and unquoted values. Maps to the Hugo type `bool`. |
-| dict      | A map of key-value pairs, see [collections.Dictionary](https://gohugo.io/functions/collections/dictionary/). Consider using a defined complex type instead. |
-| int, int64  | A whole number, including negative values. Optionally, specify the allowed value range using `options.min` and `options.max`. Maps to the Hugo type `int`. |
-| float, float64 | A fractional number, including negative values. Optionally, specify the allowed value range using `options.min` and `options.max`. Maps to the Hugo type `float64`. |
-| path      | Path to a local file or directory. By convention, paths that start with `/` are relative to the repository root. When used as source argument, the base directory may be mapped to one of Hugo's mount folders (e.g. `assets`, `data`, `content`, `static`). Windows paths are mapped to Unix-style paths using forward slashes. Maps to the Hugo type `string`. |
-| select    | A single string value from a set of options. Specify the allowed values in `options.values`. Maps to the Hugo type `string`. |
-| slice      | An ordered list of values, see [collections.Dictionary](https://gohugo.io/functions/collections/slice/). Consider using a defined complex type instead. |
-| string | Free format plain text. Maps to the Hugo type `string`. |
+| Primitive      | Description                                                                                                                                                                                                                                                                                                                                                      |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| bool           | Boolean, either `true` or `false`. The validation supports both quoted and unquoted values. Maps to the Hugo type `bool`.                                                                                                                                                                                                                                        |
+| dict           | A map of key-value pairs, see [collections.Dictionary](https://gohugo.io/functions/collections/dictionary/). Consider using a defined complex type instead.                                                                                                                                                                                                      |
+| int, int64     | A whole number, including negative values. Optionally, specify the allowed value range using `options.min` and `options.max`. Maps to the Hugo type `int`.                                                                                                                                                                                                       |
+| float, float64 | A fractional number, including negative values. Optionally, specify the allowed value range using `options.min` and `options.max`. Maps to the Hugo type `float64`.                                                                                                                                                                                              |
+| path           | Path to a local file or directory. By convention, paths that start with `/` are relative to the repository root. When used as source argument, the base directory may be mapped to one of Hugo's mount folders (e.g. `assets`, `data`, `content`, `static`). Windows paths are mapped to Unix-style paths using forward slashes. Maps to the Hugo type `string`. |
+| select         | A single string value from a set of options. Specify the allowed values in `options.values`. Maps to the Hugo type `string`.                                                                                                                                                                                                                                     |
+| slice          | An ordered list of values, see [collections.Dictionary](https://gohugo.io/functions/collections/slice/). Consider using a defined complex type instead.                                                                                                                                                                                                          |
+| string         | Free format plain text. Maps to the Hugo type `string`.                                                                                                                                                                                                                                                                                                          |
 
 ### Supported complex types
 
