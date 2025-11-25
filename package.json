@@ -1,6 +1,6 @@
 {
   "name": "@gethinode/docs",
-  "version": "0.15.0",
+  "version": "0.0.0-semantically-released",
   "description": "The source for https://gethinode.com",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "env": "hugo env",
     "precheck": "npm version",
     "check": "hugo version",
+    "prepare": "node .husky/install.mjs",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update"
   },
   "repository": {
@@ -41,20 +42,28 @@
   },
   "homepage": "https://gethinode.com",
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
     "autoprefixer": "^10.4.22",
+    "commitizen": "^4.3.1",
     "cpy-cli": "^6.0.0",
     "cssnano": "^7.1.2",
     "cssnano-preset-advanced": "^7.0.10",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.39.1",
     "hugo-bin": "^0.149.2",
+    "husky": "^9.1.7",
     "markdownlint-cli2": "^0.18.1",
     "neostandard": "^0.12.2",
     "netlify-plugin-hugo-cache-resources": "^0.2.1",
     "postcss-cli": "^11.0.1",
     "purgecss-whitelister": "^2.4.0",
     "rimraf": "^6.1.2",
+    "semantic-release": "^25.0.2",
     "stylelint": "^16.26.0",
     "stylelint-config-standard-scss": "^16.0.0"
   },
@@ -63,5 +72,35 @@
   },
   "hugo-bin": {
     "buildTags": "extended"
+  },
+  "release": {
+    "branches": "main",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      [
+        "@semantic-release/exec",
+        {
+          "prepare": "npm install"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "dist",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
