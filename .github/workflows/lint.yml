@@ -75,10 +75,11 @@ jobs:
       shell: bash
 
     # [24/AUG/23] Adjusted from npm ci for non-macOS to prevent EBADPLATFORM error due to fsevents
+    # [25/NOV/25] Adjusted to npm i for all platforms due to lock issues
     - name: Perform clean install of npm
       run:  |
         if [ "$RUNNER_OS" == "macOS" ]; then
-          npm ci
+          npm i
         else
           npm i
         fi
