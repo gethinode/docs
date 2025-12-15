@@ -54,7 +54,7 @@
     "cssnano": "^7.1.2",
     "cssnano-preset-advanced": "^7.0.10",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "hugo-bin": "^0.149.2",
     "husky": "^9.1.7",
     "markdownlint-cli2": "^0.20.0",
