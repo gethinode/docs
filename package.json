@@ -48,7 +48,7 @@
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
-    "autoprefixer": "^10.4.22",
+    "autoprefixer": "^10.4.23",
     "commitizen": "^4.3.1",
     "cpy-cli": "^6.0.0",
     "cssnano": "^7.1.2",
