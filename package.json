@@ -42,7 +42,7 @@
   },
   "homepage": "https://gethinode.com",
   "devDependencies": {
-    "@commitlint/cli": "^20.4.0",
+    "@commitlint/cli": "^20.4.1",
     "@commitlint/config-conventional": "^20.4.1",
     "@fullhuman/postcss-purgecss": "^8.0.0",
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
