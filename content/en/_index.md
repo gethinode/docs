@@ -28,6 +28,28 @@ content_blocks:
     orientation: horizontal
     cover: true
   
+  # - _bookshop_name: about
+  #   heading:
+  #     title: Ready for visual editing
+  #     content: >-
+  #       Hinode provides many ready-to-use [content blocks](/docs/content-blocks) and [components](/docs/components) to quickly develop your site. These elements are fully prepared for visual editing with [CloudCannon](https://cloudcannon.com/). Check out our services how the Hinode team can help you with the setup.
+  #     align: start
+  #     width: 6
+  #   background:
+  #     color: primary
+  #     subtle: true
+  #   illustration:
+  #     image: /assets/img/cloudcannon-editor.png
+  #   link-type: button
+  #   links:
+  #     - title: Contact us
+  #       url: '#!'
+  #       icon: fas chevron-right
+  #       force: false
+  #   order: first
+  #   width: 8
+  #   justify: center
+
   - _bookshop_name: articles
     heading:
       title: Flexible & ready-to-use
