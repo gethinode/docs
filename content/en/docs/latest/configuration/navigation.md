@@ -70,7 +70,7 @@ The following example defines an example menu configuration called `sample` (the
 
 The example below illustrates the navigation bar based on the sample configuration defined in the previous paragraph. The `About` and `About (no alias)` menu entries illustrate the behavior of the `alias` parameter. The `GitHub` menu entry shows an icon to indicate it is an external link and opens in a new window.
 
-{{< navbar path="guides" color="body-tertiary" breakpoint="sm" search="false" menus="alias" title="Sample" >}}
+{{< navbar path="guides" color="body-tertiary" breakpoint="sm" search="false" menu="alias" title="Sample" >}}
 
 ### Versioning
 
