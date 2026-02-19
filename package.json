@@ -41,18 +41,23 @@
     "url": "https://github.com/gethinode/hinode/issues"
   },
   "homepage": "https://gethinode.com",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "autoprefixer": "^10.4.24",
+    "cssnano": "^7.1.2",
+    "cssnano-preset-advanced": "^7.0.10",
+    "hugo-extended": "^0.155.3",
+    "postcss-cli": "^11.0.1",
+    "rimraf": "^6.1.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.4.1",
     "@commitlint/config-conventional": "^20.4.1",
-    "@fullhuman/postcss-purgecss": "^8.0.0",
     "@gethinode/netlify-plugin-dartsass": "^0.3.0",
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
-    "autoprefixer": "^10.4.24",
     "commitizen": "^4.3.1",
     "cpy-cli": "^7.0.0",
-    "cssnano": "^7.1.2",
-    "cssnano-preset-advanced": "^7.0.10",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.39.2",
     "hugo-bin": "^0.149.2",
@@ -60,18 +65,12 @@
     "markdownlint-cli2": "^0.20.0",
     "neostandard": "^0.12.2",
     "netlify-plugin-hugo-cache-resources": "^0.2.1",
-    "postcss-cli": "^11.0.1",
-    "purgecss-whitelister": "^2.4.0",
-    "rimraf": "^6.1.2",
     "semantic-release": "^25.0.3",
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^16.0.0"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.3"
-  },
-  "hugo-bin": {
-    "buildTags": "extended"
   },
   "release": {
     "branches": "main",
