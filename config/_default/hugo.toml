@@ -98,8 +98,7 @@ home = ["HTML", "RSS", "REDIR", "netlify", "server"]
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.120.0"
-    max = ""
+    min = "0.146.0"
   [[module.mounts]]
     source = "assets"
     target = "assets"
@@ -128,6 +127,10 @@ home = ["HTML", "RSS", "REDIR", "netlify", "server"]
     lang = 'en'
     excludeFiles = 'docs/latest/*'
   [[module.imports]]
+    path = "github.com/gethinode/mod-blocks"
+  [[module.imports]]
+    path = "github.com/gethinode/mod-bootstrap-icons"
+  [[module.imports]]
     path = "github.com/gethinode/mod-cookieyes/v2"
   [[module.imports]]
-    path = "github.com/gethinode/hinode"
+    path = "github.com/gethinode/hinode/v2"
