@@ -24,6 +24,56 @@
     showSCSS = false
     purgeHTMLComments = true
 
+[icons]
+    # Color mode toggle
+    colorModeLight       = "sun"
+    colorModeDark        = "moon-stars"
+    # Navbar
+    navbarLanguage       = "globe2"
+    navbarOverflow       = "three-dots"
+    navbarVersionCheck   = "check"
+    # Pagination
+    paginationFirst      = "chevron-double-left"
+    paginationPrev       = "chevron-left"
+    paginationNext       = "chevron-right"
+    paginationLast       = "chevron-double-right"
+    # Other navigation
+    breadcrumbBack       = "chevron-left"
+    pageNavPrev          = "arrow-left"
+    pageNavNext          = "arrow-right"
+    # Content
+    tocSort              = "sort-down"
+    cardReadMore         = "chevron-right"
+    externalLink         = "box-arrow-up-right"
+    testimonialNext      = "chevron-right"
+    testimonialQuote     = "quote"
+    headingAnchor        = "link"
+    notFoundPage         = "link-45deg"
+    sharingWebshare      = "share"
+    sharingDownload      = "download"
+    # Search (mod-flexsearch)
+    search          = "search"
+    # Testimonial carousel controls (mod-blocks)
+    carouselPrev    = "chevron-left"
+    carouselNext    = "chevron-right"
+    # CTA and contact action links (mod-blocks)
+    ctaAction       = "chevron-right"
+    # Preview component device tabs and error state (mod-blocks)
+    previewDesktop  = "display"
+    previewTablet   = "tablet"
+    previewMobile   = "phone"
+    previewError    = "exclamation-triangle"
+    [icons.admonition]
+        note       = "info-circle"
+        info       = "info-circle"
+        tip        = "lightbulb"
+        important  = "exclamation"
+        warning    = "exclamation-triangle"
+        caution    = "hand-index-thumb"
+    [icons.release]
+        deprecated = "trash"
+        feature    = "rocket-takeoff"
+
 # toml-docs-start version
 [docs]
     basePath = "_vendor/github.com/gethinode/hinode/v2"
@@ -346,3 +396,6 @@
 [modules.cookieyes]
     url = "https://cdn-cookieyes.com/client_data/a54b5553f349dd13bd225f8e/script.js"
     local = false
+
+[modules.fontawesome]
+  defaultFamily = "bi"
