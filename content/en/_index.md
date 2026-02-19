@@ -8,7 +8,7 @@ content_blocks:
       title: Build a static website. Fast and flexible.
       align: start
       content: >-
-        Powered by [Hugo](https://gohugo.io), the world’s fastest framework for building websites, Hinode is fast and flexible. Hinode lets you create a blog, documentation site, or landing page that scales with your needs.
+        Powered by [Hugo](https://gohugo.io), the world's fastest framework for building websites, Hinode is fast and flexible. Hinode lets you create a blog, documentation site, or landing page that scales with your needs.
       width: 6
     align: end
     order: last
@@ -61,8 +61,8 @@ content_blocks:
       section: guides
       reverse: true
       sort: title
-    hide-empty: false
-    header-style: none
+    hide_empty: false
+    header_style: none
     more:
       title: More Guides
     padding: 0
@@ -80,10 +80,10 @@ content_blocks:
     background:
       color: body-tertiary
     orientation: horizontal
-    icon-style: fa-lg
+    icon_style: fa-lg
     video:
       provider: youtube
-      media-id: "w7Ft2ymGmfc"
+      media_id: "w7Ft2ymGmfc"
       autoplay: false
     messages:
       - title: Structured
@@ -108,12 +108,12 @@ content_blocks:
       align: center
       width: 8
     orientation: stacked
-    icon-style: fa-2xl
+    icon_style: fa-2xl
     elements:
       - title: Hugo
         icon: fab markdown
         content: >-
-          [Hugo](https://gohugo.io) is a static website generator written in the Go language. It is optimized for speed, ease of use, and configurability. 
+          [Hugo](https://gohugo.io) is a static website generator written in the Go language. It is optimized for speed, ease of use, and configurability.
       - title: Bootstrap
         icon: fab bootstrap
         content: >-
@@ -124,4 +124,5 @@ content_blocks:
           [Bookshop](https://github.com/CloudCannon/bookshop) is a component development workflow for static websites. It embeds the configuration of content blocks within the page's frontmatter.
     justify: center
 ---
+
 
