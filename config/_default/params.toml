@@ -26,7 +26,7 @@
 
 # toml-docs-start version
 [docs]
-    basePath = "_vendor/github.com/gethinode/hinode"
+    basePath = "_vendor/github.com/gethinode/hinode/v2"
     github = "https://github.com/gethinode/docs"
     release = "https://github.com/gethinode/hinode/releases/tag/"
 # toml-docs-end version
